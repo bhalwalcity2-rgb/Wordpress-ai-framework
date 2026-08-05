@@ -1,0 +1,83 @@
+# WAIF Framework — .gitignore
+# Source: ai/DEPLOYMENT_STANDARDS.md §13
+
+# --------------------------------------------------------------------------
+# WordPress Core
+# Only relevant if a full WordPress install is ever checked out inside this
+# repository for local testing — managed via WordPress updates, never committed.
+# --------------------------------------------------------------------------
+wp-admin/
+wp-includes/
+wp-*.php
+xmlrpc.php
+index.php
+license.txt
+readme.html
+
+# --------------------------------------------------------------------------
+# WordPress content
+# Covers both the standard wp-content/ layout and this repository's actual
+# wordpress/ layout.
+# --------------------------------------------------------------------------
+
+# Uploads are never committed.
+wp-content/uploads/
+wordpress/uploads/
+
+# Cache is generated, never committed.
+wp-content/cache/
+wp-content/advanced-cache.php
+wp-content/wp-cache-config.php
+wordpress/cache/
+
+# Third-party plugins are managed via updates, not Git — except our own.
+wp-content/plugins/*
+!wp-content/plugins/waif-*/
+wordpress/plugins/*
+!wordpress/plugins/waif-*/
+
+# The Kadence parent theme is managed via updates, never committed.
+wp-content/themes/kadence/
+wordpress/themes/kadence/
+
+# --------------------------------------------------------------------------
+# Environment and secrets — never committed, no exceptions
+# --------------------------------------------------------------------------
+.env
+.env.*
+wp-config.php
+
+# --------------------------------------------------------------------------
+# Node and build tooling
+# --------------------------------------------------------------------------
+node_modules/
+package-lock.json
+dist/
+build/
+
+# --------------------------------------------------------------------------
+# OS files
+# --------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+
+# --------------------------------------------------------------------------
+# IDE
+# --------------------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+
+# --------------------------------------------------------------------------
+# Logs
+# --------------------------------------------------------------------------
+*.log
+wp-content/debug.log
+wordpress/debug.log
+
+# --------------------------------------------------------------------------
+# Backups and archives
+# --------------------------------------------------------------------------
+*.sql
+*.tar.gz
+*.zip

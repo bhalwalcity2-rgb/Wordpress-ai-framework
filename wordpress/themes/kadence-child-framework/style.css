@@ -1,0 +1,82 @@
+/**
+ * Theme Name:        WAIF Child
+ * Theme URI:         https://github.com/bhalwalcity2-rgb/Wordpress-ai-framework
+ * Description:       Enterprise-grade reusable Kadence Child Theme for WordPress AI Framework.
+ * Author:            WAIF Framework
+ * Author URI:        https://github.com/bhalwalcity2-rgb/Wordpress-ai-framework
+ * Template:          kadence
+ * Version:           0.1.0
+ * Requires at least: 6.8
+ * Tested up to:      6.8
+ * Requires PHP:      8.2
+ * License:           GPL-2.0-or-later
+ * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain:       waif-child
+ *
+ * @package WAIF_Child
+ * @since   0.1.0
+ */
+
+/**
+ * -----------------------------------------------------------------------------
+ * FILE PURPOSE
+ * -----------------------------------------------------------------------------
+ *
+ * This file serves one purpose only: satisfying WordPress's requirement for a
+ * style.css file in every theme, and declaring the child theme's relationship
+ * to its parent theme (Kadence) via the `Template` header field.
+ *
+ * WordPress reads this file's comment header on every admin page load to
+ * register the theme. The `Template: kadence` directive instructs WordPress
+ * to load Kadence as the parent theme and inherit its template hierarchy.
+ *
+ * -----------------------------------------------------------------------------
+ * WHAT MUST NEVER BE ADDED HERE
+ * -----------------------------------------------------------------------------
+ *
+ * Do NOT add any of the following to this file:
+ *
+ *  - Custom CSS rules of any kind
+ *  - CSS resets or normalizers
+ *  - Utility class definitions
+ *  - CSS custom properties ( --variables )
+ *  - Media queries or responsive overrides
+ *  - Kadence token overrides
+ *  - Client-specific or project-specific styles
+ *  - @import statements
+ *  - Font-face declarations
+ *
+ * Adding CSS here creates long-term maintenance debt, breaks the framework's
+ * separation-of-concerns architecture, and cannot be conditionally enqueued
+ * or versioned through the WordPress asset pipeline.
+ *
+ * -----------------------------------------------------------------------------
+ * WHERE CUSTOM CSS LIVES
+ * -----------------------------------------------------------------------------
+ *
+ *  All custom CSS for this framework must be placed in:
+ *
+ *      assets/css/global.css
+ *
+ *  That file is enqueued programmatically via inc/enqueue.php using
+ *  wp_enqueue_style(), which allows proper dependency management,
+ *  cache-busting via filemtime() versioning, and conditional loading
+ *  where needed.
+ *
+ *  Additional stylesheets for scoped concerns should follow this structure:
+ *
+ *      assets/css/editor.css       — Block editor (admin) styles only
+ *      assets/css/woocommerce.css  — WooCommerce-specific overrides (if used)
+ *      assets/css/print.css        — Print media styles (if required)
+ *
+ * -----------------------------------------------------------------------------
+ * KEEPING THIS FILE LIGHTWEIGHT
+ * -----------------------------------------------------------------------------
+ *
+ *  This file must remain a header-only declaration for the lifetime of the
+ *  framework. Any developer adding CSS here is violating WAIF architecture
+ *  standards. Code reviews should flag any CSS found in this file as a
+ *  blocking issue.
+ *
+ * -----------------------------------------------------------------------------
+ */

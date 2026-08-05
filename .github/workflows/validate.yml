@@ -1,0 +1,102 @@
+name: Validate
+
+on:
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  validate:
+    name: Validate Repository
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Detect committed secrets
+        run: |
+          echo "Scanning tracked PHP, JS, JSON, and env-like files for common secret patterns..."
+          if grep -rnE "AKIA[0-9A-Z]{16}|sk_live_[0-9a-zA-Z]{16,}|-----BEGIN (RSA|OPENSSH|EC|DSA) PRIVATE KEY-----|(password|secret|api_key|apikey)\s*=\s*['\"][^'\"]+['\"]" \
+            --include="*.php" --include="*.js" --include="*.json" --include="*.env*" . ; then
+            echo "FAIL: Possible secret detected in a tracked file. Review the match above."
+            exit 1
+          fi
+          echo "PASS: No secret patterns detected."
+
+      - name: Prevent WordPress core and protected-path modifications
+        run: |
+          echo "Fetching main for comparison..."
+          git fetch origin main --quiet
+
+          echo "Comparing current branch against origin/main..."
+          CHANGED_FILES=$(git diff --name-only origin/main...HEAD)
+          echo "$CHANGED_FILES"
+
+          PROTECTED_PATTERN='^wp-admin/|^wp-includes/|^wordpress/themes/kadence/|^wordpress/plugins/[^/]+/'
+          VIOLATIONS=$(echo "$CHANGED_FILES" | grep -E "$PROTECTED_PATTERN" || true)
+
+          if [ -n "$VIOLATIONS" ]; then
+            echo "FAIL: Changes detected in a protected path (WordPress core, Kadence parent theme, or third-party plugin source):"
+            echo "$VIOLATIONS"
+            exit 1
+          fi
+          echo "PASS: No protected paths modified."
+
+      - name: Validate PHP syntax
+        run: |
+          echo "Linting PHP files under the child theme, mu-plugins, and custom plugins..."
+          STATUS=0
+
+          for dir in "wordpress/themes/kadence-child-framework" "wordpress/mu-plugins" "wordpress/plugins"; do
+            if [ -d "$dir" ]; then
+              while IFS= read -r -d '' file; do
+                LINT_OUTPUT=$(php -l "$file" 2>&1)
+                if [ $? -ne 0 ]; then
+                  echo "----------------------------------------"
+                  echo "FILE: $file"
+                  echo "$LINT_OUTPUT"
+                  STATUS=1
+                fi
+              done < <(find "$dir" -name "*.php" -print0)
+            fi
+          done
+
+          echo "----------------------------------------"
+          if [ "$STATUS" -ne 0 ]; then
+            echo "FAIL: One or more PHP files failed syntax validation (see errors above)."
+            exit 1
+          fi
+          echo "PASS: All PHP files have valid syntax."
+
+      - name: Validate repository structure
+        run: |
+          echo "Checking critical framework files and paths..."
+          STATUS=0
+
+          for f in "VERSION" "CHANGELOG.md"; do
+            if [ ! -f "$f" ]; then
+              echo "FAIL: $f is missing or is not a regular file."
+              STATUS=1
+            fi
+          done
+
+          if [ ! -f "wordpress/themes/kadence-child-framework/functions.php" ]; then
+            echo "FAIL: functions.php is missing from the child theme root."
+            STATUS=1
+          fi
+
+          for f in "wp-config.php" ".env"; do
+            if git ls-files --error-unmatch "$f" > /dev/null 2>&1; then
+              echo "FAIL: $f must never be committed to the repository."
+              STATUS=1
+            fi
+          done
+
+          if [ "$STATUS" -ne 0 ]; then
+            exit 1
+          fi
+          echo "PASS: Repository structure is valid."
