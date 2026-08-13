@@ -103,6 +103,9 @@ function lvjcb_render_icon_sprite() {
 			<symbol id="icon-no-fee" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
 				<circle cx="12" cy="12" r="9"/><path d="M9.5 12.5l1.8 1.8L15 10"/>
 			</symbol>
+			<symbol id="icon-check-circle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+				<circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/>
+			</symbol>
 		</defs>
 	</svg>
 	<?php
