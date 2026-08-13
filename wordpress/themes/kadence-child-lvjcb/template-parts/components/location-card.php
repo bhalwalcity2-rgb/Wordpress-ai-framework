@@ -18,17 +18,21 @@ $has_url    = ! empty( $url );
 $label_text = trim( $city . ( $state ? ', ' . $state : '' ) );
 ?>
 <article class="lvjcb-location-card">
-	<h3 class="lvjcb-location-card__heading">
-		<?php if ( $has_url ) : ?>
-			<a href="<?php echo esc_url( $url ); ?>" class="lvjcb-location-card__link"><?php echo esc_html( $label_text ); ?></a>
-		<?php else : ?>
-			<?php echo esc_html( $label_text ); ?>
-		<?php endif; ?>
-	</h3>
+	<?php echo lvjcb_icon( 'map-pin', array( 'class' => 'lvjcb-location-card__pin', 'size' => 18 ) ); ?>
 
-	<?php if ( $description ) : ?>
-		<p class="lvjcb-location-card__description"><?php echo esc_html( $description ); ?></p>
-	<?php endif; ?>
+	<div>
+		<h3 class="lvjcb-location-card__heading">
+			<?php if ( $has_url ) : ?>
+				<a href="<?php echo esc_url( $url ); ?>" class="lvjcb-location-card__link"><?php echo esc_html( $city ); ?></a>
+			<?php else : ?>
+				<?php echo esc_html( $city ); ?>
+			<?php endif; ?>
+		</h3>
+
+		<?php if ( $state ) : ?>
+			<p class="lvjcb-location-card__description"><?php echo esc_html( $state ); ?></p>
+		<?php endif; ?>
+	</div>
 
 	<?php if ( $has_url ) : ?>
 		<?php echo lvjcb_icon( 'arrow', array( 'class' => 'lvjcb-location-card__arrow', 'size' => 16 ) ); ?>

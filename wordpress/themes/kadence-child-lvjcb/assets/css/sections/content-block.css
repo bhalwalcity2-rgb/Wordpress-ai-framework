@@ -1,5 +1,5 @@
 .lvjcb-content-block {
-	padding: var(--lvjcb-space-600) 0;
+	padding: var(--lvjcb-space-section) 0;
 }
 
 .lvjcb-content-block + .lvjcb-content-block {
@@ -8,16 +8,18 @@
 
 .lvjcb-content-block__heading {
 	font-size: clamp(1.3rem, 2.5vw, 1.6rem);
-	font-weight: 800;
+	font-weight: var(--lvjcb-font-weight-heavy);
 	line-height: 1.25;
-	margin-bottom: var(--lvjcb-space-300);
+	letter-spacing: -0.02em;
+	margin-bottom: var(--lvjcb-space-md);
 }
 
 .lvjcb-content-block__body p {
 	font-size: 1rem;
 	line-height: 1.75;
-	margin-bottom: var(--lvjcb-space-300);
+	margin-bottom: var(--lvjcb-space-md);
 	max-width: 72ch;
+	color: var(--lvjcb-color-text-muted);
 }
 
 .lvjcb-content-block__body p:last-child {

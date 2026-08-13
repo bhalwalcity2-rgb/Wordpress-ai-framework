@@ -1,9 +1,3 @@
-/**
- * How It Works section styles — only the <ol>/<li> reset needed
- * because this section chose a semantic ordered list. Grid/spacing
- * comes from the shared .lvjcb-section__grid in section-base.css.
- */
-
 .lvjcb-how-it-works__list {
 	margin: 0;
 	padding: 0;
@@ -11,4 +5,11 @@
 
 .lvjcb-how-it-works__item {
 	list-style: none;
+}
+
+@media (min-width: 769px) {
+	.lvjcb-how-it-works .lvjcb-section__grid--4up {
+		grid-template-columns: repeat(3, 1fr);
+		gap: var(--lvjcb-space-lg);
+	}
 }

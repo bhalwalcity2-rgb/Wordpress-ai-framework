@@ -1,44 +1,49 @@
-/**
- * Testimonial Card component styles. No hover, no transition — this
- * card is never interactive, by design.
- */
-
 .lvjcb-testimonial-card {
-	background: var(--lvjcb-color-surface);
+	background: rgba(255,255,255,0.06);
+	border: 1px solid rgba(255,255,255,0.1);
 	border-radius: var(--lvjcb-radius);
-	box-shadow: var(--lvjcb-shadow);
 	padding: var(--lvjcb-space-lg) var(--lvjcb-space-md);
 	display: flex;
 	flex-direction: column;
-	gap: var(--lvjcb-space-md);
+	gap: var(--lvjcb-space-sm);
 	height: 100%;
 }
 
 .lvjcb-testimonial-card__rating {
 	display: flex;
-	gap: 3px;
+	gap: 2px;
 }
 
 .lvjcb-testimonial-card__star {
-	color: var(--lvjcb-color-accent-deep);
+	color: var(--lvjcb-color-accent);
 	fill: currentColor;
 }
 
 .lvjcb-testimonial-card__star.is-empty {
-	color: var(--lvjcb-color-border);
+	color: rgba(255,255,255,0.2);
 	fill: currentColor;
 }
 
 .lvjcb-testimonial-card__quote {
 	margin: 0;
+	flex: 1;
 }
 
 .lvjcb-testimonial-card__quote p {
 	margin: 0;
 	font-family: var(--lvjcb-font-quote);
-	font-size: 17px;
-	line-height: 1.6;
-	color: var(--lvjcb-color-text);
+	font-size: 16px;
+	line-height: 1.65;
+	color: var(--lvjcb-color-text-on-dark);
+	font-style: italic;
+}
+
+.lvjcb-testimonial-card__quote p::before {
+	content: '\201C';
+}
+
+.lvjcb-testimonial-card__quote p::after {
+	content: '\201D';
 }
 
 .lvjcb-testimonial-card__who {
@@ -46,17 +51,17 @@
 	flex-direction: column;
 	gap: 1px;
 	padding-top: var(--lvjcb-space-sm);
-	border-top: 1px solid var(--lvjcb-color-border);
+	border-top: 1px solid rgba(255,255,255,0.1);
 	margin-top: auto;
 }
 
 .lvjcb-testimonial-card__name {
 	font-size: 14px;
 	font-weight: var(--lvjcb-font-weight-bold);
-	color: var(--lvjcb-color-text);
+	color: var(--lvjcb-color-text-on-dark);
 }
 
 .lvjcb-testimonial-card__location {
 	font-size: 13px;
-	color: var(--lvjcb-color-text-muted);
+	color: var(--lvjcb-color-text-on-dark-muted);
 }

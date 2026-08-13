@@ -30,7 +30,7 @@ $eyebrow = $args['eyebrow'] ?? '';
 $heading = $args['heading'] ?? '';
 $intro   = $args['intro'] ?? '';
 ?>
-<section class="lvjcb-section lvjcb-recently-purchased-vehicles" aria-labelledby="<?php echo esc_attr( $heading_id ); ?>">
+<section class="lvjcb-section lvjcb-section--alt lvjcb-recently-purchased-vehicles" aria-labelledby="<?php echo esc_attr( $heading_id ); ?>">
 	<div class="lvjcb-section__container">
 
 		<?php if ( $eyebrow ) : ?>

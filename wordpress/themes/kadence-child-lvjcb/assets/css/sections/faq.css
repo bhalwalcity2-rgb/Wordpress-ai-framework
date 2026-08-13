@@ -1,8 +1,3 @@
-/**
- * FAQ section styles — only what's genuinely section-specific: the
- * narrow list width. Everything else comes from section-base.css.
- */
-
 .lvjcb-faq__list {
-	max-width: var(--lvjcb-measure);
+	max-width: 780px;
 }

@@ -1,10 +1,3 @@
-/**
- * Quote Form component styles. No layout/container responsibility —
- * the parent component/section controls width. Button appearance comes
- * entirely from buttons.css (.lvjcb-btn); this file only sizes it
- * within the form's own flow.
- */
-
 .lvjcb-quote-form {
 	display: flex;
 	flex-direction: column;
@@ -27,11 +20,6 @@
 	font-family: var(--lvjcb-font-body);
 	font-size: var(--lvjcb-text-small);
 	font-weight: var(--lvjcb-font-weight-medium);
-	/* No color declared here on purpose: this component is reused on
-	   both dark (Hero) and light (Get Cash Offer section) backgrounds.
-	   Color is an inherited property, so the label correctly picks up
-	   whatever text color its parent section already establishes,
-	   rather than assuming one context. */
 }
 
 .lvjcb-quote-form__input {
@@ -44,11 +32,13 @@
 	font-size: var(--lvjcb-text-base);
 	color: var(--lvjcb-color-text);
 	background-color: var(--lvjcb-color-surface);
+	transition: border-color var(--lvjcb-transition-fast);
 }
 
 .lvjcb-quote-form__input:focus-visible {
 	outline: 2px solid var(--lvjcb-color-focus);
 	outline-offset: 2px;
+	border-color: var(--lvjcb-color-primary);
 }
 
 .lvjcb-quote-form__submit {

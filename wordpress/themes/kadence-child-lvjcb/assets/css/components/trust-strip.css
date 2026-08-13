@@ -1,18 +1,19 @@
-/**
- * Trust Strip component styles. No local :root; no JS; no hover
- * (every item is static, non-interactive information).
- */
-
 .lvjcb-trust-strip {
-	background: var(--lvjcb-color-surface-alt);
-	border-bottom: 1px solid var(--lvjcb-color-border);
-	padding-block: var(--lvjcb-space-lg);
+	position: relative;
+	z-index: 3;
+	margin-top: -40px;
+	padding: 0 var(--lvjcb-space-md);
+	background: none;
+	border: none;
 }
 
 .lvjcb-trust-strip__list {
 	max-width: var(--lvjcb-container-max);
 	margin-inline: auto;
-	padding-inline: var(--lvjcb-space-md);
+	background: var(--lvjcb-color-surface);
+	border-radius: var(--lvjcb-radius-lg);
+	box-shadow: var(--lvjcb-shadow-lg);
+	padding: var(--lvjcb-space-md) var(--lvjcb-space-lg);
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: var(--lvjcb-space-md);
@@ -23,21 +24,36 @@
 	display: flex;
 	align-items: center;
 	gap: 12px;
+	padding: 8px 0;
 }
 
 .lvjcb-trust-strip__icon {
+	width: 44px;
+	height: 44px;
+	padding: 11px;
+	box-sizing: border-box;
+	background: rgba(208,0,0,0.06);
+	border-radius: var(--lvjcb-radius);
 	color: var(--lvjcb-color-primary);
 	flex-shrink: 0;
 }
 
 .lvjcb-trust-strip__item span {
-	font-size: 14.5px;
-	font-weight: var(--lvjcb-font-weight-medium);
+	font-size: 14px;
+	font-weight: var(--lvjcb-font-weight-bold);
 	color: var(--lvjcb-color-text);
+	line-height: 1.3;
 }
 
 @media (min-width: 769px) {
 	.lvjcb-trust-strip__list {
 		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+@media (max-width: 480px) {
+	.lvjcb-trust-strip__list {
+		grid-template-columns: 1fr;
+		padding: var(--lvjcb-space-md);
 	}
 }

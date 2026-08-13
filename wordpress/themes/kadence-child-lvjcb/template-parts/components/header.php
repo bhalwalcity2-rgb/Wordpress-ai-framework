@@ -2,18 +2,14 @@
 /**
  * Header component.
  *
- * Niche Functionality Library — Junk Car Buyers: the phone CTA displays
- * the actual business phone number (never "Call Now"), paired with a
- * secondary "Instant Offer" CTA. Both are specific to this niche per
- * ai/memory/master-website-workflow.md and must not be copied into a
- * generic/global component pattern.
- *
- * No $args — Header has no per-instance configuration; all of its data
- * (phone number, nav links) comes from single sources of truth.
+ * Two-tier navy header: top info bar (hours, email) visible on desktop,
+ * main row with logo, nav, and phone CTA. Red accent border at bottom.
  */
 
 $phone_display = lvjcb_get_phone_number( 'display' );
 $phone_href    = 'tel:' . lvjcb_get_phone_number( 'e164' );
+$email         = lvjcb_get_config( 'email' );
+$hours         = lvjcb_get_config( 'hours' );
 
 $nav_items = array_map(
 	function ( $item ) {
@@ -26,16 +22,31 @@ $nav_items = array_map(
 );
 ?>
 <header class="lvjcb-header" id="lvjcb-header">
+
+	<div class="lvjcb-header__top">
+		<div class="lvjcb-header__top-inner">
+			<div class="lvjcb-header__top-info">
+				<?php if ( $hours ) : ?>
+					<span><?php echo esc_html( $hours ); ?></span>
+				<?php endif; ?>
+				<?php if ( $email ) : ?>
+					<a href="<?php echo esc_url( 'mailto:' . $email ); ?>"><?php echo esc_html( $email ); ?></a>
+				<?php endif; ?>
+			</div>
+			<span><?php echo esc_html( lvjcb_get_config( 'hero' )['eyebrow'] ?? '' ); ?></span>
+		</div>
+	</div>
+
 	<div class="lvjcb-header__row">
 
 		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="lvjcb-header__logo">
 			<?php if ( has_custom_logo() ) : ?>
 				<?php the_custom_logo(); ?>
 			<?php else : ?>
-				<span class="lvjcb-header__logo-mark"><?php echo lvjcb_icon( 'truck', array( 'size' => 19 ) ); ?></span>
+				<span class="lvjcb-header__logo-mark">LV</span>
 				<span class="lvjcb-header__logo-text">
-					<?php bloginfo( 'name' ); ?>
-					<span class="lvjcb-header__logo-sub"><?php esc_html_e( 'Cash for cars, same day', 'lvjcb' ); ?></span>
+					<span class="lvjcb-header__logo-name"><?php bloginfo( 'name' ); ?></span>
+					<span class="lvjcb-header__logo-sub"><?php esc_html_e( 'Cash for cars · Free towing', 'lvjcb' ); ?></span>
 				</span>
 			<?php endif; ?>
 		</a>
@@ -59,7 +70,7 @@ $nav_items = array_map(
 				<?php echo lvjcb_icon( 'phone', array( 'size' => 20 ) ); ?>
 			</a>
 
-			<button type="button" class="lvjcb-btn lvjcb-btn--secondary lvjcb-header__instant-offer" data-lvjcb-reveal-quote-form>
+			<button type="button" class="lvjcb-btn lvjcb-btn--secondary lvjcb-btn--on-dark lvjcb-header__instant-offer" data-lvjcb-reveal-quote-form>
 				<?php esc_html_e( 'Instant Offer', 'lvjcb' ); ?>
 			</button>
 
@@ -87,7 +98,7 @@ $nav_items = array_map(
 		<a href="<?php echo esc_url( $phone_href ); ?>" class="lvjcb-btn lvjcb-btn--primary lvjcb-btn--block">
 			<?php echo esc_html( $phone_display ); ?>
 		</a>
-		<button type="button" class="lvjcb-btn lvjcb-btn--secondary lvjcb-btn--block" data-lvjcb-reveal-quote-form>
+		<button type="button" class="lvjcb-btn lvjcb-btn--secondary lvjcb-btn--on-dark lvjcb-btn--block" data-lvjcb-reveal-quote-form>
 			<?php esc_html_e( 'Instant Offer', 'lvjcb' ); ?>
 		</button>
 	</div>

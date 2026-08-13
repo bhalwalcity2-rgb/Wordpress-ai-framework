@@ -1,23 +1,51 @@
-/**
- * Header component styles.
- *
- * No local :root — every value below is consumed from tokens.css.
- * Header owns its own layout/condense behavior only; button appearance
- * is entirely owned by buttons.css (.lvjcb-btn).
- */
-
 body {
-	padding-top: var(--lvjcb-header-height);
+	padding-top: calc(var(--lvjcb-header-height) + var(--lvjcb-header-top-height));
 }
 
 .lvjcb-header {
 	position: sticky;
 	top: 0;
 	z-index: 40;
-	background: var(--lvjcb-color-surface);
-	border-bottom: 1px solid var(--lvjcb-color-border);
+	background: var(--lvjcb-color-dark);
+	border-bottom: 3px solid var(--lvjcb-color-primary);
 }
 
+/* Top info bar */
+.lvjcb-header__top {
+	background: rgba(0,0,0,0.25);
+	padding: 0;
+	font-size: 13px;
+	color: var(--lvjcb-color-text-on-dark-muted);
+	height: var(--lvjcb-header-top-height);
+	display: none;
+}
+
+.lvjcb-header__top-inner {
+	max-width: var(--lvjcb-container-max);
+	margin-inline: auto;
+	padding-inline: var(--lvjcb-space-md);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 100%;
+}
+
+.lvjcb-header__top-info {
+	display: flex;
+	gap: var(--lvjcb-space-md);
+}
+
+.lvjcb-header__top a {
+	color: var(--lvjcb-color-text-on-dark-muted);
+	text-decoration: none;
+	transition: color var(--lvjcb-transition-fast);
+}
+
+.lvjcb-header__top a:hover {
+	color: var(--lvjcb-color-accent);
+}
+
+/* Main header row */
 .lvjcb-header__row {
 	display: flex;
 	align-items: center;
@@ -34,59 +62,78 @@ body {
 	height: var(--lvjcb-header-height-condensed);
 }
 
+/* Logo */
 .lvjcb-header__logo {
 	display: flex;
 	align-items: center;
-	gap: 10px;
+	gap: 12px;
 	font-family: var(--lvjcb-font-heading);
-	font-weight: var(--lvjcb-font-weight-bold);
-	font-size: 17px;
-	color: var(--lvjcb-color-text);
+	color: var(--lvjcb-color-text-on-dark);
 	text-decoration: none;
 	flex-shrink: 0;
 }
 
 .lvjcb-header__logo-mark {
-	width: 34px;
-	height: 34px;
+	width: 44px;
+	height: 44px;
 	border-radius: var(--lvjcb-radius);
-	background: var(--lvjcb-color-dark);
+	background: var(--lvjcb-color-primary);
 	color: var(--lvjcb-color-text-on-dark);
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-shrink: 0;
+	font-size: 18px;
+	font-weight: var(--lvjcb-font-weight-heavy);
+	letter-spacing: -0.02em;
+}
+
+.lvjcb-header__logo-text {
+	display: flex;
+	flex-direction: column;
+	line-height: 1.15;
+}
+
+.lvjcb-header__logo-name {
+	font-size: 18px;
+	font-weight: var(--lvjcb-font-weight-heavy);
+	letter-spacing: -0.02em;
 }
 
 .lvjcb-header__logo-sub {
 	display: block;
 	font-size: 11px;
-	font-weight: var(--lvjcb-font-weight-medium);
-	color: var(--lvjcb-color-text-muted);
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	color: var(--lvjcb-color-accent);
 }
 
+/* Nav */
 .lvjcb-header__nav {
 	display: none;
 }
 
 .lvjcb-header__nav ul {
 	display: flex;
-	gap: var(--lvjcb-space-lg);
+	gap: 32px;
 	list-style: none;
 	margin: 0;
 	padding: 0;
 }
 
 .lvjcb-header__nav a {
-	font-size: 14.5px;
+	font-size: 14px;
 	font-weight: var(--lvjcb-font-weight-medium);
 	text-decoration: none;
-	color: var(--lvjcb-color-text-muted);
+	color: var(--lvjcb-color-text-on-dark-muted);
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
 	transition: color var(--lvjcb-transition-fast);
 }
 
 .lvjcb-header__nav a:hover {
-	color: var(--lvjcb-color-text);
+	color: var(--lvjcb-color-text-on-dark);
 }
 
 .lvjcb-header__nav a:focus-visible {
@@ -94,6 +141,7 @@ body {
 	outline-offset: 3px;
 }
 
+/* Actions */
 .lvjcb-header__actions {
 	display: flex;
 	align-items: center;
@@ -104,14 +152,15 @@ body {
 	display: none;
 	align-items: center;
 	gap: 8px;
-	font-weight: var(--lvjcb-font-weight-bold);
-	font-size: 15px;
-	color: var(--lvjcb-color-dark);
+	font-weight: var(--lvjcb-font-weight-heavy);
+	font-size: 18px;
+	color: var(--lvjcb-color-text-on-dark);
 	text-decoration: none;
+	letter-spacing: -0.01em;
 }
 
 .lvjcb-header__phone .icon {
-	color: var(--lvjcb-color-primary);
+	color: var(--lvjcb-color-accent);
 }
 
 .lvjcb-header__phone:focus-visible {
@@ -121,7 +170,7 @@ body {
 
 .lvjcb-header__phone-icon-only {
 	display: inline-flex;
-	color: var(--lvjcb-color-primary);
+	color: var(--lvjcb-color-accent);
 }
 
 .lvjcb-header__phone-icon-only:focus-visible {
@@ -139,10 +188,10 @@ body {
 	height: 40px;
 	align-items: center;
 	justify-content: center;
-	border: 1px solid var(--lvjcb-color-border);
+	border: 1px solid rgba(255,255,255,0.2);
 	border-radius: var(--lvjcb-radius);
 	background: none;
-	color: var(--lvjcb-color-text);
+	color: var(--lvjcb-color-text-on-dark);
 	cursor: pointer;
 }
 
@@ -156,7 +205,7 @@ body {
 	position: fixed;
 	inset: 0;
 	z-index: 50;
-	background: var(--lvjcb-color-surface);
+	background: var(--lvjcb-color-dark);
 	flex-direction: column;
 }
 
@@ -170,24 +219,24 @@ body {
 	justify-content: space-between;
 	height: var(--lvjcb-header-height-condensed);
 	padding-inline: var(--lvjcb-space-md);
-	border-bottom: 1px solid var(--lvjcb-color-border);
+	border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
 .lvjcb-mobile-nav__title {
 	font-weight: var(--lvjcb-font-weight-bold);
-	color: var(--lvjcb-color-text);
+	color: var(--lvjcb-color-text-on-dark);
 }
 
 .lvjcb-mobile-nav__close {
 	width: 40px;
 	height: 40px;
-	border: 1px solid var(--lvjcb-color-border);
+	border: 1px solid rgba(255,255,255,0.2);
 	border-radius: var(--lvjcb-radius);
 	background: none;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	color: var(--lvjcb-color-text);
+	color: var(--lvjcb-color-text-on-dark);
 	cursor: pointer;
 }
 
@@ -209,7 +258,7 @@ body {
 	font-size: 20px;
 	font-weight: var(--lvjcb-font-weight-medium);
 	text-decoration: none;
-	color: var(--lvjcb-color-text);
+	color: var(--lvjcb-color-text-on-dark);
 }
 
 .lvjcb-mobile-nav a:focus-visible {
@@ -220,7 +269,7 @@ body {
 .lvjcb-mobile-nav__cta {
 	margin-top: auto;
 	padding: var(--lvjcb-space-md);
-	border-top: 1px solid var(--lvjcb-color-border);
+	border-top: 1px solid rgba(255,255,255,0.1);
 	display: flex;
 	flex-direction: column;
 	gap: var(--lvjcb-space-sm);
@@ -234,6 +283,10 @@ body {
 }
 
 @media (min-width: 769px) {
+	.lvjcb-header__top {
+		display: block;
+	}
+
 	.lvjcb-header__nav {
 		display: block;
 	}
@@ -262,6 +315,10 @@ body {
 
 	.lvjcb-header__row {
 		height: var(--lvjcb-header-height-condensed);
+	}
+
+	.lvjcb-header__logo-name {
+		font-size: 15px;
 	}
 }
 

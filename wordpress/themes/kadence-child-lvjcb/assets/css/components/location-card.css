@@ -1,18 +1,23 @@
-/**
- * Location Card component styles. Lightest-weight card in the system —
- * content is minimal (a city name), so styling stays minimal too.
- */
-
 .lvjcb-location-card {
 	position: relative;
 	background: var(--lvjcb-color-surface);
 	border: 1px solid var(--lvjcb-color-border);
 	border-radius: var(--lvjcb-radius);
-	padding: var(--lvjcb-space-md);
+	padding: var(--lvjcb-space-sm) var(--lvjcb-space-md);
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
-	gap: var(--lvjcb-space-sm);
+	gap: 12px;
+	transition: border-color var(--lvjcb-transition-fast), box-shadow var(--lvjcb-transition-fast);
+}
+
+.lvjcb-location-card:hover {
+	border-color: var(--lvjcb-color-primary);
+	box-shadow: var(--lvjcb-shadow);
+}
+
+.lvjcb-location-card__pin {
+	color: var(--lvjcb-color-primary);
+	flex-shrink: 0;
 }
 
 .lvjcb-location-card__heading {
@@ -44,12 +49,27 @@
 }
 
 .lvjcb-location-card__description {
-	margin: var(--lvjcb-space-2xs) 0 0;
+	margin: 2px 0 0;
 	font-size: 13px;
 	color: var(--lvjcb-color-text-muted);
 }
 
 .lvjcb-location-card__arrow {
+	margin-left: auto;
 	color: var(--lvjcb-color-text-muted);
 	flex-shrink: 0;
+	opacity: 0;
+	transition: opacity var(--lvjcb-transition-fast), color var(--lvjcb-transition-fast);
+}
+
+.lvjcb-location-card:hover .lvjcb-location-card__arrow {
+	opacity: 1;
+	color: var(--lvjcb-color-primary);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.lvjcb-location-card,
+	.lvjcb-location-card__arrow {
+		transition: none;
+	}
 }

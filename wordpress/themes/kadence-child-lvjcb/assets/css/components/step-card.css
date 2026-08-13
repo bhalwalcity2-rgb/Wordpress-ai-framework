@@ -1,37 +1,50 @@
-/**
- * Step Card component styles. No hover, no interactivity.
- */
-
 .lvjcb-step-card {
 	display: flex;
-	flex-direction: column;
+	gap: var(--lvjcb-space-md);
 	align-items: flex-start;
-	gap: var(--lvjcb-space-sm);
 }
 
 .lvjcb-step-card__number {
+	width: 56px;
+	height: 56px;
+	background: var(--lvjcb-color-dark);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
 	font-family: var(--lvjcb-font-heading);
-	font-size: 34px;
-	font-weight: var(--lvjcb-font-weight-bold);
-	color: var(--lvjcb-color-accent-deep);
+	font-size: 22px;
+	font-weight: var(--lvjcb-font-weight-heavy);
+	color: var(--lvjcb-color-accent);
 	line-height: 1;
 }
 
 .lvjcb-step-card__icon {
-	color: var(--lvjcb-color-primary);
+	display: none;
 }
 
 .lvjcb-step-card__heading {
 	margin: 0;
 	font-family: var(--lvjcb-font-heading);
-	font-size: var(--lvjcb-text-h4);
+	font-size: 18px;
+	font-weight: var(--lvjcb-font-weight-bold);
 	color: var(--lvjcb-color-text);
+	margin-bottom: 6px;
 }
 
 .lvjcb-step-card__description {
 	margin: 0;
 	font-family: var(--lvjcb-font-body);
-	font-size: 14.5px;
-	line-height: 1.55;
+	font-size: 15px;
+	line-height: 1.6;
 	color: var(--lvjcb-color-text-muted);
+}
+
+@media (min-width: 769px) {
+	.lvjcb-step-card {
+		flex-direction: column;
+		text-align: center;
+		align-items: center;
+	}
 }

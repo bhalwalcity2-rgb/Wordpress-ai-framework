@@ -1,12 +1,3 @@
-/**
- * Global Slider/Carousel Component styles.
- *
- * Native scroll-snap track — no transforms, no cloned slides. Slide
- * width is controlled entirely by responsive flex-basis percentages
- * below; the number of "visible" slides at each breakpoint is a CSS
- * concern only, not a JS one.
- */
-
 .lvjcb-slider__viewport {
 	position: relative;
 }
@@ -79,6 +70,21 @@
 	outline-offset: 2px;
 }
 
+/* Dark section slider controls */
+.lvjcb-section--dark .lvjcb-slider__prev,
+.lvjcb-section--dark .lvjcb-slider__next {
+	border-color: rgba(255,255,255,0.2);
+	background: rgba(255,255,255,0.06);
+	color: var(--lvjcb-color-text-on-dark);
+}
+
+.lvjcb-section--dark .lvjcb-slider__prev:hover:not(:disabled),
+.lvjcb-section--dark .lvjcb-slider__next:hover:not(:disabled) {
+	border-color: rgba(255,255,255,0.4);
+	background: rgba(255,255,255,0.1);
+	color: var(--lvjcb-color-accent);
+}
+
 @media (min-width: 769px) {
 	.lvjcb-slider__slide {
 		flex-basis: 46%;
@@ -90,9 +96,6 @@
 		flex-basis: 23%;
 	}
 
-	/* Three-up variant: same slider system, one CSS override for
-	   content (like Testimonials) that reads better at 3 columns
-	   than 4. */
 	.lvjcb-slider--3up .lvjcb-slider__slide {
 		flex-basis: 31%;
 	}

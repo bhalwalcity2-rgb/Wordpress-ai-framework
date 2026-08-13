@@ -2,12 +2,12 @@
 /**
  * Hero component.
  *
- * Niche Functionality Library — Junk Car Buyers: actual phone-number CTA
- * (never "Call Now") plus an "Instant Offer" CTA that reveals the
- * embedded Quote Form. Image right on desktop, 60/40 split.
+ * Gradient navy background with diagonal bottom edge. Gold-accented
+ * heading, stats row, phone CTA with gold button. Image right on
+ * desktop, 55/45 split.
  *
  * @param array $args {
- *     @type string $heading     Hero heading text.
+ *     @type string $heading     Hero heading text. Wrap key phrase in <em> for gold accent.
  *     @type string $description Supporting description.
  *     @type int    $image_id    Attachment ID for the hero image.
  * }
@@ -19,6 +19,13 @@ $image_id    = isset( $args['image_id'] ) ? (int) $args['image_id'] : 0;
 $phone_display = lvjcb_get_phone_number( 'display' );
 $phone_href    = 'tel:' . lvjcb_get_phone_number( 'e164' );
 $trust_items   = lvjcb_get_trust_items();
+
+$heading_parts = explode( "\u{2014}", $heading, 2 );
+if ( count( $heading_parts ) === 2 ) {
+	$heading_html = esc_html( $heading_parts[0] ) . '&mdash; <em>' . esc_html( trim( $heading_parts[1] ) ) . '</em>';
+} else {
+	$heading_html = esc_html( $heading );
+}
 ?>
 <section class="lvjcb-hero">
 	<div class="lvjcb-hero__container">
@@ -30,19 +37,14 @@ $trust_items   = lvjcb_get_trust_items();
 				<?php esc_html_e( 'Serving Las Vegas & Clark County', 'lvjcb' ); ?>
 			</div>
 
-			<h1 class="lvjcb-hero__heading"><?php echo esc_html( $heading ); ?></h1>
+			<h1 class="lvjcb-hero__heading"><?php echo $heading_html; ?></h1>
 
 			<?php if ( $description ) : ?>
 				<p class="lvjcb-hero__description"><?php echo esc_html( $description ); ?></p>
 			<?php endif; ?>
 
-			<a href="<?php echo esc_url( $phone_href ); ?>" class="lvjcb-hero__phone">
-				<?php echo lvjcb_icon( 'phone', array( 'size' => 22 ) ); ?>
-				<?php echo esc_html( $phone_display ); ?>
-			</a>
-
 			<div class="lvjcb-hero__ctas">
-				<a href="<?php echo esc_url( $phone_href ); ?>" class="lvjcb-btn lvjcb-btn--primary">
+				<a href="<?php echo esc_url( $phone_href ); ?>" class="lvjcb-btn lvjcb-btn--gold">
 					<?php echo esc_html( $phone_display ); ?>
 				</a>
 				<button type="button" class="lvjcb-btn lvjcb-btn--secondary lvjcb-btn--on-dark" id="lvjcb-hero-instant-offer" aria-expanded="false" aria-controls="lvjcb-quote-form-hero">
@@ -58,16 +60,20 @@ $trust_items   = lvjcb_get_trust_items();
 				) ); ?>
 			</div>
 
-			<?php if ( $trust_items ) : ?>
-				<div class="lvjcb-hero__badges">
-					<?php foreach ( $trust_items as $item ) : ?>
-						<div class="lvjcb-hero__badge">
-							<?php echo lvjcb_icon( $item['icon'], array( 'size' => 20 ) ); ?>
-							<span><?php echo esc_html( $item['label'] ); ?></span>
-						</div>
-					<?php endforeach; ?>
+			<div class="lvjcb-hero__stats">
+				<div>
+					<div class="lvjcb-hero__stat-value">500+</div>
+					<div class="lvjcb-hero__stat-label"><?php esc_html_e( 'Cars bought this year', 'lvjcb' ); ?></div>
 				</div>
-			<?php endif; ?>
+				<div>
+					<div class="lvjcb-hero__stat-value"><?php esc_html_e( 'Same Day', 'lvjcb' ); ?></div>
+					<div class="lvjcb-hero__stat-label"><?php esc_html_e( 'Pickup & payment', 'lvjcb' ); ?></div>
+				</div>
+				<div>
+					<div class="lvjcb-hero__stat-value">$0</div>
+					<div class="lvjcb-hero__stat-label"><?php esc_html_e( 'Towing fees, always', 'lvjcb' ); ?></div>
+				</div>
+			</div>
 
 		</div>
 
@@ -89,7 +95,7 @@ $trust_items   = lvjcb_get_trust_items();
 			<?php else : ?>
 				<div class="lvjcb-hero__placeholder">
 					<?php echo lvjcb_icon( 'truck', array( 'size' => 34 ) ); ?>
-					<span><?php esc_html_e( 'Hero photograph pending — tow truck loading a real junk vehicle, Las Vegas residential driveway, natural daylight, per the AI Image Production Guide.', 'lvjcb' ); ?></span>
+					<span><?php esc_html_e( 'Hero photograph pending', 'lvjcb' ); ?></span>
 				</div>
 			<?php endif; ?>
 		</div>

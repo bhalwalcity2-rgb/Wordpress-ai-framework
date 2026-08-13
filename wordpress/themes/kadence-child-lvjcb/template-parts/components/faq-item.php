@@ -30,7 +30,7 @@ $panel_id  = 'lvjcb-faq-panel-' . $id;
 			aria-controls="<?php echo esc_attr( $panel_id ); ?>"
 		>
 			<span class="lvjcb-faq-item__question"><?php echo esc_html( $question ); ?></span>
-			<?php echo lvjcb_icon( 'chevron-down', array( 'class' => 'lvjcb-faq-item__icon', 'size' => 18 ) ); ?>
+			<?php echo lvjcb_icon( 'plus', array( 'class' => 'lvjcb-faq-item__icon', 'size' => 20 ) ); ?>
 		</button>
 	</h3>
 

@@ -1,10 +1,5 @@
-/**
- * Footer section styles. Darkest neutral background, utility tone —
- * deliberately not another CTA/sales moment.
- */
-
 .lvjcb-footer {
-	background: var(--lvjcb-color-dark);
+	background: rgba(15,30,44,1);
 	color: var(--lvjcb-color-text-on-dark-muted);
 	padding-block: var(--lvjcb-space-xl) var(--lvjcb-space-lg);
 }
@@ -24,23 +19,37 @@
 .lvjcb-footer__logo {
 	display: flex;
 	align-items: center;
-	gap: 8px;
+	gap: 10px;
 	font-family: var(--lvjcb-font-heading);
-	font-weight: var(--lvjcb-font-weight-bold);
+	font-weight: var(--lvjcb-font-weight-heavy);
 	font-size: 16px;
 	color: var(--lvjcb-color-text-on-dark);
+}
+
+.lvjcb-footer__logo-mark {
+	width: 36px;
+	height: 36px;
+	background: var(--lvjcb-color-primary);
+	border-radius: var(--lvjcb-radius);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 15px;
+	font-weight: var(--lvjcb-font-weight-heavy);
+	color: var(--lvjcb-color-text-on-dark);
+	flex-shrink: 0;
 }
 
 .lvjcb-footer__brand p {
 	margin: 0;
 	font-size: 14px;
 	line-height: 1.6;
-	max-width: 34ch;
+	max-width: 32ch;
 }
 
 .lvjcb-footer__col-title {
 	margin: 0 0 var(--lvjcb-space-sm);
-	font-size: 13px;
+	font-size: 12px;
 	font-weight: var(--lvjcb-font-weight-bold);
 	letter-spacing: var(--lvjcb-letter-spacing-wide);
 	text-transform: uppercase;
@@ -58,12 +67,13 @@
 
 .lvjcb-footer__col a {
 	text-decoration: none;
-	font-size: 14.5px;
+	font-size: 14px;
 	color: var(--lvjcb-color-text-on-dark-muted);
+	transition: color var(--lvjcb-transition-fast);
 }
 
 .lvjcb-footer__col a:hover {
-	color: var(--lvjcb-color-text-on-dark);
+	color: var(--lvjcb-color-accent);
 }
 
 .lvjcb-footer__col a:focus-visible {
@@ -72,17 +82,17 @@
 }
 
 .lvjcb-footer__col li {
-	font-size: 14.5px;
+	font-size: 14px;
 }
 
 .lvjcb-footer__bottom {
 	margin-top: var(--lvjcb-space-xl);
 	padding-top: var(--lvjcb-space-md);
-	border-top: 1px solid rgba(245, 247, 249, 0.1);
+	border-top: 1px solid rgba(255, 255, 255, 0.08);
 	display: flex;
 	flex-direction: column;
 	gap: var(--lvjcb-space-sm);
-	font-size: 12.5px;
+	font-size: 13px;
 }
 
 .lvjcb-footer__legal a {
@@ -96,7 +106,7 @@
 
 @media (min-width: 769px) {
 	.lvjcb-footer__grid {
-		grid-template-columns: 1.3fr repeat(2, 1fr);
+		grid-template-columns: 1.4fr repeat(3, 1fr);
 	}
 
 	.lvjcb-footer__bottom {

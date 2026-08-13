@@ -1,9 +1,9 @@
-/**
- * FAQ Accordion Item component styles.
- */
-
 .lvjcb-faq-item {
 	border-bottom: 1px solid var(--lvjcb-color-border);
+}
+
+.lvjcb-faq-item:first-child {
+	border-top: 1px solid var(--lvjcb-color-border);
 }
 
 .lvjcb-faq-item__heading {
@@ -23,8 +23,14 @@
 	cursor: pointer;
 	text-align: left;
 	font-family: var(--lvjcb-font-heading);
-	font-size: var(--lvjcb-text-h5);
+	font-size: 17px;
+	font-weight: var(--lvjcb-font-weight-bold);
 	color: var(--lvjcb-color-text);
+	transition: color var(--lvjcb-transition-fast);
+}
+
+.lvjcb-faq-item__toggle:hover {
+	color: var(--lvjcb-color-primary);
 }
 
 .lvjcb-faq-item__icon {
@@ -34,7 +40,7 @@
 }
 
 .lvjcb-faq-item.is-open .lvjcb-faq-item__icon {
-	transform: rotate(180deg);
+	transform: rotate(45deg);
 }
 
 .lvjcb-faq-item__toggle:focus-visible {
@@ -65,14 +71,15 @@
 	padding-bottom: var(--lvjcb-space-md);
 	font-family: var(--lvjcb-font-body);
 	font-size: 15px;
-	line-height: 1.6;
+	line-height: 1.65;
 	color: var(--lvjcb-color-text-muted);
 	max-width: var(--lvjcb-measure);
 }
 
 @media (prefers-reduced-motion: reduce) {
 	.lvjcb-faq-item__panel,
-	.lvjcb-faq-item__icon {
+	.lvjcb-faq-item__icon,
+	.lvjcb-faq-item__toggle {
 		transition: none;
 	}
 }

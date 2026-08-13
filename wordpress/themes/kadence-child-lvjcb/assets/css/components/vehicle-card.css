@@ -1,24 +1,18 @@
-/**
- * Vehicle Card component styles. Hover only applies when linked
- * (--linked modifier), matching the same conditional-hover discipline
- * used across every card that may or may not be clickable.
- */
-
 .lvjcb-vehicle-card {
 	background: var(--lvjcb-color-surface);
 	border-radius: var(--lvjcb-radius);
-	box-shadow: var(--lvjcb-shadow);
+	border: 1px solid var(--lvjcb-color-border);
 	overflow: hidden;
 	transition: box-shadow var(--lvjcb-transition-fast);
 }
 
 .lvjcb-vehicle-card--linked:hover {
-	box-shadow: var(--lvjcb-shadow-hover);
+	box-shadow: var(--lvjcb-shadow);
 }
 
 .lvjcb-vehicle-card__figure {
-	aspect-ratio: 4 / 3;
-	background: var(--lvjcb-color-surface-alt);
+	aspect-ratio: 16 / 10;
+	background: linear-gradient(135deg, rgba(28,49,68,0.06), rgba(28,49,68,0.12));
 }
 
 .lvjcb-vehicle-card__image {
@@ -29,7 +23,7 @@
 }
 
 .lvjcb-vehicle-card__caption {
-	padding: var(--lvjcb-space-sm) var(--lvjcb-space-md) var(--lvjcb-space-md);
+	padding: 12px var(--lvjcb-space-sm);
 	display: flex;
 	flex-direction: column;
 	gap: 2px;
@@ -46,13 +40,13 @@
 }
 
 .lvjcb-vehicle-card__title {
-	font-size: 14.5px;
+	font-size: 14px;
 	font-weight: var(--lvjcb-font-weight-bold);
 	color: var(--lvjcb-color-text);
 }
 
 .lvjcb-vehicle-card__condition {
-	font-size: 13px;
+	font-size: 12px;
 	color: var(--lvjcb-color-text-muted);
 }
 

@@ -1,21 +1,50 @@
-/**
- * Contact Information section styles.
- */
-
 .lvjcb-contact-information__grid {
 	display: grid;
 	grid-template-columns: 1fr;
-	gap: var(--lvjcb-space-xl);
+	gap: var(--lvjcb-space-md);
 }
 
 .lvjcb-contact-information__details {
 	font-style: normal;
 	display: flex;
 	flex-direction: column;
-	gap: var(--lvjcb-space-xs);
-	font-family: var(--lvjcb-font-body);
-	font-size: var(--lvjcb-text-base);
+	gap: var(--lvjcb-space-md);
+}
+
+.lvjcb-contact-information__card {
+	display: flex;
+	align-items: flex-start;
+	gap: var(--lvjcb-space-sm);
+	padding: var(--lvjcb-space-md);
+	background: var(--lvjcb-color-surface);
+	border: 1px solid var(--lvjcb-color-border);
+	border-radius: var(--lvjcb-radius);
+}
+
+.lvjcb-contact-information__card-icon {
+	width: 44px;
+	height: 44px;
+	padding: 12px;
+	box-sizing: border-box;
+	background: rgba(208,0,0,0.06);
+	border-radius: var(--lvjcb-radius);
+	color: var(--lvjcb-color-primary);
+	flex-shrink: 0;
+}
+
+.lvjcb-contact-information__card-label {
+	font-size: 12px;
+	font-weight: var(--lvjcb-font-weight-bold);
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	color: var(--lvjcb-color-text-muted);
+}
+
+.lvjcb-contact-information__card-value {
+	font-size: 16px;
+	font-weight: var(--lvjcb-font-weight-medium);
 	color: var(--lvjcb-color-text);
+	margin-top: 4px;
 }
 
 .lvjcb-contact-information__business-name {
@@ -25,9 +54,15 @@
 
 .lvjcb-contact-information__phone,
 .lvjcb-contact-information__email {
-	color: var(--lvjcb-color-primary);
+	color: var(--lvjcb-color-text);
 	text-decoration: none;
 	width: fit-content;
+	transition: color var(--lvjcb-transition-fast);
+}
+
+.lvjcb-contact-information__phone:hover,
+.lvjcb-contact-information__email:hover {
+	color: var(--lvjcb-color-primary);
 }
 
 .lvjcb-contact-information__phone:focus-visible,
@@ -59,6 +94,6 @@
 
 @media (min-width: 769px) {
 	.lvjcb-contact-information__grid {
-		grid-template-columns: 1.1fr 1fr;
+		grid-template-columns: repeat(3, 1fr);
 	}
 }

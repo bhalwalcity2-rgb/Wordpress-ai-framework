@@ -1,17 +1,11 @@
-/**
- * CTA Banner section styles — layout only. Background comes from the
- * shared .lvjcb-section--primary modifier; button appearance from
- * .lvjcb-btn--inverse. section-base.css supplies heading/intro margins,
- * overridden here to remove the bottom margin the intro/heading would
- * otherwise carry, since this section's copy sits beside the button
- * rather than above a grid.
- */
-
 .lvjcb-cta-banner__inner {
 	display: flex;
 	flex-direction: column;
-	align-items: flex-start;
+	align-items: center;
+	text-align: center;
 	gap: var(--lvjcb-space-md);
+	position: relative;
+	z-index: 2;
 }
 
 .lvjcb-cta-banner .lvjcb-section__heading,
@@ -23,10 +17,14 @@
 	margin-bottom: var(--lvjcb-space-2xs);
 }
 
+.lvjcb-cta-banner__copy .lvjcb-section__eyebrow::before {
+	display: none;
+}
+
 @media (min-width: 769px) {
 	.lvjcb-cta-banner__inner {
 		flex-direction: row;
-		align-items: center;
 		justify-content: space-between;
+		text-align: left;
 	}
 }

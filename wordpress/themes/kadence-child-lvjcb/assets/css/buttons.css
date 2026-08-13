@@ -1,29 +1,19 @@
-/**
- * Shared Button System
- *
- * The one authoritative button implementation for the whole site.
- * Every CTA — Header, Hero, CTA Banners, Quote Form's submit — consumes
- * these classes rather than defining its own button appearance. Loaded
- * globally alongside tokens.css, since buttons appear in nearly every
- * component/section.
- */
-
 .lvjcb-btn {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
 	gap: var(--lvjcb-space-2xs);
 	height: 52px;
-	padding: 0 26px;
+	padding: 0 28px;
 	border-radius: var(--lvjcb-radius);
 	font-family: var(--lvjcb-font-body);
-	font-size: 15.5px;
-	font-weight: var(--lvjcb-font-weight-medium);
+	font-size: 15px;
+	font-weight: var(--lvjcb-font-weight-bold);
 	text-decoration: none;
-	border: 1.5px solid transparent;
+	border: 2px solid transparent;
 	cursor: pointer;
 	white-space: nowrap;
-	transition: background-color var(--lvjcb-transition-fast), border-color var(--lvjcb-transition-fast), color var(--lvjcb-transition-fast);
+	transition: background-color var(--lvjcb-transition-fast), border-color var(--lvjcb-transition-fast), color var(--lvjcb-transition-fast), transform var(--lvjcb-transition-fast), box-shadow var(--lvjcb-transition-fast);
 }
 
 .lvjcb-btn:focus-visible {
@@ -34,11 +24,28 @@
 .lvjcb-btn--primary {
 	background: var(--lvjcb-color-primary);
 	color: var(--lvjcb-color-text-on-dark);
+	border-color: var(--lvjcb-color-primary);
 	box-shadow: var(--lvjcb-shadow-btn);
 }
 
 .lvjcb-btn--primary:hover {
 	background: var(--lvjcb-color-primary-deep);
+	border-color: var(--lvjcb-color-primary-deep);
+	transform: translateY(-1px);
+	box-shadow: 0 4px 16px rgba(208,0,0,0.3);
+}
+
+.lvjcb-btn--gold {
+	background: var(--lvjcb-color-accent);
+	color: var(--lvjcb-color-dark);
+	border-color: var(--lvjcb-color-accent);
+	font-weight: var(--lvjcb-font-weight-heavy);
+}
+
+.lvjcb-btn--gold:hover {
+	background: var(--lvjcb-color-accent-deep);
+	border-color: var(--lvjcb-color-accent-deep);
+	transform: translateY(-1px);
 }
 
 .lvjcb-btn--secondary {
@@ -52,30 +59,27 @@
 	color: var(--lvjcb-color-primary);
 }
 
-/* Modifier, not a new button style: recolors the same outline language
-   for use against the dark Hero/CTA Banner backgrounds. */
 .lvjcb-btn--secondary.lvjcb-btn--on-dark {
-	border-color: rgba(245, 247, 249, 0.35);
+	border-color: rgba(245, 247, 249, 0.3);
 	color: var(--lvjcb-color-text-on-dark);
 }
 
 .lvjcb-btn--secondary.lvjcb-btn--on-dark:hover {
 	background: rgba(245, 247, 249, 0.08);
-	border-color: rgba(245, 247, 249, 0.55);
+	border-color: rgba(245, 247, 249, 0.5);
 }
 
-/* Modifier, not a new button style: the CTA Banner sections sit on a
-   solid primary-red background, where .lvjcb-btn--primary itself would
-   be invisible (red on red). This inverts fill/text color for that one
-   context — same button language, recolored, exactly like
-   --on-dark does for the secondary button. */
 .lvjcb-btn--inverse {
 	background: var(--lvjcb-color-surface);
 	color: var(--lvjcb-color-primary);
+	border-color: var(--lvjcb-color-surface);
+	font-weight: var(--lvjcb-font-weight-heavy);
 }
 
 .lvjcb-btn--inverse:hover {
 	background: var(--lvjcb-color-surface-alt);
+	border-color: var(--lvjcb-color-surface-alt);
+	transform: translateY(-1px);
 }
 
 .lvjcb-btn--block {

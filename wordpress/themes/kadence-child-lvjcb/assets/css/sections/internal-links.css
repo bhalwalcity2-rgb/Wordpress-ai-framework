@@ -1,9 +1,9 @@
 .lvjcb-internal-links {
-	padding: var(--lvjcb-space-600) 0;
+	padding: var(--lvjcb-space-section) 0;
 }
 
 .lvjcb-internal-links__group {
-	margin-bottom: var(--lvjcb-space-500);
+	margin-bottom: var(--lvjcb-space-lg);
 }
 
 .lvjcb-internal-links__group:last-child {
@@ -12,29 +12,31 @@
 
 .lvjcb-internal-links__heading {
 	font-size: 1.1rem;
-	font-weight: 700;
-	margin-bottom: var(--lvjcb-space-300);
+	font-weight: var(--lvjcb-font-weight-bold);
+	margin-bottom: var(--lvjcb-space-md);
 }
 
 .lvjcb-internal-links__list {
 	display: flex;
 	flex-wrap: wrap;
-	gap: var(--lvjcb-space-200);
+	gap: var(--lvjcb-space-xs);
 }
 
 .lvjcb-internal-links__link {
 	display: inline-block;
-	padding: var(--lvjcb-space-200) var(--lvjcb-space-300);
-	border-radius: var(--lvjcb-radius-md);
+	padding: var(--lvjcb-space-xs) var(--lvjcb-space-sm);
+	border-radius: var(--lvjcb-radius);
 	font-size: 0.88rem;
-	font-weight: 600;
-	transition: background 0.2s ease, color 0.2s ease;
+	font-weight: var(--lvjcb-font-weight-medium);
+	text-decoration: none;
+	transition: background var(--lvjcb-transition-fast), color var(--lvjcb-transition-fast), border-color var(--lvjcb-transition-fast);
 	background: var(--lvjcb-color-surface);
-	border: 1px solid var(--lvjcb-color-border, #e0e0e0);
+	border: 1px solid var(--lvjcb-color-border);
+	color: var(--lvjcb-color-text);
 }
 
 .lvjcb-internal-links__link:hover {
 	background: var(--lvjcb-color-primary);
-	color: #fff;
+	color: var(--lvjcb-color-text-on-dark);
 	border-color: var(--lvjcb-color-primary);
 }

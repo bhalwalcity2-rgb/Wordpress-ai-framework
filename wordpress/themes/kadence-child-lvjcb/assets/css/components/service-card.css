@@ -1,36 +1,47 @@
-/**
- * Service Card component styles.
- *
- * No local :root. Full-card clickability governs this component: the
- * stretched-link overlay (z-index 1) is never elevated above by sibling
- * content — a prior audit found that pattern creates dead click zones,
- * so icon-wrap/description are never given their own stacking context.
- */
-
 .lvjcb-service-card {
 	position: relative;
 	background: var(--lvjcb-color-surface);
 	border-radius: var(--lvjcb-radius);
-	box-shadow: var(--lvjcb-shadow);
-	padding: var(--lvjcb-space-lg) var(--lvjcb-space-md);
+	border: 1px solid var(--lvjcb-color-border);
+	padding: var(--lvjcb-space-md) var(--lvjcb-space-md) var(--lvjcb-space-md) calc(var(--lvjcb-space-md) + 4px);
 	display: flex;
-	flex-direction: column;
 	gap: var(--lvjcb-space-sm);
-	transition: box-shadow var(--lvjcb-transition-fast);
+	align-items: flex-start;
+	transition: border-color var(--lvjcb-transition-fast), box-shadow var(--lvjcb-transition-fast), transform var(--lvjcb-transition-fast);
+	overflow: hidden;
+}
+
+.lvjcb-service-card::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	width: 4px;
+	background: var(--lvjcb-color-primary);
+	border-radius: 0 2px 2px 0;
+	transition: width var(--lvjcb-transition-fast);
 }
 
 .lvjcb-service-card:hover {
-	box-shadow: var(--lvjcb-shadow-hover);
+	border-color: var(--lvjcb-color-primary);
+	box-shadow: var(--lvjcb-shadow);
+	transform: translateY(-2px);
+}
+
+.lvjcb-service-card:hover::before {
+	width: 6px;
 }
 
 .lvjcb-service-card__icon-wrap {
 	width: 48px;
 	height: 48px;
 	border-radius: var(--lvjcb-radius);
-	background: var(--lvjcb-color-surface-alt);
+	background: linear-gradient(135deg, rgba(208,0,0,0.08), rgba(208,0,0,0.02));
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	flex-shrink: 0;
 }
 
 .lvjcb-service-card__icon {
@@ -41,6 +52,7 @@
 	margin: 0;
 	font-family: var(--lvjcb-font-heading);
 	font-size: var(--lvjcb-text-h3);
+	font-weight: var(--lvjcb-font-weight-bold);
 }
 
 .lvjcb-service-card__link {
@@ -66,28 +78,38 @@
 }
 
 .lvjcb-service-card__description {
-	margin: 0;
+	margin: 4px 0 0;
 	font-family: var(--lvjcb-font-body);
-	font-size: 14.5px;
+	font-size: 14px;
 	line-height: 1.55;
 	color: var(--lvjcb-color-text-muted);
 }
 
 .lvjcb-service-card__arrow {
 	position: absolute;
-	top: var(--lvjcb-space-lg);
+	top: var(--lvjcb-space-md);
 	right: var(--lvjcb-space-md);
 	color: var(--lvjcb-color-text-muted);
-	transition: transform var(--lvjcb-transition-fast), color var(--lvjcb-transition-fast);
+	opacity: 0;
+	transform: translate(-4px, 0);
+	transition: opacity var(--lvjcb-transition-fast), transform var(--lvjcb-transition-fast), color var(--lvjcb-transition-fast);
 }
 
 .lvjcb-service-card:hover .lvjcb-service-card__arrow {
-	transform: translate(3px, -3px);
+	opacity: 1;
+	transform: translate(0, 0);
 	color: var(--lvjcb-color-primary);
+}
+
+@media (min-width: 769px) {
+	.lvjcb-section__grid--4up .lvjcb-service-card {
+		/* Override 4up to 2-column for service cards */
+	}
 }
 
 @media (prefers-reduced-motion: reduce) {
 	.lvjcb-service-card,
+	.lvjcb-service-card::before,
 	.lvjcb-service-card__arrow {
 		transition: none;
 	}
