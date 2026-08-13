@@ -1,0 +1,61 @@
+{
+  "slug": "sedans",
+  "seo_title": "Cash for Junk Sedans & Coupes in Las Vegas | Las Vegas Junk Car Buyers",
+  "seo_description": "We buy junk sedans and coupes in Las Vegas. Any year, any condition — running or not. Free towing, instant cash offers. Call (702) 555-0134.",
+  "hero_heading": "Cash for Junk Sedans & Coupes",
+  "hero_description": "Selling a sedan or coupe that's past its prime? We buy sedans and coupes of any age, mileage, or condition across the Las Vegas valley — faded paint, worn interior, and high mileage never disqualify a vehicle from an offer.",
+  "sections": [
+    {
+      "type": "content",
+      "heading": "We Buy Sedans and Coupes in Any Condition",
+      "body": "Sedans and coupes are the most common vehicles we purchase across the Las Vegas valley. Honda Accords, Toyota Camrys, Nissan Altimas, Chevy Malibus, Ford Fusions, Hyundai Sonatas — we buy them all, regardless of year or condition.\n\nWhether your sedan has a blown head gasket, a transmission that slips, body damage from a parking lot fender bender, or simply has 200,000 miles on it and isn't worth repairing, we'll make you a cash offer. The vehicle does not need to run, and it does not need to be in any particular cosmetic condition."
+    },
+    {
+      "type": "content",
+      "heading": "How to Sell Your Junk Sedan in Las Vegas",
+      "body": "Call us at (702) 555-0134 with the year, make, model, and condition of your sedan. We give you a firm cash offer on the phone — no appointment needed and no in-person inspection required to get a price.\n\nAccept the offer and we schedule a free pickup at your location anywhere in the Las Vegas valley. Our tow truck arrives, we verify the car, pay you cash, and load it up. The whole process typically takes under an hour once we arrive."
+    },
+    {
+      "type": "content",
+      "heading": "Common Sedans We Buy",
+      "body": "While we accept all makes and models, the most common sedans we purchase include Honda Accord, Honda Civic, Toyota Camry, Toyota Corolla, Nissan Altima, Nissan Sentra, Chevrolet Malibu, Chevrolet Impala, Ford Fusion, Ford Focus, Hyundai Sonata, Hyundai Elantra, and Kia Optima.\n\nWe also buy luxury sedans that have reached the end of their useful life — older BMW 3 Series, Mercedes C-Class, Lexus ES, and Infiniti G35/G37 models are all vehicles we regularly purchase."
+    },
+    {
+      "type": "content",
+      "heading": "Why Sell Your Old Sedan to Us Instead of a Dealership",
+      "body": "Dealerships typically won't offer anything meaningful for a car that needs significant repairs or has high mileage — they'll either decline it entirely or offer a few hundred dollars as a \"trade-in allowance\" that they make up for elsewhere in the deal.\n\nWe buy the car for what it's actually worth in its current condition. No trade-in games, no pressure to buy something else. You get cash and we take the car. If the vehicle doesn't run, a dealership can't even take it — we can."
+    }
+  ],
+  "faq": [
+    {
+      "question": "How much is my junk sedan worth?",
+      "answer": "Most junk sedans in the Las Vegas area sell for $200 to $2,500 depending on the year, make, weight, and condition. Newer sedans and those with intact drivetrains receive higher offers."
+    },
+    {
+      "question": "Do you buy sedans that don't run?",
+      "answer": "Yes. Non-running sedans are one of the most common vehicles we purchase. Blown engines, dead transmissions, electrical failures — none of it matters."
+    },
+    {
+      "question": "Will you buy my sedan if it has high mileage?",
+      "answer": "Absolutely. High mileage is never a disqualifier. We buy sedans with 150,000, 200,000, even 300,000+ miles."
+    },
+    {
+      "question": "Can I sell a sedan without a title in Las Vegas?",
+      "answer": "In many cases, yes. Nevada allows for alternative documentation. Call us and we'll explain what's needed for your specific situation."
+    }
+  ],
+  "internal_links": {
+    "services": [
+      {"label": "Trucks & SUVs", "slug": "trucks-suvs"},
+      {"label": "Accident & Storm-Damaged", "slug": "damaged"},
+      {"label": "Non-Running Vehicles", "slug": "non-running"}
+    ],
+    "locations": [
+      {"label": "Las Vegas, NV", "slug": "las-vegas"},
+      {"label": "Henderson, NV", "slug": "henderson"},
+      {"label": "North Las Vegas, NV", "slug": "north-las-vegas"},
+      {"label": "Summerlin, NV", "slug": "summerlin"},
+      {"label": "Spring Valley, NV", "slug": "spring-valley"}
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+/**
+ * Why Choose Us Card component styles. Same icon-wrap treatment as
+ * Service Card for visual-family consistency, but no hover/transition —
+ * this card is never interactive.
+ */
+
+.lvjcb-why-card {
+	display: flex;
+	flex-direction: column;
+	gap: var(--lvjcb-space-sm);
+}
+
+.lvjcb-why-card__icon {
+	width: 48px;
+	height: 48px;
+	padding: 12px;
+	box-sizing: border-box;
+	border-radius: var(--lvjcb-radius);
+	background: var(--lvjcb-color-surface-alt);
+	color: var(--lvjcb-color-primary);
+}
+
+.lvjcb-why-card__heading {
+	margin: 0;
+	font-family: var(--lvjcb-font-heading);
+	font-size: var(--lvjcb-text-h3);
+	color: var(--lvjcb-color-text);
+}
+
+.lvjcb-why-card__description {
+	margin: 0;
+	font-family: var(--lvjcb-font-body);
+	font-size: 14.5px;
+	line-height: 1.55;
+	color: var(--lvjcb-color-text-muted);
+}

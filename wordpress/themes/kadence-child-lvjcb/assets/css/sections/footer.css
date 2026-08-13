@@ -1,0 +1,106 @@
+/**
+ * Footer section styles. Darkest neutral background, utility tone —
+ * deliberately not another CTA/sales moment.
+ */
+
+.lvjcb-footer {
+	background: var(--lvjcb-color-dark);
+	color: var(--lvjcb-color-text-on-dark-muted);
+	padding-block: var(--lvjcb-space-xl) var(--lvjcb-space-lg);
+}
+
+.lvjcb-footer__grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: var(--lvjcb-space-lg);
+}
+
+.lvjcb-footer__brand {
+	display: flex;
+	flex-direction: column;
+	gap: var(--lvjcb-space-sm);
+}
+
+.lvjcb-footer__logo {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-family: var(--lvjcb-font-heading);
+	font-weight: var(--lvjcb-font-weight-bold);
+	font-size: 16px;
+	color: var(--lvjcb-color-text-on-dark);
+}
+
+.lvjcb-footer__brand p {
+	margin: 0;
+	font-size: 14px;
+	line-height: 1.6;
+	max-width: 34ch;
+}
+
+.lvjcb-footer__col-title {
+	margin: 0 0 var(--lvjcb-space-sm);
+	font-size: 13px;
+	font-weight: var(--lvjcb-font-weight-bold);
+	letter-spacing: var(--lvjcb-letter-spacing-wide);
+	text-transform: uppercase;
+	color: var(--lvjcb-color-text-on-dark);
+}
+
+.lvjcb-footer__col ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.lvjcb-footer__col a {
+	text-decoration: none;
+	font-size: 14.5px;
+	color: var(--lvjcb-color-text-on-dark-muted);
+}
+
+.lvjcb-footer__col a:hover {
+	color: var(--lvjcb-color-text-on-dark);
+}
+
+.lvjcb-footer__col a:focus-visible {
+	outline: 2px solid var(--lvjcb-color-accent);
+	outline-offset: 2px;
+}
+
+.lvjcb-footer__col li {
+	font-size: 14.5px;
+}
+
+.lvjcb-footer__bottom {
+	margin-top: var(--lvjcb-space-xl);
+	padding-top: var(--lvjcb-space-md);
+	border-top: 1px solid rgba(245, 247, 249, 0.1);
+	display: flex;
+	flex-direction: column;
+	gap: var(--lvjcb-space-sm);
+	font-size: 12.5px;
+}
+
+.lvjcb-footer__legal a {
+	color: var(--lvjcb-color-text-on-dark-muted);
+	text-decoration: none;
+}
+
+.lvjcb-footer__legal a:hover {
+	color: var(--lvjcb-color-text-on-dark);
+}
+
+@media (min-width: 769px) {
+	.lvjcb-footer__grid {
+		grid-template-columns: 1.3fr repeat(2, 1fr);
+	}
+
+	.lvjcb-footer__bottom {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+}

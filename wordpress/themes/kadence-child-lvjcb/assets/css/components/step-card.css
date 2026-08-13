@@ -1,0 +1,37 @@
+/**
+ * Step Card component styles. No hover, no interactivity.
+ */
+
+.lvjcb-step-card {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: var(--lvjcb-space-sm);
+}
+
+.lvjcb-step-card__number {
+	font-family: var(--lvjcb-font-heading);
+	font-size: 34px;
+	font-weight: var(--lvjcb-font-weight-bold);
+	color: var(--lvjcb-color-accent-deep);
+	line-height: 1;
+}
+
+.lvjcb-step-card__icon {
+	color: var(--lvjcb-color-primary);
+}
+
+.lvjcb-step-card__heading {
+	margin: 0;
+	font-family: var(--lvjcb-font-heading);
+	font-size: var(--lvjcb-text-h4);
+	color: var(--lvjcb-color-text);
+}
+
+.lvjcb-step-card__description {
+	margin: 0;
+	font-family: var(--lvjcb-font-body);
+	font-size: 14.5px;
+	line-height: 1.55;
+	color: var(--lvjcb-color-text-muted);
+}

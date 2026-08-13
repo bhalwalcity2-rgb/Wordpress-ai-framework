@@ -1,0 +1,65 @@
+{
+  "slug": "non-running",
+  "seo_title": "Cash for Non-Running Cars in Las Vegas | Las Vegas Junk Car Buyers",
+  "seo_description": "We buy non-running cars in Las Vegas. Blown engine, dead transmission, won't start — we pay cash and tow free. Call (702) 555-0134 today.",
+  "hero_heading": "Cash for Non-Running & Mechanical Failure Vehicles",
+  "hero_description": "A vehicle that won't start is exactly the kind of car we specialize in. Blown engines, failed transmissions, electrical issues — none of it needs to be diagnosed or fixed before you call us.",
+  "sections": [
+    {
+      "type": "content",
+      "heading": "We Specialize in Non-Running Vehicles",
+      "body": "Non-running vehicles are the core of our business. While most buyers want cars that drive off the lot, we specifically seek out vehicles that don't start, don't move, or aren't safe to drive. These vehicles still have significant value in their metal, parts, and components.\n\nIf your car has been sitting in the driveway because the engine blew, the transmission failed, or it simply won't turn over anymore, you don't need to spend money diagnosing or fixing it. Call us, tell us what you know about the problem, and we'll make you a cash offer based on the vehicle itself — not on whether it runs."
+    },
+    {
+      "type": "content",
+      "heading": "Common Mechanical Issues We Buy",
+      "body": "We purchase vehicles with every type of mechanical failure, including blown or seized engines, failed or slipping transmissions, overheated engines with cracked heads or warped blocks, broken timing belts or chains, catastrophic electrical failures, failed fuel pumps or fuel systems, broken axles and differential failures, and vehicles that simply won't start for unknown reasons.\n\nYou do not need to know exactly what's wrong with the car. If your mechanic told you it would cost more to fix than the car is worth, that's all we need to know."
+    },
+    {
+      "type": "content",
+      "heading": "How to Sell a Non-Running Car in Las Vegas",
+      "body": "Call (702) 555-0134 and tell us the year, make, model, and what you know about the problem. We don't need a diagnosis — a description like \"it won't start\" or \"the engine overheated and now it makes a knocking sound\" is enough for us to make an offer.\n\nBecause the car doesn't run, we bring a flatbed tow truck to load it. Towing is always free, no matter where the vehicle is located in the Las Vegas valley. We pay you cash before the car leaves your property."
+    },
+    {
+      "type": "content",
+      "heading": "Why Non-Running Cars Still Have Value",
+      "body": "A car that won't run still contains hundreds of pounds of steel, aluminum, and other metals that have real scrap value. Beyond the metal, many individual components — alternators, starters, AC compressors, catalytic converters, wheels, and body panels — can be refurbished and resold.\n\nThe value of a non-running vehicle depends on its weight, the demand for its specific parts, and the current market price of scrap metal. Heavier vehicles and those with popular drivetrains tend to receive the best offers."
+    }
+  ],
+  "faq": [
+    {
+      "question": "How much is a non-running car worth in Las Vegas?",
+      "answer": "Non-running vehicles typically sell for $200 to $3,000+ depending on the year, make, model, weight, and what parts are intact. Trucks and SUVs that don't run still receive solid offers due to weight and parts demand."
+    },
+    {
+      "question": "Do I need to know what's wrong with my car before calling?",
+      "answer": "No. We don't need a mechanic's diagnosis. Just tell us what you know — it won't start, it overheated, it makes a noise — and we'll base our offer on the vehicle itself."
+    },
+    {
+      "question": "Can you tow a car that has flat tires and won't roll?",
+      "answer": "Yes. We use flatbed tow trucks equipped with winches. Flat tires, locked wheels, and seized brakes are all situations our drivers handle routinely."
+    },
+    {
+      "question": "Will you buy a car that has been sitting for years and won't start?",
+      "answer": "Yes. We regularly buy vehicles that have been parked and neglected for months or years. The longer a car sits, the less likely it is to start — but it still has value to us."
+    },
+    {
+      "question": "Is it worth selling a car with a blown engine?",
+      "answer": "Almost always yes. The rest of the vehicle — transmission, body, frame, interior, and individual components — still has value even if the engine is destroyed."
+    }
+  ],
+  "internal_links": {
+    "services": [
+      {"label": "Sedans & Coupes", "slug": "sedans"},
+      {"label": "Trucks & SUVs", "slug": "trucks-suvs"},
+      {"label": "Accident & Storm-Damaged", "slug": "damaged"}
+    ],
+    "locations": [
+      {"label": "Las Vegas, NV", "slug": "las-vegas"},
+      {"label": "Henderson, NV", "slug": "henderson"},
+      {"label": "North Las Vegas, NV", "slug": "north-las-vegas"},
+      {"label": "Summerlin, NV", "slug": "summerlin"},
+      {"label": "Spring Valley, NV", "slug": "spring-valley"}
+    ]
+  }
+}

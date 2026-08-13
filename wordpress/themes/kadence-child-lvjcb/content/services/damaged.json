@@ -1,0 +1,61 @@
+{
+  "slug": "damaged",
+  "seo_title": "Cash for Accident & Storm-Damaged Cars in Las Vegas | Las Vegas Junk Car Buyers",
+  "seo_description": "We buy accident and storm-damaged cars in Las Vegas. Collision, hail, flood damage — any condition. Free towing, instant cash. Call (702) 555-0134.",
+  "hero_heading": "Cash for Accident & Storm-Damaged Vehicles",
+  "hero_description": "A collision, hailstorm, or flood doesn't mean your vehicle is worthless. We regularly buy accident and storm-damaged vehicles across the valley — no repair required before we make an offer.",
+  "sections": [
+    {
+      "type": "content",
+      "heading": "We Buy Damaged Vehicles Others Won't Touch",
+      "body": "When your vehicle has been in an accident or damaged by a storm, getting rid of it can feel overwhelming. Insurance may have totaled it, the body shop quote is more than the car is worth, or the damage is so severe that no dealership will take it as a trade-in.\n\nThat's where we come in. We buy vehicles with collision damage, hail damage, flood damage, and fire damage — regardless of how severe. We don't need the vehicle to be repaired or even driveable. We'll tow it from wherever it sits and pay you cash."
+    },
+    {
+      "type": "content",
+      "heading": "Types of Damage We Accept",
+      "body": "There is no type of damage that disqualifies a vehicle from our purchase. Common damage types we buy include front-end collision damage, rear-end impact damage, side impact and T-bone damage, rollover damage, hail dents and broken glass, flood and water damage to the interior or engine, fire damage, and vandalism damage.\n\nEven vehicles that have been declared a total loss by an insurance company still have value to us. The metal, parts, and components are worth something regardless of the vehicle's driveability."
+    },
+    {
+      "type": "content",
+      "heading": "How to Sell a Damaged Car in Las Vegas",
+      "body": "Call (702) 555-0134 and describe the damage. Be as specific as you can — what happened, which parts of the vehicle are affected, and whether the car still runs. We'll give you a firm cash offer based on your description.\n\nIf the car is at a body shop, tow yard, or impound lot, let us know. We can often pick up directly from those locations, saving you the daily storage fees that add up fast. We handle the towing and the title transfer at no cost to you."
+    },
+    {
+      "type": "content",
+      "heading": "Storm Damage and Las Vegas Weather",
+      "body": "Las Vegas may be a desert city, but flash flooding during monsoon season damages vehicles every year. Washes overflow, streets flood, and cars that were parked in the wrong place at the wrong time end up with water damage to the engine, electrical system, and interior.\n\nFlood-damaged vehicles are notoriously expensive to repair and unreliable even after repair. If your car was caught in a Las Vegas flash flood, selling it to us for cash is often the fastest and most practical option."
+    }
+  ],
+  "faq": [
+    {
+      "question": "How much is a totaled car worth in Las Vegas?",
+      "answer": "It depends on the vehicle and the type of damage. Totaled vehicles typically sell for $300 to $3,000+. Heavier vehicles and those with salvageable drivetrain components receive higher offers."
+    },
+    {
+      "question": "Do you buy cars with salvage titles?",
+      "answer": "Yes. Salvage titles, rebuilt titles, and vehicles declared total losses are all fine. The title status does not prevent us from making an offer."
+    },
+    {
+      "question": "Can you pick up a damaged car from a tow yard?",
+      "answer": "Yes. We frequently pick up vehicles from tow yards and impound lots across the valley. This can save you from accumulating daily storage charges."
+    },
+    {
+      "question": "Do you buy flood-damaged cars?",
+      "answer": "Yes. Flood and water damage is one of the most common types of damage we deal with, especially after monsoon season in Las Vegas."
+    }
+  ],
+  "internal_links": {
+    "services": [
+      {"label": "Sedans & Coupes", "slug": "sedans"},
+      {"label": "Trucks & SUVs", "slug": "trucks-suvs"},
+      {"label": "Non-Running Vehicles", "slug": "non-running"}
+    ],
+    "locations": [
+      {"label": "Las Vegas, NV", "slug": "las-vegas"},
+      {"label": "Henderson, NV", "slug": "henderson"},
+      {"label": "North Las Vegas, NV", "slug": "north-las-vegas"},
+      {"label": "Summerlin, NV", "slug": "summerlin"},
+      {"label": "Spring Valley, NV", "slug": "spring-valley"}
+    ]
+  }
+}

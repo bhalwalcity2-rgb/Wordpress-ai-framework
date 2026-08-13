@@ -1,0 +1,58 @@
+{
+  "slug": "boulder-city",
+  "city": "Boulder City",
+  "state": "NV",
+  "seo_title": "We Buy Junk Cars in Boulder City, NV | Las Vegas Junk Car Buyers",
+  "seo_description": "Sell your junk car in Boulder City, NV. Free towing even from Boulder City — same-day cash, any condition vehicle. Call (702) 555-0134.",
+  "hero_heading": "We Buy Junk Cars in Boulder City",
+  "hero_description": "Boulder City is a bit further from our base, but we still offer the same free towing, same-day service, and fair cash offers. No extra charge for the distance — the offer you get is the cash you keep.",
+  "sections": [
+    {
+      "type": "content",
+      "heading": "Junk Car Buyers Serving Boulder City",
+      "body": "Boulder City is about 30 miles southeast of Las Vegas, and while some junk car services won't make the drive, we do. If you have a junk or unwanted vehicle in Boulder City, we will come to you with free towing and pay you cash on the spot — the same service we offer everywhere else in the valley.\n\nBoulder City's smaller-town feel means word travels fast, and many of our Boulder City customers come through referrals from neighbors who have already sold a vehicle to us."
+    },
+    {
+      "type": "content",
+      "heading": "How to Sell Your Junk Car in Boulder City",
+      "body": "The process is identical to what we offer in Las Vegas proper. Call (702) 555-0134, describe your vehicle, and receive a firm cash offer. If you accept, we schedule a pickup.\n\nBecause Boulder City is a bit further out, we ask for a little more scheduling flexibility — but most pickups still happen the same day or the next morning. When our truck arrives, we verify the vehicle, hand you cash, and tow it away at no cost."
+    },
+    {
+      "type": "content",
+      "heading": "Boulder City Service Coverage",
+      "body": "We serve all of Boulder City, from the historic downtown area near the Boulder Dam Hotel to the residential neighborhoods off Buchanan Boulevard, Adams Boulevard, and Utah Street. We also cover the outskirts toward Railroad Pass and the US-93 corridor leading toward Hoover Dam."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Is towing really free from Boulder City?",
+      "answer": "Yes, towing is always free regardless of distance. We never deduct towing costs from your offer, even for Boulder City pickups which are further from our base."
+    },
+    {
+      "question": "How quickly can you pick up a car in Boulder City?",
+      "answer": "Most Boulder City pickups happen the same day or next morning. The drive from Las Vegas is about 30 minutes, so we coordinate our schedule to make the trip efficient."
+    },
+    {
+      "question": "Do you buy junk cars in the Boulder City historic district?",
+      "answer": "Yes. We serve all areas within Boulder City limits, including the historic downtown area. We'll work with any parking or access constraints at your location."
+    },
+    {
+      "question": "What types of vehicles do you buy in Boulder City?",
+      "answer": "We buy everything — cars, trucks, SUVs, vans, and minivans of any year, make, model, or condition. Running, non-running, wrecked, or simply unwanted."
+    }
+  ],
+  "internal_links": {
+    "services": [
+      {"label": "Cash for Junk Cars", "slug": "sedans"},
+      {"label": "Trucks & SUVs", "slug": "trucks-suvs"},
+      {"label": "Accident & Storm-Damaged", "slug": "damaged"},
+      {"label": "Non-Running Vehicles", "slug": "non-running"}
+    ],
+    "nearby_locations": [
+      {"label": "Henderson", "slug": "henderson"},
+      {"label": "Las Vegas", "slug": "las-vegas"},
+      {"label": "Paradise", "slug": "paradise"},
+      {"label": "Enterprise", "slug": "enterprise"}
+    ]
+  }
+}

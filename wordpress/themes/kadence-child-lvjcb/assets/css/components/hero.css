@@ -1,0 +1,170 @@
+/**
+ * Hero component styles.
+ *
+ * No local :root. Dark/branded background — the one deliberate dark
+ * anchor point on the page, per the Visual UI/UX Design Specification.
+ */
+
+.lvjcb-hero {
+	background: var(--lvjcb-color-dark);
+	color: var(--lvjcb-color-text-on-dark);
+	padding-block: var(--lvjcb-space-lg) var(--lvjcb-space-section);
+}
+
+.lvjcb-hero__container {
+	max-width: var(--lvjcb-container-max);
+	margin-inline: auto;
+	padding-inline: var(--lvjcb-space-md);
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: var(--lvjcb-space-xl);
+	align-items: center;
+}
+
+.lvjcb-hero__content {
+	max-width: 46ch;
+}
+
+.lvjcb-hero__eyebrow {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin-bottom: var(--lvjcb-space-md);
+	font-size: 13px;
+	font-weight: var(--lvjcb-font-weight-bold);
+	color: var(--lvjcb-color-text-on-dark-muted);
+	letter-spacing: var(--lvjcb-letter-spacing-wide);
+	text-transform: uppercase;
+}
+
+.lvjcb-hero__eyebrow-dot {
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background: var(--lvjcb-color-accent);
+}
+
+.lvjcb-hero__heading {
+	margin: 0;
+	font-family: var(--lvjcb-font-heading);
+	font-size: clamp(34px, 5.2vw, 52px);
+	line-height: 1.1;
+	color: var(--lvjcb-color-text-on-dark);
+	text-wrap: balance;
+}
+
+.lvjcb-hero__description {
+	margin: var(--lvjcb-space-md) 0 0;
+	font-family: var(--lvjcb-font-body);
+	font-size: 18px;
+	line-height: 1.6;
+	color: var(--lvjcb-color-text-on-dark-muted);
+	max-width: 40ch;
+}
+
+.lvjcb-hero__phone {
+	margin-top: var(--lvjcb-space-lg);
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	font-size: 22px;
+	font-weight: var(--lvjcb-font-weight-bold);
+	color: var(--lvjcb-color-text-on-dark);
+	text-decoration: none;
+}
+
+.lvjcb-hero__phone .icon {
+	color: var(--lvjcb-color-accent);
+}
+
+.lvjcb-hero__phone:focus-visible {
+	outline: 2px solid var(--lvjcb-color-focus);
+	outline-offset: 3px;
+}
+
+.lvjcb-hero__ctas {
+	margin-top: var(--lvjcb-space-sm);
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--lvjcb-space-sm);
+}
+
+.lvjcb-hero__quote-form-slot {
+	margin-top: var(--lvjcb-space-lg);
+}
+
+.lvjcb-hero__badges {
+	margin-top: var(--lvjcb-space-xl);
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: var(--lvjcb-space-md) var(--lvjcb-space-lg);
+}
+
+.lvjcb-hero__badge {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	font-size: 14px;
+	font-weight: var(--lvjcb-font-weight-medium);
+	color: var(--lvjcb-color-text-on-dark-muted);
+}
+
+.lvjcb-hero__badge .icon {
+	color: var(--lvjcb-color-accent);
+	flex-shrink: 0;
+}
+
+.lvjcb-hero__media {
+	position: relative;
+	border-radius: var(--lvjcb-radius);
+	overflow: hidden;
+	aspect-ratio: 4 / 3;
+	background: var(--lvjcb-color-dark-2);
+}
+
+.lvjcb-hero__image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+.lvjcb-hero__placeholder {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	text-align: center;
+	padding: var(--lvjcb-space-md);
+	color: var(--lvjcb-color-text-on-dark-muted);
+}
+
+.lvjcb-hero__placeholder .icon {
+	color: rgba(245, 247, 249, 0.35);
+}
+
+.lvjcb-hero__placeholder span {
+	font-size: 12.5px;
+	max-width: 30ch;
+	line-height: 1.5;
+}
+
+@media (min-width: 769px) {
+	.lvjcb-hero__container {
+		grid-template-columns: 58% 1fr;
+	}
+}
+
+@media (min-width: 1025px) {
+	.lvjcb-hero__container {
+		grid-template-columns: 56% 1fr;
+		gap: var(--lvjcb-space-xl);
+	}
+
+	.lvjcb-hero__badges {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}

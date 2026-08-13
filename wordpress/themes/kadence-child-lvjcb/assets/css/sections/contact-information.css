@@ -1,0 +1,64 @@
+/**
+ * Contact Information section styles.
+ */
+
+.lvjcb-contact-information__grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: var(--lvjcb-space-xl);
+}
+
+.lvjcb-contact-information__details {
+	font-style: normal;
+	display: flex;
+	flex-direction: column;
+	gap: var(--lvjcb-space-xs);
+	font-family: var(--lvjcb-font-body);
+	font-size: var(--lvjcb-text-base);
+	color: var(--lvjcb-color-text);
+}
+
+.lvjcb-contact-information__business-name {
+	font-family: var(--lvjcb-font-heading);
+	font-weight: var(--lvjcb-font-weight-bold);
+}
+
+.lvjcb-contact-information__phone,
+.lvjcb-contact-information__email {
+	color: var(--lvjcb-color-primary);
+	text-decoration: none;
+	width: fit-content;
+}
+
+.lvjcb-contact-information__phone:focus-visible,
+.lvjcb-contact-information__email:focus-visible {
+	outline: 2px solid var(--lvjcb-color-focus);
+	outline-offset: 2px;
+}
+
+.lvjcb-contact-information__hours {
+	margin: var(--lvjcb-space-sm) 0 0;
+	font-size: var(--lvjcb-text-base);
+	color: var(--lvjcb-color-text-muted);
+}
+
+.lvjcb-contact-information__map {
+	position: relative;
+	aspect-ratio: 16 / 9;
+	border-radius: var(--lvjcb-radius);
+	overflow: hidden;
+}
+
+.lvjcb-contact-information__map iframe {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
+
+@media (min-width: 769px) {
+	.lvjcb-contact-information__grid {
+		grid-template-columns: 1.1fr 1fr;
+	}
+}

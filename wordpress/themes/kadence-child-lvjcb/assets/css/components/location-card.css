@@ -1,0 +1,55 @@
+/**
+ * Location Card component styles. Lightest-weight card in the system —
+ * content is minimal (a city name), so styling stays minimal too.
+ */
+
+.lvjcb-location-card {
+	position: relative;
+	background: var(--lvjcb-color-surface);
+	border: 1px solid var(--lvjcb-color-border);
+	border-radius: var(--lvjcb-radius);
+	padding: var(--lvjcb-space-md);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: var(--lvjcb-space-sm);
+}
+
+.lvjcb-location-card__heading {
+	margin: 0;
+	font-family: var(--lvjcb-font-heading);
+	font-size: 15px;
+	font-weight: var(--lvjcb-font-weight-medium);
+}
+
+.lvjcb-location-card__link {
+	color: var(--lvjcb-color-text);
+	text-decoration: none;
+}
+
+.lvjcb-location-card__link::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	border-radius: inherit;
+}
+
+.lvjcb-location-card__link:focus-visible {
+	outline: none;
+}
+
+.lvjcb-location-card__link:focus-visible::after {
+	outline: 2px solid var(--lvjcb-color-focus);
+	outline-offset: 2px;
+}
+
+.lvjcb-location-card__description {
+	margin: var(--lvjcb-space-2xs) 0 0;
+	font-size: 13px;
+	color: var(--lvjcb-color-text-muted);
+}
+
+.lvjcb-location-card__arrow {
+	color: var(--lvjcb-color-text-muted);
+	flex-shrink: 0;
+}

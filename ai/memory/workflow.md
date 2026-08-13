@@ -9,6 +9,8 @@
 
 This file defines the official workflows for the WordPress AI Framework. It answers: *"In what order do things happen?"* — from full project builds to individual feature development to SEO implementation. AI assistants that skip stages or reorder them produce inconsistent, unmaintainable output.
 
+> For the full client-facing creative/product process (discovery → brand → UX → components → QA → launch, with niche-conditional functionality), see `ai/memory/master-website-workflow.md`. This file covers git/deployment mechanics; that file covers the design and build process.
+
 ---
 
 ## Standard Project Workflow

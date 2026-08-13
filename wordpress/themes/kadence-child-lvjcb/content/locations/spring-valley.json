@@ -1,0 +1,58 @@
+{
+  "slug": "spring-valley",
+  "city": "Spring Valley",
+  "state": "NV",
+  "seo_title": "We Buy Junk Cars in Spring Valley, NV | Las Vegas Junk Car Buyers",
+  "seo_description": "Get cash for your junk car in Spring Valley, NV. Free towing, same-day pickup, any vehicle condition. No title? No problem. Call (702) 555-0134.",
+  "hero_heading": "We Buy Junk Cars in Spring Valley",
+  "hero_description": "Spring Valley pickups are usually completed the same day — call in the morning, have cash by the afternoon. Free towing on every vehicle, no matter the condition.",
+  "sections": [
+    {
+      "type": "content",
+      "heading": "Cash for Junk Cars in Spring Valley",
+      "body": "Spring Valley sits right in the heart of the Las Vegas valley, and it's one of the areas we serve most frequently. The community's mix of single-family homes, townhouses, and apartment complexes means we see every kind of vehicle — from old sedans in carports to trucks parked behind apartment buildings.\n\nNo matter where in Spring Valley your vehicle is located, we'll come to you. We buy cars, trucks, SUVs, and vans in any condition, and every pickup includes free towing."
+    },
+    {
+      "type": "content",
+      "heading": "How to Sell Your Junk Car in Spring Valley",
+      "body": "Call (702) 555-0134 and tell us about your vehicle. Year, make, model, and a quick description of its condition are all we need to give you a firm cash offer. There's no obligation — if the offer doesn't work for you, no hard feelings.\n\nWhen you're ready, we send a tow truck to your Spring Valley location. The driver verifies the vehicle, hands you cash, and loads the car. We handle the title transfer and all DMV paperwork. The typical Spring Valley pickup is completed within a few hours of the initial call."
+    },
+    {
+      "type": "content",
+      "heading": "Spring Valley Areas We Cover",
+      "body": "We cover all of Spring Valley including the neighborhoods along South Rainbow Boulevard, South Jones Boulevard, West Flamingo Road, West Tropicana Avenue, and South Durango Drive. Whether your vehicle is near Desert Breeze Park, the Chinatown area, or anywhere else within Spring Valley, we provide free pickup."
+    }
+  ],
+  "faq": [
+    {
+      "question": "How fast can you pick up a junk car in Spring Valley?",
+      "answer": "Most Spring Valley pickups happen the same day you call. Our central location means Spring Valley is one of our fastest response areas in the valley."
+    },
+    {
+      "question": "Do you buy cars from apartment complexes in Spring Valley?",
+      "answer": "Yes. We frequently pick up vehicles from apartment parking lots in Spring Valley. Let us know the situation when you call so we can coordinate properly."
+    },
+    {
+      "question": "What's the minimum you'll pay for a junk car in Spring Valley?",
+      "answer": "Our minimum offer is typically around $200 for the smallest and most damaged vehicles. Most Spring Valley sellers receive between $300 and $3,000 depending on the vehicle."
+    },
+    {
+      "question": "Can I sell a car with a dead battery in Spring Valley?",
+      "answer": "Absolutely. A dead battery is one of the simplest issues we deal with. We buy vehicles with far worse problems — blown engines, missing parts, and total mechanical failure."
+    }
+  ],
+  "internal_links": {
+    "services": [
+      {"label": "Cash for Junk Cars", "slug": "sedans"},
+      {"label": "Trucks & SUVs", "slug": "trucks-suvs"},
+      {"label": "Accident & Storm-Damaged", "slug": "damaged"},
+      {"label": "Non-Running Vehicles", "slug": "non-running"}
+    ],
+    "nearby_locations": [
+      {"label": "Las Vegas", "slug": "las-vegas"},
+      {"label": "Summerlin", "slug": "summerlin"},
+      {"label": "Paradise", "slug": "paradise"},
+      {"label": "Enterprise", "slug": "enterprise"}
+    ]
+  }
+}

@@ -1,0 +1,121 @@
+/**
+ * Shared Section Base
+ *
+ * One authoritative implementation of the layout scaffolding every
+ * section reuses: container, eyebrow, heading, intro, grid, and
+ * background modifiers. Individual section CSS files add only what is
+ * genuinely specific to that section (e.g. FAQ's narrower column, How
+ * It Works' <ol> reset) — never redeclare these base rules.
+ *
+ * Heading Wrapping Rule (Master Workflow Phase 10): headings get
+ * text-wrap: balance and no artificial max-width — they stay on one
+ * line whenever the section's own container width allows it, and wrap
+ * at browser-chosen natural points (not forced 2-3 word breaks) only
+ * when genuinely too long.
+ */
+
+.lvjcb-section {
+	padding-block: var(--lvjcb-space-section);
+}
+
+.lvjcb-section__container {
+	max-width: var(--lvjcb-container-max);
+	margin-inline: auto;
+	padding-inline: var(--lvjcb-space-md);
+}
+
+.lvjcb-section__eyebrow {
+	margin: 0 0 var(--lvjcb-space-xs);
+	font-family: var(--lvjcb-font-body);
+	font-size: var(--lvjcb-text-small);
+	font-weight: var(--lvjcb-font-weight-medium);
+	letter-spacing: var(--lvjcb-letter-spacing-wide);
+	text-transform: uppercase;
+	color: var(--lvjcb-color-accent-deep);
+}
+
+.lvjcb-section__heading {
+	margin: 0 0 var(--lvjcb-space-sm);
+	font-family: var(--lvjcb-font-heading);
+	font-size: var(--lvjcb-text-h2);
+	color: var(--lvjcb-color-text);
+	text-wrap: balance;
+}
+
+.lvjcb-section__intro {
+	margin: 0 0 var(--lvjcb-space-xl);
+	max-width: var(--lvjcb-measure);
+	font-family: var(--lvjcb-font-body);
+	font-size: var(--lvjcb-text-base);
+	color: var(--lvjcb-color-text-muted);
+}
+
+.lvjcb-section__grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: var(--lvjcb-space-md);
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+@media (min-width: 769px) {
+	.lvjcb-section__grid--4up,
+	.lvjcb-section__grid--3up {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (min-width: 1025px) {
+	.lvjcb-section__grid--4up {
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	.lvjcb-section__grid--3up {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+/* Background modifiers — the only three background roles used
+   anywhere on the site, per the Visual UI/UX Design Specification. */
+
+.lvjcb-section--white {
+	background: var(--lvjcb-color-surface);
+}
+
+.lvjcb-section--alt {
+	background: var(--lvjcb-color-surface-alt);
+}
+
+.lvjcb-section--dark {
+	background: var(--lvjcb-color-dark);
+	color: var(--lvjcb-color-text-on-dark);
+}
+
+.lvjcb-section--dark .lvjcb-section__heading {
+	color: var(--lvjcb-color-text-on-dark);
+}
+
+.lvjcb-section--dark .lvjcb-section__intro {
+	color: var(--lvjcb-color-text-on-dark-muted);
+}
+
+.lvjcb-section--dark .lvjcb-section__eyebrow {
+	color: var(--lvjcb-color-accent);
+}
+
+/* Primary/accent treatment — reserved for the two CTA Banner moments
+   only, distinct from Hero/Footer's dark navy so it reads as an action
+   interrupt rather than another brand moment. */
+.lvjcb-section--primary {
+	background: var(--lvjcb-color-primary);
+	color: var(--lvjcb-color-text-on-dark);
+}
+
+.lvjcb-section--primary .lvjcb-section__heading {
+	color: var(--lvjcb-color-text-on-dark);
+}
+
+.lvjcb-section--primary .lvjcb-section__intro {
+	color: rgba(245, 247, 249, 0.85);
+}

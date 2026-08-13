@@ -1,0 +1,61 @@
+{
+  "slug": "trucks-suvs",
+  "seo_title": "Cash for Junk Trucks & SUVs in Las Vegas | Las Vegas Junk Car Buyers",
+  "seo_description": "We buy junk trucks and SUVs in Las Vegas. Full-size, mid-size, any condition. Free towing, same-day cash. Call (702) 555-0134 for a quote.",
+  "hero_heading": "Cash for Junk Trucks & SUVs",
+  "hero_description": "Trucks and SUVs are some of the most common vehicles we buy — full-size or mid-size, two-wheel or four-wheel drive, running or not. A larger vehicle usually means a larger offer, even in rough condition.",
+  "sections": [
+    {
+      "type": "content",
+      "heading": "We Buy Trucks and SUVs Across Las Vegas",
+      "body": "Trucks and SUVs hold their value well in the Las Vegas market, even when they're in rough shape. The heavier weight of these vehicles means more scrap value, and their parts are in high demand. That translates to higher offers for you — even if your truck has a blown engine or your SUV was in a collision.\n\nWe buy full-size trucks like Ford F-150s, Chevy Silverados, and RAM 1500s, as well as mid-size trucks like the Toyota Tacoma and Nissan Frontier. For SUVs, we purchase everything from older Jeep Grand Cherokees and Ford Explorers to Chevy Tahoes, Suburbans, and Toyota 4Runners."
+    },
+    {
+      "type": "content",
+      "heading": "Why Trucks and SUVs Get Higher Offers",
+      "body": "There are two reasons trucks and SUVs typically receive higher cash offers than sedans. First, they weigh more — scrap metal prices are calculated by weight, so a 5,000-pound truck is worth more than a 3,000-pound sedan on scrap value alone.\n\nSecond, truck and SUV parts are in constant demand. Engines, transmissions, transfer cases, axles, and body panels from popular trucks often have significant resale value even when the vehicle as a whole isn't worth repairing. We factor all of this into your offer."
+    },
+    {
+      "type": "content",
+      "heading": "How to Sell Your Junk Truck or SUV",
+      "body": "Call (702) 555-0134 with the year, make, model, and condition of your truck or SUV. We'll give you a firm offer immediately. If you accept, we send a flatbed tow truck to your location anywhere in the Las Vegas valley.\n\nLarger vehicles sometimes require specific towing equipment, which is why we ask for details about the vehicle upfront. We always bring the right truck for the job, and towing is always free — even for heavy-duty trucks and full-size SUVs."
+    },
+    {
+      "type": "content",
+      "heading": "Common Trucks and SUVs We Purchase",
+      "body": "The trucks we buy most frequently include Ford F-150, Ford F-250, Chevrolet Silverado 1500, Chevrolet Silverado 2500, RAM 1500, Toyota Tacoma, Toyota Tundra, Nissan Titan, and Nissan Frontier.\n\nFor SUVs, the most common are Jeep Grand Cherokee, Jeep Wrangler, Ford Explorer, Ford Expedition, Chevrolet Tahoe, Chevrolet Suburban, Toyota 4Runner, Honda Pilot, and Dodge Durango. But we buy all makes and models — if it's a truck or SUV, we want to hear about it."
+    }
+  ],
+  "faq": [
+    {
+      "question": "How much do you pay for junk trucks in Las Vegas?",
+      "answer": "Junk trucks typically receive offers between $500 and $5,000+ depending on the year, make, model, weight, and condition. Full-size trucks almost always receive higher offers due to weight and parts value."
+    },
+    {
+      "question": "Do you buy 4x4 trucks and SUVs?",
+      "answer": "Yes. Four-wheel-drive vehicles often have higher parts value, especially transfer cases and differentials. This can increase your offer even if the vehicle doesn't run."
+    },
+    {
+      "question": "Can you tow a heavy-duty truck like an F-250?",
+      "answer": "Yes. We have flatbed tow trucks capable of handling heavy-duty trucks and full-size SUVs. Let us know the vehicle details when you call so we send the right equipment."
+    },
+    {
+      "question": "Will you buy a truck with a blown engine?",
+      "answer": "Absolutely. A blown engine doesn't eliminate the value of the rest of the vehicle — the transmission, frame, axles, cab, and bed still have significant worth."
+    }
+  ],
+  "internal_links": {
+    "services": [
+      {"label": "Sedans & Coupes", "slug": "sedans"},
+      {"label": "Accident & Storm-Damaged", "slug": "damaged"},
+      {"label": "Non-Running Vehicles", "slug": "non-running"}
+    ],
+    "locations": [
+      {"label": "Las Vegas, NV", "slug": "las-vegas"},
+      {"label": "Henderson, NV", "slug": "henderson"},
+      {"label": "North Las Vegas, NV", "slug": "north-las-vegas"},
+      {"label": "Summerlin, NV", "slug": "summerlin"},
+      {"label": "Spring Valley, NV", "slug": "spring-valley"}
+    ]
+  }
+}

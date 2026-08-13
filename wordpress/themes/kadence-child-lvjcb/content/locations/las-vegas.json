@@ -1,0 +1,64 @@
+{
+  "slug": "las-vegas",
+  "city": "Las Vegas",
+  "state": "NV",
+  "seo_title": "We Buy Junk Cars in Las Vegas, NV | Las Vegas Junk Car Buyers",
+  "seo_description": "Get cash for your junk car in Las Vegas. Free towing, same-day pickup, and instant cash offers on any vehicle in any condition. Call (702) 555-0134.",
+  "hero_heading": "We Buy Junk Cars in Las Vegas",
+  "hero_description": "From downtown to the west side, we pick up junk and unwanted vehicles throughout Las Vegas — usually the same day you call. Free towing, no hidden fees, and cash in hand before our truck leaves your driveway.",
+  "sections": [
+    {
+      "type": "content",
+      "heading": "Cash for Junk Cars Anywhere in Las Vegas",
+      "body": "Whether your car is sitting in a driveway in Summerlin or parked on the street near Fremont, we buy it. Las Vegas Junk Car Buyers serves every neighborhood in the city — from the Strip corridor to the residential streets of Centennial Hills, and everywhere in between.\n\nWe buy vehicles in any condition: running, non-running, wrecked, flooded, or mechanically failed. There is no minimum condition requirement and no vehicle is too old or too damaged. If you have a car, truck, SUV, or van you want gone, we will make you a cash offer and pick it up for free."
+    },
+    {
+      "type": "content",
+      "heading": "How Selling Your Junk Car in Las Vegas Works",
+      "body": "Selling your junk car to us takes three simple steps. First, call us at (702) 555-0134 or submit the form on this page. Tell us the year, make, model, and condition of your vehicle. Second, we give you a firm cash offer — no haggling, no lowball games. The number we quote is the number you get. Third, we schedule a free pickup at a time that works for you. Our tow truck comes to your location anywhere in Las Vegas, we hand you cash, and we take the car. Most sellers have cash in hand within hours of their first call."
+    },
+    {
+      "type": "content",
+      "heading": "Why Las Vegas Residents Choose Us",
+      "body": "We are a locally owned business, not a national call center. When you call us, you talk to someone who knows Las Vegas — not a broker in another state who will flip your lead to the lowest bidder. That direct relationship means better offers, faster service, and zero surprises on pickup day.\n\nWe handle all the paperwork, including the DMV title transfer. If you do not have a title, we can often still purchase your vehicle — call us and we will walk you through your options. There are never any fees for towing, paperwork, or pickup. The offer we give you is 100% what you receive."
+    },
+    {
+      "type": "content",
+      "heading": "Las Vegas Neighborhoods We Serve",
+      "body": "We provide junk car removal across every part of Las Vegas, including Downtown Las Vegas, Summerlin, Centennial Hills, the Lakes, Desert Shores, Peccole Ranch, Spring Mountain, Chinatown, West Las Vegas, East Las Vegas, and every neighborhood in between. No matter where your vehicle is located in the Las Vegas city limits, we come to you with free towing."
+    }
+  ],
+  "faq": [
+    {
+      "question": "How much will you pay for my junk car in Las Vegas?",
+      "answer": "Offers typically range from $200 to $5,000 or more, depending on the year, make, model, weight, and condition of the vehicle. Call us for a free, no-obligation quote specific to your car."
+    },
+    {
+      "question": "Do you buy cars without a title in Las Vegas?",
+      "answer": "In many cases, yes. Nevada law allows for alternative documentation in certain situations. Call us and we will let you know what options are available for your specific vehicle."
+    },
+    {
+      "question": "How fast can you pick up my junk car in Las Vegas?",
+      "answer": "Most pickups in Las Vegas happen the same day you call. Depending on your location and our schedule, we can sometimes be there within a couple of hours."
+    },
+    {
+      "question": "Is there any cost for towing in Las Vegas?",
+      "answer": "Never. Towing is always free, no matter where in Las Vegas your vehicle is located. The full amount of your cash offer is what you receive — nothing is deducted for towing."
+    }
+  ],
+  "internal_links": {
+    "services": [
+      {"label": "Cash for Junk Cars", "slug": "sedans"},
+      {"label": "Trucks & SUVs", "slug": "trucks-suvs"},
+      {"label": "Accident & Storm-Damaged", "slug": "damaged"},
+      {"label": "Non-Running Vehicles", "slug": "non-running"}
+    ],
+    "nearby_locations": [
+      {"label": "Henderson", "slug": "henderson"},
+      {"label": "North Las Vegas", "slug": "north-las-vegas"},
+      {"label": "Summerlin", "slug": "summerlin"},
+      {"label": "Spring Valley", "slug": "spring-valley"},
+      {"label": "Paradise", "slug": "paradise"}
+    ]
+  }
+}

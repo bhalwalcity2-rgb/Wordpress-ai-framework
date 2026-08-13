@@ -1,0 +1,62 @@
+/**
+ * Testimonial Card component styles. No hover, no transition — this
+ * card is never interactive, by design.
+ */
+
+.lvjcb-testimonial-card {
+	background: var(--lvjcb-color-surface);
+	border-radius: var(--lvjcb-radius);
+	box-shadow: var(--lvjcb-shadow);
+	padding: var(--lvjcb-space-lg) var(--lvjcb-space-md);
+	display: flex;
+	flex-direction: column;
+	gap: var(--lvjcb-space-md);
+	height: 100%;
+}
+
+.lvjcb-testimonial-card__rating {
+	display: flex;
+	gap: 3px;
+}
+
+.lvjcb-testimonial-card__star {
+	color: var(--lvjcb-color-accent-deep);
+	fill: currentColor;
+}
+
+.lvjcb-testimonial-card__star.is-empty {
+	color: var(--lvjcb-color-border);
+	fill: currentColor;
+}
+
+.lvjcb-testimonial-card__quote {
+	margin: 0;
+}
+
+.lvjcb-testimonial-card__quote p {
+	margin: 0;
+	font-family: var(--lvjcb-font-quote);
+	font-size: 17px;
+	line-height: 1.6;
+	color: var(--lvjcb-color-text);
+}
+
+.lvjcb-testimonial-card__who {
+	display: flex;
+	flex-direction: column;
+	gap: 1px;
+	padding-top: var(--lvjcb-space-sm);
+	border-top: 1px solid var(--lvjcb-color-border);
+	margin-top: auto;
+}
+
+.lvjcb-testimonial-card__name {
+	font-size: 14px;
+	font-weight: var(--lvjcb-font-weight-bold);
+	color: var(--lvjcb-color-text);
+}
+
+.lvjcb-testimonial-card__location {
+	font-size: 13px;
+	color: var(--lvjcb-color-text-muted);
+}

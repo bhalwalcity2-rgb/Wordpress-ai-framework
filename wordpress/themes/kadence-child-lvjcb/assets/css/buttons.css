@@ -1,0 +1,93 @@
+/**
+ * Shared Button System
+ *
+ * The one authoritative button implementation for the whole site.
+ * Every CTA — Header, Hero, CTA Banners, Quote Form's submit — consumes
+ * these classes rather than defining its own button appearance. Loaded
+ * globally alongside tokens.css, since buttons appear in nearly every
+ * component/section.
+ */
+
+.lvjcb-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: var(--lvjcb-space-2xs);
+	height: 52px;
+	padding: 0 26px;
+	border-radius: var(--lvjcb-radius);
+	font-family: var(--lvjcb-font-body);
+	font-size: 15.5px;
+	font-weight: var(--lvjcb-font-weight-medium);
+	text-decoration: none;
+	border: 1.5px solid transparent;
+	cursor: pointer;
+	white-space: nowrap;
+	transition: background-color var(--lvjcb-transition-fast), border-color var(--lvjcb-transition-fast), color var(--lvjcb-transition-fast);
+}
+
+.lvjcb-btn:focus-visible {
+	outline: 2px solid var(--lvjcb-color-focus);
+	outline-offset: 2px;
+}
+
+.lvjcb-btn--primary {
+	background: var(--lvjcb-color-primary);
+	color: var(--lvjcb-color-text-on-dark);
+	box-shadow: var(--lvjcb-shadow-btn);
+}
+
+.lvjcb-btn--primary:hover {
+	background: var(--lvjcb-color-primary-deep);
+}
+
+.lvjcb-btn--secondary {
+	background: transparent;
+	border-color: var(--lvjcb-color-border);
+	color: var(--lvjcb-color-text);
+}
+
+.lvjcb-btn--secondary:hover {
+	border-color: var(--lvjcb-color-primary);
+	color: var(--lvjcb-color-primary);
+}
+
+/* Modifier, not a new button style: recolors the same outline language
+   for use against the dark Hero/CTA Banner backgrounds. */
+.lvjcb-btn--secondary.lvjcb-btn--on-dark {
+	border-color: rgba(245, 247, 249, 0.35);
+	color: var(--lvjcb-color-text-on-dark);
+}
+
+.lvjcb-btn--secondary.lvjcb-btn--on-dark:hover {
+	background: rgba(245, 247, 249, 0.08);
+	border-color: rgba(245, 247, 249, 0.55);
+}
+
+/* Modifier, not a new button style: the CTA Banner sections sit on a
+   solid primary-red background, where .lvjcb-btn--primary itself would
+   be invisible (red on red). This inverts fill/text color for that one
+   context — same button language, recolored, exactly like
+   --on-dark does for the secondary button. */
+.lvjcb-btn--inverse {
+	background: var(--lvjcb-color-surface);
+	color: var(--lvjcb-color-primary);
+}
+
+.lvjcb-btn--inverse:hover {
+	background: var(--lvjcb-color-surface-alt);
+}
+
+.lvjcb-btn--block {
+	width: 100%;
+}
+
+.lvjcb-btn:active {
+	transform: translateY(1px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.lvjcb-btn {
+		transition: none;
+	}
+}

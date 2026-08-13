@@ -1,0 +1,58 @@
+{
+  "slug": "enterprise",
+  "city": "Enterprise",
+  "state": "NV",
+  "seo_title": "We Buy Junk Cars in Enterprise, NV | Las Vegas Junk Car Buyers",
+  "seo_description": "Cash for junk cars in Enterprise, NV. Free towing, same-day pickup, instant cash offers. Any vehicle, any condition. Call (702) 555-0134.",
+  "hero_heading": "We Buy Junk Cars in Enterprise",
+  "hero_description": "We regularly buy vehicles throughout Enterprise — running or not, any make or model. Free towing from your driveway, same-day service, and cash paid on the spot.",
+  "sections": [
+    {
+      "type": "content",
+      "heading": "Junk Car Removal in Enterprise",
+      "body": "Enterprise is one of the fastest-growing communities south of the Las Vegas Strip, stretching from the I-15 corridor down toward the southern edge of the valley. As the area has grown, so has our service — we buy junk cars from Enterprise residents every week.\n\nWhether your vehicle is parked at a home near South Las Vegas Boulevard, in a subdivision off Bermuda Road, or anywhere else within Enterprise, we'll come to you with free towing and a cash offer."
+    },
+    {
+      "type": "content",
+      "heading": "How to Sell a Junk Car in Enterprise",
+      "body": "Call (702) 555-0134 and tell us about your vehicle. We'll quote you a firm price right then — no waiting, no games. Accept the offer and we schedule a pickup at your convenience.\n\nOur tow truck arrives at your Enterprise address, the driver verifies the vehicle and hands you cash. We tow the car away and handle all the title transfer paperwork. There are zero fees for any part of this process."
+    },
+    {
+      "type": "content",
+      "heading": "Enterprise Areas We Cover",
+      "body": "We serve all of Enterprise including the neighborhoods near South Point, the M Resort area, Silverado Ranch, South Mountain's Edge, Blue Diamond Road, Warm Springs Road, and the communities along South Las Vegas Boulevard. Enterprise's proximity to Henderson and southern Las Vegas means our trucks are frequently in the area."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Do you serve the Silverado Ranch area of Enterprise?",
+      "answer": "Yes, we cover Silverado Ranch and every other community within Enterprise. Our trucks are in the area regularly, so response times are typically fast."
+    },
+    {
+      "question": "How much will you pay for my junk car in Enterprise?",
+      "answer": "Offers depend on the vehicle and typically range from $200 to $5,000. Heavier vehicles and those with more salvageable parts receive higher offers. Call for a free quote."
+    },
+    {
+      "question": "Can you pick up a car that has been sitting for years in Enterprise?",
+      "answer": "Yes. We buy vehicles that have been sitting for months or years. Flat tires, dead batteries, and seized engines are all fine — we bring our own equipment to load the vehicle."
+    },
+    {
+      "question": "Is there any paperwork required to sell a junk car in Enterprise?",
+      "answer": "Ideally a signed title and a valid photo ID. If you don't have the title, call us — we can often still purchase the vehicle using alternative documentation allowed under Nevada law."
+    }
+  ],
+  "internal_links": {
+    "services": [
+      {"label": "Cash for Junk Cars", "slug": "sedans"},
+      {"label": "Trucks & SUVs", "slug": "trucks-suvs"},
+      {"label": "Accident & Storm-Damaged", "slug": "damaged"},
+      {"label": "Non-Running Vehicles", "slug": "non-running"}
+    ],
+    "nearby_locations": [
+      {"label": "Las Vegas", "slug": "las-vegas"},
+      {"label": "Henderson", "slug": "henderson"},
+      {"label": "Spring Valley", "slug": "spring-valley"},
+      {"label": "Paradise", "slug": "paradise"}
+    ]
+  }
+}

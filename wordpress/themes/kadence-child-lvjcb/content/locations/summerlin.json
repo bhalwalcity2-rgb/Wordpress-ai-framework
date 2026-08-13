@@ -1,0 +1,63 @@
+{
+  "slug": "summerlin",
+  "city": "Summerlin",
+  "state": "NV",
+  "seo_title": "We Buy Junk Cars in Summerlin, NV | Las Vegas Junk Car Buyers",
+  "seo_description": "Sell your junk car in Summerlin for cash. Free towing, same-day service, no hidden fees. Any make, model, or condition. Call (702) 555-0134 today.",
+  "hero_heading": "We Buy Junk Cars in Summerlin",
+  "hero_description": "Whether it's tucked in a garage or sitting on the street, we'll come to your Summerlin address and make an offer on the spot. Free towing, no fees, and cash in hand the same day for most pickups.",
+  "sections": [
+    {
+      "type": "content",
+      "heading": "Junk Car Buyers in Summerlin",
+      "body": "Summerlin is one of the most well-maintained communities in the Las Vegas valley, and HOA rules often mean that a non-running or damaged vehicle can't sit on the property for long. We help Summerlin homeowners solve that problem quickly — call us, get a cash offer, and we pick the vehicle up for free, usually the same day.\n\nWe buy vehicles of every type and condition from Summerlin residents. Whether it's a car that failed smog, a truck with a blown engine, or a vehicle you simply no longer need, we'll make a fair offer and handle the removal."
+    },
+    {
+      "type": "content",
+      "heading": "Selling a Junk Car from a Summerlin HOA Community",
+      "body": "Many Summerlin communities have strict HOA regulations about vehicles parked on driveways or streets. If you've received a notice about a non-running vehicle, or you simply want to get rid of an eyesore before your neighbors complain, we can help.\n\nCall us at (702) 555-0134 and we'll schedule a pickup as quickly as possible — often the same day. We work around your schedule and your HOA's requirements. Our tow trucks are professional and clean, and the process takes less than an hour once we arrive."
+    },
+    {
+      "type": "content",
+      "heading": "Summerlin Communities We Serve",
+      "body": "We serve all Summerlin villages and neighborhoods, including The Willows, The Trails, The Hills, The Paseos, The Mesa, The Vistas, The Cliffs, Stonebridge, Tournament Hills, Red Rock Country Club, and every other community within the Summerlin master plan. We also cover the surrounding areas of Desert Shores and the Lakes."
+    },
+    {
+      "type": "content",
+      "heading": "What to Expect When You Sell Your Car in Summerlin",
+      "body": "The process is straightforward. You call us with your vehicle's year, make, model, and condition. We give you a firm cash offer immediately — no waiting, no callbacks needed. If you accept, we come to your Summerlin address with a tow truck, verify the vehicle, pay you cash, and take the car.\n\nThere are no fees of any kind. Towing is free, paperwork is handled by us, and the cash amount we quote is exactly what you receive. Most Summerlin sellers tell us the entire experience takes less time than they expected."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can you pick up a junk car from my Summerlin HOA community?",
+      "answer": "Yes. We regularly work with Summerlin homeowners in HOA communities. We schedule pickups to minimize disruption and our tow trucks operate professionally within community rules."
+    },
+    {
+      "question": "How much do you pay for junk cars in Summerlin?",
+      "answer": "Offers range from $200 to $5,000+ depending on the vehicle. Summerlin residents often have newer vehicles with more value in parts, which can mean higher offers."
+    },
+    {
+      "question": "Do you buy cars that failed smog in Summerlin?",
+      "answer": "Yes. If your vehicle can't pass Nevada smog and you don't want to invest in repairs, we'll buy it. Many vehicles we purchase in Summerlin fall into this category."
+    },
+    {
+      "question": "How fast can you remove a junk car from Summerlin?",
+      "answer": "Most Summerlin pickups happen the same day. If you have an urgent HOA situation, let us know when you call and we'll do our best to prioritize your pickup."
+    }
+  ],
+  "internal_links": {
+    "services": [
+      {"label": "Cash for Junk Cars", "slug": "sedans"},
+      {"label": "Trucks & SUVs", "slug": "trucks-suvs"},
+      {"label": "Accident & Storm-Damaged", "slug": "damaged"},
+      {"label": "Non-Running Vehicles", "slug": "non-running"}
+    ],
+    "nearby_locations": [
+      {"label": "Las Vegas", "slug": "las-vegas"},
+      {"label": "Spring Valley", "slug": "spring-valley"},
+      {"label": "North Las Vegas", "slug": "north-las-vegas"},
+      {"label": "Enterprise", "slug": "enterprise"}
+    ]
+  }
+}

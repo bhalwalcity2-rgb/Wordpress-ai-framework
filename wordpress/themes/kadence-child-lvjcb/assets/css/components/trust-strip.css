@@ -1,0 +1,43 @@
+/**
+ * Trust Strip component styles. No local :root; no JS; no hover
+ * (every item is static, non-interactive information).
+ */
+
+.lvjcb-trust-strip {
+	background: var(--lvjcb-color-surface-alt);
+	border-bottom: 1px solid var(--lvjcb-color-border);
+	padding-block: var(--lvjcb-space-lg);
+}
+
+.lvjcb-trust-strip__list {
+	max-width: var(--lvjcb-container-max);
+	margin-inline: auto;
+	padding-inline: var(--lvjcb-space-md);
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: var(--lvjcb-space-md);
+	list-style: none;
+}
+
+.lvjcb-trust-strip__item {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.lvjcb-trust-strip__icon {
+	color: var(--lvjcb-color-primary);
+	flex-shrink: 0;
+}
+
+.lvjcb-trust-strip__item span {
+	font-size: 14.5px;
+	font-weight: var(--lvjcb-font-weight-medium);
+	color: var(--lvjcb-color-text);
+}
+
+@media (min-width: 769px) {
+	.lvjcb-trust-strip__list {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}

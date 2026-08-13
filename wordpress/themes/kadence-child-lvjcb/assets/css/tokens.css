@@ -1,0 +1,84 @@
+/**
+ * Design Tokens — System Values
+ *
+ * Single source of truth for spacing, typography, radius, shadow, and
+ * breakpoint values used across every component and section. These are
+ * business-agnostic — they stay fixed across every site built from this
+ * theme template, regardless of which business's data is loaded.
+ *
+ * Color tokens are NOT defined here. They are generated per-business
+ * from inc/colors.php (see lvjcb_render_color_tokens()), computed live
+ * from whatever five brand colors are in inc/business-config.php — that
+ * is the one token category that legitimately changes per site. See
+ * inc/colors.php for the accessibility-driven derivation rules.
+ *
+ * No component/section file may define its own :root or redeclare a
+ * value that belongs here — see ai/memory/master-website-workflow.md,
+ * Phase 10.
+ */
+
+:root {
+
+	/* Semantic alias only — not a literal color. Resolves against
+	   whichever --lvjcb-color-accent-deep the per-business color block
+	   defines. */
+	--lvjcb-color-focus: var(--lvjcb-color-accent-deep);
+
+	/* Spacing scale */
+	--lvjcb-space-3xs: 4px;
+	--lvjcb-space-2xs: 8px;
+	--lvjcb-space-xs: 12px;
+	--lvjcb-space-sm: 16px;
+	--lvjcb-space-md: 24px;
+	--lvjcb-space-lg: 40px;
+	--lvjcb-space-xl: 64px;
+	--lvjcb-space-section: 96px;
+
+	/* Layout */
+	--lvjcb-container-max: 1200px;
+	--lvjcb-measure: 62ch;
+
+	/* Radius — one system-wide value, per the Master Workflow's card/button consistency rule */
+	--lvjcb-radius: 12px;
+
+	/* Shadow — one system-wide depth. Tinted with a fixed neutral dark
+	   gray rather than any business's brand color, since shadow tint is
+	   a depth cue, not a brand expression — this keeps it correct
+	   regardless of which business's palette is loaded.
+	   --lvjcb-shadow-hover is the same system's elevated state (used on
+	   hover for clickable cards) — not a second shadow language. */
+	--lvjcb-shadow: 0 1px 2px rgba(20,20,24,0.05), 0 6px 20px rgba(20,20,24,0.08);
+	--lvjcb-shadow-hover: 0 2px 4px rgba(20,20,24,0.06), 0 14px 32px rgba(20,20,24,0.10);
+	--lvjcb-shadow-btn: 0 1px 2px rgba(20,20,24,0.10);
+
+	/* Typography */
+	--lvjcb-font-heading: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	--lvjcb-font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	--lvjcb-font-quote: ui-serif, Georgia, "Iowan Old Style", "Times New Roman", serif;
+
+	--lvjcb-text-h2: clamp(26px, 3.4vw, 34px);
+	--lvjcb-text-h3: 17.5px;
+	--lvjcb-text-h4: 17px;
+	--lvjcb-text-h5: 16px;
+	--lvjcb-text-base: 16px;
+	--lvjcb-text-small: 14px;
+
+	--lvjcb-font-weight-medium: 600;
+	--lvjcb-font-weight-bold: 700;
+	--lvjcb-letter-spacing-wide: 0.08em;
+
+	/* Motion */
+	--lvjcb-transition-fast: 150ms ease;
+	--lvjcb-transition-base: 220ms ease;
+
+	/* Header */
+	--lvjcb-header-height: 84px;
+	--lvjcb-header-height-condensed: 64px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	:root {
+		--lvjcb-transition-fast: 0ms;
+		--lvjcb-transition-base: 0ms;
+	}
+}

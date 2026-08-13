@@ -1,0 +1,94 @@
+/**
+ * Service Card component styles.
+ *
+ * No local :root. Full-card clickability governs this component: the
+ * stretched-link overlay (z-index 1) is never elevated above by sibling
+ * content — a prior audit found that pattern creates dead click zones,
+ * so icon-wrap/description are never given their own stacking context.
+ */
+
+.lvjcb-service-card {
+	position: relative;
+	background: var(--lvjcb-color-surface);
+	border-radius: var(--lvjcb-radius);
+	box-shadow: var(--lvjcb-shadow);
+	padding: var(--lvjcb-space-lg) var(--lvjcb-space-md);
+	display: flex;
+	flex-direction: column;
+	gap: var(--lvjcb-space-sm);
+	transition: box-shadow var(--lvjcb-transition-fast);
+}
+
+.lvjcb-service-card:hover {
+	box-shadow: var(--lvjcb-shadow-hover);
+}
+
+.lvjcb-service-card__icon-wrap {
+	width: 48px;
+	height: 48px;
+	border-radius: var(--lvjcb-radius);
+	background: var(--lvjcb-color-surface-alt);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.lvjcb-service-card__icon {
+	color: var(--lvjcb-color-primary);
+}
+
+.lvjcb-service-card__heading {
+	margin: 0;
+	font-family: var(--lvjcb-font-heading);
+	font-size: var(--lvjcb-text-h3);
+}
+
+.lvjcb-service-card__link {
+	color: var(--lvjcb-color-text);
+	text-decoration: none;
+}
+
+.lvjcb-service-card__link::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	border-radius: inherit;
+	z-index: 1;
+}
+
+.lvjcb-service-card__link:focus-visible {
+	outline: none;
+}
+
+.lvjcb-service-card__link:focus-visible::after {
+	outline: 2px solid var(--lvjcb-color-focus);
+	outline-offset: 2px;
+}
+
+.lvjcb-service-card__description {
+	margin: 0;
+	font-family: var(--lvjcb-font-body);
+	font-size: 14.5px;
+	line-height: 1.55;
+	color: var(--lvjcb-color-text-muted);
+}
+
+.lvjcb-service-card__arrow {
+	position: absolute;
+	top: var(--lvjcb-space-lg);
+	right: var(--lvjcb-space-md);
+	color: var(--lvjcb-color-text-muted);
+	transition: transform var(--lvjcb-transition-fast), color var(--lvjcb-transition-fast);
+}
+
+.lvjcb-service-card:hover .lvjcb-service-card__arrow {
+	transform: translate(3px, -3px);
+	color: var(--lvjcb-color-primary);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.lvjcb-service-card,
+	.lvjcb-service-card__arrow {
+		transition: none;
+	}
+}

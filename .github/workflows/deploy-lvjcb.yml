@@ -1,0 +1,32 @@
+name: Deploy — Las Vegas Junk Car Buyers
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "wordpress/themes/kadence-child-lvjcb/**"
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Deploy theme to production
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.LVJCB_FTP_HOST }}
+          username: ${{ secrets.LVJCB_FTP_USER }}
+          password: ${{ secrets.LVJCB_FTP_PASSWORD }}
+          port: ${{ secrets.LVJCB_FTP_PORT || 21 }}
+          local-dir: ./wordpress/themes/kadence-child-lvjcb/
+          server-dir: ${{ secrets.LVJCB_FTP_PATH }}
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            **/.DS_Store

@@ -1,0 +1,63 @@
+{
+  "slug": "henderson",
+  "city": "Henderson",
+  "state": "NV",
+  "seo_title": "We Buy Junk Cars in Henderson, NV | Las Vegas Junk Car Buyers",
+  "seo_description": "Sell your junk car in Henderson, NV. Free towing, same-day pickup, and cash on the spot. Any condition — running or not. Call (702) 555-0134.",
+  "hero_heading": "We Buy Junk Cars in Henderson",
+  "hero_description": "Henderson is one of our busiest service areas. Whether your vehicle is sitting in a garage in Green Valley or on the street in Anthem, we come to you with free towing and a firm cash offer — usually the same day you call.",
+  "sections": [
+    {
+      "type": "content",
+      "heading": "Junk Car Buyers Serving All of Henderson",
+      "body": "Henderson is Nevada's second-largest city, and we buy junk cars throughout every part of it. From the master-planned communities of Green Valley and Anthem to the older neighborhoods near Water Street and Boulder Highway, our tow trucks cover the entire city.\n\nWe regularly pick up vehicles from Henderson residents who have a car that stopped running, was damaged in an accident, or simply isn't worth the cost of repair anymore. Whatever the situation, we make the process simple: you call, we quote, we pick up, and you get paid."
+    },
+    {
+      "type": "content",
+      "heading": "How to Sell Your Junk Car in Henderson",
+      "body": "Start by calling us at (702) 555-0134 or submitting the quote form on this page. Give us the basics — year, make, model, and a rough description of the vehicle's condition. We'll give you a firm cash offer right then.\n\nIf you accept, we schedule a free pickup at your Henderson address. Our driver arrives at the agreed time, verifies the vehicle, hands you cash, and loads the car onto the truck. The whole process typically takes less than an hour once the truck arrives, and most Henderson pickups happen the same day."
+    },
+    {
+      "type": "content",
+      "heading": "Henderson Neighborhoods We Cover",
+      "body": "We provide junk car pickup across every Henderson neighborhood, including Green Valley, Green Valley Ranch, Anthem, Inspirada, MacDonald Highlands, Seven Hills, Sun City Anthem, Cadence, Lake Las Vegas, Whitney Ranch, Gibson Springs, and the Boulder Highway corridor. If your vehicle is anywhere within Henderson city limits, we will come to you."
+    },
+    {
+      "type": "content",
+      "heading": "What Vehicles We Buy in Henderson",
+      "body": "We buy all makes and models in any condition. Sedans, trucks, SUVs, vans, and minivans — running or not. Common vehicles we pick up in Henderson include older Honda Accords and Civics, Toyota Camrys, Ford F-150s, and Chevy Silverados, but there is no vehicle we won't consider.\n\nAccident damage, mechanical failure, flood damage, fire damage, and high mileage are never disqualifying. If you're unsure whether we'd be interested, just call — the answer is almost always yes."
+    }
+  ],
+  "faq": [
+    {
+      "question": "How much will you pay for my junk car in Henderson?",
+      "answer": "Offers typically range from $200 to $5,000 depending on the vehicle's year, make, model, and condition. Heavier vehicles like trucks and SUVs often receive higher offers. Call us for a free quote."
+    },
+    {
+      "question": "Do you pick up junk cars in Green Valley and Anthem?",
+      "answer": "Yes, we cover all Henderson neighborhoods including Green Valley, Green Valley Ranch, Anthem, Inspirada, Seven Hills, and every other community in the city."
+    },
+    {
+      "question": "Can I sell a car without a title in Henderson?",
+      "answer": "In many cases, yes. Nevada allows alternative documentation in certain situations. Call us and we'll walk you through the options available for your vehicle."
+    },
+    {
+      "question": "How quickly can you pick up my car in Henderson?",
+      "answer": "Most Henderson pickups happen the same day you call. Depending on our schedule and your location, we can sometimes arrive within a few hours."
+    }
+  ],
+  "internal_links": {
+    "services": [
+      {"label": "Cash for Junk Cars", "slug": "sedans"},
+      {"label": "Trucks & SUVs", "slug": "trucks-suvs"},
+      {"label": "Accident & Storm-Damaged", "slug": "damaged"},
+      {"label": "Non-Running Vehicles", "slug": "non-running"}
+    ],
+    "nearby_locations": [
+      {"label": "Las Vegas", "slug": "las-vegas"},
+      {"label": "Paradise", "slug": "paradise"},
+      {"label": "Enterprise", "slug": "enterprise"},
+      {"label": "Boulder City", "slug": "boulder-city"}
+    ]
+  }
+}

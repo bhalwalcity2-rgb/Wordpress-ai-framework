@@ -1,0 +1,58 @@
+{
+  "slug": "paradise",
+  "city": "Paradise",
+  "state": "NV",
+  "seo_title": "We Buy Junk Cars in Paradise, NV | Las Vegas Junk Car Buyers",
+  "seo_description": "Sell your junk car in Paradise, NV for instant cash. Free towing, same-day service, any vehicle condition accepted. Call (702) 555-0134 now.",
+  "hero_heading": "We Buy Junk Cars in Paradise",
+  "hero_description": "Serving the Paradise area with free towing and same-day offers on junk and non-running vehicles. From the Strip corridor to the residential streets east of I-15, we buy cars in every condition.",
+  "sections": [
+    {
+      "type": "content",
+      "heading": "Junk Car Buyers in Paradise, NV",
+      "body": "Paradise is one of the most densely populated areas in the Las Vegas valley, stretching from the Strip corridor through the UNLV area and into the residential neighborhoods east of I-15. With that density comes a constant need for junk car removal — vehicles break down, get damaged, or simply reach the end of their useful life.\n\nWe serve all of Paradise with free towing and same-day pickup. Whether your car is parked at a residence near Maryland Parkway or behind a commercial property on Eastern Avenue, we'll come to you and pay cash on the spot."
+    },
+    {
+      "type": "content",
+      "heading": "How Selling Works in Paradise",
+      "body": "Call (702) 555-0134 and describe your vehicle — year, make, model, and condition. We'll give you a cash offer immediately. No appointment needed, no waiting for a callback.\n\nIf you accept, we schedule a pickup at your Paradise address. Our tow truck arrives, we verify the vehicle, pay you in cash, and remove the car. The entire process is usually completed the same day, and there are never any fees for towing, paperwork, or pickup."
+    },
+    {
+      "type": "content",
+      "heading": "Paradise Neighborhoods We Serve",
+      "body": "We provide junk car removal throughout Paradise including the areas near UNLV, the Las Vegas Convention Center corridor, Sunrise Manor, Winchester, East Flamingo, South Maryland Parkway, Paradise Road, Swenson Street, and all residential neighborhoods between I-15 and Boulder Highway. No part of Paradise is outside our service area."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Do you pick up junk cars near UNLV in Paradise?",
+      "answer": "Yes, we frequently pick up vehicles from the UNLV area and surrounding neighborhoods. Students and residents alike use our service to sell cars they no longer need."
+    },
+    {
+      "question": "How much do you pay for junk cars in Paradise?",
+      "answer": "Offers range from $200 to $5,000+ depending on the vehicle's year, make, model, and condition. Call for a free quote specific to your car."
+    },
+    {
+      "question": "Can you pick up a car from a commercial property in Paradise?",
+      "answer": "Yes. We regularly remove vehicles from commercial lots, behind businesses, and from mixed-use properties throughout Paradise. Just let us know the details when you call."
+    },
+    {
+      "question": "Is same-day pickup available in Paradise?",
+      "answer": "Yes, most Paradise pickups are completed the same day. Paradise is centrally located in the valley, so our response times here are among our fastest."
+    }
+  ],
+  "internal_links": {
+    "services": [
+      {"label": "Cash for Junk Cars", "slug": "sedans"},
+      {"label": "Trucks & SUVs", "slug": "trucks-suvs"},
+      {"label": "Accident & Storm-Damaged", "slug": "damaged"},
+      {"label": "Non-Running Vehicles", "slug": "non-running"}
+    ],
+    "nearby_locations": [
+      {"label": "Las Vegas", "slug": "las-vegas"},
+      {"label": "Henderson", "slug": "henderson"},
+      {"label": "Spring Valley", "slug": "spring-valley"},
+      {"label": "Enterprise", "slug": "enterprise"}
+    ]
+  }
+}

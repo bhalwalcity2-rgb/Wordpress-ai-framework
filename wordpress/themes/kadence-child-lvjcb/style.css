@@ -1,0 +1,31 @@
+/**
+ * Theme Name:        Las Vegas Junk Car Buyers
+ * Theme URI:         https://lvjunkcarbuyers.com
+ * Description:       Project-specific Kadence child theme for Las Vegas Junk Car Buyers, built on the WAIF framework's conventions but maintained independently of the reusable kadence-child-framework skeleton.
+ * Author:            WAIF Framework
+ * Template:          kadence
+ * Version:           0.1.0
+ * Requires at least: 6.8
+ * Tested up to:      6.8
+ * Requires PHP:      8.2
+ * License:           GPL-2.0-or-later
+ * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain:       lvjcb
+ *
+ * @package LVJCB
+ * @since   0.1.0
+ */
+
+/**
+ * -----------------------------------------------------------------------------
+ * FILE PURPOSE
+ * -----------------------------------------------------------------------------
+ *
+ * This file satisfies WordPress's requirement for a style.css file and
+ * declares this child theme's relationship to its parent theme (Kadence)
+ * via the `Template` header field. It is header-only, matching the
+ * separation-of-concerns convention established by kadence-child-framework.
+ *
+ * All custom CSS lives in assets/css/, enqueued via inc/enqueue.php.
+ * Do not add CSS rules, custom properties, or media queries to this file.
+ */

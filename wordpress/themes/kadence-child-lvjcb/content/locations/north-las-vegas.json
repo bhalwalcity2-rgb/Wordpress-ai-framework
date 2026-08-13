@@ -1,0 +1,63 @@
+{
+  "slug": "north-las-vegas",
+  "city": "North Las Vegas",
+  "state": "NV",
+  "seo_title": "We Buy Junk Cars in North Las Vegas, NV | Las Vegas Junk Car Buyers",
+  "seo_description": "Sell your junk car in North Las Vegas. Free towing, same-day cash offers, any condition. No title needed in most cases. Call (702) 555-0134.",
+  "hero_heading": "We Buy Junk Cars in North Las Vegas",
+  "hero_description": "We buy junk cars throughout North Las Vegas — from Aliante to the older neighborhoods near Carey Avenue. Free towing, same-day pickup, and cash on the spot for vehicles in any condition.",
+  "sections": [
+    {
+      "type": "content",
+      "heading": "Junk Car Removal Across North Las Vegas",
+      "body": "North Las Vegas has grown rapidly over the past two decades, and with that growth comes a steady demand for junk car removal. Whether you bought a new home in Aliante and the old car came with you, or you have a vehicle that broke down years ago in a driveway near Craig Road, we can help.\n\nWe buy vehicles directly — no brokers, no middlemen. That means a faster process, a better offer, and no surprise deductions when our truck shows up. Every pickup in North Las Vegas includes free towing."
+    },
+    {
+      "type": "content",
+      "heading": "How It Works in North Las Vegas",
+      "body": "Call us at (702) 555-0134 with your vehicle's details: year, make, model, and condition. We give you a cash offer on the spot — no waiting for callbacks, no haggling.\n\nAccept the offer and we schedule a free pickup at your North Las Vegas address. Our tow truck arrives at the agreed time, we verify the vehicle, pay you in cash, and load it up. Most North Las Vegas sellers have the entire process completed within a few hours of their first call."
+    },
+    {
+      "type": "content",
+      "heading": "North Las Vegas Areas We Serve",
+      "body": "We cover every part of North Las Vegas, including Aliante, Eldorado, Alexander, the area surrounding Nellis Air Force Base, Craig Road, Cheyenne Avenue, Ann Road, and all residential neighborhoods within city limits. We also frequently pick up vehicles from commercial properties and apartment complexes across the city."
+    },
+    {
+      "type": "content",
+      "heading": "Common Vehicles We Buy in North Las Vegas",
+      "body": "Trucks and SUVs are especially common pickups in North Las Vegas — Ford F-150s, Chevy Silverados, Dodge Rams, and older SUVs that have reached the end of their useful life. But we buy everything: sedans, coupes, minivans, and even commercial vehicles.\n\nCondition does not matter. Blown engines, bad transmissions, body damage, rust, missing parts — we buy vehicles that most dealerships and private buyers won't touch."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Do you buy junk cars near Nellis Air Force Base?",
+      "answer": "Yes, we serve all areas of North Las Vegas including the neighborhoods surrounding Nellis AFB. We can also work with military personnel who need to sell a vehicle before a PCS move."
+    },
+    {
+      "question": "How much is my junk car worth in North Las Vegas?",
+      "answer": "Offers range from $200 to $5,000+ based on the vehicle's year, make, model, weight, and condition. Call us for a free, no-obligation quote specific to your vehicle."
+    },
+    {
+      "question": "Can you pick up a car from an apartment complex in North Las Vegas?",
+      "answer": "Yes. We regularly pick up vehicles from apartment parking lots and complexes across North Las Vegas. Just let us know the situation when you call so we can bring the right equipment."
+    },
+    {
+      "question": "Do I need to be present for the pickup in North Las Vegas?",
+      "answer": "Yes, someone needs to be present to sign the paperwork and receive payment. We schedule the pickup at a time that works for you."
+    }
+  ],
+  "internal_links": {
+    "services": [
+      {"label": "Cash for Junk Cars", "slug": "sedans"},
+      {"label": "Trucks & SUVs", "slug": "trucks-suvs"},
+      {"label": "Accident & Storm-Damaged", "slug": "damaged"},
+      {"label": "Non-Running Vehicles", "slug": "non-running"}
+    ],
+    "nearby_locations": [
+      {"label": "Las Vegas", "slug": "las-vegas"},
+      {"label": "Summerlin", "slug": "summerlin"},
+      {"label": "Spring Valley", "slug": "spring-valley"},
+      {"label": "Paradise", "slug": "paradise"}
+    ]
+  }
+}
