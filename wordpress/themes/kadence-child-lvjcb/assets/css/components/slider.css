@@ -54,8 +54,8 @@
 
 .lvjcb-slider__prev:hover:not(:disabled),
 .lvjcb-slider__next:hover:not(:disabled) {
-	border-color: var(--lvjcb-color-primary);
-	color: var(--lvjcb-color-primary);
+	border-color: var(--lvjcb-color-accent);
+	color: var(--lvjcb-color-accent);
 }
 
 .lvjcb-slider__prev:disabled,

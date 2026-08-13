@@ -12,7 +12,7 @@
 
 .lvjcb-vehicle-card__figure {
 	aspect-ratio: 16 / 10;
-	background: linear-gradient(135deg, rgba(28,49,68,0.06), rgba(28,49,68,0.12));
+	background: linear-gradient(135deg, rgba(0,0,0,0.04), rgba(0,0,0,0.08));
 }
 
 .lvjcb-vehicle-card__image {

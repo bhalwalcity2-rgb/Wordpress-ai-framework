@@ -36,7 +36,7 @@
 }
 
 .lvjcb-internal-links__link:hover {
-	background: var(--lvjcb-color-primary);
-	color: var(--lvjcb-color-text-on-dark);
-	border-color: var(--lvjcb-color-primary);
+	background: var(--lvjcb-color-accent);
+	color: var(--lvjcb-color-dark);
+	border-color: var(--lvjcb-color-accent);
 }

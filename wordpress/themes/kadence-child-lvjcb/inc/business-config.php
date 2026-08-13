@@ -31,11 +31,11 @@ return array(
 	// automatically from these by inc/colors.php. Pick any hex values
 	// here; accessibility-safe shades are computed, not hand-picked.
 	'colors' => array(
-		'primary'   => '#D00000',
-		'accent'    => '#FFBA08',
-		'dark'      => '#1C3144',
-		'neutral'   => '#A2AEBB',
-		'secondary' => '#3F88C5',
+		'primary'   => '#FFB800',
+		'accent'    => '#FFB800',
+		'dark'      => '#111111',
+		'neutral'   => '#9CA3AF',
+		'secondary' => '#374151',
 	),
 
 	'nav' => array(

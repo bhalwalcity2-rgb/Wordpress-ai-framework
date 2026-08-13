@@ -30,7 +30,7 @@
 }
 
 .lvjcb-faq-item__toggle:hover {
-	color: var(--lvjcb-color-primary);
+	color: var(--lvjcb-color-accent);
 }
 
 .lvjcb-faq-item__icon {

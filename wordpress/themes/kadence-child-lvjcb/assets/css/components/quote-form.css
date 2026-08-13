@@ -38,7 +38,7 @@
 .lvjcb-quote-form__input:focus-visible {
 	outline: 2px solid var(--lvjcb-color-focus);
 	outline-offset: 2px;
-	border-color: var(--lvjcb-color-primary);
+	border-color: var(--lvjcb-color-accent);
 }
 
 .lvjcb-quote-form__submit {

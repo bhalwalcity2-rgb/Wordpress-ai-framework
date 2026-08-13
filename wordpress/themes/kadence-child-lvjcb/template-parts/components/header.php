@@ -70,7 +70,7 @@ $nav_items = array_map(
 				<?php echo lvjcb_icon( 'phone', array( 'size' => 20 ) ); ?>
 			</a>
 
-			<button type="button" class="lvjcb-btn lvjcb-btn--secondary lvjcb-btn--on-dark lvjcb-header__instant-offer" data-lvjcb-reveal-quote-form>
+			<button type="button" class="lvjcb-btn lvjcb-btn--gold lvjcb-header__instant-offer" data-lvjcb-reveal-quote-form>
 				<?php esc_html_e( 'Instant Offer', 'lvjcb' ); ?>
 			</button>
 

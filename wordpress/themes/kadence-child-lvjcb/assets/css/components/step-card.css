@@ -7,7 +7,7 @@
 .lvjcb-step-card__number {
 	width: 56px;
 	height: 56px;
-	background: var(--lvjcb-color-dark);
+	background: var(--lvjcb-color-accent);
 	border-radius: 50%;
 	display: flex;
 	align-items: center;
@@ -16,7 +16,7 @@
 	font-family: var(--lvjcb-font-heading);
 	font-size: 22px;
 	font-weight: var(--lvjcb-font-weight-heavy);
-	color: var(--lvjcb-color-accent);
+	color: var(--lvjcb-color-dark);
 	line-height: 1;
 }
 

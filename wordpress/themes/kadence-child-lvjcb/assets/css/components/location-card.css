@@ -11,12 +11,12 @@
 }
 
 .lvjcb-location-card:hover {
-	border-color: var(--lvjcb-color-primary);
+	border-color: var(--lvjcb-color-accent);
 	box-shadow: var(--lvjcb-shadow);
 }
 
 .lvjcb-location-card__pin {
-	color: var(--lvjcb-color-primary);
+	color: var(--lvjcb-color-accent);
 	flex-shrink: 0;
 }
 
@@ -64,7 +64,7 @@
 
 .lvjcb-location-card:hover .lvjcb-location-card__arrow {
 	opacity: 1;
-	color: var(--lvjcb-color-primary);
+	color: var(--lvjcb-color-accent);
 }
 
 @media (prefers-reduced-motion: reduce) {

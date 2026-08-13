@@ -23,8 +23,8 @@
 	padding: 16px;
 	box-sizing: border-box;
 	border-radius: 50%;
-	background: rgba(208,0,0,0.06);
-	color: var(--lvjcb-color-primary);
+	background: rgba(255,184,0,0.1);
+	color: var(--lvjcb-color-accent);
 }
 
 .lvjcb-why-card__heading {

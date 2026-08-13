@@ -1,5 +1,5 @@
 .lvjcb-footer {
-	background: rgba(15,30,44,1);
+	background: var(--lvjcb-color-dark);
 	color: var(--lvjcb-color-text-on-dark-muted);
 	padding-block: var(--lvjcb-space-xl) var(--lvjcb-space-lg);
 }
@@ -29,14 +29,14 @@
 .lvjcb-footer__logo-mark {
 	width: 36px;
 	height: 36px;
-	background: var(--lvjcb-color-primary);
+	background: var(--lvjcb-color-accent);
 	border-radius: var(--lvjcb-radius);
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	font-size: 15px;
 	font-weight: var(--lvjcb-font-weight-heavy);
-	color: var(--lvjcb-color-text-on-dark);
+	color: var(--lvjcb-color-dark);
 	flex-shrink: 0;
 }
 

@@ -18,13 +18,13 @@
 	top: 0;
 	bottom: 0;
 	width: 4px;
-	background: var(--lvjcb-color-primary);
+	background: var(--lvjcb-color-accent);
 	border-radius: 0 2px 2px 0;
 	transition: width var(--lvjcb-transition-fast);
 }
 
 .lvjcb-service-card:hover {
-	border-color: var(--lvjcb-color-primary);
+	border-color: var(--lvjcb-color-accent);
 	box-shadow: var(--lvjcb-shadow);
 	transform: translateY(-2px);
 }
@@ -37,7 +37,7 @@
 	width: 48px;
 	height: 48px;
 	border-radius: var(--lvjcb-radius);
-	background: linear-gradient(135deg, rgba(208,0,0,0.08), rgba(208,0,0,0.02));
+	background: rgba(255,184,0,0.1);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -45,7 +45,7 @@
 }
 
 .lvjcb-service-card__icon {
-	color: var(--lvjcb-color-primary);
+	color: var(--lvjcb-color-accent);
 }
 
 .lvjcb-service-card__heading {
@@ -98,13 +98,7 @@
 .lvjcb-service-card:hover .lvjcb-service-card__arrow {
 	opacity: 1;
 	transform: translate(0, 0);
-	color: var(--lvjcb-color-primary);
-}
-
-@media (min-width: 769px) {
-	.lvjcb-section__grid--4up .lvjcb-service-card {
-		/* Override 4up to 2-column for service cards */
-	}
+	color: var(--lvjcb-color-accent);
 }
 
 @media (prefers-reduced-motion: reduce) {

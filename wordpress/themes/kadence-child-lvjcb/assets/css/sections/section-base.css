@@ -18,14 +18,14 @@
 	font-weight: var(--lvjcb-font-weight-bold);
 	letter-spacing: var(--lvjcb-letter-spacing-wide);
 	text-transform: uppercase;
-	color: var(--lvjcb-color-primary);
+	color: var(--lvjcb-color-text);
 }
 
 .lvjcb-section__eyebrow::before {
 	content: '';
 	width: 24px;
 	height: 2px;
-	background: var(--lvjcb-color-primary);
+	background: var(--lvjcb-color-accent);
 	border-radius: 1px;
 }
 
@@ -107,33 +107,26 @@
 }
 
 .lvjcb-section--primary {
-	background: var(--lvjcb-color-primary);
-	color: var(--lvjcb-color-text-on-dark);
+	background: var(--lvjcb-color-accent);
+	color: var(--lvjcb-color-dark);
 	position: relative;
 	overflow: hidden;
 }
 
-.lvjcb-section--primary::before {
-	content: '';
-	position: absolute;
-	top: -50%;
-	right: -10%;
-	width: 500px;
-	height: 500px;
-	background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, transparent 70%);
-	pointer-events: none;
-}
-
 .lvjcb-section--primary .lvjcb-section__heading {
-	color: var(--lvjcb-color-text-on-dark);
+	color: var(--lvjcb-color-dark);
 }
 
 .lvjcb-section--primary .lvjcb-section__intro {
-	color: rgba(245, 247, 249, 0.85);
+	color: rgba(0, 0, 0, 0.7);
+}
+
+.lvjcb-section--primary .lvjcb-section__eyebrow {
+	color: var(--lvjcb-color-dark);
 }
 
 .lvjcb-section--primary .lvjcb-section__eyebrow::before {
-	background: rgba(255,255,255,0.4);
+	background: rgba(0,0,0,0.3);
 }
 
 /* Centered header modifier */

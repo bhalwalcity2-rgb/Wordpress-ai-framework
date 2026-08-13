@@ -26,9 +26,9 @@
 	height: 44px;
 	padding: 12px;
 	box-sizing: border-box;
-	background: rgba(208,0,0,0.06);
+	background: rgba(255,184,0,0.1);
 	border-radius: var(--lvjcb-radius);
-	color: var(--lvjcb-color-primary);
+	color: var(--lvjcb-color-accent);
 	flex-shrink: 0;
 }
 
@@ -62,7 +62,7 @@
 
 .lvjcb-contact-information__phone:hover,
 .lvjcb-contact-information__email:hover {
-	color: var(--lvjcb-color-primary);
+	color: var(--lvjcb-color-accent);
 }
 
 .lvjcb-contact-information__phone:focus-visible,
