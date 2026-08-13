@@ -149,7 +149,6 @@ return array(
 		'eyebrow' => 'Service areas',
 		'heading' => 'Serving the entire Las Vegas valley',
 		'items'   => array(
-			array( 'city' => 'Las Vegas', 'state' => 'NV', 'slug' => 'las-vegas', 'intro' => 'From downtown to the west side, we pick up junk and unwanted vehicles throughout Las Vegas — usually the same day you call.' ),
 			array( 'city' => 'Henderson', 'state' => 'NV', 'slug' => 'henderson', 'intro' => "Henderson homeowners call us for the same reason people across the valley do: a fair offer and free pickup, without the runaround." ),
 			array( 'city' => 'North Las Vegas', 'state' => 'NV', 'slug' => 'north-las-vegas', 'intro' => 'We buy junk cars throughout North Las Vegas, from vehicles that just need to go to ones that have been sitting for years.' ),
 			array( 'city' => 'Summerlin', 'state' => 'NV', 'slug' => 'summerlin', 'intro' => "Whether it's tucked in a garage or sitting on the street, we'll come to your Summerlin address and make an offer on the spot." ),
