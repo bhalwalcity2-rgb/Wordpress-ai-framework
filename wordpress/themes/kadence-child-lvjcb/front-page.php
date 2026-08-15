@@ -13,7 +13,7 @@
 
 get_header();
 
-get_template_part( 'template-parts/components/header' );
+include get_stylesheet_directory() . '/template-parts/components/site-header.php';
 
 $hero          = lvjcb_get_config( 'hero' );
 $services      = lvjcb_get_config( 'services' );
