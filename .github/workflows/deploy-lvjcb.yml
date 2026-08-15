@@ -25,6 +25,7 @@ jobs:
           key: pexels-${{ hashFiles('scripts/image-manifest.json') }}
 
       - name: Fetch Pexels images
+        if: ${{ secrets.PEXELS_API_KEY != '' }}
         env:
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
         run: |
