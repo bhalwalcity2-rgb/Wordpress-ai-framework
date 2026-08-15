@@ -81,6 +81,10 @@ if ( ! defined( 'LVJCB_ASSETS_URI' ) ) {
  */
 
 require_once LVJCB_INC_DIR . '/config.php';
+
+add_action( 'wp_body_open', function() {
+	get_template_part( 'template-parts/components/header' );
+}, 20 );
 require_once LVJCB_INC_DIR . '/colors.php';
 require_once LVJCB_INC_DIR . '/setup.php';
 require_once LVJCB_INC_DIR . '/enqueue.php';
