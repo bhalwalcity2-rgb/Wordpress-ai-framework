@@ -30,7 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 
 if ( ! defined( 'LVJCB_VERSION' ) ) {
-	define( 'LVJCB_VERSION', '0.1.0' );
+	define( 'LVJCB_VERSION', '0.3.0' );
 }
 
 if ( ! defined( 'LVJCB_THEME_DIR' ) ) {

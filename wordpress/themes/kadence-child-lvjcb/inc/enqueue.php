@@ -71,7 +71,7 @@ if ( ! defined( 'LVJCB_SECTION_ASSETS' ) ) {
 	);
 }
 
-add_action( 'wp_enqueue_scripts', 'lvjcb_enqueue_assets' );
+add_action( 'wp_enqueue_scripts', 'lvjcb_enqueue_assets', 20 );
 
 /**
  * Enqueue frontend assets.
