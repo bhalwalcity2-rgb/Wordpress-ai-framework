@@ -10,6 +10,7 @@
  * alongside this project's own Header component.
  *
  * @package LVJCB
+ * @since   0.1.0
  */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
