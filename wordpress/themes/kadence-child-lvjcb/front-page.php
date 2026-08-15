@@ -1,5 +1,4 @@
 <?php
-// DEPLOY_MARKER: run26-20260815
 /**
  * Homepage template.
  *
@@ -116,7 +115,6 @@ $nav_items = array_map(
 	</div>
 </div>
 
-<!-- DEPLOY_CHECK:run26 -->
 <div class="lvjcb-header-sentinel" id="lvjcb-header-sentinel" aria-hidden="true"></div>
 
 <main id="lvjcb-main">
