@@ -15,6 +15,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 add_action( 'after_setup_theme', 'lvjcb_theme_setup' );
 
+add_action( 'wp_body_open', 'lvjcb_render_header', 20 );
+
+function lvjcb_render_header() {
+	get_template_part( 'template-parts/components/header' );
+}
+
 /**
  * Configure the child theme.
  *
