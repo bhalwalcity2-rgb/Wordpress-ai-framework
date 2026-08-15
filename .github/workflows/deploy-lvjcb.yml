@@ -42,6 +42,7 @@ jobs:
           protocol: ftps
           local-dir: ./wordpress/themes/kadence-child-lvjcb/
           server-dir: ./wp-content/themes/kadence-child-lvjcb/
+          dangerous-clean-slate: true
           exclude: |
             **/.git*
             **/.git*/**
