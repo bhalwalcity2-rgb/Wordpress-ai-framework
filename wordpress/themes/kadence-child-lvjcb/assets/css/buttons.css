@@ -70,6 +70,17 @@
 	border-color: rgba(255, 255, 255, 0.5);
 }
 
+.lvjcb-btn--outline-light {
+	background: transparent;
+	border-color: rgba(255, 255, 255, 0.5);
+	color: #fff;
+}
+
+.lvjcb-btn--outline-light:hover {
+	background: rgba(255, 255, 255, 0.1);
+	border-color: #fff;
+}
+
 .lvjcb-btn--inverse {
 	background: var(--lvjcb-color-surface);
 	color: var(--lvjcb-color-dark);

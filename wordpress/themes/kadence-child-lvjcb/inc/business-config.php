@@ -17,15 +17,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 return array(
 
-	'business_name' => 'Las Vegas Junk Car Buyers',
+	'business_name' => 'First Choice Junk Car',
 	'tagline'       => 'Locally owned. Buying junk, damaged, and non-running vehicles across the Las Vegas valley since day one.',
 	'address'       => '4820 W Sahara Ave, Las Vegas, NV 89102',
 	'email'         => 'offers@junkcarbuyerslasvegas.com',
 	'hours'         => 'Mon–Sat: 7:00 AM – 7:00 PM · Sun: 9:00 AM – 4:00 PM',
 	'map_embed'     => '',
 
-	'phone_e164'    => '+17025550134',
-	'phone_display' => '(702) 555-0134',
+	'phone_e164'    => '+18667483697',
+	'phone_display' => '(866) 748-3697',
+	'instant_quote_url' => 'https://sell.peddle.com/instant-offer?pub_id=5173180',
 
 	// Five raw brand colors — every other color token is derived
 	// automatically from these by inc/colors.php. Pick any hex values

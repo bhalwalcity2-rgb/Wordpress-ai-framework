@@ -43,7 +43,7 @@ $nav_items = array_map(
 			<?php if ( has_custom_logo() ) : ?>
 				<?php the_custom_logo(); ?>
 			<?php else : ?>
-				<span class="lvjcb-header__logo-mark">LV</span>
+				<span class="lvjcb-header__logo-mark">FC</span>
 				<span class="lvjcb-header__logo-text">
 					<span class="lvjcb-header__logo-name"><?php bloginfo( 'name' ); ?></span>
 					<span class="lvjcb-header__logo-sub"><?php esc_html_e( 'Cash for cars · Free towing', 'lvjcb' ); ?></span>
@@ -70,9 +70,9 @@ $nav_items = array_map(
 				<?php echo lvjcb_icon( 'phone', array( 'size' => 20 ) ); ?>
 			</a>
 
-			<button type="button" class="lvjcb-btn lvjcb-btn--gold lvjcb-header__instant-offer" data-lvjcb-reveal-quote-form>
+			<a href="<?php echo esc_url( lvjcb_get_config( 'instant_quote_url' ) ); ?>" class="lvjcb-btn lvjcb-btn--gold lvjcb-header__instant-offer" target="_blank" rel="noopener">
 				<?php esc_html_e( 'Instant Offer', 'lvjcb' ); ?>
-			</button>
+			</a>
 
 			<button type="button" class="lvjcb-header__hamburger" id="lvjcb-menu-open" aria-expanded="false" aria-controls="lvjcb-mobile-nav" aria-label="<?php esc_attr_e( 'Open menu', 'lvjcb' ); ?>">
 				<?php echo lvjcb_icon( 'menu', array( 'size' => 22 ) ); ?>
@@ -98,9 +98,9 @@ $nav_items = array_map(
 		<a href="<?php echo esc_url( $phone_href ); ?>" class="lvjcb-btn lvjcb-btn--primary lvjcb-btn--block">
 			<?php echo esc_html( $phone_display ); ?>
 		</a>
-		<button type="button" class="lvjcb-btn lvjcb-btn--secondary lvjcb-btn--on-dark lvjcb-btn--block" data-lvjcb-reveal-quote-form>
+		<a href="<?php echo esc_url( lvjcb_get_config( 'instant_quote_url' ) ); ?>" class="lvjcb-btn lvjcb-btn--secondary lvjcb-btn--on-dark lvjcb-btn--block" target="_blank" rel="noopener">
 			<?php esc_html_e( 'Instant Offer', 'lvjcb' ); ?>
-		</button>
+		</a>
 	</div>
 </div>
 

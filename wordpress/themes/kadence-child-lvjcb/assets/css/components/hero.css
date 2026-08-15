@@ -121,9 +121,12 @@
 	flex-shrink: 0;
 }
 
-/* CTA button */
+/* CTA buttons */
 .lvjcb-hero__ctas {
 	margin-top: var(--lvjcb-space-lg);
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--lvjcb-space-sm);
 }
 
 .lvjcb-hero__cta {

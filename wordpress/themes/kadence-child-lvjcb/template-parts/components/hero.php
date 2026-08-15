@@ -72,9 +72,13 @@ $hero_features = array_slice( $trust_items, 0, 3 );
 			<?php endif; ?>
 
 			<div class="lvjcb-hero__ctas">
-				<a href="<?php echo esc_url( $phone_href ); ?>" class="lvjcb-btn lvjcb-btn--gold lvjcb-hero__cta">
-					<?php echo esc_html( $phone_display ); ?>
+				<a href="<?php echo esc_url( lvjcb_get_config( 'instant_quote_url' ) ); ?>" class="lvjcb-btn lvjcb-btn--gold lvjcb-hero__cta" target="_blank" rel="noopener">
+					<?php esc_html_e( 'Get Instant Quote', 'lvjcb' ); ?>
 					<?php echo lvjcb_icon( 'arrow', array( 'size' => 18 ) ); ?>
+				</a>
+				<a href="<?php echo esc_url( $phone_href ); ?>" class="lvjcb-btn lvjcb-btn--outline-light lvjcb-hero__cta">
+					<?php echo lvjcb_icon( 'phone', array( 'size' => 18 ) ); ?>
+					<?php echo esc_html( $phone_display ); ?>
 				</a>
 			</div>
 
