@@ -13,6 +13,8 @@
 
 get_header();
 
+get_template_part( 'template-parts/components/header' );
+
 $hero          = lvjcb_get_config( 'hero' );
 $services      = lvjcb_get_config( 'services' );
 $how_it_works  = lvjcb_get_config( 'how_it_works' );
