@@ -1,0 +1,40 @@
+{
+  "images": [
+    {
+      "slug": "hero-homepage-01",
+      "query": "tow truck junk car cash transaction",
+      "orientation": "landscape",
+      "resolution": "large2x"
+    },
+    {
+      "slug": "vehicle-sedan-01",
+      "query": "old sedan car parked driveway worn",
+      "orientation": "landscape",
+      "resolution": "large"
+    },
+    {
+      "slug": "vehicle-accident-car-01",
+      "query": "damaged car collision front end",
+      "orientation": "landscape",
+      "resolution": "large"
+    },
+    {
+      "slug": "vehicle-non-running-01",
+      "query": "broken down abandoned car",
+      "orientation": "landscape",
+      "resolution": "large"
+    },
+    {
+      "slug": "vehicle-rust-damage-01",
+      "query": "rusty old car suv neglected",
+      "orientation": "landscape",
+      "resolution": "large"
+    },
+    {
+      "slug": "vehicle-flat-tires-01",
+      "query": "old car flat tire curb",
+      "orientation": "landscape",
+      "resolution": "large"
+    }
+  ]
+}

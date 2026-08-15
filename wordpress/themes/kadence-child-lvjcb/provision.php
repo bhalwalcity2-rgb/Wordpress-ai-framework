@@ -188,6 +188,64 @@ update_option( 'permalink_structure', '/%postname%/' );
 flush_rewrite_rules();
 echo '<p class="ok">✓ Permalinks set to /%postname%/</p>';
 
+// Step 7: Import Pexels images into media library
+echo '<h2>Images</h2>';
+
+$pexels_dir = get_stylesheet_directory() . '/assets/images/pexels';
+if ( is_dir( $pexels_dir ) ) {
+	require_once ABSPATH . 'wp-admin/includes/image.php';
+	require_once ABSPATH . 'wp-admin/includes/file.php';
+	require_once ABSPATH . 'wp-admin/includes/media.php';
+
+	$image_files = glob( $pexels_dir . '/*.jpg' );
+	if ( empty( $image_files ) ) {
+		echo '<p class="skip">⟳ No images found in pexels directory</p>';
+	}
+
+	foreach ( $image_files as $image_path ) {
+		$slug  = pathinfo( $image_path, PATHINFO_FILENAME );
+		$title = ucwords( str_replace( '-', ' ', $slug ) );
+
+		$existing = get_posts( array(
+			'post_type'   => 'attachment',
+			'name'        => $slug,
+			'numberposts' => 1,
+		) );
+
+		if ( ! empty( $existing ) ) {
+			echo '<p class="skip">⟳ Image: <strong>' . esc_html( $slug ) . '</strong> — already imported (ID ' . $existing[0]->ID . ')</p>';
+			continue;
+		}
+
+		$upload = wp_upload_bits( $slug . '.jpg', null, file_get_contents( $image_path ) );
+
+		if ( ! empty( $upload['error'] ) ) {
+			echo '<p class="del">✗ Image: <strong>' . esc_html( $slug ) . '</strong> — ' . esc_html( $upload['error'] ) . '</p>';
+			continue;
+		}
+
+		$attachment_id = wp_insert_attachment( array(
+			'post_mime_type' => 'image/jpeg',
+			'post_title'     => $title,
+			'post_name'      => $slug,
+			'post_content'   => '',
+			'post_status'    => 'inherit',
+		), $upload['file'] );
+
+		if ( is_wp_error( $attachment_id ) ) {
+			echo '<p class="del">✗ Image: <strong>' . esc_html( $slug ) . '</strong> — ' . esc_html( $attachment_id->get_error_message() ) . '</p>';
+			continue;
+		}
+
+		$metadata = wp_generate_attachment_metadata( $attachment_id, $upload['file'] );
+		wp_update_attachment_metadata( $attachment_id, $metadata );
+
+		echo '<p class="ok">✓ Image: <strong>' . esc_html( $slug ) . '</strong> — imported (ID ' . $attachment_id . ')</p>';
+	}
+} else {
+	echo '<p class="skip">⟳ No pexels images directory — images will appear after next deploy</p>';
+}
+
 echo '<hr>';
 echo '<h2>All Done!</h2>';
 echo '<p>Internal links now work:</p>';

@@ -7,6 +7,7 @@ on:
     paths:
       - "wordpress/themes/kadence-child-lvjcb/**"
       - ".github/workflows/deploy-lvjcb.yml"
+      - "scripts/image-manifest.json"
   workflow_dispatch:
 
 jobs:
@@ -16,6 +17,19 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
+      - name: Cache Pexels images
+        uses: actions/cache@v4
+        with:
+          path: wordpress/themes/kadence-child-lvjcb/assets/images/pexels
+          key: pexels-${{ hashFiles('scripts/image-manifest.json') }}
+
+      - name: Fetch Pexels images
+        env:
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+        run: |
+          chmod +x scripts/fetch-pexels-images.sh
+          bash scripts/fetch-pexels-images.sh
 
       - name: Deploy via FTPS
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
