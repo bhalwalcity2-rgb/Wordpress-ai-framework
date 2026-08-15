@@ -30,7 +30,11 @@ function lvjcb_get_config( $key = null ) {
 	static $config = null;
 
 	if ( null === $config ) {
-		$config = require LVJCB_INC_DIR . '/business-config.php';
+		$file = LVJCB_INC_DIR . '/business-config.php';
+		if ( function_exists( 'opcache_invalidate' ) ) {
+			opcache_invalidate( $file, true );
+		}
+		$config = require $file;
 	}
 
 	if ( null === $key ) {
