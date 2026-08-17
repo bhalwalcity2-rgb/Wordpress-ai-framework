@@ -66,25 +66,25 @@
 }
 
 .lvjcb-hero__content {
-	max-width: 600px;
+	max-width: 750px;
 }
 
 /* Heading — large uppercase, gold accent */
 .lvjcb-hero__heading {
 	margin: 0;
 	font-family: var(--lvjcb-font-heading, system-ui, sans-serif);
-	font-size: clamp(36px, 6vw, 68px);
+	font-size: clamp(36px, 5vw, 56px);
 	font-weight: var(--lvjcb-font-weight-heavy, 800);
-	line-height: 1.05;
+	line-height: 1.1;
 	color: var(--lvjcb-color-text-on-dark, #F5F7F9);
 	letter-spacing: -0.02em;
 	text-transform: uppercase;
+	text-wrap: balance;
 }
 
 .lvjcb-hero__heading em {
 	font-style: normal;
 	color: var(--lvjcb-color-accent, #FFB800);
-	display: block;
 }
 
 /* Description */
