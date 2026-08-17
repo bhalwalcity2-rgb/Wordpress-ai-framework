@@ -84,6 +84,7 @@
 .lvjcb-hero__heading em {
 	font-style: normal;
 	color: var(--lvjcb-color-accent, #FFB800);
+	display: block;
 }
 
 /* Description */
