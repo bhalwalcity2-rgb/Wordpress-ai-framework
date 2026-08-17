@@ -44,36 +44,40 @@
 		window.addEventListener( 'resize', updateControls );
 		updateControls();
 
-		// --- Autoplay ---
+		// --- Continuous autoplay ---
 		var autoplayAttr = slider.getAttribute( 'data-lvjcb-slider-autoplay' );
 		if ( ! autoplayAttr || reducedMotion.matches ) {
 			return;
 		}
 
-		var interval  = parseInt( autoplayAttr, 10 ) || 4000;
-		var timerId   = null;
-		var paused    = false;
+		var speed   = 0.5; // px per frame (~30px/s at 60fps)
+		var rafId   = null;
+		var paused  = false;
 
-		function autoAdvance() {
+		function tick() {
 			var maxScroll = track.scrollWidth - track.clientWidth;
-			if ( track.scrollLeft >= maxScroll - 1 ) {
-				track.scrollTo( { left: 0, behavior: reducedMotion.matches ? 'auto' : 'smooth' } );
-			} else {
-				scrollByPage( 1 );
+			if ( maxScroll <= 0 ) {
+				return;
 			}
+			track.scrollLeft += speed;
+			if ( track.scrollLeft >= maxScroll ) {
+				track.scrollLeft = 0;
+			}
+			updateControls();
+			rafId = requestAnimationFrame( tick );
 		}
 
 		function startAutoplay() {
-			if ( timerId || paused ) {
+			if ( rafId || paused ) {
 				return;
 			}
-			timerId = window.setInterval( autoAdvance, interval );
+			rafId = requestAnimationFrame( tick );
 		}
 
 		function stopAutoplay() {
-			if ( timerId ) {
-				window.clearInterval( timerId );
-				timerId = null;
+			if ( rafId ) {
+				cancelAnimationFrame( rafId );
+				rafId = null;
 			}
 		}
 
