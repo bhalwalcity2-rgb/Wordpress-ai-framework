@@ -45,9 +45,6 @@ $nav_items = array_map(
 				<?php if ( $hours ) : ?>
 					<span><?php echo esc_html( $hours ); ?></span>
 				<?php endif; ?>
-				<?php if ( $email ) : ?>
-					<a href="<?php echo esc_url( 'mailto:' . $email ); ?>"><?php echo esc_html( $email ); ?></a>
-				<?php endif; ?>
 			</div>
 			<span><?php echo esc_html( lvjcb_get_config( 'hero' )['eyebrow'] ?? '' ); ?></span>
 		</div>
