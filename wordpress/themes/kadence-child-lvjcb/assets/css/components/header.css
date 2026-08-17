@@ -1,7 +1,3 @@
-body {
-	padding-top: calc(var(--lvjcb-header-height, 72px) + var(--lvjcb-header-top-height, 32px));
-}
-
 .lvjcb-header {
 	position: sticky;
 	top: 0;
@@ -309,10 +305,6 @@ body {
 }
 
 @media (max-width: 768px) {
-	body {
-		padding-top: var(--lvjcb-header-height-condensed, 60px);
-	}
-
 	.lvjcb-header__row {
 		height: var(--lvjcb-header-height-condensed, 60px);
 	}
@@ -348,10 +340,6 @@ body {
 		height: 52px;
 		padding-inline: 12px;
 		gap: 8px;
-	}
-
-	body {
-		padding-top: 52px;
 	}
 
 	.lvjcb-header__logo-mark {
