@@ -168,6 +168,7 @@ function lvjcb_enqueue_registered_asset( $group, $slug, $files ) {
  */
 
 add_action( 'wp_head', 'lvjcb_preload_hero_image', 1 );
+add_action( 'wp_head', 'lvjcb_favicon', 2 );
 add_action( 'wp_footer', 'lvjcb_peddle_embed_script', 99 );
 
 /**
@@ -192,6 +193,21 @@ function lvjcb_preload_hero_image() {
 	printf(
 		'<link rel="preload" as="image" href="%s" fetchpriority="high">' . "\n",
 		esc_url( $hero_image_url )
+	);
+}
+
+/**
+ * Output the theme favicon.
+ *
+ * @since 0.4.0
+ *
+ * @return void
+ */
+function lvjcb_favicon() {
+
+	printf(
+		'<link rel="icon" href="%s" type="image/svg+xml">' . "\n",
+		esc_url( lvjcb_get_asset_uri( 'images/favicon.svg' ) )
 	);
 }
 
