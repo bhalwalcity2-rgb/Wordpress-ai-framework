@@ -54,6 +54,37 @@
 @media (max-width: 480px) {
 	.lvjcb-trust-strip__list {
 		grid-template-columns: 1fr;
-		padding: var(--lvjcb-space-md);
+		padding: var(--lvjcb-space-sm);
+	}
+
+	.lvjcb-trust-strip__icon {
+		width: 36px;
+		height: 36px;
+		padding: 8px;
+	}
+
+	.lvjcb-trust-strip__item span {
+		font-size: 13px;
+	}
+}
+
+@media (max-width: 359px) {
+	.lvjcb-trust-strip {
+		margin-top: -24px;
+		padding-inline: 12px;
+	}
+
+	.lvjcb-trust-strip__list {
+		padding: 12px;
+		border-radius: var(--lvjcb-radius, 8px);
+	}
+
+	.lvjcb-trust-strip__item {
+		gap: 8px;
+		padding: 4px 0;
+	}
+
+	.lvjcb-trust-strip__item span {
+		font-size: 12px;
 	}
 }

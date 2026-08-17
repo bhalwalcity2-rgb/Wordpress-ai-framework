@@ -322,6 +322,58 @@ body {
 	}
 }
 
+@media (max-width: 480px) {
+	.lvjcb-header__row {
+		padding-inline: 16px;
+		gap: 12px;
+	}
+
+	.lvjcb-header__actions {
+		gap: 12px;
+	}
+
+	.lvjcb-header__logo {
+		gap: 8px;
+	}
+
+	.lvjcb-header__logo-mark {
+		width: 36px;
+		height: 36px;
+		font-size: 15px;
+	}
+}
+
+@media (max-width: 359px) {
+	.lvjcb-header__row {
+		height: 52px;
+		padding-inline: 12px;
+		gap: 8px;
+	}
+
+	body {
+		padding-top: 52px;
+	}
+
+	.lvjcb-header__logo-mark {
+		width: 32px;
+		height: 32px;
+		font-size: 13px;
+	}
+
+	.lvjcb-header__logo-name {
+		font-size: 13px;
+	}
+
+	.lvjcb-header__logo-sub {
+		font-size: 9px;
+	}
+
+	.lvjcb-header__hamburger {
+		width: 36px;
+		height: 36px;
+	}
+}
+
 @media (prefers-reduced-motion: reduce) {
 	.lvjcb-header__row {
 		transition: none;

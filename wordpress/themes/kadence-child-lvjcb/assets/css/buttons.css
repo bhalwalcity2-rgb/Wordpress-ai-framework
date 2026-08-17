@@ -102,6 +102,25 @@
 	transform: translateY(1px);
 }
 
+@media (max-width: 480px) {
+	.lvjcb-btn {
+		height: 46px;
+		padding: 0 20px;
+		font-size: 14px;
+		white-space: normal;
+		text-align: center;
+	}
+}
+
+@media (max-width: 359px) {
+	.lvjcb-btn {
+		height: 42px;
+		padding: 0 16px;
+		font-size: 13px;
+		max-width: 100%;
+	}
+}
+
 @media (prefers-reduced-motion: reduce) {
 	.lvjcb-btn {
 		transition: none;

@@ -104,6 +104,39 @@
 	color: var(--lvjcb-color-text-on-dark);
 }
 
+@media (max-width: 480px) {
+	.lvjcb-footer {
+		padding-block: var(--lvjcb-space-lg, 24px) var(--lvjcb-space-md, 16px);
+	}
+
+	.lvjcb-footer__grid {
+		gap: var(--lvjcb-space-md, 16px);
+	}
+
+	.lvjcb-footer__bottom {
+		margin-top: var(--lvjcb-space-lg, 24px);
+	}
+
+	.lvjcb-footer__col a,
+	.lvjcb-footer__col li {
+		font-size: 13px;
+	}
+}
+
+@media (max-width: 359px) {
+	.lvjcb-footer__logo {
+		font-size: 14px;
+	}
+
+	.lvjcb-footer__brand p {
+		font-size: 13px;
+	}
+
+	.lvjcb-footer__bottom {
+		font-size: 12px;
+	}
+}
+
 @media (min-width: 769px) {
 	.lvjcb-footer__grid {
 		grid-template-columns: 1.4fr repeat(3, 1fr);

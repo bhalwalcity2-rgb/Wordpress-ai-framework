@@ -33,6 +33,7 @@
 	color: var(--lvjcb-color-text);
 	background-color: var(--lvjcb-color-surface);
 	transition: border-color var(--lvjcb-transition-fast);
+	box-sizing: border-box;
 }
 
 .lvjcb-quote-form__input:focus-visible {

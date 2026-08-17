@@ -76,6 +76,27 @@
 	max-width: var(--lvjcb-measure);
 }
 
+@media (max-width: 480px) {
+	.lvjcb-faq-item__toggle {
+		font-size: 15px;
+		padding: var(--lvjcb-space-sm, 16px) 0;
+	}
+
+	.lvjcb-faq-item__panel-inner p {
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 359px) {
+	.lvjcb-faq-item__toggle {
+		font-size: 14px;
+	}
+
+	.lvjcb-faq-item__panel-inner p {
+		font-size: 13px;
+	}
+}
+
 @media (prefers-reduced-motion: reduce) {
 	.lvjcb-faq-item__panel,
 	.lvjcb-faq-item__icon,

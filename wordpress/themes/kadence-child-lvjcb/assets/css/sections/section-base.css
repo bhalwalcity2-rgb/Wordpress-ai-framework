@@ -129,6 +129,27 @@
 	background: rgba(0,0,0,0.3);
 }
 
+@media (max-width: 480px) {
+	.lvjcb-section__intro {
+		margin-bottom: var(--lvjcb-space-lg);
+		font-size: 15px;
+	}
+
+	.lvjcb-section__grid {
+		gap: var(--lvjcb-space-sm);
+	}
+}
+
+@media (max-width: 359px) {
+	.lvjcb-section__container {
+		padding-inline: 16px;
+	}
+
+	.lvjcb-section__intro {
+		font-size: 14px;
+	}
+}
+
 /* Centered header modifier */
 .lvjcb-section--centered .lvjcb-section__eyebrow {
 	justify-content: center;

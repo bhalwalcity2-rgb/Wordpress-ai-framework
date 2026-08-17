@@ -85,6 +85,12 @@
 	color: var(--lvjcb-color-accent);
 }
 
+@media (max-width: 359px) {
+	.lvjcb-slider__slide {
+		flex-basis: 92%;
+	}
+}
+
 @media (min-width: 769px) {
 	.lvjcb-slider__slide {
 		flex-basis: 46%;

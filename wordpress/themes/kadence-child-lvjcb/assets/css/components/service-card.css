@@ -101,6 +101,35 @@
 	color: var(--lvjcb-color-accent);
 }
 
+@media (max-width: 480px) {
+	.lvjcb-service-card {
+		padding: var(--lvjcb-space-sm) var(--lvjcb-space-sm) var(--lvjcb-space-sm) calc(var(--lvjcb-space-sm) + 4px);
+	}
+
+	.lvjcb-service-card__icon-wrap {
+		width: 40px;
+		height: 40px;
+	}
+
+	.lvjcb-service-card__description {
+		font-size: 13px;
+	}
+}
+
+@media (max-width: 359px) {
+	.lvjcb-service-card {
+		flex-direction: column;
+		text-align: center;
+		align-items: center;
+		padding: var(--lvjcb-space-sm);
+		padding-left: calc(var(--lvjcb-space-sm) + 4px);
+	}
+
+	.lvjcb-service-card__arrow {
+		display: none;
+	}
+}
+
 @media (prefers-reduced-motion: reduce) {
 	.lvjcb-service-card,
 	.lvjcb-service-card::before,

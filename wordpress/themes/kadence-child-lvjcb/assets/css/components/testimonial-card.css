@@ -71,6 +71,16 @@
 	color: var(--lvjcb-color-text-muted);
 }
 
+@media (max-width: 480px) {
+	.lvjcb-testimonial-card {
+		padding: var(--lvjcb-space-md, 16px);
+	}
+
+	.lvjcb-testimonial-card__quote p {
+		font-size: 14px;
+	}
+}
+
 @media (prefers-reduced-motion: reduce) {
 	.lvjcb-testimonial-card {
 		transition: none;

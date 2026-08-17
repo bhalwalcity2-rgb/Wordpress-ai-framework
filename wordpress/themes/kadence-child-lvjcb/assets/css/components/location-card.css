@@ -67,6 +67,17 @@
 	color: var(--lvjcb-color-accent);
 }
 
+@media (max-width: 359px) {
+	.lvjcb-location-card {
+		padding: var(--lvjcb-space-xs, 12px) var(--lvjcb-space-sm, 16px);
+		gap: 8px;
+	}
+
+	.lvjcb-location-card__heading {
+		font-size: 13px;
+	}
+}
+
 @media (prefers-reduced-motion: reduce) {
 	.lvjcb-location-card,
 	.lvjcb-location-card__arrow {

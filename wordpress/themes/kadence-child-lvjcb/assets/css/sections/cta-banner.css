@@ -21,6 +21,12 @@
 	display: none;
 }
 
+@media (max-width: 480px) {
+	.lvjcb-cta-banner__inner {
+		gap: var(--lvjcb-space-sm, 16px);
+	}
+}
+
 @media (min-width: 769px) {
 	.lvjcb-cta-banner__inner {
 		flex-direction: row;

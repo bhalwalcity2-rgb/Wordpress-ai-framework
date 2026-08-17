@@ -92,6 +92,34 @@
 	border: 0;
 }
 
+@media (max-width: 480px) {
+	.lvjcb-contact-information__card-value {
+		font-size: 14px;
+		overflow-wrap: break-word;
+		word-break: break-word;
+	}
+
+	.lvjcb-contact-information__card {
+		padding: var(--lvjcb-space-sm);
+	}
+
+	.lvjcb-contact-information__card-icon {
+		width: 36px;
+		height: 36px;
+		padding: 8px;
+	}
+}
+
+@media (max-width: 359px) {
+	.lvjcb-contact-information__card-value {
+		font-size: 13px;
+	}
+
+	.lvjcb-contact-information__card-label {
+		font-size: 11px;
+	}
+}
+
 @media (min-width: 769px) {
 	.lvjcb-contact-information__grid {
 		grid-template-columns: repeat(3, 1fr);

@@ -52,6 +52,31 @@
 	--lvjcb-header-top-height: 32px;
 }
 
+@media (max-width: 768px) {
+	:root {
+		--lvjcb-space-section: 56px;
+		--lvjcb-space-xl: 40px;
+		--lvjcb-space-lg: 28px;
+	}
+}
+
+@media (max-width: 480px) {
+	:root {
+		--lvjcb-space-section: 44px;
+		--lvjcb-space-xl: 32px;
+		--lvjcb-space-lg: 24px;
+	}
+}
+
+@media (max-width: 359px) {
+	:root {
+		--lvjcb-space-section: 36px;
+		--lvjcb-space-xl: 24px;
+		--lvjcb-space-lg: 20px;
+		--lvjcb-space-md: 16px;
+	}
+}
+
 @media (prefers-reduced-motion: reduce) {
 	:root {
 		--lvjcb-transition-fast: 0ms;
