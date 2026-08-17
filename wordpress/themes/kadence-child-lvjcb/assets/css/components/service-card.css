@@ -1,12 +1,13 @@
 .lvjcb-service-card {
 	position: relative;
 	background: var(--lvjcb-color-surface);
-	border-radius: var(--lvjcb-radius);
+	border-radius: var(--lvjcb-radius-lg, 16px);
 	border: 1px solid var(--lvjcb-color-border);
-	padding: var(--lvjcb-space-md) var(--lvjcb-space-md) var(--lvjcb-space-md) calc(var(--lvjcb-space-md) + 4px);
+	padding: var(--lvjcb-space-lg) var(--lvjcb-space-md);
 	display: flex;
-	gap: var(--lvjcb-space-sm);
+	flex-direction: column;
 	align-items: flex-start;
+	gap: var(--lvjcb-space-sm);
 	transition: border-color var(--lvjcb-transition-fast), box-shadow var(--lvjcb-transition-fast), transform var(--lvjcb-transition-fast);
 	overflow: hidden;
 }
@@ -25,8 +26,8 @@
 
 .lvjcb-service-card:hover {
 	border-color: var(--lvjcb-color-accent);
-	box-shadow: var(--lvjcb-shadow);
-	transform: translateY(-2px);
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+	transform: translateY(-4px);
 }
 
 .lvjcb-service-card:hover::before {
@@ -34,10 +35,10 @@
 }
 
 .lvjcb-service-card__icon-wrap {
-	width: 48px;
-	height: 48px;
-	border-radius: var(--lvjcb-radius);
-	background: rgba(255,184,0,0.1);
+	width: 56px;
+	height: 56px;
+	border-radius: 50%;
+	background: rgba(255, 184, 0, 0.1);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -51,7 +52,7 @@
 .lvjcb-service-card__heading {
 	margin: 0;
 	font-family: var(--lvjcb-font-heading);
-	font-size: var(--lvjcb-text-h3);
+	font-size: 18px;
 	font-weight: var(--lvjcb-font-weight-bold);
 }
 
@@ -78,10 +79,10 @@
 }
 
 .lvjcb-service-card__description {
-	margin: 4px 0 0;
+	margin: 0;
 	font-family: var(--lvjcb-font-body);
-	font-size: 14px;
-	line-height: 1.55;
+	font-size: 15px;
+	line-height: 1.6;
 	color: var(--lvjcb-color-text-muted);
 }
 
@@ -103,28 +104,24 @@
 
 @media (max-width: 480px) {
 	.lvjcb-service-card {
-		padding: var(--lvjcb-space-sm) var(--lvjcb-space-sm) var(--lvjcb-space-sm) calc(var(--lvjcb-space-sm) + 4px);
+		padding: var(--lvjcb-space-md);
 	}
 
 	.lvjcb-service-card__icon-wrap {
-		width: 40px;
-		height: 40px;
+		width: 48px;
+		height: 48px;
+	}
+
+	.lvjcb-service-card__heading {
+		font-size: 16px;
 	}
 
 	.lvjcb-service-card__description {
-		font-size: 13px;
+		font-size: 14px;
 	}
 }
 
 @media (max-width: 359px) {
-	.lvjcb-service-card {
-		flex-direction: column;
-		text-align: center;
-		align-items: center;
-		padding: var(--lvjcb-space-sm);
-		padding-left: calc(var(--lvjcb-space-sm) + 4px);
-	}
-
 	.lvjcb-service-card__arrow {
 		display: none;
 	}

@@ -41,7 +41,7 @@ $intro   = $args['intro'] ?? '';
 			<p class="lvjcb-section__intro"><?php echo esc_html( $intro ); ?></p>
 		<?php endif; ?>
 
-		<div class="lvjcb-section__grid lvjcb-section__grid--3up">
+		<div class="lvjcb-section__grid lvjcb-section__grid--2up">
 			<?php foreach ( $cards as $card ) : ?>
 				<?php get_template_part( 'template-parts/components/service-card', null, $card ); ?>
 			<?php endforeach; ?>

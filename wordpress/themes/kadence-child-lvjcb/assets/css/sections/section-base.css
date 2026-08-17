@@ -59,6 +59,7 @@
 }
 
 @media (min-width: 769px) {
+	.lvjcb-section__grid--2up,
 	.lvjcb-section__grid--4up,
 	.lvjcb-section__grid--3up {
 		grid-template-columns: repeat(2, 1fr);
