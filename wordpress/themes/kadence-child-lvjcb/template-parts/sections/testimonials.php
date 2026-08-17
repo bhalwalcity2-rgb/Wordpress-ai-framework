@@ -65,6 +65,7 @@ $review_count      = (int) ( $args['review_count'] ?? 0 );
 				'id'       => $section_id,
 				'label'    => __( 'Customer reviews', 'lvjcb' ),
 				'modifier' => 'lvjcb-slider--3up',
+				'autoplay' => true,
 			)
 		);
 		foreach ( $testimonials as $testimonial ) :
