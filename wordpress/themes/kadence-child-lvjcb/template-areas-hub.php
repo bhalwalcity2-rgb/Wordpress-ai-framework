@@ -2,8 +2,8 @@
 /**
  * Template Name: LVJCB Service Areas Hub Page
  *
- * The parent page for every individual location page (e.g.
- * /service-areas/henderson/) — lists all cities and links to each.
+ * The parent page for every location page — same full layout as
+ * the homepage.
  *
  * @package LVJCB
  */
@@ -11,14 +11,21 @@
 get_header();
 
 $service_areas = lvjcb_get_config( 'service_areas' );
+$services      = lvjcb_get_config( 'services' );
+$how_it_works  = lvjcb_get_config( 'how_it_works' );
+$why_choose_us = lvjcb_get_config( 'why_choose_us' );
+$vehicles      = lvjcb_get_config( 'vehicles' );
+$testimonials  = lvjcb_get_config( 'testimonials' );
+$faq           = lvjcb_get_config( 'faq' );
+$hero          = lvjcb_get_config( 'hero' );
 ?>
 
 <main id="lvjcb-main">
 
 	<?php get_template_part( 'template-parts/components/hero', null, array(
-		'heading'     => $service_areas['heading'],
-		'description' => '',
-		'image_id'    => 0,
+		'heading'     => "We Buy Junk Cars \u{2014}Across the Las Vegas Valley",
+		'description' => 'Free towing and same-day cash offers in every city we serve.',
+		'image_id'    => lvjcb_get_attachment_id_by_slug( $hero['image_slug'] ?? '' ),
 	) ); ?>
 
 	<?php get_template_part( 'template-parts/components/trust-strip' ); ?>
@@ -38,10 +45,80 @@ $service_areas = lvjcb_get_config( 'service_areas' );
 		),
 	) ); ?>
 
-	<?php get_template_part( 'template-parts/sections/cta-banner', null, lvjcb_get_cta_banner_args( 'areas-hub', 'mid_page' ) ); ?>
+	<?php get_template_part( 'template-parts/sections/what-we-buy', null, array(
+		'eyebrow' => $services['eyebrow'],
+		'heading' => $services['heading'],
+		'intro'   => $services['intro'],
+		'cards'   => array_map(
+			function ( $card ) {
+				return array(
+					'icon'        => $card['icon'],
+					'heading'     => $card['heading'],
+					'description' => $card['description'],
+					'url'         => home_url( '/cash-for-junk-cars/' . $card['slug'] . '/' ),
+				);
+			},
+			$services['cards']
+		),
+	) ); ?>
+
+	<?php
+	$steps = array();
+	foreach ( $how_it_works['steps'] as $index => $step ) {
+		$steps[] = array_merge( $step, array( 'step_number' => $index + 1 ) );
+	}
+	get_template_part( 'template-parts/sections/how-it-works', null, array(
+		'eyebrow' => $how_it_works['eyebrow'],
+		'heading' => $how_it_works['heading'],
+		'intro'   => $how_it_works['intro'],
+		'steps'   => $steps,
+	) );
+	?>
+
+	<?php get_template_part( 'template-parts/sections/cta-banner', null, lvjcb_get_cta_banner_args( 'areas-hub-mid', 'mid_page' ) ); ?>
+
+	<?php get_template_part( 'template-parts/sections/why-choose-us', null, array(
+		'eyebrow' => $why_choose_us['eyebrow'],
+		'heading' => $why_choose_us['heading'],
+		'intro'   => $why_choose_us['intro'],
+		'cards'   => $why_choose_us['cards'],
+	) ); ?>
+
+	<?php get_template_part( 'template-parts/sections/recently-purchased-vehicles', null, array(
+		'eyebrow'  => $vehicles['eyebrow'],
+		'heading'  => $vehicles['heading'],
+		'intro'    => $vehicles['intro'],
+		'vehicles' => array_map(
+			function ( $vehicle ) {
+				return array_merge(
+					$vehicle,
+					array( 'image_id' => lvjcb_get_attachment_id_by_slug( $vehicle['image_slug'] ?? '' ) )
+				);
+			},
+			$vehicles['items']
+		),
+	) ); ?>
+
+	<?php get_template_part( 'template-parts/sections/testimonials', null, array(
+		'eyebrow'          => $testimonials['eyebrow'],
+		'heading'          => $testimonials['heading'],
+		'aggregate_rating' => $testimonials['aggregate_rating'] ?? 0,
+		'review_count'     => $testimonials['review_count'] ?? 0,
+		'testimonials'     => $testimonials['items'],
+	) ); ?>
+
+	<?php get_template_part( 'template-parts/sections/faq', null, array(
+		'eyebrow' => $faq['eyebrow'],
+		'heading' => $faq['heading'],
+		'items'   => $faq['items'],
+	) ); ?>
+
+	<?php get_template_part( 'template-parts/sections/cta-banner', null, lvjcb_get_cta_banner_args( 'areas-hub-late', 'late_page' ) ); ?>
 
 	<?php get_template_part( 'template-parts/sections/contact-information', null, lvjcb_get_contact_args() ); ?>
 
 </main>
 
 <?php get_template_part( 'template-parts/sections/footer' ); ?>
+
+<?php get_footer(); ?>
