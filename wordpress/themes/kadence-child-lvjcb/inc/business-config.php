@@ -55,7 +55,7 @@ return array(
 	),
 
 	'hero' => array(
-		'heading'     => "We buy junk cars in Las Vegas \u{2014} today, for cash.",
+		'heading'     => "We Buy Junk Cars in Las Vegas \u{2014} Get Cash Today",
 		'description' => "Running or not, damaged or complete — free towing, an offer in minutes, and cash in hand the same day. No fees, no hassle.",
 		'eyebrow'     => 'Serving Las Vegas & Clark County',
 		// Resolved to an attachment ID at render time via
