@@ -47,9 +47,17 @@ $intro   = $args['intro'] ?? '';
 			<?php endif; ?>
 		</div>
 
-		<a class="lvjcb-btn lvjcb-btn--inverse lvjcb-cta-banner__cta" href="<?php echo esc_url( $cta_url ); ?>">
-			<?php echo esc_html( $cta_text ); ?>
-		</a>
+		<div class="lvjcb-cta-banner__actions">
+			<a class="lvjcb-btn lvjcb-btn--inverse lvjcb-cta-banner__cta" href="<?php echo esc_url( $cta_url ); ?>">
+				<?php echo esc_html( $cta_text ); ?>
+			</a>
+			<?php $quote_url = lvjcb_get_config( 'instant_quote_url' ); ?>
+			<?php if ( $quote_url ) : ?>
+				<a class="lvjcb-btn lvjcb-btn--outline-dark lvjcb-cta-banner__cta" href="<?php echo esc_url( $quote_url ); ?>" target="_blank" rel="noopener">
+					<?php esc_html_e( 'Instant Offer', 'lvjcb' ); ?>
+				</a>
+			<?php endif; ?>
+		</div>
 
 	</div>
 </section>

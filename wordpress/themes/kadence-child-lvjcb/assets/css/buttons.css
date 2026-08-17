@@ -81,6 +81,18 @@
 	border-color: #fff;
 }
 
+.lvjcb-btn--outline-dark {
+	background: transparent;
+	border-color: rgba(0, 0, 0, 0.3);
+	color: var(--lvjcb-color-dark, #111111);
+	font-weight: var(--lvjcb-font-weight-heavy, 800);
+}
+
+.lvjcb-btn--outline-dark:hover {
+	background: rgba(0, 0, 0, 0.08);
+	border-color: rgba(0, 0, 0, 0.5);
+}
+
 .lvjcb-btn--inverse {
 	background: var(--lvjcb-color-surface, #FFFFFF);
 	color: var(--lvjcb-color-dark, #111111);
