@@ -1,6 +1,5 @@
 .lvjcb-header {
-	position: sticky;
-	top: 0;
+	position: relative;
 	z-index: 40;
 	background: var(--lvjcb-color-dark, #111111);
 	border-bottom: 3px solid var(--lvjcb-color-accent, #FFB800);
