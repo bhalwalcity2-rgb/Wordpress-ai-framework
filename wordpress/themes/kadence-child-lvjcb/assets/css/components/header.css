@@ -46,7 +46,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	gap: var(--lvjcb-space-md, 24px);
+	gap: 16px;
 	height: var(--lvjcb-header-height, 72px);
 	max-width: var(--lvjcb-container-max, 1180px);
 	margin-inline: auto;
@@ -114,19 +114,20 @@
 
 .lvjcb-header__nav ul {
 	display: flex;
-	gap: 32px;
+	gap: 16px;
 	list-style: none;
 	margin: 0;
 	padding: 0;
 }
 
 .lvjcb-header__nav a {
-	font-size: 14px;
+	font-size: 13px;
 	font-weight: var(--lvjcb-font-weight-medium, 600);
 	text-decoration: none;
 	color: var(--lvjcb-color-text-on-dark-muted, #9CA3AF);
 	text-transform: uppercase;
 	letter-spacing: 0.04em;
+	white-space: nowrap;
 	transition: color var(--lvjcb-transition-fast, 150ms ease);
 }
 
@@ -143,7 +144,8 @@
 .lvjcb-header__actions {
 	display: flex;
 	align-items: center;
-	gap: var(--lvjcb-space-md, 24px);
+	gap: 12px;
+	flex-shrink: 0;
 }
 
 .lvjcb-header__phone {
@@ -306,6 +308,28 @@
 
 	.lvjcb-header__hamburger {
 		display: none;
+	}
+
+	.lvjcb-header__phone {
+		display: none;
+	}
+
+	.lvjcb-header__phone-icon-only {
+		display: inline-flex;
+	}
+}
+
+@media (min-width: 1280px) {
+	.lvjcb-header__phone {
+		display: inline-flex;
+	}
+
+	.lvjcb-header__phone-icon-only {
+		display: none;
+	}
+
+	.lvjcb-header__nav ul {
+		gap: 24px;
 	}
 }
 
