@@ -64,7 +64,6 @@ if ( ! defined( 'LVJCB_SECTION_ASSETS' ) ) {
 			'faq'                          => array( 'css' => true, 'js' => false ),
 			'cta-banner'                   => array( 'css' => true, 'js' => false ),
 			'contact-information'          => array( 'css' => true, 'js' => false ),
-			'instant-offer'                => array( 'css' => true, 'js' => false ),
 			'footer'                       => array( 'css' => true, 'js' => false ),
 			// 'get-cash-offer' is registered once built — not part of
 			// the current homepage assembly (see Stage 6 order).
@@ -169,6 +168,7 @@ function lvjcb_enqueue_registered_asset( $group, $slug, $files ) {
  */
 
 add_action( 'wp_head', 'lvjcb_preload_hero_image', 1 );
+add_action( 'wp_footer', 'lvjcb_peddle_embed_script', 99 );
 
 /**
  * Output a preload hint for the Hero image on the homepage only.
@@ -193,4 +193,25 @@ function lvjcb_preload_hero_image() {
 		'<link rel="preload" as="image" href="%s" fetchpriority="high">' . "\n",
 		esc_url( $hero_image_url )
 	);
+}
+
+/**
+ * Output the Peddle Publisher Embed script in the footer.
+ *
+ * @since 0.4.0
+ *
+ * @return void
+ */
+function lvjcb_peddle_embed_script() {
+
+	$publisher_id = lvjcb_get_config( 'peddle_publisher_id' );
+
+	if ( ! $publisher_id ) {
+		return;
+	}
+	?>
+	<script>
+		PeddlePublisherEmbedConfig={publisherID:<?php echo wp_json_encode( $publisher_id ); ?>},function(){if("function"!=typeof window.PeddlePublisherEmbed){if(!window.PeddlePublisherEmbedConfig||!window.PeddlePublisherEmbedConfig.publisherID)throw new Error("Unable to bootstrap Peddle Publisher Embed, make sure to set PeddlePublisherEmbedConfig.publisherID");const e=(d,i)=>{e.queue.push({operation:d,options:i})};e.queue=[],window.PeddlePublisherEmbed=e;const d=()=>{const e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="https://publisher-embed.peddle.com/api/v1/embed/"+PeddlePublisherEmbedConfig.publisherID;const d=document.getElementsByTagName("script")[0];d.parentNode.insertBefore(e,d)};"complete"===document.readyState?d():window.addEventListener("load",d,!1)}}();window.PeddlePublisherEmbed('boot');
+	</script>
+	<?php
 }
