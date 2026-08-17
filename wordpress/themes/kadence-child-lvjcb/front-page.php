@@ -13,14 +13,15 @@
 
 get_header();
 
-$hero          = lvjcb_get_config( 'hero' );
-$services      = lvjcb_get_config( 'services' );
-$how_it_works  = lvjcb_get_config( 'how_it_works' );
-$why_choose_us = lvjcb_get_config( 'why_choose_us' );
-$vehicles      = lvjcb_get_config( 'vehicles' );
-$testimonials  = lvjcb_get_config( 'testimonials' );
-$service_areas = lvjcb_get_config( 'service_areas' );
-$faq           = lvjcb_get_config( 'faq' );
+$hero           = lvjcb_get_config( 'hero' );
+$instant_offer  = lvjcb_get_config( 'instant_offer' );
+$services       = lvjcb_get_config( 'services' );
+$how_it_works   = lvjcb_get_config( 'how_it_works' );
+$why_choose_us  = lvjcb_get_config( 'why_choose_us' );
+$vehicles       = lvjcb_get_config( 'vehicles' );
+$testimonials   = lvjcb_get_config( 'testimonials' );
+$service_areas  = lvjcb_get_config( 'service_areas' );
+$faq            = lvjcb_get_config( 'faq' );
 ?>
 
 <main id="lvjcb-main">
@@ -32,6 +33,13 @@ $faq           = lvjcb_get_config( 'faq' );
 	) ); ?>
 
 	<?php get_template_part( 'template-parts/components/trust-strip' ); ?>
+
+	<?php get_template_part( 'template-parts/sections/instant-offer', null, array(
+		'eyebrow'      => $instant_offer['eyebrow'] ?? '',
+		'heading'      => $instant_offer['heading'] ?? '',
+		'intro'        => $instant_offer['intro'] ?? '',
+		'publisher_id' => lvjcb_get_config( 'peddle_publisher_id' ),
+	) ); ?>
 
 	<?php get_template_part( 'template-parts/sections/what-we-buy', null, array(
 		'eyebrow' => $services['eyebrow'],

@@ -64,6 +64,7 @@ if ( ! defined( 'LVJCB_SECTION_ASSETS' ) ) {
 			'faq'                          => array( 'css' => true, 'js' => false ),
 			'cta-banner'                   => array( 'css' => true, 'js' => false ),
 			'contact-information'          => array( 'css' => true, 'js' => false ),
+			'instant-offer'                => array( 'css' => true, 'js' => false ),
 			'footer'                       => array( 'css' => true, 'js' => false ),
 			// 'get-cash-offer' is registered once built — not part of
 			// the current homepage assembly (see Stage 6 order).

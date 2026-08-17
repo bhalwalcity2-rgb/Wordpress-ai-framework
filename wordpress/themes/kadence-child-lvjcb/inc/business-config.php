@@ -27,6 +27,13 @@ return array(
 	'phone_e164'    => '+18667483697',
 	'phone_display' => '(866) 748-3697',
 	'instant_quote_url' => 'https://sell.peddle.com/instant-offer?pub_id=5173180',
+	'peddle_publisher_id' => '5173180',
+
+	'instant_offer' => array(
+		'eyebrow' => 'Instant Offer',
+		'heading' => 'Get a cash offer in under 2 minutes',
+		'intro'   => 'Enter your vehicle details and get an instant, no-obligation offer — no phone call needed.',
+	),
 
 	// Five raw brand colors — every other color token is derived
 	// automatically from these by inc/colors.php. Pick any hex values
