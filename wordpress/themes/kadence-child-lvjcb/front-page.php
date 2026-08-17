@@ -38,8 +38,8 @@ $nav_items = array_map(
 );
 ?>
 
-<header class="lvjcb-header" id="lvjcb-header">
-	<div class="lvjcb-header__top">
+<header class="lvjcb-header" id="lvjcb-header" style="background:#111111;border-bottom:3px solid #FFB800">
+	<div class="lvjcb-header__top" style="background:rgba(0,0,0,0.3);color:#9CA3AF">
 		<div class="lvjcb-header__top-inner">
 			<div class="lvjcb-header__top-info">
 				<?php if ( $hours ) : ?>
@@ -53,7 +53,7 @@ $nav_items = array_map(
 		</div>
 	</div>
 	<div class="lvjcb-header__row">
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="lvjcb-header__logo">
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="lvjcb-header__logo" style="color:#F5F7F9;text-decoration:none">
 			<?php if ( has_custom_logo() ) : ?>
 				<?php the_custom_logo(); ?>
 			<?php else : ?>
@@ -215,3 +215,5 @@ $nav_items = array_map(
 </main>
 
 <?php get_template_part( 'template-parts/sections/footer' ); ?>
+
+<?php get_footer(); ?>

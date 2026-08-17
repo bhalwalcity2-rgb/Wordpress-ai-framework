@@ -28,7 +28,7 @@ if ( count( $heading_parts ) === 2 ) {
 
 $hero_features = array_slice( $trust_items, 0, 3 );
 ?>
-<section class="lvjcb-hero<?php echo $image_id ? ' lvjcb-hero--has-image' : ''; ?>">
+<section class="lvjcb-hero<?php echo $image_id ? ' lvjcb-hero--has-image' : ''; ?>" style="background:#111111">
 
 	<?php if ( $image_id ) : ?>
 		<div class="lvjcb-hero__bg">
@@ -54,10 +54,10 @@ $hero_features = array_slice( $trust_items, 0, 3 );
 	<div class="lvjcb-hero__container">
 		<div class="lvjcb-hero__content">
 
-			<h1 class="lvjcb-hero__heading"><?php echo $heading_html; ?></h1>
+			<h1 class="lvjcb-hero__heading" style="color:#F5F7F9"><?php echo $heading_html; ?></h1>
 
 			<?php if ( $description ) : ?>
-				<p class="lvjcb-hero__description"><?php echo esc_html( $description ); ?></p>
+				<p class="lvjcb-hero__description" style="color:#9CA3AF"><?php echo esc_html( $description ); ?></p>
 			<?php endif; ?>
 
 			<?php if ( ! empty( $hero_features ) ) : ?>
