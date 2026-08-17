@@ -23,7 +23,7 @@ $address       = $args['address'] ?? '';
 $phone         = $args['phone'] ?? '';
 $email         = $args['email'] ?? '';
 
-if ( empty( $business_name ) || empty( $address ) || empty( $phone ) || empty( $email ) ) {
+if ( empty( $business_name ) || empty( $address ) || empty( $phone ) ) {
 	return;
 }
 
@@ -66,10 +66,6 @@ $phone_href = preg_replace( '/[^0-9+]/', '', $phone );
 
 					<a class="lvjcb-contact-information__phone" href="<?php echo esc_url( 'tel:' . $phone_href ); ?>">
 						<?php echo esc_html( $phone ); ?>
-					</a>
-
-					<a class="lvjcb-contact-information__email" href="<?php echo esc_url( 'mailto:' . $email ); ?>">
-						<?php echo esc_html( $email ); ?>
 					</a>
 				</address>
 
