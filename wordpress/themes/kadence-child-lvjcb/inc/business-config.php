@@ -137,12 +137,14 @@ return array(
 	),
 
 	'testimonials' => array(
-		'eyebrow' => 'Testimonials',
-		'heading' => 'What Las Vegas homeowners say',
+		'eyebrow' => 'Reviews',
+		'heading' => 'What our customers say',
+		'aggregate_rating' => 4.9,
+		'review_count'     => 127,
 		'items'   => array(
-			array( 'rating' => 5, 'quote' => "Called at 9am, cash in hand by noon. Didn't expect it to be that easy.", 'customer_name' => 'Marcus D.', 'customer_location' => 'Henderson, NV' ),
-			array( 'rating' => 5, 'quote' => 'No title, no problem — they still handled everything and paid fairly.', 'customer_name' => 'Priya S.', 'customer_location' => 'Las Vegas, NV' ),
-			array( 'rating' => 4, 'quote' => 'Truck showed up right on time. Straightforward, professional, no surprises.', 'customer_name' => 'Devon W.', 'customer_location' => 'Summerlin, NV' ),
+			array( 'rating' => 5, 'quote' => "Called at 9am, cash in hand by noon. Didn't expect it to be that easy.", 'customer_name' => 'Marcus D.', 'customer_location' => 'Henderson, NV', 'date' => '2 months ago' ),
+			array( 'rating' => 5, 'quote' => 'No title, no problem — they still handled everything and paid fairly.', 'customer_name' => 'Priya S.', 'customer_location' => 'Las Vegas, NV', 'date' => '3 weeks ago' ),
+			array( 'rating' => 4, 'quote' => 'Truck showed up right on time. Straightforward, professional, no surprises.', 'customer_name' => 'Devon W.', 'customer_location' => 'Summerlin, NV', 'date' => '1 month ago' ),
 		),
 	),
 

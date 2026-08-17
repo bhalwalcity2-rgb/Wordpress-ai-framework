@@ -88,9 +88,11 @@ $faq           = lvjcb_get_config( 'faq' );
 	) ); ?>
 
 	<?php get_template_part( 'template-parts/sections/testimonials', null, array(
-		'eyebrow'      => $testimonials['eyebrow'],
-		'heading'      => $testimonials['heading'],
-		'testimonials' => $testimonials['items'],
+		'eyebrow'          => $testimonials['eyebrow'],
+		'heading'          => $testimonials['heading'],
+		'aggregate_rating' => $testimonials['aggregate_rating'] ?? 0,
+		'review_count'     => $testimonials['review_count'] ?? 0,
+		'testimonials'     => $testimonials['items'],
 	) ); ?>
 
 	<?php get_template_part( 'template-parts/sections/service-areas', null, array(

@@ -1,88 +1,153 @@
-.lvjcb-testimonial-card {
-	background: var(--lvjcb-color-surface);
-	border: 1px solid var(--lvjcb-color-border);
-	border-radius: var(--lvjcb-radius);
-	padding: var(--lvjcb-space-lg) var(--lvjcb-space-md);
+/* --- Aggregate rating summary (section-level) --- */
+
+.lvjcb-testimonials__summary {
 	display: flex;
-	flex-direction: column;
-	gap: var(--lvjcb-space-sm);
-	height: 100%;
-	transition: box-shadow var(--lvjcb-transition-fast);
+	align-items: center;
+	gap: 8px;
+	margin-bottom: var(--lvjcb-space-lg);
 }
 
-.lvjcb-testimonial-card:hover {
-	box-shadow: var(--lvjcb-shadow);
+.lvjcb-testimonials__score {
+	font-family: var(--lvjcb-font-heading);
+	font-size: 32px;
+	font-weight: var(--lvjcb-font-weight-heavy, 800);
+	line-height: 1;
+	color: var(--lvjcb-color-text);
 }
 
-.lvjcb-testimonial-card__rating {
+.lvjcb-testimonials__summary-stars {
 	display: flex;
-	gap: 2px;
+	gap: 1px;
 }
 
-.lvjcb-testimonial-card__star {
+.lvjcb-testimonials__summary-star {
 	color: var(--lvjcb-color-accent);
 	fill: currentColor;
 }
 
-.lvjcb-testimonial-card__star.is-empty {
+.lvjcb-testimonials__summary-star.is-empty {
 	color: var(--lvjcb-color-border);
 	fill: currentColor;
 }
 
-.lvjcb-testimonial-card__quote {
-	margin: 0;
-	flex: 1;
-}
-
-.lvjcb-testimonial-card__quote p {
-	margin: 0;
-	font-family: var(--lvjcb-font-quote);
-	font-size: 16px;
-	line-height: 1.65;
-	color: var(--lvjcb-color-text);
-	font-style: italic;
-}
-
-.lvjcb-testimonial-card__quote p::before {
-	content: '\201C';
-}
-
-.lvjcb-testimonial-card__quote p::after {
-	content: '\201D';
-}
-
-.lvjcb-testimonial-card__who {
-	display: flex;
-	flex-direction: column;
-	gap: 1px;
-	padding-top: var(--lvjcb-space-sm);
-	border-top: 1px solid var(--lvjcb-color-border);
-	margin-top: auto;
-}
-
-.lvjcb-testimonial-card__name {
+.lvjcb-testimonials__count {
 	font-size: 14px;
-	font-weight: var(--lvjcb-font-weight-bold);
-	color: var(--lvjcb-color-text);
-}
-
-.lvjcb-testimonial-card__location {
-	font-size: 13px;
 	color: var(--lvjcb-color-text-muted);
 }
 
+/* --- Review card (Google Maps style) --- */
+
+.lvjcb-review-card {
+	background: var(--lvjcb-color-surface);
+	border: 1px solid var(--lvjcb-color-border);
+	border-radius: var(--lvjcb-radius);
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	height: 100%;
+	transition: box-shadow var(--lvjcb-transition-fast);
+}
+
+.lvjcb-review-card:hover {
+	box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Header: avatar + name/location */
+.lvjcb-review-card__header {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.lvjcb-review-card__avatar {
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	background: #1a73e8;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 15px;
+	font-weight: var(--lvjcb-font-weight-bold, 700);
+	flex-shrink: 0;
+	text-transform: uppercase;
+	line-height: 1;
+}
+
+.lvjcb-review-card__meta {
+	display: flex;
+	flex-direction: column;
+	gap: 1px;
+	min-width: 0;
+}
+
+.lvjcb-review-card__name {
+	font-size: 14px;
+	font-weight: var(--lvjcb-font-weight-bold, 700);
+	color: var(--lvjcb-color-text);
+	line-height: 1.3;
+}
+
+.lvjcb-review-card__location {
+	font-size: 12px;
+	color: var(--lvjcb-color-text-muted);
+	line-height: 1.3;
+}
+
+/* Rating row: stars + date */
+.lvjcb-review-card__rating-row {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.lvjcb-review-card__stars {
+	display: flex;
+	gap: 0;
+}
+
+.lvjcb-review-card__star {
+	color: var(--lvjcb-color-accent);
+	fill: currentColor;
+}
+
+.lvjcb-review-card__star.is-empty {
+	color: var(--lvjcb-color-border);
+	fill: currentColor;
+}
+
+.lvjcb-review-card__date {
+	font-size: 12px;
+	color: var(--lvjcb-color-text-muted);
+}
+
+/* Review body */
+.lvjcb-review-card__text {
+	margin: 0;
+	font-family: var(--lvjcb-font-body);
+	font-size: 14px;
+	line-height: 1.6;
+	color: var(--lvjcb-color-text);
+}
+
 @media (max-width: 480px) {
-	.lvjcb-testimonial-card {
-		padding: var(--lvjcb-space-md, 16px);
+	.lvjcb-review-card {
+		padding: 16px;
 	}
 
-	.lvjcb-testimonial-card__quote p {
-		font-size: 14px;
+	.lvjcb-review-card__text {
+		font-size: 13px;
+	}
+
+	.lvjcb-testimonials__score {
+		font-size: 26px;
 	}
 }
 
 @media (prefers-reduced-motion: reduce) {
-	.lvjcb-testimonial-card {
+	.lvjcb-review-card {
 		transition: none;
 	}
 }
