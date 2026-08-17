@@ -1,16 +1,5 @@
 'use strict';
 
-/**
- * Global Slider/Carousel Component behavior.
- *
- * One implementation, applied to every [data-lvjcb-slider] instance on
- * the page — Recently Purchased Vehicles and Testimonials both use this
- * same script, never a per-section fork. Autoplay is deliberately not
- * implemented: the project's design direction is calm/restrained, and
- * the Master Workflow only requires autoplay "where appropriate" —
- * nothing in this project calls for it, so no autoplay machinery exists
- * to disable or guard against reduced-motion in the first place.
- */
 ( function () {
 
 	var reducedMotion = window.matchMedia( '(prefers-reduced-motion: reduce)' );
@@ -53,11 +42,58 @@
 		} );
 
 		window.addEventListener( 'resize', updateControls );
-
-		// Handles "fewer items than visible slide count" and the
-		// single-item case automatically: when content doesn't
-		// overflow the track, maxScroll <= 0 and both controls
-		// disable — no separate code path needed for that case.
 		updateControls();
+
+		// --- Autoplay ---
+		var autoplayAttr = slider.getAttribute( 'data-lvjcb-slider-autoplay' );
+		if ( ! autoplayAttr || reducedMotion.matches ) {
+			return;
+		}
+
+		var interval  = parseInt( autoplayAttr, 10 ) || 4000;
+		var timerId   = null;
+		var paused    = false;
+
+		function autoAdvance() {
+			var maxScroll = track.scrollWidth - track.clientWidth;
+			if ( track.scrollLeft >= maxScroll - 1 ) {
+				track.scrollTo( { left: 0, behavior: reducedMotion.matches ? 'auto' : 'smooth' } );
+			} else {
+				scrollByPage( 1 );
+			}
+		}
+
+		function startAutoplay() {
+			if ( timerId || paused ) {
+				return;
+			}
+			timerId = window.setInterval( autoAdvance, interval );
+		}
+
+		function stopAutoplay() {
+			if ( timerId ) {
+				window.clearInterval( timerId );
+				timerId = null;
+			}
+		}
+
+		function pause()  { paused = true;  stopAutoplay(); }
+		function resume() { paused = false; startAutoplay(); }
+
+		slider.addEventListener( 'mouseenter', pause );
+		slider.addEventListener( 'mouseleave', resume );
+		slider.addEventListener( 'focusin',    pause );
+		slider.addEventListener( 'focusout',   resume );
+		slider.addEventListener( 'touchstart', pause, { passive: true } );
+
+		reducedMotion.addEventListener( 'change', function () {
+			if ( reducedMotion.matches ) {
+				stopAutoplay();
+			} else if ( ! paused ) {
+				startAutoplay();
+			}
+		} );
+
+		startAutoplay();
 	} );
 } )();

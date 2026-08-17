@@ -48,8 +48,9 @@ $intro   = $args['intro'] ?? '';
 		<?php
 		lvjcb_slider_start(
 			array(
-				'id'    => $section_id,
-				'label' => __( 'Recently purchased vehicles', 'lvjcb' ),
+				'id'       => $section_id,
+				'label'    => __( 'Recently purchased vehicles', 'lvjcb' ),
+				'autoplay' => true,
 			)
 		);
 		foreach ( $vehicles as $vehicle ) :

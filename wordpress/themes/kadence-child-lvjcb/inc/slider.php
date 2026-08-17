@@ -47,6 +47,9 @@ if ( ! defined( 'ABSPATH' ) ) {
  *                             instead of the default four. This is a
  *                             CSS-only variation of the one slider system,
  *                             not a second implementation.
+ *     @type bool   $autoplay  Whether to auto-advance slides. Pauses on
+ *                             hover/focus and respects prefers-reduced-motion.
+ *     @type int    $interval  Autoplay interval in milliseconds (default 4000).
  * }
  * @return void
  */
@@ -59,9 +62,16 @@ function lvjcb_slider_start( $args = array() ) {
 
 	$label    = $args['label'] ?? __( 'Items', 'lvjcb' );
 	$modifier = $args['modifier'] ?? '';
+	$autoplay = ! empty( $args['autoplay'] );
+	$interval = absint( $args['interval'] ?? 4000 );
 	$class    = 'lvjcb-slider' . ( $modifier ? ' ' . sanitize_html_class( $modifier ) : '' );
+
+	$autoplay_attr = '';
+	if ( $autoplay ) {
+		$autoplay_attr = ' data-lvjcb-slider-autoplay="' . esc_attr( $interval ) . '"';
+	}
 	?>
-	<div class="<?php echo esc_attr( $class ); ?>" data-lvjcb-slider>
+	<div class="<?php echo esc_attr( $class ); ?>" data-lvjcb-slider<?php echo $autoplay_attr; ?>>
 		<div class="lvjcb-slider__viewport">
 			<ul
 				class="lvjcb-slider__track"
