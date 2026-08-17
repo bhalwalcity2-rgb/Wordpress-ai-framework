@@ -64,8 +64,8 @@
 	width: 36px;
 	height: 36px;
 	border-radius: 50%;
-	background: #1a73e8;
-	color: #fff;
+	background: var(--lvjcb-color-accent, #FFB800);
+	color: var(--lvjcb-color-dark, #111111);
 	display: flex;
 	align-items: center;
 	justify-content: center;
