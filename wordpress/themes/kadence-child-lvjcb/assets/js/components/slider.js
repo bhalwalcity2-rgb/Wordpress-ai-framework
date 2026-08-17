@@ -50,7 +50,7 @@
 			return;
 		}
 
-		var speed   = 0.5; // px per frame (~30px/s at 60fps)
+		var speed   = 1; // px per frame (~60px/s at 60fps)
 		var rafId   = null;
 		var paused  = false;
 

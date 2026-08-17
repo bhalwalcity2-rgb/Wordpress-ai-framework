@@ -145,6 +145,11 @@ return array(
 			array( 'rating' => 5, 'quote' => "Called at 9am, cash in hand by noon. Didn't expect it to be that easy.", 'customer_name' => 'Marcus D.', 'customer_location' => 'Henderson, NV', 'date' => '2 months ago' ),
 			array( 'rating' => 5, 'quote' => 'No title, no problem — they still handled everything and paid fairly.', 'customer_name' => 'Priya S.', 'customer_location' => 'Las Vegas, NV', 'date' => '3 weeks ago' ),
 			array( 'rating' => 4, 'quote' => 'Truck showed up right on time. Straightforward, professional, no surprises.', 'customer_name' => 'Devon W.', 'customer_location' => 'Summerlin, NV', 'date' => '1 month ago' ),
+			array( 'rating' => 5, 'quote' => 'Had an old Civic sitting in the driveway for over a year. One call and they came same day with cash.', 'customer_name' => 'James R.', 'customer_location' => 'North Las Vegas, NV', 'date' => '2 weeks ago' ),
+			array( 'rating' => 5, 'quote' => 'Super easy process. They gave me more than I expected for a car that barely ran.', 'customer_name' => 'Linda K.', 'customer_location' => 'Spring Valley, NV', 'date' => '5 days ago' ),
+			array( 'rating' => 5, 'quote' => 'Friendly guys, fair price, picked up the same afternoon. Would definitely recommend.', 'customer_name' => 'Carlos M.', 'customer_location' => 'Paradise, NV', 'date' => '1 week ago' ),
+			array( 'rating' => 4, 'quote' => "Wasn't sure if my truck was worth anything. They made a solid offer and handled all the paperwork.", 'customer_name' => 'Tamika J.', 'customer_location' => 'Enterprise, NV', 'date' => '3 months ago' ),
+			array( 'rating' => 5, 'quote' => 'Best junk car service in Vegas. Fast, honest, and no hidden fees.', 'customer_name' => 'Ryan P.', 'customer_location' => 'Las Vegas, NV', 'date' => '6 days ago' ),
 		),
 	),
 
