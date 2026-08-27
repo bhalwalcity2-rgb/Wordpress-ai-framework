@@ -35,6 +35,12 @@
       "query": "old car flat tire curb",
       "orientation": "landscape",
       "resolution": "large"
+    },
+    {
+      "slug": "who-we-are-01",
+      "query": "tow truck driver cash handshake car owner",
+      "orientation": "portrait",
+      "resolution": "large"
     }
   ]
 }

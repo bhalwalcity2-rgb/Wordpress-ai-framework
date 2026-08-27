@@ -68,6 +68,8 @@ return array(
 	'homepage_intro' => array(
 		'eyebrow' => 'Who we are',
 		'heading' => 'Why Las Vegas Vehicle Owners Choose Us',
+		'image_slug' => 'who-we-are-01',
+		'image_alt'  => 'First Choice Junk Car team member handing cash to a vehicle owner in Las Vegas',
 		'paragraphs' => array(
 			"Getting rid of a junk car in the Las Vegas valley should not take weeks of phone calls, lowball offers, and surprise towing charges. That is exactly why First Choice Junk Car exists. We give vehicle owners across Las Vegas, Henderson, Summerlin, and North Las Vegas a fast, honest way to turn an unwanted vehicle into cash without lifting a finger.",
 			"We are a locally owned junk car buyer, not a national call center that routes your information to the highest bidder. When you call us, you are talking to someone who knows the valley, from the east side of Boulder Highway to the neighborhoods off Durango and Flamingo. Every offer we make is based on your vehicle's actual year, make, model, and condition, and the number we quote is the number you receive. No last-minute deductions. No bait-and-switch on pickup day.",
