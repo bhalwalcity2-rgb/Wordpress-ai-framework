@@ -121,17 +121,17 @@ return array(
 			array(
 				'icon'        => 'phone',
 				'heading'     => 'Call Us or Request a Quote Online',
-				'description' => "Tell us about your vehicle. The year, make, model, and its current condition. Does it run? Is the title clean? Is there body or mechanical damage? This quick conversation takes about two minutes and gives us everything we need to put together a real offer. You can also request a quote through our online form.",
+				'description' => "Tell us the year, make, model, and condition. Takes about two minutes, no obligation.",
 			),
 			array(
 				'icon'        => 'cash',
 				'heading'     => 'Accept a Firm Cash Offer',
-				'description' => "We do not play lowball games. The price we quote over the phone or online is the price we pay when our truck arrives. There are no inspection-day surprises, no last-minute deductions. If the offer works for you, we lock in a pickup time, often the same day.",
+				'description' => "The price we quote is the price we pay. No inspection-day surprises, no last-minute deductions.",
 			),
 			array(
 				'icon'        => 'truck',
 				'heading'     => 'We Pick It Up and Pay You on the Spot',
-				'description' => "Our tow truck arrives at your location. Your home, your apartment complex, your workplace, wherever the vehicle is sitting. The driver handles a quick walk-around, completes the required paperwork, and hands you cash or a check before the truck leaves. Free towing on every single pickup.",
+				'description' => "Our tow truck comes to you. The driver completes the paperwork and hands you cash before the truck leaves. Towing is always free.",
 			),
 		),
 	),

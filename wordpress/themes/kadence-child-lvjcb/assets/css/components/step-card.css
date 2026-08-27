@@ -80,7 +80,7 @@
 @media (min-width: 769px) {
 	.lvjcb-step-card {
 		flex-direction: column;
-		text-align: center;
-		align-items: center;
+		text-align: left;
+		align-items: flex-start;
 	}
 }
