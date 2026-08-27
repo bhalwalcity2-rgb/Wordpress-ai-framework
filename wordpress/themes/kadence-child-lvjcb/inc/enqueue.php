@@ -55,6 +55,7 @@ if ( ! defined( 'LVJCB_SECTION_ASSETS' ) ) {
 	define(
 		'LVJCB_SECTION_ASSETS',
 		array(
+			'intro-content'                => array( 'css' => true, 'js' => false ),
 			'what-we-buy'                  => array( 'css' => false, 'js' => false ),
 			'why-choose-us'                => array( 'css' => false, 'js' => false ),
 			'how-it-works'                 => array( 'css' => true, 'js' => false ),

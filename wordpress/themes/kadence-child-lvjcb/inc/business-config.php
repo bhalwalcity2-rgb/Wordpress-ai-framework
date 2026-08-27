@@ -35,9 +35,6 @@ return array(
 		'intro'   => 'Enter your vehicle details and get an instant, no-obligation offer — no phone call needed.',
 	),
 
-	// Five raw brand colors — every other color token is derived
-	// automatically from these by inc/colors.php. Pick any hex values
-	// here; accessibility-safe shades are computed, not hand-picked.
 	'colors' => array(
 		'primary'   => '#FFB800',
 		'accent'    => '#FFB800',
@@ -63,44 +60,51 @@ return array(
 
 	'hero' => array(
 		'heading'     => "We Buy Junk Cars \u{2014}in Las Vegas, Get Cash Today",
-		'description' => "Running or not, damaged or complete — free towing, an offer in minutes, and cash in hand the same day. No fees, no hassle.",
+		'description' => "Running or not, damaged or complete — get a firm cash offer in minutes, free towing to your door, and payment in hand the same day. No fees, no middlemen, no games.",
 		'eyebrow'     => 'Serving Las Vegas & Clark County',
-		// Resolved to an attachment ID at render time via
-		// lvjcb_get_attachment_id_by_slug() — import the matching file
-		// with scripts/import-images.sh, no numeric ID needed here.
 		'image_slug'  => 'hero-homepage-01',
+	),
+
+	'homepage_intro' => array(
+		'eyebrow' => 'Who we are',
+		'heading' => 'Why Las Vegas Vehicle Owners Choose Us',
+		'paragraphs' => array(
+			"Getting rid of a junk car in the Las Vegas valley should not take weeks of phone calls, lowball offers, and surprise towing charges. That is exactly why First Choice Junk Car exists — to give vehicle owners across Las Vegas, Henderson, Summerlin, and North Las Vegas a fast, honest way to turn an unwanted vehicle into cash without lifting a finger.",
+			"We are a locally owned junk car buyer, not a national call center that routes your information to the highest bidder. When you call us, you are talking to someone who knows the valley — from the east side of Boulder Highway to the neighborhoods off Durango and Flamingo. Every offer we make is based on your vehicle's actual year, make, model, and condition, and the number we quote is the number you receive. No last-minute deductions. No bait-and-switch on pickup day.",
+			"Whether your vehicle is sitting on blocks in the driveway, collecting dust in the garage, or parked curbside with a flat tire, we will buy it. Running, not running, wrecked, flood-damaged, or mechanically totaled — every vehicle has value, and we are here to pay you for it.",
+		),
 	),
 
 	'services' => array(
 		'eyebrow' => 'What we buy',
-		'heading' => 'Any vehicle, any condition',
-		'intro'   => "If it's sitting in your driveway costing you space, we're interested — running or not.",
+		'heading' => "Any Vehicle, Any Condition \u{2014} We Buy It All",
+		'intro'   => 'We purchase cars, trucks, SUVs, vans, and commercial vehicles across every condition level. If it has a VIN, we want to see it. Here is what we pick up on a regular basis across Clark County:',
 		'cards'   => array(
 			array(
 				'icon'        => 'car-sedan',
 				'heading'     => 'Sedans & Coupes',
-				'description' => "Old, worn, or no longer running — we'll still make an offer.",
+				'description' => "Honda Accords, Toyota Camrys, Nissan Altimas, Chevy Malibus — sedans are the most common junk car we buy in the Las Vegas area. Whether the engine has given out, the transmission slips, or the body damage makes it impossible to drive, we will make you a fair cash offer and tow it for free.",
 				'slug'        => 'sedans',
 				'intro'       => "Selling a sedan or coupe that's past its prime? We buy sedans and coupes of any age, mileage, or condition across the Las Vegas valley — faded paint, worn interior, and high mileage never disqualify a vehicle from an offer.",
 			),
 			array(
 				'icon'        => 'car-suv',
 				'heading'     => 'Trucks & SUVs',
-				'description' => "Full-size, mid-size, damaged or complete — condition doesn't disqualify you.",
+				'description' => "Full-size pickups, mid-size SUVs, and heavy-duty work trucks all hold salvage and parts value. We buy Ford F-150s, Chevy Silverados, Dodge Rams, Toyota 4Runners, and everything in between. Condition does not disqualify you — high mileage, rusted frames, blown motors, and missing catalytic converters are all fine.",
 				'slug'        => 'trucks-suvs',
 				'intro'       => "Trucks and SUVs are some of the most common vehicles we buy — full-size or mid-size, two-wheel or four-wheel drive, running or not. A larger vehicle usually means a larger offer, even in rough condition.",
 			),
 			array(
 				'icon'        => 'damage',
 				'heading'     => 'Accident & Storm-Damaged',
-				'description' => "Collision, hail, or flood damage — we'll still take a look.",
+				'description' => "Las Vegas sees its share of rear-end collisions on the I-15, T-bone crashes at intersections along Charleston and Sahara, and monsoon-season flash flood damage. If your insurance totaled it out or you do not have coverage, we will still make an offer and handle the removal.",
 				'slug'        => 'damaged',
 				'intro'       => "A collision, hailstorm, or flood doesn't mean your vehicle is worthless. We regularly buy accident and storm-damaged vehicles across the valley — no repair required before we make an offer.",
 			),
 			array(
 				'icon'        => 'wrench',
 				'heading'     => 'Non-Running & Mechanical Failure',
-				'description' => "Won't start, blown engine, transmission gone — no problem at all.",
+				'description' => "Dead battery, seized engine, bad transmission, overheating problems — whatever the reason your car will not start, we still want it. We pick up non-running vehicles every day across the valley, and we never charge for towing. Period.",
 				'slug'        => 'non-running',
 				'intro'       => "A vehicle that won't start is exactly the kind of car we specialize in. Blown engines, failed transmissions, electrical issues — none of it needs to be diagnosed or fixed before you call us.",
 			),
@@ -109,43 +113,55 @@ return array(
 
 	'how_it_works' => array(
 		'eyebrow' => 'How it works',
-		'heading' => 'Three steps, one call away',
-		'intro'   => 'Most vehicles are picked up and paid for the same day you call.',
+		'heading' => "How Selling Your Junk Car Works \u{2014} Three Steps, One Call",
+		'intro'   => 'Most vehicles we buy are picked up and paid for the same day the owner calls. The process takes less time than most people expect.',
 		'steps'   => array(
-			array( 'icon' => 'phone', 'heading' => 'Call or request a quote', 'description' => 'Tell us about the vehicle — year, make, model, and condition. Takes about two minutes.' ),
-			array( 'icon' => 'cash', 'heading' => 'Get a firm cash offer', 'description' => 'No lowball games. The number we give you is the number you get.' ),
-			array( 'icon' => 'truck', 'heading' => 'We tow it, you get paid', 'description' => 'Free pickup at a time that works for you, cash in hand before the truck leaves.' ),
+			array(
+				'icon'        => 'phone',
+				'heading'     => 'Call Us or Request a Quote Online',
+				'description' => "Tell us about your vehicle — the year, make, model, and its current condition. Does it run? Is the title clean? Is there body or mechanical damage? This quick conversation takes about two minutes and gives us everything we need to put together a real offer. You can also request a quote through our online form.",
+			),
+			array(
+				'icon'        => 'cash',
+				'heading'     => 'Accept a Firm Cash Offer',
+				'description' => "We do not play lowball games. The price we quote over the phone or online is the price we pay when our truck arrives. There are no inspection-day surprises, no last-minute deductions. If the offer works for you, we lock in a pickup time — often the same day.",
+			),
+			array(
+				'icon'        => 'truck',
+				'heading'     => 'We Pick It Up and Pay You on the Spot',
+				'description' => "Our tow truck arrives at your location — your home, your apartment complex, your workplace, wherever the vehicle is sitting. The driver handles a quick walk-around, completes the required paperwork, and hands you cash or a check before the truck leaves. Free towing on every single pickup.",
+			),
 		),
 	),
 
 	'why_choose_us' => array(
 		'eyebrow' => 'Why choose us',
-		'heading' => 'A local company, not a call center',
-		'intro'   => 'We buy directly — no brokers, no middlemen, no surprise deductions on pickup day.',
+		'heading' => 'A Local Junk Car Buyer, Not a Call Center',
+		'intro'   => "Las Vegas has no shortage of \"we buy junk cars\" ads, but most of them route to national lead generators that sell your information to the highest bidder. First Choice Junk Car is different. We buy directly. No brokers, no middlemen, no surprise deductions.",
 		'cards'   => array(
-			array( 'icon' => 'handshake', 'heading' => 'We pay top dollar', 'description' => 'Direct buyer means no middleman markup eating into your offer.' ),
-			array( 'icon' => 'bolt', 'heading' => 'Fast, same-day service', 'description' => 'Most calls turn into a completed pickup within hours, not days.' ),
-			array( 'icon' => 'no-fee', 'heading' => 'No fees, ever', 'description' => 'Towing, paperwork, and pickup are always included — free.' ),
-			array( 'icon' => 'map-pin', 'heading' => 'Locally owned in Las Vegas', 'description' => 'Real people who know the valley — not a national lead-gen line.' ),
+			array( 'icon' => 'handshake', 'heading' => 'We Pay Top Dollar', 'description' => "Because we are a direct buyer — not a lead aggregator — there is no middleman markup eating into your offer. The cash we quote goes straight to you, and we base every offer on current local salvage values and market demand for parts." ),
+			array( 'icon' => 'bolt', 'heading' => 'Fast, Same-Day Service', 'description' => "Speed matters. Most calls we receive turn into a completed pickup within hours, not days. Our tow trucks operate across Las Vegas, Henderson, North Las Vegas, Summerlin, Spring Valley, Paradise, Enterprise, and Boulder City — so there is almost always a driver nearby." ),
+			array( 'icon' => 'no-fee', 'heading' => 'No Fees, Ever', 'description' => "Towing, paperwork assistance, and pickup are always free. We do not tack on a processing fee or deduct towing costs from your cash offer. The price you accept is the price you receive — in full, on the spot." ),
+			array( 'icon' => 'document', 'heading' => 'No Title? We Can Still Help', 'description' => "Lost your vehicle title? In Nevada, you may be able to sell a junk car without the original title under certain conditions — especially if the vehicle was last titled in Nevada, is model year 2010 or older, and carries no liens. We walk you through the options and help with the paperwork." ),
 		),
 	),
 
 	'vehicles' => array(
 		'eyebrow' => 'Recently purchased',
-		'heading' => "Vehicles we've bought this month",
-		'intro'   => 'A real sample of what we pick up — running, wrecked, and everything between.',
+		'heading' => 'Recent Pickups Across the Valley',
+		'intro'   => 'Real pickups from across the Las Vegas valley — running, wrecked, and everything in between.',
 		'items'   => array(
-			array( 'image_slug' => 'vehicle-sedan-01', 'image_alt' => '2011 Honda Accord, faded paint, parked in a driveway', 'vehicle' => '2011 Honda Accord', 'condition' => 'Purchased in Henderson, NV' ),
-			array( 'image_slug' => 'vehicle-accident-car-01', 'image_alt' => '2015 Ford F-150 with front-end collision damage', 'vehicle' => '2015 Ford F-150', 'condition' => 'Purchased in Las Vegas, NV' ),
-			array( 'image_slug' => 'vehicle-non-running-01', 'image_alt' => '2007 Toyota Camry, non-running, resting on blocks', 'vehicle' => '2007 Toyota Camry', 'condition' => 'Purchased in Spring Valley, NV' ),
-			array( 'image_slug' => 'vehicle-rust-damage-01', 'image_alt' => '2003 Chevrolet Tahoe with heavy rust on the wheel wells', 'vehicle' => '2003 Chevrolet Tahoe', 'condition' => 'Purchased in North Las Vegas, NV' ),
-			array( 'image_slug' => 'vehicle-flat-tires-01', 'image_alt' => '2009 Nissan Altima, flat tire, curbside', 'vehicle' => '2009 Nissan Altima', 'condition' => 'Purchased in Summerlin, NV' ),
+			array( 'image_slug' => 'vehicle-sedan-01', 'image_alt' => '2011 Honda Accord with faded paint parked in a Henderson driveway', 'vehicle' => '2011 Honda Accord', 'condition' => 'Purchased in Henderson, NV' ),
+			array( 'image_slug' => 'vehicle-accident-car-01', 'image_alt' => '2015 Ford F-150 with front-end collision damage in Las Vegas', 'vehicle' => '2015 Ford F-150', 'condition' => 'Purchased in Las Vegas, NV' ),
+			array( 'image_slug' => 'vehicle-non-running-01', 'image_alt' => '2007 Toyota Camry non-running sitting on blocks in Spring Valley', 'vehicle' => '2007 Toyota Camry', 'condition' => 'Purchased in Spring Valley, NV' ),
+			array( 'image_slug' => 'vehicle-rust-damage-01', 'image_alt' => '2003 Chevrolet Tahoe with heavy rust and mechanical issues in North Las Vegas', 'vehicle' => '2003 Chevrolet Tahoe', 'condition' => 'Purchased in North Las Vegas, NV' ),
+			array( 'image_slug' => 'vehicle-flat-tires-01', 'image_alt' => '2009 Nissan Altima with flat tires curbside pickup in Summerlin', 'vehicle' => '2009 Nissan Altima', 'condition' => 'Purchased in Summerlin, NV' ),
 		),
 	),
 
 	'testimonials' => array(
 		'eyebrow' => 'Reviews',
-		'heading' => 'What our customers say',
+		'heading' => 'What Our Customers Say',
 		'aggregate_rating' => 4.9,
 		'review_count'     => 127,
 		'items'   => array(
@@ -162,43 +178,81 @@ return array(
 
 	'service_areas' => array(
 		'eyebrow' => 'Service areas',
-		'heading' => 'Serving the entire Las Vegas valley',
+		'heading' => 'Serving the Entire Las Vegas Valley and Clark County',
+		'intro'   => 'First Choice Junk Car provides free towing and same-day junk car removal across the greater Las Vegas metro area. Whether you are in a residential neighborhood off Eastern Avenue, a gated community in Summerlin, or an apartment complex in North Las Vegas, our trucks reach you.',
 		'items'   => array(
-			array( 'city' => 'Henderson', 'state' => 'NV', 'slug' => 'henderson', 'intro' => "Henderson homeowners call us for the same reason people across the valley do: a fair offer and free pickup, without the runaround." ),
-			array( 'city' => 'North Las Vegas', 'state' => 'NV', 'slug' => 'north-las-vegas', 'intro' => 'We buy junk cars throughout North Las Vegas, from vehicles that just need to go to ones that have been sitting for years.' ),
-			array( 'city' => 'Summerlin', 'state' => 'NV', 'slug' => 'summerlin', 'intro' => "Whether it's tucked in a garage or sitting on the street, we'll come to your Summerlin address and make an offer on the spot." ),
-			array( 'city' => 'Spring Valley', 'state' => 'NV', 'slug' => 'spring-valley', 'intro' => 'Spring Valley pickups are usually completed the same day — call in the morning, have cash by the afternoon.' ),
-			array( 'city' => 'Paradise', 'state' => 'NV', 'slug' => 'paradise', 'intro' => 'Serving the Paradise area with free towing and same-day offers on junk and non-running vehicles.' ),
-			array( 'city' => 'Enterprise', 'state' => 'NV', 'slug' => 'enterprise', 'intro' => 'We regularly buy vehicles throughout Enterprise — running or not, any make or model.' ),
-			array( 'city' => 'Boulder City', 'state' => 'NV', 'slug' => 'boulder-city', 'intro' => 'Boulder City is a bit further out, but we still offer free towing and the same fast, fair process.' ),
+			array( 'city' => 'Las Vegas', 'state' => 'NV', 'slug' => 'las-vegas', 'intro' => "All zip codes, east side to west side — the Strip corridor neighborhoods to the older residential pockets near Downtown and Fremont. We buy junk cars across every part of Las Vegas with free towing and same-day cash offers." ),
+			array( 'city' => 'Henderson', 'state' => 'NV', 'slug' => 'henderson', 'intro' => "Green Valley, Anthem, Lake Las Vegas, Inspirada, and the industrial corridor along Gibson Road. Henderson residents get the same free towing and same-day pickup as anywhere in the valley." ),
+			array( 'city' => 'North Las Vegas', 'state' => 'NV', 'slug' => 'north-las-vegas', 'intro' => "Aliante, Eldorado, Sunrise Manor, and the neighborhoods off Craig Road and Las Vegas Boulevard North. We pick up junk and non-running vehicles throughout North Las Vegas every day." ),
+			array( 'city' => 'Summerlin', 'state' => 'NV', 'slug' => 'summerlin', 'intro' => "Summerlin South, The Trails, Red Rock Country Club area, and surrounding master-planned communities. Whether it is tucked in a garage or sitting on the street, we will come to your Summerlin address and make an offer." ),
+			array( 'city' => 'Spring Valley', 'state' => 'NV', 'slug' => 'spring-valley', 'intro' => "The neighborhoods between Flamingo, Tropicana, Durango, and Rainbow — one of the most common areas we pick up from. Spring Valley pickups are usually completed the same day." ),
+			array( 'city' => 'Paradise', 'state' => 'NV', 'slug' => 'paradise', 'intro' => "Including the areas around UNLV, the Convention Center corridor, and the neighborhoods east of the Strip. We serve Paradise with free towing and same-day offers on junk and non-running vehicles." ),
+			array( 'city' => 'Enterprise', 'state' => 'NV', 'slug' => 'enterprise', 'intro' => "South of the Strip toward the M Resort, Southern Highlands, and Mountain's Edge. We regularly buy vehicles throughout Enterprise — running or not, any make or model." ),
+			array( 'city' => 'Boulder City', 'state' => 'NV', 'slug' => 'boulder-city', 'intro' => "Including homes near Lake Mead and the historic downtown area. Boulder City is a bit further out, but we still offer free towing and the same fast, fair process." ),
 		),
 	),
 
 	'faq' => array(
 		'eyebrow' => 'FAQ',
-		'heading' => 'Questions people ask before calling',
+		'heading' => 'Questions People Ask Before Selling a Junk Car in Las Vegas',
 		'items'   => array(
-			array( 'id' => 'title', 'question' => 'Do I need a title to sell my car?', 'answer' => "In most cases, no — we can often still buy your vehicle without a title. Let us know your situation on the phone and we'll walk you through it." ),
-			array( 'id' => 'speed', 'question' => 'How fast can you actually pick it up?', 'answer' => 'Most pickups happen the same day you call, sometimes within a couple of hours depending on your location in the valley.' ),
-			array( 'id' => 'towing', 'question' => 'Is the towing really free?', 'answer' => "Yes, always. Towing is included in every offer — it's never deducted from your payment." ),
-			array( 'id' => 'non-running', 'question' => "What if my car doesn't run at all?", 'answer' => "That's most of what we buy. Non-running vehicles, blown engines, and total mechanical failures are all fine." ),
+			array(
+				'id'       => 'title',
+				'question' => 'Do I need a title to sell my junk car in Las Vegas?',
+				'answer'   => "Not always. Nevada allows junk car sales without the original title in some situations — particularly when the vehicle was last titled in Nevada, is model year 2010 or older, and has no outstanding liens. You may also qualify using a registration, bill of sale, or by applying for a duplicate title through the Nevada DMV (Form VP-012, \$20 fee). We handle cars with and without titles every week — call us and we will walk you through your specific situation.",
+			),
+			array(
+				'id'       => 'speed',
+				'question' => 'How fast can you actually pick up my car?',
+				'answer'   => "In most cases, same day. If you call during business hours and your vehicle is located within the Las Vegas valley, we can usually have a tow truck at your location within a few hours. Weekend and Sunday pickups are available too — we operate seven days a week.",
+			),
+			array(
+				'id'       => 'towing',
+				'question' => 'Is the towing really free?',
+				'answer'   => "Yes. We never charge for towing, and we never deduct towing costs from your cash offer. Free pickup is included on every vehicle we buy, regardless of whether it runs or not and regardless of where it is located in our service area.",
+			),
+			array(
+				'id'       => 'vehicle-types',
+				'question' => 'What types of vehicles do you buy?',
+				'answer'   => "Cars, trucks, SUVs, vans, minivans, and commercial vehicles. Running, non-running, wrecked, flood-damaged, fire-damaged, salvage title, high mileage, missing parts — we buy all of it. If you are unsure whether your vehicle qualifies, the fastest way to find out is to call (866) 748-3697 and describe what you have.",
+			),
+			array(
+				'id'       => 'value',
+				'question' => 'How much will I get for my junk car?',
+				'answer'   => "It depends on the year, make, model, condition, and the current market value for salvageable parts and scrap metal. Vehicles with working engines, intact transmissions, and in-demand parts bring higher offers. We quote a firm price based on what you describe — no guesswork, no lowballing.",
+			),
+			array(
+				'id'       => 'non-running',
+				'question' => 'What if my car does not run at all?',
+				'answer'   => "No problem. We buy non-running vehicles every day. Our flatbed tow trucks are equipped to load vehicles that cannot move under their own power — including cars on blocks, cars with flat tires, and cars with seized engines. You do not need to do anything to prepare the vehicle other than make sure we can access it.",
+			),
+			array(
+				'id'       => 'salvage-title',
+				'question' => 'Do you buy cars with salvage or rebuilt titles?',
+				'answer'   => "Yes. We purchase vehicles with salvage titles, rebuilt titles, flood titles, and junk titles. Title status does not disqualify a vehicle from receiving a cash offer.",
+			),
+			array(
+				'id'       => 'payment',
+				'question' => 'How do I get paid?',
+				'answer'   => "Cash or check, handed to you by our driver at the time of pickup. Payment happens before the tow truck leaves your location — not days later, not through the mail. You get paid on the spot.",
+			),
 		),
 	),
 
 	'cta_banner' => array(
 		'mid_page'  => array(
-			'heading' => 'Ready to turn that car into cash?',
-			'intro'   => 'Call now for a same-day quote — no obligation, no pressure.',
+			'heading' => 'Ready to Turn That Car Into Cash?',
+			'intro'   => 'Call now for a same-day quote — no obligation, no pressure. We answer the phone seven days a week.',
 		),
 		'late_page' => array(
-			'heading' => 'Still have questions? Just call.',
-			'intro'   => 'A real person answers — no call center, no scripts.',
+			'heading' => 'Still Have Questions? Call a Real Person.',
+			'intro'   => 'No automated phone tree. No chatbot. A real team member answers every call and can give you a quote in under two minutes.',
 		),
 	),
 
 	'contact' => array(
 		'eyebrow' => 'Contact',
-		'heading' => 'Reach us directly',
+		'heading' => 'Get in Touch',
 	),
 
 	'about' => array(

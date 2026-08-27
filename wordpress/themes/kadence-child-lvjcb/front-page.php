@@ -13,8 +13,9 @@
 
 get_header();
 
-$hero          = lvjcb_get_config( 'hero' );
-$services      = lvjcb_get_config( 'services' );
+$hero           = lvjcb_get_config( 'hero' );
+$homepage_intro = lvjcb_get_config( 'homepage_intro' );
+$services       = lvjcb_get_config( 'services' );
 $how_it_works   = lvjcb_get_config( 'how_it_works' );
 $why_choose_us  = lvjcb_get_config( 'why_choose_us' );
 $vehicles       = lvjcb_get_config( 'vehicles' );
@@ -32,6 +33,12 @@ $faq            = lvjcb_get_config( 'faq' );
 	) ); ?>
 
 	<?php get_template_part( 'template-parts/components/trust-strip' ); ?>
+
+	<?php get_template_part( 'template-parts/sections/intro-content', null, array(
+		'eyebrow'    => $homepage_intro['eyebrow'],
+		'heading'    => $homepage_intro['heading'],
+		'paragraphs' => $homepage_intro['paragraphs'],
+	) ); ?>
 
 	<?php get_template_part( 'template-parts/sections/what-we-buy', null, array(
 		'eyebrow' => $services['eyebrow'],
@@ -98,6 +105,7 @@ $faq            = lvjcb_get_config( 'faq' );
 	<?php get_template_part( 'template-parts/sections/service-areas', null, array(
 		'eyebrow'   => $service_areas['eyebrow'],
 		'heading'   => $service_areas['heading'],
+		'intro'     => $service_areas['intro'] ?? '',
 		'locations' => array_map(
 			function ( $location ) {
 				return array(

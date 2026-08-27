@@ -1,0 +1,22 @@
+.lvjcb-intro-content__body {
+	max-width: 780px;
+}
+
+.lvjcb-intro-content__body p {
+	margin: 0 0 var(--lvjcb-space-md) 0;
+	font-family: var(--lvjcb-font-body);
+	font-size: 16px;
+	line-height: 1.75;
+	color: var(--lvjcb-color-text-muted);
+}
+
+.lvjcb-intro-content__body p:last-child {
+	margin-bottom: 0;
+}
+
+@media (max-width: 480px) {
+	.lvjcb-intro-content__body p {
+		font-size: 15px;
+		line-height: 1.7;
+	}
+}
