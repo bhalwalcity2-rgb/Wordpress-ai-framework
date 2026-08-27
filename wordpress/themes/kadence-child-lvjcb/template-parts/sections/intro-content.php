@@ -42,8 +42,19 @@ $has_image = (bool) $image_id;
 			</h2>
 
 			<div class="lvjcb-intro-content__body">
-				<?php foreach ( $paragraphs as $paragraph ) : ?>
-					<p><?php echo esc_html( $paragraph ); ?></p>
+				<?php
+				/*
+				 * Escape first, then linkify — so the only markup that can
+				 * reach the page is the anchors the helpers added, and
+				 * $linked is shared so each city links once per section
+				 * rather than once per paragraph.
+				 */
+				$linked = array();
+				foreach ( $paragraphs as $paragraph ) :
+					$body = lvjcb_autolink_locations( esc_html( $paragraph ), $linked );
+					$body = lvjcb_linkify_phone( $body );
+					?>
+					<p><?php echo wp_kses( $body, lvjcb_allowed_inline_html() ); ?></p>
 				<?php endforeach; ?>
 			</div>
 		</div>

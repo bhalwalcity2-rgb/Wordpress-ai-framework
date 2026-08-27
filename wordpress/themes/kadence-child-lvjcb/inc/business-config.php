@@ -24,6 +24,58 @@ return array(
 	'hours'         => 'Mon–Sat: 7:00 AM – 7:00 PM · Sun: 9:00 AM – 4:00 PM',
 	'map_embed'     => '',
 
+	/*
+	 * The same address broken into its parts, for schema.org PostalAddress.
+	 * 'address' above stays the human-readable one-liner used on-page.
+	 */
+	'address_parts' => array(
+		'street'   => '4820 W Sahara Ave',
+		'locality' => 'Las Vegas',
+		'region'   => 'NV',
+		'postal'   => '89102',
+		'country'  => 'US',
+	),
+
+	/*
+	 * Machine-readable opening hours for schema.org
+	 * openingHoursSpecification. Keep in sync with 'hours' above.
+	 */
+	'hours_spec' => array(
+		array(
+			'days'   => array( 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday' ),
+			'opens'  => '07:00',
+			'closes' => '19:00',
+		),
+		array(
+			'days'   => array( 'Sunday' ),
+			'opens'  => '09:00',
+			'closes' => '16:00',
+		),
+	),
+
+	'price_range' => '$$',
+
+	/*
+	 * schema.org type for this business. AutomotiveBusiness is a
+	 * LocalBusiness subtype, so it inherits everything LocalBusiness
+	 * supports while telling search engines specifically what kind of
+	 * business this is. Not AutoDealer — that type describes selling
+	 * vehicles, and this business buys them. Set to 'LocalBusiness'
+	 * for a business with no better-fitting subtype.
+	 */
+	'schema_type' => 'AutomotiveBusiness',
+
+	/*
+	 * Homepage search-result copy. Kept separate from the hero heading
+	 * because the hero heading carries a structural split marker and is
+	 * written for the page, not for a 60-character SERP listing.
+	 */
+	'seo' => array(
+		'home_title'       => 'Cash for Junk Cars Las Vegas | Free Towing & Same-Day Pickup',
+		'home_description' => 'First Choice Junk Car buys junk, damaged, and non-running cars in Las Vegas. Free towing, same-day pickup, and cash on the spot. Call for an offer today.',
+		'og_image_slug'    => 'hero-homepage-01',
+	),
+
 	'phone_e164'    => '+18667483697',
 	'phone_display' => '(866) 748-3697',
 	'instant_quote_url' => 'https://sell.peddle.com/instant-offer?pub_id=5173180',
@@ -72,7 +124,7 @@ return array(
 		'image_alt'  => 'First Choice Junk Car team member handing cash to a vehicle owner in Las Vegas',
 		'paragraphs' => array(
 			"Getting rid of a junk car in the Las Vegas valley should not take weeks of phone calls, lowball offers, and surprise towing charges. That is exactly why First Choice Junk Car exists. We give vehicle owners across Las Vegas, Henderson, Summerlin, and North Las Vegas a fast, honest way to turn an unwanted vehicle into cash without lifting a finger.",
-			"We are a locally owned junk car buyer, not a national call center that routes your information to the highest bidder. When you call us, you are talking to someone who knows the valley, from the east side of Boulder Highway to the neighborhoods off Durango and Flamingo. Every offer we make is based on your vehicle's actual year, make, model, and condition, and the number we quote is the number you receive. No last-minute deductions. No bait-and-switch on pickup day.",
+			"When you call, you are talking to someone who knows the valley, from the east side of Boulder Highway to the neighborhoods off Durango and Flamingo. That local knowledge matters more than most people expect, because what your vehicle is worth here depends on what Las Vegas dismantlers and scrap yards are paying for its parts and metal that week. We price every offer against your vehicle's actual year, make, model, and condition, then quote you a firm number.",
 			"Whether your vehicle is sitting on blocks in the driveway, collecting dust in the garage, or parked curbside with a flat tire, we will buy it. Running, not running, wrecked, flood-damaged, or mechanically totaled. Every vehicle has value, and we are here to pay you for it.",
 		),
 	),
@@ -150,7 +202,7 @@ return array(
 
 	'vehicles' => array(
 		'eyebrow' => 'Recently purchased',
-		'heading' => 'Recent Pickups Across the Valley',
+		'heading' => 'Junk Cars We Bought This Month in Las Vegas',
 		'intro'   => 'Real pickups from across the Las Vegas valley. Running, wrecked, and everything in between.',
 		'items'   => array(
 			array( 'image_slug' => 'vehicle-sedan-01', 'image_alt' => '2011 Honda Accord with faded paint parked in a Henderson driveway', 'vehicle' => '2011 Honda Accord', 'condition' => 'Purchased in Henderson, NV' ),

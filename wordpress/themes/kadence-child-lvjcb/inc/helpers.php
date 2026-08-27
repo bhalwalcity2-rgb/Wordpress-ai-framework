@@ -187,3 +187,129 @@ function lvjcb_get_cta_banner_args( $id, $variant = 'mid_page' ) {
 		'cta_url'  => 'tel:' . lvjcb_get_phone_number( 'e164' ),
 	);
 }
+
+/**
+ * Turn city names appearing in body copy into links to their location
+ * pages.
+ *
+ * This is what keeps internal linking out of business-config.php: the
+ * config stays plain prose with no URLs in it, and the cities that
+ * actually have a page are the ones in service_areas — so the link
+ * targets can never drift out of sync with the pages that exist.
+ *
+ * Only the first mention of each city is linked, so a paragraph that
+ * says "Las Vegas" four times still reads like prose. Pass the same
+ * $linked array across successive calls to extend that rule across a
+ * whole section rather than resetting per paragraph.
+ *
+ * @since 0.4.0
+ *
+ * @param string $html   Text that has already been escaped for output.
+ * @param array  $linked Cities already linked, carried between calls.
+ * @return string
+ */
+function lvjcb_autolink_locations( $html, &$linked = array() ) {
+
+	$items = lvjcb_get_config( 'service_areas' )['items'] ?? array();
+
+	if ( ! $items ) {
+		return $html;
+	}
+
+	$targets = array();
+
+	foreach ( $items as $item ) {
+		if ( empty( $item['city'] ) || empty( $item['slug'] ) ) {
+			continue;
+		}
+		$targets[ $item['city'] ] = home_url( '/service-areas/' . $item['slug'] . '/' );
+	}
+
+	/*
+	 * Longest city first, so "North Las Vegas" is matched as a whole
+	 * rather than being consumed as a bare "Las Vegas" with a stray
+	 * "North" left in front of the link.
+	 */
+	$cities = array_keys( $targets );
+	usort(
+		$cities,
+		function ( $a, $b ) {
+			return strlen( $b ) - strlen( $a );
+		}
+	);
+
+	$pattern = '/\b(' . implode( '|', array_map( function ( $city ) {
+		return preg_quote( $city, '/' );
+	}, $cities ) ) . ')\b/';
+
+	$current = is_page() ? user_trailingslashit( get_permalink() ) : '';
+
+	return preg_replace_callback(
+		$pattern,
+		function ( $matches ) use ( $targets, &$linked, $current ) {
+
+			$city = $matches[1];
+			$url  = $targets[ $city ];
+
+			// Already linked once, or this is the page we're already on.
+			if ( isset( $linked[ $city ] ) || $url === $current ) {
+				return $city;
+			}
+
+			$linked[ $city ] = true;
+
+			return '<a href="' . esc_url( $url ) . '">' . $city . '</a>';
+		},
+		$html
+	);
+}
+
+/**
+ * Turn the business phone number into a tel: link wherever it appears
+ * in body copy.
+ *
+ * Same reasoning as lvjcb_autolink_locations(): the config keeps the
+ * number as plain readable text in one place, and any copy that quotes
+ * it becomes tappable without that copy needing to know the e164 form.
+ *
+ * @since 0.4.0
+ *
+ * @param string $html Text that has already been escaped for output.
+ * @return string
+ */
+function lvjcb_linkify_phone( $html ) {
+
+	$display = lvjcb_get_phone_number( 'display' );
+	$e164    = lvjcb_get_phone_number( 'e164' );
+
+	if ( ! $display || ! $e164 || false === strpos( $html, $display ) ) {
+		return $html;
+	}
+
+	return str_replace(
+		$display,
+		'<a href="tel:' . esc_attr( $e164 ) . '">' . $display . '</a>',
+		$html
+	);
+}
+
+/**
+ * The tags body copy is allowed to contain after the linkifying helpers
+ * above have run.
+ *
+ * @since 0.4.0
+ *
+ * @return array
+ */
+function lvjcb_allowed_inline_html() {
+
+	return array(
+		'a'      => array(
+			'href'  => array(),
+			'title' => array(),
+			'rel'   => array(),
+		),
+		'strong' => array(),
+		'em'     => array(),
+	);
+}

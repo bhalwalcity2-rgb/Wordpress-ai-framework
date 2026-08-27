@@ -41,7 +41,7 @@ $panel_id  = 'lvjcb-faq-panel-' . $id;
 		hidden
 	>
 		<div class="lvjcb-faq-item__panel-inner">
-			<p><?php echo esc_html( $answer ); ?></p>
+			<p><?php echo wp_kses( lvjcb_linkify_phone( esc_html( $answer ) ), lvjcb_allowed_inline_html() ); ?></p>
 		</div>
 	</div>
 
