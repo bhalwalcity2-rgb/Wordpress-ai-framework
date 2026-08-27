@@ -6,7 +6,7 @@
 
 .lvjcb-intro-content--has-image .lvjcb-intro-content__layout {
 	flex-direction: row;
-	align-items: flex-start;
+	align-items: stretch;
 }
 
 .lvjcb-intro-content__text {
@@ -35,10 +35,9 @@
 }
 
 .lvjcb-intro-content__media {
-	flex: 0 0 460px;
+	flex: 0 0 440px;
 	border-radius: var(--lvjcb-radius);
 	overflow: hidden;
-	aspect-ratio: 4 / 3;
 }
 
 .lvjcb-intro-content__image {
@@ -58,6 +57,7 @@
 		flex: none;
 		width: 100%;
 		max-width: 500px;
+		aspect-ratio: 4 / 3;
 	}
 }
 
