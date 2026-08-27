@@ -35,15 +35,16 @@
 }
 
 .lvjcb-intro-content__media {
-	flex: 0 0 420px;
+	flex: 0 0 460px;
 	border-radius: var(--lvjcb-radius);
 	overflow: hidden;
+	aspect-ratio: 4 / 3;
 }
 
 .lvjcb-intro-content__image {
 	display: block;
 	width: 100%;
-	height: auto;
+	height: 100%;
 	border-radius: var(--lvjcb-radius);
 	object-fit: cover;
 }
