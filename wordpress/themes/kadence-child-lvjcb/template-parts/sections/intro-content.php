@@ -62,16 +62,22 @@ $has_image = (bool) $image_id;
 		<?php if ( $has_image ) : ?>
 			<div class="lvjcb-intro-content__media">
 				<?php
-				echo wp_get_attachment_image(
-					$image_id,
-					'large',
-					false,
-					array(
-						'class'    => 'lvjcb-intro-content__image',
-						'loading'  => 'lazy',
-						'decoding' => 'async',
-					)
+				$image_attr = array(
+					'class'    => 'lvjcb-intro-content__image',
+					'loading'  => 'lazy',
+					'decoding' => 'async',
 				);
+
+				/*
+				 * Only set alt when the caller supplied one — passing an
+				 * empty string would override the alt text stored on the
+				 * attachment itself and leave the image unlabelled.
+				 */
+				if ( ! empty( $args['image_alt'] ) ) {
+					$image_attr['alt'] = $args['image_alt'];
+				}
+
+				echo wp_get_attachment_image( $image_id, 'large', false, $image_attr );
 				?>
 			</div>
 		<?php endif; ?>

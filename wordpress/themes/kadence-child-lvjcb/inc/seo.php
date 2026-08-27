@@ -425,6 +425,72 @@ if ( lvjcb_seo_plugin_active() ) {
 		return $image ? $image : $value;
 	}
 
+	add_action( 'rank_math/opengraph/facebook', 'lvjcb_render_rank_math_og_image', 50 );
+	add_action( 'rank_math/opengraph/twitter', 'lvjcb_render_rank_math_og_image', 50 );
+
+	/**
+	 * Print og:image inside Rank Math's own Open Graph block.
+	 *
+	 * Rank Math only derives an image from the page's featured image or
+	 * from a default set in its options. A page built from templates
+	 * has neither, which is why the homepage was shipping with no
+	 * og:image at all and links to it previewed as a bare URL.
+	 *
+	 * The image filters above are the tidier route, but the property
+	 * segment of those filter names has moved between Rank Math
+	 * versions, so this action is the reliable backstop. It runs inside
+	 * the block Rank Math is already rendering, and is skipped whenever
+	 * Rank Math has an image of its own to print.
+	 *
+	 * @since 0.4.0
+	 *
+	 * @return void
+	 */
+	function lvjcb_render_rank_math_og_image() {
+
+		static $done = false;
+
+		if ( $done || lvjcb_rank_math_has_own_image() ) {
+			return;
+		}
+
+		$image = lvjcb_get_social_image_url();
+
+		if ( ! $image ) {
+			return;
+		}
+
+		$done = true;
+
+		printf( '<meta property="og:image" content="%s">' . "\n", esc_url( $image ) );
+		printf( '<meta name="twitter:image" content="%s">' . "\n", esc_url( $image ) );
+	}
+
+	/**
+	 * Whether Rank Math already has an Open Graph image for this page,
+	 * in which case this theme must not print a competing one.
+	 *
+	 * @since 0.4.0
+	 *
+	 * @return bool
+	 */
+	function lvjcb_rank_math_has_own_image() {
+
+		if ( is_singular() && has_post_thumbnail() ) {
+			return true;
+		}
+
+		if ( lvjcb_has_hand_set_seo( 'rank_math_facebook_image' ) ) {
+			return true;
+		}
+
+		if ( class_exists( 'RankMath\Helper' ) && method_exists( 'RankMath\Helper', 'get_settings' ) ) {
+			return (bool) RankMath\Helper::get_settings( 'titles.open_graph_image' );
+		}
+
+		return false;
+	}
+
 	add_filter( 'rank_math/json_ld', 'lvjcb_merge_schema_into_rank_math', 99, 2 );
 
 	/**

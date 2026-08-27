@@ -39,6 +39,7 @@ $faq            = lvjcb_get_config( 'faq' );
 		'heading'    => $homepage_intro['heading'],
 		'paragraphs' => $homepage_intro['paragraphs'],
 		'image_id'   => lvjcb_get_attachment_id_by_slug( $homepage_intro['image_slug'] ?? '' ),
+		'image_alt'  => $homepage_intro['image_alt'] ?? '',
 	) ); ?>
 
 	<?php get_template_part( 'template-parts/sections/what-we-buy', null, array(
