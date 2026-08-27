@@ -141,10 +141,10 @@ return array(
 		'heading' => 'A Local Junk Car Buyer, Not a Call Center',
 		'intro'   => "Las Vegas has no shortage of \"we buy junk cars\" ads, but most of them route to national lead generators that sell your information to the highest bidder. First Choice Junk Car is different. We buy directly. No brokers, no middlemen, no surprise deductions.",
 		'cards'   => array(
-			array( 'icon' => 'handshake', 'heading' => 'We Pay Top Dollar', 'description' => "Because we are a direct buyer, not a lead aggregator, there is no middleman markup eating into your offer. The cash we quote goes straight to you, and we base every offer on current local salvage values and market demand for parts." ),
-			array( 'icon' => 'bolt', 'heading' => 'Fast, Same-Day Service', 'description' => "Speed matters. Most calls we receive turn into a completed pickup within hours, not days. Our tow trucks operate across Las Vegas, Henderson, North Las Vegas, Summerlin, Spring Valley, Paradise, Enterprise, and Boulder City, so there is almost always a driver nearby." ),
-			array( 'icon' => 'no-fee', 'heading' => 'No Fees, Ever', 'description' => "Towing, paperwork assistance, and pickup are always free. We do not tack on a processing fee or deduct towing costs from your cash offer. The price you accept is the price you receive, in full, on the spot." ),
-			array( 'icon' => 'document', 'heading' => 'No Title? We Can Still Help', 'description' => "Lost your vehicle title? In Nevada, you may be able to sell a junk car without the original title under certain conditions, especially if the vehicle was last titled in Nevada, is model year 2010 or older, and carries no liens. We walk you through the options and help with the paperwork." ),
+			array( 'icon' => 'handshake', 'heading' => 'We Pay Top Dollar', 'description' => "No middleman markup eating into your offer. We are the buyer, so the cash we quote goes straight to you." ),
+			array( 'icon' => 'bolt', 'heading' => 'Fast, Same-Day Service', 'description' => "Most calls turn into a completed pickup within hours, not days. There is almost always a driver nearby." ),
+			array( 'icon' => 'no-fee', 'heading' => 'No Fees, Ever', 'description' => "Towing, paperwork, and pickup are always free. The price you accept is the price you receive, in full, on the spot." ),
+			array( 'icon' => 'document', 'heading' => 'No Title? We Can Still Help', 'description' => "Lost your title? In many cases we can still buy your vehicle. Call us and we will walk you through your options." ),
 		),
 	),
 
