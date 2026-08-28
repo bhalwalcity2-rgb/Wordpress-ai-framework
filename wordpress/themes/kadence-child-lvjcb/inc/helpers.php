@@ -213,6 +213,47 @@ function lvjcb_get_location_url( $location ) {
 }
 
 /**
+ * Build the location cards for the Service Areas section.
+ *
+ * The primary city is left out on purpose: the homepage is that city's
+ * page, so a card for it is a link back to the page the visitor is
+ * already reading on the homepage, and elsewhere it duplicates the site
+ * logo's link. It stays in the config regardless, because schema's
+ * areaServed and the body-copy autolinker both still need to know the
+ * business covers it.
+ *
+ * @since 0.4.0
+ *
+ * @param string $exclude_slug Optional slug to omit, so a location page
+ *                             does not list itself among "other areas".
+ * @return array[] Cards ready for template-parts/sections/service-areas.php.
+ */
+function lvjcb_get_service_area_cards( $exclude_slug = '' ) {
+
+	$items = lvjcb_get_config( 'service_areas' )['items'] ?? array();
+	$cards = array();
+
+	foreach ( $items as $item ) {
+
+		if ( ! empty( $item['is_primary'] ) ) {
+			continue;
+		}
+
+		if ( '' !== $exclude_slug && ( $item['slug'] ?? '' ) === $exclude_slug ) {
+			continue;
+		}
+
+		$cards[] = array(
+			'city'  => $item['city'],
+			'state' => $item['state'],
+			'url'   => lvjcb_get_location_url( $item ),
+		);
+	}
+
+	return $cards;
+}
+
+/**
  * Turn city names appearing in body copy into links to their location
  * pages.
  *

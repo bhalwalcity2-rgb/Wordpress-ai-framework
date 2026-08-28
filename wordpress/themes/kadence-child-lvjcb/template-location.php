@@ -111,24 +111,10 @@ $hero = lvjcb_get_config( 'hero' );
 		'testimonials'     => $testimonials['items'],
 	) ); ?>
 
-	<?php
-	$other_areas = array_filter( $service_areas['items'], function ( $area ) use ( $page_slug ) {
-		return $area['slug'] !== $page_slug;
-	} );
-	?>
 	<?php get_template_part( 'template-parts/sections/service-areas', null, array(
 		'eyebrow'   => $service_areas['eyebrow'],
 		'heading'   => 'We also serve these areas',
-		'locations' => array_map(
-			function ( $area ) {
-				return array(
-					'city'  => $area['city'],
-					'state' => $area['state'],
-					'url'   => lvjcb_get_location_url( $area ),
-				);
-			},
-			array_values( $other_areas )
-		),
+		'locations' => lvjcb_get_service_area_cards( $page_slug ),
 	) ); ?>
 
 	<?php get_template_part( 'template-parts/sections/faq', null, array(

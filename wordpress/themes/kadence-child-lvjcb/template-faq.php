@@ -83,16 +83,7 @@ $hero          = lvjcb_get_config( 'hero' );
 	<?php get_template_part( 'template-parts/sections/service-areas', null, array(
 		'eyebrow'   => $service_areas['eyebrow'],
 		'heading'   => $service_areas['heading'],
-		'locations' => array_map(
-			function ( $location ) {
-				return array(
-					'city'  => $location['city'],
-					'state' => $location['state'],
-					'url'   => lvjcb_get_location_url( $location ),
-				);
-			},
-			$service_areas['items']
-		),
+		'locations' => lvjcb_get_service_area_cards(),
 	) ); ?>
 
 	<?php get_template_part( 'template-parts/sections/cta-banner', null, lvjcb_get_cta_banner_args( 'faq-late', 'late_page' ) ); ?>

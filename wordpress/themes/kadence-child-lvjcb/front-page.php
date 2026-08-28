@@ -108,16 +108,7 @@ $faq            = lvjcb_get_config( 'faq' );
 		'eyebrow'   => $service_areas['eyebrow'],
 		'heading'   => $service_areas['heading'],
 		'intro'     => $service_areas['intro'] ?? '',
-		'locations' => array_map(
-			function ( $location ) {
-				return array(
-					'city'  => $location['city'],
-					'state' => $location['state'],
-					'url'   => lvjcb_get_location_url( $location ),
-				);
-			},
-			$service_areas['items']
-		),
+		'locations' => lvjcb_get_service_area_cards(),
 	) ); ?>
 
 	<?php get_template_part( 'template-parts/sections/faq', null, array(
