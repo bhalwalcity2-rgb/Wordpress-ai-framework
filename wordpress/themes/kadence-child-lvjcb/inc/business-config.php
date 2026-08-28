@@ -111,7 +111,7 @@ return array(
 	),
 
 	'hero' => array(
-		'heading'     => "We Buy Junk Cars \u{2014}in Las Vegas, Get Cash Today",
+		'heading'     => "We Buy Junk Cars in Las Vegas \u{2014} Get Cash Today",
 		'description' => "Running or not, damaged or complete. Get a firm cash offer in minutes, free towing to your door, and payment in hand the same day. No fees, no middlemen, no games.",
 		'eyebrow'     => 'Serving Las Vegas & Clark County',
 		'image_slug'  => 'hero-homepage-01',
