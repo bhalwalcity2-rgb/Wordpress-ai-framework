@@ -37,12 +37,34 @@ $state = $location['state'];
 $intro = $location['intro'];
 
 $hero = lvjcb_get_config( 'hero' );
+
+/*
+ * A page with a content file in content/locations/ is written for that
+ * city rather than assembled from the homepage sections with the name
+ * swapped, so it takes an entirely different branch below. Cities with
+ * no file yet keep rendering the generic layout, which is what lets
+ * bespoke pages be added one at a time.
+ */
+$content  = lvjcb_get_location_content( $page_slug );
+$sections = ( $content && ! empty( $content['sections'] ) ) ? $content['sections'] : array();
+
+if ( $sections ) {
+	get_template_part( 'template-parts/location-written', null, array(
+		'content'   => $content,
+		'page_slug' => $page_slug,
+		'city'      => $city,
+		'hero'      => $hero,
+	) );
+	get_template_part( 'template-parts/sections/footer' );
+	get_footer();
+	return;
+}
 ?>
 
 <main id="lvjcb-main">
 
 	<?php get_template_part( 'template-parts/components/hero', null, array(
-		'heading'     => "We Buy Junk Cars \u{2014}in {$city}, Get Cash Today",
+		'heading'     => "We Buy Junk Cars in {$city} \u{2014} Get Cash Today",
 		'description' => $intro,
 		'image_id'    => lvjcb_get_attachment_id_by_slug( $hero['image_slug'] ?? '' ),
 	) ); ?>

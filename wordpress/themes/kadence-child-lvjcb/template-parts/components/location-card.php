@@ -29,8 +29,17 @@ $label_text = trim( $city . ( $state ? ', ' . $state : '' ) );
 			<?php endif; ?>
 		</h3>
 
-		<?php if ( $state ) : ?>
-			<p class="lvjcb-location-card__description"><?php echo esc_html( $state ); ?></p>
+		<?php
+		/*
+		 * A written page can say something specific about why it links a
+		 * neighbouring city ("15 minutes from Henderson"), which is worth
+		 * far more than repeating the state on every card. The state is
+		 * the fallback for the generated grids that pass no description.
+		 */
+		$sub = $description ? $description : $state;
+		?>
+		<?php if ( $sub ) : ?>
+			<p class="lvjcb-location-card__description"><?php echo esc_html( $sub ); ?></p>
 		<?php endif; ?>
 	</div>
 

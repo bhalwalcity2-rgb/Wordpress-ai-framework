@@ -1,0 +1,146 @@
+/**
+ * Rich Content section.
+ *
+ * Long-form prose, H3 sub-blocks, and reference tables for location and
+ * service pages. Text is capped at a readable measure; tables are free to
+ * use the full container width and scroll inside their own wrapper.
+ */
+
+.lvjcb-rich-content__body,
+.lvjcb-rich-content__blocks {
+	max-width: var(--lvjcb-measure);
+}
+
+.lvjcb-rich-content__body p,
+.lvjcb-rich-content__block p {
+	margin: 0 0 var(--lvjcb-space-md) 0;
+	font-family: var(--lvjcb-font-body);
+	font-size: 16px;
+	line-height: 1.75;
+	color: var(--lvjcb-color-text-muted);
+}
+
+.lvjcb-rich-content__body p:last-child,
+.lvjcb-rich-content__block p:last-child {
+	margin-bottom: 0;
+}
+
+.lvjcb-rich-content__blocks {
+	display: flex;
+	flex-direction: column;
+	gap: var(--lvjcb-space-lg);
+	margin-top: var(--lvjcb-space-lg);
+}
+
+.lvjcb-rich-content__block-heading {
+	margin: 0 0 var(--lvjcb-space-xs) 0;
+	font-family: var(--lvjcb-font-heading);
+	font-size: var(--lvjcb-text-h4);
+	font-weight: var(--lvjcb-font-weight-bold);
+	line-height: 1.3;
+	color: var(--lvjcb-color-text);
+	text-wrap: balance;
+}
+
+/* Table ------------------------------------------------------------- */
+
+.lvjcb-rich-content__table-wrap {
+	margin-top: var(--lvjcb-space-lg);
+	overflow-x: auto;
+	border: 1px solid var(--lvjcb-color-border);
+	border-radius: var(--lvjcb-radius);
+	background: var(--lvjcb-color-surface);
+	-webkit-overflow-scrolling: touch;
+}
+
+.lvjcb-rich-content__table-wrap:focus-visible {
+	outline: 2px solid var(--lvjcb-color-focus);
+	outline-offset: 2px;
+}
+
+.lvjcb-rich-content__table {
+	width: 100%;
+	min-width: 640px;
+	border-collapse: collapse;
+	font-family: var(--lvjcb-font-body);
+	font-size: var(--lvjcb-text-small);
+	line-height: 1.6;
+	text-align: left;
+}
+
+.lvjcb-rich-content__table-caption {
+	padding: var(--lvjcb-space-sm) var(--lvjcb-space-md);
+	font-size: var(--lvjcb-text-small);
+	color: var(--lvjcb-color-text-muted);
+	text-align: left;
+	caption-side: top;
+}
+
+.lvjcb-rich-content__table thead th {
+	padding: var(--lvjcb-space-sm) var(--lvjcb-space-md);
+	background: var(--lvjcb-color-surface-alt);
+	border-bottom: 1px solid var(--lvjcb-color-border);
+	font-family: var(--lvjcb-font-heading);
+	font-size: var(--lvjcb-text-small);
+	font-weight: var(--lvjcb-font-weight-bold);
+	letter-spacing: var(--lvjcb-letter-spacing-wide);
+	text-transform: uppercase;
+	color: var(--lvjcb-color-text);
+	white-space: nowrap;
+}
+
+.lvjcb-rich-content__table tbody th,
+.lvjcb-rich-content__table tbody td {
+	padding: var(--lvjcb-space-sm) var(--lvjcb-space-md);
+	border-bottom: 1px solid var(--lvjcb-color-border);
+	vertical-align: top;
+	color: var(--lvjcb-color-text-muted);
+	font-weight: 400;
+}
+
+.lvjcb-rich-content__table tbody th {
+	font-weight: var(--lvjcb-font-weight-medium);
+	color: var(--lvjcb-color-text);
+}
+
+/* Zip codes and other figures line up column-wise. */
+.lvjcb-rich-content__table tbody td:nth-child(2) {
+	font-variant-numeric: tabular-nums;
+	white-space: nowrap;
+}
+
+.lvjcb-rich-content__table tbody tr:last-child th,
+.lvjcb-rich-content__table tbody tr:last-child td {
+	border-bottom: 0;
+}
+
+.lvjcb-rich-content__table tbody tr:hover th,
+.lvjcb-rich-content__table tbody tr:hover td {
+	background: var(--lvjcb-color-surface-alt);
+}
+
+.lvjcb-rich-content__footnote {
+	margin: var(--lvjcb-space-md) 0 0 0;
+	max-width: var(--lvjcb-measure);
+	font-family: var(--lvjcb-font-body);
+	font-size: 16px;
+	line-height: 1.75;
+	color: var(--lvjcb-color-text-muted);
+}
+
+@media (max-width: 600px) {
+
+	/*
+	 * The examples column is the one that can afford to wrap hard on a
+	 * phone, so the table stays readable instead of forcing a long scroll.
+	 */
+	.lvjcb-rich-content__table {
+		min-width: 520px;
+	}
+
+	.lvjcb-rich-content__table thead th,
+	.lvjcb-rich-content__table tbody th,
+	.lvjcb-rich-content__table tbody td {
+		padding: var(--lvjcb-space-xs) var(--lvjcb-space-sm);
+	}
+}

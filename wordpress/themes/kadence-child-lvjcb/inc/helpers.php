@@ -213,6 +213,34 @@ function lvjcb_get_location_url( $location ) {
 }
 
 /**
+ * Look up one service_areas config item by its slug.
+ *
+ * Written content files name nearby cities by slug alone, so the city,
+ * state, and URL behind that slug all resolve from the config at render
+ * time. A slug that has been retired from the config simply returns
+ * null and the caller drops it, rather than rendering a dead link.
+ *
+ * @since 0.4.0
+ *
+ * @param string $slug Location slug.
+ * @return array|null The config item, or null when no area matches.
+ */
+function lvjcb_get_location_by_slug( $slug ) {
+
+	if ( '' === $slug ) {
+		return null;
+	}
+
+	foreach ( lvjcb_get_config( 'service_areas' )['items'] ?? array() as $item ) {
+		if ( ( $item['slug'] ?? '' ) === $slug ) {
+			return $item;
+		}
+	}
+
+	return null;
+}
+
+/**
  * Build the location cards for the Service Areas section.
  *
  * The primary city is left out on purpose: the homepage is that city's
@@ -339,6 +367,48 @@ function lvjcb_autolink_locations( $html, &$linked = array() ) {
 		},
 		$html
 	);
+}
+
+/**
+ * Get the URL for a service page.
+ *
+ * Mirrors lvjcb_get_location_url() so content files can reference a
+ * service by its slug and never carry a URL of their own.
+ *
+ * @since 0.4.0
+ *
+ * @param string $slug Service slug from the services config.
+ * @return string
+ */
+function lvjcb_get_service_url( $slug ) {
+
+	return home_url( '/cash-for-junk-cars/' . $slug . '/' );
+}
+
+/**
+ * Prepare a string of body copy for output.
+ *
+ * Runs the full pipeline in the one order that is safe: escape first,
+ * then add the links, then allow only those tags back through. The
+ * "already linked" list is shared across every call on the page, so a
+ * city mentioned in three different sections is still linked once.
+ *
+ * @since 0.4.0
+ *
+ * @param string $text Raw copy from a config or content file. A {phone}
+ *                     placeholder is replaced with the business number.
+ * @return string Safe HTML.
+ */
+function lvjcb_prose( $text ) {
+
+	static $linked = array();
+
+	$text = str_replace( '{phone}', lvjcb_get_phone_number( 'display' ), (string) $text );
+
+	$html = lvjcb_autolink_locations( esc_html( $text ), $linked );
+	$html = lvjcb_linkify_phone( $html );
+
+	return wp_kses( $html, lvjcb_allowed_inline_html() );
 }
 
 /**

@@ -587,10 +587,44 @@ function lvjcb_get_schema_graph() {
 	}
 
 	if ( 'template-location.php' === $template ) {
-		$slug    = get_post_meta( get_the_ID(), 'lvjcb_location_slug', true );
-		$content = function_exists( 'lvjcb_get_location_content' ) ? lvjcb_get_location_content( $slug ) : null;
+
+		$slug     = get_post_meta( get_the_ID(), 'lvjcb_location_slug', true );
+		$content  = function_exists( 'lvjcb_get_location_content' ) ? lvjcb_get_location_content( $slug ) : null;
+		$location = lvjcb_find_by_slug( lvjcb_get_config( 'service_areas' )['items'], $slug );
+
 		if ( $content && ! empty( $content['faq'] ) ) {
 			$graph[] = lvjcb_get_faq_schema( $content['faq'] );
+		}
+
+		if ( $location ) {
+
+			/*
+			 * areaServed here is deliberately this one city rather than
+			 * the full service-area list used on the homepage and the
+			 * service pages: the point of a location page is to tell
+			 * search engines which city this particular page is about.
+			 */
+			$graph[] = array(
+				'@type'       => 'Service',
+				'serviceType' => 'Junk Car Removal',
+				'name'        => sprintf( 'Junk Car Removal in %s, %s', $location['city'], $location['state'] ),
+				'description' => $content['seo_description'] ?? $location['intro'],
+				'provider'    => array( '@id' => lvjcb_get_business_schema_id() ),
+				'areaServed'  => array(
+					'@type'          => 'City',
+					'name'           => $location['city'],
+					'containedInPlace' => array(
+						'@type' => 'State',
+						'name'  => $location['state'],
+					),
+				),
+			);
+
+			$graph[] = lvjcb_get_breadcrumb_schema( array(
+				array( 'name' => 'Home', 'url' => home_url( '/' ) ),
+				array( 'name' => 'Service Areas', 'url' => home_url( '/service-areas/' ) ),
+				array( 'name' => $location['city'], 'url' => lvjcb_get_location_url( $location ) ),
+			) );
 		}
 	}
 
@@ -820,6 +854,37 @@ function lvjcb_get_faq_schema( $items ) {
 			},
 			$items
 		),
+	);
+}
+
+/**
+ * Build BreadcrumbList schema from an ordered trail.
+ *
+ * The site has no visible breadcrumb trail; this exists so search
+ * results can show the page's place in the hierarchy
+ * (Home > Service Areas > Henderson) rather than a bare URL.
+ *
+ * @since 0.4.0
+ *
+ * @param array $trail Ordered list of ['name' => string, 'url' => string].
+ * @return array
+ */
+function lvjcb_get_breadcrumb_schema( $trail ) {
+
+	$items = array();
+
+	foreach ( $trail as $position => $crumb ) {
+		$items[] = array(
+			'@type'    => 'ListItem',
+			'position' => $position + 1,
+			'name'     => $crumb['name'],
+			'item'     => $crumb['url'],
+		);
+	}
+
+	return array(
+		'@type'           => 'BreadcrumbList',
+		'itemListElement' => $items,
 	);
 }
 
