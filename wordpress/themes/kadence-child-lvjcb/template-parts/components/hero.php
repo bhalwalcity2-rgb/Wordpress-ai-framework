@@ -19,9 +19,16 @@ $phone_display = lvjcb_get_phone_number( 'display' );
 $phone_href    = 'tel:' . lvjcb_get_phone_number( 'e164' );
 $trust_items   = lvjcb_get_trust_items();
 
+/*
+ * The em dash marks where the gold half begins, but it is also real
+ * punctuation: dropping it left the two halves running together as one
+ * sentence for anyone reading the text rather than seeing the colour —
+ * a screen reader, a search snippet, a page with CSS off. It stays,
+ * carried into the gold half where the break belongs.
+ */
 $heading_parts = explode( "\u{2014}", $heading, 2 );
 if ( count( $heading_parts ) === 2 ) {
-	$heading_html = esc_html( trim( $heading_parts[0] ) ) . ' <em>' . esc_html( trim( $heading_parts[1] ) ) . '</em>';
+	$heading_html = esc_html( trim( $heading_parts[0] ) ) . ' <em>' . esc_html( "\u{2014} " . trim( $heading_parts[1] ) ) . '</em>';
 } else {
 	$heading_html = esc_html( $heading );
 }

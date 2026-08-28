@@ -54,6 +54,32 @@ function lvjcb_find_by_slug( $items, $slug ) {
 }
 
 /**
+ * Get the config slug the current page stands for.
+ *
+ * inc/cli.php writes lvjcb_location_slug / lvjcb_service_slug when it
+ * provisions a page, but a page created by hand — or one provisioned
+ * before that meta existed — has neither, and every SEO lookup keyed on
+ * it then silently resolves to nothing. The page slug is the same value
+ * by construction, so it is the fallback.
+ *
+ * @since 0.4.0
+ *
+ * @param string $meta_key 'lvjcb_location_slug' or 'lvjcb_service_slug'.
+ * @return string
+ */
+function lvjcb_get_page_entity_slug( $meta_key ) {
+
+	$post_id = get_the_ID();
+	$slug    = (string) get_post_meta( $post_id, $meta_key, true );
+
+	if ( '' !== $slug ) {
+		return $slug;
+	}
+
+	return (string) get_post_field( 'post_name', $post_id );
+}
+
+/**
  * Truncate text to a maximum length at a word boundary, for meta
  * descriptions.
  *
@@ -124,7 +150,7 @@ function lvjcb_compute_seo() {
 		switch ( $template ) {
 
 			case 'template-service.php':
-				$slug    = get_post_meta( $post_id, 'lvjcb_service_slug', true );
+				$slug    = lvjcb_get_page_entity_slug( 'lvjcb_service_slug' );
 				$content = function_exists( 'lvjcb_get_service_content' ) ? lvjcb_get_service_content( $slug ) : null;
 				if ( $content ) {
 					$seo['title']       = $content['seo_title'];
@@ -139,7 +165,7 @@ function lvjcb_compute_seo() {
 				break;
 
 			case 'template-location.php':
-				$slug    = get_post_meta( $post_id, 'lvjcb_location_slug', true );
+				$slug    = lvjcb_get_page_entity_slug( 'lvjcb_location_slug' );
 				$content = function_exists( 'lvjcb_get_location_content' ) ? lvjcb_get_location_content( $slug ) : null;
 				if ( $content ) {
 					$seo['title']       = $content['seo_title'];
@@ -566,7 +592,7 @@ function lvjcb_get_schema_graph() {
 	}
 
 	if ( 'template-service.php' === $template ) {
-		$slug    = get_post_meta( get_the_ID(), 'lvjcb_service_slug', true );
+		$slug    = lvjcb_get_page_entity_slug( 'lvjcb_service_slug' );
 		$service = lvjcb_find_by_slug( lvjcb_get_config( 'services' )['cards'], $slug );
 		if ( $service ) {
 			$graph[] = array(
@@ -588,7 +614,7 @@ function lvjcb_get_schema_graph() {
 
 	if ( 'template-location.php' === $template ) {
 
-		$slug     = get_post_meta( get_the_ID(), 'lvjcb_location_slug', true );
+		$slug     = lvjcb_get_page_entity_slug( 'lvjcb_location_slug' );
 		$content  = function_exists( 'lvjcb_get_location_content' ) ? lvjcb_get_location_content( $slug ) : null;
 		$location = lvjcb_find_by_slug( lvjcb_get_config( 'service_areas' )['items'], $slug );
 
@@ -629,7 +655,7 @@ function lvjcb_get_schema_graph() {
 	}
 
 	if ( 'template-service.php' === $template ) {
-		$slug    = get_post_meta( get_the_ID(), 'lvjcb_service_slug', true );
+		$slug    = lvjcb_get_page_entity_slug( 'lvjcb_service_slug' );
 		$content = function_exists( 'lvjcb_get_service_content' ) ? lvjcb_get_service_content( $slug ) : null;
 		if ( $content && ! empty( $content['faq'] ) ) {
 			$graph[] = lvjcb_get_faq_schema( $content['faq'] );
