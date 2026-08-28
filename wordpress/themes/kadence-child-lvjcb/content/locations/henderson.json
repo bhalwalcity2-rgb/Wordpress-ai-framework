@@ -22,7 +22,7 @@
 			"image": {
 				"slug": "henderson-driveway-01",
 				"align": "right",
-				"alt": "An old sedan parked on the driveway of a single-family suburban home."
+				"alt": "A weathered orange pickup truck parked at the curb outside a suburban home."
 			}
 		},
 		{
@@ -59,7 +59,7 @@
 			"image": {
 				"slug": "henderson-neighborhood-01",
 				"align": "left",
-				"alt": "A quiet residential street of desert-landscaped homes in a master-planned community."
+				"alt": "Three stucco tract homes with desert landscaping in a master-planned community."
 			},
 			"table": {
 				"caption": "Henderson neighborhoods, zip codes, and pickup notes",
@@ -86,9 +86,9 @@
 			"heading": "Vehicles We Buy in Henderson — Any Make, Any Condition",
 			"intro": "We buy every type of passenger and commercial vehicle regardless of condition. Henderson pickups commonly include:",
 			"image": {
-				"slug": "henderson-vehicles-01",
+				"slug": "henderson-vehicles-02",
 				"align": "wide",
-				"alt": "A row of used cars, trucks, and SUVs parked side by side on a lot."
+				"alt": "Rows of wrecked and end-of-life cars lined up in a salvage yard."
 			},
 			"table": {
 				"caption": "Vehicle types we buy in Henderson and the conditions we accept",
@@ -157,7 +157,7 @@
 			"image": {
 				"slug": "henderson-situations-01",
 				"align": "right",
-				"alt": "A tow truck winching a non-running car onto its flatbed."
+				"alt": "A rusted non-running car strapped down on a flatbed tow trailer."
 			},
 			"blocks": [
 				{
