@@ -213,8 +213,23 @@ if ( is_dir( $pexels_dir ) ) {
 		) );
 
 		if ( ! empty( $existing ) ) {
-			echo '<p class="skip">⟳ Image: <strong>' . esc_html( $slug ) . '</strong> — already imported (ID ' . $existing[0]->ID . ')</p>';
-			continue;
+
+			/*
+			 * An already-imported slug is only left alone when the file
+			 * behind it still matches the one shipped with the theme.
+			 * Changing an image in scripts/image-manifest.json re-fetches
+			 * it under the same slug, so skipping purely on "the slug
+			 * exists" would leave the old picture on the site forever.
+			 */
+			$attached = get_attached_file( $existing[0]->ID );
+
+			if ( $attached && file_exists( $attached ) && md5_file( $attached ) === md5_file( $image_path ) ) {
+				echo '<p class="skip">⟳ Image: <strong>' . esc_html( $slug ) . '</strong> — already imported, unchanged (ID ' . $existing[0]->ID . ')</p>';
+				continue;
+			}
+
+			wp_delete_attachment( $existing[0]->ID, true );
+			echo '<p class="del">✗ Image: <strong>' . esc_html( $slug ) . '</strong> — replaced, theme ships a different file</p>';
 		}
 
 		$upload = wp_upload_bits( $slug . '.jpg', null, file_get_contents( $image_path ) );

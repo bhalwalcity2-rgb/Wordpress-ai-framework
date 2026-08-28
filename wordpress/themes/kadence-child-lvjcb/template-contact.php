@@ -68,7 +68,7 @@ $hero          = lvjcb_get_config( 'hero' );
 				return array(
 					'city'  => $location['city'],
 					'state' => $location['state'],
-					'url'   => home_url( '/service-areas/' . $location['slug'] . '/' ),
+					'url'   => lvjcb_get_location_url( $location ),
 				);
 			},
 			$service_areas['items']

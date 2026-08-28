@@ -235,7 +235,9 @@ return array(
 		'heading' => 'Serving the Entire Las Vegas Valley and Clark County',
 		'intro'   => 'First Choice Junk Car provides free towing and same-day junk car removal across the greater Las Vegas metro area. Whether you are in a residential neighborhood off Eastern Avenue, a gated community in Summerlin, or an apartment complex in North Las Vegas, our trucks reach you.',
 		'items'   => array(
-			array( 'city' => 'Las Vegas', 'state' => 'NV', 'slug' => 'las-vegas', 'intro' => "All zip codes, east side to west side, the Strip corridor neighborhoods to the older residential pockets near Downtown and Fremont. We buy junk cars across every part of Las Vegas with free towing and same-day cash offers." ),
+			// is_primary: the homepage targets this city, so it has no
+			// location page of its own and links resolve to '/'.
+			array( 'city' => 'Las Vegas', 'state' => 'NV', 'slug' => 'las-vegas', 'is_primary' => true, 'intro' => "All zip codes, east side to west side, the Strip corridor neighborhoods to the older residential pockets near Downtown and Fremont. We buy junk cars across every part of Las Vegas with free towing and same-day cash offers." ),
 			array( 'city' => 'Henderson', 'state' => 'NV', 'slug' => 'henderson', 'intro' => "Green Valley, Anthem, Lake Las Vegas, Inspirada, and the industrial corridor along Gibson Road. Henderson residents get the same free towing and same-day pickup as anywhere in the valley." ),
 			array( 'city' => 'North Las Vegas', 'state' => 'NV', 'slug' => 'north-las-vegas', 'intro' => "Aliante, Eldorado, Sunrise Manor, and the neighborhoods off Craig Road and Las Vegas Boulevard North. We pick up junk and non-running vehicles throughout North Las Vegas every day." ),
 			array( 'city' => 'Summerlin', 'state' => 'NV', 'slug' => 'summerlin', 'intro' => "Summerlin South, The Trails, Red Rock Country Club area, and surrounding master-planned communities. Whether it is tucked in a garage or sitting on the street, we will come to your Summerlin address and make an offer." ),

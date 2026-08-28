@@ -184,7 +184,7 @@ function lvjcb_build_location_links( $current_slug ) {
 		$label = trim( $loc['city'] . ( $loc['state'] ? ', ' . $loc['state'] : '' ) );
 		$locations[] = array(
 			'label' => $label,
-			'url'   => home_url( '/service-areas/' . $loc['slug'] . '/' ),
+			'url'   => lvjcb_get_location_url( $loc ),
 		);
 	}
 
@@ -220,7 +220,7 @@ function lvjcb_build_service_links( $current_slug ) {
 		$label = trim( $loc['city'] . ( $loc['state'] ? ', ' . $loc['state'] : '' ) );
 		$locations[] = array(
 			'label' => $label,
-			'url'   => home_url( '/service-areas/' . $loc['slug'] . '/' ),
+			'url'   => lvjcb_get_location_url( $loc ),
 		);
 	}
 

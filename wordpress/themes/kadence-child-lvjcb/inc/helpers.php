@@ -189,6 +189,30 @@ function lvjcb_get_cta_banner_args( $id, $variant = 'mid_page' ) {
 }
 
 /**
+ * Get the URL for a service area.
+ *
+ * The single owner of this URL shape. A city flagged 'is_primary' has
+ * no location page of its own because the homepage already targets it
+ * — provisioning deliberately deletes that page — so linking it to
+ * /service-areas/{slug}/ produces a 404. Everything that renders a
+ * location link must go through here rather than concatenating the
+ * path itself.
+ *
+ * @since 0.4.0
+ *
+ * @param array $location A service_areas item from the config.
+ * @return string
+ */
+function lvjcb_get_location_url( $location ) {
+
+	if ( ! empty( $location['is_primary'] ) ) {
+		return home_url( '/' );
+	}
+
+	return home_url( '/service-areas/' . $location['slug'] . '/' );
+}
+
+/**
  * Turn city names appearing in body copy into links to their location
  * pages.
  *
@@ -222,7 +246,7 @@ function lvjcb_autolink_locations( $html, &$linked = array() ) {
 		if ( empty( $item['city'] ) || empty( $item['slug'] ) ) {
 			continue;
 		}
-		$targets[ $item['city'] ] = home_url( '/service-areas/' . $item['slug'] . '/' );
+		$targets[ $item['city'] ] = lvjcb_get_location_url( $item );
 	}
 
 	/*

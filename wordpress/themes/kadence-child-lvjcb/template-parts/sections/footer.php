@@ -45,7 +45,7 @@ $service_areas = lvjcb_get_config( 'service_areas' );
 			<ul>
 				<?php if ( ! empty( $service_areas['items'] ) ) : ?>
 					<?php foreach ( $service_areas['items'] as $area ) : ?>
-						<li><a href="<?php echo esc_url( home_url( '/service-areas/' . $area['slug'] . '/' ) ); ?>"><?php echo esc_html( $area['city'] ); ?></a></li>
+						<li><a href="<?php echo esc_url( lvjcb_get_location_url( $area ) ); ?>"><?php echo esc_html( $area['city'] ); ?></a></li>
 					<?php endforeach; ?>
 				<?php endif; ?>
 			</ul>
