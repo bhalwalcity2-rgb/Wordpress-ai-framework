@@ -23,6 +23,13 @@ jobs:
         with:
           path: wordpress/themes/kadence-child-lvjcb/assets/images/pexels
           key: pexels-${{ hashFiles('scripts/image-manifest.json') }}
+          # Adding one image to the manifest changes the hash, and without
+          # a fallback that empties the cache and re-runs every query —
+          # handing back different photos for slugs that were already
+          # settled. Restoring the previous cache keeps those files, and
+          # the fetch script still downloads whatever is missing.
+          restore-keys: |
+            pexels-
 
       - name: Fetch Pexels images
         continue-on-error: true

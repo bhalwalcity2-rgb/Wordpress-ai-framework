@@ -18,7 +18,12 @@
 				"Henderson is Nevada's second-largest city — over 350,000 residents spread across more than 100 square miles of master-planned communities, established neighborhoods, and newer developments along the southeastern edge of the Las Vegas Valley. It is also one of the most HOA-governed cities in Clark County, which means a junk car sitting in your driveway is not just an eyesore — it can become an expensive compliance problem.",
 				"Many Henderson neighborhoods — especially gated and master-planned communities like Green Valley Ranch, Anthem, Seven Hills, MacDonald Ranch, and Inspirada — have strict CC&R rules about inoperable, unregistered, or visibly damaged vehicles parked on driveways and streets. Violations can trigger warning letters, daily fines, and in some cases, the HOA itself can coordinate towing at the homeowner's expense under Nevada Revised Statutes.",
 				"That pressure is exactly why Henderson is one of our busiest service areas. Homeowners call because they need a junk car gone — fast — without the hassle of listing it online, negotiating with strangers, or figuring out the title paperwork on their own. We handle the entire process: a firm cash offer over the phone, free towing to your address, and payment before we leave. Most Henderson pickups happen the same day the owner calls."
-			]
+			],
+			"image": {
+				"slug": "henderson-driveway-01",
+				"align": "right",
+				"alt": "An old sedan parked on the driveway of a single-family suburban home."
+			}
 		},
 		{
 			"type": "content",
@@ -51,6 +56,11 @@
 					]
 				}
 			],
+			"image": {
+				"slug": "henderson-neighborhood-01",
+				"align": "left",
+				"alt": "A quiet residential street of desert-landscaped homes in a master-planned community."
+			},
 			"table": {
 				"caption": "Henderson neighborhoods, zip codes, and pickup notes",
 				"columns": [ "Neighborhood / Community", "Zip Code", "Pickup Notes" ],
@@ -75,6 +85,11 @@
 			"eyebrow": "What we buy",
 			"heading": "Vehicles We Buy in Henderson — Any Make, Any Condition",
 			"intro": "We buy every type of passenger and commercial vehicle regardless of condition. Henderson pickups commonly include:",
+			"image": {
+				"slug": "henderson-vehicles-01",
+				"align": "wide",
+				"alt": "A row of used cars, trucks, and SUVs parked side by side on a lot."
+			},
 			"table": {
 				"caption": "Vehicle types we buy in Henderson and the conditions we accept",
 				"columns": [ "Vehicle Type", "Common Examples", "Condition We Accept" ],
@@ -139,6 +154,11 @@
 			"type": "content",
 			"eyebrow": "Common situations",
 			"heading": "Common Situations Henderson Residents Call Us About",
+			"image": {
+				"slug": "henderson-situations-01",
+				"align": "right",
+				"alt": "A tow truck winching a non-running car onto its flatbed."
+			},
 			"blocks": [
 				{
 					"heading": "HOA Violations for Inoperable Vehicles",

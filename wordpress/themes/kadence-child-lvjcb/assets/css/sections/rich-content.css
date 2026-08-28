@@ -6,9 +6,38 @@
  * use the full container width and scroll inside their own wrapper.
  */
 
+.lvjcb-rich-content__layout {
+	display: grid;
+	gap: var(--lvjcb-space-lg);
+	margin-top: var(--lvjcb-space-lg);
+}
+
 .lvjcb-rich-content__body,
-.lvjcb-rich-content__blocks {
+.lvjcb-rich-content__blocks,
+.lvjcb-rich-content__prose {
 	max-width: var(--lvjcb-measure);
+}
+
+@media (min-width: 900px) {
+
+	.lvjcb-rich-content__layout--split {
+		grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+		gap: var(--lvjcb-space-xl);
+		align-items: start;
+	}
+
+	/*
+	 * The prose column is already narrower than the measure at this
+	 * point, so capping it again would leave a gap between the text and
+	 * the image rather than filling the column.
+	 */
+	.lvjcb-rich-content__layout--split .lvjcb-rich-content__prose {
+		max-width: none;
+	}
+
+	.lvjcb-rich-content__layout--media-first .lvjcb-content-figure {
+		order: -1;
+	}
 }
 
 .lvjcb-rich-content__body p,
@@ -29,6 +58,10 @@
 	display: flex;
 	flex-direction: column;
 	gap: var(--lvjcb-space-lg);
+}
+
+/* Only when body copy runs above them; the layout owns the space otherwise. */
+.lvjcb-rich-content__body + .lvjcb-rich-content__blocks {
 	margin-top: var(--lvjcb-space-lg);
 }
 

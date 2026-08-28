@@ -119,6 +119,7 @@ if ( ! $hero_image_id ) {
 					'blocks'     => $section['blocks'] ?? array(),
 					'table'      => $section['table'] ?? array(),
 					'footnote'   => $section['footnote'] ?? '',
+					'image'      => $section['image'] ?? array(),
 					'variant'    => $section['variant'] ?? ( 0 === $index % 2 ? 'alt' : '' ),
 				) );
 		}

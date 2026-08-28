@@ -39,6 +39,7 @@ if ( ! defined( 'LVJCB_COMPONENT_ASSETS' ) ) {
 			'testimonial-card' => array( 'css' => true, 'js' => false ),
 			'why-choose-card'  => array( 'css' => true, 'js' => false ),
 			'step-card'        => array( 'css' => true, 'js' => false ),
+			'content-figure'   => array( 'css' => true, 'js' => false ),
 			'faq-item'         => array( 'css' => true, 'js' => true ),
 			'quote-form'       => array( 'css' => true, 'js' => true ),
 			'slider'           => array( 'css' => true, 'js' => true ),

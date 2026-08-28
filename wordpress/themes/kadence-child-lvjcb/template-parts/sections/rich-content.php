@@ -22,6 +22,9 @@
  *     @type array  $blocks     Optional list of ['heading', 'paragraphs'].
  *     @type array  $table      Optional ['caption', 'columns', 'rows'].
  *     @type string $footnote   Optional closing paragraph.
+ *     @type array  $image      Optional ['slug', 'alt', 'caption', 'align'].
+ *                              align is 'left' or 'right' to sit beside the
+ *                              prose, or 'wide' to run the container width.
  *     @type string $variant    Optional section background modifier, e.g. 'alt'.
  * }
  */
@@ -32,9 +35,30 @@ $paragraphs = $args['paragraphs'] ?? array();
 $blocks     = $args['blocks'] ?? array();
 $table      = $args['table'] ?? array();
 $footnote   = $args['footnote'] ?? '';
+$image      = $args['image'] ?? array();
 
 if ( '' === $heading && ! $paragraphs && ! $blocks && ! $table ) {
 	return;
+}
+
+$image_id = ! empty( $image['slug'] ) ? lvjcb_get_attachment_id_by_slug( $image['slug'] ) : 0;
+$align    = $image['align'] ?? 'right';
+
+/*
+ * An image only sits beside the prose when there is prose to sit beside;
+ * a section that is a heading and a table gets the full-width treatment
+ * instead, so the image never ends up in a narrow column next to nothing
+ * while the table it belongs to runs underneath it.
+ */
+$side_image = $image_id && 'wide' !== $align && ( $paragraphs || $blocks );
+$wide_image = $image_id && ! $side_image;
+
+$layout_classes = 'lvjcb-rich-content__layout';
+if ( $side_image ) {
+	$layout_classes .= ' lvjcb-rich-content__layout--split';
+	if ( 'left' === $align ) {
+		$layout_classes .= ' lvjcb-rich-content__layout--media-first';
+	}
 }
 
 $section_id = sanitize_title( $args['id'] ?? '' );
@@ -69,26 +93,53 @@ $rows    = $table['rows'] ?? array();
 			<p class="lvjcb-section__intro"><?php echo lvjcb_prose( $intro ); ?></p>
 		<?php endif; ?>
 
-		<?php if ( $paragraphs ) : ?>
-			<div class="lvjcb-rich-content__body">
-				<?php foreach ( $paragraphs as $paragraph ) : ?>
-					<p><?php echo lvjcb_prose( $paragraph ); ?></p>
-				<?php endforeach; ?>
-			</div>
+		<?php if ( $wide_image ) : ?>
+			<?php get_template_part( 'template-parts/components/content-figure', null, array(
+				'image_id' => $image_id,
+				'alt'      => $image['alt'] ?? '',
+				'caption'  => $image['caption'] ?? '',
+				'modifier' => 'wide',
+			) ); ?>
 		<?php endif; ?>
 
-		<?php if ( $blocks ) : ?>
-			<div class="lvjcb-rich-content__blocks">
-				<?php foreach ( $blocks as $block ) : ?>
-					<div class="lvjcb-rich-content__block">
-						<?php if ( ! empty( $block['heading'] ) ) : ?>
-							<h3 class="lvjcb-rich-content__block-heading"><?php echo esc_html( $block['heading'] ); ?></h3>
-						<?php endif; ?>
-						<?php foreach ( $block['paragraphs'] ?? array() as $paragraph ) : ?>
-							<p><?php echo lvjcb_prose( $paragraph ); ?></p>
-						<?php endforeach; ?>
-					</div>
-				<?php endforeach; ?>
+		<?php if ( $paragraphs || $blocks ) : ?>
+			<div class="<?php echo esc_attr( $layout_classes ); ?>">
+
+				<div class="lvjcb-rich-content__prose">
+
+					<?php if ( $paragraphs ) : ?>
+						<div class="lvjcb-rich-content__body">
+							<?php foreach ( $paragraphs as $paragraph ) : ?>
+								<p><?php echo lvjcb_prose( $paragraph ); ?></p>
+							<?php endforeach; ?>
+						</div>
+					<?php endif; ?>
+
+					<?php if ( $blocks ) : ?>
+						<div class="lvjcb-rich-content__blocks">
+							<?php foreach ( $blocks as $block ) : ?>
+								<div class="lvjcb-rich-content__block">
+									<?php if ( ! empty( $block['heading'] ) ) : ?>
+										<h3 class="lvjcb-rich-content__block-heading"><?php echo esc_html( $block['heading'] ); ?></h3>
+									<?php endif; ?>
+									<?php foreach ( $block['paragraphs'] ?? array() as $paragraph ) : ?>
+										<p><?php echo lvjcb_prose( $paragraph ); ?></p>
+									<?php endforeach; ?>
+								</div>
+							<?php endforeach; ?>
+						</div>
+					<?php endif; ?>
+
+				</div>
+
+				<?php if ( $side_image ) : ?>
+					<?php get_template_part( 'template-parts/components/content-figure', null, array(
+						'image_id' => $image_id,
+						'alt'      => $image['alt'] ?? '',
+						'caption'  => $image['caption'] ?? '',
+					) ); ?>
+				<?php endif; ?>
+
 			</div>
 		<?php endif; ?>
 

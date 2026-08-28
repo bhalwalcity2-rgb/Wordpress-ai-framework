@@ -1,0 +1,48 @@
+/**
+ * Content Figure component.
+ *
+ * Photos inside a written page's prose. Every image is cropped to a
+ * fixed ratio so a column of them keeps one rhythm regardless of what
+ * shape the source files happen to be.
+ */
+
+.lvjcb-content-figure {
+	margin: 0;
+}
+
+.lvjcb-content-figure__image {
+	display: block;
+	width: 100%;
+	height: auto;
+	aspect-ratio: 4 / 3;
+	object-fit: cover;
+	border-radius: var(--lvjcb-radius-lg);
+	background: var(--lvjcb-color-surface-alt);
+}
+
+/*
+ * The wide variant runs the full container above a table, where a 4:3
+ * frame would push the data it introduces off the first screen.
+ */
+.lvjcb-content-figure--wide .lvjcb-content-figure__image {
+	aspect-ratio: 21 / 8;
+}
+
+.lvjcb-content-figure__caption {
+	margin-top: var(--lvjcb-space-2xs);
+	font-family: var(--lvjcb-font-body);
+	font-size: var(--lvjcb-text-small);
+	line-height: 1.5;
+	color: var(--lvjcb-color-text-muted);
+}
+
+@media (max-width: 600px) {
+
+	/*
+	 * A 21:8 strip on a phone is a letterbox slot a few dozen pixels
+	 * tall, so the wide variant gives up its shape at this width.
+	 */
+	.lvjcb-content-figure--wide .lvjcb-content-figure__image {
+		aspect-ratio: 16 / 9;
+	}
+}

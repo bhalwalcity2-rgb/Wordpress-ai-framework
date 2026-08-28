@@ -41,6 +41,36 @@
       "query": "tow truck loading junk car residential neighborhood",
       "orientation": "landscape",
       "resolution": "large"
+    },
+    {
+      "slug": "hero-henderson-01",
+      "query": "suburban desert neighborhood houses mountains",
+      "orientation": "landscape",
+      "resolution": "large2x"
+    },
+    {
+      "slug": "henderson-driveway-01",
+      "query": "old car parked driveway suburban house",
+      "orientation": "landscape",
+      "resolution": "large"
+    },
+    {
+      "slug": "henderson-neighborhood-01",
+      "query": "residential street suburban homes desert landscaping",
+      "orientation": "landscape",
+      "resolution": "large"
+    },
+    {
+      "slug": "henderson-vehicles-01",
+      "query": "row of used cars trucks suvs parked lot",
+      "orientation": "landscape",
+      "resolution": "large"
+    },
+    {
+      "slug": "henderson-situations-01",
+      "query": "tow truck flatbed loading broken car",
+      "orientation": "landscape",
+      "resolution": "large"
     }
   ]
 }
