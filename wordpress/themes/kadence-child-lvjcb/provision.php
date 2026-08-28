@@ -206,8 +206,12 @@ if ( is_dir( $pexels_dir ) ) {
 		$slug  = pathinfo( $image_path, PATHINFO_FILENAME );
 		$title = ucwords( str_replace( '-', ' ', $slug ) );
 
+		// 'inherit' is the status attachments are stored under; without it
+		// this lookup runs against get_posts()' 'publish' default and finds
+		// nothing, so every run would re-import as a duplicate.
 		$existing = get_posts( array(
 			'post_type'   => 'attachment',
+			'post_status' => 'inherit',
 			'name'        => $slug,
 			'numberposts' => 1,
 		) );

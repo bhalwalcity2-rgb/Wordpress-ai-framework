@@ -266,7 +266,19 @@ function lvjcb_autolink_locations( $html, &$linked = array() ) {
 		return preg_quote( $city, '/' );
 	}, $cities ) ) . ')\b/';
 
-	$current = is_page() ? user_trailingslashit( get_permalink() ) : '';
+	/*
+	 * The front page needs its own branch: is_page() is false when the
+	 * site shows posts on the front, and the primary city resolves to
+	 * home_url() rather than to a permalink, so testing get_permalink()
+	 * alone lets the homepage link its own city back to itself.
+	 */
+	if ( is_front_page() ) {
+		$current = home_url( '/' );
+	} elseif ( is_page() ) {
+		$current = user_trailingslashit( get_permalink() );
+	} else {
+		$current = '';
+	}
 
 	return preg_replace_callback(
 		$pattern,
