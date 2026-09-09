@@ -19,6 +19,7 @@ wordpress-ai-framework/
 ├── docs/                 # Standards and documentation
 ├── templates/            # Reusable components
 ├── scripts/              # Automation utilities
+├── content-engine/       # Content contracts, validators, pipeline (ADR-0002)
 ├── wordpress/            # WordPress configuration
 ├── .github/              # CI/CD and repository config
 ├── PROJECT_CONTEXT.md    # AI permanent memory (root)
@@ -131,6 +132,44 @@ Example: `ai/decisions/ADR-0001.md`, `ai/decisions/ADR-0002.md`
 
 ---
 
+### `content-engine/` — Content Contracts and Validation
+
+Approved by ADR-0002. Governs the content supply chain that runs *before* commit: the schemas every content file must satisfy, and the validators that enforce them.
+
+| Subdirectory | Contents |
+|---|---|
+| `content-engine/config/schema/` | JSON Schema contracts — `location`, `service`, `home`, shared `common` |
+| `content-engine/lib/` | Shared Python modules (`jsonschema_mini.py`, `textstats.py`, `corpus.py`) |
+| `content-engine/bin/` | Executable validators and pipeline drivers |
+| `content-engine/brief/` | Per-page briefs. Generated analytical artifacts — committed, so a change in the corpus shows up as a reviewable diff |
+| `content-engine/reports/` | Corpus analysis output: `corpus-summary.json`, `differentiation/{slug}.json` |
+| `content-engine/place/` | Research dossiers — what local conditions could affect a seller's decision, with provenance (ADR-0006) |
+| `content-engine/claims/` | Claim ledgers. Every externally verifiable statement, typed and sourced |
+| `content-engine/angles/` | Angle registry — the anti-templating control. One approved angle per page, never reused |
+| `content-engine/intent/` | Search intent: queries mapped to questions, objections, conversion goal |
+| `content-engine/entities/` | Typed entity and relationship maps |
+| `content-engine/queries/` | Query networks organised by concept rather than phrasing |
+| `content-engine/sources/` | Shared source registry — every external citation, recorded once and referenced by id |
+| `content-engine/brief/production/` | Production briefs (ADR-0007) — the writer's instruction contract. Distinct from the Phase 3B retro-briefs in `brief/*.json`, which are never overwritten |
+| `content-engine/drafts/` | Writer output, pre-publication. **Never** written to a theme's `content/` — promotion is the publish gate's job |
+| `content-engine/approvals/` | Deliberate human approval records (ADR-0008). Each names the exact draft hash it authorises |
+| `content-engine/reports/promotions/` | Audit record for every promotion — what was promoted, from which artifacts, approved by whom |
+| `content-engine/reports/live/` | Post-deployment verification results per page |
+
+| Rule | Detail |
+|---|---|
+| Who writes here | Architects, AI assistants building content tooling |
+| File format | JSON Schema, Python 3 (standard library only), Bash, Markdown |
+| Naming | `lowercase-hyphenated` for executables, `lowercase_underscored.py` for importable modules |
+| New files allowed | Yes, within the three subdirectories above |
+| Git tracked | Yes |
+| **Never deployed** | This directory must stay outside every deploy path. `deploy-lvjcb.yml` syncs only the theme directory — do not add a rule that would carry this one to a server. |
+| Dependencies | None beyond the standard library. A validator that needs `pip install` is not permitted (`AI_RULES.md` §4). |
+
+Per-project content itself does **not** live here — it stays in each theme's `content/` directory. This directory holds only the contract and the tooling.
+
+---
+
 ### `.github/` — CI/CD and Repository Configuration
 
 | Subdirectory | Contents |
@@ -166,6 +205,10 @@ Example: `ai/decisions/ADR-0001.md`, `ai/decisions/ADR-0002.md`
 | A child theme file | `wordpress/child-theme/` |
 | A wp-config template | `wordpress/config/` |
 | A GitHub Actions workflow | `.github/workflows/` |
+| A content contract (JSON Schema for page content) | `content-engine/config/schema/` |
+| A content validator or pipeline driver | `content-engine/bin/` |
+| A shared Python module for the content engine | `content-engine/lib/` |
+| Actual page content for a project | `wordpress/themes/{theme}/content/` — never `content-engine/` |
 
 ---
 
