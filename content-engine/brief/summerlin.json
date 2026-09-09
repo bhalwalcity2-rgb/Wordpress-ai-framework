@@ -1,0 +1,378 @@
+{
+	"_generated_by": "content-engine/bin/analyze-corpus.py",
+	"_purpose": "Analytical record of what this page does TODAY. Not a writing instruction — it must never be used to reproduce the weaknesses it documents.",
+	"_method": "Lexical extraction, standard library only. No semantic model.",
+	"slug": "summerlin",
+	"page_type": "location",
+	"renders": true,
+	"word_count": 521,
+	"current_primary_topic": "junk car buying in Summerlin",
+	"current_primary_intent": "local",
+	"secondary_intents": [
+		"transactional",
+		"commercial"
+	],
+	"current_keyword_focus": {
+		"seo_title": "We Buy Junk Cars in Summerlin, NV | {business}",
+		"hero_heading": "We Buy Junk Cars in Summerlin",
+		"top_terms": [
+			"summerlin",
+			"vehicle",
+			"we'll",
+			"cash",
+			"hoa",
+			"buy",
+			"junk",
+			"offer",
+			"day",
+			"most",
+			"call",
+			"vehicles"
+		]
+	},
+	"current_query_entities": [
+		"Can you pick up a junk car from my Summerlin HOA community?",
+		"How much do you pay for junk cars in Summerlin?",
+		"Do you buy cars that failed smog in Summerlin?",
+		"How fast can you remove a junk car from Summerlin?"
+	],
+	"current_entities": {
+		"main_topic": "junk car buying in Summerlin",
+		"local": [
+			"Las Vegas",
+			"Summerlin",
+			"The Hills",
+			"Tournament Hills"
+		],
+		"process": [
+			"offer",
+			"paperwork",
+			"pickup",
+			"quote",
+			"removal",
+			"schedule",
+			"tow",
+			"towing"
+		],
+		"attributes_condition": [
+			"blown",
+			"damaged",
+			"junk",
+			"running"
+		],
+		"user_problem": [
+			"eyesore",
+			"hoa",
+			"notice"
+		],
+		"business_regulatory": [],
+		"vehicle_makes": [],
+		"other_proper_nouns": [
+			"How",
+			"Most Summerlin",
+			"Whether",
+			"Yes"
+		]
+	},
+	"current_local_entities": [
+		"Las Vegas",
+		"Summerlin",
+		"The Hills",
+		"Tournament Hills"
+	],
+	"entity_relationships": {
+		"attributes_condition--local": 5,
+		"local--process": 5,
+		"local--user_problem": 4,
+		"attributes_condition--user_problem": 3,
+		"process--user_problem": 2,
+		"attributes_condition--process": 1
+	},
+	"current_sections": [
+		{
+			"type": "content",
+			"heading": "Junk Car Buyers in Summerlin",
+			"has_table": false,
+			"has_blocks": false,
+			"has_image": false
+		},
+		{
+			"type": "content",
+			"heading": "Selling a Junk Car from a Summerlin HOA Community",
+			"has_table": false,
+			"has_blocks": false,
+			"has_image": false
+		},
+		{
+			"type": "content",
+			"heading": "Summerlin Communities We Serve",
+			"has_table": false,
+			"has_blocks": false,
+			"has_image": false
+		},
+		{
+			"type": "content",
+			"heading": "What to Expect When You Sell Your Car in Summerlin",
+			"has_table": false,
+			"has_blocks": false,
+			"has_image": false
+		}
+	],
+	"current_faq_topics": [
+		"Can you pick up a junk car from my Summerlin HOA community?",
+		"How much do you pay for junk cars in Summerlin?",
+		"Do you buy cars that failed smog in Summerlin?",
+		"How fast can you remove a junk car from Summerlin?"
+	],
+	"current_internal_links": {
+		"declared_legacy_metadata": {
+			"services": [
+				"sedans",
+				"trucks-suvs",
+				"damaged",
+				"non-running"
+			],
+			"locations": [
+				"las-vegas",
+				"spring-valley",
+				"north-las-vegas",
+				"enterprise"
+			]
+		},
+		"actually_rendered": {
+			"areas_sections": [],
+			"services_sections": [],
+			"autolinked_cities": [
+				"Las Vegas"
+			]
+		},
+		"declared_but_not_rendered": [
+			"damaged",
+			"enterprise",
+			"las-vegas",
+			"non-running",
+			"north-las-vegas",
+			"sedans",
+			"spring-valley",
+			"trucks-suvs"
+		]
+	},
+	"current_business_claims": [
+		{
+			"text": "Free towing, no fees, and cash in hand the same day for most pickups.",
+			"types": [
+				"pricing_payment",
+				"service_guarantee",
+				"process_claim",
+				"unverifiable"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "Summerlin is one of the most well-maintained communities in the Las Vegas valley, and HOA rules often mean that a non-running or damaged vehicle can't sit on the property for long.",
+			"types": [
+				"unverifiable"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "We help Summerlin homeowners solve that problem quickly — call us, get a cash offer, and we pick the vehicle up for free, usually the same day.",
+			"types": [
+				"pricing_payment",
+				"service_guarantee",
+				"process_claim"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "We buy vehicles of every type and condition from Summerlin residents.",
+			"types": [
+				"local_fact"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "Many Summerlin communities have strict HOA regulations about vehicles parked on driveways or streets.",
+			"types": [
+				"unverifiable"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "Call us at {phone} and we'll schedule a pickup as quickly as possible — often the same day.",
+			"types": [
+				"process_claim"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "We give you a firm cash offer immediately — no waiting, no callbacks needed.",
+			"types": [
+				"pricing_payment",
+				"service_guarantee"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "If you accept, we come to your Summerlin address with a tow truck, verify the vehicle, pay you cash, and take the car.",
+			"types": [
+				"pricing_payment"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "There are no fees of any kind.",
+			"types": [
+				"service_guarantee"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "Towing is free, paperwork is handled by us, and the cash amount we quote is exactly what you receive.",
+			"types": [
+				"pricing_payment",
+				"service_guarantee"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "Most Summerlin sellers tell us the entire experience takes less time than they expected.",
+			"types": [
+				"unverifiable"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "How much do you pay for junk cars in Summerlin?",
+			"types": [
+				"pricing_payment"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "Offers range from $200 to $5,000+ depending on the vehicle.",
+			"types": [
+				"pricing_payment"
+			],
+			"money": [
+				"$200 to $5,000+"
+			],
+			"risk": "medium"
+		},
+		{
+			"text": "Summerlin residents often have newer vehicles with more value in parts, which can mean higher offers.",
+			"types": [
+				"local_fact"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "Many vehicles we purchase in Summerlin fall into this category.",
+			"types": [
+				"unverifiable"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "Most Summerlin pickups happen the same day.",
+			"types": [
+				"process_claim",
+				"unverifiable"
+			],
+			"money": [],
+			"risk": "low"
+		}
+	],
+	"claim_counts": {
+		"pricing_payment": 7,
+		"service_guarantee": 5,
+		"process_claim": 4,
+		"unverifiable": 6,
+		"local_fact": 2
+	},
+	"current_information_gain": {
+		"verdict": "LOCAL_NAME_SUBSTITUTION_ONLY",
+		"unique_phrase_count": 480,
+		"shared_phrase_count": 33,
+		"boilerplate_phrase_count": 3,
+		"unique_share": 0.9302,
+		"boilerplate_share": 0.0058,
+		"sample_unique_phrases": [
+			"a blown engine or a",
+			"a car that failed smog",
+			"a cash offer and we",
+			"a fair offer and handle",
+			"a firm cash offer immediately",
+			"a garage or sitting on",
+			"a junk car from my",
+			"a junk car from summerlin"
+		],
+		"sample_boilerplate_phrases": [
+			"can you pick up a",
+			"we buy junk cars in",
+			"year make model and condition"
+		],
+		"unique_local_entities": [
+			"The Hills",
+			"Tournament Hills"
+		],
+		"unique_nonlocal_entities": [],
+		"has_unique_structure": false
+	},
+	"current_unique_elements": {
+		"sections_with_structure": [],
+		"unique_local_entities": [
+			"The Hills",
+			"Tournament Hills"
+		],
+		"unique_phrase_share": 0.9302
+	},
+	"current_generic_elements": {
+		"prose_only_sections": [
+			"content[0]: Junk Car Buyers in Summerlin",
+			"content[1]: Selling a Junk Car from a Summerlin HOA Community",
+			"content[2]: Summerlin Communities We Serve",
+			"content[3]: What to Expect When You Sell Your Car in Summerlin"
+		],
+		"boilerplate_phrase_share": 0.0058,
+		"shared_local_entities": [
+			"Las Vegas",
+			"Summerlin"
+		]
+	},
+	"likely_sibling_overlap": {
+		"max_masked_vocabulary_similarity": 0.3242,
+		"max_clone_signals": 3,
+		"closest_sibling": "paradise",
+		"superficial_differentiation_flags": [
+			"IDENTICAL_STRUCTURE",
+			"LEXICAL_ECHO",
+			"NEAR_IDENTICAL_ONCE_PLACES_MASKED",
+			"SHARED_ENTITY_FRAME",
+			"SHARED_FAQ_TOPICS",
+			"SHARED_VOCABULARY"
+		],
+		"assessment": "SUPERFICIAL_DIFFERENTIATION"
+	},
+	"known_quality_issues": [
+		"STRUCTURE_MATCHES_SIBLINGS",
+		"FAQ_SUBSTANCE_SHARED_WITH_SIBLINGS",
+		"SAME_TOPIC_FRAME_AS_SIBLINGS",
+		"NO_PAGE_SPECIFIC_CLOSING_CTA"
+	],
+	"rewrite_priority": "REWRITE"
+}

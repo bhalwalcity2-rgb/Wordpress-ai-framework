@@ -1,0 +1,375 @@
+{
+	"_generated_by": "content-engine/bin/analyze-corpus.py",
+	"_purpose": "Analytical record of what this page does TODAY. Not a writing instruction — it must never be used to reproduce the weaknesses it documents.",
+	"_method": "Lexical extraction, standard library only. No semantic model.",
+	"slug": "spring-valley",
+	"page_type": "location",
+	"renders": true,
+	"word_count": 407,
+	"current_primary_topic": "junk car buying in Spring Valley",
+	"current_primary_intent": "local",
+	"secondary_intents": [
+		"transactional",
+		"informational"
+	],
+	"current_keyword_focus": {
+		"seo_title": "We Buy Junk Cars in Spring Valley, NV | {business}",
+		"hero_heading": "We Buy Junk Cars in Spring Valley",
+		"top_terms": [
+			"valley",
+			"spring",
+			"vehicle",
+			"call",
+			"buy",
+			"most",
+			"apartment",
+			"car",
+			"junk",
+			"cars",
+			"cash",
+			"free"
+		]
+	},
+	"current_query_entities": [
+		"How fast can you pick up a junk car in Spring Valley?",
+		"Do you buy cars from apartment complexes in Spring Valley?",
+		"What's the minimum you'll pay for a junk car in Spring Valley?",
+		"Can I sell a car with a dead battery in Spring Valley?"
+	],
+	"current_entities": {
+		"main_topic": "junk car buying in Spring Valley",
+		"local": [
+			"Desert Breeze Park",
+			"Las Vegas",
+			"Most Spring Valley",
+			"South Durango Drive",
+			"South Jones Boulevard",
+			"South Rainbow Boulevard",
+			"Spring Valley",
+			"Spring Valley Spring Valley",
+			"West Flamingo Road",
+			"West Tropicana Avenue"
+		],
+		"process": [
+			"offer",
+			"paperwork",
+			"pickup",
+			"title",
+			"tow",
+			"towing",
+			"transfer"
+		],
+		"attributes_condition": [
+			"blown",
+			"damaged",
+			"junk"
+		],
+		"user_problem": [],
+		"business_regulatory": [
+			"dmv"
+		],
+		"vehicle_makes": [],
+		"other_proper_nouns": []
+	},
+	"current_local_entities": [
+		"Desert Breeze Park",
+		"Las Vegas",
+		"Most Spring Valley",
+		"South Durango Drive",
+		"South Jones Boulevard",
+		"South Rainbow Boulevard",
+		"Spring Valley",
+		"Spring Valley Spring Valley",
+		"West Flamingo Road",
+		"West Tropicana Avenue"
+	],
+	"entity_relationships": {
+		"local--process": 5,
+		"attributes_condition--local": 3,
+		"business_regulatory--process": 1,
+		"attributes_condition--process": 1
+	},
+	"current_sections": [
+		{
+			"type": "content",
+			"heading": "Cash for Junk Cars in Spring Valley",
+			"has_table": false,
+			"has_blocks": false,
+			"has_image": false
+		},
+		{
+			"type": "content",
+			"heading": "How to Sell Your Junk Car in Spring Valley",
+			"has_table": false,
+			"has_blocks": false,
+			"has_image": false
+		},
+		{
+			"type": "content",
+			"heading": "Spring Valley Areas We Cover",
+			"has_table": false,
+			"has_blocks": false,
+			"has_image": false
+		}
+	],
+	"current_faq_topics": [
+		"How fast can you pick up a junk car in Spring Valley?",
+		"Do you buy cars from apartment complexes in Spring Valley?",
+		"What's the minimum you'll pay for a junk car in Spring Valley?",
+		"Can I sell a car with a dead battery in Spring Valley?"
+	],
+	"current_internal_links": {
+		"declared_legacy_metadata": {
+			"services": [
+				"sedans",
+				"trucks-suvs",
+				"damaged",
+				"non-running"
+			],
+			"locations": [
+				"las-vegas",
+				"summerlin",
+				"paradise",
+				"enterprise"
+			]
+		},
+		"actually_rendered": {
+			"areas_sections": [],
+			"services_sections": [],
+			"autolinked_cities": [
+				"Las Vegas"
+			]
+		},
+		"declared_but_not_rendered": [
+			"damaged",
+			"enterprise",
+			"las-vegas",
+			"non-running",
+			"paradise",
+			"sedans",
+			"summerlin",
+			"trucks-suvs"
+		]
+	},
+	"current_business_claims": [
+		{
+			"text": "Spring Valley pickups are usually completed the same day — call in the morning, have cash by the afternoon.",
+			"types": [
+				"pricing_payment",
+				"process_claim"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "Free towing on every vehicle, no matter the condition.",
+			"types": [
+				"service_guarantee"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "Spring Valley sits right in the heart of the Las Vegas valley, and it's one of the areas we serve most frequently.",
+			"types": [
+				"unverifiable"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "We buy cars, trucks, SUVs, and vans in any condition, and every pickup includes free towing.",
+			"types": [
+				"service_guarantee"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "Year, make, model, and a quick description of its condition are all we need to give you a firm cash offer.",
+			"types": [
+				"pricing_payment",
+				"service_guarantee"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "There's no obligation — if the offer doesn't work for you, no hard feelings.",
+			"types": [
+				"service_guarantee"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "The driver verifies the vehicle, hands you cash, and loads the car.",
+			"types": [
+				"pricing_payment"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "We handle the title transfer and all DMV paperwork.",
+			"types": [
+				"government_legal"
+			],
+			"money": [],
+			"risk": "high"
+		},
+		{
+			"text": "The typical Spring Valley pickup is completed within a few hours of the initial call.",
+			"types": [
+				"process_claim"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "Whether your vehicle is near Desert Breeze Park, the Chinatown area, or anywhere else within Spring Valley, we provide free pickup.",
+			"types": [
+				"service_guarantee"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "What's the minimum you'll pay for a junk car in Spring Valley?",
+			"types": [
+				"pricing_payment"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "Most Spring Valley pickups happen the same day you call.",
+			"types": [
+				"process_claim",
+				"unverifiable"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "Our minimum offer is typically around $200 for the smallest and most damaged vehicles.",
+			"types": [
+				"pricing_payment",
+				"unverifiable"
+			],
+			"money": [
+				"$200"
+			],
+			"risk": "medium"
+		},
+		{
+			"text": "Most Spring Valley sellers receive between $300 and $3,000 depending on the vehicle.",
+			"types": [
+				"pricing_payment",
+				"unverifiable"
+			],
+			"money": [
+				"$300",
+				"$3,000"
+			],
+			"risk": "medium"
+		},
+		{
+			"text": "A dead battery is one of the simplest issues we deal with.",
+			"types": [
+				"unverifiable"
+			],
+			"money": [],
+			"risk": "low"
+		}
+	],
+	"claim_counts": {
+		"pricing_payment": 6,
+		"process_claim": 3,
+		"service_guarantee": 5,
+		"unverifiable": 5,
+		"government_legal": 1
+	},
+	"current_information_gain": {
+		"verdict": "LOCAL_NAME_SUBSTITUTION_ONLY",
+		"unique_phrase_count": 364,
+		"shared_phrase_count": 35,
+		"boilerplate_phrase_count": 2,
+		"unique_share": 0.9077,
+		"boilerplate_share": 0.005,
+		"sample_unique_phrases": [
+			"200 for the smallest and",
+			"300 and 3 000 depending",
+			"a car with a dead",
+			"a dead battery in spring",
+			"a dead battery is one",
+			"a few hours of the",
+			"a firm cash offer there's",
+			"a junk car in spring"
+		],
+		"sample_boilerplate_phrases": [
+			"can you pick up a",
+			"we buy junk cars in"
+		],
+		"unique_local_entities": [
+			"Desert Breeze Park",
+			"Most Spring Valley",
+			"South Durango Drive",
+			"South Jones Boulevard",
+			"South Rainbow Boulevard",
+			"Spring Valley",
+			"Spring Valley Spring Valley",
+			"West Flamingo Road",
+			"West Tropicana Avenue"
+		],
+		"unique_nonlocal_entities": [],
+		"has_unique_structure": false
+	},
+	"current_unique_elements": {
+		"sections_with_structure": [],
+		"unique_local_entities": [
+			"Desert Breeze Park",
+			"Most Spring Valley",
+			"South Durango Drive",
+			"South Jones Boulevard",
+			"South Rainbow Boulevard",
+			"Spring Valley",
+			"Spring Valley Spring Valley",
+			"West Flamingo Road",
+			"West Tropicana Avenue"
+		],
+		"unique_phrase_share": 0.9077
+	},
+	"current_generic_elements": {
+		"prose_only_sections": [
+			"content[0]: Cash for Junk Cars in Spring Valley",
+			"content[1]: How to Sell Your Junk Car in Spring Valley",
+			"content[2]: Spring Valley Areas We Cover"
+		],
+		"boilerplate_phrase_share": 0.005,
+		"shared_local_entities": [
+			"Las Vegas"
+		]
+	},
+	"likely_sibling_overlap": {
+		"max_masked_vocabulary_similarity": 0.2536,
+		"max_clone_signals": 3,
+		"closest_sibling": "las-vegas",
+		"superficial_differentiation_flags": [
+			"IDENTICAL_STRUCTURE",
+			"SHARED_ENTITY_FRAME",
+			"SHARED_FAQ_TOPICS",
+			"SHARED_HEADING_PLAN",
+			"SHARED_VOCABULARY"
+		],
+		"assessment": "SUPERFICIAL_DIFFERENTIATION"
+	},
+	"known_quality_issues": [
+		"BELOW_500_WORDS — SEO_STANDARDS.md §6 minimum for a location page",
+		"STRUCTURE_MATCHES_SIBLINGS",
+		"FAQ_SUBSTANCE_SHARED_WITH_SIBLINGS",
+		"SAME_TOPIC_FRAME_AS_SIBLINGS",
+		"NO_PAGE_SPECIFIC_CLOSING_CTA"
+	],
+	"rewrite_priority": "REWRITE"
+}

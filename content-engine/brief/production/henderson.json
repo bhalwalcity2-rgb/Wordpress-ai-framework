@@ -1,0 +1,819 @@
+{
+	"slug": "henderson",
+	"brief_version": "1.0.0",
+	"generated": {
+		"by": "create-content-brief.py",
+		"note": "Assembled from research artifacts. Structure is derived from this page's own purpose and evidence — there is deliberately no master section template."
+	},
+	"page_type": "location",
+	"page_purpose": "UNDETERMINED — no approved angle establishes why this page should exist.",
+	"primary_topic": "junk car buying in Henderson",
+	"primary_intent": "navigational_local",
+	"secondary_intents": [
+		"transactional",
+		"informational",
+		"commercial_investigation"
+	],
+	"conversion_goal": "Phone call or instant-offer submission",
+	"gate": {
+		"status": "BLOCKED",
+		"checks": [
+			{
+				"check": "differentiation_supported",
+				"passed": true,
+				"detail": "differentiation_verdict is 'PENDING_RESEARCH'"
+			},
+			{
+				"check": "approved_angle_exists",
+				"passed": false,
+				"detail": "angle statuses present: proposed, unsupported"
+			},
+			{
+				"check": "publishable_claims_exist",
+				"passed": false,
+				"detail": "0 of 42 claims are publishable"
+			},
+			{
+				"check": "high_risk_claims_authoritative",
+				"passed": true,
+				"detail": "offending: none"
+			},
+			{
+				"check": "information_gain_establishable",
+				"passed": true,
+				"detail": "retro-brief verdict='HAS_INFORMATION_GAIN', unique non-local entities=15"
+			}
+		],
+		"blocked_reason": "NO_APPROVED_ANGLE",
+		"recommended_action": "complete_research"
+	},
+	"query_model": {
+		"query_network_id": "queries/henderson.json",
+		"primary_queries": [
+			"how fast get henderson",
+			"hoa fine tow truck comes house",
+			"live sun city community pick up age restricted",
+			"car sitting garage years still worth anything"
+		],
+		"supporting_queries": [],
+		"question_map": [
+			{
+				"question": "How fast can you get to Henderson?",
+				"why_this_page_answers_it": "TO BE RESEARCHED",
+				"coverage": "must_answer"
+			},
+			{
+				"question": "Will my HOA fine me if a tow truck comes to my house?",
+				"why_this_page_answers_it": "TO BE RESEARCHED",
+				"coverage": "must_answer"
+			},
+			{
+				"question": "I live in a Sun City community. Can you pick up from an age-restricted neighborhood?",
+				"why_this_page_answers_it": "TO BE RESEARCHED",
+				"coverage": "must_answer"
+			},
+			{
+				"question": "My car has been sitting in my garage for years. Is it still worth anything?",
+				"why_this_page_answers_it": "TO BE RESEARCHED",
+				"coverage": "must_answer"
+			}
+		],
+		"objection_map": [
+			{
+				"objection": "Is the quoted price the price I actually get?",
+				"required_response": "Needs a sourced statement of the firm-offer policy."
+			},
+			{
+				"objection": "Can I sell without the title?",
+				"required_response": "Needs an authoritative Nevada DMV source before answering."
+			}
+		],
+		"concept_groups": [
+			{
+				"concept": "fast get henderson how",
+				"intent": "navigational_local",
+				"why_needed": "How fast can you get to Henderson?",
+				"coverage": "must_answer",
+				"representative_queries": [
+					"how fast get henderson"
+				],
+				"shared_with_siblings": false
+			},
+			{
+				"concept": "comes fine hoa house tow",
+				"intent": "navigational_local",
+				"why_needed": "Will my HOA fine me if a tow truck comes to my house?",
+				"coverage": "must_answer",
+				"representative_queries": [
+					"hoa fine tow truck comes house"
+				],
+				"shared_with_siblings": false
+			},
+			{
+				"concept": "age city community live neighborhood",
+				"intent": "navigational_local",
+				"why_needed": "I live in a Sun City community. Can you pick up from an age-restricted neighborhood?",
+				"coverage": "must_answer",
+				"representative_queries": [
+					"live sun city community pick up age restricted"
+				],
+				"shared_with_siblings": false
+			},
+			{
+				"concept": "anything car garage sitting still",
+				"intent": "navigational_local",
+				"why_needed": "My car has been sitting in my garage for years. Is it still worth anything?",
+				"coverage": "useful_if_relevant",
+				"representative_queries": [
+					"car sitting garage years still worth anything"
+				],
+				"shared_with_siblings": true
+			}
+		]
+	},
+	"entity_model": {
+		"primary_entity": "junk car buying in Henderson",
+		"supporting_entities": [
+			"Anthem",
+			"Cadence",
+			"Call",
+			"Clark County",
+			"Damaged Vehicles After Insurance",
+			"Gated",
+			"Here",
+			"Inspirada",
+			"Lake Las Vegas",
+			"More",
+			"Nevada",
+			"Pittman",
+			"Sun City Anthem",
+			"Unused Vehicles",
+			"Violations"
+		],
+		"local_entities": [
+			"89002",
+			"89011",
+			"89012",
+			"89014",
+			"89015",
+			"89044",
+			"89052",
+			"Boulder City",
+			"Boulder Highway",
+			"Craig Road",
+			"East of Boulder Highway",
+			"Eastern Avenue",
+			"Gibson Springs",
+			"Governed Communities Green Valley",
+			"Governed Communities Sun City",
+			"Green Valley",
+			"Green Valley Ranch",
+			"Henderson",
+			"I-215",
+			"Lake Mead Parkway",
+			"Las Vegas",
+			"Las Vegas Valley",
+			"MacDonald Ranch",
+			"Mission Hills",
+			"Near Gibson Road",
+			"Paradise Hills",
+			"Ranch",
+			"Rose Parkway",
+			"Seven Hills",
+			"Sun City",
+			"Sun City MacDonald Ranch",
+			"Water Street",
+			"Whitney Ranch"
+		],
+		"user_entities": [],
+		"process_entities": [
+			"flatbed",
+			"offer",
+			"paid",
+			"paperwork",
+			"payment",
+			"pickup",
+			"quote",
+			"removal",
+			"salvage",
+			"schedule",
+			"scheduling",
+			"title",
+			"tow",
+			"towing",
+			"transfer"
+		],
+		"attributes": [
+			"blown",
+			"damaged",
+			"flooded",
+			"inoperable",
+			"junk",
+			"overheating",
+			"running",
+			"rusted",
+			"stripped",
+			"totaled",
+			"unregistered",
+			"wrecked"
+		],
+		"entity_relationships": [
+			{
+				"chain": [
+					"local",
+					"co-occurs_with",
+					"process"
+				],
+				"evidence_level": "research_observation",
+				"claim_id": "",
+				"explain_because": "Co-occurrence in existing copy. Evidence that the page connects these ideas — not evidence that the connection holds."
+			},
+			{
+				"chain": [
+					"attributes_condition",
+					"co-occurs_with",
+					"user_problem"
+				],
+				"evidence_level": "research_observation",
+				"claim_id": "",
+				"explain_because": "Co-occurrence in existing copy. Evidence that the page connects these ideas — not evidence that the connection holds."
+			},
+			{
+				"chain": [
+					"attributes_condition",
+					"co-occurs_with",
+					"process"
+				],
+				"evidence_level": "research_observation",
+				"claim_id": "",
+				"explain_because": "Co-occurrence in existing copy. Evidence that the page connects these ideas — not evidence that the connection holds."
+			},
+			{
+				"chain": [
+					"attributes_condition",
+					"co-occurs_with",
+					"local"
+				],
+				"evidence_level": "research_observation",
+				"claim_id": "",
+				"explain_because": "Co-occurrence in existing copy. Evidence that the page connects these ideas — not evidence that the connection holds."
+			},
+			{
+				"chain": [
+					"process",
+					"co-occurs_with",
+					"user_problem"
+				],
+				"evidence_level": "research_observation",
+				"claim_id": "",
+				"explain_because": "Co-occurrence in existing copy. Evidence that the page connects these ideas — not evidence that the connection holds."
+			},
+			{
+				"chain": [
+					"local",
+					"co-occurs_with",
+					"user_problem"
+				],
+				"evidence_level": "research_observation",
+				"claim_id": "",
+				"explain_because": "Co-occurrence in existing copy. Evidence that the page connects these ideas — not evidence that the connection holds."
+			},
+			{
+				"chain": [
+					"attributes_condition",
+					"co-occurs_with",
+					"business_regulatory"
+				],
+				"evidence_level": "research_observation",
+				"claim_id": "",
+				"explain_because": "Co-occurrence in existing copy. Evidence that the page connects these ideas — not evidence that the connection holds."
+			},
+			{
+				"chain": [
+					"business_regulatory",
+					"co-occurs_with",
+					"user_problem"
+				],
+				"evidence_level": "research_observation",
+				"claim_id": "",
+				"explain_because": "Co-occurrence in existing copy. Evidence that the page connects these ideas — not evidence that the connection holds."
+			},
+			{
+				"chain": [
+					"business_regulatory",
+					"co-occurs_with",
+					"local"
+				],
+				"evidence_level": "research_observation",
+				"claim_id": "",
+				"explain_because": "Co-occurrence in existing copy. Evidence that the page connects these ideas — not evidence that the connection holds."
+			},
+			{
+				"chain": [
+					"business_regulatory",
+					"co-occurs_with",
+					"process"
+				],
+				"evidence_level": "research_observation",
+				"claim_id": "",
+				"explain_because": "Co-occurrence in existing copy. Evidence that the page connects these ideas — not evidence that the connection holds."
+			},
+			{
+				"chain": [
+					"vehicle condition",
+					"determines",
+					"towing requirement"
+				],
+				"evidence_level": "hypothesis",
+				"claim_id": "",
+				"explain_because": "Plausible domain relationship, unverified for this page."
+			},
+			{
+				"chain": [
+					"vehicle ownership",
+					"determines",
+					"title and documentation path"
+				],
+				"evidence_level": "hypothesis",
+				"claim_id": "",
+				"explain_because": "Plausible domain relationship, unverified for this page."
+			},
+			{
+				"chain": [
+					"community rules",
+					"creates",
+					"vehicle removal pressure"
+				],
+				"evidence_level": "hypothesis",
+				"claim_id": "",
+				"explain_because": "Plausible domain relationship, unverified for this page."
+			},
+			{
+				"chain": [
+					"location",
+					"determines",
+					"pickup and logistics context"
+				],
+				"evidence_level": "hypothesis",
+				"claim_id": "",
+				"explain_because": "Plausible domain relationship, unverified for this page."
+			}
+		]
+	},
+	"local_model": {
+		"location": "junk car buying in Henderson",
+		"local_context": [
+			"89002",
+			"89011",
+			"89012",
+			"89014",
+			"89015",
+			"89044",
+			"89052",
+			"Boulder City",
+			"Boulder Highway",
+			"Craig Road"
+		],
+		"local_conditions": [
+			{
+				"condition": "junk car buying in Henderson is a configured service area for this business.",
+				"evidence_level": "business_provided",
+				"materially_affects": "Establishes that the business serves the area at all."
+			},
+			{
+				"condition": "Under NRS 116.3102 a Nevada community association may cause a vehicle to be removed when it is improperly parked on property owned or leased by the association, or on a road, street, alley or other thoroughfare within the community. 48 hours' notice is required except for fire hydrants, fire lanes, accessible spaces, or an imminent threat to health, safety or welfare.",
+				"evidence_level": "sourced_fact",
+				"materially_affects": "Sets the boundary of what an association can actually do. A vehicle on the owner's own driveway is outside this power, which is the opposite of what the live page implies."
+			},
+			{
+				"condition": "Under NRS 116.31031, a fine for a violation not posing an imminent threat may not exceed $100 per violation or $1,000 per hearing, a hearing opportunity is required, and a violation uncured after 14 days may draw an additional fine for each subsequent 7-day period.",
+				"evidence_level": "sourced_fact",
+				"materially_affects": "This is the real enforcement pressure — fines through a process with a cure window, not daily penalties and not towing from a driveway."
+			},
+			{
+				"condition": "NRS 116 applies to common-interest communities throughout Nevada, not to Henderson specifically.",
+				"evidence_level": "sourced_fact",
+				"materially_affects": "Decisive for differentiation: a statutory regime shared by every sibling area cannot distinguish one location page from another."
+			}
+		],
+		"geographic_context": [],
+		"customer_scenarios": [],
+		"decision_factors": []
+	},
+	"differentiation": {
+		"approved_angle_id": "",
+		"angle_statement": "",
+		"angle_evidence": [],
+		"why_this_page_exists": "NOT ESTABLISHED — this page has no approved angle.",
+		"must_not_overlap_with": [
+			"boulder-city",
+			"enterprise",
+			"las-vegas",
+			"north-las-vegas",
+			"paradise",
+			"spring-valley",
+			"summerlin"
+		],
+		"forbidden_generic_patterns": [
+			"Swapping a city, neighbourhood, ZIP or landmark name for a sibling's and calling it different",
+			"Reusing a sibling's section order — identical structure was 50 of 68 sibling pairs",
+			"Restating a sibling's FAQ substance in new wording",
+			"Explaining the same generic process every sibling already explains",
+			"Inserting keyword variants that a person would not say out loud",
+			"Padding to reach a word count"
+		]
+	},
+	"information_gain": {
+		"required_new_information": [
+			{
+				"information": "Explain what inoperable means for someone selling a vehicle here.",
+				"why_it_is_new": "No sibling page raises this topic (Phase 3B measurement).",
+				"evidence_level": "research_observation"
+			},
+			{
+				"information": "Explain what overheating means for someone selling a vehicle here.",
+				"why_it_is_new": "No sibling page raises this topic (Phase 3B measurement).",
+				"evidence_level": "research_observation"
+			},
+			{
+				"information": "Explain what rusted means for someone selling a vehicle here.",
+				"why_it_is_new": "No sibling page raises this topic (Phase 3B measurement).",
+				"evidence_level": "research_observation"
+			},
+			{
+				"information": "Explain what stripped means for someone selling a vehicle here.",
+				"why_it_is_new": "No sibling page raises this topic (Phase 3B measurement).",
+				"evidence_level": "research_observation"
+			},
+			{
+				"information": "Explain what totaled means for someone selling a vehicle here.",
+				"why_it_is_new": "No sibling page raises this topic (Phase 3B measurement).",
+				"evidence_level": "research_observation"
+			},
+			{
+				"information": "Explain what unregistered means for someone selling a vehicle here.",
+				"why_it_is_new": "No sibling page raises this topic (Phase 3B measurement).",
+				"evidence_level": "research_observation"
+			},
+			{
+				"information": "Explain what clark county means for someone selling a vehicle here.",
+				"why_it_is_new": "No sibling page raises this topic (Phase 3B measurement).",
+				"evidence_level": "research_observation"
+			},
+			{
+				"information": "Explain what nevada dmv means for someone selling a vehicle here.",
+				"why_it_is_new": "No sibling page raises this topic (Phase 3B measurement).",
+				"evidence_level": "research_observation"
+			}
+		],
+		"unique_explanations": [],
+		"unique_scenarios": [],
+		"unique_questions": [
+			"How fast can you get to Henderson?",
+			"Will my HOA fine me if a tow truck comes to my house?",
+			"I live in a Sun City community. Can you pick up from an age-restricted neighborhood?",
+			"My car has been sitting in my garage for years. Is it still worth anything?"
+		],
+		"unique_decision_factors": [],
+		"sibling_coverage_gaps": [
+			"attributes_condition:inoperable",
+			"attributes_condition:overheating",
+			"attributes_condition:rusted",
+			"attributes_condition:stripped",
+			"attributes_condition:totaled",
+			"attributes_condition:unregistered",
+			"business_regulatory:clark county",
+			"business_regulatory:nevada dmv",
+			"process:flatbed",
+			"process:salvage",
+			"user_problem:compliance",
+			"user_problem:inherited",
+			"user_problem:insurance",
+			"user_problem:payout",
+			"user_problem:warning"
+		]
+	},
+	"content_architecture": {
+		"structure_rationale": "NOT PLANNED — the page is blocked, so no structure is proposed. Proposing one would invite a page to be written that has no reason to exist.",
+		"recommended_sections": [
+			{
+				"section_type": "content",
+				"working_title": "BLOCKED",
+				"purpose": "No section plan — this page did not pass the existence gate."
+			}
+		]
+	},
+	"faq_plan": {
+		"questions_to_answer": [
+			"How fast can you get to Henderson?",
+			"Will my HOA fine me if a tow truck comes to my house?",
+			"I live in a Sun City community. Can you pick up from an age-restricted neighborhood?",
+			"My car has been sitting in my garage for years. Is it still worth anything?"
+		],
+		"questions_already_answered_by_siblings": [
+			"already answered on boulder-city: Is towing really free from Boulder City?",
+			"already answered on boulder-city: How quickly can you pick up a car in Boulder City?",
+			"already answered on boulder-city: Do you buy junk cars in the Boulder City historic district?",
+			"already answered on boulder-city: What types of vehicles do you buy in Boulder City?",
+			"already answered on enterprise: Do you serve the Silverado Ranch area of Enterprise?",
+			"already answered on enterprise: How much will you pay for my junk car in Enterprise?",
+			"already answered on enterprise: Can you pick up a car that has been sitting for years in Enterprise?",
+			"already answered on enterprise: Is there any paperwork required to sell a junk car in Enterprise?",
+			"already answered on las-vegas: How much will you pay for my junk car in Las Vegas?",
+			"already answered on las-vegas: Do you buy cars without a title in Las Vegas?",
+			"already answered on las-vegas: How fast can you pick up my junk car in Las Vegas?",
+			"already answered on las-vegas: Is there any cost for towing in Las Vegas?",
+			"already answered on north-las-vegas: Do you buy junk cars near Nellis Air Force Base?",
+			"already answered on north-las-vegas: How much is my junk car worth in North Las Vegas?",
+			"already answered on north-las-vegas: Can you pick up a car from an apartment complex in North Las Vegas?",
+			"already answered on north-las-vegas: Do I need to be present for the pickup in North Las Vegas?",
+			"already answered on paradise: Do you pick up junk cars near UNLV in Paradise?",
+			"already answered on paradise: How much do you pay for junk cars in Paradise?",
+			"already answered on paradise: Can you pick up a car from a commercial property in Paradise?",
+			"already answered on paradise: Is same-day pickup available in Paradise?"
+		],
+		"questions_not_to_repeat": []
+	},
+	"claims": {
+		"allowed_claim_ids": [],
+		"blocked_claim_ids": [
+			"henderson-00-buy-junk-cars-henderson",
+			"henderson-01-green-valley-anthem-lake",
+			"henderson-02-henderson-nevadas-second-largest",
+			"henderson-03-one-most-hoa-governed",
+			"henderson-04-many-henderson-neighborhoods-especially",
+			"henderson-05-violations-trigger-warning-letters",
+			"henderson-06-pressure-exactly-why-henderson",
+			"henderson-07-homeowners-call-because-need",
+			"henderson-08-handle-entire-process-firm",
+			"henderson-09-most-henderson-pickups-happen",
+			"henderson-10-henderson-covers-over-100",
+			"henderson-11-here-situations-handle-most",
+			"henderson-12-call-phone-tell-cross",
+			"henderson-13-green-valley-other-hoa",
+			"henderson-14-urgency-exactly-why-residents",
+			"henderson-15-typically-pick-up-vehicle",
+			"henderson-16-sun-city-anthem-sun",
+			"henderson-17-here-quick-reference-anthem",
+			"henderson-18-give-firm-answer-under",
+			"henderson-19-sedans-coupes-honda-accord",
+			"henderson-20-call-takes-about-two",
+			"henderson-21-get-firm-cash-offer",
+			"henderson-22-number-quote-number-pay",
+			"henderson-23-tow-pay-spot-tow",
+			"henderson-24-driver-handles-quick-walk",
+			"henderson-25-towing-always-free",
+			"henderson-26-call-now-day-cash",
+			"henderson-27-hoa-violations-inoperable-vehicles",
+			"henderson-28-community-association-sent-warning",
+			"henderson-29-inherited-unused-vehicles-55",
+			"henderson-30-buy-remaining-shell-even",
+			"henderson-31-vehicles-title-nevada-able",
+			"henderson-32-conditions-apply-request-duplicate",
+			"henderson-33-work-henderson-vehicle-owners",
+			"henderson-34-all-zip-codes-across",
+			"henderson-35-still-worth-anything",
+			"henderson-36-day-most-cases",
+			"henderson-37-henderson-one-busiest-service",
+			"henderson-38-more-remote-areas-like",
+			"henderson-39-drivers-arrive-load-vehicle",
+			"henderson-40-even-vehicles-driven-years",
+			"henderson-41-call-year-make-model"
+		],
+		"high_risk_claims": [],
+		"required_source_ids": []
+	},
+	"internal_linking": {
+		"relevant_neighbours": [
+			{
+				"slug": "las-vegas",
+				"linking_reason": "Named as an adjacent area in the page's own editorial judgement"
+			},
+			{
+				"slug": "north-las-vegas",
+				"linking_reason": "Named as an adjacent area in the page's own editorial judgement"
+			},
+			{
+				"slug": "summerlin",
+				"linking_reason": "Named as an adjacent area in the page's own editorial judgement"
+			},
+			{
+				"slug": "boulder-city",
+				"linking_reason": "Named as an adjacent area in the page's own editorial judgement"
+			}
+		],
+		"relevant_services": [
+			{
+				"slug": "sedans",
+				"linking_reason": "Service judged relevant to this page's audience"
+			},
+			{
+				"slug": "trucks-suvs",
+				"linking_reason": "Service judged relevant to this page's audience"
+			},
+			{
+				"slug": "damaged",
+				"linking_reason": "Service judged relevant to this page's audience"
+			},
+			{
+				"slug": "non-running",
+				"linking_reason": "Service judged relevant to this page's audience"
+			}
+		],
+		"anchor_guidance": "Anchor text follows the sentence it sits in. Vary it. Do not link every page to every other page — a link needs a reason a reader would recognise (SEO_STANDARDS.md §12).",
+		"do_not_link": []
+	},
+	"sibling_constraints": {
+		"compared_against": [
+			"boulder-city",
+			"enterprise",
+			"las-vegas",
+			"north-las-vegas",
+			"paradise",
+			"spring-valley",
+			"summerlin"
+		],
+		"structures_to_avoid": [
+			"No structural overlap measured — still derive structure from this page's own purpose"
+		],
+		"questions_already_answered": [
+			"already answered on boulder-city: Is towing really free from Boulder City?",
+			"already answered on boulder-city: How quickly can you pick up a car in Boulder City?",
+			"already answered on boulder-city: Do you buy junk cars in the Boulder City historic district?",
+			"already answered on boulder-city: What types of vehicles do you buy in Boulder City?",
+			"already answered on enterprise: Do you serve the Silverado Ranch area of Enterprise?",
+			"already answered on enterprise: How much will you pay for my junk car in Enterprise?",
+			"already answered on enterprise: Can you pick up a car that has been sitting for years in Enterprise?",
+			"already answered on enterprise: Is there any paperwork required to sell a junk car in Enterprise?",
+			"already answered on las-vegas: How much will you pay for my junk car in Las Vegas?",
+			"already answered on las-vegas: Do you buy cars without a title in Las Vegas?",
+			"already answered on las-vegas: How fast can you pick up my junk car in Las Vegas?",
+			"already answered on las-vegas: Is there any cost for towing in Las Vegas?",
+			"already answered on north-las-vegas: Do you buy junk cars near Nellis Air Force Base?",
+			"already answered on north-las-vegas: How much is my junk car worth in North Las Vegas?",
+			"already answered on north-las-vegas: Can you pick up a car from an apartment complex in North Las Vegas?",
+			"already answered on north-las-vegas: Do I need to be present for the pickup in North Las Vegas?",
+			"already answered on paradise: Do you pick up junk cars near UNLV in Paradise?",
+			"already answered on paradise: How much do you pay for junk cars in Paradise?",
+			"already answered on paradise: Can you pick up a car from a commercial property in Paradise?",
+			"already answered on paradise: Is same-day pickup available in Paradise?",
+			"already answered on spring-valley: How fast can you pick up a junk car in Spring Valley?",
+			"already answered on spring-valley: Do you buy cars from apartment complexes in Spring Valley?",
+			"already answered on spring-valley: What's the minimum you'll pay for a junk car in Spring Valley?",
+			"already answered on spring-valley: Can I sell a car with a dead battery in Spring Valley?",
+			"already answered on summerlin: Can you pick up a junk car from my Summerlin HOA community?",
+			"already answered on summerlin: How much do you pay for junk cars in Summerlin?",
+			"already answered on summerlin: Do you buy cars that failed smog in Summerlin?",
+			"already answered on summerlin: How fast can you remove a junk car from Summerlin?"
+		],
+		"generic_explanations_to_avoid": [],
+		"shared_entities": [
+			"offer",
+			"paid",
+			"paperwork",
+			"payment",
+			"pickup",
+			"quote",
+			"removal",
+			"schedule",
+			"scheduling",
+			"title",
+			"tow",
+			"towing",
+			"transfer"
+		],
+		"shared_claims": [
+			"Accept the offer and we schedule a free pickup at your North Las Vegas address.",
+			"As the area has grown, so has our service — we buy junk cars from Enterprise residents eve",
+			"Boulder City is a bit further from our base, but we still offer the same free towing, same",
+			"Boulder City's smaller-town feel means word travels fast, and many of our Boulder City cus",
+			"Call {phone}, describe your vehicle, and receive a firm cash offer.",
+			"Enterprise is one of the fastest-growing communities south of the Las Vegas Strip, stretch",
+			"Every pickup in North Las Vegas includes free towing.",
+			"Free towing from your driveway, same-day service, and cash paid on the spot.",
+			"Free towing on every vehicle, no matter the condition.",
+			"Free towing, no fees, and cash in hand the same day for most pickups.",
+			"Free towing, no hidden fees, and cash in hand before our truck leaves your driveway.",
+			"Free towing, same-day pickup, and cash on the spot for vehicles in any condition.",
+			"From downtown to the west side, we pick up junk and unwanted vehicles throughout Las Vegas",
+			"If you have a car, truck, SUV, or van you want gone, we will make you a cash offer and pic",
+			"If you have a junk or unwanted vehicle in Boulder City, we will come to you with free towi",
+			"Many Summerlin communities have strict HOA regulations about vehicles parked on driveways ",
+			"No extra charge for the distance — the offer you get is the cash you keep.",
+			"Our tow truck arrives at the agreed time, we verify the vehicle, pay you in cash, and load",
+			"Paradise is one of the most densely populated areas in the Las Vegas valley, stretching fr",
+			"Second, we give you a firm cash offer — no haggling, no lowball games."
+		],
+		"topic_opportunities": [
+			"attributes_condition:inoperable",
+			"attributes_condition:overheating",
+			"attributes_condition:rusted",
+			"attributes_condition:stripped",
+			"attributes_condition:totaled",
+			"attributes_condition:unregistered",
+			"business_regulatory:clark county",
+			"business_regulatory:nevada dmv",
+			"process:flatbed",
+			"process:salvage",
+			"user_problem:compliance",
+			"user_problem:inherited",
+			"user_problem:insurance",
+			"user_problem:payout",
+			"user_problem:warning"
+		],
+		"calibrated_signals": {
+			"_note": "Phase 3B corpus percentiles, carried as editorial signals rather than blind rules. They describe this corpus and should be re-measured after any rewrite.",
+			"clone_signal_count": {
+				"observed": {
+					"count": 68,
+					"min": 0,
+					"max": 5,
+					"mean": 1.5588,
+					"p10": 0.0,
+					"p25": 1.0,
+					"p50": 1.0,
+					"p75": 2.0,
+					"p90": 3.0,
+					"p95": 4.0
+				},
+				"candidate_warn": 2,
+				"candidate_block": 3,
+				"note": "The recommended primary gate."
+			},
+			"structure_similarity": {
+				"observed": {
+					"p10": 0.0,
+					"p25": 0.75,
+					"p50": 0.8571,
+					"p75": 1.0,
+					"p90": 1.0,
+					"p95": 1.0
+				},
+				"candidate_warn": 0.7,
+				"candidate_block": 0.85,
+				"note": "Strongest single signal in this corpus — p50 is 0.857, so more than half of all sibling pairs are built to the same plan."
+			},
+			"entity_similarity_nonlocal": {
+				"observed": {
+					"p10": 0.1915,
+					"p25": 0.2766,
+					"p50": 0.4164,
+					"p75": 0.5263,
+					"p90": 0.6,
+					"p95": 0.6608
+				},
+				"candidate_warn": 0.5,
+				"candidate_block": 0.65,
+				"note": "Two pages covering the identical non-local topic frame differ only in place names, whatever their wording."
+			},
+			"faq_topic_similarity": {
+				"observed": {
+					"p10": 0.1282,
+					"p25": 0.1714,
+					"p50": 0.2272,
+					"p75": 0.2857,
+					"p90": 0.3333,
+					"p95": 0.3417
+				},
+				"candidate_warn": 0.28,
+				"candidate_block": 0.4,
+				"note": "Compared by topic, not phrasing — rewording an answer while keeping its substance is explicitly superficial."
+			}
+		}
+	},
+	"writing_constraints": {
+		"tone": "Plain, direct, and useful to someone with a problem to solve. No sales register.",
+		"audience": "A vehicle owner deciding whether and how to sell a non-running or damaged car.",
+		"content_depth": "Short. This page has few distinct questions; padding it would add the filler the corpus already has too much of.",
+		"target_range_words": [
+			350,
+			700
+		],
+		"target_range_justification": "Derived from 4 distinct decision questions and the page's intent. Not a target to fill — stopping early is better than padding.",
+		"forbidden_patterns": [
+			"Invented statistics, reviews, testimonials or customer stories",
+			"Invented first-hand experience, years in business, staff, or local ownership",
+			"Fabricated citations, or source text quoted into prose to look authoritative",
+			"Any factual statement not traceable to an allowed claim id",
+			"Presenting a hypothesis or unverified claim as established fact",
+			"Rewriting, spinning or paraphrasing a sibling page",
+			"Swapping a city, neighbourhood, ZIP or landmark name for a sibling's and calling it different",
+			"Reusing a sibling's section order — identical structure was 50 of 68 sibling pairs",
+			"Restating a sibling's FAQ substance in new wording",
+			"Explaining the same generic process every sibling already explains",
+			"Inserting keyword variants that a person would not say out loud",
+			"Padding to reach a word count"
+		]
+	},
+	"source_artifacts": {
+		"angles": "content-engine/angles/henderson.json",
+		"claims": "content-engine/claims/henderson.json",
+		"place": "content-engine/place/henderson.json",
+		"intent": "content-engine/intent/henderson.json",
+		"entities": "content-engine/entities/henderson.json",
+		"queries": "content-engine/queries/henderson.json",
+		"retro_brief": "content-engine/brief/henderson.json",
+		"differentiation_report": "content-engine/reports/differentiation/henderson.json",
+		"corpus_summary": "content-engine/reports/corpus-summary.json"
+	}
+}

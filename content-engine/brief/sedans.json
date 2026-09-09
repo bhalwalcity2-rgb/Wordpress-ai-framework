@@ -1,0 +1,370 @@
+{
+	"_generated_by": "content-engine/bin/analyze-corpus.py",
+	"_purpose": "Analytical record of what this page does TODAY. Not a writing instruction — it must never be used to reproduce the weaknesses it documents.",
+	"_method": "Lexical extraction, standard library only. No semantic model.",
+	"slug": "sedans",
+	"page_type": "service",
+	"renders": true,
+	"word_count": 508,
+	"current_primary_topic": "junk car buying — sedans",
+	"current_primary_intent": "transactional",
+	"secondary_intents": [
+		"local",
+		"commercial",
+		"informational"
+	],
+	"current_keyword_focus": {
+		"seo_title": "Cash for Junk Sedans & Coupes in Las Vegas | {business}",
+		"hero_heading": "Cash for Junk Sedans & Coupes",
+		"top_terms": [
+			"sedans",
+			"buy",
+			"sedan",
+			"condition",
+			"offer",
+			"cash",
+			"mileage",
+			"las",
+			"vegas",
+			"high",
+			"most",
+			"purchase"
+		]
+	},
+	"current_query_entities": [
+		"How much is my junk sedan worth?",
+		"Do you buy sedans that don't run?",
+		"Will you buy my sedan if it has high mileage?",
+		"Can I sell a sedan without a title in Las Vegas?"
+	],
+	"current_entities": {
+		"main_topic": "junk car buying — sedans",
+		"local": [
+			"Las Vegas"
+		],
+		"process": [
+			"inspection",
+			"offer",
+			"pickup",
+			"schedule",
+			"title",
+			"tow"
+		],
+		"attributes_condition": [
+			"blown",
+			"junk",
+			"running"
+		],
+		"user_problem": [],
+		"business_regulatory": [],
+		"vehicle_makes": [
+			"bmw",
+			"chevrolet",
+			"chevy",
+			"ford",
+			"honda",
+			"hyundai",
+			"infiniti",
+			"kia",
+			"lexus",
+			"mercedes",
+			"nissan",
+			"toyota"
+		],
+		"other_proper_nouns": [
+			"Call"
+		]
+	},
+	"current_local_entities": [
+		"Las Vegas"
+	],
+	"entity_relationships": {
+		"local--process": 3,
+		"attributes_condition--process": 1,
+		"attributes_condition--local": 1
+	},
+	"current_sections": [
+		{
+			"type": "content",
+			"heading": "We Buy Sedans and Coupes in Any Condition",
+			"has_table": false,
+			"has_blocks": false,
+			"has_image": false
+		},
+		{
+			"type": "content",
+			"heading": "How to Sell Your Junk Sedan in Las Vegas",
+			"has_table": false,
+			"has_blocks": false,
+			"has_image": false
+		},
+		{
+			"type": "content",
+			"heading": "Common Sedans We Buy",
+			"has_table": false,
+			"has_blocks": false,
+			"has_image": false
+		},
+		{
+			"type": "content",
+			"heading": "Why Sell Your Old Sedan to Us Instead of a Dealership",
+			"has_table": false,
+			"has_blocks": false,
+			"has_image": false
+		}
+	],
+	"current_faq_topics": [
+		"How much is my junk sedan worth?",
+		"Do you buy sedans that don't run?",
+		"Will you buy my sedan if it has high mileage?",
+		"Can I sell a sedan without a title in Las Vegas?"
+	],
+	"current_internal_links": {
+		"declared_legacy_metadata": {
+			"services": [
+				"trucks-suvs",
+				"damaged",
+				"non-running"
+			],
+			"locations": [
+				"las-vegas",
+				"henderson",
+				"north-las-vegas",
+				"summerlin",
+				"spring-valley"
+			]
+		},
+		"actually_rendered": {
+			"areas_sections": [],
+			"services_sections": [],
+			"autolinked_cities": [
+				"Las Vegas"
+			]
+		},
+		"declared_but_not_rendered": [
+			"damaged",
+			"henderson",
+			"las-vegas",
+			"non-running",
+			"north-las-vegas",
+			"spring-valley",
+			"summerlin",
+			"trucks-suvs"
+		]
+	},
+	"current_business_claims": [
+		{
+			"text": "Cash for Junk Sedans & Coupes.",
+			"types": [
+				"pricing_payment"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "We buy sedans and coupes of any age, mileage, or condition across the Las Vegas valley — faded paint, worn interior, and high mileage never disqualify a vehicle from an offer.",
+			"types": [
+				"service_guarantee"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "Sedans and coupes are the most common vehicles we purchase across the Las Vegas valley.",
+			"types": [
+				"unverifiable"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "Whether your sedan has a blown head gasket, a transmission that slips, body damage from a parking lot fender bender, or simply has 200,000 miles on it and isn't worth repairing, we'll make you a cash offer.",
+			"types": [
+				"pricing_payment"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "We give you a firm cash offer on the phone — no appointment needed and no in-person inspection required to get a price.",
+			"types": [
+				"pricing_payment",
+				"service_guarantee"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "Accept the offer and we schedule a free pickup at your location anywhere in the Las Vegas valley.",
+			"types": [
+				"service_guarantee"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "Our tow truck arrives, we verify the car, pay you cash, and load it up.",
+			"types": [
+				"pricing_payment"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "The whole process typically takes under an hour once we arrive.",
+			"types": [
+				"unverifiable"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "While we accept all makes and models, the most common sedans we purchase include Honda Accord, Honda Civic, Toyota Camry, Toyota Corolla, Nissan Altima, Nissan Sentra, Chevrolet Malibu, Chevrolet Impala, Ford Fusion, Ford Focus, Hyundai Sonata, Hyundai Elantra, and Kia Optima.",
+			"types": [
+				"unverifiable"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "Dealerships typically won't offer anything meaningful for a car that needs significant repairs or has high mileage — they'll either decline it entirely or offer a few hundred dollars as a \"trade-in allowance\" that they make up for elsewhere in the deal.",
+			"types": [
+				"unverifiable"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "We buy the car for what it's actually worth in its current condition.",
+			"types": [
+				"pricing_payment"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "You get cash and we take the car.",
+			"types": [
+				"pricing_payment"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "How much is my junk sedan worth?",
+			"types": [
+				"pricing_payment"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "Can I sell a sedan without a title in Las Vegas?",
+			"types": [
+				"government_legal"
+			],
+			"money": [],
+			"risk": "high"
+		},
+		{
+			"text": "Most junk sedans in the Las Vegas area sell for $200 to $2,500 depending on the year, make, weight, and condition.",
+			"types": [
+				"pricing_payment",
+				"unverifiable"
+			],
+			"money": [
+				"$200 to $2,500"
+			],
+			"risk": "medium"
+		},
+		{
+			"text": "Non-running sedans are one of the most common vehicles we purchase.",
+			"types": [
+				"unverifiable"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "High mileage is never a disqualifier.",
+			"types": [
+				"service_guarantee"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "In many cases, yes.",
+			"types": [
+				"unverifiable"
+			],
+			"money": [],
+			"risk": "low"
+		}
+	],
+	"claim_counts": {
+		"pricing_payment": 8,
+		"service_guarantee": 4,
+		"unverifiable": 7,
+		"government_legal": 1
+	},
+	"current_information_gain": {
+		"verdict": "HAS_INFORMATION_GAIN",
+		"unique_phrase_count": 456,
+		"shared_phrase_count": 44,
+		"boilerplate_phrase_count": 1,
+		"unique_share": 0.9102,
+		"boilerplate_share": 0.002,
+		"sample_unique_phrases": [
+			"000 200 000 even 300",
+			"000 even 300 000 miles",
+			"000 miles in many cases",
+			"000 miles on it and",
+			"150 000 200 000 even",
+			"2 500 depending on the",
+			"200 000 even 300 000",
+			"200 000 miles on it"
+		],
+		"sample_boilerplate_phrases": [
+			"year make model and condition"
+		],
+		"unique_local_entities": [],
+		"unique_nonlocal_entities": [
+			"process:inspection",
+			"process:pickup",
+			"process:schedule"
+		],
+		"has_unique_structure": false
+	},
+	"current_unique_elements": {
+		"sections_with_structure": [],
+		"unique_local_entities": [],
+		"unique_phrase_share": 0.9102
+	},
+	"current_generic_elements": {
+		"prose_only_sections": [
+			"content[0]: We Buy Sedans and Coupes in Any Condition",
+			"content[1]: How to Sell Your Junk Sedan in Las Vegas",
+			"content[2]: Common Sedans We Buy",
+			"content[3]: Why Sell Your Old Sedan to Us Instead of a Dealership"
+		],
+		"boilerplate_phrase_share": 0.002,
+		"shared_local_entities": [
+			"Las Vegas"
+		]
+	},
+	"likely_sibling_overlap": {
+		"max_masked_vocabulary_similarity": 0.2119,
+		"max_clone_signals": 1,
+		"closest_sibling": "trucks-suvs",
+		"superficial_differentiation_flags": [
+			"IDENTICAL_STRUCTURE"
+		],
+		"assessment": "REAL_DIFFERENTIATION"
+	},
+	"known_quality_issues": [
+		"STRUCTURE_MATCHES_SIBLINGS",
+		"NO_PAGE_SPECIFIC_CLOSING_CTA"
+	],
+	"rewrite_priority": "REFINE"
+}

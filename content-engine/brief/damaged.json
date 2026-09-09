@@ -1,0 +1,294 @@
+{
+	"_generated_by": "content-engine/bin/analyze-corpus.py",
+	"_purpose": "Analytical record of what this page does TODAY. Not a writing instruction — it must never be used to reproduce the weaknesses it documents.",
+	"_method": "Lexical extraction, standard library only. No semantic model.",
+	"slug": "damaged",
+	"page_type": "service",
+	"renders": true,
+	"word_count": 523,
+	"current_primary_topic": "junk car buying — damaged",
+	"current_primary_intent": "transactional",
+	"secondary_intents": [
+		"local",
+		"commercial",
+		"informational"
+	],
+	"current_keyword_focus": {
+		"seo_title": "Cash for Accident & Storm-Damaged Cars in Las Vegas | {business}",
+		"hero_heading": "Cash for Accident & Storm-Damaged Vehicles",
+		"top_terms": [
+			"damage",
+			"vehicles",
+			"flood",
+			"damaged",
+			"vehicle",
+			"car",
+			"buy",
+			"up",
+			"cash",
+			"tow",
+			"las",
+			"vegas"
+		]
+	},
+	"current_query_entities": [
+		"How much is a totaled car worth in Las Vegas?",
+		"Do you buy cars with salvage titles?",
+		"Can you pick up a damaged car from a tow yard?",
+		"Do you buy flood-damaged cars?"
+	],
+	"current_entities": {
+		"main_topic": "junk car buying — damaged",
+		"local": [
+			"Las Vegas"
+		],
+		"process": [
+			"offer",
+			"quote",
+			"salvage",
+			"title",
+			"tow",
+			"towing",
+			"transfer"
+		],
+		"attributes_condition": [
+			"broken",
+			"damaged",
+			"totaled"
+		],
+		"user_problem": [
+			"fine",
+			"insurance"
+		],
+		"business_regulatory": [],
+		"vehicle_makes": [],
+		"other_proper_nouns": [
+			"Yes"
+		]
+	},
+	"current_local_entities": [
+		"Las Vegas"
+	],
+	"entity_relationships": {
+		"attributes_condition--process": 3,
+		"process--user_problem": 2,
+		"attributes_condition--user_problem": 1,
+		"attributes_condition--local": 1
+	},
+	"current_sections": [
+		{
+			"type": "content",
+			"heading": "We Buy Damaged Vehicles Others Won't Touch",
+			"has_table": false,
+			"has_blocks": false,
+			"has_image": false
+		},
+		{
+			"type": "content",
+			"heading": "Types of Damage We Accept",
+			"has_table": false,
+			"has_blocks": false,
+			"has_image": false
+		},
+		{
+			"type": "content",
+			"heading": "How to Sell a Damaged Car in Las Vegas",
+			"has_table": false,
+			"has_blocks": false,
+			"has_image": false
+		},
+		{
+			"type": "content",
+			"heading": "Storm Damage and Las Vegas Weather",
+			"has_table": false,
+			"has_blocks": false,
+			"has_image": false
+		}
+	],
+	"current_faq_topics": [
+		"How much is a totaled car worth in Las Vegas?",
+		"Do you buy cars with salvage titles?",
+		"Can you pick up a damaged car from a tow yard?",
+		"Do you buy flood-damaged cars?"
+	],
+	"current_internal_links": {
+		"declared_legacy_metadata": {
+			"services": [
+				"sedans",
+				"trucks-suvs",
+				"non-running"
+			],
+			"locations": [
+				"las-vegas",
+				"henderson",
+				"north-las-vegas",
+				"summerlin",
+				"spring-valley"
+			]
+		},
+		"actually_rendered": {
+			"areas_sections": [],
+			"services_sections": [],
+			"autolinked_cities": [
+				"Las Vegas"
+			]
+		},
+		"declared_but_not_rendered": [
+			"henderson",
+			"las-vegas",
+			"non-running",
+			"north-las-vegas",
+			"sedans",
+			"spring-valley",
+			"summerlin",
+			"trucks-suvs"
+		]
+	},
+	"current_business_claims": [
+		{
+			"text": "Cash for Accident & Storm-Damaged Vehicles.",
+			"types": [
+				"pricing_payment"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "Insurance may have totaled it, the body shop quote is more than the car is worth, or the damage is so severe that no dealership will take it as a trade-in.",
+			"types": [
+				"pricing_payment"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "We'll tow it from wherever it sits and pay you cash.",
+			"types": [
+				"pricing_payment"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "The metal, parts, and components are worth something regardless of the vehicle's driveability.",
+			"types": [
+				"pricing_payment"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "We'll give you a firm cash offer based on your description.",
+			"types": [
+				"pricing_payment",
+				"service_guarantee"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "If your car was caught in a Las Vegas flash flood, selling it to us for cash is often the fastest and most practical option.",
+			"types": [
+				"pricing_payment",
+				"unverifiable"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "How much is a totaled car worth in Las Vegas?",
+			"types": [
+				"pricing_payment"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "Totaled vehicles typically sell for $300 to $3,000+.",
+			"types": [
+				"pricing_payment",
+				"unverifiable"
+			],
+			"money": [
+				"$300 to $3,000+"
+			],
+			"risk": "medium"
+		},
+		{
+			"text": "Flood and water damage is one of the most common types of damage we deal with, especially after monsoon season in Las Vegas",
+			"types": [
+				"unverifiable"
+			],
+			"money": [],
+			"risk": "low"
+		}
+	],
+	"claim_counts": {
+		"pricing_payment": 8,
+		"service_guarantee": 1,
+		"unverifiable": 3
+	},
+	"current_information_gain": {
+		"verdict": "HAS_INFORMATION_GAIN",
+		"unique_phrase_count": 502,
+		"shared_phrase_count": 16,
+		"boilerplate_phrase_count": 1,
+		"unique_share": 0.9672,
+		"boilerplate_share": 0.0019,
+		"sample_unique_phrases": [
+			"3 000 heavier vehicles and",
+			"300 to 3 000 heavier",
+			"a body shop tow yard",
+			"a collision hailstorm or flood",
+			"a damaged car from a",
+			"a desert city but flash",
+			"a firm cash offer based",
+			"a las vegas flash flood"
+		],
+		"sample_boilerplate_phrases": [
+			"can you pick up a"
+		],
+		"unique_local_entities": [],
+		"unique_nonlocal_entities": [
+			"attributes_condition:damaged",
+			"attributes_condition:totaled",
+			"process:quote",
+			"process:salvage",
+			"user_problem:fine",
+			"user_problem:insurance"
+		],
+		"has_unique_structure": false
+	},
+	"current_unique_elements": {
+		"sections_with_structure": [],
+		"unique_local_entities": [],
+		"unique_phrase_share": 0.9672
+	},
+	"current_generic_elements": {
+		"prose_only_sections": [
+			"content[0]: We Buy Damaged Vehicles Others Won't Touch",
+			"content[1]: Types of Damage We Accept",
+			"content[2]: How to Sell a Damaged Car in Las Vegas",
+			"content[3]: Storm Damage and Las Vegas Weather"
+		],
+		"boilerplate_phrase_share": 0.0019,
+		"shared_local_entities": [
+			"Las Vegas"
+		]
+	},
+	"likely_sibling_overlap": {
+		"max_masked_vocabulary_similarity": 0.1959,
+		"max_clone_signals": 1,
+		"closest_sibling": "non-running",
+		"superficial_differentiation_flags": [
+			"IDENTICAL_STRUCTURE",
+			"SHARED_HEADING_PLAN"
+		],
+		"assessment": "REAL_DIFFERENTIATION"
+	},
+	"known_quality_issues": [
+		"STRUCTURE_MATCHES_SIBLINGS",
+		"NO_PAGE_SPECIFIC_CLOSING_CTA"
+	],
+	"rewrite_priority": "REFINE"
+}

@@ -1,0 +1,350 @@
+{
+	"_generated_by": "content-engine/bin/analyze-corpus.py",
+	"_purpose": "Analytical record of what this page does TODAY. Not a writing instruction — it must never be used to reproduce the weaknesses it documents.",
+	"_method": "Lexical extraction, standard library only. No semantic model.",
+	"slug": "non-running",
+	"page_type": "service",
+	"renders": true,
+	"word_count": 609,
+	"current_primary_topic": "junk car buying — non running",
+	"current_primary_intent": "transactional",
+	"secondary_intents": [
+		"commercial",
+		"local",
+		"informational"
+	],
+	"current_keyword_focus": {
+		"seo_title": "Cash for Non-Running Cars in Las Vegas | {business}",
+		"hero_heading": "Cash for Non-Running & Mechanical Failure Vehicles",
+		"top_terms": [
+			"car",
+			"vehicles",
+			"won't",
+			"start",
+			"vehicle",
+			"don't",
+			"need",
+			"know",
+			"non",
+			"running",
+			"still",
+			"value"
+		]
+	},
+	"current_query_entities": [
+		"How much is a non-running car worth in Las Vegas?",
+		"Do I need to know what's wrong with my car before calling?",
+		"Can you tow a car that has flat tires and won't roll?",
+		"Will you buy a car that has been sitting for years and won't start?",
+		"Is it worth selling a car with a blown engine?"
+	],
+	"current_entities": {
+		"main_topic": "junk car buying — non running",
+		"local": [
+			"Las Vegas"
+		],
+		"process": [
+			"flatbed",
+			"offer",
+			"scrap",
+			"tow",
+			"towing"
+		],
+		"attributes_condition": [
+			"blown",
+			"broken",
+			"running"
+		],
+		"user_problem": [],
+		"business_regulatory": [],
+		"vehicle_makes": [],
+		"other_proper_nouns": [
+			"Call",
+			"Non",
+			"Yes"
+		]
+	},
+	"current_local_entities": [
+		"Las Vegas"
+	],
+	"entity_relationships": {
+		"local--process": 1,
+		"attributes_condition--process": 1,
+		"attributes_condition--local": 1
+	},
+	"current_sections": [
+		{
+			"type": "content",
+			"heading": "We Specialize in Non-Running Vehicles",
+			"has_table": false,
+			"has_blocks": false,
+			"has_image": false
+		},
+		{
+			"type": "content",
+			"heading": "Common Mechanical Issues We Buy",
+			"has_table": false,
+			"has_blocks": false,
+			"has_image": false
+		},
+		{
+			"type": "content",
+			"heading": "How to Sell a Non-Running Car in Las Vegas",
+			"has_table": false,
+			"has_blocks": false,
+			"has_image": false
+		},
+		{
+			"type": "content",
+			"heading": "Why Non-Running Cars Still Have Value",
+			"has_table": false,
+			"has_blocks": false,
+			"has_image": false
+		}
+	],
+	"current_faq_topics": [
+		"How much is a non-running car worth in Las Vegas?",
+		"Do I need to know what's wrong with my car before calling?",
+		"Can you tow a car that has flat tires and won't roll?",
+		"Will you buy a car that has been sitting for years and won't start?",
+		"Is it worth selling a car with a blown engine?"
+	],
+	"current_internal_links": {
+		"declared_legacy_metadata": {
+			"services": [
+				"sedans",
+				"trucks-suvs",
+				"damaged"
+			],
+			"locations": [
+				"las-vegas",
+				"henderson",
+				"north-las-vegas",
+				"summerlin",
+				"spring-valley"
+			]
+		},
+		"actually_rendered": {
+			"areas_sections": [],
+			"services_sections": [],
+			"autolinked_cities": [
+				"Las Vegas"
+			]
+		},
+		"declared_but_not_rendered": [
+			"damaged",
+			"henderson",
+			"las-vegas",
+			"north-las-vegas",
+			"sedans",
+			"spring-valley",
+			"summerlin",
+			"trucks-suvs"
+		]
+	},
+	"current_business_claims": [
+		{
+			"text": "Cash for Non-Running & Mechanical Failure Vehicles.",
+			"types": [
+				"pricing_payment"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "A vehicle that won't start is exactly the kind of car we specialize in.",
+			"types": [
+				"testimonial_review"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "While most buyers want cars that drive off the lot, we specifically seek out vehicles that don't start, don't move, or aren't safe to drive.",
+			"types": [
+				"testimonial_review",
+				"unverifiable"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "Call us, tell us what you know about the problem, and we'll make you a cash offer based on the vehicle itself — not on whether it runs.",
+			"types": [
+				"pricing_payment"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "We purchase vehicles with every type of mechanical failure, including blown or seized engines, failed or slipping transmissions, overheated engines with cracked heads or warped blocks, broken timing belts or chains, catastrophic electrical failures, failed fuel pumps or fuel systems, broken axles and differential failures, and vehicles that simply won't start for unknown reasons.",
+			"types": [
+				"testimonial_review"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "If your mechanic told you it would cost more to fix than the car is worth, that's all we need to know.",
+			"types": [
+				"pricing_payment"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "We don't need a diagnosis — a description like \"it won't start\" or \"the engine overheated and now it makes a knocking sound\" is enough for us to make an offer.",
+			"types": [
+				"testimonial_review"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "Towing is always free, no matter where the vehicle is located in the Las Vegas valley.",
+			"types": [
+				"service_guarantee"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "We pay you cash before the car leaves your property.",
+			"types": [
+				"pricing_payment"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "Beyond the metal, many individual components — alternators, starters, AC compressors, catalytic converters, wheels, and body panels — can be refurbished and resold.",
+			"types": [
+				"testimonial_review",
+				"unverifiable"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "The value of a non-running vehicle depends on its weight, the demand for its specific parts, and the current market price of scrap metal.",
+			"types": [
+				"pricing_payment"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "How much is a non-running car worth in Las Vegas?",
+			"types": [
+				"pricing_payment"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "Will you buy a car that has been sitting for years and won't start?",
+			"types": [
+				"testimonial_review"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "Is it worth selling a car with a blown engine?",
+			"types": [
+				"pricing_payment"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "Non-running vehicles typically sell for $200 to $3,000+ depending on the year, make, model, weight, and what parts are intact.",
+			"types": [
+				"pricing_payment",
+				"unverifiable"
+			],
+			"money": [
+				"$200 to $3,000+"
+			],
+			"risk": "medium"
+		},
+		{
+			"text": "Just tell us what you know — it won't start, it overheated, it makes a noise — and we'll base our offer on the vehicle itself.",
+			"types": [
+				"testimonial_review"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "The longer a car sits, the less likely it is to start — but it still has value to us.",
+			"types": [
+				"testimonial_review"
+			],
+			"money": [],
+			"risk": "medium"
+		}
+	],
+	"claim_counts": {
+		"pricing_payment": 8,
+		"testimonial_review": 8,
+		"unverifiable": 3,
+		"service_guarantee": 1
+	},
+	"current_information_gain": {
+		"verdict": "WORDING_ONLY_GAIN",
+		"unique_phrase_count": 565,
+		"shared_phrase_count": 37,
+		"boilerplate_phrase_count": 0,
+		"unique_share": 0.9385,
+		"boilerplate_share": 0.0,
+		"sample_unique_phrases": [
+			"200 to 3 000 depending",
+			"a blown engine non running",
+			"a car sits the less",
+			"a car that has flat",
+			"a car that won't run",
+			"a car with a blown",
+			"a cash offer based on",
+			"a description like it won't"
+		],
+		"sample_boilerplate_phrases": [],
+		"unique_local_entities": [],
+		"unique_nonlocal_entities": [],
+		"has_unique_structure": false
+	},
+	"current_unique_elements": {
+		"sections_with_structure": [],
+		"unique_local_entities": [],
+		"unique_phrase_share": 0.9385
+	},
+	"current_generic_elements": {
+		"prose_only_sections": [
+			"content[0]: We Specialize in Non-Running Vehicles",
+			"content[1]: Common Mechanical Issues We Buy",
+			"content[2]: How to Sell a Non-Running Car in Las Vegas",
+			"content[3]: Why Non-Running Cars Still Have Value"
+		],
+		"boilerplate_phrase_share": 0.0,
+		"shared_local_entities": [
+			"Las Vegas"
+		]
+	},
+	"likely_sibling_overlap": {
+		"max_masked_vocabulary_similarity": 0.2105,
+		"max_clone_signals": 2,
+		"closest_sibling": "trucks-suvs",
+		"superficial_differentiation_flags": [
+			"IDENTICAL_STRUCTURE",
+			"SHARED_FAQ_ANSWER_SUBSTANCE",
+			"SHARED_HEADING_PLAN"
+		],
+		"assessment": "PARTIAL_DIFFERENTIATION"
+	},
+	"known_quality_issues": [
+		"STRUCTURE_MATCHES_SIBLINGS",
+		"FAQ_SUBSTANCE_SHARED_WITH_SIBLINGS",
+		"NO_PAGE_SPECIFIC_CLOSING_CTA"
+	],
+	"rewrite_priority": "REWRITE"
+}

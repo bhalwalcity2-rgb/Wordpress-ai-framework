@@ -1,0 +1,420 @@
+{
+	"_generated_by": "content-engine/bin/analyze-corpus.py",
+	"_purpose": "Analytical record of what this page does TODAY. Not a writing instruction — it must never be used to reproduce the weaknesses it documents.",
+	"_method": "Lexical extraction, standard library only. No semantic model.",
+	"slug": "las-vegas",
+	"page_type": "location",
+	"renders": false,
+	"word_count": 569,
+	"current_primary_topic": "junk car buying in Las Vegas",
+	"current_primary_intent": "local",
+	"secondary_intents": [
+		"transactional",
+		"commercial"
+	],
+	"current_keyword_focus": {
+		"seo_title": "We Buy Junk Cars in Las Vegas, NV | {business}",
+		"hero_heading": "We Buy Junk Cars in Las Vegas",
+		"top_terms": [
+			"las",
+			"vegas",
+			"call",
+			"car",
+			"vehicle",
+			"junk",
+			"free",
+			"towing",
+			"cash",
+			"buy",
+			"condition",
+			"there"
+		]
+	},
+	"current_query_entities": [
+		"How much will you pay for my junk car in Las Vegas?",
+		"Do you buy cars without a title in Las Vegas?",
+		"How fast can you pick up my junk car in Las Vegas?",
+		"Is there any cost for towing in Las Vegas?"
+	],
+	"current_entities": {
+		"main_topic": "junk car buying in Las Vegas",
+		"local": [
+			"Centennial Hills",
+			"Las Vegas",
+			"Peccole Ranch",
+			"Summerlin"
+		],
+		"process": [
+			"offer",
+			"paperwork",
+			"pickup",
+			"quote",
+			"removal",
+			"schedule",
+			"title",
+			"tow",
+			"towing",
+			"transfer"
+		],
+		"attributes_condition": [
+			"damaged",
+			"flooded",
+			"junk",
+			"running",
+			"wrecked"
+		],
+		"user_problem": [],
+		"business_regulatory": [
+			"dmv"
+		],
+		"vehicle_makes": [],
+		"other_proper_nouns": [
+			"Call",
+			"How",
+			"Most",
+			"There"
+		]
+	},
+	"current_local_entities": [
+		"Centennial Hills",
+		"Las Vegas",
+		"Peccole Ranch",
+		"Summerlin"
+	],
+	"entity_relationships": {
+		"local--process": 8,
+		"attributes_condition--local": 5,
+		"attributes_condition--process": 2,
+		"business_regulatory--process": 1
+	},
+	"current_sections": [
+		{
+			"type": "content",
+			"heading": "Cash for Junk Cars Anywhere in Las Vegas",
+			"has_table": false,
+			"has_blocks": false,
+			"has_image": false
+		},
+		{
+			"type": "content",
+			"heading": "How Selling Your Junk Car in Las Vegas Works",
+			"has_table": false,
+			"has_blocks": false,
+			"has_image": false
+		},
+		{
+			"type": "content",
+			"heading": "Why Las Vegas Residents Choose Us",
+			"has_table": false,
+			"has_blocks": false,
+			"has_image": false
+		},
+		{
+			"type": "content",
+			"heading": "Las Vegas Neighborhoods We Serve",
+			"has_table": false,
+			"has_blocks": false,
+			"has_image": false
+		}
+	],
+	"current_faq_topics": [
+		"How much will you pay for my junk car in Las Vegas?",
+		"Do you buy cars without a title in Las Vegas?",
+		"How fast can you pick up my junk car in Las Vegas?",
+		"Is there any cost for towing in Las Vegas?"
+	],
+	"current_internal_links": {
+		"declared_legacy_metadata": {
+			"services": [
+				"sedans",
+				"trucks-suvs",
+				"damaged",
+				"non-running"
+			],
+			"locations": [
+				"henderson",
+				"north-las-vegas",
+				"summerlin",
+				"spring-valley",
+				"paradise"
+			]
+		},
+		"actually_rendered": {
+			"areas_sections": [],
+			"services_sections": [],
+			"autolinked_cities": [
+				"Summerlin"
+			]
+		},
+		"declared_but_not_rendered": [
+			"damaged",
+			"henderson",
+			"non-running",
+			"north-las-vegas",
+			"paradise",
+			"sedans",
+			"spring-valley",
+			"summerlin",
+			"trucks-suvs"
+		]
+	},
+	"current_business_claims": [
+		{
+			"text": "From downtown to the west side, we pick up junk and unwanted vehicles throughout Las Vegas — usually the same day you call.",
+			"types": [
+				"process_claim"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "Free towing, no hidden fees, and cash in hand before our truck leaves your driveway.",
+			"types": [
+				"pricing_payment",
+				"service_guarantee"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "If you have a car, truck, SUV, or van you want gone, we will make you a cash offer and pick it up for free.",
+			"types": [
+				"pricing_payment",
+				"service_guarantee"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "Second, we give you a firm cash offer — no haggling, no lowball games.",
+			"types": [
+				"pricing_payment",
+				"service_guarantee"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "The number we quote is the number you get.",
+			"types": [
+				"pricing_payment"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "Third, we schedule a free pickup at a time that works for you.",
+			"types": [
+				"service_guarantee"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "Our tow truck comes to your location anywhere in Las Vegas, we hand you cash, and we take the car.",
+			"types": [
+				"pricing_payment"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "Most sellers have cash in hand within hours of their first call.",
+			"types": [
+				"pricing_payment",
+				"process_claim",
+				"unverifiable"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "We handle all the paperwork, including the DMV title transfer.",
+			"types": [
+				"government_legal"
+			],
+			"money": [],
+			"risk": "high"
+		},
+		{
+			"text": "There are never any fees for towing, paperwork, or pickup.",
+			"types": [
+				"service_guarantee"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "No matter where your vehicle is located in the Las Vegas city limits, we come to you with free towing.",
+			"types": [
+				"service_guarantee"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "How much will you pay for my junk car in Las Vegas?",
+			"types": [
+				"pricing_payment"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "Do you buy cars without a title in Las Vegas?",
+			"types": [
+				"government_legal"
+			],
+			"money": [],
+			"risk": "high"
+		},
+		{
+			"text": "Offers typically range from $200 to $5,000 or more, depending on the year, make, model, weight, and condition of the vehicle.",
+			"types": [
+				"pricing_payment",
+				"unverifiable"
+			],
+			"money": [
+				"$200 to $5,000"
+			],
+			"risk": "medium"
+		},
+		{
+			"text": "Call us for a free, no-obligation quote specific to your car.",
+			"types": [
+				"pricing_payment",
+				"service_guarantee"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "In many cases, yes.",
+			"types": [
+				"unverifiable"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "Nevada law allows for alternative documentation in certain situations.",
+			"types": [
+				"government_legal"
+			],
+			"money": [],
+			"risk": "high"
+		},
+		{
+			"text": "Most pickups in Las Vegas happen the same day you call.",
+			"types": [
+				"process_claim",
+				"unverifiable"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "Depending on your location and our schedule, we can sometimes be there within a couple of hours.",
+			"types": [
+				"process_claim"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "Towing is always free, no matter where in Las Vegas your vehicle is located.",
+			"types": [
+				"service_guarantee"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "The full amount of your cash offer is what you receive — nothing is deducted for towing",
+			"types": [
+				"pricing_payment"
+			],
+			"money": [],
+			"risk": "medium"
+		}
+	],
+	"claim_counts": {
+		"process_claim": 4,
+		"pricing_payment": 10,
+		"service_guarantee": 8,
+		"unverifiable": 4,
+		"government_legal": 3
+	},
+	"current_information_gain": {
+		"verdict": "LOCAL_NAME_SUBSTITUTION_ONLY",
+		"unique_phrase_count": 479,
+		"shared_phrase_count": 80,
+		"boilerplate_phrase_count": 2,
+		"unique_share": 0.8538,
+		"boilerplate_share": 0.0036,
+		"sample_unique_phrases": [
+			"000 or more depending on",
+			"100 what you receive we",
+			"200 to 5 000 or",
+			"5 000 or more depending",
+			"a broker in another state",
+			"a car truck suv or",
+			"a cash offer and pick",
+			"a couple of hours never"
+		],
+		"sample_boilerplate_phrases": [
+			"we buy junk cars in",
+			"year make model and condition"
+		],
+		"unique_local_entities": [
+			"Centennial Hills",
+			"Peccole Ranch"
+		],
+		"unique_nonlocal_entities": [],
+		"has_unique_structure": false
+	},
+	"current_unique_elements": {
+		"sections_with_structure": [],
+		"unique_local_entities": [
+			"Centennial Hills",
+			"Peccole Ranch"
+		],
+		"unique_phrase_share": 0.8538
+	},
+	"current_generic_elements": {
+		"prose_only_sections": [
+			"content[0]: Cash for Junk Cars Anywhere in Las Vegas",
+			"content[1]: How Selling Your Junk Car in Las Vegas Works",
+			"content[2]: Why Las Vegas Residents Choose Us",
+			"content[3]: Las Vegas Neighborhoods We Serve"
+		],
+		"boilerplate_phrase_share": 0.0036,
+		"shared_local_entities": [
+			"Las Vegas",
+			"Summerlin"
+		]
+	},
+	"likely_sibling_overlap": {
+		"max_masked_vocabulary_similarity": 0.2863,
+		"max_clone_signals": 5,
+		"closest_sibling": "paradise",
+		"superficial_differentiation_flags": [
+			"IDENTICAL_STRUCTURE",
+			"LEXICAL_ECHO",
+			"SHARED_ENTITY_FRAME",
+			"SHARED_FAQ_ANSWER_SUBSTANCE",
+			"SHARED_FAQ_TOPICS",
+			"SHARED_HEADING_PLAN",
+			"SHARED_VOCABULARY"
+		],
+		"assessment": "ORPHAN"
+	},
+	"known_quality_issues": [
+		"DOES_NOT_RENDER — no page exists for this file",
+		"STRUCTURE_MATCHES_SIBLINGS",
+		"FAQ_SUBSTANCE_SHARED_WITH_SIBLINGS",
+		"SAME_TOPIC_FRAME_AS_SIBLINGS",
+		"NO_PAGE_SPECIFIC_CLOSING_CTA"
+	],
+	"rewrite_priority": "CONSIDER REMOVAL"
+}
