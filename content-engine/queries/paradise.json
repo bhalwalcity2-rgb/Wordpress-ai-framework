@@ -1,0 +1,59 @@
+{
+	"slug": "paradise",
+	"generated": {
+		"by": "bootstrap-research.py",
+		"note": "Scaffolded from the existing corpus by bootstrap-research.py. NO EXTERNAL RESEARCH WAS PERFORMED. Every item is marked with the evidence level it actually has; nothing here may be treated as verified until a researcher answers the open questions and records a real source."
+	},
+	"concepts": [
+		{
+			"concept": "cars junk near paradise pick",
+			"intent": "navigational_local",
+			"user_need": "Do you pick up junk cars near UNLV in Paradise?",
+			"representative_queries": [
+				"pick up junk cars near unlv paradise"
+			],
+			"covered_by_existing_page": true,
+			"shared_with_siblings": true,
+			"notes": "Derived from an existing FAQ. Not search volume data."
+		},
+		{
+			"concept": "cars how junk much paradise",
+			"intent": "navigational_local",
+			"user_need": "How much do you pay for junk cars in Paradise?",
+			"representative_queries": [
+				"how much pay junk cars paradise"
+			],
+			"covered_by_existing_page": true,
+			"shared_with_siblings": true,
+			"notes": "Derived from an existing FAQ. Not search volume data."
+		},
+		{
+			"concept": "car commercial paradise pick property",
+			"intent": "navigational_local",
+			"user_need": "Can you pick up a car from a commercial property in Paradise?",
+			"representative_queries": [
+				"pick up car commercial property paradise"
+			],
+			"covered_by_existing_page": true,
+			"shared_with_siblings": false,
+			"notes": "Derived from an existing FAQ. Not search volume data."
+		},
+		{
+			"concept": "available day paradise pickup",
+			"intent": "navigational_local",
+			"user_need": "Is same-day pickup available in Paradise?",
+			"representative_queries": [
+				"day pickup available paradise"
+			],
+			"covered_by_existing_page": true,
+			"shared_with_siblings": false,
+			"notes": "Derived from an existing FAQ. Not search volume data."
+		}
+	],
+	"coverage_summary": {
+		"total_concepts": 4,
+		"shared_with_siblings": 2,
+		"distinctive_concepts": 2,
+		"uncovered_by_existing_page": 0
+	}
+}

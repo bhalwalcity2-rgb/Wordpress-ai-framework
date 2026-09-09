@@ -1,0 +1,87 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "intent.schema.json",
+	"title": "Search intent artifact for one page",
+	"description": "content-engine/intent/{slug}.json. Queries mapped to intents and questions — not a keyword list. A query with no question behind it tells the writer nothing about what to say.",
+
+	"type": "object",
+	"required": [ "slug", "primary_intent", "conversion_goal", "queries" ],
+	"additionalProperties": false,
+
+	"properties": {
+		"slug": { "$ref": "research-common.schema.json#/definitions/nonEmptyString" },
+		"generated": { "type": "object", "additionalProperties": true },
+
+		"primary_intent": { "enum": [ "transactional", "commercial_investigation", "informational", "navigational_local" ] },
+		"secondary_intents": {
+			"type": "array",
+			"items": { "enum": [ "transactional", "commercial_investigation", "informational", "navigational_local" ] }
+		},
+		"user_stage": { "enum": [ "problem_aware", "solution_aware", "provider_aware", "ready_to_act" ] },
+		"conversion_goal": { "$ref": "research-common.schema.json#/definitions/nonEmptyString" },
+
+		"decision_questions": {
+			"description": "What the visitor must resolve before acting.",
+			"type": "array",
+			"items": {
+				"type": "object",
+				"required": [ "question", "required_answer" ],
+				"additionalProperties": false,
+				"properties": {
+					"question": { "$ref": "research-common.schema.json#/definitions/nonEmptyString" },
+					"required_answer": { "$ref": "research-common.schema.json#/definitions/nonEmptyString" },
+					"depends_on_claim": { "type": "string" },
+					"status": { "$ref": "research-common.schema.json#/definitions/researchStatus" }
+				}
+			}
+		},
+
+		"objections": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"required": [ "objection", "response_requirement" ],
+				"additionalProperties": false,
+				"properties": {
+					"objection": { "$ref": "research-common.schema.json#/definitions/nonEmptyString" },
+					"response_requirement": { "$ref": "research-common.schema.json#/definitions/nonEmptyString" },
+					"depends_on_claim": { "type": "string" }
+				}
+			}
+		},
+
+		"queries": {
+			"description": "Each query carries the question behind it and what would satisfy it. Coverage, not phrase harvesting — near-identical variants add nothing.",
+			"type": "array",
+			"items": {
+				"type": "object",
+				"required": [ "query", "intent", "question" ],
+				"additionalProperties": false,
+				"properties": {
+					"query": { "$ref": "research-common.schema.json#/definitions/nonEmptyString" },
+					"intent": { "enum": [ "transactional", "commercial_investigation", "informational", "navigational_local" ] },
+					"question": { "$ref": "research-common.schema.json#/definitions/nonEmptyString" },
+					"satisfied_by": { "type": "string" },
+					"provenance": {
+						"description": "Where this query came from. 'observed_in_existing_copy' is an inference from the site's own FAQs; it is not search volume data, and must not be presented as such.",
+						"enum": [ "observed_in_existing_copy", "derived_from_research", "hypothesis", "keyword_tool" ]
+					}
+				}
+			}
+		},
+
+		"cannibalisation_risk": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"required": [ "with_page", "reason" ],
+				"additionalProperties": false,
+				"properties": {
+					"with_page": { "type": "string" },
+					"reason": { "type": "string" },
+					"severity": { "$ref": "research-common.schema.json#/definitions/risk" }
+				}
+			}
+		}
+	}
+}

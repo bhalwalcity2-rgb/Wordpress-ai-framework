@@ -1,0 +1,59 @@
+{
+	"slug": "las-vegas",
+	"generated": {
+		"by": "bootstrap-research.py",
+		"note": "Scaffolded from the existing corpus by bootstrap-research.py. NO EXTERNAL RESEARCH WAS PERFORMED. Every item is marked with the evidence level it actually has; nothing here may be treated as verified until a researcher answers the open questions and records a real source."
+	},
+	"concepts": [
+		{
+			"concept": "car how junk las much",
+			"intent": "navigational_local",
+			"user_need": "How much will you pay for my junk car in Las Vegas?",
+			"representative_queries": [
+				"how much pay junk car las vegas"
+			],
+			"covered_by_existing_page": true,
+			"shared_with_siblings": true,
+			"notes": "Derived from an existing FAQ. Not search volume data."
+		},
+		{
+			"concept": "buy cars las title vegas",
+			"intent": "navigational_local",
+			"user_need": "Do you buy cars without a title in Las Vegas?",
+			"representative_queries": [
+				"buy cars without title las vegas"
+			],
+			"covered_by_existing_page": true,
+			"shared_with_siblings": true,
+			"notes": "Derived from an existing FAQ. Not search volume data."
+		},
+		{
+			"concept": "car fast how junk las",
+			"intent": "navigational_local",
+			"user_need": "How fast can you pick up my junk car in Las Vegas?",
+			"representative_queries": [
+				"how fast pick up junk car las vegas"
+			],
+			"covered_by_existing_page": true,
+			"shared_with_siblings": true,
+			"notes": "Derived from an existing FAQ. Not search volume data."
+		},
+		{
+			"concept": "any cost las there towing",
+			"intent": "navigational_local",
+			"user_need": "Is there any cost for towing in Las Vegas?",
+			"representative_queries": [
+				"there any cost towing las vegas"
+			],
+			"covered_by_existing_page": true,
+			"shared_with_siblings": true,
+			"notes": "Derived from an existing FAQ. Not search volume data."
+		}
+	],
+	"coverage_summary": {
+		"total_concepts": 4,
+		"shared_with_siblings": 4,
+		"distinctive_concepts": 0,
+		"uncovered_by_existing_page": 0
+	}
+}

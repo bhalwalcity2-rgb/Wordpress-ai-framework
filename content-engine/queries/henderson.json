@@ -1,0 +1,59 @@
+{
+	"slug": "henderson",
+	"generated": {
+		"by": "bootstrap-research.py",
+		"note": "Scaffolded from the existing corpus by bootstrap-research.py. NO EXTERNAL RESEARCH WAS PERFORMED. Every item is marked with the evidence level it actually has; nothing here may be treated as verified until a researcher answers the open questions and records a real source."
+	},
+	"concepts": [
+		{
+			"concept": "fast get henderson how",
+			"intent": "navigational_local",
+			"user_need": "How fast can you get to Henderson?",
+			"representative_queries": [
+				"how fast get henderson"
+			],
+			"covered_by_existing_page": true,
+			"shared_with_siblings": false,
+			"notes": "Derived from an existing FAQ. Not search volume data."
+		},
+		{
+			"concept": "comes fine hoa house tow",
+			"intent": "navigational_local",
+			"user_need": "Will my HOA fine me if a tow truck comes to my house?",
+			"representative_queries": [
+				"hoa fine tow truck comes house"
+			],
+			"covered_by_existing_page": true,
+			"shared_with_siblings": false,
+			"notes": "Derived from an existing FAQ. Not search volume data."
+		},
+		{
+			"concept": "age city community live neighborhood",
+			"intent": "navigational_local",
+			"user_need": "I live in a Sun City community. Can you pick up from an age-restricted neighborhood?",
+			"representative_queries": [
+				"live sun city community pick up age restricted"
+			],
+			"covered_by_existing_page": true,
+			"shared_with_siblings": false,
+			"notes": "Derived from an existing FAQ. Not search volume data."
+		},
+		{
+			"concept": "anything car garage sitting still",
+			"intent": "navigational_local",
+			"user_need": "My car has been sitting in my garage for years. Is it still worth anything?",
+			"representative_queries": [
+				"car sitting garage years still worth anything"
+			],
+			"covered_by_existing_page": true,
+			"shared_with_siblings": true,
+			"notes": "Derived from an existing FAQ. Not search volume data."
+		}
+	],
+	"coverage_summary": {
+		"total_concepts": 4,
+		"shared_with_siblings": 1,
+		"distinctive_concepts": 3,
+		"uncovered_by_existing_page": 0
+	}
+}

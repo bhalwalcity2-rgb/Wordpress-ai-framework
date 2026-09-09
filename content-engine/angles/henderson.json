@@ -1,0 +1,128 @@
+{
+	"slug": "henderson",
+	"generated": {
+		"by": "bootstrap-research.py",
+		"note": "Scaffolded from the existing corpus by bootstrap-research.py. NO EXTERNAL RESEARCH WAS PERFORMED. Every item is marked with the evidence level it actually has; nothing here may be treated as verified until a researcher answers the open questions and records a real source.",
+		"verification_pass": {
+			"on": "2026-09-05",
+			"by": "Phase 3C-2 external research",
+			"note": "Angle researched against NRS 116 and retired as unsupported. research_locked set."
+		}
+	},
+	"differentiation_verdict": "PENDING_RESEARCH",
+	"recommendation_if_unsupported": "not_applicable",
+	"recommendation_note": "Held at PENDING_RESEARCH rather than NO_SUPPORTED_DIFFERENTIATION because one specific, answerable question remains: does the Nevada Real Estate Division CIC registry show Henderson with a materially higher concentration of common-interest communities than its sibling areas? If yes, a narrowed angle grounded in that fact may be proposed. If no, this page becomes NO_SUPPORTED_DIFFERENTIATION like its siblings. Until then Henderson has NO approved angle and must not be written from.",
+	"angles": [
+		{
+			"id": "henderson-primary",
+			"page": "henderson",
+			"status": "unsupported",
+			"angle_type": "customer_problem",
+			"statement": "HYPOTHESIS: sellers here face a distinct problem involving compliance, inherited, insurance, payout, warning, which changes what they need to know or do before the vehicle can be removed. The situation, not the place name, is what this page would be about.",
+			"evidence": [
+				{
+					"claim_id": "henderson-00-buy-junk-cars-henderson",
+					"relevance": "asserted in existing copy; unverified"
+				},
+				{
+					"claim_id": "henderson-01-green-valley-anthem-lake",
+					"relevance": "asserted in existing copy; unverified"
+				},
+				{
+					"claim_id": "henderson-03-one-most-hoa-governed",
+					"relevance": "asserted in existing copy; unverified"
+				},
+				{
+					"claim_id": "henderson-05-violations-trigger-warning-letters",
+					"relevance": "asserted in existing copy; unverified"
+				},
+				{
+					"claim_id": "henderson-07-homeowners-call-because-need",
+					"relevance": "asserted in existing copy; unverified"
+				}
+			],
+			"why_unique": "Phase 3B measured these as topics no sibling page raises (15 distinct non-local entities). This is the only ground for differentiation the corpus supports; place names are excluded by definition.",
+			"must_not_overlap_with": [
+				"boulder-city",
+				"enterprise",
+				"las-vegas",
+				"north-las-vegas",
+				"paradise",
+				"spring-valley",
+				"summerlin"
+			],
+			"related_entities": [
+				"clark county",
+				"compliance",
+				"flatbed",
+				"inherited",
+				"inoperable",
+				"insurance",
+				"nevada dmv",
+				"overheating",
+				"payout",
+				"rusted",
+				"salvage",
+				"stripped",
+				"totaled",
+				"unregistered",
+				"warning"
+			],
+			"recommended_questions": [
+				"How fast can you get to Henderson?",
+				"Will my HOA fine me if a tow truck comes to my house?",
+				"I live in a Sun City community. Can you pick up from an age-restricted neighborhood?",
+				"My car has been sitting in my garage for years. Is it still worth anything?"
+			],
+			"recommended_sections": [
+				"A section explaining the situation itself, not the city",
+				"A section on what the seller must do differently because of it"
+			],
+			"blocked_by": [
+				"q-henderson-local-condition",
+				"q-henderson-00-buy-junk-cars-henderson",
+				"q-henderson-01-green-valley-anthem-lake",
+				"q-henderson-03-one-most-hoa-governed"
+			],
+			"notes": "Retired rather than narrowed. A narrowed version — 'HOA fines create removal urgency' — would still describe statewide law and so would still not differentiate this page. No replacement angle has been invented; the single open question that could unblock one is recorded in the dossier.",
+			"source_ids": [
+				"nrs-116-3102-elaws",
+				"nrs-116-31031-fines",
+				"red-cic-towing-fastref"
+			],
+			"retirement_reason": "Researched 2026-09-05 and not supported as framed. Two findings. (1) The mechanism is wrong: the page ties HOA pressure to towing a car from the owner's driveway, but NRS 116.3102 limits association removal to vehicles on association property or on a road, street, alley or thoroughfare within the community — not the owner's own lot. The fines cadence is also wrong (NRS 116.31031 allows an additional fine per 7-day period after a 14-day cure window, not daily fines). (2) The premise is unevidenced: no source was found showing Henderson is distinctively HOA-dense compared with its sibling areas.",
+			"distinctiveness_assessment": "FAILS DISTINCTIVENESS ON CURRENT EVIDENCE, and for a reason that would not have been visible without research: NRS 116 is STATEWIDE law. Every common-interest community in Nevada operates under the same fines, cure periods and towing limits, so Summerlin, Enterprise and Spring Valley are governed identically. A statutory regime shared by every sibling cannot differentiate one page from another. The only thing that could is a Henderson-specific fact — such as a materially higher concentration of governed communities — and that is precisely the claim (henderson-03) that no source supports. The angle was not merely unproven; the research showed its foundation is common to the whole corpus."
+		},
+		{
+			"id": "henderson-jurisdiction",
+			"page": "henderson",
+			"status": "proposed",
+			"angle_type": "compliance_process",
+			"statement": "An inoperable vehicle on private property is handled by the city's own code enforcement office under the city's own nuisance ordinance, so who a resident hears from, which rules apply, and where a complaint is filed differ from the unincorporated parts of the valley.",
+			"evidence": [],
+			"source_ids": [
+				"henderson-ch708-nuisance",
+				"clarkcounty-title11-nuisance"
+			],
+			"why_unique": "Unlike NRS 116, which is statewide and therefore shared by every sibling, municipal jurisdiction genuinely varies across this corpus: Henderson is an incorporated city with its own code and enforcement office, while Paradise, Spring Valley and Enterprise are unincorporated and fall under Clark County Code Title 11.",
+			"distinctiveness_assessment": "PARTIAL. Separates Henderson from the unincorporated areas, but NOT from North Las Vegas or Boulder City, which are also incorporated with their own codes. Would need a Henderson-specific provision — notice period, penalty, or process — to differentiate within the incorporated group.",
+			"must_not_overlap_with": [
+				"north-las-vegas",
+				"boulder-city"
+			],
+			"related_entities": [
+				"municipal code",
+				"code enforcement",
+				"nuisance",
+				"inoperable vehicle"
+			],
+			"recommended_questions": [],
+			"recommended_sections": [],
+			"blocked_by": [
+				"q-henderson-municipal-vehicle-provision"
+			],
+			"notes": "Derived from retrieved municipal-code sources, not invented to replace the retired angle. Remains 'proposed': the section text, notice periods and penalties under Henderson Ch. 7.08 were not retrieved, so there is not yet enough to write from."
+		}
+	],
+	"research_locked": true
+}

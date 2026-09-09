@@ -1,0 +1,59 @@
+{
+	"slug": "spring-valley",
+	"generated": {
+		"by": "bootstrap-research.py",
+		"note": "Scaffolded from the existing corpus by bootstrap-research.py. NO EXTERNAL RESEARCH WAS PERFORMED. Every item is marked with the evidence level it actually has; nothing here may be treated as verified until a researcher answers the open questions and records a real source."
+	},
+	"concepts": [
+		{
+			"concept": "car fast how junk pick",
+			"intent": "navigational_local",
+			"user_need": "How fast can you pick up a junk car in Spring Valley?",
+			"representative_queries": [
+				"how fast pick up junk car spring valley"
+			],
+			"covered_by_existing_page": true,
+			"shared_with_siblings": true,
+			"notes": "Derived from an existing FAQ. Not search volume data."
+		},
+		{
+			"concept": "apartment buy cars complexes spring",
+			"intent": "navigational_local",
+			"user_need": "Do you buy cars from apartment complexes in Spring Valley?",
+			"representative_queries": [
+				"buy cars apartment complexes spring valley"
+			],
+			"covered_by_existing_page": true,
+			"shared_with_siblings": false,
+			"notes": "Derived from an existing FAQ. Not search volume data."
+		},
+		{
+			"concept": "car junk minimum pay spring",
+			"intent": "navigational_local",
+			"user_need": "What's the minimum you'll pay for a junk car in Spring Valley?",
+			"representative_queries": [
+				"what's minimum you'll pay junk car spring valley"
+			],
+			"covered_by_existing_page": true,
+			"shared_with_siblings": false,
+			"notes": "Derived from an existing FAQ. Not search volume data."
+		},
+		{
+			"concept": "battery car dead sell spring",
+			"intent": "navigational_local",
+			"user_need": "Can I sell a car with a dead battery in Spring Valley?",
+			"representative_queries": [
+				"sell car dead battery spring valley"
+			],
+			"covered_by_existing_page": true,
+			"shared_with_siblings": false,
+			"notes": "Derived from an existing FAQ. Not search volume data."
+		}
+	],
+	"coverage_summary": {
+		"total_concepts": 4,
+		"shared_with_siblings": 1,
+		"distinctive_concepts": 3,
+		"uncovered_by_existing_page": 0
+	}
+}

@@ -1,0 +1,113 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "claim.schema.json",
+	"title": "Claim ledger for one page",
+	"description": "content-engine/claims/{slug}.json. Every externally verifiable statement that may appear in future content. A high-risk legal or regulatory claim requires authoritative sourcing before it may be published — enforced by validate-research.py, not left to convention.",
+	"type": "object",
+	"required": [
+		"slug",
+		"claims"
+	],
+	"additionalProperties": false,
+	"properties": {
+		"slug": {
+			"$ref": "research-common.schema.json#/definitions/nonEmptyString"
+		},
+		"generated": {
+			"type": "object",
+			"additionalProperties": true
+		},
+		"claims": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"required": [
+					"id",
+					"claim",
+					"claim_type",
+					"source_type",
+					"confidence",
+					"risk",
+					"status",
+					"publishable",
+					"verification"
+				],
+				"additionalProperties": false,
+				"properties": {
+					"id": {
+						"type": "string",
+						"pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+					},
+					"claim": {
+						"$ref": "research-common.schema.json#/definitions/nonEmptyString"
+					},
+					"claim_type": {
+						"$ref": "research-common.schema.json#/definitions/claimType"
+					},
+					"source": {
+						"description": "A real, checkable reference. Never invent one; an absent source is recorded as source_type 'unverified'.",
+						"type": "string"
+					},
+					"source_type": {
+						"$ref": "research-common.schema.json#/definitions/sourceType"
+					},
+					"verified_on": {
+						"$ref": "research-common.schema.json#/definitions/isoDate"
+					},
+					"expires_on": {
+						"$ref": "research-common.schema.json#/definitions/isoDate"
+					},
+					"confidence": {
+						"$ref": "research-common.schema.json#/definitions/confidence"
+					},
+					"risk": {
+						"$ref": "research-common.schema.json#/definitions/risk"
+					},
+					"status": {
+						"$ref": "research-common.schema.json#/definitions/researchStatus"
+					},
+					"publishable": {
+						"description": "Whether the future writer may state this as fact. Never true without provenance adequate to the claim's risk level.",
+						"type": "boolean"
+					},
+					"appears_in_existing_copy": {
+						"description": "True when this claim is already live. Being published is not evidence — several live claims here are unverified.",
+						"type": "boolean"
+					},
+					"source_page": {
+						"type": "string"
+					},
+					"notes": {
+						"type": "string"
+					},
+					"verification": {
+						"$ref": "research-common.schema.json#/definitions/verificationStatus"
+					},
+					"source_ids": {
+						"description": "Ids from content-engine/sources/registry.json. Claims cite; they never restate a citation.",
+						"type": "array",
+						"items": {
+							"type": "string"
+						}
+					},
+					"claim_boundary": {
+						"description": "For PARTIALLY_SUPPORTED: the narrowed statement the evidence actually reaches. This, not the original, is what a writer may use.",
+						"type": "string"
+					},
+					"contradiction": {
+						"description": "For CONTRADICTED: what the source says instead, stated explicitly.",
+						"type": "string"
+					},
+					"review_by": {
+						"description": "Date after which the evidence is stale and must be re-checked. Required once publishable.",
+						"$ref": "research-common.schema.json#/definitions/isoDate"
+					}
+				}
+			}
+		},
+		"research_locked": {
+			"description": "True once a human or research pass has curated this file. bootstrap-research.py refuses to overwrite it even with --force.",
+			"type": "boolean"
+		}
+	}
+}

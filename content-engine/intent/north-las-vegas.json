@@ -1,0 +1,84 @@
+{
+	"slug": "north-las-vegas",
+	"generated": {
+		"by": "bootstrap-research.py",
+		"note": "Scaffolded from the existing corpus by bootstrap-research.py. NO EXTERNAL RESEARCH WAS PERFORMED. Every item is marked with the evidence level it actually has; nothing here may be treated as verified until a researcher answers the open questions and records a real source."
+	},
+	"primary_intent": "navigational_local",
+	"secondary_intents": [
+		"transactional",
+		"commercial_investigation",
+		"informational"
+	],
+	"user_stage": "solution_aware",
+	"conversion_goal": "Phone call or instant-offer submission",
+	"decision_questions": [
+		{
+			"question": "Do you buy junk cars near Nellis Air Force Base?",
+			"required_answer": "TO BE RESEARCHED",
+			"status": "unresolved"
+		},
+		{
+			"question": "How much is my junk car worth in North Las Vegas?",
+			"required_answer": "TO BE RESEARCHED",
+			"status": "unresolved"
+		},
+		{
+			"question": "Can you pick up a car from an apartment complex in North Las Vegas?",
+			"required_answer": "TO BE RESEARCHED",
+			"status": "unresolved"
+		},
+		{
+			"question": "Do I need to be present for the pickup in North Las Vegas?",
+			"required_answer": "TO BE RESEARCHED",
+			"status": "unresolved"
+		}
+	],
+	"objections": [
+		{
+			"objection": "Is the quoted price the price I actually get?",
+			"response_requirement": "Needs a sourced statement of the firm-offer policy."
+		},
+		{
+			"objection": "Can I sell without the title?",
+			"response_requirement": "Needs an authoritative Nevada DMV source before answering."
+		}
+	],
+	"queries": [
+		{
+			"query": "buy junk cars near nellis air force base",
+			"intent": "navigational_local",
+			"question": "Do you buy junk cars near Nellis Air Force Base?",
+			"satisfied_by": "",
+			"provenance": "observed_in_existing_copy"
+		},
+		{
+			"query": "how much junk car worth north las vegas",
+			"intent": "navigational_local",
+			"question": "How much is my junk car worth in North Las Vegas?",
+			"satisfied_by": "",
+			"provenance": "observed_in_existing_copy"
+		},
+		{
+			"query": "pick up car apartment complex north las vegas",
+			"intent": "navigational_local",
+			"question": "Can you pick up a car from an apartment complex in North Las Vegas?",
+			"satisfied_by": "",
+			"provenance": "observed_in_existing_copy"
+		},
+		{
+			"query": "need present pickup north las vegas",
+			"intent": "navigational_local",
+			"question": "Do I need to be present for the pickup in North Las Vegas?",
+			"satisfied_by": "",
+			"provenance": "observed_in_existing_copy"
+		}
+	],
+	"cannibalisation_risk": [
+		{
+			"with_page": "paradise",
+			"severity": "high",
+			"reason": "Same situation and FAQ substance as this sibling, differently worded."
+		}
+	]
+}

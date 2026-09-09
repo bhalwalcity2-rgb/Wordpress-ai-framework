@@ -1,0 +1,71 @@
+{
+	"slug": "summerlin",
+	"generated": {
+		"by": "bootstrap-research.py",
+		"note": "Scaffolded from the existing corpus by bootstrap-research.py. NO EXTERNAL RESEARCH WAS PERFORMED. Every item is marked with the evidence level it actually has; nothing here may be treated as verified until a researcher answers the open questions and records a real source."
+	},
+	"differentiation_verdict": "PENDING_RESEARCH",
+	"recommendation_if_unsupported": "not_applicable",
+	"recommendation_note": "A candidate angle exists but rests on claims that are live and unsourced. It stays 'proposed' until the open questions in the dossier are answered.",
+	"angles": [
+		{
+			"id": "summerlin-primary",
+			"page": "summerlin",
+			"status": "proposed",
+			"angle_type": "customer_problem",
+			"statement": "HYPOTHESIS: sellers here face a distinct problem involving notice, which changes what they need to know or do before the vehicle can be removed. The situation, not the place name, is what this page would be about.",
+			"evidence": [
+				{
+					"claim_id": "summerlin-00-free-towing-fees-cash",
+					"relevance": "asserted in existing copy; unverified"
+				},
+				{
+					"claim_id": "summerlin-02-help-summerlin-homeowners-solve",
+					"relevance": "asserted in existing copy; unverified"
+				},
+				{
+					"claim_id": "summerlin-06-give-firm-cash-offer",
+					"relevance": "asserted in existing copy; unverified"
+				},
+				{
+					"claim_id": "summerlin-07-accept-come-summerlin-address",
+					"relevance": "asserted in existing copy; unverified"
+				},
+				{
+					"claim_id": "summerlin-09-towing-free-paperwork-handled",
+					"relevance": "asserted in existing copy; unverified"
+				}
+			],
+			"why_unique": "Phase 3B measured these as topics no sibling page raises (1 distinct non-local entities). This is the only ground for differentiation the corpus supports; place names are excluded by definition.",
+			"must_not_overlap_with": [
+				"boulder-city",
+				"enterprise",
+				"henderson",
+				"las-vegas",
+				"north-las-vegas",
+				"paradise",
+				"spring-valley"
+			],
+			"related_entities": [
+				"notice"
+			],
+			"recommended_questions": [
+				"Can you pick up a junk car from my Summerlin HOA community?",
+				"How much do you pay for junk cars in Summerlin?",
+				"Do you buy cars that failed smog in Summerlin?",
+				"How fast can you remove a junk car from Summerlin?"
+			],
+			"recommended_sections": [
+				"A section explaining the situation itself, not the city",
+				"A section on what the seller must do differently because of it"
+			],
+			"blocked_by": [
+				"q-summerlin-local-condition",
+				"q-summerlin-00-free-towing-fees-cash",
+				"q-summerlin-02-help-summerlin-homeowners-solve",
+				"q-summerlin-06-give-firm-cash-offer"
+			],
+			"notes": "Statement survives place-name masking."
+		}
+	]
+}

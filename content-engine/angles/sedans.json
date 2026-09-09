@@ -1,0 +1,69 @@
+{
+	"slug": "sedans",
+	"generated": {
+		"by": "bootstrap-research.py",
+		"note": "Scaffolded from the existing corpus by bootstrap-research.py. NO EXTERNAL RESEARCH WAS PERFORMED. Every item is marked with the evidence level it actually has; nothing here may be treated as verified until a researcher answers the open questions and records a real source."
+	},
+	"differentiation_verdict": "PENDING_RESEARCH",
+	"recommendation_if_unsupported": "not_applicable",
+	"recommendation_note": "A candidate angle exists but rests on claims that are live and unsourced. It stays 'proposed' until the open questions in the dossier are answered.",
+	"angles": [
+		{
+			"id": "sedans-primary",
+			"page": "sedans",
+			"status": "proposed",
+			"angle_type": "logistical_situation",
+			"statement": "HYPOTHESIS: sellers here face a distinct process step involving inspection, pickup, schedule, which changes what they need to know or do before the vehicle can be removed. The situation, not the place name, is what this page would be about.",
+			"evidence": [
+				{
+					"claim_id": "sedans-00-cash-junk-sedans-coupes",
+					"relevance": "asserted in existing copy; unverified"
+				},
+				{
+					"claim_id": "sedans-03-whether-sedan-blown-head",
+					"relevance": "asserted in existing copy; unverified"
+				},
+				{
+					"claim_id": "sedans-04-give-firm-cash-offer",
+					"relevance": "asserted in existing copy; unverified"
+				},
+				{
+					"claim_id": "sedans-06-tow-truck-arrives-verify",
+					"relevance": "asserted in existing copy; unverified"
+				},
+				{
+					"claim_id": "sedans-10-buy-car-what-actually",
+					"relevance": "asserted in existing copy; unverified"
+				}
+			],
+			"why_unique": "Phase 3B measured these as topics no sibling page raises (3 distinct non-local entities). This is the only ground for differentiation the corpus supports; place names are excluded by definition.",
+			"must_not_overlap_with": [
+				"damaged",
+				"non-running",
+				"trucks-suvs"
+			],
+			"related_entities": [
+				"inspection",
+				"pickup",
+				"schedule"
+			],
+			"recommended_questions": [
+				"How much is my junk sedan worth?",
+				"Do you buy sedans that don't run?",
+				"Will you buy my sedan if it has high mileage?",
+				"Can I sell a sedan without a title in Las Vegas?"
+			],
+			"recommended_sections": [
+				"A section explaining the situation itself, not the city",
+				"A section on what the seller must do differently because of it"
+			],
+			"blocked_by": [
+				"q-sedans-00-cash-junk-sedans-coupes",
+				"q-sedans-03-whether-sedan-blown-head",
+				"q-sedans-04-give-firm-cash-offer",
+				"q-sedans-06-tow-truck-arrives-verify"
+			],
+			"notes": "Statement survives place-name masking."
+		}
+	]
+}

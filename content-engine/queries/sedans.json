@@ -1,0 +1,59 @@
+{
+	"slug": "sedans",
+	"generated": {
+		"by": "bootstrap-research.py",
+		"note": "Scaffolded from the existing corpus by bootstrap-research.py. NO EXTERNAL RESEARCH WAS PERFORMED. Every item is marked with the evidence level it actually has; nothing here may be treated as verified until a researcher answers the open questions and records a real source."
+	},
+	"concepts": [
+		{
+			"concept": "how junk much sedan worth",
+			"intent": "transactional",
+			"user_need": "How much is my junk sedan worth?",
+			"representative_queries": [
+				"how much junk sedan worth"
+			],
+			"covered_by_existing_page": true,
+			"shared_with_siblings": true,
+			"notes": "Derived from an existing FAQ. Not search volume data."
+		},
+		{
+			"concept": "buy don't run sedans",
+			"intent": "transactional",
+			"user_need": "Do you buy sedans that don't run?",
+			"representative_queries": [
+				"buy sedans don't run"
+			],
+			"covered_by_existing_page": true,
+			"shared_with_siblings": false,
+			"notes": "Derived from an existing FAQ. Not search volume data."
+		},
+		{
+			"concept": "buy high mileage sedan",
+			"intent": "transactional",
+			"user_need": "Will you buy my sedan if it has high mileage?",
+			"representative_queries": [
+				"buy sedan high mileage"
+			],
+			"covered_by_existing_page": true,
+			"shared_with_siblings": false,
+			"notes": "Derived from an existing FAQ. Not search volume data."
+		},
+		{
+			"concept": "las sedan sell title vegas",
+			"intent": "transactional",
+			"user_need": "Can I sell a sedan without a title in Las Vegas?",
+			"representative_queries": [
+				"sell sedan without title las vegas"
+			],
+			"covered_by_existing_page": true,
+			"shared_with_siblings": true,
+			"notes": "Derived from an existing FAQ. Not search volume data."
+		}
+	],
+	"coverage_summary": {
+		"total_concepts": 4,
+		"shared_with_siblings": 2,
+		"distinctive_concepts": 2,
+		"uncovered_by_existing_page": 0
+	}
+}

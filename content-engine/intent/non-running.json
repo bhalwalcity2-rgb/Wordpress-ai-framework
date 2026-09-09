@@ -1,0 +1,90 @@
+{
+	"slug": "non-running",
+	"generated": {
+		"by": "bootstrap-research.py",
+		"note": "Scaffolded from the existing corpus by bootstrap-research.py. NO EXTERNAL RESEARCH WAS PERFORMED. Every item is marked with the evidence level it actually has; nothing here may be treated as verified until a researcher answers the open questions and records a real source."
+	},
+	"primary_intent": "transactional",
+	"secondary_intents": [
+		"commercial_investigation",
+		"navigational_local",
+		"informational"
+	],
+	"user_stage": "solution_aware",
+	"conversion_goal": "Phone call or instant-offer submission",
+	"decision_questions": [
+		{
+			"question": "How much is a non-running car worth in Las Vegas?",
+			"required_answer": "TO BE RESEARCHED",
+			"status": "unresolved"
+		},
+		{
+			"question": "Do I need to know what's wrong with my car before calling?",
+			"required_answer": "TO BE RESEARCHED",
+			"status": "unresolved"
+		},
+		{
+			"question": "Can you tow a car that has flat tires and won't roll?",
+			"required_answer": "TO BE RESEARCHED",
+			"status": "unresolved"
+		},
+		{
+			"question": "Will you buy a car that has been sitting for years and won't start?",
+			"required_answer": "TO BE RESEARCHED",
+			"status": "unresolved"
+		},
+		{
+			"question": "Is it worth selling a car with a blown engine?",
+			"required_answer": "TO BE RESEARCHED",
+			"status": "unresolved"
+		}
+	],
+	"objections": [
+		{
+			"objection": "Is the quoted price the price I actually get?",
+			"response_requirement": "Needs a sourced statement of the firm-offer policy."
+		},
+		{
+			"objection": "Can I sell without the title?",
+			"response_requirement": "Needs an authoritative Nevada DMV source before answering."
+		}
+	],
+	"queries": [
+		{
+			"query": "how much non running car worth las vegas",
+			"intent": "transactional",
+			"question": "How much is a non-running car worth in Las Vegas?",
+			"satisfied_by": "",
+			"provenance": "observed_in_existing_copy"
+		},
+		{
+			"query": "need know what's wrong car before calling",
+			"intent": "transactional",
+			"question": "Do I need to know what's wrong with my car before calling?",
+			"satisfied_by": "",
+			"provenance": "observed_in_existing_copy"
+		},
+		{
+			"query": "tow car flat tires won't roll",
+			"intent": "transactional",
+			"question": "Can you tow a car that has flat tires and won't roll?",
+			"satisfied_by": "",
+			"provenance": "observed_in_existing_copy"
+		},
+		{
+			"query": "buy car sitting years won't start",
+			"intent": "transactional",
+			"question": "Will you buy a car that has been sitting for years and won't start?",
+			"satisfied_by": "",
+			"provenance": "observed_in_existing_copy"
+		},
+		{
+			"query": "worth selling car blown engine",
+			"intent": "transactional",
+			"question": "Is it worth selling a car with a blown engine?",
+			"satisfied_by": "",
+			"provenance": "observed_in_existing_copy"
+		}
+	],
+	"cannibalisation_risk": []
+}

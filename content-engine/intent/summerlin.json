@@ -1,0 +1,83 @@
+{
+	"slug": "summerlin",
+	"generated": {
+		"by": "bootstrap-research.py",
+		"note": "Scaffolded from the existing corpus by bootstrap-research.py. NO EXTERNAL RESEARCH WAS PERFORMED. Every item is marked with the evidence level it actually has; nothing here may be treated as verified until a researcher answers the open questions and records a real source."
+	},
+	"primary_intent": "navigational_local",
+	"secondary_intents": [
+		"transactional",
+		"commercial_investigation"
+	],
+	"user_stage": "solution_aware",
+	"conversion_goal": "Phone call or instant-offer submission",
+	"decision_questions": [
+		{
+			"question": "Can you pick up a junk car from my Summerlin HOA community?",
+			"required_answer": "TO BE RESEARCHED",
+			"status": "unresolved"
+		},
+		{
+			"question": "How much do you pay for junk cars in Summerlin?",
+			"required_answer": "TO BE RESEARCHED",
+			"status": "unresolved"
+		},
+		{
+			"question": "Do you buy cars that failed smog in Summerlin?",
+			"required_answer": "TO BE RESEARCHED",
+			"status": "unresolved"
+		},
+		{
+			"question": "How fast can you remove a junk car from Summerlin?",
+			"required_answer": "TO BE RESEARCHED",
+			"status": "unresolved"
+		}
+	],
+	"objections": [
+		{
+			"objection": "Is the quoted price the price I actually get?",
+			"response_requirement": "Needs a sourced statement of the firm-offer policy."
+		},
+		{
+			"objection": "Can I sell without the title?",
+			"response_requirement": "Needs an authoritative Nevada DMV source before answering."
+		}
+	],
+	"queries": [
+		{
+			"query": "pick up junk car summerlin hoa community",
+			"intent": "navigational_local",
+			"question": "Can you pick up a junk car from my Summerlin HOA community?",
+			"satisfied_by": "",
+			"provenance": "observed_in_existing_copy"
+		},
+		{
+			"query": "how much pay junk cars summerlin",
+			"intent": "navigational_local",
+			"question": "How much do you pay for junk cars in Summerlin?",
+			"satisfied_by": "",
+			"provenance": "observed_in_existing_copy"
+		},
+		{
+			"query": "buy cars failed smog summerlin",
+			"intent": "navigational_local",
+			"question": "Do you buy cars that failed smog in Summerlin?",
+			"satisfied_by": "",
+			"provenance": "observed_in_existing_copy"
+		},
+		{
+			"query": "how fast remove junk car summerlin",
+			"intent": "navigational_local",
+			"question": "How fast can you remove a junk car from Summerlin?",
+			"satisfied_by": "",
+			"provenance": "observed_in_existing_copy"
+		}
+	],
+	"cannibalisation_risk": [
+		{
+			"with_page": "paradise",
+			"severity": "high",
+			"reason": "Same situation and FAQ substance as this sibling, differently worded."
+		}
+	]
+}

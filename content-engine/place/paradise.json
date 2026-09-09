@@ -1,0 +1,130 @@
+{
+	"slug": "paradise",
+	"target_type": "location",
+	"display_name": "junk car buying in Paradise",
+	"generated": {
+		"by": "bootstrap-research.py",
+		"note": "Scaffolded from the existing corpus by bootstrap-research.py. NO EXTERNAL RESEARCH WAS PERFORMED. Every item is marked with the evidence level it actually has; nothing here may be treated as verified until a researcher answers the open questions and records a real source."
+	},
+	"research_status": {
+		"overall": "unresolved",
+		"researched_count": 2,
+		"verified_count": 1,
+		"unresolved_count": 13,
+		"unsupported_count": 0,
+		"editorial_opportunity_count": 0,
+		"blocking_gaps": [
+			"q-paradise-local-condition",
+			"q-paradise-03-whether-car-parked-residence",
+			"q-paradise-04-well-give-cash-offer",
+			"q-paradise-05-tow-truck-arrives-verify",
+			"q-paradise-07-how-much-pay-junk",
+			"q-paradise-10-offers-range-200-5"
+		]
+	},
+	"sections": {
+		"geographic_context": [
+			{
+				"id": "paradise-is-service-area",
+				"statement": "junk car buying in Paradise is a configured service area for this business.",
+				"why_it_matters": "Establishes that the business serves the area at all.",
+				"provenance": {
+					"evidence_level": "business_provided",
+					"status": "verified",
+					"source_type": "official_business",
+					"source": "wordpress/themes/<theme>/inc/business-config.php"
+				}
+			}
+		],
+		"service_relevance": [
+			{
+				"id": "paradise-existing-coverage",
+				"statement": "The existing page covers 403 words across 3 sections.",
+				"why_it_matters": "Baseline for judging whether a rewrite adds anything.",
+				"provenance": {
+					"evidence_level": "research_observation",
+					"status": "researched",
+					"source_type": "research_observation",
+					"source": "content-engine/brief/paradise.json"
+				}
+			}
+		],
+		"community_context": [
+			{
+				"id": "paradise-named-places",
+				"statement": "Places named in existing copy: Boulder Highway, Eastern Avenue, I-15, Las Vegas, Maryland Parkway, Paradise, Paradise Road, South Maryland Parkway, Sunrise Manor, Swenson Street.",
+				"why_it_matters": "Place names alone do not differentiate a page; recorded for reference only.",
+				"provenance": {
+					"evidence_level": "research_observation",
+					"status": "researched",
+					"source_type": "research_observation",
+					"source": "existing page copy"
+				}
+			}
+		]
+	},
+	"open_questions": [
+		{
+			"id": "q-paradise-local-condition",
+			"question": "What local condition in this area materially changes how or why someone sells a junk car, versus elsewhere in the valley?",
+			"why": "Without an answer this page has no supported angle and should not be written. A different landmark is not an answer.",
+			"suggested_source_type": "official_government",
+			"blocks_angle": "paradise-primary"
+		},
+		{
+			"id": "q-paradise-03-whether-car-parked-residence",
+			"question": "What authoritative source supports: \"Whether your car is parked at a residence near Maryland Parkway or behind a commercial property on Eastern Avenue, we'll come to y\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-paradise-04-well-give-cash-offer",
+			"question": "What authoritative source supports: \"We'll give you a cash offer immediately.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-paradise-05-tow-truck-arrives-verify",
+			"question": "What authoritative source supports: \"Our tow truck arrives, we verify the vehicle, pay you in cash, and remove the car.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-paradise-07-how-much-pay-junk",
+			"question": "What authoritative source supports: \"How much do you pay for junk cars in Paradise?\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-paradise-10-offers-range-200-5",
+			"question": "What authoritative source supports: \"Offers range from $200 to $5,000+ depending on the vehicle's year, make, model, and condition.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-paradise-11-call-free-quote-specific",
+			"question": "What authoritative source supports: \"Call for a free quote specific to your car.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		}
+	],
+	"corpus_context": {
+		"phase_3b_assessment": "SUPERFICIAL_DIFFERENTIATION",
+		"information_gain_verdict": "LOCAL_NAME_SUBSTITUTION_ONLY",
+		"rewrite_priority": "REWRITE",
+		"closest_sibling": "las-vegas",
+		"known_quality_issues": [
+			"BELOW_500_WORDS — SEO_STANDARDS.md §6 minimum for a location page",
+			"STRUCTURE_MATCHES_SIBLINGS",
+			"FAQ_SUBSTANCE_SHARED_WITH_SIBLINGS",
+			"SAME_TOPIC_FRAME_AS_SIBLINGS",
+			"NO_PAGE_SPECIFIC_CLOSING_CTA"
+		]
+	}
+}

@@ -1,0 +1,72 @@
+{
+	"slug": "damaged",
+	"generated": {
+		"by": "bootstrap-research.py",
+		"note": "Scaffolded from the existing corpus by bootstrap-research.py. NO EXTERNAL RESEARCH WAS PERFORMED. Every item is marked with the evidence level it actually has; nothing here may be treated as verified until a researcher answers the open questions and records a real source."
+	},
+	"differentiation_verdict": "PENDING_RESEARCH",
+	"recommendation_if_unsupported": "not_applicable",
+	"recommendation_note": "A candidate angle exists but rests on claims that are live and unsourced. It stays 'proposed' until the open questions in the dossier are answered.",
+	"angles": [
+		{
+			"id": "damaged-primary",
+			"page": "damaged",
+			"status": "proposed",
+			"angle_type": "customer_problem",
+			"statement": "HYPOTHESIS: sellers here face a distinct problem involving fine, insurance, which changes what they need to know or do before the vehicle can be removed. The situation, not the place name, is what this page would be about.",
+			"evidence": [
+				{
+					"claim_id": "damaged-00-cash-accident-storm-damaged",
+					"relevance": "asserted in existing copy; unverified"
+				},
+				{
+					"claim_id": "damaged-01-insurance-totaled-body-shop",
+					"relevance": "asserted in existing copy; unverified"
+				},
+				{
+					"claim_id": "damaged-02-well-tow-wherever-sits",
+					"relevance": "asserted in existing copy; unverified"
+				},
+				{
+					"claim_id": "damaged-03-metal-parts-components-worth",
+					"relevance": "asserted in existing copy; unverified"
+				},
+				{
+					"claim_id": "damaged-04-well-give-firm-cash",
+					"relevance": "asserted in existing copy; unverified"
+				}
+			],
+			"why_unique": "Phase 3B measured these as topics no sibling page raises (6 distinct non-local entities). This is the only ground for differentiation the corpus supports; place names are excluded by definition.",
+			"must_not_overlap_with": [
+				"non-running",
+				"sedans",
+				"trucks-suvs"
+			],
+			"related_entities": [
+				"damaged",
+				"fine",
+				"insurance",
+				"quote",
+				"salvage",
+				"totaled"
+			],
+			"recommended_questions": [
+				"How much is a totaled car worth in Las Vegas?",
+				"Do you buy cars with salvage titles?",
+				"Can you pick up a damaged car from a tow yard?",
+				"Do you buy flood-damaged cars?"
+			],
+			"recommended_sections": [
+				"A section explaining the situation itself, not the city",
+				"A section on what the seller must do differently because of it"
+			],
+			"blocked_by": [
+				"q-damaged-00-cash-accident-storm-damaged",
+				"q-damaged-01-insurance-totaled-body-shop",
+				"q-damaged-02-well-tow-wherever-sits",
+				"q-damaged-03-metal-parts-components-worth"
+			],
+			"notes": "Statement survives place-name masking."
+		}
+	]
+}

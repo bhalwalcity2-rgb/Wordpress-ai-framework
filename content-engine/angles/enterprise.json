@@ -1,0 +1,12 @@
+{
+	"slug": "enterprise",
+	"generated": {
+		"by": "bootstrap-research.py",
+		"note": "Scaffolded from the existing corpus by bootstrap-research.py. NO EXTERNAL RESEARCH WAS PERFORMED. Every item is marked with the evidence level it actually has; nothing here may be treated as verified until a researcher answers the open questions and records a real source."
+	},
+	"differentiation_verdict": "NO_SUPPORTED_DIFFERENTIATION",
+	"recommendation_if_unsupported": "create_broader_regional_page",
+	"recommendation_note": "Reinforced by Phase 3C-2 research. The one structural difference found across this corpus is jurisdiction: Enterprise is unincorporated Clark County, where inoperable-vehicle nuisance is handled under Clark County Code Title 11 by county code enforcement. That is identical for Paradise, Spring Valley and Enterprise, so it differentiates the GROUP from the incorporated cities but not these pages from each other. The evidence therefore argues for one unincorporated-Clark-County page rather than three near-identical ones. NRS 116 cannot help: it is statewide.",
+	"angles": [],
+	"research_locked": true
+}

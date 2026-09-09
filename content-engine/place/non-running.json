@@ -1,0 +1,178 @@
+{
+	"slug": "non-running",
+	"target_type": "service",
+	"display_name": "junk car buying — non running",
+	"generated": {
+		"by": "bootstrap-research.py",
+		"note": "Scaffolded from the existing corpus by bootstrap-research.py. NO EXTERNAL RESEARCH WAS PERFORMED. Every item is marked with the evidence level it actually has; nothing here may be treated as verified until a researcher answers the open questions and records a real source."
+	},
+	"research_status": {
+		"overall": "unresolved",
+		"researched_count": 2,
+		"verified_count": 0,
+		"unresolved_count": 17,
+		"unsupported_count": 0,
+		"editorial_opportunity_count": 0,
+		"blocking_gaps": [
+			"q-non-running-00-cash-non-running-mechanical",
+			"q-non-running-01-vehicle-wont-start-exactly",
+			"q-non-running-02-while-most-buyers-want",
+			"q-non-running-03-call-tell-what-know",
+			"q-non-running-04-purchase-vehicles-every-type",
+			"q-non-running-05-mechanic-told-cost-more"
+		]
+	},
+	"sections": {
+		"service_relevance": [
+			{
+				"id": "non-running-existing-coverage",
+				"statement": "The existing page covers 609 words across 4 sections.",
+				"why_it_matters": "Baseline for judging whether a rewrite adds anything.",
+				"provenance": {
+					"evidence_level": "research_observation",
+					"status": "researched",
+					"source_type": "research_observation",
+					"source": "content-engine/brief/non-running.json"
+				}
+			}
+		],
+		"community_context": [
+			{
+				"id": "non-running-named-places",
+				"statement": "Places named in existing copy: Las Vegas.",
+				"why_it_matters": "Place names alone do not differentiate a page; recorded for reference only.",
+				"provenance": {
+					"evidence_level": "research_observation",
+					"status": "researched",
+					"source_type": "research_observation",
+					"source": "existing page copy"
+				}
+			}
+		]
+	},
+	"open_questions": [
+		{
+			"id": "q-non-running-00-cash-non-running-mechanical",
+			"question": "What authoritative source supports: \"Cash for Non-Running & Mechanical Failure Vehicles.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-non-running-01-vehicle-wont-start-exactly",
+			"question": "What authoritative source supports: \"A vehicle that won't start is exactly the kind of car we specialize in.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-non-running-02-while-most-buyers-want",
+			"question": "What authoritative source supports: \"While most buyers want cars that drive off the lot, we specifically seek out vehicles that don't start, don't move, or aren't safe\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-non-running-03-call-tell-what-know",
+			"question": "What authoritative source supports: \"Call us, tell us what you know about the problem, and we'll make you a cash offer based on the vehicle itself — not on whether it \"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-non-running-04-purchase-vehicles-every-type",
+			"question": "What authoritative source supports: \"We purchase vehicles with every type of mechanical failure, including blown or seized engines, failed or slipping transmissions, o\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-non-running-05-mechanic-told-cost-more",
+			"question": "What authoritative source supports: \"If your mechanic told you it would cost more to fix than the car is worth, that's all we need to know.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-non-running-06-dont-need-diagnosis-description",
+			"question": "What authoritative source supports: \"We don't need a diagnosis — a description like \"it won't start\" or \"the engine overheated and now it makes a knocking sound\" is en\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-non-running-08-pay-cash-before-car",
+			"question": "What authoritative source supports: \"We pay you cash before the car leaves your property.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-non-running-09-beyond-metal-many-individual",
+			"question": "What authoritative source supports: \"Beyond the metal, many individual components — alternators, starters, AC compressors, catalytic converters, wheels, and body panel\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-non-running-10-value-non-running-vehicle",
+			"question": "What authoritative source supports: \"The value of a non-running vehicle depends on its weight, the demand for its specific parts, and the current market price of scrap\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-non-running-11-how-much-non-running",
+			"question": "What authoritative source supports: \"How much is a non-running car worth in Las Vegas?\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-non-running-12-buy-car-sitting-years",
+			"question": "What authoritative source supports: \"Will you buy a car that has been sitting for years and won't start?\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-non-running-13-worth-selling-car-blown",
+			"question": "What authoritative source supports: \"Is it worth selling a car with a blown engine?\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-non-running-14-non-running-vehicles-typically",
+			"question": "What authoritative source supports: \"Non-running vehicles typically sell for $200 to $3,000+ depending on the year, make, model, weight, and what parts are intact.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-non-running-15-tell-what-know-wont",
+			"question": "What authoritative source supports: \"Just tell us what you know — it won't start, it overheated, it makes a noise — and we'll base our offer on the vehicle itself.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-non-running-16-longer-car-sits-less",
+			"question": "What authoritative source supports: \"The longer a car sits, the less likely it is to start — but it still has value to us.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		}
+	],
+	"corpus_context": {
+		"phase_3b_assessment": "PARTIAL_DIFFERENTIATION",
+		"information_gain_verdict": "WORDING_ONLY_GAIN",
+		"rewrite_priority": "REWRITE",
+		"closest_sibling": "trucks-suvs",
+		"known_quality_issues": [
+			"STRUCTURE_MATCHES_SIBLINGS",
+			"FAQ_SUBSTANCE_SHARED_WITH_SIBLINGS",
+			"NO_PAGE_SPECIFIC_CLOSING_CTA"
+		]
+	}
+}

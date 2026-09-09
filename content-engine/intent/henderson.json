@@ -1,0 +1,78 @@
+{
+	"slug": "henderson",
+	"generated": {
+		"by": "bootstrap-research.py",
+		"note": "Scaffolded from the existing corpus by bootstrap-research.py. NO EXTERNAL RESEARCH WAS PERFORMED. Every item is marked with the evidence level it actually has; nothing here may be treated as verified until a researcher answers the open questions and records a real source."
+	},
+	"primary_intent": "navigational_local",
+	"secondary_intents": [
+		"transactional",
+		"informational",
+		"commercial_investigation"
+	],
+	"user_stage": "solution_aware",
+	"conversion_goal": "Phone call or instant-offer submission",
+	"decision_questions": [
+		{
+			"question": "How fast can you get to Henderson?",
+			"required_answer": "TO BE RESEARCHED",
+			"status": "unresolved"
+		},
+		{
+			"question": "Will my HOA fine me if a tow truck comes to my house?",
+			"required_answer": "TO BE RESEARCHED",
+			"status": "unresolved"
+		},
+		{
+			"question": "I live in a Sun City community. Can you pick up from an age-restricted neighborhood?",
+			"required_answer": "TO BE RESEARCHED",
+			"status": "unresolved"
+		},
+		{
+			"question": "My car has been sitting in my garage for years. Is it still worth anything?",
+			"required_answer": "TO BE RESEARCHED",
+			"status": "unresolved"
+		}
+	],
+	"objections": [
+		{
+			"objection": "Is the quoted price the price I actually get?",
+			"response_requirement": "Needs a sourced statement of the firm-offer policy."
+		},
+		{
+			"objection": "Can I sell without the title?",
+			"response_requirement": "Needs an authoritative Nevada DMV source before answering."
+		}
+	],
+	"queries": [
+		{
+			"query": "how fast get henderson",
+			"intent": "navigational_local",
+			"question": "How fast can you get to Henderson?",
+			"satisfied_by": "",
+			"provenance": "observed_in_existing_copy"
+		},
+		{
+			"query": "hoa fine tow truck comes house",
+			"intent": "navigational_local",
+			"question": "Will my HOA fine me if a tow truck comes to my house?",
+			"satisfied_by": "",
+			"provenance": "observed_in_existing_copy"
+		},
+		{
+			"query": "live sun city community pick up age restricted",
+			"intent": "navigational_local",
+			"question": "I live in a Sun City community. Can you pick up from an age-restricted neighborhood?",
+			"satisfied_by": "",
+			"provenance": "observed_in_existing_copy"
+		},
+		{
+			"query": "car sitting garage years still worth anything",
+			"intent": "navigational_local",
+			"question": "My car has been sitting in my garage for years. Is it still worth anything?",
+			"satisfied_by": "",
+			"provenance": "observed_in_existing_copy"
+		}
+	],
+	"cannibalisation_risk": []
+}

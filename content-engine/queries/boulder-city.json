@@ -1,0 +1,59 @@
+{
+	"slug": "boulder-city",
+	"generated": {
+		"by": "bootstrap-research.py",
+		"note": "Scaffolded from the existing corpus by bootstrap-research.py. NO EXTERNAL RESEARCH WAS PERFORMED. Every item is marked with the evidence level it actually has; nothing here may be treated as verified until a researcher answers the open questions and records a real source."
+	},
+	"concepts": [
+		{
+			"concept": "boulder city free really towing",
+			"intent": "navigational_local",
+			"user_need": "Is towing really free from Boulder City?",
+			"representative_queries": [
+				"towing really free boulder city"
+			],
+			"covered_by_existing_page": true,
+			"shared_with_siblings": false,
+			"notes": "Derived from an existing FAQ. Not search volume data."
+		},
+		{
+			"concept": "boulder car city how pick",
+			"intent": "navigational_local",
+			"user_need": "How quickly can you pick up a car in Boulder City?",
+			"representative_queries": [
+				"how quickly pick up car boulder city"
+			],
+			"covered_by_existing_page": true,
+			"shared_with_siblings": true,
+			"notes": "Derived from an existing FAQ. Not search volume data."
+		},
+		{
+			"concept": "boulder buy cars city district",
+			"intent": "navigational_local",
+			"user_need": "Do you buy junk cars in the Boulder City historic district?",
+			"representative_queries": [
+				"buy junk cars boulder city historic district"
+			],
+			"covered_by_existing_page": true,
+			"shared_with_siblings": true,
+			"notes": "Derived from an existing FAQ. Not search volume data."
+		},
+		{
+			"concept": "boulder buy city types vehicles",
+			"intent": "navigational_local",
+			"user_need": "What types of vehicles do you buy in Boulder City?",
+			"representative_queries": [
+				"what types vehicles buy boulder city"
+			],
+			"covered_by_existing_page": true,
+			"shared_with_siblings": false,
+			"notes": "Derived from an existing FAQ. Not search volume data."
+		}
+	],
+	"coverage_summary": {
+		"total_concepts": 4,
+		"shared_with_siblings": 2,
+		"distinctive_concepts": 2,
+		"uncovered_by_existing_page": 0
+	}
+}

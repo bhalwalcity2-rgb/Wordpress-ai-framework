@@ -1,0 +1,59 @@
+{
+	"slug": "damaged",
+	"generated": {
+		"by": "bootstrap-research.py",
+		"note": "Scaffolded from the existing corpus by bootstrap-research.py. NO EXTERNAL RESEARCH WAS PERFORMED. Every item is marked with the evidence level it actually has; nothing here may be treated as verified until a researcher answers the open questions and records a real source."
+	},
+	"concepts": [
+		{
+			"concept": "car how las much totaled",
+			"intent": "transactional",
+			"user_need": "How much is a totaled car worth in Las Vegas?",
+			"representative_queries": [
+				"how much totaled car worth las vegas"
+			],
+			"covered_by_existing_page": true,
+			"shared_with_siblings": true,
+			"notes": "Derived from an existing FAQ. Not search volume data."
+		},
+		{
+			"concept": "buy cars salvage titles",
+			"intent": "transactional",
+			"user_need": "Do you buy cars with salvage titles?",
+			"representative_queries": [
+				"buy cars salvage titles"
+			],
+			"covered_by_existing_page": true,
+			"shared_with_siblings": false,
+			"notes": "Derived from an existing FAQ. Not search volume data."
+		},
+		{
+			"concept": "car damaged pick tow up",
+			"intent": "transactional",
+			"user_need": "Can you pick up a damaged car from a tow yard?",
+			"representative_queries": [
+				"pick up damaged car tow yard"
+			],
+			"covered_by_existing_page": true,
+			"shared_with_siblings": true,
+			"notes": "Derived from an existing FAQ. Not search volume data."
+		},
+		{
+			"concept": "buy cars damaged flood",
+			"intent": "transactional",
+			"user_need": "Do you buy flood-damaged cars?",
+			"representative_queries": [
+				"buy flood damaged cars"
+			],
+			"covered_by_existing_page": true,
+			"shared_with_siblings": false,
+			"notes": "Derived from an existing FAQ. Not search volume data."
+		}
+	],
+	"coverage_summary": {
+		"total_concepts": 4,
+		"shared_with_siblings": 2,
+		"distinctive_concepts": 2,
+		"uncovered_by_existing_page": 0
+	}
+}

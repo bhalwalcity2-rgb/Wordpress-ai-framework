@@ -1,0 +1,123 @@
+{
+	"slug": "boulder-city",
+	"target_type": "location",
+	"display_name": "junk car buying in Boulder City",
+	"generated": {
+		"by": "bootstrap-research.py",
+		"note": "Scaffolded from the existing corpus by bootstrap-research.py. NO EXTERNAL RESEARCH WAS PERFORMED. Every item is marked with the evidence level it actually has; nothing here may be treated as verified until a researcher answers the open questions and records a real source."
+	},
+	"research_status": {
+		"overall": "unresolved",
+		"researched_count": 2,
+		"verified_count": 1,
+		"unresolved_count": 12,
+		"unsupported_count": 0,
+		"editorial_opportunity_count": 0,
+		"blocking_gaps": [
+			"q-boulder-city-local-condition",
+			"q-boulder-city-00-boulder-city-bit-further",
+			"q-boulder-city-01-extra-charge-distance-offer",
+			"q-boulder-city-02-junk-unwanted-vehicle-boulder",
+			"q-boulder-city-04-call-phone-describe-vehicle",
+			"q-boulder-city-06-when-truck-arrives-verify"
+		]
+	},
+	"sections": {
+		"geographic_context": [
+			{
+				"id": "boulder-city-is-service-area",
+				"statement": "junk car buying in Boulder City is a configured service area for this business.",
+				"why_it_matters": "Establishes that the business serves the area at all.",
+				"provenance": {
+					"evidence_level": "business_provided",
+					"status": "verified",
+					"source_type": "official_business",
+					"source": "wordpress/themes/<theme>/inc/business-config.php"
+				}
+			}
+		],
+		"service_relevance": [
+			{
+				"id": "boulder-city-existing-coverage",
+				"statement": "The existing page covers 398 words across 3 sections.",
+				"why_it_matters": "Baseline for judging whether a rewrite adds anything.",
+				"provenance": {
+					"evidence_level": "research_observation",
+					"status": "researched",
+					"source_type": "research_observation",
+					"source": "content-engine/brief/boulder-city.json"
+				}
+			}
+		],
+		"community_context": [
+			{
+				"id": "boulder-city-named-places",
+				"statement": "Places named in existing copy: Adams Boulevard, Because Boulder City, Boulder City, Boulder City Boulder City, Buchanan Boulevard, Las Vegas, Most Boulder City, US-93, Utah Street.",
+				"why_it_matters": "Place names alone do not differentiate a page; recorded for reference only.",
+				"provenance": {
+					"evidence_level": "research_observation",
+					"status": "researched",
+					"source_type": "research_observation",
+					"source": "existing page copy"
+				}
+			}
+		]
+	},
+	"open_questions": [
+		{
+			"id": "q-boulder-city-local-condition",
+			"question": "What local condition in this area materially changes how or why someone sells a junk car, versus elsewhere in the valley?",
+			"why": "Without an answer this page has no supported angle and should not be written. A different landmark is not an answer.",
+			"suggested_source_type": "official_government",
+			"blocks_angle": "boulder-city-primary"
+		},
+		{
+			"id": "q-boulder-city-00-boulder-city-bit-further",
+			"question": "What authoritative source supports: \"Boulder City is a bit further from our base, but we still offer the same free towing, same-day service, and fair cash offers.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-boulder-city-01-extra-charge-distance-offer",
+			"question": "What authoritative source supports: \"No extra charge for the distance — the offer you get is the cash you keep.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-boulder-city-02-junk-unwanted-vehicle-boulder",
+			"question": "What authoritative source supports: \"If you have a junk or unwanted vehicle in Boulder City, we will come to you with free towing and pay you cash on the spot — the sa\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-boulder-city-04-call-phone-describe-vehicle",
+			"question": "What authoritative source supports: \"Call {phone}, describe your vehicle, and receive a firm cash offer.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-boulder-city-06-when-truck-arrives-verify",
+			"question": "What authoritative source supports: \"When our truck arrives, we verify the vehicle, hand you cash, and tow it away at no cost.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		}
+	],
+	"corpus_context": {
+		"phase_3b_assessment": "PARTIAL_DIFFERENTIATION",
+		"information_gain_verdict": "LOCAL_NAME_SUBSTITUTION_ONLY",
+		"rewrite_priority": "REWRITE",
+		"closest_sibling": "paradise",
+		"known_quality_issues": [
+			"BELOW_500_WORDS — SEO_STANDARDS.md §6 minimum for a location page",
+			"STRUCTURE_MATCHES_SIBLINGS",
+			"FAQ_SUBSTANCE_SHARED_WITH_SIBLINGS",
+			"SAME_TOPIC_FRAME_AS_SIBLINGS",
+			"NO_PAGE_SPECIFIC_CLOSING_CTA"
+		]
+	}
+}

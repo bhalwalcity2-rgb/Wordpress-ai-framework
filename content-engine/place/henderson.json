@@ -1,0 +1,282 @@
+{
+	"slug": "henderson",
+	"target_type": "location",
+	"display_name": "junk car buying in Henderson",
+	"generated": {
+		"by": "bootstrap-research.py",
+		"note": "Scaffolded from the existing corpus by bootstrap-research.py. NO EXTERNAL RESEARCH WAS PERFORMED. Every item is marked with the evidence level it actually has; nothing here may be treated as verified until a researcher answers the open questions and records a real source.",
+		"verification_pass": {
+			"on": "2026-09-05",
+			"by": "Phase 3C-2 external research",
+			"note": "Regulatory context researched and recorded. research_locked set."
+		}
+	},
+	"research_status": {
+		"overall": "researched",
+		"researched_count": 3,
+		"verified_count": 1,
+		"unresolved_count": 42,
+		"unsupported_count": 0,
+		"editorial_opportunity_count": 0,
+		"blocking_gaps": [
+			"q-henderson-cic-density"
+		]
+	},
+	"sections": {
+		"geographic_context": [
+			{
+				"id": "henderson-is-service-area",
+				"statement": "junk car buying in Henderson is a configured service area for this business.",
+				"why_it_matters": "Establishes that the business serves the area at all.",
+				"provenance": {
+					"evidence_level": "business_provided",
+					"status": "verified",
+					"source_type": "official_business",
+					"source": "wordpress/themes/<theme>/inc/business-config.php"
+				}
+			}
+		],
+		"service_relevance": [
+			{
+				"id": "henderson-existing-coverage",
+				"statement": "The existing page covers 1617 words across 7 sections.",
+				"why_it_matters": "Baseline for judging whether a rewrite adds anything.",
+				"provenance": {
+					"evidence_level": "research_observation",
+					"status": "researched",
+					"source_type": "research_observation",
+					"source": "content-engine/brief/henderson.json"
+				}
+			}
+		],
+		"business_relevant_situations": [
+			{
+				"id": "henderson-distinct-topics",
+				"statement": "The page raises topics no sibling raises: inoperable, overheating, rusted, stripped, totaled, unregistered, clark county, nevada dmv.",
+				"why_it_matters": "These are the only candidate grounds for a differentiated angle.",
+				"provenance": {
+					"evidence_level": "research_observation",
+					"status": "researched",
+					"source_type": "research_observation",
+					"source": "content-engine/reports/differentiation/henderson.json"
+				}
+			}
+		],
+		"community_context": [
+			{
+				"id": "henderson-named-places",
+				"statement": "Places named in existing copy: 89002, 89011, 89012, 89014, 89015, 89044, 89052, Boulder City, Boulder Highway, Craig Road.",
+				"why_it_matters": "Place names alone do not differentiate a page; recorded for reference only.",
+				"provenance": {
+					"evidence_level": "research_observation",
+					"status": "researched",
+					"source_type": "research_observation",
+					"source": "existing page copy"
+				}
+			}
+		],
+		"government_dmv_context": [
+			{
+				"id": "henderson-hoa-towing-scope",
+				"statement": "Under NRS 116.3102 a Nevada community association may cause a vehicle to be removed when it is improperly parked on property owned or leased by the association, or on a road, street, alley or other thoroughfare within the community. 48 hours' notice is required except for fire hydrants, fire lanes, accessible spaces, or an imminent threat to health, safety or welfare.",
+				"why_it_matters": "Sets the boundary of what an association can actually do. A vehicle on the owner's own driveway is outside this power, which is the opposite of what the live page implies.",
+				"provenance": {
+					"evidence_level": "sourced_fact",
+					"status": "researched",
+					"source": "NRS 116.3102 (nv.elaws.us mirror; corroborated by NV Real Estate Division training material)",
+					"source_type": "primary_source",
+					"verified_on": "2026-09-05",
+					"notes": "leg.state.nv.us and Justia both returned HTTP 403 to automated retrieval."
+				},
+				"claim_ids": [
+					"henderson-05-violations-trigger-warning-letters"
+				]
+			},
+			{
+				"id": "henderson-hoa-fine-mechanics",
+				"statement": "Under NRS 116.31031, a fine for a violation not posing an imminent threat may not exceed $100 per violation or $1,000 per hearing, a hearing opportunity is required, and a violation uncured after 14 days may draw an additional fine for each subsequent 7-day period.",
+				"why_it_matters": "This is the real enforcement pressure — fines through a process with a cure window, not daily penalties and not towing from a driveway.",
+				"provenance": {
+					"evidence_level": "sourced_fact",
+					"status": "researched",
+					"source": "NRS 116.31031 (Justia, 2025 code year)",
+					"source_type": "reputable_secondary",
+					"verified_on": "2026-09-05",
+					"notes": "Secondary publisher; confirm against the Legislature's own text before publication."
+				},
+				"claim_ids": [
+					"henderson-05-violations-trigger-warning-letters"
+				]
+			},
+			{
+				"id": "henderson-nrs116-is-statewide",
+				"statement": "NRS 116 applies to common-interest communities throughout Nevada, not to Henderson specifically.",
+				"why_it_matters": "Decisive for differentiation: a statutory regime shared by every sibling area cannot distinguish one location page from another.",
+				"provenance": {
+					"evidence_level": "sourced_fact",
+					"status": "researched",
+					"source": "NRS Chapter 116 (statewide Uniform Act)",
+					"source_type": "primary_source",
+					"verified_on": "2026-09-05"
+				}
+			}
+		]
+	},
+	"open_questions": [
+		{
+			"id": "q-henderson-cic-density",
+			"question": "Does the Nevada Real Estate Division CIC registry show Henderson with a materially higher concentration of common-interest communities than Summerlin, Enterprise, Spring Valley, Paradise, North Las Vegas or Boulder City?",
+			"why": "The single remaining question that could support any Henderson angle. NRS 116 itself is statewide, so only a Henderson-specific density fact could differentiate this page.",
+			"suggested_source_type": "official_government",
+			"blocks_angle": "henderson-primary"
+		},
+		{
+			"id": "q-henderson-local-condition",
+			"question": "What local condition in this area materially changes how or why someone sells a junk car, versus elsewhere in the valley?",
+			"why": "Without an answer this page has no supported angle and should not be written. A different landmark is not an answer.",
+			"suggested_source_type": "official_government",
+			"blocks_angle": "henderson-primary"
+		},
+		{
+			"id": "q-henderson-00-buy-junk-cars-henderson",
+			"question": "What authoritative source supports: \"We Buy Junk Cars in Henderson — Get Cash Today.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-henderson-01-green-valley-anthem-lake",
+			"question": "What authoritative source supports: \"Green Valley, Anthem, Lake Las Vegas, Inspirada, Seven Hills, and every neighborhood in between — Henderson residents get the same\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-henderson-03-one-most-hoa-governed",
+			"question": "What authoritative source supports: \"It is also one of the most HOA-governed cities in Clark County, which means a junk car sitting in your driveway is not just an eye\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-henderson-05-violations-trigger-warning-letters",
+			"question": "What authoritative source supports: \"Violations can trigger warning letters, daily fines, and in some cases, the HOA itself can coordinate towing at the homeowner's ex\"?",
+			"why": "Live copy asserts this with no source. Risk: high.",
+			"suggested_source_type": "official_government",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-henderson-07-homeowners-call-because-need",
+			"question": "What authoritative source supports: \"Homeowners call because they need a junk car gone — fast — without the hassle of listing it online, negotiating with strangers, or\"?",
+			"why": "Live copy asserts this with no source. Risk: high.",
+			"suggested_source_type": "official_government",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-henderson-08-handle-entire-process-firm",
+			"question": "What authoritative source supports: \"We handle the entire process: a firm cash offer over the phone, free towing to your address, and payment before we leave.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-henderson-19-sedans-coupes-honda-accord",
+			"question": "What authoritative source supports: \"Sedans and coupes Honda Accord, Toyota Camry, Nissan Altima, Chevy Malibu, Hyundai Sonata Running, non-running, high mileage, body\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-henderson-21-get-firm-cash-offer",
+			"question": "What authoritative source supports: \"Get a Firm Cash Offer We quote a price based on your vehicle's current salvage value — the year, make, and model combined with its\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-henderson-22-number-quote-number-pay",
+			"question": "What authoritative source supports: \"The number we quote is the number we pay.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-henderson-23-tow-pay-spot-tow",
+			"question": "What authoritative source supports: \"We Tow It and Pay You on the Spot Our tow truck comes directly to your Henderson address — your driveway, your garage, your apartm\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-henderson-24-driver-handles-quick-walk",
+			"question": "What authoritative source supports: \"The driver handles a quick walk-around, completes the paperwork, and pays you in cash or check before the truck leaves.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-henderson-26-call-now-day-cash",
+			"question": "What authoritative source supports: \"Call now for a same-day cash offer — no obligation.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-henderson-27-hoa-violations-inoperable-vehicles",
+			"question": "What authoritative source supports: \"HOA Violations for Inoperable Vehicles Henderson has one of the highest concentrations of HOA-governed communities in Clark County\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-henderson-30-buy-remaining-shell-even",
+			"question": "What authoritative source supports: \"We will buy the remaining shell — even with a salvage title — and tow it away for free.\"?",
+			"why": "Live copy asserts this with no source. Risk: high.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-henderson-31-vehicles-title-nevada-able",
+			"question": "What authoritative source supports: \"Vehicles With No Title In Nevada, you may be able to sell a junk vehicle without the original title if the vehicle was last titled\"?",
+			"why": "Live copy asserts this with no source. Risk: high.",
+			"suggested_source_type": "official_government",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-henderson-32-conditions-apply-request-duplicate",
+			"question": "What authoritative source supports: \"If those conditions do not apply, you can request a duplicate title from the Nevada DMV using Form VP-012 for a $20 fee.\"?",
+			"why": "Live copy asserts this with no source. Risk: high.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-henderson-35-still-worth-anything",
+			"question": "What authoritative source supports: \"Is it still worth anything?\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-henderson-40-even-vehicles-driven-years",
+			"question": "What authoritative source supports: \"Even vehicles that have not been driven in years still have salvage value — recyclable steel, aluminum, copper, and potentially re\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-henderson-municipal-vehicle-provision",
+			"question": "What does Henderson Municipal Code Ch. 7.08 (and the Property Maintenance Code) actually require for an inoperable vehicle on private property — notice period, cure window, penalty, and abatement process — and how does that differ from Clark County Code Title 11?",
+			"why": "The only route to a Henderson angle that survives the statewide-law problem. A concrete procedural difference would be genuine information gain; a mere difference of office name would not.",
+			"suggested_source_type": "official_government",
+			"blocks_angle": "henderson-jurisdiction"
+		}
+	],
+	"corpus_context": {
+		"phase_3b_assessment": "REAL_DIFFERENTIATION",
+		"information_gain_verdict": "HAS_INFORMATION_GAIN",
+		"rewrite_priority": "KEEP",
+		"closest_sibling": "las-vegas",
+		"known_quality_issues": []
+	},
+	"research_locked": true
+}

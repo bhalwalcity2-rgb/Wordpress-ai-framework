@@ -1,0 +1,97 @@
+{
+	"slug": "paradise",
+	"generated": {
+		"by": "bootstrap-research.py",
+		"note": "Scaffolded from the existing corpus by bootstrap-research.py. NO EXTERNAL RESEARCH WAS PERFORMED. Every item is marked with the evidence level it actually has; nothing here may be treated as verified until a researcher answers the open questions and records a real source."
+	},
+	"primary_entity": "junk car buying in Paradise",
+	"related_entities": [
+		"Call",
+		"Yes"
+	],
+	"attributes": [
+		"damaged",
+		"junk",
+		"running"
+	],
+	"problems": [],
+	"processes": [
+		"offer",
+		"paperwork",
+		"pickup",
+		"quote",
+		"removal",
+		"schedule",
+		"tow",
+		"towing"
+	],
+	"user_types": [],
+	"local_entities": [
+		"Boulder Highway",
+		"Eastern Avenue",
+		"I-15",
+		"Las Vegas",
+		"Maryland Parkway",
+		"Paradise",
+		"Paradise Road",
+		"South Maryland Parkway",
+		"Sunrise Manor",
+		"Swenson Street"
+	],
+	"business_entities": [],
+	"relationships": [
+		{
+			"from": "local",
+			"relation": "co-occurs_with",
+			"to": "process",
+			"evidence_level": "research_observation",
+			"observed_cooccurrence": 6,
+			"notes": "Co-occurrence in existing copy. Evidence that the page connects these ideas — not evidence that the connection holds."
+		},
+		{
+			"from": "attributes_condition",
+			"relation": "co-occurs_with",
+			"to": "local",
+			"evidence_level": "research_observation",
+			"observed_cooccurrence": 5,
+			"notes": "Co-occurrence in existing copy. Evidence that the page connects these ideas — not evidence that the connection holds."
+		},
+		{
+			"from": "attributes_condition",
+			"relation": "co-occurs_with",
+			"to": "process",
+			"evidence_level": "research_observation",
+			"observed_cooccurrence": 3,
+			"notes": "Co-occurrence in existing copy. Evidence that the page connects these ideas — not evidence that the connection holds."
+		},
+		{
+			"from": "vehicle condition",
+			"relation": "determines",
+			"to": "towing requirement",
+			"evidence_level": "hypothesis",
+			"notes": "Plausible domain relationship, unverified for this page."
+		},
+		{
+			"from": "vehicle ownership",
+			"relation": "determines",
+			"to": "title and documentation path",
+			"evidence_level": "hypothesis",
+			"notes": "Plausible domain relationship, unverified for this page."
+		},
+		{
+			"from": "community rules",
+			"relation": "creates",
+			"to": "vehicle removal pressure",
+			"evidence_level": "hypothesis",
+			"notes": "Plausible domain relationship, unverified for this page."
+		},
+		{
+			"from": "location",
+			"relation": "determines",
+			"to": "pickup and logistics context",
+			"evidence_level": "hypothesis",
+			"notes": "Plausible domain relationship, unverified for this page."
+		}
+	],
+	"coverage_gaps": []
+}

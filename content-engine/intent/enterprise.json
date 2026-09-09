@@ -1,0 +1,84 @@
+{
+	"slug": "enterprise",
+	"generated": {
+		"by": "bootstrap-research.py",
+		"note": "Scaffolded from the existing corpus by bootstrap-research.py. NO EXTERNAL RESEARCH WAS PERFORMED. Every item is marked with the evidence level it actually has; nothing here may be treated as verified until a researcher answers the open questions and records a real source."
+	},
+	"primary_intent": "navigational_local",
+	"secondary_intents": [
+		"transactional",
+		"commercial_investigation",
+		"informational"
+	],
+	"user_stage": "solution_aware",
+	"conversion_goal": "Phone call or instant-offer submission",
+	"decision_questions": [
+		{
+			"question": "Do you serve the Silverado Ranch area of Enterprise?",
+			"required_answer": "TO BE RESEARCHED",
+			"status": "unresolved"
+		},
+		{
+			"question": "How much will you pay for my junk car in Enterprise?",
+			"required_answer": "TO BE RESEARCHED",
+			"status": "unresolved"
+		},
+		{
+			"question": "Can you pick up a car that has been sitting for years in Enterprise?",
+			"required_answer": "TO BE RESEARCHED",
+			"status": "unresolved"
+		},
+		{
+			"question": "Is there any paperwork required to sell a junk car in Enterprise?",
+			"required_answer": "TO BE RESEARCHED",
+			"status": "unresolved"
+		}
+	],
+	"objections": [
+		{
+			"objection": "Is the quoted price the price I actually get?",
+			"response_requirement": "Needs a sourced statement of the firm-offer policy."
+		},
+		{
+			"objection": "Can I sell without the title?",
+			"response_requirement": "Needs an authoritative Nevada DMV source before answering."
+		}
+	],
+	"queries": [
+		{
+			"query": "serve silverado ranch area enterprise",
+			"intent": "navigational_local",
+			"question": "Do you serve the Silverado Ranch area of Enterprise?",
+			"satisfied_by": "",
+			"provenance": "observed_in_existing_copy"
+		},
+		{
+			"query": "how much pay junk car enterprise",
+			"intent": "navigational_local",
+			"question": "How much will you pay for my junk car in Enterprise?",
+			"satisfied_by": "",
+			"provenance": "observed_in_existing_copy"
+		},
+		{
+			"query": "pick up car sitting years enterprise",
+			"intent": "navigational_local",
+			"question": "Can you pick up a car that has been sitting for years in Enterprise?",
+			"satisfied_by": "",
+			"provenance": "observed_in_existing_copy"
+		},
+		{
+			"query": "there any paperwork required sell junk car enterprise",
+			"intent": "navigational_local",
+			"question": "Is there any paperwork required to sell a junk car in Enterprise?",
+			"satisfied_by": "",
+			"provenance": "observed_in_existing_copy"
+		}
+	],
+	"cannibalisation_risk": [
+		{
+			"with_page": "las-vegas",
+			"severity": "high",
+			"reason": "Same situation and FAQ substance as this sibling, differently worded."
+		}
+	]
+}
