@@ -139,8 +139,14 @@ function lvjcb_compute_seo() {
 		 * second half, and it is written to be read on the page rather
 		 * than to fit a ~60-character search result.
 		 */
-		$seo['title']       = $config['seo']['home_title'] ?? $config['hero']['heading'] . ' | ' . $business;
-		$seo['description'] = $config['seo']['home_description'] ?? $config['hero']['description'];
+		$home = function_exists( 'lvjcb_get_home_content' ) ? lvjcb_get_home_content() : null;
+
+		$seo['title']       = $home['seo_title']
+			?? $config['seo']['home_title']
+			?? $config['hero']['heading'] . ' | ' . $business;
+		$seo['description'] = $home['seo_description']
+			?? $config['seo']['home_description']
+			?? $config['hero']['description'];
 
 	} elseif ( is_page() ) {
 

@@ -20,6 +20,16 @@ if ( empty( $cta_text ) || empty( $cta_url ) ) {
 	return;
 }
 
+/*
+ * The heading is not decorative here — aria-labelledby names this
+ * section by it, so an empty one leaves the section with no accessible
+ * name and prints a bare <h2>. Callers that have nothing to say should
+ * render no banner at all.
+ */
+if ( empty( $args['heading'] ) ) {
+	return;
+}
+
 $section_id = sanitize_title( $args['id'] ?? '' );
 if ( '' === $section_id ) {
 	$section_id = wp_unique_id( 'cta-banner-' );

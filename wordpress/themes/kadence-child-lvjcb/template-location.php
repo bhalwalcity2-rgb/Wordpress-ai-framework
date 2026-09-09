@@ -49,11 +49,12 @@ $content  = lvjcb_get_location_content( $page_slug );
 $sections = ( $content && ! empty( $content['sections'] ) ) ? $content['sections'] : array();
 
 if ( $sections ) {
-	get_template_part( 'template-parts/location-written', null, array(
-		'content'   => $content,
-		'page_slug' => $page_slug,
-		'city'      => $city,
-		'hero'      => $hero,
+	get_template_part( 'template-parts/written-page', null, array(
+		'content'      => $content,
+		'page_slug'    => $page_slug,
+		'hero'         => $hero,
+		/* translators: %s: city name. */
+		'faq_fallback' => sprintf( __( 'Questions %s Residents Ask', 'lvjcb' ), $city ),
 	) );
 	get_template_part( 'template-parts/sections/footer' );
 	get_footer();

@@ -93,6 +93,33 @@ class LVJCB_Provision_Command {
 
 		// Location pages.
 		foreach ( $config['service_areas']['items'] as $location ) {
+
+			/*
+			 * The primary city is the homepage's own target, so it has no
+			 * location page: lvjcb_get_location_url() resolves it to '/'
+			 * and lvjcb_get_service_area_cards() leaves it out of the
+			 * grid. Provisioning one anyway created a page nothing linked
+			 * to, competing with the homepage for the same query — which
+			 * is why /service-areas/las-vegas/ existed only long enough
+			 * to be deleted again by hand.
+			 */
+			if ( ! empty( $location['is_primary'] ) ) {
+
+				$stray = get_page_by_path( $location['slug'], OBJECT, 'page' );
+
+				if ( $stray ) {
+					WP_CLI::warning( sprintf(
+						'/%1$s/ exists but %2$s is the primary city, which the homepage targets. Delete that page, or clear is_primary in business-config.php.',
+						$location['slug'],
+						$location['city']
+					) );
+				} else {
+					WP_CLI::log( sprintf( 'Skipped: /%s/ (primary city — the homepage covers it)', $location['slug'] ) );
+				}
+
+				continue;
+			}
+
 			$label   = trim( $location['city'] . ( $location['state'] ? ', ' . $location['state'] : '' ) );
 			$content = lvjcb_get_location_content( $location['slug'] );
 			$seo = array(
@@ -115,7 +142,13 @@ class LVJCB_Provision_Command {
 			WP_CLI::log( "Rank Math not detected - this theme's own native SEO output (inc/seo.php) is handling title/description/schema instead." );
 		}
 
-		$loc_count = count( $config['service_areas']['items'] );
+		// Excludes the primary city, which is skipped above.
+		$loc_count = count( array_filter(
+			$config['service_areas']['items'],
+			function ( $location ) {
+				return empty( $location['is_primary'] );
+			}
+		) );
 		$svc_count = count( $config['services']['cards'] );
 		WP_CLI::success( "Provisioning complete: {$loc_count} locations, {$svc_count} services, 5 standalone pages." );
 	}

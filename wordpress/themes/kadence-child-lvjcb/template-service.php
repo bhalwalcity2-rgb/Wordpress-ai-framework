@@ -30,6 +30,28 @@ foreach ( $services['cards'] as $card ) {
 
 $service_heading = $service ? $service['heading'] : get_the_title();
 $service_intro   = $service['intro'] ?? $service['description'] ?? '';
+
+/*
+ * A service with a content file in content/services/ is written for that
+ * service rather than assembled from the homepage sections with the
+ * heading swapped, and takes the same branch location pages do. Services
+ * with no file yet keep rendering the generic layout below, which is
+ * what lets written pages be added one at a time.
+ */
+$content  = lvjcb_get_service_content( $page_slug );
+$sections = ( $content && ! empty( $content['sections'] ) ) ? $content['sections'] : array();
+
+if ( $sections ) {
+	get_template_part( 'template-parts/written-page', null, array(
+		'content'      => $content,
+		'page_slug'    => $page_slug,
+		'hero'         => $hero,
+		'faq_fallback' => $faq['heading'],
+	) );
+	get_template_part( 'template-parts/sections/footer' );
+	get_footer();
+	return;
+}
 ?>
 
 <main id="lvjcb-main">
