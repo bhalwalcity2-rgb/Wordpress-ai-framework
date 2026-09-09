@@ -1,0 +1,38 @@
+{
+	"_purpose": "Content files whose current state predates the publish gate. Phases 0-3A corrected NAP, migrated the v1 schema fork and repaired rendering before any gate existed, so these files cannot have a promotion record. Recorded once, deliberately.",
+	"_rules": [
+		"Do not add to this list to work around the gate. New or rewritten content goes through publish-gate.py.",
+		"An entry should be removed once that page is next promoted properly — the promotion record then supersedes it.",
+		"The recorded hash is informational: the allowlist matches on path, so an allowlisted file may still be edited by hand. That is the cost of acknowledging history, and it shrinks to zero as pages are promoted."
+	],
+	"_recorded_on": "2026-09-06",
+	"files": [
+		"wordpress/themes/kadence-child-lvjcb/content/locations/boulder-city.json",
+		"wordpress/themes/kadence-child-lvjcb/content/locations/enterprise.json",
+		"wordpress/themes/kadence-child-lvjcb/content/locations/henderson.json",
+		"wordpress/themes/kadence-child-lvjcb/content/locations/las-vegas.json",
+		"wordpress/themes/kadence-child-lvjcb/content/locations/north-las-vegas.json",
+		"wordpress/themes/kadence-child-lvjcb/content/locations/paradise.json",
+		"wordpress/themes/kadence-child-lvjcb/content/locations/spring-valley.json",
+		"wordpress/themes/kadence-child-lvjcb/content/locations/summerlin.json",
+		"wordpress/themes/kadence-child-lvjcb/content/services/damaged.json",
+		"wordpress/themes/kadence-child-lvjcb/content/services/non-running.json",
+		"wordpress/themes/kadence-child-lvjcb/content/services/sedans.json",
+		"wordpress/themes/kadence-child-lvjcb/content/services/trucks-suvs.json"
+	],
+	"hashes_at_allowlisting": {
+		"wordpress/themes/kadence-child-lvjcb/content/locations/boulder-city.json": "302aa3b87bf66173782749c3c3f7512b7fcffe3b59fe4c29378122abfe24e2dc",
+		"wordpress/themes/kadence-child-lvjcb/content/locations/enterprise.json": "cb918503966d0b57063304876a4d3a7eb203894ef530b2e6106576ee1be67fc7",
+		"wordpress/themes/kadence-child-lvjcb/content/locations/henderson.json": "f14cffb209633c93e33757e370640312a8e9baf8314a257d012c374e478f1258",
+		"wordpress/themes/kadence-child-lvjcb/content/locations/las-vegas.json": "461dd68cbf3ae1b9881cfce0d5ce25d32a49ef1110c7ed5bef4cda69ebcaeff0",
+		"wordpress/themes/kadence-child-lvjcb/content/locations/north-las-vegas.json": "eb241a50be3efcf0dac1edb7b6e224fe1031568ab895126e5f999e0c59a76824",
+		"wordpress/themes/kadence-child-lvjcb/content/locations/paradise.json": "3f0d91c6cd344b2bb0ba48c7e33670e4c997df1280f420610903cf1ee96495ff",
+		"wordpress/themes/kadence-child-lvjcb/content/locations/spring-valley.json": "a2bd22c51330a64e7e98327c892a66c3d966ca6e690d8b8fc974986074a1b287",
+		"wordpress/themes/kadence-child-lvjcb/content/locations/summerlin.json": "9cecce4bb88a17256be18f1890e16e090b29696520b49edf3ec8b36e7f2d7a04",
+		"wordpress/themes/kadence-child-lvjcb/content/services/damaged.json": "1c8b19895f5e49d75a0e197c2723d31a3a1df4ecd79e21331efb0da23f016a1c",
+		"wordpress/themes/kadence-child-lvjcb/content/services/non-running.json": "66fdc272072e03ce7c5f10c6e085ef7f9f46330abc857381c22de50b9c981771",
+		"wordpress/themes/kadence-child-lvjcb/content/services/sedans.json": "2c498b31c29f86ab4af24afabfabb9acf5e16c9e853f7ac3541dd984fbf5f795",
+		"wordpress/themes/kadence-child-lvjcb/content/services/trucks-suvs.json": "236d2dc6a616354ab43d1f907e1dcb30b9ba9cfa99e1e7fb207958f899f3e297"
+	},
+	"_note_on_refresh": "Hashes refreshed after the 2026-09-06 correction pass, which removed claims that Phase 3C-2 research found CONTRADICTED or UNSUPPORTED from the Henderson page. That was a safety correction to live copy, not a promotion — it removes false statements rather than adding content, and predates any approved angle for that page."
+}

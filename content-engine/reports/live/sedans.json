@@ -1,0 +1,71 @@
+{
+	"slug": "sedans",
+	"url": "https://junkcarbuyerslasvegas.com/cash-for-junk-cars/sedans/",
+	"http_status": 200,
+	"final_url": "https://junkcarbuyerslasvegas.com/cash-for-junk-cars/sedans/",
+	"page_type": "service",
+	"artifact": "wordpress/themes/kadence-child-lvjcb/content/services/sedans.json",
+	"promotion_record": null,
+	"status": "FAIL",
+	"expected": {
+		"title": "Cash for Junk Sedans & Coupes in Las Vegas | First Choice Junk Car",
+		"description": "We buy junk sedans and coupes in Las Vegas. Any year, any condition — running or not. Free towing, instant cash offers. Call (866) 748-3697.",
+		"h1": "Cash for Junk Sedans & Coupes",
+		"section_headings": [
+			"We Buy Sedans and Coupes in Any Condition",
+			"How to Sell Your Junk Sedan in Las Vegas",
+			"Common Sedans We Buy",
+			"Why Sell Your Old Sedan to Us Instead of a Dealership"
+		],
+		"faq_questions": [
+			"How much is my junk sedan worth?",
+			"Do you buy sedans that don't run?",
+			"Will you buy my sedan if it has high mileage?",
+			"Can I sell a sedan without a title in Las Vegas?"
+		],
+		"internal_link_slugs": [],
+		"sample_sentences": [
+			"Sedans and coupes are the most common vehicles we purchase across the Las Vegas valley. Honda Accords, Toyota ",
+			"Whether your sedan has a blown head gasket, a transmission that slips, body damage from a parking lot fender b",
+			"Call us at (866) 748-3697 with the year, make, model, and condition of your sedan. We give you a firm cash off",
+			"Accept the offer and we schedule a free pickup at your location anywhere in the Las Vegas valley. Our tow truc",
+			"While we accept all makes and models, the most common sedans we purchase include Honda Accord, Honda Civic, To",
+			"We also buy luxury sedans that have reached the end of their useful life — older BMW 3 Series, Mercedes C-Clas"
+		],
+		"expected_word_floor": 250
+	},
+	"observed": {
+		"title": "Cash for Junk Sedans & Coupes in Las Vegas | Las Vegas Junk Car Buyers",
+		"description": "We buy junk sedans and coupes in Las Vegas. Any year, any condition — running or not. Free towing, instant cash offers. Call (702) 555-0134.",
+		"canonical": "https://junkcarbuyerslasvegas.com/cash-for-junk-cars/sedans/",
+		"h1": "Cash for Sedans & Coupes — in Las Vegas",
+		"h2_count": 10,
+		"body_words": 1232,
+		"jsonld_blocks": 1,
+		"final_url": "https://junkcarbuyerslasvegas.com/cash-for-junk-cars/sedans/",
+		"schema_types": [
+			"Answer",
+			"Article",
+			"AutomotiveBusiness",
+			"City",
+			"ImageObject",
+			"OpeningHoursSpecification",
+			"Person",
+			"PostalAddress",
+			"Question",
+			"Service",
+			"WebSite"
+		]
+	},
+	"blocking_issues": [
+		"title mismatch — expected 'Cash for Junk Sedans & Coupes in Las Vegas | First Choice Junk Car', got 'Cash for Junk Sedans & Coupes in Las Vegas | Las Vegas Junk Car Buyers'",
+		"section heading(s) absent from the page: We Buy Sedans and Coupes in Any Condition; How to Sell Your Junk Sedan in Las Vegas; Common Sedans We Buy",
+		"6 promoted paragraph(s) do not appear in the rendered body",
+		"4 FAQ question(s) missing from the page"
+	],
+	"warnings": [
+		"meta description truncated on the live page (expected behaviour)",
+		"H1 'Cash for Sedans & Coupes — in Las Vegas' differs from hero_heading 'Cash for Junk Sedans & Coupes'"
+	],
+	"verified_at": "2026-09-06"
+}

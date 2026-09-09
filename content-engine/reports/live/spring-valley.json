@@ -1,0 +1,69 @@
+{
+	"slug": "spring-valley",
+	"url": "https://junkcarbuyerslasvegas.com/service-areas/spring-valley/",
+	"http_status": 200,
+	"final_url": "https://junkcarbuyerslasvegas.com/service-areas/spring-valley/",
+	"page_type": "location",
+	"artifact": "wordpress/themes/kadence-child-lvjcb/content/locations/spring-valley.json",
+	"promotion_record": null,
+	"status": "FAIL",
+	"expected": {
+		"title": "We Buy Junk Cars in Spring Valley, NV | First Choice Junk Car",
+		"description": "Get cash for your junk car in Spring Valley, NV. Free towing, same-day pickup, any vehicle condition. No title? No problem. Call (866) 748-3697.",
+		"h1": "We Buy Junk Cars in Spring Valley",
+		"section_headings": [
+			"Cash for Junk Cars in Spring Valley",
+			"How to Sell Your Junk Car in Spring Valley",
+			"Spring Valley Areas We Cover"
+		],
+		"faq_questions": [
+			"How fast can you pick up a junk car in Spring Valley?",
+			"Do you buy cars from apartment complexes in Spring Valley?",
+			"What's the minimum you'll pay for a junk car in Spring Valley?",
+			"Can I sell a car with a dead battery in Spring Valley?"
+		],
+		"internal_link_slugs": [],
+		"sample_sentences": [
+			"Spring Valley sits right in the heart of the Las Vegas valley, and it's one of the areas we serve most frequen",
+			"No matter where in Spring Valley your vehicle is located, we'll come to you. We buy cars, trucks, SUVs, and va",
+			"Call (866) 748-3697 and tell us about your vehicle. Year, make, model, and a quick description of its conditio",
+			"When you're ready, we send a tow truck to your Spring Valley location. The driver verifies the vehicle, hands ",
+			"We cover all of Spring Valley including the neighborhoods along South Rainbow Boulevard, South Jones Boulevard"
+		],
+		"expected_word_floor": 250
+	},
+	"observed": {
+		"title": "We Buy Junk Cars in Spring Valley, NV | Las Vegas Junk Car Buyers",
+		"description": "Get cash for your junk car in Spring Valley, NV. Free towing, same-day pickup, any vehicle condition. No title? No problem. Call (702) 555-0134.",
+		"canonical": "https://junkcarbuyerslasvegas.com/service-areas/spring-valley/",
+		"h1": "We Buy Junk Cars in Spring Valley",
+		"h2_count": 6,
+		"body_words": 310,
+		"jsonld_blocks": 1,
+		"final_url": "https://junkcarbuyerslasvegas.com/service-areas/spring-valley/",
+		"schema_types": [
+			"Answer",
+			"Article",
+			"AutomotiveBusiness",
+			"BreadcrumbList",
+			"City",
+			"ImageObject",
+			"ListItem",
+			"OpeningHoursSpecification",
+			"Person",
+			"PostalAddress",
+			"Question",
+			"Service",
+			"State",
+			"WebSite"
+		]
+	},
+	"blocking_issues": [
+		"title mismatch — expected 'We Buy Junk Cars in Spring Valley, NV | First Choice Junk Car', got 'We Buy Junk Cars in Spring Valley, NV | Las Vegas Junk Car Buyers'",
+		"5 promoted paragraph(s) do not appear in the rendered body"
+	],
+	"warnings": [
+		"meta description truncated on the live page (expected behaviour)"
+	],
+	"verified_at": "2026-09-06"
+}

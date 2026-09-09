@@ -1,0 +1,71 @@
+{
+	"slug": "summerlin",
+	"url": "https://junkcarbuyerslasvegas.com/service-areas/summerlin/",
+	"http_status": 200,
+	"final_url": "https://junkcarbuyerslasvegas.com/service-areas/summerlin/",
+	"page_type": "location",
+	"artifact": "wordpress/themes/kadence-child-lvjcb/content/locations/summerlin.json",
+	"promotion_record": null,
+	"status": "FAIL",
+	"expected": {
+		"title": "We Buy Junk Cars in Summerlin, NV | First Choice Junk Car",
+		"description": "Sell your junk car in Summerlin for cash. Free towing, same-day service, no hidden fees. Any make, model, or condition. Call (866) 748-3697 today.",
+		"h1": "We Buy Junk Cars in Summerlin",
+		"section_headings": [
+			"Junk Car Buyers in Summerlin",
+			"Selling a Junk Car from a Summerlin HOA Community",
+			"Summerlin Communities We Serve",
+			"What to Expect When You Sell Your Car in Summerlin"
+		],
+		"faq_questions": [
+			"Can you pick up a junk car from my Summerlin HOA community?",
+			"How much do you pay for junk cars in Summerlin?",
+			"Do you buy cars that failed smog in Summerlin?",
+			"How fast can you remove a junk car from Summerlin?"
+		],
+		"internal_link_slugs": [],
+		"sample_sentences": [
+			"Summerlin is one of the most well-maintained communities in the Las Vegas valley, and HOA rules often mean tha",
+			"We buy vehicles of every type and condition from Summerlin residents. Whether it's a car that failed smog, a t",
+			"Many Summerlin communities have strict HOA regulations about vehicles parked on driveways or streets. If you'v",
+			"Call us at (866) 748-3697 and we'll schedule a pickup as quickly as possible — often the same day. We work aro",
+			"We serve all Summerlin villages and neighborhoods, including The Willows, The Trails, The Hills, The Paseos, T",
+			"The process is straightforward. You call us with your vehicle's year, make, model, and condition. We give you "
+		],
+		"expected_word_floor": 250
+	},
+	"observed": {
+		"title": "We Buy Junk Cars in Summerlin, NV | Las Vegas Junk Car Buyers",
+		"description": "Sell your junk car in Summerlin for cash. Free towing, same-day service, no hidden fees. Any make, model, or condition. Call (702) 555-0134 today.",
+		"canonical": "https://junkcarbuyerslasvegas.com/service-areas/summerlin/",
+		"h1": "We Buy Junk Cars in Summerlin",
+		"h2_count": 7,
+		"body_words": 323,
+		"jsonld_blocks": 1,
+		"final_url": "https://junkcarbuyerslasvegas.com/service-areas/summerlin/",
+		"schema_types": [
+			"Answer",
+			"Article",
+			"AutomotiveBusiness",
+			"BreadcrumbList",
+			"City",
+			"ImageObject",
+			"ListItem",
+			"OpeningHoursSpecification",
+			"Person",
+			"PostalAddress",
+			"Question",
+			"Service",
+			"State",
+			"WebSite"
+		]
+	},
+	"blocking_issues": [
+		"title mismatch — expected 'We Buy Junk Cars in Summerlin, NV | First Choice Junk Car', got 'We Buy Junk Cars in Summerlin, NV | Las Vegas Junk Car Buyers'",
+		"6 promoted paragraph(s) do not appear in the rendered body"
+	],
+	"warnings": [
+		"meta description truncated on the live page (expected behaviour)"
+	],
+	"verified_at": "2026-09-06"
+}

@@ -1,0 +1,71 @@
+{
+	"slug": "trucks-suvs",
+	"url": "https://junkcarbuyerslasvegas.com/cash-for-junk-cars/trucks-suvs/",
+	"http_status": 200,
+	"final_url": "https://junkcarbuyerslasvegas.com/cash-for-junk-cars/trucks-suvs/",
+	"page_type": "service",
+	"artifact": "wordpress/themes/kadence-child-lvjcb/content/services/trucks-suvs.json",
+	"promotion_record": null,
+	"status": "FAIL",
+	"expected": {
+		"title": "Cash for Junk Trucks & SUVs in Las Vegas | First Choice Junk Car",
+		"description": "We buy junk trucks and SUVs in Las Vegas. Full-size, mid-size, any condition. Free towing, same-day cash. Call (866) 748-3697 for a quote.",
+		"h1": "Cash for Junk Trucks & SUVs",
+		"section_headings": [
+			"We Buy Trucks and SUVs Across Las Vegas",
+			"Why Trucks and SUVs Get Higher Offers",
+			"How to Sell Your Junk Truck or SUV",
+			"Common Trucks and SUVs We Purchase"
+		],
+		"faq_questions": [
+			"How much do you pay for junk trucks in Las Vegas?",
+			"Do you buy 4x4 trucks and SUVs?",
+			"Can you tow a heavy-duty truck like an F-250?",
+			"Will you buy a truck with a blown engine?"
+		],
+		"internal_link_slugs": [],
+		"sample_sentences": [
+			"Trucks and SUVs hold their value well in the Las Vegas market, even when they're in rough shape. The heavier w",
+			"We buy full-size trucks like Ford F-150s, Chevy Silverados, and RAM 1500s, as well as mid-size trucks like the",
+			"There are two reasons trucks and SUVs typically receive higher cash offers than sedans. First, they weigh more",
+			"Second, truck and SUV parts are in constant demand. Engines, transmissions, transfer cases, axles, and body pa",
+			"Call (866) 748-3697 with the year, make, model, and condition of your truck or SUV. We'll give you a firm offe",
+			"Larger vehicles sometimes require specific towing equipment, which is why we ask for details about the vehicle"
+		],
+		"expected_word_floor": 250
+	},
+	"observed": {
+		"title": "Cash for Junk Trucks & SUVs in Las Vegas | Las Vegas Junk Car Buyers",
+		"description": "We buy junk trucks and SUVs in Las Vegas. Full-size, mid-size, any condition. Free towing, same-day cash. Call (702) 555-0134 for a quote.",
+		"canonical": "https://junkcarbuyerslasvegas.com/cash-for-junk-cars/trucks-suvs/",
+		"h1": "Cash for Trucks & SUVs — in Las Vegas",
+		"h2_count": 10,
+		"body_words": 1231,
+		"jsonld_blocks": 1,
+		"final_url": "https://junkcarbuyerslasvegas.com/cash-for-junk-cars/trucks-suvs/",
+		"schema_types": [
+			"Answer",
+			"Article",
+			"AutomotiveBusiness",
+			"City",
+			"ImageObject",
+			"OpeningHoursSpecification",
+			"Person",
+			"PostalAddress",
+			"Question",
+			"Service",
+			"WebSite"
+		]
+	},
+	"blocking_issues": [
+		"title mismatch — expected 'Cash for Junk Trucks & SUVs in Las Vegas | First Choice Junk Car', got 'Cash for Junk Trucks & SUVs in Las Vegas | Las Vegas Junk Car Buyers'",
+		"section heading(s) absent from the page: We Buy Trucks and SUVs Across Las Vegas; Why Trucks and SUVs Get Higher Offers; How to Sell Your Junk Truck or SUV",
+		"6 promoted paragraph(s) do not appear in the rendered body",
+		"4 FAQ question(s) missing from the page"
+	],
+	"warnings": [
+		"meta description truncated on the live page (expected behaviour)",
+		"H1 'Cash for Trucks & SUVs — in Las Vegas' differs from hero_heading 'Cash for Junk Trucks & SUVs'"
+	],
+	"verified_at": "2026-09-06"
+}

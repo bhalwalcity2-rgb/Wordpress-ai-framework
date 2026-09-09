@@ -1,0 +1,71 @@
+{
+	"slug": "north-las-vegas",
+	"url": "https://junkcarbuyerslasvegas.com/service-areas/north-las-vegas/",
+	"http_status": 200,
+	"final_url": "https://junkcarbuyerslasvegas.com/service-areas/north-las-vegas/",
+	"page_type": "location",
+	"artifact": "wordpress/themes/kadence-child-lvjcb/content/locations/north-las-vegas.json",
+	"promotion_record": null,
+	"status": "FAIL",
+	"expected": {
+		"title": "We Buy Junk Cars in North Las Vegas, NV | First Choice Junk Car",
+		"description": "Sell your junk car in North Las Vegas. Free towing, same-day cash offers, any condition. No title needed in most cases. Call (866) 748-3697.",
+		"h1": "We Buy Junk Cars in North Las Vegas",
+		"section_headings": [
+			"Junk Car Removal Across North Las Vegas",
+			"How It Works in North Las Vegas",
+			"North Las Vegas Areas We Serve",
+			"Common Vehicles We Buy in North Las Vegas"
+		],
+		"faq_questions": [
+			"Do you buy junk cars near Nellis Air Force Base?",
+			"How much is my junk car worth in North Las Vegas?",
+			"Can you pick up a car from an apartment complex in North Las Vegas?",
+			"Do I need to be present for the pickup in North Las Vegas?"
+		],
+		"internal_link_slugs": [],
+		"sample_sentences": [
+			"North Las Vegas has grown rapidly over the past two decades, and with that growth comes a steady demand for ju",
+			"We buy vehicles directly — no brokers, no middlemen. That means a faster process, a better offer, and no surpr",
+			"Call us at (866) 748-3697 with your vehicle's details: year, make, model, and condition. We give you a cash of",
+			"Accept the offer and we schedule a free pickup at your North Las Vegas address. Our tow truck arrives at the a",
+			"We cover every part of North Las Vegas, including Aliante, Eldorado, Alexander, the area surrounding Nellis Ai",
+			"Trucks and SUVs are especially common pickups in North Las Vegas — Ford F-150s, Chevy Silverados, Dodge Rams, "
+		],
+		"expected_word_floor": 250
+	},
+	"observed": {
+		"title": "We Buy Junk Cars in North Las Vegas, NV | Las Vegas Junk Car Buyers",
+		"description": "Sell your junk car in North Las Vegas. Free towing, same-day cash offers, any condition. No title needed in most cases. Call (702) 555-0134.",
+		"canonical": "https://junkcarbuyerslasvegas.com/service-areas/north-las-vegas/",
+		"h1": "We Buy Junk Cars in North Las Vegas",
+		"h2_count": 7,
+		"body_words": 335,
+		"jsonld_blocks": 1,
+		"final_url": "https://junkcarbuyerslasvegas.com/service-areas/north-las-vegas/",
+		"schema_types": [
+			"Answer",
+			"Article",
+			"AutomotiveBusiness",
+			"BreadcrumbList",
+			"City",
+			"ImageObject",
+			"ListItem",
+			"OpeningHoursSpecification",
+			"Person",
+			"PostalAddress",
+			"Question",
+			"Service",
+			"State",
+			"WebSite"
+		]
+	},
+	"blocking_issues": [
+		"title mismatch — expected 'We Buy Junk Cars in North Las Vegas, NV | First Choice Junk Car', got 'We Buy Junk Cars in North Las Vegas, NV | Las Vegas Junk Car Buyers'",
+		"6 promoted paragraph(s) do not appear in the rendered body"
+	],
+	"warnings": [
+		"meta description truncated on the live page (expected behaviour)"
+	],
+	"verified_at": "2026-09-06"
+}

@@ -11,8 +11,18 @@ on:
   workflow_dispatch:
 
 jobs:
+  # Runs the repository's own validation workflow. Deployment waits on it,
+  # so a commit that fails secret scanning, PHP lint, or the content
+  # schema never reaches the live theme. Declared as a job rather than
+  # `needs: [validate]` because the two workflows are separate files and
+  # `needs:` cannot cross that boundary.
+  validate:
+    name: Validate before deploy
+    uses: ./.github/workflows/validate.yml
+
   deploy:
     name: Deploy theme to production
+    needs: validate
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code

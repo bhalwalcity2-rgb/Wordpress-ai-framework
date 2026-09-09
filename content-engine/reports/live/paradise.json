@@ -1,0 +1,69 @@
+{
+	"slug": "paradise",
+	"url": "https://junkcarbuyerslasvegas.com/service-areas/paradise/",
+	"http_status": 200,
+	"final_url": "https://junkcarbuyerslasvegas.com/service-areas/paradise/",
+	"page_type": "location",
+	"artifact": "wordpress/themes/kadence-child-lvjcb/content/locations/paradise.json",
+	"promotion_record": null,
+	"status": "FAIL",
+	"expected": {
+		"title": "We Buy Junk Cars in Paradise, NV | First Choice Junk Car",
+		"description": "Sell your junk car in Paradise, NV for instant cash. Free towing, same-day service, any vehicle condition accepted. Call (866) 748-3697 now.",
+		"h1": "We Buy Junk Cars in Paradise",
+		"section_headings": [
+			"Junk Car Buyers in Paradise, NV",
+			"How Selling Works in Paradise",
+			"Paradise Neighborhoods We Serve"
+		],
+		"faq_questions": [
+			"Do you pick up junk cars near UNLV in Paradise?",
+			"How much do you pay for junk cars in Paradise?",
+			"Can you pick up a car from a commercial property in Paradise?",
+			"Is same-day pickup available in Paradise?"
+		],
+		"internal_link_slugs": [],
+		"sample_sentences": [
+			"Paradise is one of the most densely populated areas in the Las Vegas valley, stretching from the Strip corrido",
+			"We serve all of Paradise with free towing and same-day pickup. Whether your car is parked at a residence near ",
+			"Call (866) 748-3697 and describe your vehicle — year, make, model, and condition. We'll give you a cash offer ",
+			"If you accept, we schedule a pickup at your Paradise address. Our tow truck arrives, we verify the vehicle, pa",
+			"We provide junk car removal throughout Paradise including the areas near UNLV, the Las Vegas Convention Center"
+		],
+		"expected_word_floor": 250
+	},
+	"observed": {
+		"title": "We Buy Junk Cars in Paradise, NV | Las Vegas Junk Car Buyers",
+		"description": "Sell your junk car in Paradise, NV for instant cash. Free towing, same-day service, any vehicle condition accepted. Call (702) 555-0134 now.",
+		"canonical": "https://junkcarbuyerslasvegas.com/service-areas/paradise/",
+		"h1": "We Buy Junk Cars in Paradise",
+		"h2_count": 6,
+		"body_words": 298,
+		"jsonld_blocks": 1,
+		"final_url": "https://junkcarbuyerslasvegas.com/service-areas/paradise/",
+		"schema_types": [
+			"Answer",
+			"Article",
+			"AutomotiveBusiness",
+			"BreadcrumbList",
+			"City",
+			"ImageObject",
+			"ListItem",
+			"OpeningHoursSpecification",
+			"Person",
+			"PostalAddress",
+			"Question",
+			"Service",
+			"State",
+			"WebSite"
+		]
+	},
+	"blocking_issues": [
+		"title mismatch — expected 'We Buy Junk Cars in Paradise, NV | First Choice Junk Car', got 'We Buy Junk Cars in Paradise, NV | Las Vegas Junk Car Buyers'",
+		"5 promoted paragraph(s) do not appear in the rendered body"
+	],
+	"warnings": [
+		"meta description truncated on the live page (expected behaviour)"
+	],
+	"verified_at": "2026-09-06"
+}

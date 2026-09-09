@@ -1,0 +1,77 @@
+{
+	"slug": "henderson",
+	"url": "https://junkcarbuyerslasvegas.com/service-areas/henderson/",
+	"http_status": 200,
+	"final_url": "https://junkcarbuyerslasvegas.com/service-areas/henderson/",
+	"page_type": "location",
+	"artifact": "wordpress/themes/kadence-child-lvjcb/content/locations/henderson.json",
+	"promotion_record": null,
+	"status": "PASS",
+	"expected": {
+		"title": "Junk Car Buyers Henderson NV | Cash for Junk Cars, Free Towing",
+		"description": "We buy junk cars in Henderson, NV — Green Valley, Anthem, Seven Hills, Inspirada, and every zip code. Free towing, same-day pickup, firm cash on the spot.",
+		"h1": "We Buy Junk Cars in Henderson — Get Cash Today",
+		"section_headings": [
+			"Selling a Junk Car in Henderson, NV",
+			"Junk Car Pickup Across Henderson — Every Neighborhood, Every Zip Code",
+			"Vehicles We Buy in Henderson — Any Make, Any Condition",
+			"How to Sell Your Junk Car in Henderson — Three Steps",
+			"Have a Junk Car Sitting in Your Henderson Driveway?",
+			"Common Situations Henderson Residents Call Us About",
+			"We Also Serve These Areas Near Henderson"
+		],
+		"faq_questions": [
+			"How fast can you get to Henderson?",
+			"Will my HOA fine me if a tow truck comes to my house?",
+			"I live in a Sun City community. Can you pick up from an age-restricted neighborhood?",
+			"My car has been sitting in my garage for years. Is it still worth anything?"
+		],
+		"internal_link_slugs": [
+			"boulder-city",
+			"enterprise",
+			"las-vegas",
+			"north-las-vegas",
+			"paradise",
+			"spring-valley",
+			"summerlin"
+		],
+		"sample_sentences": [
+			"Henderson is Nevada's second-largest city — over 350,000 residents spread across more than 100 square miles of",
+			"Many Henderson neighborhoods — especially gated and master-planned communities like Green Valley Ranch, Anthem",
+			"That pressure is exactly why Henderson is one of our busiest service areas. Homeowners call because they need ",
+			"Green Valley (North, South, and Ranch), Inspirada, Cadence, and Seven Hills are among Henderson's most tightly",
+			"Henderson's age-restricted communities are one of our most common pickup areas. The situation is usually the s",
+			"The oldest parts of Henderson — the original townsite near Water Street, Pittman, and the neighborhoods along "
+		],
+		"expected_word_floor": 450
+	},
+	"observed": {
+		"title": "Junk Car Buyers Henderson NV | Cash for Junk Cars, Free Towing",
+		"description": "We buy junk cars in Henderson, NV — Green Valley, Anthem, Seven Hills, Inspirada, and every zip code. Free towing, same-day pickup, firm cash on the spot.",
+		"canonical": "https://junkcarbuyerslasvegas.com/service-areas/henderson/",
+		"h1": "We Buy Junk Cars in Henderson — Get Cash Today",
+		"h2_count": 11,
+		"body_words": 1884,
+		"jsonld_blocks": 1,
+		"final_url": "https://junkcarbuyerslasvegas.com/service-areas/henderson/",
+		"schema_types": [
+			"Answer",
+			"Article",
+			"AutomotiveBusiness",
+			"BreadcrumbList",
+			"City",
+			"ImageObject",
+			"ListItem",
+			"OpeningHoursSpecification",
+			"Person",
+			"PostalAddress",
+			"Question",
+			"Service",
+			"State",
+			"WebSite"
+		]
+	},
+	"blocking_issues": [],
+	"warnings": [],
+	"verified_at": "2026-09-06"
+}
