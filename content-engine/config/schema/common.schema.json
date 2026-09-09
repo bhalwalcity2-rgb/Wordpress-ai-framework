@@ -1,0 +1,280 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "common.schema.json",
+	"title": "Shared content definitions (canonical v2)",
+	"description": "Section and fragment definitions shared by location.schema.json and service.schema.json. Every definition here mirrors what a template part actually reads; the template is cited on each one. Changing a definition without changing its template is how the v1/v2 fork happened — see ADR-0003.",
+
+	"definitions": {
+
+		"nonEmptyString": {
+			"type": "string",
+			"minLength": 1
+		},
+
+		"prose": {
+			"description": "A paragraph of plain prose. Never contains markup or URLs — lvjcb_prose() escapes it, links city mentions, and turns the phone number into a tel: link. Business identity appears only as the {business} and {phone} tokens.",
+			"type": "string",
+			"minLength": 1
+		},
+
+		"image": {
+			"description": "Read by template-parts/sections/rich-content.php, which resolves 'slug' to a media attachment via lvjcb_get_attachment_id_by_slug().",
+			"type": "object",
+			"required": [ "slug", "alt" ],
+			"additionalProperties": false,
+			"properties": {
+				"slug": { "$ref": "#/definitions/nonEmptyString" },
+				"alt": { "$ref": "#/definitions/nonEmptyString" },
+				"caption": { "type": "string" },
+				"align": {
+					"description": "'left' or 'right' places the image beside the prose; 'wide' runs it the full container width.",
+					"enum": [ "left", "right", "wide" ]
+				}
+			}
+		},
+
+		"tableCell": {
+			"description": "Either plain text, or an object naming a service slug that rich-content.php resolves to a URL — so the content file never stores a link.",
+			"oneOf": [
+				{ "type": "string" },
+				{
+					"type": "object",
+					"required": [ "text" ],
+					"additionalProperties": false,
+					"properties": {
+						"text": { "$ref": "#/definitions/nonEmptyString" },
+						"service": { "$ref": "#/definitions/nonEmptyString" }
+					}
+				}
+			]
+		},
+
+		"table": {
+			"type": "object",
+			"required": [ "columns", "rows" ],
+			"additionalProperties": false,
+			"properties": {
+				"caption": { "type": "string" },
+				"columns": {
+					"type": "array",
+					"minItems": 1,
+					"items": { "$ref": "#/definitions/nonEmptyString" }
+				},
+				"rows": {
+					"type": "array",
+					"minItems": 1,
+					"items": {
+						"type": "array",
+						"minItems": 1,
+						"items": { "$ref": "#/definitions/tableCell" }
+					}
+				}
+			}
+		},
+
+		"block": {
+			"description": "An H3 sub-block inside a content section.",
+			"type": "object",
+			"required": [ "heading", "paragraphs" ],
+			"additionalProperties": false,
+			"properties": {
+				"heading": { "$ref": "#/definitions/nonEmptyString" },
+				"paragraphs": {
+					"type": "array",
+					"minItems": 1,
+					"items": { "$ref": "#/definitions/prose" }
+				}
+			}
+		},
+
+		"contentSection": {
+			"description": "type 'content' -> template-parts/sections/rich-content.php. Must carry at least one of paragraphs, blocks, or table: a section with only a heading renders an empty H2, which is the exact v1 failure mode ADR-0003 exists to prevent.",
+			"type": "object",
+			"required": [ "type", "heading" ],
+			"additionalProperties": false,
+			"anyOf": [
+				{ "required": [ "paragraphs" ] },
+				{ "required": [ "blocks" ] },
+				{ "required": [ "table" ] }
+			],
+			"properties": {
+				"type": { "const": "content" },
+				"eyebrow": { "type": "string" },
+				"heading": { "$ref": "#/definitions/nonEmptyString" },
+				"intro": { "type": "string" },
+				"paragraphs": {
+					"type": "array",
+					"minItems": 1,
+					"items": { "$ref": "#/definitions/prose" }
+				},
+				"blocks": {
+					"type": "array",
+					"minItems": 1,
+					"items": { "$ref": "#/definitions/block" }
+				},
+				"table": { "$ref": "#/definitions/table" },
+				"footnote": { "type": "string" },
+				"image": { "$ref": "#/definitions/image" },
+				"variant": {
+					"description": "Section background modifier. Omit to let written-page.php alternate automatically.",
+					"enum": [ "alt" ]
+				}
+			}
+		},
+
+		"stepsSection": {
+			"description": "type 'steps' -> template-parts/sections/how-it-works.php, each step passed to components/step-card.php.",
+			"type": "object",
+			"required": [ "type", "heading", "steps" ],
+			"additionalProperties": false,
+			"properties": {
+				"type": { "const": "steps" },
+				"eyebrow": { "type": "string" },
+				"heading": { "$ref": "#/definitions/nonEmptyString" },
+				"intro": { "type": "string" },
+				"steps": {
+					"type": "array",
+					"minItems": 1,
+					"items": {
+						"type": "object",
+						"required": [ "heading", "description" ],
+						"additionalProperties": false,
+						"properties": {
+							"icon": { "type": "string" },
+							"heading": { "$ref": "#/definitions/nonEmptyString" },
+							"description": { "$ref": "#/definitions/prose" }
+						}
+					}
+				}
+			}
+		},
+
+		"ctaSection": {
+			"description": "type 'cta' -> template-parts/sections/cta-banner.php. The CTA label and URL are supplied by the template from business-config.php, never by the content file.",
+			"type": "object",
+			"required": [ "type", "heading" ],
+			"additionalProperties": false,
+			"properties": {
+				"type": { "const": "cta" },
+				"eyebrow": { "type": "string" },
+				"heading": { "$ref": "#/definitions/nonEmptyString" },
+				"intro": { "type": "string" }
+			}
+		},
+
+		"areasSection": {
+			"description": "type 'areas' -> template-parts/sections/service-areas.php. Items name a service area by slug only; city, state, and URL are resolved from business-config.php at render, so a retired area cannot leave a stale link.",
+			"type": "object",
+			"required": [ "type", "heading", "items" ],
+			"additionalProperties": false,
+			"properties": {
+				"type": { "const": "areas" },
+				"eyebrow": { "type": "string" },
+				"heading": { "$ref": "#/definitions/nonEmptyString" },
+				"intro": { "type": "string" },
+				"items": {
+					"type": "array",
+					"minItems": 1,
+					"items": {
+						"type": "object",
+						"required": [ "slug" ],
+						"additionalProperties": false,
+						"properties": {
+							"slug": { "$ref": "#/definitions/nonEmptyString" },
+							"note": { "type": "string" }
+						}
+					}
+				}
+			}
+		},
+
+		"servicesSection": {
+			"description": "type 'services' -> template-parts/sections/what-we-buy.php. Tier 3 per ADR-0004: the page chooses placement, subset, and an optional per-entry note; heading, description, icon, and URL all resolve from services.cards in business-config.php at render. Omit 'items' to show every service. Naming a slug that is not in the config is an error, so a retired service cannot leave a dead card behind.",
+			"type": "object",
+			"required": [ "type", "heading" ],
+			"additionalProperties": false,
+			"properties": {
+				"type": { "const": "services" },
+				"eyebrow": { "type": "string" },
+				"heading": { "$ref": "#/definitions/nonEmptyString" },
+				"intro": { "type": "string" },
+				"items": {
+					"description": "Optional subset, in display order. Omit for all services.",
+					"type": "array",
+					"minItems": 1,
+					"items": {
+						"type": "object",
+						"required": [ "slug" ],
+						"additionalProperties": false,
+						"properties": {
+							"slug": { "$ref": "#/definitions/nonEmptyString" },
+							"note": {
+								"description": "Optional page-specific line replacing the service's configured description — the one place a page may speak about a service in its own words.",
+								"type": "string"
+							}
+						}
+					}
+				}
+			}
+		},
+
+		"section": {
+			"description": "Dispatched on 'type' by template-parts/written-page.php. An unrecognised type must fail here: the renderer's default branch would otherwise draw it as a content section without complaint. Tier 1 components (trust strip, vehicles, testimonials, contact, closing CTA) are deliberately absent — they render globally and are not expressible here (ADR-0004).",
+			"type": "object",
+			"required": [ "type" ],
+			"properties": {
+				"type": { "enum": [ "content", "steps", "cta", "areas", "services" ] }
+			},
+			"selectOn": "type",
+			"select": {
+				"content": { "$ref": "#/definitions/contentSection" },
+				"steps": { "$ref": "#/definitions/stepsSection" },
+				"cta": { "$ref": "#/definitions/ctaSection" },
+				"areas": { "$ref": "#/definitions/areasSection" },
+				"services": { "$ref": "#/definitions/servicesSection" }
+			}
+		},
+
+		"faqItem": {
+			"type": "object",
+			"required": [ "question", "answer" ],
+			"additionalProperties": false,
+			"properties": {
+				"question": { "$ref": "#/definitions/nonEmptyString" },
+				"answer": { "$ref": "#/definitions/prose" }
+			}
+		},
+
+		"finalCta": {
+			"type": "object",
+			"required": [ "heading" ],
+			"additionalProperties": false,
+			"properties": {
+				"heading": { "$ref": "#/definitions/nonEmptyString" },
+				"intro": { "type": "string" }
+			}
+		},
+
+		"linkRef": {
+			"type": "object",
+			"required": [ "slug" ],
+			"additionalProperties": false,
+			"properties": {
+				"label": { "type": "string" },
+				"slug": { "$ref": "#/definitions/nonEmptyString" }
+			}
+		},
+
+		"internalLinks": {
+			"description": "DEPRECATED. No PHP reads this key: internal links are produced at render time by lvjcb_autolink_locations(), by 'areas' sections, and by service-linked table cells. Retained so existing files stay valid; the validator warns. See ADR-0003.",
+			"x-deprecated": "No renderer consumes internal_links. Links are generated at render time; this block is inert data.",
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+				"services": { "type": "array", "items": { "$ref": "#/definitions/linkRef" } },
+				"locations": { "type": "array", "items": { "$ref": "#/definitions/linkRef" } },
+				"nearby_locations": { "type": "array", "items": { "$ref": "#/definitions/linkRef" } }
+			}
+		}
+	}
+}

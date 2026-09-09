@@ -314,7 +314,7 @@ return array(
 	'about' => array(
 		'eyebrow' => 'About us',
 		'heading' => 'A local company, not a national lead-gen line',
-		'body'    => "Las Vegas Junk Car Buyers is locally owned and operated across the Las Vegas valley. We buy vehicles directly, running or not, damaged or complete, and handle towing, paperwork, and payment ourselves without routing your call through a broker or national call center.",
+		'body'    => "First Choice Junk Car is locally owned and operated across the Las Vegas valley. We buy vehicles directly, running or not, damaged or complete, and handle towing, paperwork, and payment ourselves without routing your call through a broker or national call center.",
 	),
 
 );

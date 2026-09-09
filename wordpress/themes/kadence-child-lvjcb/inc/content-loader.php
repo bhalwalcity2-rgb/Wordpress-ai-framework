@@ -49,13 +49,121 @@ function lvjcb_load_content( $type, $slug ) {
 	$data = json_decode( $raw, true );
 
 	if ( json_last_error() !== JSON_ERROR_NONE ) {
+
+		/*
+		 * A malformed file used to return null without a word, and the
+		 * page then rendered the generic templated fallback with nothing
+		 * to say why. Reporting it here is what makes that failure
+		 * detectable. The null return is deliberately kept, so a broken
+		 * file still degrades to the fallback rather than fatalling a
+		 * live page.
+		 */
+		lvjcb_content_error(
+			sprintf(
+				'Malformed JSON in content/%1$s/%2$s.json — %3$s. Page fell back to the templated layout.',
+				$type,
+				$slug,
+				json_last_error_msg()
+			)
+		);
+
 		$cache[ $key ] = null;
 		return null;
 	}
 
-	$cache[ $key ] = $data;
+	$cache[ $key ] = lvjcb_resolve_content_tokens( $data );
 
-	return $data;
+	return $cache[ $key ];
+}
+
+/**
+ * Get the homepage's written content, if it has any.
+ *
+ * Unlike a location or service file this one is additive: front-page.php
+ * keeps its frozen section order and renders these sections into it,
+ * rather than replacing the layout. The homepage is the primary city's
+ * page and must not turn into a second location page, so there is no
+ * fallback shape to build here — a site with no home.json simply renders
+ * the configured homepage exactly as before.
+ *
+ * @since 0.5.0
+ *
+ * @return array|null Parsed content, or null when the file is absent.
+ */
+function lvjcb_get_home_content() {
+
+	return lvjcb_load_content( 'pages', 'home' );
+}
+
+/**
+ * Report a content-file problem everywhere someone might be looking.
+ *
+ * Content files are read at render time, so a bad one has no natural
+ * failure surface — the page simply comes out generic. This routes the
+ * problem to the error log, to the screen while debugging, and to the
+ * terminal during provisioning.
+ *
+ * @since 0.5.0
+ *
+ * @param string $message Human-readable description of the problem.
+ * @return void
+ */
+function lvjcb_content_error( $message ) {
+
+	// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log
+	error_log( '[lvjcb] ' . $message );
+
+	if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
+		// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_trigger_error
+		trigger_error( esc_html( $message ), E_USER_WARNING );
+	}
+
+	if ( defined( 'WP_CLI' ) && WP_CLI ) {
+		WP_CLI::warning( $message );
+	}
+}
+
+/**
+ * Replace business tokens throughout a decoded content file.
+ *
+ * Content files carry `{business}` and `{phone}` rather than the literal
+ * name and number, so business-config.php stays the single source of
+ * truth and a changed phone number cannot leave stale copies behind in
+ * a dozen JSON files. Resolving here — once, at load — means every
+ * consumer downstream (SEO titles, meta descriptions, Rank Math
+ * provisioning, and the templates themselves) gets real values without
+ * each having to know tokens exist.
+ *
+ * Recurses because the tokens appear at every depth: section
+ * paragraphs, block paragraphs, table cells, FAQ answers, footnotes.
+ *
+ * @since 0.5.0
+ *
+ * @param mixed $value Decoded value — string, array, or scalar.
+ * @return mixed The value with tokens resolved.
+ */
+function lvjcb_resolve_content_tokens( $value ) {
+
+	static $tokens = null;
+
+	if ( null === $tokens ) {
+		$tokens = array(
+			'{business}' => (string) lvjcb_get_config( 'business_name' ),
+			'{phone}'    => (string) lvjcb_get_phone_number( 'display' ),
+		);
+	}
+
+	if ( is_string( $value ) ) {
+		return strtr( $value, $tokens );
+	}
+
+	if ( is_array( $value ) ) {
+		foreach ( $value as $index => $item ) {
+			$value[ $index ] = lvjcb_resolve_content_tokens( $item );
+		}
+	}
+
+	return $value;
 }
 
 /**
@@ -94,7 +202,6 @@ function lvjcb_get_location_content( $slug ) {
 		'hero_description' => $intro,
 		'sections'         => array(),
 		'faq'              => array(),
-		'internal_links'   => array(),
 	);
 }
 
@@ -127,115 +234,5 @@ function lvjcb_get_service_content( $slug ) {
 		'hero_description' => $intro,
 		'sections'         => array(),
 		'faq'              => array(),
-		'internal_links'   => array(),
-	);
-}
-
-/**
- * Build internal link HTML for a list of related pages.
- *
- * Used by templates to render contextual internal links within content
- * sections. Links are generated from slugs, so they always stay in sync
- * with the config.
- *
- * @since 0.4.0
- *
- * @param array $links Array of ['label' => string, 'url' => string].
- * @return string HTML list of links.
- */
-function lvjcb_render_internal_links( $links ) {
-
-	if ( empty( $links ) ) {
-		return '';
-	}
-
-	$items = array();
-
-	foreach ( $links as $link ) {
-		$items[] = sprintf(
-			'<a href="%s">%s</a>',
-			esc_url( $link['url'] ),
-			esc_html( $link['label'] )
-		);
-	}
-
-	return implode( ' · ', $items );
-}
-
-/**
- * Build internal link data for a location page — links to nearby
- * locations and all services.
- *
- * @since 0.4.0
- *
- * @param string $current_slug The slug of the current location page.
- * @return array{locations: array, services: array}
- */
-function lvjcb_build_location_links( $current_slug ) {
-
-	$config    = lvjcb_get_config();
-	$locations = array();
-	$services  = array();
-
-	foreach ( $config['service_areas']['items'] as $loc ) {
-		if ( $loc['slug'] === $current_slug ) {
-			continue;
-		}
-		$label = trim( $loc['city'] . ( $loc['state'] ? ', ' . $loc['state'] : '' ) );
-		$locations[] = array(
-			'label' => $label,
-			'url'   => lvjcb_get_location_url( $loc ),
-		);
-	}
-
-	foreach ( $config['services']['cards'] as $svc ) {
-		$services[] = array(
-			'label' => $svc['heading'],
-			'url'   => home_url( '/cash-for-junk-cars/' . $svc['slug'] . '/' ),
-		);
-	}
-
-	return array(
-		'locations' => $locations,
-		'services'  => $services,
-	);
-}
-
-/**
- * Build internal link data for a service page — links to all locations
- * and other services.
- *
- * @since 0.4.0
- *
- * @param string $current_slug The slug of the current service page.
- * @return array{locations: array, services: array}
- */
-function lvjcb_build_service_links( $current_slug ) {
-
-	$config    = lvjcb_get_config();
-	$locations = array();
-	$services  = array();
-
-	foreach ( $config['service_areas']['items'] as $loc ) {
-		$label = trim( $loc['city'] . ( $loc['state'] ? ', ' . $loc['state'] : '' ) );
-		$locations[] = array(
-			'label' => $label,
-			'url'   => lvjcb_get_location_url( $loc ),
-		);
-	}
-
-	foreach ( $config['services']['cards'] as $svc ) {
-		if ( $svc['slug'] === $current_slug ) {
-			continue;
-		}
-		$services[] = array(
-			'label' => $svc['heading'],
-			'url'   => home_url( '/cash-for-junk-cars/' . $svc['slug'] . '/' ),
-		);
-	}
-
-	return array(
-		'locations' => $locations,
-		'services'  => $services,
 	);
 }
