@@ -5,45 +5,40 @@
 	"final_url": "https://junkcarbuyerslasvegas.com/service-areas/henderson/",
 	"page_type": "location",
 	"artifact": "wordpress/themes/kadence-child-lvjcb/content/locations/henderson.json",
-	"promotion_record": null,
-	"status": "PASS",
+	"promotion_record": "content-engine/reports/promotions/henderson.latest.json",
+	"status": "FAIL",
 	"expected": {
-		"title": "Junk Car Buyers Henderson NV | Cash for Junk Cars, Free Towing",
-		"description": "We buy junk cars in Henderson, NV — Green Valley, Anthem, Seven Hills, Inspirada, and every zip code. Free towing, same-day pickup, firm cash on the spot.",
-		"h1": "We Buy Junk Cars in Henderson — Get Cash Today",
+		"title": "Henderson Inoperable Vehicle Limits | First Choice Junk Car",
+		"description": "Henderson caps how many inoperable vehicles a property may keep, and the number depends on your zoning designation. What the rule says, and what to do next.",
+		"h1": "How Many Inoperable Vehicles You Can Keep in Henderson",
 		"section_headings": [
-			"Selling a Junk Car in Henderson, NV",
-			"Junk Car Pickup Across Henderson — Every Neighborhood, Every Zip Code",
-			"Vehicles We Buy in Henderson — Any Make, Any Condition",
-			"How to Sell Your Junk Car in Henderson — Three Steps",
-			"Have a Junk Car Sitting in Your Henderson Driveway?",
-			"Common Situations Henderson Residents Call Us About",
-			"We Also Serve These Areas Near Henderson"
+			"Henderson Puts a Number On It",
+			"The 72-Hour Allowance, and What It Does Not Cover",
+			"Three Things Worth Checking Before You Decide Anything",
+			"Bring It Into Line, or Let It Go",
+			"If Selling Is the Simpler Answer",
+			"Not Sure Whether You Are Over the Limit?"
 		],
 		"faq_questions": [
-			"How fast can you get to Henderson?",
-			"Will my HOA fine me if a tow truck comes to my house?",
-			"I live in a Sun City community. Can you pick up from an age-restricted neighborhood?",
-			"My car has been sitting in my garage for years. Is it still worth anything?"
+			"How many inoperable vehicles can I keep on my property in Henderson?",
+			"Does it help that the car still has current plates?",
+			"I am part-way through fixing it. How long do I have?",
+			"Can I just put it behind a fence?"
 		],
 		"internal_link_slugs": [
-			"boulder-city",
-			"enterprise",
-			"las-vegas",
-			"north-las-vegas",
-			"paradise",
-			"spring-valley",
-			"summerlin"
+			"damaged",
+			"non-running",
+			"sedans"
 		],
 		"sample_sentences": [
-			"Henderson is Nevada's second-largest city — over 350,000 residents spread across more than 100 square miles of",
-			"Many Henderson neighborhoods — especially gated and master-planned communities like Green Valley Ranch, Anthem",
-			"That pressure is exactly why Henderson is one of our busiest service areas. Homeowners call because they need ",
-			"Green Valley (North, South, and Ranch), Inspirada, Cadence, and Seven Hills are among Henderson's most tightly",
-			"Henderson's age-restricted communities are one of our most common pickup areas. The situation is usually the s",
-			"The oldest parts of Henderson — the original townsite near Water Street, Pittman, and the neighborhoods along "
+			"Most people worrying about a dead car in the driveway are working from a vague sense that someone might compla",
+			"Properties in an RNP-1 designated area are allowed up to six. RNP-2 areas are allowed up to four. Every other ",
+			"There is a second condition attached. Where the code permits vehicles to be kept, they have to be screened by ",
+			"The code makes one narrow allowance for a vehicle that is actually being worked on. A single inoperable vehicl",
+			"Three things in that sentence do the work. It covers one vehicle, not several. The vehicle has to be registere",
+			"The code defines what counts as minor repair work elsewhere in its own text, and that definition is worth read"
 		],
-		"expected_word_floor": 450
+		"expected_word_floor": 369
 	},
 	"observed": {
 		"title": "Junk Car Buyers Henderson NV | Cash for Junk Cars, Free Towing",
@@ -71,7 +66,15 @@
 			"WebSite"
 		]
 	},
-	"blocking_issues": [],
-	"warnings": [],
-	"verified_at": "2026-09-06"
+	"blocking_issues": [
+		"title mismatch — expected 'Henderson Inoperable Vehicle Limits | First Choice Junk Car', got 'Junk Car Buyers Henderson NV | Cash for Junk Cars, Free Towing'",
+		"meta description mismatch — expected 'Henderson caps how many inoperable vehicles a property may keep, and t', got 'We buy junk cars in Henderson, NV — Green Valley, Anthem, Seven Hills,'",
+		"section heading(s) absent from the page: Henderson Puts a Number On It; The 72-Hour Allowance, and What It Does Not Cover; Three Things Worth Checking Before You Decide Anything",
+		"6 promoted paragraph(s) do not appear in the rendered body",
+		"4 FAQ question(s) missing from the page"
+	],
+	"warnings": [
+		"H1 'We Buy Junk Cars in Henderson — Get Cash Today' differs from hero_heading 'How Many Inoperable Vehicles You Can Keep in Henderson'"
+	],
+	"verified_at": "2026-09-14"
 }
