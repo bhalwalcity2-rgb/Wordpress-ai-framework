@@ -18,9 +18,7 @@
 		"unresolved_count": 42,
 		"unsupported_count": 0,
 		"editorial_opportunity_count": 0,
-		"blocking_gaps": [
-			"q-henderson-cic-density"
-		]
+		"blocking_gaps": []
 	},
 	"sections": {
 		"geographic_context": [
@@ -119,6 +117,26 @@
 					"source_type": "primary_source",
 					"verified_on": "2026-09-05"
 				}
+			}
+		],
+		"local_constraints": [
+			{
+				"id": "henderson-inoperable-vehicle-limits",
+				"statement": "Henderson Municipal Code § 15.12.030 B.3 caps inoperable or unregistered vehicles per property by zoning designation (six RNP-1, four RNP-2, two elsewhere), requires screening by a substantially opaque six-foot fence, and allows a single resident-registered vehicle under minor repair for no more than 72 hours.",
+				"why_it_matters": "It is the countable rule a Henderson owner is measured against, and it converts a vague worry into a decision with a number attached.",
+				"provenance": {
+					"evidence_level": "verified_fact",
+					"status": "verified",
+					"source": "Henderson Municipal Code § 15.12.030 B.3 and B.3.b",
+					"source_type": "primary_source",
+					"verified_on": "2026-09-14",
+					"notes": "Retrieved verbatim; municode returned 403 so the elaws mirror was used."
+				},
+				"claim_ids": [
+					"henderson-mc-vehicle-cap-by-zoning",
+					"henderson-mc-vehicle-screening",
+					"henderson-mc-72-hour-repair"
+				]
 			}
 		]
 	},
@@ -264,11 +282,11 @@
 			"blocks_angle": ""
 		},
 		{
-			"id": "q-henderson-municipal-vehicle-provision",
-			"question": "What does Henderson Municipal Code Ch. 7.08 (and the Property Maintenance Code) actually require for an inoperable vehicle on private property — notice period, cure window, penalty, and abatement process — and how does that differ from Clark County Code Title 11?",
-			"why": "The only route to a Henderson angle that survives the statewide-law problem. A concrete procedural difference would be genuine information gain; a mere difference of office name would not.",
+			"id": "q-henderson-minor-repair-definition",
+			"question": "How does Henderson Municipal Code define 'minor repair work' and 'inoperable vehicle'?",
+			"why": "The 72-hour allowance turns on both terms and neither was retrieved. Until they are, the page may state the 72-hour limit but must not characterise what counts as minor repair.",
 			"suggested_source_type": "official_government",
-			"blocks_angle": "henderson-jurisdiction"
+			"blocks_angle": ""
 		}
 	],
 	"corpus_context": {

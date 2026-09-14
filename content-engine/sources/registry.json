@@ -143,6 +143,38 @@
 			],
 			"notes_limitations": "Authoritative for what the business says about itself, and for nothing else. It cannot support a legal, regulatory or statistical claim — those need an external authority.",
 			"retrieval_note": "In-repository file; read directly."
+		},
+		{
+			"id": "henderson-mc-15-12-030-vehicles",
+			"title": "Henderson Municipal Code § 15.12.030 — General property maintenance standards",
+			"url": "http://henderson-nv.elaws.us/code/coor_title15_ch15.12_sec15.12.030",
+			"publisher": "City of Henderson, Nevada (municipal code, via elaws mirror)",
+			"source_type": "primary_source",
+			"published_or_updated": "unknown",
+			"accessed_on": "2026-09-14",
+			"supports_claims": [
+				"§ 15.12.030 B.3: RNP-1 designated areas are allowed up to six inoperable vehicles; RNP-2 up to four; all other properties are not allowed more than two inoperable or unregistered vehicles.",
+				"Those vehicles must be 'screened by a substantially opaque fence at a minimum height of six feet'.",
+				"§ 15.12.030 B.3.b: 'A single inoperable vehicle on any lot or premises that is registered to a resident of the property and undergoing minor repair work as defined herein; not to exceed 72 hours'."
+			],
+			"notes_limitations": "Retrieved verbatim from the section page. library.municode.com returned HTTP 403 to automated retrieval, so this mirror is the copy actually read. The section does not define 'inoperable vehicle' or 'minor repair work' inline — both are defined elsewhere in the code and were NOT retrieved, so neither term may be explained as if its scope were known. Municipal codes are amended; re-check before reuse.",
+			"retrieval_note": "Fetched successfully 2026-09-14."
+		},
+		{
+			"id": "clarkcounty-inoperable-vehicle-limits",
+			"title": "Clark County NV — inoperable vehicle storage limits and Code Enforcement guidance",
+			"url": "https://www.clarkcountynv.gov/government/departments/administrative_services/code_enforcement_-_public_response_office/services/nuisance-violations",
+			"publisher": "Clark County, Nevada",
+			"source_type": "official_government",
+			"published_or_updated": "unknown",
+			"accessed_on": "2026-09-14",
+			"supports_claims": [
+				"In unincorporated Clark County the number of unlicensed or inoperable automobiles stored outside an enclosed building is limited by lot area: 2 per 20,000 square feet, plus 1 for every additional 10,000 square feet.",
+				"Those vehicles must be enclosed by a block wall of at least six feet.",
+				"Clark County describes an inoperative vehicle as one not equipped with all parts required to operate legally on public streets, or one that cannot move under its own power."
+			],
+			"notes_limitations": "Obtained via search of clarkcountynv.gov and the county code mirror, NOT by direct verbatim retrieval of the ordinance section — the specific section text was not opened. An earlier search for this returned Clark County WASHINGTON material, which was discarded; anyone re-checking this must confirm they are reading Nevada. Treat the figures as directionally sourced and confirm the section before relying on them in any advisory context.",
+			"retrieval_note": "Search restricted to clarkcountynv.gov and clarkcounty-nv.elaws.us, 2026-09-14."
 		}
 	]
 }

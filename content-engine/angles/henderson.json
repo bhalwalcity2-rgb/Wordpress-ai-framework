@@ -9,9 +9,9 @@
 			"note": "Angle researched against NRS 116 and retired as unsupported. research_locked set."
 		}
 	},
-	"differentiation_verdict": "PENDING_RESEARCH",
+	"differentiation_verdict": "SUPPORTED",
 	"recommendation_if_unsupported": "not_applicable",
-	"recommendation_note": "Held at PENDING_RESEARCH rather than NO_SUPPORTED_DIFFERENTIATION because one specific, answerable question remains: does the Nevada Real Estate Division CIC registry show Henderson with a materially higher concentration of common-interest communities than its sibling areas? If yes, a narrowed angle grounded in that fact may be proposed. If no, this page becomes NO_SUPPORTED_DIFFERENTIATION like its siblings. Until then Henderson has NO approved angle and must not be written from.",
+	"recommendation_note": "Resolved. The jurisdiction angle is approved on Henderson Municipal Code § 15.12.030, retrieved verbatim. The retired henderson-primary angle stays retired.",
 	"angles": [
 		{
 			"id": "henderson-primary",
@@ -96,16 +96,33 @@
 		{
 			"id": "henderson-jurisdiction",
 			"page": "henderson",
-			"status": "proposed",
+			"status": "approved",
 			"angle_type": "compliance_process",
-			"statement": "An inoperable vehicle on private property is handled by the city's own code enforcement office under the city's own nuisance ordinance, so who a resident hears from, which rules apply, and where a complaint is filed differ from the unincorporated parts of the valley.",
-			"evidence": [],
-			"source_ids": [
-				"henderson-ch708-nuisance",
-				"clarkcounty-title11-nuisance"
+			"statement": "Henderson sets its own numeric limits on how many inoperable or unregistered vehicles a property may keep, tied to the property's zoning designation, with a screening requirement and a 72-hour allowance for a single vehicle under repair. A vehicle owner here is measured against a specific, countable local rule rather than a general expectation, which changes what they need to check before deciding whether to keep a vehicle or sell it.",
+			"evidence": [
+				{
+					"claim_id": "henderson-mc-vehicle-cap-by-zoning",
+					"relevance": "the numeric limits themselves"
+				},
+				{
+					"claim_id": "henderson-mc-72-hour-repair",
+					"relevance": "the repair allowance and its limit"
+				},
+				{
+					"claim_id": "henderson-mc-vehicle-screening",
+					"relevance": "the screening condition"
+				},
+				{
+					"claim_id": "henderson-city-enforces-own-code",
+					"relevance": "why the city's own rule applies"
+				}
 			],
-			"why_unique": "Unlike NRS 116, which is statewide and therefore shared by every sibling, municipal jurisdiction genuinely varies across this corpus: Henderson is an incorporated city with its own code and enforcement office, while Paradise, Spring Valley and Enterprise are unincorporated and fall under Clark County Code Title 11.",
-			"distinctiveness_assessment": "PARTIAL. Separates Henderson from the unincorporated areas, but NOT from North Las Vegas or Boulder City, which are also incorporated with their own codes. Would need a Henderson-specific provision — notice period, penalty, or process — to differentiate within the incorporated group.",
+			"source_ids": [
+				"henderson-mc-15-12-030-vehicles",
+				"clarkcounty-inoperable-vehicle-limits"
+			],
+			"why_unique": "No sibling page addresses a countable local limit. The earlier HOA framing failed because NRS 116 is statewide and therefore shared by every sibling; this rests on a municipal code that applies to Henderson and not to the unincorporated areas, where the limit is set on a different basis entirely.",
+			"distinctiveness_assessment": "SUPPORTED. The differentiator is a specific municipal provision, verified verbatim: caps of six, four or two by zoning designation, an opaque six-foot screening requirement, and a 72-hour repair allowance. Unincorporated Clark County sets its limit by lot area and requires a block wall, so the two regimes genuinely differ. Unlike the retired HOA angle this cannot be reused by a sibling page, because the numbers belong to Henderson's code. It does not by itself distinguish Henderson from North Las Vegas or Boulder City, which have their own codes — but those pages would have to cite their own provisions, which is the correct outcome rather than a flaw.",
 			"must_not_overlap_with": [
 				"north-las-vegas",
 				"boulder-city"
@@ -116,12 +133,20 @@
 				"nuisance",
 				"inoperable vehicle"
 			],
-			"recommended_questions": [],
-			"recommended_sections": [],
-			"blocked_by": [
-				"q-henderson-municipal-vehicle-provision"
+			"recommended_questions": [
+				"How many inoperable vehicles can I keep on my property in Henderson?",
+				"Does it matter that the car still has plates?",
+				"I am part-way through fixing it — how long do I have?",
+				"Does putting it behind a fence solve the problem?"
 			],
-			"notes": "Derived from retrieved municipal-code sources, not invented to replace the retired angle. Remains 'proposed': the section text, notice periods and penalties under Henderson Ch. 7.08 were not retrieved, so there is not yet enough to write from."
+			"recommended_sections": [
+				"What the limit actually is, and that it depends on zoning designation",
+				"The 72-hour repair allowance and what it does not cover",
+				"How the screening condition interacts with the count",
+				"Deciding between keeping the vehicle compliantly and selling it"
+			],
+			"blocked_by": [],
+			"notes": "Approved 2026-09-14 on verbatim municipal-code evidence. Replaces the retired henderson-primary angle, which rested on statewide law."
 		}
 	],
 	"research_locked": true

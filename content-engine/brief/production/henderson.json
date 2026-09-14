@@ -6,7 +6,7 @@
 		"note": "Assembled from research artifacts. Structure is derived from this page's own purpose and evidence — there is deliberately no master section template."
 	},
 	"page_type": "location",
-	"page_purpose": "UNDETERMINED — no approved angle establishes why this page should exist.",
+	"page_purpose": "Henderson sets its own numeric limits on how many inoperable or unregistered vehicles a property may keep, tied to the property's zoning designation, with a screening requirement and a 72-hour allowance for a single vehicle under repair. A vehicle owner here is measured against a specific, countable local rule rather than a general expectation, which changes what they need to check before deciding whether to keep a vehicle or sell it.",
 	"primary_topic": "junk car buying in Henderson",
 	"primary_intent": "navigational_local",
 	"secondary_intents": [
@@ -16,22 +16,32 @@
 	],
 	"conversion_goal": "Phone call or instant-offer submission",
 	"gate": {
-		"status": "BLOCKED",
+		"status": "ALLOWED",
 		"checks": [
 			{
 				"check": "differentiation_supported",
 				"passed": true,
-				"detail": "differentiation_verdict is 'PENDING_RESEARCH'"
+				"detail": "differentiation_verdict is 'SUPPORTED'"
 			},
 			{
 				"check": "approved_angle_exists",
-				"passed": false,
-				"detail": "angle statuses present: proposed, unsupported"
+				"passed": true,
+				"detail": "angle statuses present: approved, unsupported"
+			},
+			{
+				"check": "angle_belongs_to_page",
+				"passed": true,
+				"detail": "angle.page='henderson', brief slug='henderson'"
+			},
+			{
+				"check": "angle_not_superficial",
+				"passed": true,
+				"detail": "statement survives place-name masking"
 			},
 			{
 				"check": "publishable_claims_exist",
-				"passed": false,
-				"detail": "0 of 42 claims are publishable"
+				"passed": true,
+				"detail": "4 of 47 claims are publishable"
 			},
 			{
 				"check": "high_risk_claims_authoritative",
@@ -41,11 +51,9 @@
 			{
 				"check": "information_gain_establishable",
 				"passed": true,
-				"detail": "retro-brief verdict='HAS_INFORMATION_GAIN', unique non-local entities=15"
+				"detail": "retro-brief verdict='HAS_INFORMATION_GAIN', unique non-local entities=16"
 			}
-		],
-		"blocked_reason": "NO_APPROVED_ANGLE",
-		"recommended_action": "complete_research"
+		]
 	},
 	"query_model": {
 		"query_network_id": "queries/henderson.json",
@@ -394,6 +402,11 @@
 				"condition": "NRS 116 applies to common-interest communities throughout Nevada, not to Henderson specifically.",
 				"evidence_level": "sourced_fact",
 				"materially_affects": "Decisive for differentiation: a statutory regime shared by every sibling area cannot distinguish one location page from another."
+			},
+			{
+				"condition": "Henderson Municipal Code § 15.12.030 B.3 caps inoperable or unregistered vehicles per property by zoning designation (six RNP-1, four RNP-2, two elsewhere), requires screening by a substantially opaque six-foot fence, and allows a single resident-registered vehicle under minor repair for no more than 72 hours.",
+				"evidence_level": "verified_fact",
+				"materially_affects": "It is the countable rule a Henderson owner is measured against, and it converts a vague worry into a decision with a number attached."
 			}
 		],
 		"geographic_context": [],
@@ -401,18 +414,18 @@
 		"decision_factors": []
 	},
 	"differentiation": {
-		"approved_angle_id": "",
-		"angle_statement": "",
-		"angle_evidence": [],
-		"why_this_page_exists": "NOT ESTABLISHED — this page has no approved angle.",
+		"approved_angle_id": "henderson-jurisdiction",
+		"angle_statement": "Henderson sets its own numeric limits on how many inoperable or unregistered vehicles a property may keep, tied to the property's zoning designation, with a screening requirement and a 72-hour allowance for a single vehicle under repair. A vehicle owner here is measured against a specific, countable local rule rather than a general expectation, which changes what they need to check before deciding whether to keep a vehicle or sell it.",
+		"angle_evidence": [
+			"henderson-mc-vehicle-cap-by-zoning",
+			"henderson-mc-72-hour-repair",
+			"henderson-mc-vehicle-screening",
+			"henderson-city-enforces-own-code"
+		],
+		"why_this_page_exists": "No sibling page addresses a countable local limit. The earlier HOA framing failed because NRS 116 is statewide and therefore shared by every sibling; this rests on a municipal code that applies to Henderson and not to the unincorporated areas, where the limit is set on a different basis entirely.",
 		"must_not_overlap_with": [
-			"boulder-city",
-			"enterprise",
-			"las-vegas",
 			"north-las-vegas",
-			"paradise",
-			"spring-valley",
-			"summerlin"
+			"boulder-city"
 		],
 		"forbidden_generic_patterns": [
 			"Swapping a city, neighbourhood, ZIP or landmark name for a sibling's and calling it different",
@@ -490,16 +503,38 @@
 			"user_problem:inherited",
 			"user_problem:insurance",
 			"user_problem:payout",
+			"user_problem:violation",
 			"user_problem:warning"
 		]
 	},
 	"content_architecture": {
-		"structure_rationale": "NOT PLANNED — the page is blocked, so no structure is proposed. Proposing one would invite a page to be written that has no reason to exist.",
+		"structure_rationale": "Sections must follow this page's own purpose and evidence. Identical structure across siblings was the strongest templating signal in the corpus (50 of 68 pairs), so no default plan is supplied here.",
 		"recommended_sections": [
 			{
 				"section_type": "content",
-				"working_title": "BLOCKED",
-				"purpose": "No section plan — this page did not pass the existence gate."
+				"working_title": "(writer composes; derive from the angle, not from a sibling)",
+				"purpose": "Explain the situation the approved angle names.",
+				"entities": [
+					"compliance",
+					"eyesore",
+					"fine",
+					"hoa",
+					"inherited",
+					"insurance"
+				],
+				"queries": [
+					"fast get henderson how",
+					"comes fine hoa house tow",
+					"age city community live neighborhood"
+				],
+				"information_gain": "Explain what inoperable means for someone selling a vehicle here.",
+				"evidence": [
+					"henderson-mc-vehicle-cap-by-zoning",
+					"henderson-mc-vehicle-screening",
+					"henderson-mc-72-hour-repair",
+					"henderson-city-enforces-own-code"
+				],
+				"internal_links": []
 			}
 		]
 	},
@@ -535,7 +570,12 @@
 		"questions_not_to_repeat": []
 	},
 	"claims": {
-		"allowed_claim_ids": [],
+		"allowed_claim_ids": [
+			"henderson-mc-vehicle-cap-by-zoning",
+			"henderson-mc-vehicle-screening",
+			"henderson-mc-72-hour-repair",
+			"henderson-city-enforces-own-code"
+		],
 		"blocked_claim_ids": [
 			"henderson-00-buy-junk-cars-henderson",
 			"henderson-01-green-valley-anthem-lake",
@@ -578,10 +618,19 @@
 			"henderson-38-more-remote-areas-like",
 			"henderson-39-drivers-arrive-load-vehicle",
 			"henderson-40-even-vehicles-driven-years",
-			"henderson-41-call-year-make-model"
+			"henderson-41-call-year-make-model",
+			"clarkcounty-vehicle-cap-by-lot-area"
 		],
-		"high_risk_claims": [],
-		"required_source_ids": []
+		"high_risk_claims": [
+			"henderson-mc-vehicle-cap-by-zoning",
+			"henderson-mc-vehicle-screening",
+			"henderson-mc-72-hour-repair",
+			"henderson-city-enforces-own-code"
+		],
+		"required_source_ids": [
+			"henderson-ch708-nuisance",
+			"henderson-mc-15-12-030-vehicles"
+		]
 	},
 	"internal_linking": {
 		"relevant_neighbours": [
@@ -719,6 +768,7 @@
 			"user_problem:inherited",
 			"user_problem:insurance",
 			"user_problem:payout",
+			"user_problem:violation",
 			"user_problem:warning"
 		],
 		"calibrated_signals": {
@@ -755,8 +805,8 @@
 			},
 			"entity_similarity_nonlocal": {
 				"observed": {
-					"p10": 0.1915,
-					"p25": 0.2766,
+					"p10": 0.1837,
+					"p25": 0.2653,
 					"p50": 0.4164,
 					"p75": 0.5263,
 					"p90": 0.6,

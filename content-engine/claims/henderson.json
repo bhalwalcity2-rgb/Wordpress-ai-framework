@@ -12,6 +12,11 @@
 			"on": "2026-09-06",
 			"by": "Phase 3C-4 follow-up",
 			"note": "Claims verified UNSUPPORTED or CONTRADICTED in 3C-2 were corrected in the live content."
+		},
+		"pilot_pass": {
+			"on": "2026-09-14",
+			"by": "Phase 3C-5 production pilot",
+			"note": "Municipal-code research. Four claims verified against Henderson Municipal Code § 15.12.030 and marked publishable; the Clark County comparison is held PARTIALLY_SUPPORTED and not publishable because the ordinance section itself was not retrieved."
 		}
 	},
 	"claims": [
@@ -667,6 +672,103 @@
 			"appears_in_existing_copy": true,
 			"source_page": "henderson",
 			"notes": "Extracted from live copy. Being published is not evidence — this claim has no recorded source. Types detected: service_guarantee."
+		},
+		{
+			"id": "henderson-mc-vehicle-cap-by-zoning",
+			"claim": "Henderson's property maintenance code limits how many inoperable or unregistered vehicles a property may keep, and the limit depends on the property's zoning designation: six in RNP-1, four in RNP-2, and two on all other properties.",
+			"claim_type": "government_legal_regulatory",
+			"source": "Henderson Municipal Code § 15.12.030 B.3",
+			"source_ids": [
+				"henderson-mc-15-12-030-vehicles"
+			],
+			"source_type": "primary_source",
+			"verified_on": "2026-09-14",
+			"review_by": "2027-03-14",
+			"confidence": "high",
+			"risk": "high",
+			"status": "verified",
+			"verification": "SUPPORTED",
+			"publishable": true,
+			"appears_in_existing_copy": false,
+			"notes": "Quoted verbatim from the section. The cap is per property, not per owner."
+		},
+		{
+			"id": "henderson-mc-vehicle-screening",
+			"claim": "Where Henderson allows inoperable or unregistered vehicles to be kept, they must be screened by a substantially opaque fence at least six feet high.",
+			"claim_type": "government_legal_regulatory",
+			"source": "Henderson Municipal Code § 15.12.030 B.3",
+			"source_ids": [
+				"henderson-mc-15-12-030-vehicles"
+			],
+			"source_type": "primary_source",
+			"verified_on": "2026-09-14",
+			"review_by": "2027-03-14",
+			"confidence": "high",
+			"risk": "high",
+			"status": "verified",
+			"verification": "SUPPORTED",
+			"publishable": true,
+			"appears_in_existing_copy": false,
+			"notes": "Verbatim: 'screened by a substantially opaque fence at a minimum height of six feet'."
+		},
+		{
+			"id": "henderson-mc-72-hour-repair",
+			"claim": "Henderson allows a single inoperable vehicle that is registered to a resident of the property and undergoing minor repair work for a period not exceeding 72 hours.",
+			"claim_type": "government_legal_regulatory",
+			"source": "Henderson Municipal Code § 15.12.030 B.3.b",
+			"source_ids": [
+				"henderson-mc-15-12-030-vehicles"
+			],
+			"source_type": "primary_source",
+			"verified_on": "2026-09-14",
+			"review_by": "2027-03-14",
+			"confidence": "high",
+			"risk": "high",
+			"status": "verified",
+			"verification": "SUPPORTED",
+			"publishable": true,
+			"appears_in_existing_copy": false,
+			"notes": "Verbatim. 'Minor repair work as defined herein' — the definition was NOT retrieved, so the page must not characterise what counts as minor repair."
+		},
+		{
+			"id": "clarkcounty-vehicle-cap-by-lot-area",
+			"claim": "In unincorporated Clark County the number of unlicensed or inoperable vehicles stored outside an enclosed building is set by lot area rather than zoning category — two for the first 20,000 square feet, plus one for each additional 10,000 — and they must be enclosed by a block wall at least six feet high.",
+			"claim_type": "government_legal_regulatory",
+			"source": "Clark County NV Code Enforcement / county code",
+			"source_ids": [
+				"clarkcounty-inoperable-vehicle-limits"
+			],
+			"source_type": "official_government",
+			"verified_on": "2026-09-14",
+			"review_by": "2027-03-14",
+			"confidence": "medium",
+			"risk": "high",
+			"status": "researched",
+			"verification": "PARTIALLY_SUPPORTED",
+			"publishable": false,
+			"claim_boundary": "Unincorporated Clark County sets its limit on a different basis from Henderson — lot area rather than zoning designation — and requires a block wall rather than an opaque fence.",
+			"appears_in_existing_copy": false,
+			"notes": "Not promoted to publishable. The figures came via search of official pages rather than direct retrieval of the ordinance, and a high-risk regulatory claim needs the section itself. The page may say the basis differs — which the boundary statement supports — but must not quote county numbers."
+		},
+		{
+			"id": "henderson-city-enforces-own-code",
+			"claim": "Henderson is an incorporated city and enforces its own property maintenance and nuisance code through its own code enforcement office, separately from Clark County.",
+			"claim_type": "government_legal_regulatory",
+			"source": "Henderson Municipal Code Title 15 Ch. 15.12; City of Henderson Office of Public Response",
+			"source_ids": [
+				"henderson-mc-15-12-030-vehicles",
+				"henderson-ch708-nuisance"
+			],
+			"source_type": "primary_source",
+			"verified_on": "2026-09-14",
+			"review_by": "2027-03-14",
+			"confidence": "high",
+			"risk": "high",
+			"status": "verified",
+			"verification": "SUPPORTED",
+			"publishable": true,
+			"appears_in_existing_copy": false,
+			"notes": "Follows from the city having and enforcing its own code."
 		}
 	],
 	"research_locked": true
