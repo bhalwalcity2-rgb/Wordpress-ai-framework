@@ -31,7 +31,7 @@
 			{
 				"check": "publishable_claims_exist",
 				"passed": false,
-				"detail": "0 of 11 claims are publishable"
+				"detail": "0 of 13 claims are publishable"
 			},
 			{
 				"check": "high_risk_claims_authoritative",
@@ -351,7 +351,9 @@
 			"north-las-vegas-07-how-much-junk-car",
 			"north-las-vegas-08-offers-range-200-5",
 			"north-las-vegas-09-call-free-obligation-quote",
-			"north-las-vegas-10-yes-someone-needs-present"
+			"north-las-vegas-10-yes-someone-needs-present",
+			"nrs-487-290-two-unregistered-vehicles",
+			"nlv-incorporated-own-code-enforcement"
 		],
 		"high_risk_claims": [],
 		"required_source_ids": []
@@ -477,12 +479,12 @@
 			"Free towing, no hidden fees, and cash in hand before our truck leaves your driveway.",
 			"From downtown to the west side, we pick up junk and unwanted vehicles throughout Las Vegas",
 			"Green Valley, Anthem, Lake Las Vegas, Inspirada, Seven Hills, and every neighborhood in be",
-			"Henderson is Nevada's second-largest city — over 350,000 residents spread across more than",
+			"Henderson is Nevada's second-largest city — around 332,000 residents spread across the sou",
 			"If you have a car, truck, SUV, or van you want gone, we will make you a cash offer and pic",
 			"If you have a junk or unwanted vehicle in Boulder City, we will come to you with free towi",
-			"It is also one of the most HOA-governed cities in Clark County, which means a junk car sit",
 			"Many Henderson neighborhoods — especially gated and master-planned communities like Green ",
 			"Many Summerlin communities have strict HOA regulations about vehicles parked on driveways ",
+			"Many of those communities are governed by a homeowners association, which means a junk car",
 			"No extra charge for the distance — the offer you get is the cash you keep.",
 			"Paradise is one of the most densely populated areas in the Las Vegas valley, stretching fr",
 			"Second, we give you a firm cash offer — no haggling, no lowball games."
@@ -522,8 +524,8 @@
 			},
 			"entity_similarity_nonlocal": {
 				"observed": {
-					"p10": 0.1915,
-					"p25": 0.2766,
+					"p10": 0.1837,
+					"p25": 0.2653,
 					"p50": 0.4164,
 					"p75": 0.5263,
 					"p90": 0.6,

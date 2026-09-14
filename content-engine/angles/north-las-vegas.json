@@ -2,10 +2,16 @@
 	"slug": "north-las-vegas",
 	"generated": {
 		"by": "bootstrap-research.py",
-		"note": "Scaffolded from the existing corpus by bootstrap-research.py. NO EXTERNAL RESEARCH WAS PERFORMED. Every item is marked with the evidence level it actually has; nothing here may be treated as verified until a researcher answers the open questions and records a real source."
+		"note": "Scaffolded from the existing corpus by bootstrap-research.py. NO EXTERNAL RESEARCH WAS PERFORMED. Every item is marked with the evidence level it actually has; nothing here may be treated as verified until a researcher answers the open questions and records a real source.",
+		"research_pass": {
+			"on": "2026-09-14",
+			"by": "North Las Vegas research",
+			"note": "Researched; no supported angle. Verdict unchanged and now evidence-backed."
+		}
 	},
 	"differentiation_verdict": "NO_SUPPORTED_DIFFERENTIATION",
 	"recommendation_if_unsupported": "create_broader_regional_page",
-	"recommendation_note": "Phase 3B found no topic on this page that its siblings do not also cover: verdict LOCAL_NAME_SUBSTITUTION_ONLY. Nothing in the repository supports a distinct angle, and one must not be invented. Either research a genuine local condition, or fold this page into a broader regional page. Fewer useful pages beat more thin ones.",
-	"angles": []
+	"recommendation_note": "Researched 2026-09-14 and still unsupported. North Las Vegas has its own code, but no provision of it could be retrieved, so there is nothing specific to write. The one concrete vehicle-count rule found - NRS 487.290's two-vehicle limit - is STATEWIDE, and a rule every sibling shares cannot differentiate this page. That is the same test that retired the Henderson HOA angle.\n\nThe Henderson angle was NOT cloned here. Copying it with a different city name would be the precise failure this system exists to prevent, and Henderson's numbers would be factually wrong for North Las Vegas.\n\nConstructive finding: the NRS 487.290 two-vehicle limit is genuinely useful to a seller and applies valley-wide. It belongs on a regional or service page, which is what this recommendation already points to - not on a city page pretending it is local. It needs the Legislature's own text first.",
+	"angles": [],
+	"research_locked": true
 }

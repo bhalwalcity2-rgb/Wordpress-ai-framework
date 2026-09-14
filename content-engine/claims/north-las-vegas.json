@@ -2,7 +2,12 @@
 	"slug": "north-las-vegas",
 	"generated": {
 		"by": "bootstrap-research.py",
-		"note": "Scaffolded from the existing corpus by bootstrap-research.py. NO EXTERNAL RESEARCH WAS PERFORMED. Every item is marked with the evidence level it actually has; nothing here may be treated as verified until a researcher answers the open questions and records a real source."
+		"note": "Scaffolded from the existing corpus by bootstrap-research.py. NO EXTERNAL RESEARCH WAS PERFORMED. Every item is marked with the evidence level it actually has; nothing here may be treated as verified until a researcher answers the open questions and records a real source.",
+		"research_pass": {
+			"on": "2026-09-14",
+			"by": "North Las Vegas research",
+			"note": "Two claims added, neither publishable. NRS 487.290 rests on a secondary publisher and is statewide in any case; the city-code claim establishes only that a code exists."
+		}
 	},
 	"claims": [
 		{
@@ -169,6 +174,48 @@
 			"appears_in_existing_copy": true,
 			"source_page": "north-las-vegas",
 			"notes": "Extracted from live copy. Being published is not evidence — this claim has no recorded source. Types detected: pricing_payment."
+		},
+		{
+			"id": "nrs-487-290-two-unregistered-vehicles",
+			"claim": "Nevada law limits a person to keeping no more than two unregistered vehicles on real property where those vehicles are no longer intended for, or in condition for, lawful use on the highway, subject to listed exceptions.",
+			"claim_type": "government_legal_regulatory",
+			"source": "NRS 487.290",
+			"source_ids": [
+				"nrs-487-290-two-vehicle-limit",
+				"nlv-code-enforcement-junk-vehicles"
+			],
+			"source_type": "reputable_secondary",
+			"verified_on": "2026-09-14",
+			"review_by": "2027-03-14",
+			"confidence": "medium",
+			"risk": "high",
+			"status": "researched",
+			"verification": "PARTIALLY_SUPPORTED",
+			"claim_boundary": "Nevada law places a separate statewide limit on unregistered vehicles that are unfit for highway use, which applies in addition to any local code. The exact figure and its exceptions must be confirmed against the Legislature's own text before the number is stated to a reader.",
+			"publishable": false,
+			"appears_in_existing_copy": false,
+			"notes": "NOT PUBLISHABLE: high-risk regulatory claim resting on a secondary publisher. STATEWIDE, so it cannot differentiate any location page - the same rule that retired the Henderson HOA angle. IMPORTANT: this interacts with the live Henderson page, which states city caps of six/four/two without noting that a separate state limit may apply to the unregistered-and-unfit subset. Flagged for review; see the open question."
+		},
+		{
+			"id": "nlv-incorporated-own-code-enforcement",
+			"claim": "North Las Vegas is an incorporated city that enforces its own municipal code, including abatement of junk vehicles, through its own code enforcement division.",
+			"claim_type": "government_legal_regulatory",
+			"source": "City of North Las Vegas Code Enforcement; NLVMC chapters 8.32, 8.75, 10.61",
+			"source_ids": [
+				"nlv-code-enforcement-junk-vehicles"
+			],
+			"source_type": "official_government",
+			"verified_on": "2026-09-14",
+			"review_by": "2027-03-14",
+			"confidence": "medium",
+			"risk": "high",
+			"status": "researched",
+			"verification": "PARTIALLY_SUPPORTED",
+			"claim_boundary": "North Las Vegas has its own code and enforcement division. What its provisions actually require is unknown.",
+			"publishable": false,
+			"appears_in_existing_copy": false,
+			"notes": "True but empty for content purposes. Every incorporated city in the valley can say this, so on its own it differentiates nothing - the Henderson angle worked because its specific numbers were retrieved, not because Henderson is a city."
 		}
-	]
+	],
+	"research_locked": true
 }

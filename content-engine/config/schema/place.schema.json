@@ -47,6 +47,11 @@
 					"description": "Set when a research pass has curated this dossier: when, by whom, and what it covered.",
 					"type": "object",
 					"additionalProperties": true
+				},
+				"research_pass": {
+					"description": "Set when a research pass has worked this dossier: when, by whom, and what it concluded. Distinct from verification_pass, which records checking existing claims rather than seeking new evidence.",
+					"type": "object",
+					"additionalProperties": true
 				}
 			}
 		},

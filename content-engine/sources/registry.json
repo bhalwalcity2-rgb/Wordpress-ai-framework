@@ -175,6 +175,36 @@
 			],
 			"notes_limitations": "Obtained via search of clarkcountynv.gov and the county code mirror, NOT by direct verbatim retrieval of the ordinance section — the specific section text was not opened. An earlier search for this returned Clark County WASHINGTON material, which was discarded; anyone re-checking this must confirm they are reading Nevada. Treat the figures as directionally sourced and confirm the section before relying on them in any advisory context.",
 			"retrieval_note": "Search restricted to clarkcountynv.gov and clarkcounty-nv.elaws.us, 2026-09-14."
+		},
+		{
+			"id": "nrs-487-290-two-vehicle-limit",
+			"title": "NRS 487.290 — Unlawful possession of unregistered vehicles unfit for use",
+			"url": "https://nevada.public.law/statutes/nrs_487.290",
+			"publisher": "Nevada Public Law (secondary publisher of the Nevada Revised Statutes)",
+			"source_type": "reputable_secondary",
+			"published_or_updated": "unknown",
+			"accessed_on": "2026-09-14",
+			"supports_claims": [
+				"A person shall not for any reason keep more than two unregistered vehicles on real property where the vehicles are no longer intended for or in condition for lawful use on the highway.",
+				"Exceptions include premises of a licensed dealer, manufacturer, distributor or rebuilder; vehicles for restoration or parts in fleet operations; premises used as a farm, ranch, mine or motor vehicle repair shop; and any person engaged in restoring a vehicle entitled to registration as a Horseless Carriage or otherwise of classic or historic significance."
+			],
+			"notes_limitations": "SECONDARY PUBLISHER. leg.state.nv.us returned HTTP 403 and the nv.elaws.us mirror returned 503, so the Legislature's own text was not read. Under the project's own risk rule a high-risk regulatory claim needs an official government or primary source, so nothing resting on this is publishable yet. The City of North Las Vegas FAQ independently cites NRS 487.290.2.D for an age-related storage exemption, which corroborates that the section governs this subject but does not substitute for the statute.",
+			"retrieval_note": "Fetched from nevada.public.law 2026-09-14; primary sources unavailable."
+		},
+		{
+			"id": "nlv-code-enforcement-junk-vehicles",
+			"title": "City of North Las Vegas — Code Enforcement, and Municipal Code chapters 8.32, 8.75, 10.61",
+			"url": "https://www.cityofnorthlasvegas.com/residents/code-enforcement",
+			"publisher": "City of North Las Vegas",
+			"source_type": "official_government",
+			"published_or_updated": "unknown",
+			"accessed_on": "2026-09-14",
+			"supports_claims": [
+				"North Las Vegas is an incorporated city with its own municipal code and code enforcement division, which lists abatement of junk vehicles among its areas of focus.",
+				"Relevant chapters exist: 8.32 Nuisances, 8.75 Abatement of Nuisances, 10.61 Abandoned Vehicles."
+			],
+			"notes_limitations": "ESTABLISHES THAT THE CHAPTERS EXIST, NOT WHAT THEY SAY. The city page returned HTTP 403 to direct retrieval, library.municode.com 403s, and northlasvegas-nv.elaws.us returned 503. No numeric limit, screening standard, notice period or penalty was obtained for North Las Vegas. This is the gap that blocks an angle.",
+			"retrieval_note": "Chapter existence via search of cityofnorthlasvegas.com and municode, 2026-09-14."
 		}
 	]
 }

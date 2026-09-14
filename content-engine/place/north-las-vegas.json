@@ -4,7 +4,12 @@
 	"display_name": "junk car buying in North Las Vegas",
 	"generated": {
 		"by": "bootstrap-research.py",
-		"note": "Scaffolded from the existing corpus by bootstrap-research.py. NO EXTERNAL RESEARCH WAS PERFORMED. Every item is marked with the evidence level it actually has; nothing here may be treated as verified until a researcher answers the open questions and records a real source."
+		"note": "Scaffolded from the existing corpus by bootstrap-research.py. NO EXTERNAL RESEARCH WAS PERFORMED. Every item is marked with the evidence level it actually has; nothing here may be treated as verified until a researcher answers the open questions and records a real source.",
+		"research_pass": {
+			"on": "2026-09-14",
+			"by": "North Las Vegas research",
+			"note": "Researched and found insufficient. No angle proposed."
+		}
 	},
 	"research_status": {
 		"overall": "unresolved",
@@ -14,12 +19,7 @@
 		"unsupported_count": 0,
 		"editorial_opportunity_count": 0,
 		"blocking_gaps": [
-			"q-north-las-vegas-local-condition",
-			"q-north-las-vegas-00-free-towing-day-pickup",
-			"q-north-las-vegas-02-give-cash-offer-spot",
-			"q-north-las-vegas-04-tow-truck-arrives-agreed",
-			"q-north-las-vegas-07-how-much-junk-car",
-			"q-north-las-vegas-08-offers-range-200-5"
+			"q-nlv-municipal-vehicle-provision"
 		]
 	},
 	"sections": {
@@ -61,9 +61,41 @@
 					"source": "existing page copy"
 				}
 			}
+		],
+		"government_dmv_context": [
+			{
+				"id": "nlv-own-code-but-provisions-unknown",
+				"statement": "North Las Vegas is incorporated and enforces its own municipal code (chapters 8.32, 8.75, 10.61) through its own code enforcement division, but the substantive vehicle provisions could not be retrieved.",
+				"why_it_matters": "Being a city is not a differentiator by itself. Henderson earned an angle because its actual numbers were obtained; until the same is true here there is nothing to write that a sibling could not also say.",
+				"provenance": {
+					"evidence_level": "research_observation",
+					"status": "unresolved",
+					"source": "City of North Las Vegas Code Enforcement; municode chapter listing",
+					"source_type": "official_government",
+					"verified_on": "2026-09-14",
+					"notes": "Chapter existence only. All routes to the provision text failed."
+				},
+				"claim_ids": [
+					"nlv-incorporated-own-code-enforcement"
+				]
+			}
 		]
 	},
 	"open_questions": [
+		{
+			"id": "q-nlv-municipal-vehicle-provision",
+			"question": "What do North Las Vegas Municipal Code chapters 8.32, 8.75 and 10.61 actually require for inoperable or unregistered vehicles on private property - any numeric limit, screening standard, notice period, and penalty?",
+			"why": "The only route to a North Las Vegas angle. The chapters exist but every retrieval route failed. If the provisions turn out to mirror Henderson's, there is still no angle; the difference has to be material.",
+			"suggested_source_type": "official_government",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-nrs-487-290-primary-text",
+			"question": "What does NRS 487.290 say in the Legislature's own text, and how does its two-vehicle limit interact with a city code that permits more?",
+			"why": "Affects live content. The Henderson page states city caps of six, four and two without noting a separate state limit on unregistered, unfit vehicles. If the statute reads as the secondary sources report, the Henderson page is incomplete in a way that could mislead a reader in an RNP-1 area.",
+			"suggested_source_type": "official_government",
+			"blocks_angle": ""
+		},
 		{
 			"id": "q-north-las-vegas-local-condition",
 			"question": "What local condition in this area materially changes how or why someone sells a junk car, versus elsewhere in the valley?",
@@ -133,5 +165,6 @@
 			"SAME_TOPIC_FRAME_AS_SIBLINGS",
 			"NO_PAGE_SPECIFIC_CLOSING_CTA"
 		]
-	}
+	},
+	"research_locked": true
 }
