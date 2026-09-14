@@ -172,5 +172,7 @@
 	"destination": "wordpress/themes/kadence-child-lvjcb/content/locations/henderson.json",
 	"destination_sha256": "144e2dd4ad1340ebb589a3e81f3b2bac071ac2fb3c613d7dbd1a5e5b5a45874e",
 	"previous_destination_sha256": "f14cffb209633c93e33757e370640312a8e9baf8314a257d012c374e478f1258",
-	"_note": "Hashes identify what was promoted; they are not a substitute for the QA above. The source draft is deliberately left unmodified and undeleted."
+	"_note": "Hashes identify what was promoted; they are not a substitute for the QA above. The source draft is deliberately left unmodified and undeleted.",
+	"destination_content_sha256": "e0700a3649e9249d834365d069b5e167a951eddb988260a2077feed3c8c516c6",
+	"_hash_note": "destination_sha256 is the raw bytes as written at promotion time and is line-ending sensitive. destination_content_sha256 is the canonical JSON content and is what verification compares."
 }

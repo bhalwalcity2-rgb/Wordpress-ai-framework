@@ -77,12 +77,18 @@ def main():
 
     allow = set((load(ALLOWLIST, {}) or {}).get("files", []))
 
+    # Content hashes, not file hashes. A raw byte hash changes whenever git
+    # rewrites line endings on checkout, which would make provenance fail on
+    # a Windows working copy and pass on Linux for the same commit.
     promoted = {}
     if PROMOTIONS.is_dir():
         for record_path in PROMOTIONS.glob("*.json"):
             record = load(record_path, {})
-            if record.get("destination") and record.get("destination_sha256"):
-                promoted.setdefault(record["destination"], set()).add(record["destination_sha256"])
+            if not record.get("destination"):
+                continue
+            for key in ("destination_content_sha256", "destination_sha256"):
+                if record.get(key):
+                    promoted.setdefault(record["destination"], set()).add(record[key])
 
     files = changed_files(args.against)
     if not files:
@@ -95,8 +101,13 @@ def main():
         if not path.is_file():
             continue  # deleted; deletion is not a promotion concern
         digest = pm.sha256_file(path)
+        try:
+            content_digest = pm.sha256_bytes(
+                pm.canonical_json_bytes(json.loads(path.read_text(encoding="utf-8"))))
+        except (json.JSONDecodeError, OSError):
+            content_digest = None
 
-        if digest in promoted.get(rel, set()):
+        if digest in promoted.get(rel, set()) or content_digest in promoted.get(rel, set()):
             verified.append(rel)
         elif rel in allow:
             allowed.append(rel)

@@ -349,6 +349,13 @@ def main():
         "qa_checks": gate.checks,
         "destination": ctx["destination_rel"],
         "destination_sha256": pm.sha256_file(destination),
+        # Canonical-JSON hash of the content itself. The raw hash above is
+        # line-ending sensitive, so it changes whenever git checks the file
+        # out under core.autocrlf - which makes it useless as a provenance
+        # check on a Windows working copy. This one is stable across
+        # platforms and formatting, and is what verification compares.
+        "destination_content_sha256": pm.sha256_bytes(
+            pm.canonical_json_bytes(json.loads(destination.read_text(encoding="utf-8")))),
         "previous_destination_sha256": previous_hash,
         "_note": ("Hashes identify what was promoted; they are not a substitute for the QA above. "
                   "The source draft is deliberately left unmodified and undeleted."),
