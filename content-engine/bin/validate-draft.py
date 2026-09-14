@@ -163,8 +163,11 @@ def main():
         # ---- claim control ---------------------------------------------
         allowed = set(brief.get("claims", {}).get("allowed_claim_ids", []))
         blocked = set(brief.get("claims", {}).get("blocked_claim_ids", []))
-        ledger_path = ENGINE / "claims" / ("%s.json" % slug)
-        ledger = {c["id"]: c for c in (load(ledger_path).get("claims", []) if ledger_path.is_file() else [])}
+        ledger = {}
+        for cp in (ENGINE / "claims" / ("%s.json" % slug),
+                   ENGINE / "claims" / "_shared-business.json"):
+            if cp.is_file():
+                ledger.update({c["id"]: c for c in load(cp).get("claims", [])})
 
         used = set(gen.get("claim_ids_used", []))
         for cid in used - allowed:
@@ -181,12 +184,20 @@ def main():
                 errors.append("%s: uses claim '%s' but %s" % (slug, cid, reason))
 
         # ---- angle authority -------------------------------------------
+        # A service-area page carries no angle by design (ADR-0009); every
+        # other check below still applies to it.
         brief_angle = brief.get("differentiation", {}).get("approved_angle_id")
-        if gen.get("angle_id") != brief_angle:
+        service_area = brief.get("page_purpose_class") == "service_area_transactional"
+
+        if (gen.get("angle_id") or "") != (brief_angle or ""):
             errors.append("%s: draft angle '%s' disagrees with brief angle '%s'"
                           % (slug, gen.get("angle_id"), brief_angle))
+        if service_area and gen.get("angle_id"):
+            errors.append("%s: service-area draft names an angle (%r); angles are the "
+                          "informational control" % (slug, gen.get("angle_id")))
+
         angles_path = ENGINE / "angles" / ("%s.json" % slug)
-        if angles_path.is_file():
+        if angles_path.is_file() and not service_area:
             angle = next((a for a in load(angles_path).get("angles", [])
                           if a["id"] == gen.get("angle_id")), None)
             if angle is None:

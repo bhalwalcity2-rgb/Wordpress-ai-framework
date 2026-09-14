@@ -1,11 +1,12 @@
 {
 	"slug": "henderson",
-	"brief_version": "1.0.0",
+	"brief_version": "1.1.0",
 	"generated": {
 		"by": "create-content-brief.py",
 		"note": "Assembled from research artifacts. Structure is derived from this page's own purpose and evidence — there is deliberately no master section template."
 	},
 	"page_type": "location",
+	"page_purpose_class": "differentiated_informational",
 	"page_purpose": "Henderson sets its own numeric limits on how many inoperable or unregistered vehicles a property may keep, tied to the property's zoning designation, with a screening requirement and a 72-hour allowance for a single vehicle under repair. A vehicle owner here is measured against a specific, countable local rule rather than a general expectation, which changes what they need to check before deciding whether to keep a vehicle or sell it.",
 	"primary_topic": "junk car buying in Henderson",
 	"primary_intent": "navigational_local",
@@ -41,7 +42,7 @@
 			{
 				"check": "publishable_claims_exist",
 				"passed": true,
-				"detail": "4 of 47 claims are publishable"
+				"detail": "13 of 56 claims are publishable"
 			},
 			{
 				"check": "high_risk_claims_authoritative",
@@ -532,7 +533,8 @@
 					"henderson-mc-vehicle-cap-by-zoning",
 					"henderson-mc-vehicle-screening",
 					"henderson-mc-72-hour-repair",
-					"henderson-city-enforces-own-code"
+					"henderson-city-enforces-own-code",
+					"biz-free-towing"
 				],
 				"internal_links": []
 			}
@@ -574,7 +576,16 @@
 			"henderson-mc-vehicle-cap-by-zoning",
 			"henderson-mc-vehicle-screening",
 			"henderson-mc-72-hour-repair",
-			"henderson-city-enforces-own-code"
+			"henderson-city-enforces-own-code",
+			"biz-free-towing",
+			"biz-same-day-pickup",
+			"biz-no-hidden-fees",
+			"biz-no-title-help",
+			"biz-three-step-process",
+			"biz-firm-offer",
+			"biz-paid-at-pickup",
+			"biz-condition-agnostic",
+			"biz-hours"
 		],
 		"blocked_claim_ids": [
 			"henderson-00-buy-junk-cars-henderson",
@@ -629,7 +640,8 @@
 		],
 		"required_source_ids": [
 			"henderson-ch708-nuisance",
-			"henderson-mc-15-12-030-vehicles"
+			"henderson-mc-15-12-030-vehicles",
+			"waif-business-config"
 		]
 	},
 	"internal_linking": {

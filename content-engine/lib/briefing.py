@@ -61,8 +61,19 @@ class GateResult:
         return out
 
 
-def run_gate(slug, angles_doc, claims_doc, place_doc, retro_brief, diff_report):
-    """Decide whether this page may proceed to a production brief."""
+def run_gate(slug, angles_doc, claims_doc, place_doc, retro_brief, diff_report,
+             purpose="differentiated_informational", config=None):
+    """Decide whether this page may proceed to a production brief.
+
+    Branches on page purpose (ADR-0009). An informational page must earn an
+    angle and information gain. A service-area page must be a configured
+    area resting on business-provided claims - judging it on information
+    gain asks a question it is not trying to answer. Structural
+    differentiation applies to both, so neither route permits a clone.
+    """
+    if purpose == "service_area_transactional":
+        return _run_service_area_gate(slug, claims_doc, config or {}), None
+
     gate = GateResult()
 
     verdict = angles_doc.get("differentiation_verdict")
@@ -138,6 +149,44 @@ def run_gate(slug, angles_doc, claims_doc, place_doc, retro_brief, diff_report):
             gate.recommended_action = "complete_research"
 
     return gate, angle
+
+
+def _run_service_area_gate(slug, claims_doc, config):
+    """Existence test for a service-area page.
+
+    Deliberately narrow: the page exists because the business serves the
+    area and can say true things about the service. It is NOT exempt from
+    the differentiation checks, which run later against the draft - that is
+    what stops this becoming the route back to a templated corpus.
+    """
+    gate = GateResult()
+
+    areas = set(config.get("location_slugs", []))
+    primary = set(config.get("primary_slugs", []))
+
+    if not gate.check("is_configured_service_area", slug in areas,
+                      "not present in business-config.php service_areas"):
+        gate.blocked_reason = "NOT_A_CONFIGURED_SERVICE_AREA"
+        gate.recommended_action = "keep_out_of_publication_set"
+
+    if not gate.check("not_the_primary_city", slug not in primary,
+                      "the homepage owns the primary city's intent"):
+        gate.blocked_reason = "PRIMARY_CITY_HAS_NO_LOCATION_PAGE"
+        gate.recommended_action = "change_page_purpose"
+
+    publishable = [c for c in claims_doc.get("claims", []) if c.get("publishable")]
+    business = [c for c in publishable if c.get("source_type") == "official_business"]
+    if not gate.check("publishable_business_claims_exist", bool(business),
+                      "%d publishable claim(s), %d business-provided"
+                      % (len(publishable), len(business))):
+        gate.blocked_reason = "NO_PUBLISHABLE_BUSINESS_CLAIMS"
+        gate.recommended_action = "complete_research"
+
+    bad = [c["id"] for c in publishable
+           if c.get("risk") == "high" and c.get("source_type") not in rs.AUTHORITATIVE_SOURCES]
+    gate.check("high_risk_claims_authoritative", not bad, ", ".join(bad))
+
+    return gate
 
 
 def sibling_constraints(slug, diff_report, corpus_summary, sibling_briefs):

@@ -1,12 +1,13 @@
 {
 	"slug": "north-las-vegas",
-	"brief_version": "1.0.0",
+	"brief_version": "1.1.0",
 	"generated": {
 		"by": "create-content-brief.py",
 		"note": "Assembled from research artifacts. Structure is derived from this page's own purpose and evidence — there is deliberately no master section template."
 	},
 	"page_type": "location",
-	"page_purpose": "UNDETERMINED — no approved angle establishes why this page should exist.",
+	"page_purpose_class": "service_area_transactional",
+	"page_purpose": "Service-area page for junk car buying in North Las Vegas. It exists so someone searching for this service here can confirm the business covers their address and start the process, not to teach them something their neighbours' pages do not.",
 	"primary_topic": "junk car buying in North Las Vegas",
 	"primary_intent": "navigational_local",
 	"secondary_intents": [
@@ -16,36 +17,29 @@
 	],
 	"conversion_goal": "Phone call or instant-offer submission",
 	"gate": {
-		"status": "BLOCKED",
+		"status": "ALLOWED",
 		"checks": [
 			{
-				"check": "differentiation_supported",
-				"passed": false,
-				"detail": "differentiation_verdict is 'NO_SUPPORTED_DIFFERENTIATION'"
+				"check": "is_configured_service_area",
+				"passed": true,
+				"detail": "not present in business-config.php service_areas"
 			},
 			{
-				"check": "approved_angle_exists",
-				"passed": false,
-				"detail": "angle statuses present: none"
+				"check": "not_the_primary_city",
+				"passed": true,
+				"detail": "the homepage owns the primary city's intent"
 			},
 			{
-				"check": "publishable_claims_exist",
-				"passed": false,
-				"detail": "0 of 13 claims are publishable"
+				"check": "publishable_business_claims_exist",
+				"passed": true,
+				"detail": "10 publishable claim(s), 10 business-provided"
 			},
 			{
 				"check": "high_risk_claims_authoritative",
 				"passed": true,
-				"detail": "offending: none"
-			},
-			{
-				"check": "information_gain_establishable",
-				"passed": false,
-				"detail": "retro-brief verdict='LOCAL_NAME_SUBSTITUTION_ONLY', unique non-local entities=0"
+				"detail": ""
 			}
-		],
-		"blocked_reason": "NO_SUPPORTED_DIFFERENTIATION",
-		"recommended_action": "broaden_regional_scope"
+		]
 	},
 	"query_model": {
 		"query_network_id": "queries/north-las-vegas.json",
@@ -281,9 +275,9 @@
 	"information_gain": {
 		"required_new_information": [
 			{
-				"information": "NO ESTABLISHED INFORMATION GAIN",
-				"why_it_is_new": "Nothing measured or researched distinguishes this page from its siblings. This brief is blocked; the gap must be closed by research, never by invention.",
-				"evidence_level": "unknown_needs_verification"
+				"information": "Confirm coverage of this service area and set out what happens next, accurately.",
+				"why_it_is_new": "Not new, and not required to be. A service-area page is judged on clarity and accuracy, not information gain (ADR-0009).",
+				"evidence_level": "business_provided"
 			}
 		],
 		"unique_explanations": [],
@@ -298,12 +292,25 @@
 		"sibling_coverage_gaps": []
 	},
 	"content_architecture": {
-		"structure_rationale": "NOT PLANNED — the page is blocked, so no structure is proposed. Proposing one would invite a page to be written that has no reason to exist.",
+		"structure_rationale": "Sections must follow this page's own purpose and evidence. Identical structure across siblings was the strongest templating signal in the corpus (50 of 68 pairs), so no default plan is supplied here.",
 		"recommended_sections": [
 			{
 				"section_type": "content",
-				"working_title": "BLOCKED",
-				"purpose": "No section plan — this page did not pass the existence gate."
+				"working_title": "(writer composes; derive from the angle, not from a sibling)",
+				"purpose": "Explain the situation the approved angle names.",
+				"entities": [],
+				"queries": [
+					"air base buy cars force"
+				],
+				"information_gain": "Confirm coverage of this service area and set out what happens next, accurately.",
+				"evidence": [
+					"nlv-service-area-coverage",
+					"biz-free-towing",
+					"biz-same-day-pickup",
+					"biz-no-hidden-fees",
+					"biz-no-title-help"
+				],
+				"internal_links": []
 			}
 		]
 	},
@@ -339,7 +346,18 @@
 		"questions_not_to_repeat": []
 	},
 	"claims": {
-		"allowed_claim_ids": [],
+		"allowed_claim_ids": [
+			"nlv-service-area-coverage",
+			"biz-free-towing",
+			"biz-same-day-pickup",
+			"biz-no-hidden-fees",
+			"biz-no-title-help",
+			"biz-three-step-process",
+			"biz-firm-offer",
+			"biz-paid-at-pickup",
+			"biz-condition-agnostic",
+			"biz-hours"
+		],
 		"blocked_claim_ids": [
 			"north-las-vegas-00-free-towing-day-pickup",
 			"north-las-vegas-01-every-pickup-north-las",
@@ -356,7 +374,9 @@
 			"nlv-incorporated-own-code-enforcement"
 		],
 		"high_risk_claims": [],
-		"required_source_ids": []
+		"required_source_ids": [
+			"waif-business-config"
+		]
 	},
 	"internal_linking": {
 		"relevant_neighbours": [

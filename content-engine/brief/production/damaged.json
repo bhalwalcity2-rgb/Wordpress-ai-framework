@@ -1,11 +1,12 @@
 {
 	"slug": "damaged",
-	"brief_version": "1.0.0",
+	"brief_version": "1.1.0",
 	"generated": {
 		"by": "create-content-brief.py",
 		"note": "Assembled from research artifacts. Structure is derived from this page's own purpose and evidence — there is deliberately no master section template."
 	},
 	"page_type": "service",
+	"page_purpose_class": "differentiated_informational",
 	"page_purpose": "UNDETERMINED — no approved angle establishes why this page should exist.",
 	"primary_topic": "junk car buying — damaged",
 	"primary_intent": "transactional",
@@ -30,8 +31,8 @@
 			},
 			{
 				"check": "publishable_claims_exist",
-				"passed": false,
-				"detail": "0 of 9 claims are publishable"
+				"passed": true,
+				"detail": "9 of 18 claims are publishable"
 			},
 			{
 				"check": "high_risk_claims_authoritative",
@@ -352,7 +353,17 @@
 		"questions_not_to_repeat": []
 	},
 	"claims": {
-		"allowed_claim_ids": [],
+		"allowed_claim_ids": [
+			"biz-free-towing",
+			"biz-same-day-pickup",
+			"biz-no-hidden-fees",
+			"biz-no-title-help",
+			"biz-three-step-process",
+			"biz-firm-offer",
+			"biz-paid-at-pickup",
+			"biz-condition-agnostic",
+			"biz-hours"
+		],
 		"blocked_claim_ids": [
 			"damaged-00-cash-accident-storm-damaged",
 			"damaged-01-insurance-totaled-body-shop",
@@ -365,7 +376,9 @@
 			"damaged-08-flood-water-damage-one"
 		],
 		"high_risk_claims": [],
-		"required_source_ids": []
+		"required_source_ids": [
+			"waif-business-config"
+		]
 	},
 	"internal_linking": {
 		"relevant_neighbours": [
@@ -505,8 +518,8 @@
 			},
 			"entity_similarity_nonlocal": {
 				"observed": {
-					"p10": 0.1915,
-					"p25": 0.2766,
+					"p10": 0.1837,
+					"p25": 0.2653,
 					"p50": 0.4164,
 					"p75": 0.5263,
 					"p90": 0.6,

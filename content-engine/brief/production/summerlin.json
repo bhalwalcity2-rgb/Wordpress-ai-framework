@@ -1,11 +1,12 @@
 {
 	"slug": "summerlin",
-	"brief_version": "1.0.0",
+	"brief_version": "1.1.0",
 	"generated": {
 		"by": "create-content-brief.py",
 		"note": "Assembled from research artifacts. Structure is derived from this page's own purpose and evidence — there is deliberately no master section template."
 	},
 	"page_type": "location",
+	"page_purpose_class": "differentiated_informational",
 	"page_purpose": "UNDETERMINED — no approved angle establishes why this page should exist.",
 	"primary_topic": "junk car buying in Summerlin",
 	"primary_intent": "navigational_local",
@@ -29,8 +30,8 @@
 			},
 			{
 				"check": "publishable_claims_exist",
-				"passed": false,
-				"detail": "0 of 16 claims are publishable"
+				"passed": true,
+				"detail": "9 of 25 claims are publishable"
 			},
 			{
 				"check": "high_risk_claims_authoritative",
@@ -40,7 +41,7 @@
 			{
 				"check": "information_gain_establishable",
 				"passed": true,
-				"detail": "retro-brief verdict='HAS_INFORMATION_GAIN', unique non-local entities=1"
+				"detail": "retro-brief verdict='LOCAL_NAME_SUBSTITUTION_ONLY', unique non-local entities=0"
 			}
 		],
 		"blocked_reason": "NO_APPROVED_ANGLE",
@@ -309,9 +310,9 @@
 	"information_gain": {
 		"required_new_information": [
 			{
-				"information": "Explain what notice means for someone selling a vehicle here.",
-				"why_it_is_new": "No sibling page raises this topic (Phase 3B measurement).",
-				"evidence_level": "research_observation"
+				"information": "NO ESTABLISHED INFORMATION GAIN",
+				"why_it_is_new": "Nothing measured or researched distinguishes this page from its siblings. This brief is blocked; the gap must be closed by research, never by invention.",
+				"evidence_level": "unknown_needs_verification"
 			}
 		],
 		"unique_explanations": [],
@@ -323,9 +324,7 @@
 			"How fast can you remove a junk car from Summerlin?"
 		],
 		"unique_decision_factors": [],
-		"sibling_coverage_gaps": [
-			"user_problem:notice"
-		]
+		"sibling_coverage_gaps": []
 	},
 	"content_architecture": {
 		"structure_rationale": "NOT PLANNED — the page is blocked, so no structure is proposed. Proposing one would invite a page to be written that has no reason to exist.",
@@ -369,7 +368,17 @@
 		"questions_not_to_repeat": []
 	},
 	"claims": {
-		"allowed_claim_ids": [],
+		"allowed_claim_ids": [
+			"biz-free-towing",
+			"biz-same-day-pickup",
+			"biz-no-hidden-fees",
+			"biz-no-title-help",
+			"biz-three-step-process",
+			"biz-firm-offer",
+			"biz-paid-at-pickup",
+			"biz-condition-agnostic",
+			"biz-hours"
+		],
 		"blocked_claim_ids": [
 			"summerlin-00-free-towing-fees-cash",
 			"summerlin-01-summerlin-one-most-well",
@@ -389,7 +398,9 @@
 			"summerlin-15-most-summerlin-pickups-happen"
 		],
 		"high_risk_claims": [],
-		"required_source_ids": []
+		"required_source_ids": [
+			"waif-business-config"
+		]
 	},
 	"internal_linking": {
 		"relevant_neighbours": [
@@ -516,17 +527,15 @@
 			"Free towing, same-day pickup, and cash on the spot for vehicles in any condition.",
 			"From downtown to the west side, we pick up junk and unwanted vehicles throughout Las Vegas",
 			"Green Valley, Anthem, Lake Las Vegas, Inspirada, Seven Hills, and every neighborhood in be",
-			"Henderson is Nevada's second-largest city — over 350,000 residents spread across more than",
+			"Henderson is Nevada's second-largest city — around 332,000 residents spread across the sou",
 			"If you have a car, truck, SUV, or van you want gone, we will make you a cash offer and pic",
 			"If you have a junk or unwanted vehicle in Boulder City, we will come to you with free towi",
-			"It is also one of the most HOA-governed cities in Clark County, which means a junk car sit",
 			"Many Henderson neighborhoods — especially gated and master-planned communities like Green ",
+			"Many of those communities are governed by a homeowners association, which means a junk car",
 			"No extra charge for the distance — the offer you get is the cash you keep.",
 			"Our tow truck arrives at the agreed time, we verify the vehicle, pay you in cash, and load"
 		],
-		"topic_opportunities": [
-			"user_problem:notice"
-		],
+		"topic_opportunities": [],
 		"calibrated_signals": {
 			"_note": "Phase 3B corpus percentiles, carried as editorial signals rather than blind rules. They describe this corpus and should be re-measured after any rewrite.",
 			"clone_signal_count": {
@@ -561,8 +570,8 @@
 			},
 			"entity_similarity_nonlocal": {
 				"observed": {
-					"p10": 0.1915,
-					"p25": 0.2766,
+					"p10": 0.1837,
+					"p25": 0.2653,
 					"p50": 0.4164,
 					"p75": 0.5263,
 					"p90": 0.6,

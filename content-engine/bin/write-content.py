@@ -72,7 +72,10 @@ def build_package(slug, brief):
     angle_id = brief["differentiation"]["approved_angle_id"]
 
     angles = load(angles_path) if angles_path.is_file() else {"angles": []}
+    shared = ENGINE / "claims" / "_shared-business.json"
     ledger = {c["id"]: c for c in (load(claims_path).get("claims", []) if claims_path.is_file() else [])}
+    if shared.is_file():
+        ledger.update({c["id"]: c for c in load(shared).get("claims", [])})
     angle = next((a for a in angles.get("angles", []) if a["id"] == angle_id), None)
 
     allowed = []
@@ -137,18 +140,23 @@ def write_one(slug, force):
         return refuse(slug, gate.get("blocked_reason", "gate BLOCKED"),
                       gate.get("recommended_action"))
 
-    # Re-verify against the registry rather than trusting the brief.
+    # Re-verify against the registry rather than trusting the brief. A
+    # service-area page carries no angle by design (ADR-0009), so the angle
+    # checks apply only to informational pages.
     angle_id = brief["differentiation"]["approved_angle_id"]
-    angles_path = ENGINE / "angles" / ("%s.json" % slug)
-    if not angles_path.is_file():
-        return refuse(slug, "no angle registry for this page", "complete_research")
+    service_area = brief.get("page_purpose_class") == "service_area_transactional"
 
-    angle = next((a for a in load(angles_path).get("angles", []) if a["id"] == angle_id), None)
-    if angle is None:
-        return refuse(slug, "brief names angle '%s' which does not exist" % angle_id, "complete_research")
-    if angle.get("status") not in bf.WRITABLE_ANGLE_STATUS:
-        return refuse(slug, "angle '%s' has status '%s' — not approved"
-                      % (angle_id, angle.get("status")), "complete_research")
+    if not service_area:
+        angles_path = ENGINE / "angles" / ("%s.json" % slug)
+        if not angles_path.is_file():
+            return refuse(slug, "no angle registry for this page", "complete_research")
+
+        angle = next((a for a in load(angles_path).get("angles", []) if a["id"] == angle_id), None)
+        if angle is None:
+            return refuse(slug, "brief names angle '%s' which does not exist" % angle_id, "complete_research")
+        if angle.get("status") not in bf.WRITABLE_ANGLE_STATUS:
+            return refuse(slug, "angle '%s' has status '%s' — not approved"
+                          % (angle_id, angle.get("status")), "complete_research")
     if not brief["claims"]["allowed_claim_ids"]:
         return refuse(slug, "no publishable claims — the writer would have no factual budget",
                       "complete_research")

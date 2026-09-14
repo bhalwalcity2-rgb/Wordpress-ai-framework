@@ -124,6 +124,8 @@ def evaluate(slug, theme):
     brief = load(paths["brief"], {})
     angles = load(paths["angles"], {"angles": []})
     ledger = {c["id"]: c for c in (load(paths["claims"], {}) or {}).get("claims", [])}
+    _shared = load(ENGINE / "claims" / "_shared-business.json", {"claims": []})
+    ledger.update({c["id"]: c for c in _shared.get("claims", [])})
     ctx.update(draft=draft, brief=brief)
 
     # --- B. brief + research + draft revalidated by their own validators ----
@@ -141,10 +143,26 @@ def evaluate(slug, theme):
                  brief_gate.get("blocked_reason", ""))
 
     # --- D. angle authority, re-derived ------------------------------------
+    # A service-area page carries no angle by design (ADR-0009). It is not
+    # exempt from anything else: identity, claims, coverage, structural
+    # differentiation and destination safety all still apply below.
     angle_id = brief.get("differentiation", {}).get("approved_angle_id", "")
+    service_area = brief.get("page_purpose_class") == "service_area_transactional"
     angle = next((a for a in angles.get("angles", []) if a["id"] == angle_id), None)
-    gate.require("angle exists", angle is not None, "brief names %r" % angle_id)
-    if angle:
+
+    if service_area:
+        gate.require("service-area page declares no angle", not angle_id,
+                     "angles are the informational control; this page should not claim one")
+        gate.require("slug is a configured service area",
+                     slug in config.get("location_slugs", []) and slug not in config.get("primary_slugs", []),
+                     "not a non-primary configured service area")
+        business = [c for c in ledger.values()
+                    if c.get("publishable") and c.get("source_type") == "official_business"]
+        gate.require("publishable business claims exist", bool(business),
+                     "%d found" % len(business))
+    else:
+        gate.require("angle exists", angle is not None, "brief names %r" % angle_id)
+    if angle and not service_area:
         gate.require("angle belongs to this page", angle.get("page") == slug,
                      "angle.page=%r" % angle.get("page"))
         gate.require("angle is approved", angle.get("status") in bf.WRITABLE_ANGLE_STATUS,
@@ -204,7 +222,7 @@ def evaluate(slug, theme):
     gate.require("content slug matches", content.get("slug", slug) == slug,
                  "content.slug=%r" % content.get("slug"))
     gate.require("draft angle matches brief",
-                 draft.get("generation", {}).get("angle_id") == angle_id,
+                 (draft.get("generation", {}).get("angle_id") or "") == (angle_id or ""),
                  "draft=%r brief=%r" % (draft.get("generation", {}).get("angle_id"), angle_id))
 
     for field in ("seo_title", "seo_description", "hero_heading"):

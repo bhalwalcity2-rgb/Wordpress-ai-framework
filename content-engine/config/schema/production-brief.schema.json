@@ -3,78 +3,174 @@
 	"$id": "production-brief.schema.json",
 	"title": "Production content brief — the writer's instruction contract",
 	"description": "content-engine/brief/production/{slug}.json. Distinct from the Phase 3B retro-briefs in content-engine/brief/*.json, which describe what a page ALREADY does and are never overwritten. This describes what a page SHOULD do, and is the only input a writer may generate from. A writer given a keyword, a city and a page title produces a templated page; that is what this contract exists to prevent.",
-
 	"type": "object",
 	"required": [
-		"slug", "brief_version", "page_type", "page_purpose", "primary_topic",
-		"primary_intent", "conversion_goal", "gate", "query_model", "entity_model",
-		"differentiation", "information_gain", "content_architecture", "faq_plan",
-		"claims", "internal_linking", "sibling_constraints", "writing_constraints",
-		"source_artifacts"
+		"slug",
+		"brief_version",
+		"page_type",
+		"page_purpose",
+		"primary_topic",
+		"primary_intent",
+		"conversion_goal",
+		"gate",
+		"query_model",
+		"entity_model",
+		"differentiation",
+		"information_gain",
+		"content_architecture",
+		"faq_plan",
+		"claims",
+		"internal_linking",
+		"sibling_constraints",
+		"writing_constraints",
+		"source_artifacts",
+		"page_purpose_class"
 	],
 	"additionalProperties": false,
-
 	"properties": {
-		"slug": { "$ref": "research-common.schema.json#/definitions/nonEmptyString" },
-		"brief_version": { "$ref": "research-common.schema.json#/definitions/nonEmptyString" },
-		"generated": { "type": "object", "additionalProperties": true },
-		"page_type": { "enum": [ "location", "service", "home" ] },
+		"slug": {
+			"$ref": "research-common.schema.json#/definitions/nonEmptyString"
+		},
+		"brief_version": {
+			"$ref": "research-common.schema.json#/definitions/nonEmptyString"
+		},
+		"generated": {
+			"type": "object",
+			"additionalProperties": true
+		},
+		"page_type": {
+			"enum": [
+				"location",
+				"service",
+				"home"
+			]
+		},
 		"page_purpose": {
 			"description": "Why this page exists, in one sentence a person would recognise. Not a keyword restatement.",
 			"$ref": "research-common.schema.json#/definitions/nonEmptyString"
 		},
-		"primary_topic": { "$ref": "research-common.schema.json#/definitions/nonEmptyString" },
-		"primary_intent": { "enum": [ "transactional", "commercial_investigation", "informational", "navigational_local" ] },
-		"secondary_intents": { "type": "array", "items": { "type": "string" } },
-		"conversion_goal": { "$ref": "research-common.schema.json#/definitions/nonEmptyString" },
-
+		"primary_topic": {
+			"$ref": "research-common.schema.json#/definitions/nonEmptyString"
+		},
+		"primary_intent": {
+			"enum": [
+				"transactional",
+				"commercial_investigation",
+				"informational",
+				"navigational_local"
+			]
+		},
+		"secondary_intents": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			}
+		},
+		"conversion_goal": {
+			"$ref": "research-common.schema.json#/definitions/nonEmptyString"
+		},
 		"gate": {
 			"description": "The page-existence decision. A brief may only be acted on when status is ALLOWED.",
 			"type": "object",
-			"required": [ "status", "checks" ],
+			"required": [
+				"status",
+				"checks"
+			],
 			"additionalProperties": false,
 			"properties": {
-				"status": { "enum": [ "ALLOWED", "BLOCKED" ] },
-				"blocked_reason": { "type": "string" },
+				"status": {
+					"enum": [
+						"ALLOWED",
+						"BLOCKED"
+					]
+				},
+				"blocked_reason": {
+					"type": "string"
+				},
 				"recommended_action": {
-					"enum": [ "merge_with_another_page", "broaden_regional_scope", "change_page_purpose",
-						"keep_out_of_publication_set", "complete_research", "not_applicable" ]
+					"enum": [
+						"merge_with_another_page",
+						"broaden_regional_scope",
+						"change_page_purpose",
+						"keep_out_of_publication_set",
+						"complete_research",
+						"not_applicable"
+					]
 				},
 				"checks": {
 					"type": "array",
 					"items": {
 						"type": "object",
-						"required": [ "check", "passed", "detail" ],
+						"required": [
+							"check",
+							"passed",
+							"detail"
+						],
 						"additionalProperties": false,
 						"properties": {
-							"check": { "type": "string" },
-							"passed": { "type": "boolean" },
-							"detail": { "type": "string" }
+							"check": {
+								"type": "string"
+							},
+							"passed": {
+								"type": "boolean"
+							},
+							"detail": {
+								"type": "string"
+							}
 						}
 					}
 				}
 			}
 		},
-
 		"query_model": {
 			"type": "object",
-			"required": [ "concept_groups" ],
+			"required": [
+				"concept_groups"
+			],
 			"additionalProperties": false,
 			"properties": {
-				"query_network_id": { "type": "string" },
-				"primary_queries": { "type": "array", "items": { "type": "string" } },
-				"supporting_queries": { "type": "array", "items": { "type": "string" } },
+				"query_network_id": {
+					"type": "string"
+				},
+				"primary_queries": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"supporting_queries": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
 				"question_map": {
 					"type": "array",
 					"items": {
 						"type": "object",
-						"required": [ "question", "why_this_page_answers_it" ],
+						"required": [
+							"question",
+							"why_this_page_answers_it"
+						],
 						"additionalProperties": false,
 						"properties": {
-							"question": { "type": "string" },
-							"why_this_page_answers_it": { "type": "string" },
-							"coverage": { "enum": [ "must_answer", "useful_if_relevant", "optional", "not_relevant" ] },
-							"answered_by_sibling": { "type": "string" }
+							"question": {
+								"type": "string"
+							},
+							"why_this_page_answers_it": {
+								"type": "string"
+							},
+							"coverage": {
+								"enum": [
+									"must_answer",
+									"useful_if_relevant",
+									"optional",
+									"not_relevant"
+								]
+							},
+							"answered_by_sibling": {
+								"type": "string"
+							}
 						}
 					}
 				},
@@ -82,12 +178,21 @@
 					"type": "array",
 					"items": {
 						"type": "object",
-						"required": [ "objection", "required_response" ],
+						"required": [
+							"objection",
+							"required_response"
+						],
 						"additionalProperties": false,
 						"properties": {
-							"objection": { "type": "string" },
-							"required_response": { "type": "string" },
-							"depends_on_claim": { "type": "string" }
+							"objection": {
+								"type": "string"
+							},
+							"required_response": {
+								"type": "string"
+							},
+							"depends_on_claim": {
+								"type": "string"
+							}
 						}
 					}
 				},
@@ -96,101 +201,223 @@
 					"type": "array",
 					"items": {
 						"type": "object",
-						"required": [ "concept", "why_needed", "coverage" ],
+						"required": [
+							"concept",
+							"why_needed",
+							"coverage"
+						],
 						"additionalProperties": false,
 						"properties": {
-							"concept": { "type": "string" },
-							"intent": { "type": "string" },
-							"why_needed": { "type": "string" },
-							"coverage": { "enum": [ "must_answer", "useful_if_relevant", "optional", "not_relevant" ] },
-							"representative_queries": { "type": "array", "maxItems": 6, "items": { "type": "string" } },
-							"shared_with_siblings": { "type": "boolean" }
+							"concept": {
+								"type": "string"
+							},
+							"intent": {
+								"type": "string"
+							},
+							"why_needed": {
+								"type": "string"
+							},
+							"coverage": {
+								"enum": [
+									"must_answer",
+									"useful_if_relevant",
+									"optional",
+									"not_relevant"
+								]
+							},
+							"representative_queries": {
+								"type": "array",
+								"maxItems": 6,
+								"items": {
+									"type": "string"
+								}
+							},
+							"shared_with_siblings": {
+								"type": "boolean"
+							}
 						}
 					}
 				}
 			}
 		},
-
 		"entity_model": {
 			"type": "object",
-			"required": [ "primary_entity", "entity_relationships" ],
+			"required": [
+				"primary_entity",
+				"entity_relationships"
+			],
 			"additionalProperties": false,
 			"properties": {
-				"primary_entity": { "type": "string" },
-				"supporting_entities": { "type": "array", "items": { "type": "string" } },
-				"local_entities": { "type": "array", "items": { "type": "string" } },
-				"user_entities": { "type": "array", "items": { "type": "string" } },
-				"process_entities": { "type": "array", "items": { "type": "string" } },
-				"attributes": { "type": "array", "items": { "type": "string" } },
+				"primary_entity": {
+					"type": "string"
+				},
+				"supporting_entities": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"local_entities": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"user_entities": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"process_entities": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"attributes": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
 				"entity_relationships": {
 					"description": "Typed chains such as vehicle condition -> towing requirement -> pickup logistics -> seller concern. Each carries its evidence level; the writer may not present a hypothesis as fact.",
 					"type": "array",
 					"items": {
 						"type": "object",
-						"required": [ "chain", "evidence_level" ],
+						"required": [
+							"chain",
+							"evidence_level"
+						],
 						"additionalProperties": false,
 						"properties": {
-							"chain": { "type": "array", "minItems": 2, "items": { "type": "string" } },
-							"evidence_level": { "$ref": "research-common.schema.json#/definitions/evidenceLevel" },
-							"claim_id": { "type": "string" },
-							"explain_because": { "type": "string" }
+							"chain": {
+								"type": "array",
+								"minItems": 2,
+								"items": {
+									"type": "string"
+								}
+							},
+							"evidence_level": {
+								"$ref": "research-common.schema.json#/definitions/evidenceLevel"
+							},
+							"claim_id": {
+								"type": "string"
+							},
+							"explain_because": {
+								"type": "string"
+							}
 						}
 					}
 				}
 			}
 		},
-
 		"local_model": {
 			"type": "object",
 			"additionalProperties": false,
 			"properties": {
-				"location": { "type": "string" },
-				"local_context": { "type": "array", "items": { "type": "string" } },
+				"location": {
+					"type": "string"
+				},
+				"local_context": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
 				"local_conditions": {
 					"type": "array",
 					"items": {
 						"type": "object",
-						"required": [ "condition", "evidence_level" ],
+						"required": [
+							"condition",
+							"evidence_level"
+						],
 						"additionalProperties": false,
 						"properties": {
-							"condition": { "type": "string" },
-							"evidence_level": { "$ref": "research-common.schema.json#/definitions/evidenceLevel" },
-							"claim_id": { "type": "string" },
-							"materially_affects": { "type": "string" }
+							"condition": {
+								"type": "string"
+							},
+							"evidence_level": {
+								"$ref": "research-common.schema.json#/definitions/evidenceLevel"
+							},
+							"claim_id": {
+								"type": "string"
+							},
+							"materially_affects": {
+								"type": "string"
+							}
 						}
 					}
 				},
-				"geographic_context": { "type": "array", "items": { "type": "string" } },
-				"customer_scenarios": { "type": "array", "items": { "type": "string" } },
-				"decision_factors": { "type": "array", "items": { "type": "string" } }
+				"geographic_context": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"customer_scenarios": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"decision_factors": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				}
 			}
 		},
-
 		"differentiation": {
 			"type": "object",
-			"required": [ "approved_angle_id", "angle_statement", "why_this_page_exists", "forbidden_generic_patterns" ],
+			"required": [
+				"approved_angle_id",
+				"angle_statement",
+				"why_this_page_exists",
+				"forbidden_generic_patterns"
+			],
 			"additionalProperties": false,
 			"properties": {
 				"approved_angle_id": {
 					"description": "Must name an angle whose status is 'approved'. proposed / researched / pending / unsupported / retired are never sufficient.",
 					"type": "string"
 				},
-				"angle_statement": { "type": "string" },
-				"angle_evidence": { "type": "array", "items": { "type": "string" } },
-				"why_this_page_exists": { "type": "string" },
-				"must_not_overlap_with": { "type": "array", "items": { "type": "string" } },
+				"angle_statement": {
+					"type": "string"
+				},
+				"angle_evidence": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"why_this_page_exists": {
+					"type": "string"
+				},
+				"must_not_overlap_with": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
 				"forbidden_generic_patterns": {
 					"description": "Named patterns the writer must not produce, drawn from the corpus's measured failure modes.",
 					"type": "array",
-					"items": { "type": "string" }
+					"items": {
+						"type": "string"
+					}
 				}
 			}
 		},
-
 		"information_gain": {
 			"description": "What this page will tell a reader that its siblings do not. A brief that cannot fill this is blocked — place, ZIP and landmark substitution never qualify.",
 			"type": "object",
-			"required": [ "required_new_information" ],
+			"required": [
+				"required_new_information"
+			],
 			"additionalProperties": false,
 			"properties": {
 				"required_new_information": {
@@ -198,80 +425,192 @@
 					"minItems": 1,
 					"items": {
 						"type": "object",
-						"required": [ "information", "why_it_is_new", "evidence_level" ],
+						"required": [
+							"information",
+							"why_it_is_new",
+							"evidence_level"
+						],
 						"additionalProperties": false,
 						"properties": {
-							"information": { "type": "string" },
-							"why_it_is_new": { "type": "string" },
-							"evidence_level": { "$ref": "research-common.schema.json#/definitions/evidenceLevel" },
-							"claim_id": { "type": "string" }
+							"information": {
+								"type": "string"
+							},
+							"why_it_is_new": {
+								"type": "string"
+							},
+							"evidence_level": {
+								"$ref": "research-common.schema.json#/definitions/evidenceLevel"
+							},
+							"claim_id": {
+								"type": "string"
+							}
 						}
 					}
 				},
-				"unique_explanations": { "type": "array", "items": { "type": "string" } },
-				"unique_scenarios": { "type": "array", "items": { "type": "string" } },
-				"unique_questions": { "type": "array", "items": { "type": "string" } },
-				"unique_decision_factors": { "type": "array", "items": { "type": "string" } },
-				"sibling_coverage_gaps": { "type": "array", "items": { "type": "string" } }
+				"unique_explanations": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"unique_scenarios": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"unique_questions": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"unique_decision_factors": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"sibling_coverage_gaps": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				}
 			}
 		},
-
 		"content_architecture": {
 			"description": "Section plan derived from THIS page's purpose and situation. There is deliberately no master template: identical structure across siblings was the strongest templating signal Phase 3B measured (50 of 68 pairs).",
 			"type": "object",
-			"required": [ "recommended_sections" ],
+			"required": [
+				"recommended_sections"
+			],
 			"additionalProperties": false,
 			"properties": {
-				"structure_rationale": { "type": "string" },
+				"structure_rationale": {
+					"type": "string"
+				},
 				"recommended_sections": {
 					"type": "array",
 					"minItems": 1,
 					"items": {
 						"type": "object",
-						"required": [ "section_type", "purpose" ],
+						"required": [
+							"section_type",
+							"purpose"
+						],
 						"additionalProperties": false,
 						"properties": {
-							"section_type": { "enum": [ "content", "steps", "cta", "areas", "services" ] },
+							"section_type": {
+								"enum": [
+									"content",
+									"steps",
+									"cta",
+									"areas",
+									"services"
+								]
+							},
 							"working_title": {
 								"description": "A note of what the section covers, NOT final heading copy. Headings are the writer's to compose.",
 								"type": "string"
 							},
-							"purpose": { "type": "string" },
-							"entities": { "type": "array", "items": { "type": "string" } },
-							"queries": { "type": "array", "items": { "type": "string" } },
-							"information_gain": { "type": "string" },
-							"evidence": { "type": "array", "items": { "type": "string" } },
-							"internal_links": { "type": "array", "items": { "type": "string" } }
+							"purpose": {
+								"type": "string"
+							},
+							"entities": {
+								"type": "array",
+								"items": {
+									"type": "string"
+								}
+							},
+							"queries": {
+								"type": "array",
+								"items": {
+									"type": "string"
+								}
+							},
+							"information_gain": {
+								"type": "string"
+							},
+							"evidence": {
+								"type": "array",
+								"items": {
+									"type": "string"
+								}
+							},
+							"internal_links": {
+								"type": "array",
+								"items": {
+									"type": "string"
+								}
+							}
 						}
 					}
 				}
 			}
 		},
-
 		"faq_plan": {
 			"type": "object",
-			"required": [ "questions_to_answer" ],
+			"required": [
+				"questions_to_answer"
+			],
 			"additionalProperties": false,
 			"properties": {
-				"questions_to_answer": { "type": "array", "items": { "type": "string" } },
-				"questions_already_answered_by_siblings": { "type": "array", "items": { "type": "string" } },
-				"questions_not_to_repeat": { "type": "array", "items": { "type": "string" } }
+				"questions_to_answer": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"questions_already_answered_by_siblings": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"questions_not_to_repeat": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				}
 			}
 		},
-
 		"claims": {
 			"description": "The writer's entire factual budget. Anything not listed in allowed_claim_ids may not be stated as fact.",
 			"type": "object",
-			"required": [ "allowed_claim_ids", "blocked_claim_ids" ],
+			"required": [
+				"allowed_claim_ids",
+				"blocked_claim_ids"
+			],
 			"additionalProperties": false,
 			"properties": {
-				"allowed_claim_ids": { "type": "array", "items": { "type": "string" } },
-				"blocked_claim_ids": { "type": "array", "items": { "type": "string" } },
-				"high_risk_claims": { "type": "array", "items": { "type": "string" } },
-				"required_source_ids": { "type": "array", "items": { "type": "string" } }
+				"allowed_claim_ids": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"blocked_claim_ids": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"high_risk_claims": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"required_source_ids": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				}
 			}
 		},
-
 		"internal_linking": {
 			"type": "object",
 			"additionalProperties": false,
@@ -280,11 +619,18 @@
 					"type": "array",
 					"items": {
 						"type": "object",
-						"required": [ "slug", "linking_reason" ],
+						"required": [
+							"slug",
+							"linking_reason"
+						],
 						"additionalProperties": false,
 						"properties": {
-							"slug": { "type": "string" },
-							"linking_reason": { "type": "string" }
+							"slug": {
+								"type": "string"
+							},
+							"linking_reason": {
+								"type": "string"
+							}
 						}
 					}
 				},
@@ -292,74 +638,176 @@
 					"type": "array",
 					"items": {
 						"type": "object",
-						"required": [ "slug", "linking_reason" ],
+						"required": [
+							"slug",
+							"linking_reason"
+						],
 						"additionalProperties": false,
 						"properties": {
-							"slug": { "type": "string" },
-							"linking_reason": { "type": "string" }
+							"slug": {
+								"type": "string"
+							},
+							"linking_reason": {
+								"type": "string"
+							}
 						}
 					}
 				},
-				"anchor_guidance": { "type": "string" },
-				"do_not_link": { "type": "array", "items": { "type": "string" } }
-			}
-		},
-
-		"sibling_constraints": {
-			"description": "Sibling pages are CONSTRAINTS, never templates or rewrite sources. Supplied before writing, not only checked afterwards.",
-			"type": "object",
-			"required": [ "compared_against", "structures_to_avoid" ],
-			"additionalProperties": false,
-			"properties": {
-				"compared_against": { "type": "array", "items": { "type": "string" } },
-				"structures_to_avoid": { "type": "array", "items": { "type": "string" } },
-				"questions_already_answered": { "type": "array", "items": { "type": "string" } },
-				"generic_explanations_to_avoid": { "type": "array", "items": { "type": "string" } },
-				"shared_entities": { "type": "array", "items": { "type": "string" } },
-				"shared_claims": { "type": "array", "items": { "type": "string" } },
-				"topic_opportunities": { "type": "array", "items": { "type": "string" } },
-				"calibrated_signals": {
-					"description": "Phase 3B corpus thresholds, carried as editorial signals rather than blind universal rules.",
-					"type": "object", "additionalProperties": true
+				"anchor_guidance": {
+					"type": "string"
+				},
+				"do_not_link": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
 				}
 			}
 		},
-
-		"writing_constraints": {
+		"sibling_constraints": {
+			"description": "Sibling pages are CONSTRAINTS, never templates or rewrite sources. Supplied before writing, not only checked afterwards.",
 			"type": "object",
-			"required": [ "tone", "audience", "forbidden_patterns" ],
+			"required": [
+				"compared_against",
+				"structures_to_avoid"
+			],
 			"additionalProperties": false,
 			"properties": {
-				"tone": { "type": "string" },
-				"audience": { "type": "string" },
+				"compared_against": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"structures_to_avoid": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"questions_already_answered": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"generic_explanations_to_avoid": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"shared_entities": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"shared_claims": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"topic_opportunities": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"calibrated_signals": {
+					"description": "Phase 3B corpus thresholds, carried as editorial signals rather than blind universal rules.",
+					"type": "object",
+					"additionalProperties": true
+				}
+			}
+		},
+		"writing_constraints": {
+			"type": "object",
+			"required": [
+				"tone",
+				"audience",
+				"forbidden_patterns"
+			],
+			"additionalProperties": false,
+			"properties": {
+				"tone": {
+					"type": "string"
+				},
+				"audience": {
+					"type": "string"
+				},
 				"content_depth": {
 					"description": "Depth guidance derived from intent and question count. No universal word count — longer is not better.",
 					"type": "string"
 				},
 				"target_range_words": {
-					"type": "array", "minItems": 2, "maxItems": 2, "items": { "type": "integer" }
+					"type": "array",
+					"minItems": 2,
+					"maxItems": 2,
+					"items": {
+						"type": "integer"
+					}
 				},
-				"target_range_justification": { "type": "string" },
-				"forbidden_patterns": { "type": "array", "items": { "type": "string" } }
+				"target_range_justification": {
+					"type": "string"
+				},
+				"forbidden_patterns": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				}
 			}
 		},
-
 		"source_artifacts": {
 			"description": "Every artifact this brief was derived from, so a draft is traceable to its evidence.",
 			"type": "object",
-			"required": [ "angles", "claims", "place", "intent", "entities", "queries" ],
+			"required": [
+				"angles",
+				"claims",
+				"place",
+				"intent",
+				"entities",
+				"queries"
+			],
 			"additionalProperties": false,
 			"properties": {
-				"angles": { "type": "string" },
-				"claims": { "type": "string" },
-				"place": { "type": "string" },
-				"intent": { "type": "string" },
-				"entities": { "type": "string" },
-				"queries": { "type": "string" },
-				"retro_brief": { "type": "string" },
-				"differentiation_report": { "type": "string" },
-				"corpus_summary": { "type": "string" }
+				"angles": {
+					"type": "string"
+				},
+				"claims": {
+					"type": "string"
+				},
+				"place": {
+					"type": "string"
+				},
+				"intent": {
+					"type": "string"
+				},
+				"entities": {
+					"type": "string"
+				},
+				"queries": {
+					"type": "string"
+				},
+				"retro_brief": {
+					"type": "string"
+				},
+				"differentiation_report": {
+					"type": "string"
+				},
+				"corpus_summary": {
+					"type": "string"
+				}
 			}
+		},
+		"page_purpose_class": {
+			"description": "Which existence test applies (ADR-0009). differentiated_informational must hold an approved angle and establish information gain. service_area_transactional must be a configured service area resting on publishable business claims, and is not judged on information gain. Both face the structural differentiation checks.",
+			"enum": [
+				"differentiated_informational",
+				"service_area_transactional"
+			]
 		}
 	}
 }

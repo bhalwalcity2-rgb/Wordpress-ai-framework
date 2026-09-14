@@ -118,9 +118,18 @@ def main():
         by_id = {a["id"]: a for a in angles_doc.get("angles", [])}
 
         angle_id = brief.get("differentiation", {}).get("approved_angle_id", "")
+        purpose = brief.get("page_purpose_class", "differentiated_informational")
+        service_area = purpose == "service_area_transactional"
+
         if status == "ALLOWED":
             allowed_count += 1
-            if not angle_id:
+            if service_area and angle_id:
+                errors.append("%s: a service-area page must not claim an angle (%r) - angles are "
+                              "the informational differentiation control (ADR-0009)"
+                              % (slug, angle_id))
+            if service_area and not angle_id:
+                pass  # correct: no angle required for this purpose
+            elif not angle_id:
                 errors.append("%s: ALLOWED with no approved_angle_id" % slug)
             elif angle_id not in by_id:
                 errors.append("%s: names angle '%s' which does not exist" % (slug, angle_id))
@@ -146,9 +155,12 @@ def main():
 
         # ---- claim control ---------------------------------------------
         ledger = {}
-        claims_path = ENGINE / "claims" / ("%s.json" % slug)
-        if claims_path.is_file():
-            ledger = {c["id"]: c for c in load(claims_path).get("claims", [])}
+        # Business-provided facts live once in claims/_shared-business.json
+        # (ADR-0009) and are merged wherever a ledger is read.
+        for cp in (ENGINE / "claims" / ("%s.json" % slug),
+                   ENGINE / "claims" / "_shared-business.json"):
+            if cp.is_file():
+                ledger.update({c["id"]: c for c in load(cp).get("claims", [])})
 
         claims = brief.get("claims", {})
         allowed_ids = set(claims.get("allowed_claim_ids", []))
@@ -180,7 +192,9 @@ def main():
             real = [g for g in gain
                     if g["evidence_level"] not in ("unknown_needs_verification",)
                     and not PLACE_ONLY_GAIN.match(g["information"])]
-            if not real:
+            # Information gain is the informational-page test. A service-area
+            # page is judged on clarity and accuracy instead (ADR-0009).
+            if not real and not service_area:
                 errors.append("%s: no established information gain — place, ZIP and landmark "
                               "substitution never qualify" % slug)
 

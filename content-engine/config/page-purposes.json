@@ -1,0 +1,7 @@
+{
+	"_purpose": "Declares which existence test each page faces (ADR-0009). A page is only judged by the service-area test if it is listed here deliberately; everything else defaults to the stricter informational test.",
+	"_warning": "This file is not a way around the gate. A service-area page still faces the structural, entity and FAQ differentiation checks, so listing a page here does not let it clone a sibling.",
+	"pages": {
+		"north-las-vegas": "service_area_transactional"
+	}
+}

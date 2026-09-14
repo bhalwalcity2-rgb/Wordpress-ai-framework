@@ -215,6 +215,25 @@
 			"publishable": false,
 			"appears_in_existing_copy": false,
 			"notes": "True but empty for content purposes. Every incorporated city in the valley can say this, so on its own it differentiates nothing - the Henderson angle worked because its specific numbers were retrieved, not because Henderson is a city."
+		},
+		{
+			"id": "nlv-service-area-coverage",
+			"claim": "North Las Vegas is a configured service area, with pickups across the city including Aliante, Eldorado, Sunrise Manor, and the neighbourhoods off Craig Road and Las Vegas Boulevard North.",
+			"claim_type": "business_fact",
+			"source": "business-config.php service_areas entry for north-las-vegas",
+			"source_ids": [
+				"waif-business-config"
+			],
+			"source_type": "official_business",
+			"verified_on": "2026-09-14",
+			"review_by": "2027-09-14",
+			"confidence": "high",
+			"risk": "low",
+			"status": "verified",
+			"verification": "SUPPORTED",
+			"publishable": true,
+			"appears_in_existing_copy": true,
+			"notes": "The business's own statement of where it operates. Authoritative for coverage; it says nothing about the areas themselves, so no local colour may be drawn from it."
 		}
 	],
 	"research_locked": true

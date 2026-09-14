@@ -1,0 +1,797 @@
+{
+	"slug": "north-las-vegas",
+	"status": "drafted",
+	"generation": {
+		"generated_by": "write-content.py",
+		"brief_version": "1.1.0",
+		"brief_path": "content-engine/brief/production/north-las-vegas.json",
+		"angle_id": "",
+		"claim_ids_used": [
+			"nlv-service-area-coverage",
+			"biz-free-towing",
+			"biz-same-day-pickup",
+			"biz-no-hidden-fees",
+			"biz-no-title-help",
+			"biz-three-step-process",
+			"biz-firm-offer",
+			"biz-paid-at-pickup",
+			"biz-condition-agnostic",
+			"biz-hours"
+		],
+		"source_artifacts": {
+			"angles": "content-engine/angles/north-las-vegas.json",
+			"claims": "content-engine/claims/north-las-vegas.json",
+			"place": "content-engine/place/north-las-vegas.json",
+			"intent": "content-engine/intent/north-las-vegas.json",
+			"entities": "content-engine/entities/north-las-vegas.json",
+			"queries": "content-engine/queries/north-las-vegas.json",
+			"retro_brief": "content-engine/brief/north-las-vegas.json",
+			"differentiation_report": "content-engine/reports/differentiation/north-las-vegas.json",
+			"corpus_summary": "content-engine/reports/corpus-summary.json"
+		},
+		"notes": "Service-area page (ADR-0009). No angle by design. Every factual sentence traces to a business-provided claim; no statutory or local-knowledge claim appears anywhere.",
+		"generated_on": "2026-09-14"
+	},
+	"coverage": {
+		"concepts_covered": [
+			"confirming the service area covers the caller",
+			"what the process actually involves",
+			"which vehicle conditions are accepted",
+			"what the offer does and does not include"
+		],
+		"concepts_not_covered": [],
+		"questions_answered": [
+			"Does the price change when the driver gets here?",
+			"What do you need from me before you collect the vehicle?",
+			"Can a pickup be arranged at the weekend?",
+			"Do I have to phone, or can I start it online?"
+		],
+		"entities_explained": [
+			"service area",
+			"towing",
+			"firm offer",
+			"payment at pickup",
+			"vehicle condition",
+			"title",
+			"scheduling",
+			"hours"
+		],
+		"information_gain_delivered": [
+			"Not applicable by design — a service-area page is judged on clarity and accuracy, not information gain (ADR-0009)."
+		],
+		"self_check": {
+			"search_intent": "Transactional-local. The visitor wants to know the business covers their address and what happens next. The page answers both without detouring.",
+			"semantic_coverage": "Coverage, condition, process, cost and scheduling - the chain a seller actually walks through, in that order.",
+			"information_gain": "None claimed. This page is not trying to teach something its siblings do not; it is trying to convert a transactional query accurately.",
+			"differentiation": "Structure is content/steps/services/content/cta, which no sibling uses - the others are all prose-only. FAQ questions were chosen specifically against the sibling set: 'how much', 'how fast' and 'is towing free' are already taken, so this page asks whether the price moves, what is needed beforehand, weekend availability and whether phoning is required.",
+			"local_relevance": "Coverage is stated from the business's own configured service area. No local colour is invented - the areas are named, never characterised, because the source supports coverage and nothing more.",
+			"naturalness": "No keyword repetition. 'North Las Vegas' appears where a person would say it and not otherwise.",
+			"utility": "A reader learns whether they are covered, what the three steps are, what is included, and when collection is possible.",
+			"claims": "Ten claims, all business-provided and sourced to business-config.php. Boundaries respected: same-day is 'available' not promised, no dollar figure is stated anywhere, and the missing-title answer offers help without asserting any legal rule.",
+			"trust": "No invented experience, staff, history, reviews, customer stories or local knowledge. No statutory claim of any kind - the NRS material found during research is statewide and unsourced to primary text, so it is absent."
+		}
+	},
+	"content": {
+		"slug": "north-las-vegas",
+		"city": "North Las Vegas",
+		"state": "NV",
+		"seo_title": "Junk Car Buyers in North Las Vegas | {business}",
+		"seo_description": "We buy junk and non-running vehicles across North Las Vegas. Free towing, a firm offer, and payment at pickup. Call {phone} to get started.",
+		"hero_heading": "Junk Car Buyers in North Las Vegas",
+		"hero_description": "If the vehicle is sitting in North Las Vegas, we will come to it. Running or not, complete or stripped, the offer we quote is the offer you are paid.",
+		"sections": [
+			{
+				"type": "content",
+				"eyebrow": "Coverage",
+				"heading": "Where We Collect From in North Las Vegas",
+				"paragraphs": [
+					"North Las Vegas is one of the areas we cover, and that includes Aliante, Eldorado and Sunrise Manor, along with the neighbourhoods off Craig Road and Las Vegas Boulevard North. If your street is not one of those, it does not mean we cannot reach you — the city is covered, and those are simply the parts people most often name when they call.",
+					"It is worth saying plainly that towing is free on every pickup, and that nothing is deducted from the offer to pay for it. Distance within the service area is our problem to solve, not a reason to reduce what the vehicle is worth to you."
+				]
+			},
+			{
+				"type": "steps",
+				"eyebrow": "How it works",
+				"heading": "Three Steps From First Call to Getting Paid",
+				"intro": "The process is the same whether the vehicle runs or has not moved in years.",
+				"steps": [
+					{
+						"icon": "phone",
+						"heading": "Call or request a quote online",
+						"description": "Tell us the year, make, model and condition, and whereabouts in North Las Vegas it is sitting. Call {phone}, or start it online if you would rather not be on the phone."
+					},
+					{
+						"icon": "cash",
+						"heading": "Accept a firm offer",
+						"description": "The figure we quote is firm. It is not an estimate that gets revisited later, and there are no fees taken off it afterwards."
+					},
+					{
+						"icon": "truck",
+						"heading": "We collect it and pay you then",
+						"description": "We come to the vehicle, tow it at no cost, and pay you at pickup rather than at some point afterwards."
+					}
+				]
+			},
+			{
+				"type": "services",
+				"eyebrow": "What we buy",
+				"heading": "The Vehicles We Take in North Las Vegas",
+				"intro": "Condition is not a barrier. These are the categories most North Las Vegas pickups fall into.",
+				"items": [
+					{
+						"slug": "non-running",
+						"note": "Will not start, will not hold a charge, or has not turned over in years."
+					},
+					{
+						"slug": "damaged",
+						"note": "Collision or storm damage, whether or not it was ever repaired."
+					},
+					{
+						"slug": "sedans",
+						"note": "Ordinary cars that simply reached the end of being worth keeping."
+					},
+					{
+						"slug": "trucks-suvs",
+						"note": "Pickups and SUVs, including work vehicles taken out of service."
+					}
+				]
+			},
+			{
+				"type": "content",
+				"eyebrow": "What to expect",
+				"heading": "What the Offer Includes, and What It Does Not",
+				"paragraphs": [
+					"The offer covers the vehicle as it stands. Towing is included, there are no hidden fees, and the amount agreed is the amount handed over at pickup. If you have been quoted elsewhere and found the number moved once the truck arrived, that is the part we are deliberately different about.",
+					"Same-day pickup is available and often possible, though it depends on the day and how the schedule looks when you call. Our hours are Monday to Saturday, 7:00 AM to 7:00 PM, and Sunday from 9:00 AM to 4:00 PM. If the title is missing, say so on the call — it is a common situation and there is often a way forward, but it is worth raising early rather than on the doorstep."
+				]
+			},
+			{
+				"type": "cta",
+				"heading": "Get an Offer for Your North Las Vegas Vehicle",
+				"intro": "Two minutes on the phone is usually enough to tell you what it is worth and when we can collect."
+			}
+		],
+		"faq_heading": "Questions People Ask Before Booking a Pickup",
+		"faq": [
+			{
+				"question": "Does the price change when the driver gets here?",
+				"answer": "No. The offer is firm once it is made, and there are no fees taken off it at collection. What you agree on the call is what you are paid."
+			},
+			{
+				"question": "What do you need from me before you collect the vehicle?",
+				"answer": "The year, make, model and condition, and where it is parked. If you do not have the title, tell us at that point — we can often still help, but it depends on the situation and it is better known early."
+			},
+			{
+				"question": "Can a pickup be arranged at the weekend?",
+				"answer": "Yes. We are open Monday to Saturday from 7:00 AM to 7:00 PM, and Sunday from 9:00 AM to 4:00 PM. Same-day collection is available, though whether it works on a given day depends on the schedule."
+			},
+			{
+				"question": "Do I have to phone, or can I start it online?",
+				"answer": "Either. You can call {phone}, or request a quote online if that suits you better. The process from there is the same."
+			}
+		],
+		"final_cta": {
+			"heading": "Ready When You Are",
+			"intro": "Tell us what you have and where it is, and we will handle the rest of it."
+		}
+	},
+	"_authoring_package": {
+		"_instructions": [
+			"Author canonical v2 content into this draft's `content` block.",
+			"State as fact ONLY what appears in allowed_claims below. Nothing else.",
+			"Derive the section plan from the angle and this page's purpose. Do not reuse a sibling's structure, and do not open a sibling page for reference.",
+			"Write FAQs from this page's own questions. Questions listed under sibling_constraints.questions_already_answered are off limits.",
+			"Business identity is tokenised: write {business} and {phone}, never literals.",
+			"Do not invent statistics, reviews, testimonials, first-hand experience, staff, years in business, or local ownership.",
+			"Do not put source URLs or citations into prose.",
+			"Record every claim id you relied on in generation.claim_ids_used.",
+			"Complete coverage.self_check honestly, including where the draft falls short."
+		],
+		"angle": {
+			"id": "",
+			"statement": "",
+			"why_unique": "",
+			"recommended_sections": []
+		},
+		"allowed_claims": [
+			{
+				"id": "nlv-service-area-coverage",
+				"statement": "North Las Vegas is a configured service area, with pickups across the city including Aliante, Eldorado, Sunrise Manor, and the neighbourhoods off Craig Road and Las Vegas Boulevard North.",
+				"risk": "low",
+				"verification": "SUPPORTED",
+				"source_ids": [
+					"waif-business-config"
+				],
+				"note": ""
+			},
+			{
+				"id": "biz-free-towing",
+				"statement": "Towing is free on every pickup, with no charge deducted from the offer.",
+				"risk": "medium",
+				"verification": "SUPPORTED",
+				"source_ids": [
+					"waif-business-config"
+				],
+				"note": ""
+			},
+			{
+				"id": "biz-same-day-pickup",
+				"statement": "Available, not guaranteed. Write it as an option rather than a promise for every booking.",
+				"risk": "medium",
+				"verification": "SUPPORTED",
+				"source_ids": [
+					"waif-business-config"
+				],
+				"note": "Use the boundary statement, not the original — the original overstates what the evidence supports."
+			},
+			{
+				"id": "biz-no-hidden-fees",
+				"statement": "There are no hidden fees; the quoted offer is what the seller receives.",
+				"risk": "medium",
+				"verification": "SUPPORTED",
+				"source_ids": [
+					"waif-business-config"
+				],
+				"note": ""
+			},
+			{
+				"id": "biz-no-title-help",
+				"statement": "The business can help; it does NOT follow that a sale without title is always possible. Never state a legal rule about title from this claim - that requires a DMV or statutory source.",
+				"risk": "medium",
+				"verification": "SUPPORTED",
+				"source_ids": [
+					"waif-business-config"
+				],
+				"note": "Use the boundary statement, not the original — the original overstates what the evidence supports."
+			},
+			{
+				"id": "biz-three-step-process",
+				"statement": "The process is three steps: call or request a quote, accept a firm cash offer, then the vehicle is collected and the seller is paid at pickup.",
+				"risk": "low",
+				"verification": "SUPPORTED",
+				"source_ids": [
+					"waif-business-config"
+				],
+				"note": ""
+			},
+			{
+				"id": "biz-firm-offer",
+				"statement": "The offer is firm once made. This says nothing about how much any particular vehicle is worth - no figure or range may be stated from this claim.",
+				"risk": "medium",
+				"verification": "SUPPORTED",
+				"source_ids": [
+					"waif-business-config"
+				],
+				"note": "Use the boundary statement, not the original — the original overstates what the evidence supports."
+			},
+			{
+				"id": "biz-paid-at-pickup",
+				"statement": "Payment is made at pickup rather than afterwards.",
+				"risk": "medium",
+				"verification": "SUPPORTED",
+				"source_ids": [
+					"waif-business-config"
+				],
+				"note": ""
+			},
+			{
+				"id": "biz-condition-agnostic",
+				"statement": "Vehicles are bought running or not, damaged or complete.",
+				"risk": "low",
+				"verification": "SUPPORTED",
+				"source_ids": [
+					"waif-business-config"
+				],
+				"note": ""
+			},
+			{
+				"id": "biz-hours",
+				"statement": "Opening hours are Monday to Saturday 7:00 AM to 7:00 PM, and Sunday 9:00 AM to 4:00 PM.",
+				"risk": "low",
+				"verification": "SUPPORTED",
+				"source_ids": [
+					"waif-business-config"
+				],
+				"note": ""
+			}
+		],
+		"blocked_claim_count": 13,
+		"query_model": {
+			"query_network_id": "queries/north-las-vegas.json",
+			"primary_queries": [
+				"buy junk cars near nellis air force base",
+				"how much junk car worth north las vegas",
+				"pick up car apartment complex north las vegas",
+				"need present pickup north las vegas"
+			],
+			"supporting_queries": [],
+			"question_map": [
+				{
+					"question": "Do you buy junk cars near Nellis Air Force Base?",
+					"why_this_page_answers_it": "TO BE RESEARCHED",
+					"coverage": "must_answer"
+				},
+				{
+					"question": "How much is my junk car worth in North Las Vegas?",
+					"why_this_page_answers_it": "TO BE RESEARCHED",
+					"coverage": "must_answer"
+				},
+				{
+					"question": "Can you pick up a car from an apartment complex in North Las Vegas?",
+					"why_this_page_answers_it": "TO BE RESEARCHED",
+					"coverage": "must_answer"
+				},
+				{
+					"question": "Do I need to be present for the pickup in North Las Vegas?",
+					"why_this_page_answers_it": "TO BE RESEARCHED",
+					"coverage": "must_answer"
+				}
+			],
+			"objection_map": [
+				{
+					"objection": "Is the quoted price the price I actually get?",
+					"required_response": "Needs a sourced statement of the firm-offer policy."
+				},
+				{
+					"objection": "Can I sell without the title?",
+					"required_response": "Needs an authoritative Nevada DMV source before answering."
+				}
+			],
+			"concept_groups": [
+				{
+					"concept": "air base buy cars force",
+					"intent": "navigational_local",
+					"why_needed": "Do you buy junk cars near Nellis Air Force Base?",
+					"coverage": "must_answer",
+					"representative_queries": [
+						"buy junk cars near nellis air force base"
+					],
+					"shared_with_siblings": false
+				},
+				{
+					"concept": "car how junk las much",
+					"intent": "navigational_local",
+					"why_needed": "How much is my junk car worth in North Las Vegas?",
+					"coverage": "useful_if_relevant",
+					"representative_queries": [
+						"how much junk car worth north las vegas"
+					],
+					"shared_with_siblings": true
+				},
+				{
+					"concept": "apartment car complex las north",
+					"intent": "navigational_local",
+					"why_needed": "Can you pick up a car from an apartment complex in North Las Vegas?",
+					"coverage": "useful_if_relevant",
+					"representative_queries": [
+						"pick up car apartment complex north las vegas"
+					],
+					"shared_with_siblings": true
+				},
+				{
+					"concept": "las need north pickup present",
+					"intent": "navigational_local",
+					"why_needed": "Do I need to be present for the pickup in North Las Vegas?",
+					"coverage": "useful_if_relevant",
+					"representative_queries": [
+						"need present pickup north las vegas"
+					],
+					"shared_with_siblings": true
+				}
+			]
+		},
+		"entity_model": {
+			"primary_entity": "junk car buying in North Las Vegas",
+			"supporting_entities": [
+				"Aliante",
+				"Call",
+				"Nellis Air Force Base",
+				"Yes"
+			],
+			"local_entities": [
+				"Ann Road",
+				"Carey Avenue",
+				"Cheyenne Avenue",
+				"Craig Road",
+				"North Las Vegas"
+			],
+			"user_entities": [],
+			"process_entities": [
+				"offer",
+				"paperwork",
+				"payment",
+				"pickup",
+				"quote",
+				"removal",
+				"schedule",
+				"tow",
+				"towing"
+			],
+			"attributes": [
+				"blown",
+				"junk"
+			],
+			"entity_relationships": [
+				{
+					"chain": [
+						"local",
+						"co-occurs_with",
+						"process"
+					],
+					"evidence_level": "research_observation",
+					"claim_id": "",
+					"explain_because": "Co-occurrence in existing copy. Evidence that the page connects these ideas — not evidence that the connection holds."
+				},
+				{
+					"chain": [
+						"attributes_condition",
+						"co-occurs_with",
+						"local"
+					],
+					"evidence_level": "research_observation",
+					"claim_id": "",
+					"explain_because": "Co-occurrence in existing copy. Evidence that the page connects these ideas — not evidence that the connection holds."
+				},
+				{
+					"chain": [
+						"attributes_condition",
+						"co-occurs_with",
+						"process"
+					],
+					"evidence_level": "research_observation",
+					"claim_id": "",
+					"explain_because": "Co-occurrence in existing copy. Evidence that the page connects these ideas — not evidence that the connection holds."
+				},
+				{
+					"chain": [
+						"vehicle condition",
+						"determines",
+						"towing requirement"
+					],
+					"evidence_level": "hypothesis",
+					"claim_id": "",
+					"explain_because": "Plausible domain relationship, unverified for this page."
+				},
+				{
+					"chain": [
+						"vehicle ownership",
+						"determines",
+						"title and documentation path"
+					],
+					"evidence_level": "hypothesis",
+					"claim_id": "",
+					"explain_because": "Plausible domain relationship, unverified for this page."
+				},
+				{
+					"chain": [
+						"community rules",
+						"creates",
+						"vehicle removal pressure"
+					],
+					"evidence_level": "hypothesis",
+					"claim_id": "",
+					"explain_because": "Plausible domain relationship, unverified for this page."
+				},
+				{
+					"chain": [
+						"location",
+						"determines",
+						"pickup and logistics context"
+					],
+					"evidence_level": "hypothesis",
+					"claim_id": "",
+					"explain_because": "Plausible domain relationship, unverified for this page."
+				}
+			]
+		},
+		"local_model": {
+			"location": "junk car buying in North Las Vegas",
+			"local_context": [
+				"Ann Road",
+				"Carey Avenue",
+				"Cheyenne Avenue",
+				"Craig Road",
+				"North Las Vegas"
+			],
+			"local_conditions": [
+				{
+					"condition": "junk car buying in North Las Vegas is a configured service area for this business.",
+					"evidence_level": "business_provided",
+					"materially_affects": "Establishes that the business serves the area at all."
+				}
+			],
+			"geographic_context": [],
+			"customer_scenarios": [],
+			"decision_factors": []
+		},
+		"information_gain": {
+			"required_new_information": [
+				{
+					"information": "Confirm coverage of this service area and set out what happens next, accurately.",
+					"why_it_is_new": "Not new, and not required to be. A service-area page is judged on clarity and accuracy, not information gain (ADR-0009).",
+					"evidence_level": "business_provided"
+				}
+			],
+			"unique_explanations": [],
+			"unique_scenarios": [],
+			"unique_questions": [
+				"Do you buy junk cars near Nellis Air Force Base?",
+				"How much is my junk car worth in North Las Vegas?",
+				"Can you pick up a car from an apartment complex in North Las Vegas?",
+				"Do I need to be present for the pickup in North Las Vegas?"
+			],
+			"unique_decision_factors": [],
+			"sibling_coverage_gaps": []
+		},
+		"content_architecture": {
+			"structure_rationale": "Sections must follow this page's own purpose and evidence. Identical structure across siblings was the strongest templating signal in the corpus (50 of 68 pairs), so no default plan is supplied here.",
+			"recommended_sections": [
+				{
+					"section_type": "content",
+					"working_title": "(writer composes; derive from the angle, not from a sibling)",
+					"purpose": "Explain the situation the approved angle names.",
+					"entities": [],
+					"queries": [
+						"air base buy cars force"
+					],
+					"information_gain": "Confirm coverage of this service area and set out what happens next, accurately.",
+					"evidence": [
+						"nlv-service-area-coverage",
+						"biz-free-towing",
+						"biz-same-day-pickup",
+						"biz-no-hidden-fees",
+						"biz-no-title-help"
+					],
+					"internal_links": []
+				}
+			]
+		},
+		"faq_plan": {
+			"questions_to_answer": [
+				"Do you buy junk cars near Nellis Air Force Base?",
+				"How much is my junk car worth in North Las Vegas?",
+				"Can you pick up a car from an apartment complex in North Las Vegas?",
+				"Do I need to be present for the pickup in North Las Vegas?"
+			],
+			"questions_already_answered_by_siblings": [
+				"paradise — FAQ substance already overlaps; ask different questions",
+				"las-vegas — FAQ substance already overlaps; ask different questions",
+				"already answered on boulder-city: Is towing really free from Boulder City?",
+				"already answered on boulder-city: How quickly can you pick up a car in Boulder City?",
+				"already answered on boulder-city: Do you buy junk cars in the Boulder City historic district?",
+				"already answered on boulder-city: What types of vehicles do you buy in Boulder City?",
+				"already answered on enterprise: Do you serve the Silverado Ranch area of Enterprise?",
+				"already answered on enterprise: How much will you pay for my junk car in Enterprise?",
+				"already answered on enterprise: Can you pick up a car that has been sitting for years in Enterprise?",
+				"already answered on enterprise: Is there any paperwork required to sell a junk car in Enterprise?",
+				"already answered on henderson: How fast can you get to Henderson?",
+				"already answered on henderson: Will my HOA fine me if a tow truck comes to my house?",
+				"already answered on henderson: I live in a Sun City community. Can you pick up from an age-restricted neighborhood?",
+				"already answered on henderson: My car has been sitting in my garage for years. Is it still worth anything?",
+				"already answered on las-vegas: How much will you pay for my junk car in Las Vegas?",
+				"already answered on las-vegas: Do you buy cars without a title in Las Vegas?",
+				"already answered on las-vegas: How fast can you pick up my junk car in Las Vegas?",
+				"already answered on las-vegas: Is there any cost for towing in Las Vegas?",
+				"already answered on paradise: Do you pick up junk cars near UNLV in Paradise?",
+				"already answered on paradise: How much do you pay for junk cars in Paradise?"
+			],
+			"questions_not_to_repeat": []
+		},
+		"internal_linking": {
+			"relevant_neighbours": [
+				{
+					"slug": "las-vegas",
+					"linking_reason": "Named as an adjacent area in the page's own editorial judgement"
+				},
+				{
+					"slug": "summerlin",
+					"linking_reason": "Named as an adjacent area in the page's own editorial judgement"
+				},
+				{
+					"slug": "spring-valley",
+					"linking_reason": "Named as an adjacent area in the page's own editorial judgement"
+				},
+				{
+					"slug": "paradise",
+					"linking_reason": "Named as an adjacent area in the page's own editorial judgement"
+				}
+			],
+			"relevant_services": [
+				{
+					"slug": "sedans",
+					"linking_reason": "Service judged relevant to this page's audience"
+				},
+				{
+					"slug": "trucks-suvs",
+					"linking_reason": "Service judged relevant to this page's audience"
+				},
+				{
+					"slug": "damaged",
+					"linking_reason": "Service judged relevant to this page's audience"
+				},
+				{
+					"slug": "non-running",
+					"linking_reason": "Service judged relevant to this page's audience"
+				}
+			],
+			"anchor_guidance": "Anchor text follows the sentence it sits in. Vary it. Do not link every page to every other page — a link needs a reason a reader would recognise (SEO_STANDARDS.md §12).",
+			"do_not_link": []
+		},
+		"sibling_constraints": {
+			"compared_against": [
+				"boulder-city",
+				"enterprise",
+				"henderson",
+				"las-vegas",
+				"paradise",
+				"spring-valley",
+				"summerlin"
+			],
+			"structures_to_avoid": [
+				"paradise — same section plan; do not reuse its order or section mix",
+				"enterprise — same section plan; do not reuse its order or section mix",
+				"summerlin — same section plan; do not reuse its order or section mix",
+				"spring-valley — same section plan; do not reuse its order or section mix",
+				"boulder-city — same section plan; do not reuse its order or section mix"
+			],
+			"questions_already_answered": [
+				"paradise — FAQ substance already overlaps; ask different questions",
+				"las-vegas — FAQ substance already overlaps; ask different questions",
+				"already answered on boulder-city: Is towing really free from Boulder City?",
+				"already answered on boulder-city: How quickly can you pick up a car in Boulder City?",
+				"already answered on boulder-city: Do you buy junk cars in the Boulder City historic district?",
+				"already answered on boulder-city: What types of vehicles do you buy in Boulder City?",
+				"already answered on enterprise: Do you serve the Silverado Ranch area of Enterprise?",
+				"already answered on enterprise: How much will you pay for my junk car in Enterprise?",
+				"already answered on enterprise: Can you pick up a car that has been sitting for years in Enterprise?",
+				"already answered on enterprise: Is there any paperwork required to sell a junk car in Enterprise?",
+				"already answered on henderson: How fast can you get to Henderson?",
+				"already answered on henderson: Will my HOA fine me if a tow truck comes to my house?",
+				"already answered on henderson: I live in a Sun City community. Can you pick up from an age-restricted neighborhood?",
+				"already answered on henderson: My car has been sitting in my garage for years. Is it still worth anything?",
+				"already answered on las-vegas: How much will you pay for my junk car in Las Vegas?",
+				"already answered on las-vegas: Do you buy cars without a title in Las Vegas?",
+				"already answered on las-vegas: How fast can you pick up my junk car in Las Vegas?",
+				"already answered on las-vegas: Is there any cost for towing in Las Vegas?",
+				"already answered on paradise: Do you pick up junk cars near UNLV in Paradise?",
+				"already answered on paradise: How much do you pay for junk cars in Paradise?",
+				"already answered on paradise: Can you pick up a car from a commercial property in Paradise?",
+				"already answered on paradise: Is same-day pickup available in Paradise?",
+				"already answered on spring-valley: How fast can you pick up a junk car in Spring Valley?",
+				"already answered on spring-valley: Do you buy cars from apartment complexes in Spring Valley?",
+				"already answered on spring-valley: What's the minimum you'll pay for a junk car in Spring Valley?",
+				"already answered on spring-valley: Can I sell a car with a dead battery in Spring Valley?",
+				"already answered on summerlin: Can you pick up a junk car from my Summerlin HOA community?",
+				"already answered on summerlin: How much do you pay for junk cars in Summerlin?",
+				"already answered on summerlin: Do you buy cars that failed smog in Summerlin?",
+				"already answered on summerlin: How fast can you remove a junk car from Summerlin?"
+			],
+			"generic_explanations_to_avoid": [
+				"paradise — same non-local topic frame; explaining it again adds nothing",
+				"summerlin — same non-local topic frame; explaining it again adds nothing"
+			],
+			"shared_entities": [
+				"flatbed",
+				"offer",
+				"paid",
+				"paperwork",
+				"payment",
+				"pickup",
+				"quote",
+				"removal",
+				"schedule",
+				"scheduling",
+				"title",
+				"tow",
+				"towing",
+				"transfer"
+			],
+			"shared_claims": [
+				"As the area has grown, so has our service — we buy junk cars from Enterprise residents eve",
+				"Boulder City is a bit further from our base, but we still offer the same free towing, same",
+				"Boulder City's smaller-town feel means word travels fast, and many of our Boulder City cus",
+				"Call {phone}, describe your vehicle, and receive a firm cash offer.",
+				"Enterprise is one of the fastest-growing communities south of the Las Vegas Strip, stretch",
+				"Free towing from your driveway, same-day service, and cash paid on the spot.",
+				"Free towing on every vehicle, no matter the condition.",
+				"Free towing, no fees, and cash in hand the same day for most pickups.",
+				"Free towing, no hidden fees, and cash in hand before our truck leaves your driveway.",
+				"From downtown to the west side, we pick up junk and unwanted vehicles throughout Las Vegas",
+				"Green Valley, Anthem, Lake Las Vegas, Inspirada, Seven Hills, and every neighborhood in be",
+				"Henderson is Nevada's second-largest city — around 332,000 residents spread across the sou",
+				"If you have a car, truck, SUV, or van you want gone, we will make you a cash offer and pic",
+				"If you have a junk or unwanted vehicle in Boulder City, we will come to you with free towi",
+				"Many Henderson neighborhoods — especially gated and master-planned communities like Green ",
+				"Many Summerlin communities have strict HOA regulations about vehicles parked on driveways ",
+				"Many of those communities are governed by a homeowners association, which means a junk car",
+				"No extra charge for the distance — the offer you get is the cash you keep.",
+				"Paradise is one of the most densely populated areas in the Las Vegas valley, stretching fr",
+				"Second, we give you a firm cash offer — no haggling, no lowball games."
+			],
+			"topic_opportunities": [],
+			"calibrated_signals": {
+				"_note": "Phase 3B corpus percentiles, carried as editorial signals rather than blind rules. They describe this corpus and should be re-measured after any rewrite.",
+				"clone_signal_count": {
+					"observed": {
+						"count": 68,
+						"min": 0,
+						"max": 5,
+						"mean": 1.5588,
+						"p10": 0.0,
+						"p25": 1.0,
+						"p50": 1.0,
+						"p75": 2.0,
+						"p90": 3.0,
+						"p95": 4.0
+					},
+					"candidate_warn": 2,
+					"candidate_block": 3,
+					"note": "The recommended primary gate."
+				},
+				"structure_similarity": {
+					"observed": {
+						"p10": 0.0,
+						"p25": 0.75,
+						"p50": 0.8571,
+						"p75": 1.0,
+						"p90": 1.0,
+						"p95": 1.0
+					},
+					"candidate_warn": 0.7,
+					"candidate_block": 0.85,
+					"note": "Strongest single signal in this corpus — p50 is 0.857, so more than half of all sibling pairs are built to the same plan."
+				},
+				"entity_similarity_nonlocal": {
+					"observed": {
+						"p10": 0.1837,
+						"p25": 0.2653,
+						"p50": 0.4164,
+						"p75": 0.5263,
+						"p90": 0.6,
+						"p95": 0.6608
+					},
+					"candidate_warn": 0.5,
+					"candidate_block": 0.65,
+					"note": "Two pages covering the identical non-local topic frame differ only in place names, whatever their wording."
+				},
+				"faq_topic_similarity": {
+					"observed": {
+						"p10": 0.1282,
+						"p25": 0.1714,
+						"p50": 0.2272,
+						"p75": 0.2857,
+						"p90": 0.3333,
+						"p95": 0.3417
+					},
+					"candidate_warn": 0.28,
+					"candidate_block": 0.4,
+					"note": "Compared by topic, not phrasing — rewording an answer while keeping its substance is explicitly superficial."
+				}
+			}
+		},
+		"writing_constraints": {
+			"tone": "Plain, direct, and useful to someone with a problem to solve. No sales register.",
+			"audience": "A vehicle owner deciding whether and how to sell a non-running or damaged car.",
+			"content_depth": "Short. This page has few distinct questions; padding it would add the filler the corpus already has too much of.",
+			"target_range_words": [
+				350,
+				700
+			],
+			"target_range_justification": "Derived from 4 distinct decision questions and the page's intent. Not a target to fill — stopping early is better than padding.",
+			"forbidden_patterns": [
+				"Invented statistics, reviews, testimonials or customer stories",
+				"Invented first-hand experience, years in business, staff, or local ownership",
+				"Fabricated citations, or source text quoted into prose to look authoritative",
+				"Any factual statement not traceable to an allowed claim id",
+				"Presenting a hypothesis or unverified claim as established fact",
+				"Rewriting, spinning or paraphrasing a sibling page",
+				"Swapping a city, neighbourhood, ZIP or landmark name for a sibling's and calling it different",
+				"Reusing a sibling's section order — identical structure was 50 of 68 sibling pairs",
+				"Restating a sibling's FAQ substance in new wording",
+				"Explaining the same generic process every sibling already explains",
+				"Inserting keyword variants that a person would not say out loud",
+				"Padding to reach a word count"
+			]
+		}
+	}
+}

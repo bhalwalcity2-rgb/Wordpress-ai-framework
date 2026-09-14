@@ -41,10 +41,12 @@ if hasattr(sys.stderr, "reconfigure"):
     sys.stderr.reconfigure(errors="replace")
 
 import briefing as bf         # noqa: E402
+import promotion as pm        # noqa: E402
 
 ENGINE = REPO_ROOT / "content-engine"
 PRODUCTION = ENGINE / "brief" / "production"
-BRIEF_VERSION = "1.0.0"
+BRIEF_VERSION = "1.1.0"
+DEFAULT_THEME = "kadence-child-lvjcb"
 
 
 def load(path, default=None):
@@ -58,6 +60,17 @@ def load(path, default=None):
 
 def rel(path):
     return path.relative_to(REPO_ROOT).as_posix()
+
+
+PURPOSE_FILE = ENGINE / "config" / "page-purposes.json"
+
+
+def page_purpose_for(slug):
+    """Purpose is declared, not guessed (ADR-0009). Default keeps the
+    stricter informational test, so a page only gets the service-area
+    route if someone deliberately puts it there."""
+    data = load(PURPOSE_FILE, {}) or {}
+    return data.get("pages", {}).get(slug, "differentiated_informational")
 
 
 def build(slug):
@@ -79,8 +92,19 @@ def build(slug):
         return None, "missing research artifacts: %s (run bootstrap-research.py)" % ", ".join(missing)
 
     retro = docs["retro_brief"]
-    gate, angle = bf.run_gate(slug, docs["angles"], docs["claims"], docs["place"],
-                              retro, docs["differentiation_report"])
+    purpose = page_purpose_for(slug)
+
+    # Business-provided facts live once (claims/_shared-business.json) and are
+    # merged into every brief, so a changed service promise is corrected in
+    # one place rather than in a dozen ledgers.
+    shared = load(ENGINE / "claims" / "_shared-business.json", {"claims": []})
+    merged_claims = {"claims": list(docs["claims"].get("claims", [])) + list(shared.get("claims", []))}
+    docs["claims"] = merged_claims
+
+    config = pm.read_business_config(REPO_ROOT / "wordpress" / "themes" / DEFAULT_THEME)
+    gate, angle = bf.run_gate(slug, docs["angles"], merged_claims, docs["place"],
+                              retro, docs["differentiation_report"],
+                              purpose=purpose, config=config)
 
     sibling_briefs = {}
     for other in sorted((ENGINE / "brief").glob("*.json")):
@@ -133,6 +157,14 @@ def build(slug):
             "why_it_is_new": "No sibling page raises this topic (Phase 3B measurement).",
             "evidence_level": "research_observation",
         })
+    if purpose == "service_area_transactional" and not gain_items:
+        gain_items.append({
+            "information": ("Confirm coverage of this service area and set out what happens next, "
+                            "accurately."),
+            "why_it_is_new": ("Not new, and not required to be. A service-area page is judged on "
+                              "clarity and accuracy, not information gain (ADR-0009)."),
+            "evidence_level": "business_provided",
+        })
     if not gain_items:
         gain_items.append({
             "information": "NO ESTABLISHED INFORMATION GAIN",
@@ -151,8 +183,14 @@ def build(slug):
                      "purpose and evidence — there is deliberately no master section template."),
         },
         "page_type": retro.get("page_type", "location"),
-        "page_purpose": (angle or {}).get("statement")
-            or "UNDETERMINED — no approved angle establishes why this page should exist.",
+        "page_purpose_class": purpose,
+        "page_purpose": (
+            ("Service-area page for %s. It exists so someone searching for this service here can "
+             "confirm the business covers their address and start the process, not to teach them "
+             "something their neighbours' pages do not." % retro.get("current_primary_topic", slug))
+            if purpose == "service_area_transactional"
+            else ((angle or {}).get("statement")
+                  or "UNDETERMINED — no approved angle establishes why this page should exist.")),
         "primary_topic": retro.get("current_primary_topic", slug),
         "primary_intent": intent_doc.get("primary_intent", "transactional"),
         "secondary_intents": intent_doc.get("secondary_intents", []),
