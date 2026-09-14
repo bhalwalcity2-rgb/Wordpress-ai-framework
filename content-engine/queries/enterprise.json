@@ -1,0 +1,59 @@
+{
+	"slug": "enterprise",
+	"generated": {
+		"by": "bootstrap-research.py",
+		"note": "Scaffolded from the existing corpus by bootstrap-research.py. NO EXTERNAL RESEARCH WAS PERFORMED. Every item is marked with the evidence level it actually has; nothing here may be treated as verified until a researcher answers the open questions and records a real source."
+	},
+	"concepts": [
+		{
+			"concept": "area enterprise ranch serve silverado",
+			"intent": "navigational_local",
+			"user_need": "Do you serve the Silverado Ranch area of Enterprise?",
+			"representative_queries": [
+				"serve silverado ranch area enterprise"
+			],
+			"covered_by_existing_page": true,
+			"shared_with_siblings": false,
+			"notes": "Derived from an existing FAQ. Not search volume data."
+		},
+		{
+			"concept": "car enterprise how junk much",
+			"intent": "navigational_local",
+			"user_need": "How much will you pay for my junk car in Enterprise?",
+			"representative_queries": [
+				"how much pay junk car enterprise"
+			],
+			"covered_by_existing_page": true,
+			"shared_with_siblings": true,
+			"notes": "Derived from an existing FAQ. Not search volume data."
+		},
+		{
+			"concept": "car enterprise pick sitting up",
+			"intent": "navigational_local",
+			"user_need": "Can you pick up a car that has been sitting for years in Enterprise?",
+			"representative_queries": [
+				"pick up car sitting years enterprise"
+			],
+			"covered_by_existing_page": true,
+			"shared_with_siblings": true,
+			"notes": "Derived from an existing FAQ. Not search volume data."
+		},
+		{
+			"concept": "any car enterprise junk paperwork",
+			"intent": "navigational_local",
+			"user_need": "Is there any paperwork required to sell a junk car in Enterprise?",
+			"representative_queries": [
+				"there any paperwork required sell junk car enterprise"
+			],
+			"covered_by_existing_page": true,
+			"shared_with_siblings": true,
+			"notes": "Derived from an existing FAQ. Not search volume data."
+		}
+	],
+	"coverage_summary": {
+		"total_concepts": 4,
+		"shared_with_siblings": 3,
+		"distinctive_concepts": 1,
+		"uncovered_by_existing_page": 0
+	}
+}

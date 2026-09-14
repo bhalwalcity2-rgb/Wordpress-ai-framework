@@ -1,0 +1,54 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "queries.schema.json",
+	"title": "Query network for one page",
+	"description": "content-engine/queries/{slug}.json. Organised by concept and intent, never by phrase variation. The purpose is to establish topic coverage and user need — not to produce a list to insert into copy. No page is expected to answer every query in its network.",
+
+	"type": "object",
+	"required": [ "slug", "concepts" ],
+	"additionalProperties": false,
+
+	"properties": {
+		"slug": { "$ref": "research-common.schema.json#/definitions/nonEmptyString" },
+		"generated": { "type": "object", "additionalProperties": true },
+
+		"concepts": {
+			"description": "One entry per distinct user need. Near-identical phrasings belong inside a single concept as variants, not as separate concepts.",
+			"type": "array",
+			"items": {
+				"type": "object",
+				"required": [ "concept", "intent", "user_need" ],
+				"additionalProperties": false,
+				"properties": {
+					"concept": { "$ref": "research-common.schema.json#/definitions/nonEmptyString" },
+					"intent": { "enum": [ "transactional", "commercial_investigation", "informational", "navigational_local" ] },
+					"user_need": { "$ref": "research-common.schema.json#/definitions/nonEmptyString" },
+					"representative_queries": {
+						"description": "A few illustrative phrasings, not an exhaustive harvest.",
+						"type": "array",
+						"maxItems": 6,
+						"items": { "type": "string" }
+					},
+					"covered_by_existing_page": { "type": "boolean" },
+					"shared_with_siblings": {
+						"description": "True when most sibling pages already serve this concept. A network made only of shared concepts describes a templated page.",
+						"type": "boolean"
+					},
+					"depends_on_claim": { "type": "string" },
+					"notes": { "type": "string" }
+				}
+			}
+		},
+
+		"coverage_summary": {
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+				"total_concepts": { "type": "integer" },
+				"shared_with_siblings": { "type": "integer" },
+				"distinctive_concepts": { "type": "integer" },
+				"uncovered_by_existing_page": { "type": "integer" }
+			}
+		}
+	}
+}

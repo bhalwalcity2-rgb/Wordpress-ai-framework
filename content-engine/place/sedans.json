@@ -1,0 +1,141 @@
+{
+	"slug": "sedans",
+	"target_type": "service",
+	"display_name": "junk car buying — sedans",
+	"generated": {
+		"by": "bootstrap-research.py",
+		"note": "Scaffolded from the existing corpus by bootstrap-research.py. NO EXTERNAL RESEARCH WAS PERFORMED. Every item is marked with the evidence level it actually has; nothing here may be treated as verified until a researcher answers the open questions and records a real source."
+	},
+	"research_status": {
+		"overall": "unresolved",
+		"researched_count": 3,
+		"verified_count": 0,
+		"unresolved_count": 18,
+		"unsupported_count": 0,
+		"editorial_opportunity_count": 0,
+		"blocking_gaps": [
+			"q-sedans-00-cash-junk-sedans-coupes",
+			"q-sedans-03-whether-sedan-blown-head",
+			"q-sedans-04-give-firm-cash-offer",
+			"q-sedans-06-tow-truck-arrives-verify",
+			"q-sedans-10-buy-car-what-actually",
+			"q-sedans-11-get-cash-take-car"
+		]
+	},
+	"sections": {
+		"service_relevance": [
+			{
+				"id": "sedans-existing-coverage",
+				"statement": "The existing page covers 508 words across 4 sections.",
+				"why_it_matters": "Baseline for judging whether a rewrite adds anything.",
+				"provenance": {
+					"evidence_level": "research_observation",
+					"status": "researched",
+					"source_type": "research_observation",
+					"source": "content-engine/brief/sedans.json"
+				}
+			}
+		],
+		"business_relevant_situations": [
+			{
+				"id": "sedans-distinct-topics",
+				"statement": "The page raises topics no sibling raises: inspection, pickup, schedule.",
+				"why_it_matters": "These are the only candidate grounds for a differentiated angle.",
+				"provenance": {
+					"evidence_level": "research_observation",
+					"status": "researched",
+					"source_type": "research_observation",
+					"source": "content-engine/reports/differentiation/sedans.json"
+				}
+			}
+		],
+		"community_context": [
+			{
+				"id": "sedans-named-places",
+				"statement": "Places named in existing copy: Las Vegas.",
+				"why_it_matters": "Place names alone do not differentiate a page; recorded for reference only.",
+				"provenance": {
+					"evidence_level": "research_observation",
+					"status": "researched",
+					"source_type": "research_observation",
+					"source": "existing page copy"
+				}
+			}
+		]
+	},
+	"open_questions": [
+		{
+			"id": "q-sedans-00-cash-junk-sedans-coupes",
+			"question": "What authoritative source supports: \"Cash for Junk Sedans & Coupes.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-sedans-03-whether-sedan-blown-head",
+			"question": "What authoritative source supports: \"Whether your sedan has a blown head gasket, a transmission that slips, body damage from a parking lot fender bender, or simply has\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-sedans-04-give-firm-cash-offer",
+			"question": "What authoritative source supports: \"We give you a firm cash offer on the phone — no appointment needed and no in-person inspection required to get a price.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-sedans-06-tow-truck-arrives-verify",
+			"question": "What authoritative source supports: \"Our tow truck arrives, we verify the car, pay you cash, and load it up.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-sedans-10-buy-car-what-actually",
+			"question": "What authoritative source supports: \"We buy the car for what it's actually worth in its current condition.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-sedans-11-get-cash-take-car",
+			"question": "What authoritative source supports: \"You get cash and we take the car.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-sedans-12-how-much-junk-sedan",
+			"question": "What authoritative source supports: \"How much is my junk sedan worth?\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-sedans-13-sell-sedan-without-title",
+			"question": "What authoritative source supports: \"Can I sell a sedan without a title in Las Vegas?\"?",
+			"why": "Live copy asserts this with no source. Risk: high.",
+			"suggested_source_type": "official_government",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-sedans-14-most-junk-sedans-las",
+			"question": "What authoritative source supports: \"Most junk sedans in the Las Vegas area sell for $200 to $2,500 depending on the year, make, weight, and condition.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		}
+	],
+	"corpus_context": {
+		"phase_3b_assessment": "REAL_DIFFERENTIATION",
+		"information_gain_verdict": "HAS_INFORMATION_GAIN",
+		"rewrite_priority": "REFINE",
+		"closest_sibling": "trucks-suvs",
+		"known_quality_issues": [
+			"STRUCTURE_MATCHES_SIBLINGS",
+			"NO_PAGE_SPECIFIC_CLOSING_CTA"
+		]
+	}
+}

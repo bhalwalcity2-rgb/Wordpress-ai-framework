@@ -1,0 +1,106 @@
+{
+	"slug": "non-running",
+	"unique_nonlocal_entities": [],
+	"has_unique_structure": false,
+	"page_type": "service",
+	"renders": true,
+	"compared_against": [
+		"damaged",
+		"sedans",
+		"trucks-suvs"
+	],
+	"max_masked_vocabulary_similarity": 0.2105,
+	"max_clone_signals": 2,
+	"closest_sibling": "trucks-suvs",
+	"aggregate_flags": [
+		"IDENTICAL_STRUCTURE",
+		"SHARED_FAQ_ANSWER_SUBSTANCE",
+		"SHARED_HEADING_PLAN"
+	],
+	"assessment": "PARTIAL_DIFFERENTIATION",
+	"quality_issues": [
+		"STRUCTURE_MATCHES_SIBLINGS",
+		"FAQ_SUBSTANCE_SHARED_WITH_SIBLINGS",
+		"NO_PAGE_SPECIFIC_CLOSING_CTA"
+	],
+	"local_entities_shared_with_siblings": [
+		"Las Vegas"
+	],
+	"pairs": [
+		{
+			"with": "trucks-suvs",
+			"raw_shingle_jaccard": 0.0098,
+			"masked_shingle_jaccard": 0.0089,
+			"substitution_lift": -0.0009,
+			"raw_vocabulary_jaccard": 0.2128,
+			"masked_vocabulary_jaccard": 0.2105,
+			"vocabulary_substitution_lift": -0.0023,
+			"trigram_jaccard": 0.035,
+			"faq_topic_similarity": 0.2162,
+			"faq_answer_topic_similarity": 0.2521,
+			"token_cosine": 0.3483,
+			"containment_in_sibling": 0.0183,
+			"heading_similarity": 0.1136,
+			"structure_similarity": 1.0,
+			"faq_question_similarity": 0.0964,
+			"faq_answer_similarity": 0.0444,
+			"entity_similarity_nonlocal": 0.3684,
+			"entity_similarity_local": 1.0,
+			"entity_similarity_process": 0.8333,
+			"superficial_flags": [
+				"IDENTICAL_STRUCTURE",
+				"SHARED_FAQ_ANSWER_SUBSTANCE"
+			]
+		},
+		{
+			"with": "damaged",
+			"raw_shingle_jaccard": 0.0036,
+			"masked_shingle_jaccard": 0.0027,
+			"substitution_lift": -0.0009,
+			"raw_vocabulary_jaccard": 0.1977,
+			"masked_vocabulary_jaccard": 0.1959,
+			"vocabulary_substitution_lift": -0.0018,
+			"trigram_jaccard": 0.0282,
+			"faq_topic_similarity": 0.2286,
+			"faq_answer_topic_similarity": 0.1016,
+			"token_cosine": 0.3698,
+			"containment_in_sibling": 0.0066,
+			"heading_similarity": 0.1628,
+			"structure_similarity": 1.0,
+			"faq_question_similarity": 0.075,
+			"faq_answer_similarity": 0.0041,
+			"entity_similarity_nonlocal": 0.25,
+			"entity_similarity_local": 1.0,
+			"entity_similarity_process": 0.3333,
+			"superficial_flags": [
+				"IDENTICAL_STRUCTURE",
+				"SHARED_HEADING_PLAN"
+			]
+		},
+		{
+			"with": "sedans",
+			"raw_shingle_jaccard": 0.0046,
+			"masked_shingle_jaccard": 0.0037,
+			"substitution_lift": -0.0009,
+			"raw_vocabulary_jaccard": 0.1935,
+			"masked_vocabulary_jaccard": 0.1913,
+			"vocabulary_substitution_lift": -0.0022,
+			"trigram_jaccard": 0.0239,
+			"faq_topic_similarity": 0.1667,
+			"faq_answer_topic_similarity": 0.136,
+			"token_cosine": 0.3604,
+			"containment_in_sibling": 0.0083,
+			"heading_similarity": 0.102,
+			"structure_similarity": 1.0,
+			"faq_question_similarity": 0.0353,
+			"faq_answer_similarity": 0.0128,
+			"entity_similarity_nonlocal": 0.16,
+			"entity_similarity_local": 1.0,
+			"entity_similarity_process": 0.2222,
+			"superficial_flags": [
+				"IDENTICAL_STRUCTURE"
+			]
+		}
+	],
+	"priority": "REWRITE"
+}

@@ -1,0 +1,70 @@
+{
+	"slug": "non-running",
+	"generated": {
+		"by": "bootstrap-research.py",
+		"note": "Scaffolded from the existing corpus by bootstrap-research.py. NO EXTERNAL RESEARCH WAS PERFORMED. Every item is marked with the evidence level it actually has; nothing here may be treated as verified until a researcher answers the open questions and records a real source."
+	},
+	"concepts": [
+		{
+			"concept": "car how las much non",
+			"intent": "transactional",
+			"user_need": "How much is a non-running car worth in Las Vegas?",
+			"representative_queries": [
+				"how much non running car worth las vegas"
+			],
+			"covered_by_existing_page": true,
+			"shared_with_siblings": true,
+			"notes": "Derived from an existing FAQ. Not search volume data."
+		},
+		{
+			"concept": "before calling car know need",
+			"intent": "transactional",
+			"user_need": "Do I need to know what's wrong with my car before calling?",
+			"representative_queries": [
+				"need know what's wrong car before calling"
+			],
+			"covered_by_existing_page": true,
+			"shared_with_siblings": false,
+			"notes": "Derived from an existing FAQ. Not search volume data."
+		},
+		{
+			"concept": "car flat roll tires tow",
+			"intent": "transactional",
+			"user_need": "Can you tow a car that has flat tires and won't roll?",
+			"representative_queries": [
+				"tow car flat tires won't roll"
+			],
+			"covered_by_existing_page": true,
+			"shared_with_siblings": false,
+			"notes": "Derived from an existing FAQ. Not search volume data."
+		},
+		{
+			"concept": "buy car sitting start won't",
+			"intent": "transactional",
+			"user_need": "Will you buy a car that has been sitting for years and won't start?",
+			"representative_queries": [
+				"buy car sitting years won't start"
+			],
+			"covered_by_existing_page": true,
+			"shared_with_siblings": true,
+			"notes": "Derived from an existing FAQ. Not search volume data."
+		},
+		{
+			"concept": "blown car engine selling worth",
+			"intent": "transactional",
+			"user_need": "Is it worth selling a car with a blown engine?",
+			"representative_queries": [
+				"worth selling car blown engine"
+			],
+			"covered_by_existing_page": true,
+			"shared_with_siblings": true,
+			"notes": "Derived from an existing FAQ. Not search volume data."
+		}
+	],
+	"coverage_summary": {
+		"total_concepts": 5,
+		"shared_with_siblings": 3,
+		"distinctive_concepts": 2,
+		"uncovered_by_existing_page": 0
+	}
+}

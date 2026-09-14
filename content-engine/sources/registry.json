@@ -1,0 +1,180 @@
+{
+	"_purpose": "Shared source registry. Claims cite source_ids rather than restating a citation, so a source's assessment is corrected in one place and every claim depending on it re-derives.",
+	"_rules": [
+		"Every entry is a real document that was actually retrieved or returned by search on the accessed_on date.",
+		"No entry may be created from model knowledge. If a source could not be reached, that is recorded in retrieval_note rather than the citation being written from memory.",
+		"source_type follows the Phase 3C-2 priority: official_government > primary_source > official_business > reputable_secondary."
+	],
+	"sources": [
+		{
+			"id": "nrs-116-3102-elaws",
+			"title": "NRS 116.3102 — Powers of unit-owners' association; limitations",
+			"url": "http://nv.elaws.us/nrs/116.3102",
+			"publisher": "Nevada Revised Statutes (via nv.elaws.us statutory mirror)",
+			"source_type": "primary_source",
+			"published_or_updated": "unknown",
+			"accessed_on": "2026-09-05",
+			"supports_claims": [
+				"An association may cause a vehicle to be removed when it is improperly parked 'on property owned or leased by the association' or 'on any road, street, alley or other thoroughfare within the common-interest community in violation of the governing documents'.",
+				"Written or oral notice must be given at least 48 hours before the association may direct removal, except where the vehicle blocks a fire hydrant, fire lane or accessible parking space, or poses an imminent threat to health, safety or welfare."
+			],
+			"notes_limitations": "Statutory mirror, not the Legislature's own server — leg.state.nv.us returned HTTP 403 to automated retrieval, as did law.justia.com. Text is corroborated by the Nevada Real Estate Division training material (source red-cic-towing-fastref) and by Justia search results. The retrieved extract did NOT state who bears the towing cost; that specific point remains unconfirmed here.",
+			"retrieval_note": "Fetched successfully 2026-09-05."
+		},
+		{
+			"id": "red-cic-towing-fastref",
+			"title": "Fast Reference — Towing, NRS 116.3102 Powers of unit-owners' association",
+			"url": "https://red.nv.gov/uploadedfiles/rednvgov/Content/CIC/Program_Training/Fast_Reference/Towing.pdf",
+			"publisher": "Nevada Real Estate Division, Department of Business and Industry",
+			"source_type": "official_government",
+			"published_or_updated": "unknown",
+			"accessed_on": "2026-09-05",
+			"supports_claims": [
+				"Association removal power is exercised over vehicles improperly parked on roads, streets, alleys or other thoroughfares within the common-interest community.",
+				"48-hour notice must be posted conspicuously on the vehicle or given to its owner or operator before the association may direct removal.",
+				"Costs incurred for towing and storage are borne by the owner of the vehicle."
+			],
+			"notes_limitations": "Direct PDF retrieval was rejected by the host ('Request Rejected'). Content is from the search index of this official document, not the retrieved file. Treated as corroborating rather than primary until someone opens the PDF directly. The towing-cost point rests on this source alone.",
+			"retrieval_note": "Direct fetch blocked 2026-09-05; content obtained via web search of the official URL."
+		},
+		{
+			"id": "nrs-116-31031-fines",
+			"title": "NRS 116.31031 — Power of executive board to impose fines and other sanctions for violations of governing documents",
+			"url": "https://law.justia.com/codes/nevada/chapter-116/statute-116-31031/",
+			"publisher": "Justia (reproducing Nevada Revised Statutes, 2025 code year)",
+			"source_type": "reputable_secondary",
+			"published_or_updated": "2025 code year",
+			"accessed_on": "2026-09-05",
+			"supports_claims": [
+				"Where the violation does not pose an imminent threat to health, safety or welfare, a fine must not exceed $100 for each violation, or $1,000 in total per hearing against a unit's owner or tenant.",
+				"The homeowner must be given notice and a reasonable opportunity to be heard before a fine is imposed.",
+				"A violation not cured within 14 days (or a longer period set by the executive board) is deemed a continuing violation, after which an additional fine may be imposed for each 7-day period the violation remains uncured."
+			],
+			"notes_limitations": "Justia reproduces statutory text but is a secondary publisher. Direct retrieval of both leg.state.nv.us and Justia returned HTTP 403; this content came via the search index. The 7-day continuing-fine period is the load-bearing detail here and should be confirmed against the Legislature's own text before publication.",
+			"retrieval_note": "Direct fetch blocked 2026-09-05; content obtained via web search."
+		},
+		{
+			"id": "nvdmv-duplicate-title-fees",
+			"title": "Vehicle Title and Ownership / Application for Duplicate Nevada Certificate of Title (VP-012)",
+			"url": "https://dmv.nv.gov/title.htm",
+			"publisher": "Nevada Department of Motor Vehicles",
+			"source_type": "official_government",
+			"published_or_updated": "unknown",
+			"accessed_on": "2026-09-05",
+			"supports_claims": [
+				"Form VP-012 is the Application for Duplicate Nevada Certificate of Title.",
+				"The title fee is $20.00 when the vehicle remains in Nevada, and $35.00 where the vehicle is not physically located or registered in Nevada.",
+				"A Title Processing Fee of $8.25 is charged on all title transactions, making the in-state duplicate total $28.25."
+			],
+			"notes_limitations": "Content obtained via search of the official DMV pages (dmv.nv.gov/title.htm and dmv.nv.gov/pdfforms/vp012.pdf). Fee schedules change; this requires re-checking before any published use.",
+			"retrieval_note": "Obtained via web search restricted to dmv.nv.gov, 2026-09-05."
+		},
+		{
+			"id": "census-henderson-quickfacts",
+			"title": "QuickFacts: Henderson city, Nevada",
+			"url": "https://www.census.gov/quickfacts/hendersoncitynevada",
+			"publisher": "U.S. Census Bureau",
+			"source_type": "official_government",
+			"published_or_updated": "ACS 2020-2024 estimates",
+			"accessed_on": "2026-09-05",
+			"supports_claims": [
+				"Henderson is the second largest city in Nevada.",
+				"Henderson's population is 332,141 per the 2020-2024 American Community Survey estimates."
+			],
+			"notes_limitations": "census.gov returned HTTP 403 to direct retrieval; the ACS figure came via search results citing Census QuickFacts and derived demographic sites. A separate 2024 figure of 337,305 and a 2026 projection of 346,318 appeared in non-authoritative aggregators and are NOT relied on. Land area in square miles was not obtained and remains unverified.",
+			"retrieval_note": "Direct fetch blocked 2026-09-05; figure via search."
+		},
+		{
+			"id": "nrs-487-junk-vehicles",
+			"title": "NRS Chapter 487 — Repair, Removal and Disposal of Vehicles",
+			"url": "https://www.leg.state.nv.us/nrs/NRS-487.html",
+			"publisher": "Nevada Legislature",
+			"source_type": "official_government",
+			"published_or_updated": "unknown",
+			"accessed_on": "2026-09-05",
+			"supports_claims": [
+				"Chapter 487 governs automobile wreckers, salvage titles and the disposal of wrecked, salvage, nonrepairable, abandoned and junk vehicles.",
+				"A licence is required to dismantle, scrap, process or wreck a vehicle."
+			],
+			"notes_limitations": "SEARCHED AND NOT FOUND: no provision was located in NRS 487, NRS 482 or the DMV salvage pages permitting the sale of a junk vehicle without a title on the basis of model year (e.g. 'model year 2010 or older'). Absence of evidence after a targeted search is recorded here so the claim is not re-argued from memory later. This is not proof no such provision exists — it is proof it was not found.",
+			"retrieval_note": "Search restricted to leg.state.nv.us, dmv.nv.gov and nv.gov, 2026-09-05."
+		},
+		{
+			"id": "clarkcounty-title11-nuisance",
+			"title": "Clark County Code Title 11 — Abatement of Nuisances",
+			"url": "https://library.municode.com/nv/clark_county/codes/code_of_ordinances?nodeId=TIT11ABNU",
+			"publisher": "Clark County, Nevada (via Municode)",
+			"source_type": "primary_source",
+			"published_or_updated": "unknown",
+			"accessed_on": "2026-09-05",
+			"supports_claims": [
+				"Clark County Code Title 11 governs abatement of nuisances in UNINCORPORATED Clark County.",
+				"Inoperative vehicles stored on private property are treated as a nuisance violation in unincorporated Clark County, enforced by the county's Code Enforcement / Public Response Office."
+			],
+			"notes_limitations": "Obtained via search of Municode and clarkcountynv.gov; the specific section text and timelines were not retrieved. Applies only to unincorporated areas — incorporated cities have their own codes.",
+			"retrieval_note": "Search restricted to clarkcountynv.gov and municode, 2026-09-05."
+		},
+		{
+			"id": "henderson-ch708-nuisance",
+			"title": "Henderson Municipal Code Chapter 7.08 — Nuisance; Office of Public Response (Code Enforcement)",
+			"url": "https://library.municode.com/nv/henderson/codes/code_of_ordinances?nodeId=TIT7AN_CH7.08NU_7.08.030NO",
+			"publisher": "City of Henderson, Nevada (via Municode)",
+			"source_type": "primary_source",
+			"published_or_updated": "unknown",
+			"accessed_on": "2026-09-05",
+			"supports_claims": [
+				"The City of Henderson enforces nuisance and property-maintenance rules under its own municipal code, separately from Clark County.",
+				"Abandoned, inoperable and junk vehicles are among the violations Henderson's Office of Public Response enforces."
+			],
+			"notes_limitations": "Obtained via search of Municode and cityofhenderson.com. Section text, notice periods and penalties were NOT retrieved and remain unverified.",
+			"retrieval_note": "Search restricted to cityofhenderson.com and municode, 2026-09-05."
+		},
+		{
+			"id": "waif-business-config",
+			"title": "business-config.php — the project's business configuration",
+			"url": "wordpress/themes/kadence-child-lvjcb/inc/business-config.php",
+			"publisher": "First Choice Junk Car (via this repository)",
+			"source_type": "official_business",
+			"published_or_updated": "tracked in git history",
+			"accessed_on": "2026-09-06",
+			"supports_claims": [
+				"Business identity: name, phone, address, hours, service areas, services.",
+				"Any claim whose authority is simply 'this is how the business operates'."
+			],
+			"notes_limitations": "Authoritative for what the business says about itself, and for nothing else. It cannot support a legal, regulatory or statistical claim — those need an external authority.",
+			"retrieval_note": "In-repository file; read directly."
+		},
+		{
+			"id": "henderson-mc-15-12-030-vehicles",
+			"title": "Henderson Municipal Code § 15.12.030 — General property maintenance standards",
+			"url": "http://henderson-nv.elaws.us/code/coor_title15_ch15.12_sec15.12.030",
+			"publisher": "City of Henderson, Nevada (municipal code, via elaws mirror)",
+			"source_type": "primary_source",
+			"published_or_updated": "unknown",
+			"accessed_on": "2026-09-14",
+			"supports_claims": [
+				"§ 15.12.030 B.3: RNP-1 designated areas are allowed up to six inoperable vehicles; RNP-2 up to four; all other properties are not allowed more than two inoperable or unregistered vehicles.",
+				"Those vehicles must be 'screened by a substantially opaque fence at a minimum height of six feet'.",
+				"§ 15.12.030 B.3.b: 'A single inoperable vehicle on any lot or premises that is registered to a resident of the property and undergoing minor repair work as defined herein; not to exceed 72 hours'."
+			],
+			"notes_limitations": "Retrieved verbatim from the section page. library.municode.com returned HTTP 403 to automated retrieval, so this mirror is the copy actually read. The section does not define 'inoperable vehicle' or 'minor repair work' inline — both are defined elsewhere in the code and were NOT retrieved, so neither term may be explained as if its scope were known. Municipal codes are amended; re-check before reuse.",
+			"retrieval_note": "Fetched successfully 2026-09-14."
+		},
+		{
+			"id": "clarkcounty-inoperable-vehicle-limits",
+			"title": "Clark County NV — inoperable vehicle storage limits and Code Enforcement guidance",
+			"url": "https://www.clarkcountynv.gov/government/departments/administrative_services/code_enforcement_-_public_response_office/services/nuisance-violations",
+			"publisher": "Clark County, Nevada",
+			"source_type": "official_government",
+			"published_or_updated": "unknown",
+			"accessed_on": "2026-09-14",
+			"supports_claims": [
+				"In unincorporated Clark County the number of unlicensed or inoperable automobiles stored outside an enclosed building is limited by lot area: 2 per 20,000 square feet, plus 1 for every additional 10,000 square feet.",
+				"Those vehicles must be enclosed by a block wall of at least six feet.",
+				"Clark County describes an inoperative vehicle as one not equipped with all parts required to operate legally on public streets, or one that cannot move under its own power."
+			],
+			"notes_limitations": "Obtained via search of clarkcountynv.gov and the county code mirror, NOT by direct verbatim retrieval of the ordinance section — the specific section text was not opened. An earlier search for this returned Clark County WASHINGTON material, which was discarded; anyone re-checking this must confirm they are reading Nevada. Treat the figures as directionally sourced and confirm the section before relying on them in any advisory context.",
+			"retrieval_note": "Search restricted to clarkcountynv.gov and clarkcounty-nv.elaws.us, 2026-09-14."
+		}
+	]
+}

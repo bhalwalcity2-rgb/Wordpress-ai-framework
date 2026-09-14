@@ -1,0 +1,118 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "research-common.schema.json",
+	"title": "Shared research vocabularies",
+	"description": "Status and provenance enums shared by the research artifacts. These vocabularies are the spine of the whole system: an item's status decides whether the future writer may state it as fact, and nothing may be promoted between levels without evidence. See docs/architecture/research-system.md.",
+
+	"definitions": {
+
+		"nonEmptyString": { "type": "string", "minLength": 1 },
+
+		"isoDate": {
+			"type": "string",
+			"pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+		},
+
+		"evidenceLevel": {
+			"description": "What kind of thing this is. The writer may state verified_fact, sourced_fact, and business_provided as fact. It may NOT state hypothesis, editorial_opportunity, or unknown_needs_verification as fact — those may only be researched, or written as explicitly attributed uncertainty.",
+			"enum": [
+				"verified_fact",
+				"sourced_fact",
+				"business_provided",
+				"research_observation",
+				"hypothesis",
+				"editorial_opportunity",
+				"unknown_needs_verification"
+			]
+		},
+
+		"researchStatus": {
+			"description": "How far this item has got. 'unresolved' and 'unsupported' are terminal blockers for publication until they change.",
+			"enum": [ "researched", "verified", "unresolved", "unsupported", "editorial_opportunity" ]
+		},
+
+		"sourceType": {
+			"description": "Provenance. 'unverified' means no source exists — it is not a weak source, it is the absence of one. An LLM-generated statement is never a source; it is at best a hypothesis to be researched.",
+			"enum": [
+				"official_government",
+				"official_business",
+				"primary_source",
+				"reputable_secondary",
+				"research_observation",
+				"unverified"
+			]
+		},
+
+		"confidence": { "enum": [ "high", "medium", "low", "none" ] },
+
+		"verificationStatus": {
+			"description": "Outcome of checking a claim against sources. PARTIALLY_SUPPORTED requires the claim to be narrowed to the boundary the evidence actually reaches — the stronger version is never promoted. CONTRADICTED means a source positively refutes it, which is different from UNSUPPORTED (no source found).",
+			"enum": [
+				"SUPPORTED",
+				"PARTIALLY_SUPPORTED",
+				"UNSUPPORTED",
+				"CONTRADICTED",
+				"NEEDS_HUMAN_CONFIRMATION",
+				"NOT_YET_CHECKED"
+			]
+		},
+
+		"risk": { "enum": [ "low", "medium", "high" ] },
+
+		"claimType": {
+			"enum": [
+				"business_fact",
+				"local_fact",
+				"government_legal_regulatory",
+				"process_claim",
+				"pricing_payment",
+				"service_guarantee",
+				"testimonial_review",
+				"unverifiable"
+			]
+		},
+
+		"evidenceRef": {
+			"description": "A pointer to a claim id in the same page's claims file. Angles cite evidence rather than restating it, so a claim's status can change in one place and every angle depending on it re-derives.",
+			"type": "object",
+			"required": [ "claim_id" ],
+			"additionalProperties": false,
+			"properties": {
+				"claim_id": { "$ref": "#/definitions/nonEmptyString" },
+				"relevance": { "type": "string" }
+			}
+		},
+
+		"provenanceBlock": {
+			"description": "Attached to every research item so nothing is anonymous.",
+			"type": "object",
+			"required": [ "evidence_level", "status" ],
+			"additionalProperties": false,
+			"properties": {
+				"evidence_level": { "$ref": "#/definitions/evidenceLevel" },
+				"status": { "$ref": "#/definitions/researchStatus" },
+				"source": { "type": "string" },
+				"source_type": { "$ref": "#/definitions/sourceType" },
+				"verified_on": { "$ref": "#/definitions/isoDate" },
+				"notes": { "type": "string" }
+			}
+		},
+
+		"researchItem": {
+			"description": "One observation about a place or service, carrying its own provenance.",
+			"type": "object",
+			"required": [ "id", "statement", "provenance" ],
+			"additionalProperties": false,
+			"properties": {
+				"id": { "$ref": "#/definitions/nonEmptyString" },
+				"statement": { "$ref": "#/definitions/nonEmptyString" },
+				"why_it_matters": {
+					"description": "How this could materially change a seller's decision or process. An item that cannot answer this is encyclopedia filler, not research.",
+					"type": "string"
+				},
+				"provenance": { "$ref": "#/definitions/provenanceBlock" },
+				"claim_ids": { "type": "array", "items": { "$ref": "#/definitions/nonEmptyString" } }
+			}
+		}
+	}
+}

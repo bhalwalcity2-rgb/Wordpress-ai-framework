@@ -1,0 +1,149 @@
+{
+	"slug": "summerlin",
+	"target_type": "location",
+	"display_name": "junk car buying in Summerlin",
+	"generated": {
+		"by": "bootstrap-research.py",
+		"note": "Scaffolded from the existing corpus by bootstrap-research.py. NO EXTERNAL RESEARCH WAS PERFORMED. Every item is marked with the evidence level it actually has; nothing here may be treated as verified until a researcher answers the open questions and records a real source."
+	},
+	"research_status": {
+		"overall": "unresolved",
+		"researched_count": 3,
+		"verified_count": 1,
+		"unresolved_count": 16,
+		"unsupported_count": 0,
+		"editorial_opportunity_count": 0,
+		"blocking_gaps": [
+			"q-summerlin-local-condition",
+			"q-summerlin-00-free-towing-fees-cash",
+			"q-summerlin-02-help-summerlin-homeowners-solve",
+			"q-summerlin-06-give-firm-cash-offer",
+			"q-summerlin-07-accept-come-summerlin-address",
+			"q-summerlin-09-towing-free-paperwork-handled"
+		]
+	},
+	"sections": {
+		"geographic_context": [
+			{
+				"id": "summerlin-is-service-area",
+				"statement": "junk car buying in Summerlin is a configured service area for this business.",
+				"why_it_matters": "Establishes that the business serves the area at all.",
+				"provenance": {
+					"evidence_level": "business_provided",
+					"status": "verified",
+					"source_type": "official_business",
+					"source": "wordpress/themes/<theme>/inc/business-config.php"
+				}
+			}
+		],
+		"service_relevance": [
+			{
+				"id": "summerlin-existing-coverage",
+				"statement": "The existing page covers 521 words across 4 sections.",
+				"why_it_matters": "Baseline for judging whether a rewrite adds anything.",
+				"provenance": {
+					"evidence_level": "research_observation",
+					"status": "researched",
+					"source_type": "research_observation",
+					"source": "content-engine/brief/summerlin.json"
+				}
+			}
+		],
+		"business_relevant_situations": [
+			{
+				"id": "summerlin-distinct-topics",
+				"statement": "The page raises topics no sibling raises: notice.",
+				"why_it_matters": "These are the only candidate grounds for a differentiated angle.",
+				"provenance": {
+					"evidence_level": "research_observation",
+					"status": "researched",
+					"source_type": "research_observation",
+					"source": "content-engine/reports/differentiation/summerlin.json"
+				}
+			}
+		],
+		"community_context": [
+			{
+				"id": "summerlin-named-places",
+				"statement": "Places named in existing copy: Las Vegas, Summerlin, The Hills, Tournament Hills.",
+				"why_it_matters": "Place names alone do not differentiate a page; recorded for reference only.",
+				"provenance": {
+					"evidence_level": "research_observation",
+					"status": "researched",
+					"source_type": "research_observation",
+					"source": "existing page copy"
+				}
+			}
+		]
+	},
+	"open_questions": [
+		{
+			"id": "q-summerlin-local-condition",
+			"question": "What local condition in this area materially changes how or why someone sells a junk car, versus elsewhere in the valley?",
+			"why": "Without an answer this page has no supported angle and should not be written. A different landmark is not an answer.",
+			"suggested_source_type": "official_government",
+			"blocks_angle": "summerlin-primary"
+		},
+		{
+			"id": "q-summerlin-00-free-towing-fees-cash",
+			"question": "What authoritative source supports: \"Free towing, no fees, and cash in hand the same day for most pickups.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-summerlin-02-help-summerlin-homeowners-solve",
+			"question": "What authoritative source supports: \"We help Summerlin homeowners solve that problem quickly — call us, get a cash offer, and we pick the vehicle up for free, usually \"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-summerlin-06-give-firm-cash-offer",
+			"question": "What authoritative source supports: \"We give you a firm cash offer immediately — no waiting, no callbacks needed.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-summerlin-07-accept-come-summerlin-address",
+			"question": "What authoritative source supports: \"If you accept, we come to your Summerlin address with a tow truck, verify the vehicle, pay you cash, and take the car.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-summerlin-09-towing-free-paperwork-handled",
+			"question": "What authoritative source supports: \"Towing is free, paperwork is handled by us, and the cash amount we quote is exactly what you receive.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-summerlin-11-how-much-pay-junk",
+			"question": "What authoritative source supports: \"How much do you pay for junk cars in Summerlin?\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-summerlin-12-offers-range-200-5",
+			"question": "What authoritative source supports: \"Offers range from $200 to $5,000+ depending on the vehicle.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		}
+	],
+	"corpus_context": {
+		"phase_3b_assessment": "SUPERFICIAL_DIFFERENTIATION",
+		"information_gain_verdict": "HAS_INFORMATION_GAIN",
+		"rewrite_priority": "REWRITE",
+		"closest_sibling": "paradise",
+		"known_quality_issues": [
+			"STRUCTURE_MATCHES_SIBLINGS",
+			"FAQ_SUBSTANCE_SHARED_WITH_SIBLINGS",
+			"SAME_TOPIC_FRAME_AS_SIBLINGS",
+			"NO_PAGE_SPECIFIC_CLOSING_CTA"
+		]
+	}
+}

@@ -1,0 +1,154 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "angle.schema.json",
+	"title": "Angle record — the anti-templating control",
+	"description": "content-engine/angles/{slug}.json. An angle is a materially different customer situation, constraint, or process concern. A place name, landmark, ZIP code, synonym, or reworded heading is NOT an angle. No two pages may hold the same approved angle, and an angle cannot be approved without evidence.",
+	"type": "object",
+	"required": [
+		"slug",
+		"differentiation_verdict",
+		"angles"
+	],
+	"additionalProperties": false,
+	"properties": {
+		"slug": {
+			"$ref": "research-common.schema.json#/definitions/nonEmptyString"
+		},
+		"generated": {
+			"type": "object",
+			"additionalProperties": true
+		},
+		"differentiation_verdict": {
+			"description": "NO_SUPPORTED_DIFFERENTIATION is a legitimate and expected outcome. Fewer useful pages beat many thin ones, so it must never be worked around by inventing an angle.",
+			"enum": [
+				"SUPPORTED",
+				"NO_SUPPORTED_DIFFERENTIATION",
+				"PENDING_RESEARCH"
+			]
+		},
+		"recommendation_if_unsupported": {
+			"enum": [
+				"merge_with_another_page",
+				"change_page_purpose",
+				"create_broader_regional_page",
+				"exclude_from_publication_set",
+				"not_applicable"
+			]
+		},
+		"recommendation_note": {
+			"type": "string"
+		},
+		"angles": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"required": [
+					"id",
+					"page",
+					"status",
+					"statement",
+					"why_unique"
+				],
+				"additionalProperties": false,
+				"properties": {
+					"id": {
+						"type": "string",
+						"pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+					},
+					"page": {
+						"$ref": "research-common.schema.json#/definitions/nonEmptyString"
+					},
+					"status": {
+						"enum": [
+							"proposed",
+							"researched",
+							"evidence_backed",
+							"approved",
+							"used",
+							"unsupported",
+							"retired"
+						],
+						"description": "Lifecycle: proposed -> researched -> evidence_backed -> approved -> used. An angle disproven by research goes to unsupported; one abandoned goes to retired. Only approved and used may be written from."
+					},
+					"angle_type": {
+						"enum": [
+							"customer_problem",
+							"local_constraint",
+							"vehicle_situation",
+							"compliance_process",
+							"logistical_situation",
+							"audience_segment"
+						]
+					},
+					"statement": {
+						"description": "The situation, stated so it would still be meaningful with the city name removed. If masking the place name empties it, it is not an angle.",
+						"$ref": "research-common.schema.json#/definitions/nonEmptyString"
+					},
+					"evidence": {
+						"description": "Pointers to claim ids. Angles cite rather than restate, so a claim's status changes in one place and every angle depending on it re-derives.",
+						"type": "array",
+						"items": {
+							"$ref": "research-common.schema.json#/definitions/evidenceRef"
+						}
+					},
+					"why_unique": {
+						"$ref": "research-common.schema.json#/definitions/nonEmptyString"
+					},
+					"must_not_overlap_with": {
+						"type": "array",
+						"items": {
+							"type": "string"
+						}
+					},
+					"related_entities": {
+						"type": "array",
+						"items": {
+							"type": "string"
+						}
+					},
+					"recommended_questions": {
+						"type": "array",
+						"items": {
+							"type": "string"
+						}
+					},
+					"recommended_sections": {
+						"type": "array",
+						"items": {
+							"type": "string"
+						}
+					},
+					"blocked_by": {
+						"description": "Open-question ids that must be answered before this angle can move to approved.",
+						"type": "array",
+						"items": {
+							"type": "string"
+						}
+					},
+					"notes": {
+						"type": "string"
+					},
+					"source_ids": {
+						"type": "array",
+						"items": {
+							"type": "string"
+						},
+						"description": "Direct source registry references, in addition to claim-level evidence."
+					},
+					"retirement_reason": {
+						"type": "string",
+						"description": "Required when status is unsupported or retired: what the research actually found."
+					},
+					"distinctiveness_assessment": {
+						"type": "string",
+						"description": "Whether the situation is genuinely distinct from siblings. A condition created by statewide law is not distinctive — it applies to every page equally."
+					}
+				}
+			}
+		},
+		"research_locked": {
+			"type": "boolean",
+			"description": "True once curated. bootstrap-research.py refuses to overwrite even with --force."
+		}
+	}
+}

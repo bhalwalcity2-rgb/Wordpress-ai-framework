@@ -1,0 +1,154 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "draft.schema.json",
+	"title": "Content draft — writer output, pre-publication",
+	"description": "content-engine/drafts/{slug}.json. Wraps canonical v2 content with the provenance needed to audit it. A draft is NEVER written to wordpress/themes/*/content/ — promotion is the publish gate's job in a later phase, and the separation is what makes a draft reviewable before it can reach a page.",
+	"type": "object",
+	"required": [
+		"slug",
+		"status",
+		"generation",
+		"coverage",
+		"content"
+	],
+	"additionalProperties": false,
+	"properties": {
+		"slug": {
+			"$ref": "research-common.schema.json#/definitions/nonEmptyString"
+		},
+		"status": {
+			"description": "A draft is never 'published' here. promoted is recorded by the publish gate.",
+			"enum": [
+				"authoring_package",
+				"drafted",
+				"validated",
+				"rejected",
+				"promoted"
+			]
+		},
+		"generation": {
+			"type": "object",
+			"required": [
+				"brief_version",
+				"brief_path",
+				"angle_id",
+				"claim_ids_used",
+				"source_artifacts"
+			],
+			"additionalProperties": false,
+			"properties": {
+				"generated_on": {
+					"$ref": "research-common.schema.json#/definitions/isoDate"
+				},
+				"generated_by": {
+					"type": "string"
+				},
+				"brief_version": {
+					"type": "string"
+				},
+				"brief_path": {
+					"type": "string"
+				},
+				"angle_id": {
+					"description": "The approved angle this draft was written from. A draft with no approved angle cannot exist.",
+					"type": "string"
+				},
+				"claim_ids_used": {
+					"description": "Every allowed claim the prose actually relies on. A factual statement not traceable to one of these is a validation failure.",
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"source_artifacts": {
+					"type": "object",
+					"additionalProperties": true
+				},
+				"notes": {
+					"type": "string"
+				}
+			}
+		},
+		"coverage": {
+			"description": "What the draft claims to cover, checked against the brief by validate-draft.py.",
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+				"concepts_covered": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"concepts_not_covered": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"questions_answered": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"entities_explained": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"information_gain_delivered": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"self_check": {
+					"description": "The writer's own assessment against the Phase 3C-3 checklist. Recorded so a reviewer can see what the writer believed, and disagree with it.",
+					"type": "object",
+					"additionalProperties": false,
+					"properties": {
+						"search_intent": {
+							"type": "string"
+						},
+						"semantic_coverage": {
+							"type": "string"
+						},
+						"information_gain": {
+							"type": "string"
+						},
+						"differentiation": {
+							"type": "string"
+						},
+						"local_relevance": {
+							"type": "string"
+						},
+						"naturalness": {
+							"type": "string"
+						},
+						"utility": {
+							"type": "string"
+						},
+						"claims": {
+							"type": "string"
+						},
+						"trust": {
+							"type": "string"
+						}
+					}
+				}
+			}
+		},
+		"content": {
+			"description": "Canonical v2 content. Validated against location/service/home schema by validate-draft.py — the same contract production content must satisfy, so a draft cannot be shaped differently from what a page accepts.",
+			"type": "object",
+			"additionalProperties": true
+		},
+		"_authoring_package": {
+			"description": "The complete instruction set the writer was permitted to see, embedded so a draft can be audited against what it was actually told. Written by write-content.py; not authored by hand.",
+			"type": "object",
+			"additionalProperties": true
+		}
+	}
+}

@@ -1,0 +1,115 @@
+{
+	"slug": "trucks-suvs",
+	"target_type": "service",
+	"display_name": "junk car buying — trucks suvs",
+	"generated": {
+		"by": "bootstrap-research.py",
+		"note": "Scaffolded from the existing corpus by bootstrap-research.py. NO EXTERNAL RESEARCH WAS PERFORMED. Every item is marked with the evidence level it actually has; nothing here may be treated as verified until a researcher answers the open questions and records a real source."
+	},
+	"research_status": {
+		"overall": "unresolved",
+		"researched_count": 2,
+		"verified_count": 0,
+		"unresolved_count": 13,
+		"unsupported_count": 0,
+		"editorial_opportunity_count": 0,
+		"blocking_gaps": [
+			"q-trucks-suvs-00-cash-junk-trucks-suvs",
+			"q-trucks-suvs-02-there-two-reasons-trucks",
+			"q-trucks-suvs-03-first-weigh-more-scrap",
+			"q-trucks-suvs-04-engines-transmissions-transfer-cases",
+			"q-trucks-suvs-09-how-much-pay-junk",
+			"q-trucks-suvs-10-junk-trucks-typically-receive"
+		]
+	},
+	"sections": {
+		"service_relevance": [
+			{
+				"id": "trucks-suvs-existing-coverage",
+				"statement": "The existing page covers 542 words across 4 sections.",
+				"why_it_matters": "Baseline for judging whether a rewrite adds anything.",
+				"provenance": {
+					"evidence_level": "research_observation",
+					"status": "researched",
+					"source_type": "research_observation",
+					"source": "content-engine/brief/trucks-suvs.json"
+				}
+			}
+		],
+		"community_context": [
+			{
+				"id": "trucks-suvs-named-places",
+				"statement": "Places named in existing copy: Las Vegas.",
+				"why_it_matters": "Place names alone do not differentiate a page; recorded for reference only.",
+				"provenance": {
+					"evidence_level": "research_observation",
+					"status": "researched",
+					"source_type": "research_observation",
+					"source": "existing page copy"
+				}
+			}
+		]
+	},
+	"open_questions": [
+		{
+			"id": "q-trucks-suvs-00-cash-junk-trucks-suvs",
+			"question": "What authoritative source supports: \"Cash for Junk Trucks & SUVs.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-trucks-suvs-02-there-two-reasons-trucks",
+			"question": "What authoritative source supports: \"There are two reasons trucks and SUVs typically receive higher cash offers than sedans.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-trucks-suvs-03-first-weigh-more-scrap",
+			"question": "What authoritative source supports: \"First, they weigh more — scrap metal prices are calculated by weight, so a 5,000-pound truck is worth more than a 3,000-pound seda\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-trucks-suvs-04-engines-transmissions-transfer-cases",
+			"question": "What authoritative source supports: \"Engines, transmissions, transfer cases, axles, and body panels from popular trucks often have significant resale value even when t\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-trucks-suvs-09-how-much-pay-junk",
+			"question": "What authoritative source supports: \"How much do you pay for junk trucks in Las Vegas?\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-trucks-suvs-10-junk-trucks-typically-receive",
+			"question": "What authoritative source supports: \"Junk trucks typically receive offers between $500 and $5,000+ depending on the year, make, model, weight, and condition.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-trucks-suvs-12-blown-engine-doesnt-eliminate",
+			"question": "What authoritative source supports: \"A blown engine doesn't eliminate the value of the rest of the vehicle — the transmission, frame, axles, cab, and bed still have si\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		}
+	],
+	"corpus_context": {
+		"phase_3b_assessment": "PARTIAL_DIFFERENTIATION",
+		"information_gain_verdict": "WORDING_ONLY_GAIN",
+		"rewrite_priority": "REWRITE",
+		"closest_sibling": "non-running",
+		"known_quality_issues": [
+			"STRUCTURE_MATCHES_SIBLINGS",
+			"FAQ_SUBSTANCE_SHARED_WITH_SIBLINGS",
+			"NO_PAGE_SPECIFIC_CLOSING_CTA"
+		]
+	}
+}

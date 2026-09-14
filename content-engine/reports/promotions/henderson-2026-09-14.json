@@ -1,0 +1,176 @@
+{
+	"slug": "henderson",
+	"theme": "kadence-child-lvjcb",
+	"page_type": "location",
+	"mode": "update",
+	"promoted_at": "2026-09-14",
+	"brief_version": "1.0.0",
+	"brief_path": "content-engine/brief/production/henderson.json",
+	"draft_path": "content-engine/drafts/henderson.json",
+	"draft_sha256": "759f1e14d22228a99eb4011f6692267e7f33f723d08d5e38014860049813ef4d",
+	"angle_id": "henderson-jurisdiction",
+	"claim_ids": [
+		"henderson-mc-vehicle-cap-by-zoning",
+		"henderson-mc-vehicle-screening",
+		"henderson-mc-72-hour-repair",
+		"henderson-city-enforces-own-code"
+	],
+	"source_artifacts": {
+		"angles": "content-engine/angles/henderson.json",
+		"claims": "content-engine/claims/henderson.json",
+		"place": "content-engine/place/henderson.json",
+		"intent": "content-engine/intent/henderson.json",
+		"entities": "content-engine/entities/henderson.json",
+		"queries": "content-engine/queries/henderson.json",
+		"retro_brief": "content-engine/brief/henderson.json",
+		"differentiation_report": "content-engine/reports/differentiation/henderson.json",
+		"corpus_summary": "content-engine/reports/corpus-summary.json"
+	},
+	"approval": {
+		"approved_by": "Ahtsham Afzal",
+		"approved_on": "2026-09-14",
+		"note": "Phase 3C-6. Explicit approval of the Henderson production pilot for promotion. Angle henderson-jurisdiction, approved on Henderson Municipal Code 15.12.030 retrieved verbatim. Four publishable claims, all SUPPORTED. Draft measured 0/5 clone signals against every sibling. Approval binds to this exact draft hash: if the draft is re-authored the hash changes and this approval stops applying, per ADR-0008."
+	},
+	"qa_result": "all prerequisites re-verified at promotion time",
+	"qa_checks": [
+		{
+			"check": "draft exists",
+			"passed": true,
+			"detail": "no content-engine/drafts/henderson.json"
+		},
+		{
+			"check": "production brief exists",
+			"passed": true,
+			"detail": "run create-content-brief.py"
+		},
+		{
+			"check": "production brief validates",
+			"passed": true,
+			"detail": "PASS  0 error(s) � 0 warning(s)"
+		},
+		{
+			"check": "draft validates",
+			"passed": true,
+			"detail": "PASS  0 error(s) � 0 warning(s)"
+		},
+		{
+			"check": "research validates",
+			"passed": true,
+			"detail": "PASS  0 error(s) � 210 warning(s)"
+		},
+		{
+			"check": "page-existence gate ALLOWED",
+			"passed": true,
+			"detail": ""
+		},
+		{
+			"check": "angle exists",
+			"passed": true,
+			"detail": "brief names 'henderson-jurisdiction'"
+		},
+		{
+			"check": "angle belongs to this page",
+			"passed": true,
+			"detail": "angle.page='henderson'"
+		},
+		{
+			"check": "angle is approved",
+			"passed": true,
+			"detail": "status='approved'"
+		},
+		{
+			"check": "angle not superficial",
+			"passed": true,
+			"detail": "collapses under place-name masking"
+		},
+		{
+			"check": "angle not claimed by another page",
+			"passed": true,
+			"detail": ""
+		},
+		{
+			"check": "no blocked claim used",
+			"passed": true,
+			"detail": ""
+		},
+		{
+			"check": "every used claim was allowed",
+			"passed": true,
+			"detail": ""
+		},
+		{
+			"check": "all used claims publishable",
+			"passed": true,
+			"detail": ""
+		},
+		{
+			"check": "high-risk claims authoritatively sourced",
+			"passed": true,
+			"detail": ""
+		},
+		{
+			"check": "draft has authored content",
+			"passed": true,
+			"detail": ""
+		},
+		{
+			"check": "content slug matches",
+			"passed": true,
+			"detail": "content.slug='henderson'"
+		},
+		{
+			"check": "draft angle matches brief",
+			"passed": true,
+			"detail": "draft='henderson-jurisdiction' brief='henderson-jurisdiction'"
+		},
+		{
+			"check": "metadata: seo_title present",
+			"passed": true,
+			"detail": ""
+		},
+		{
+			"check": "metadata: seo_description present",
+			"passed": true,
+			"detail": ""
+		},
+		{
+			"check": "metadata: hero_heading present",
+			"passed": true,
+			"detail": ""
+		},
+		{
+			"check": "business identity tokenised",
+			"passed": true,
+			"detail": "literal(s) present: "
+		},
+		{
+			"check": "must-answer concepts covered",
+			"passed": true,
+			"detail": ""
+		},
+		{
+			"check": "information gain declared",
+			"passed": true,
+			"detail": "coverage.information_gain_delivered is empty"
+		},
+		{
+			"check": "structure differs from siblings",
+			"passed": true,
+			"detail": ""
+		},
+		{
+			"check": "internal links resolve",
+			"passed": true,
+			"detail": ""
+		},
+		{
+			"check": "destination is safe and correct",
+			"passed": true,
+			"detail": "wordpress/themes/kadence-child-lvjcb/content/locations/henderson.json"
+		}
+	],
+	"destination": "wordpress/themes/kadence-child-lvjcb/content/locations/henderson.json",
+	"destination_sha256": "144e2dd4ad1340ebb589a3e81f3b2bac071ac2fb3c613d7dbd1a5e5b5a45874e",
+	"previous_destination_sha256": "f14cffb209633c93e33757e370640312a8e9baf8314a257d012c374e478f1258",
+	"_note": "Hashes identify what was promoted; they are not a substitute for the QA above. The source draft is deliberately left unmodified and undeleted."
+}

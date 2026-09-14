@@ -42,6 +42,25 @@ $faq            = lvjcb_get_config( 'faq' );
 		'image_alt'  => $homepage_intro['image_alt'] ?? '',
 	) ); ?>
 
+	<?php
+	/*
+	 * Homepage written content, if there is any. Additive by design: the
+	 * frozen section order below is unchanged and every configured
+	 * component still renders. A site with no content/pages/home.json
+	 * behaves exactly as it did before this branch existed.
+	 *
+	 * This is where long-form prose about the primary city belongs. The
+	 * homepage owns that intent, which is why the primary city has no
+	 * location page of its own (ADR-0004, docs/architecture/content-schema.md).
+	 */
+	$home_content = lvjcb_get_home_content();
+
+	get_template_part( 'template-parts/sections-loop', null, array(
+		'sections'  => $home_content['sections'] ?? array(),
+		'id_prefix' => 'home',
+	) );
+	?>
+
 	<?php get_template_part( 'template-parts/sections/what-we-buy', null, array(
 		'eyebrow' => $services['eyebrow'],
 		'heading' => $services['heading'],

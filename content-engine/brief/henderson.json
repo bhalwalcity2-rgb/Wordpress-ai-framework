@@ -1,0 +1,795 @@
+{
+	"_generated_by": "content-engine/bin/analyze-corpus.py",
+	"_purpose": "Analytical record of what this page does TODAY. Not a writing instruction — it must never be used to reproduce the weaknesses it documents.",
+	"_method": "Lexical extraction, standard library only. No semantic model.",
+	"slug": "henderson",
+	"page_type": "location",
+	"renders": true,
+	"word_count": 1668,
+	"current_primary_topic": "junk car buying in Henderson",
+	"current_primary_intent": "local",
+	"secondary_intents": [
+		"transactional",
+		"informational",
+		"commercial"
+	],
+	"current_keyword_focus": {
+		"seo_title": "Junk Car Buyers Henderson NV | Cash for Junk Cars, Free Towing",
+		"hero_heading": "We Buy Junk Cars in Henderson — Get Cash Today",
+		"top_terms": [
+			"henderson",
+			"communities",
+			"vehicle",
+			"vehicles",
+			"call",
+			"city",
+			"title",
+			"ranch",
+			"valley",
+			"day",
+			"hoa",
+			"sun"
+		]
+	},
+	"current_query_entities": [
+		"How fast can you get to Henderson?",
+		"Will my HOA fine me if a tow truck comes to my house?",
+		"I live in a Sun City community. Can you pick up from an age-restricted neighborhood?",
+		"My car has been sitting in my garage for years. Is it still worth anything?"
+	],
+	"current_entities": {
+		"main_topic": "junk car buying in Henderson",
+		"local": [
+			"89002",
+			"89011",
+			"89012",
+			"89014",
+			"89015",
+			"89044",
+			"89052",
+			"Boulder City",
+			"Boulder Highway",
+			"Craig Road",
+			"East of Boulder Highway",
+			"Eastern Avenue",
+			"Gibson Springs",
+			"Governed Communities Green Valley",
+			"Governed Communities Sun City",
+			"Green Valley",
+			"Green Valley Ranch",
+			"Henderson",
+			"I-215",
+			"Lake Mead Parkway",
+			"Las Vegas",
+			"MacDonald Ranch",
+			"Mission Hills",
+			"Near Gibson Road",
+			"Paradise Hills",
+			"Ranch",
+			"Rose Parkway",
+			"Seven Hills",
+			"Sun City",
+			"Sun City MacDonald Ranch",
+			"Water Street",
+			"Whitney Ranch"
+		],
+		"process": [
+			"flatbed",
+			"offer",
+			"paid",
+			"paperwork",
+			"payment",
+			"pickup",
+			"quote",
+			"removal",
+			"salvage",
+			"schedule",
+			"scheduling",
+			"title",
+			"tow",
+			"towing",
+			"transfer"
+		],
+		"attributes_condition": [
+			"blown",
+			"damaged",
+			"flooded",
+			"inoperable",
+			"junk",
+			"overheating",
+			"running",
+			"rusted",
+			"stripped",
+			"totaled",
+			"unregistered",
+			"wrecked"
+		],
+		"user_problem": [
+			"compliance",
+			"eyesore",
+			"fine",
+			"hoa",
+			"inherited",
+			"insurance",
+			"notice",
+			"payout",
+			"violation",
+			"warning"
+		],
+		"business_regulatory": [
+			"clark county",
+			"dmv",
+			"nevada dmv"
+		],
+		"vehicle_makes": [
+			"chevy",
+			"chrysler",
+			"ford",
+			"honda",
+			"hyundai",
+			"jeep",
+			"nissan",
+			"ram",
+			"toyota"
+		],
+		"other_proper_nouns": [
+			"Anthem",
+			"Cadence",
+			"Call",
+			"Damaged Vehicles After Insurance",
+			"Gated",
+			"Here",
+			"Inspirada",
+			"Lake Las Vegas",
+			"More",
+			"Nevada",
+			"Pittman",
+			"Sun City Anthem",
+			"Unused Vehicles",
+			"Violations"
+		]
+	},
+	"current_local_entities": [
+		"89002",
+		"89011",
+		"89012",
+		"89014",
+		"89015",
+		"89044",
+		"89052",
+		"Boulder City",
+		"Boulder Highway",
+		"Craig Road",
+		"East of Boulder Highway",
+		"Eastern Avenue",
+		"Gibson Springs",
+		"Governed Communities Green Valley",
+		"Governed Communities Sun City",
+		"Green Valley",
+		"Green Valley Ranch",
+		"Henderson",
+		"I-215",
+		"Lake Mead Parkway",
+		"Las Vegas",
+		"MacDonald Ranch",
+		"Mission Hills",
+		"Near Gibson Road",
+		"Paradise Hills",
+		"Ranch",
+		"Rose Parkway",
+		"Seven Hills",
+		"Sun City",
+		"Sun City MacDonald Ranch",
+		"Water Street",
+		"Whitney Ranch"
+	],
+	"entity_relationships": {
+		"local--process": 12,
+		"attributes_condition--user_problem": 6,
+		"attributes_condition--local": 4,
+		"attributes_condition--process": 4,
+		"local--user_problem": 4,
+		"process--user_problem": 3,
+		"attributes_condition--business_regulatory": 1,
+		"business_regulatory--local": 1,
+		"business_regulatory--user_problem": 1,
+		"business_regulatory--process": 1
+	},
+	"current_sections": [
+		{
+			"type": "content",
+			"heading": "Selling a Junk Car in Henderson, NV",
+			"has_table": false,
+			"has_blocks": false,
+			"has_image": true
+		},
+		{
+			"type": "content",
+			"heading": "Junk Car Pickup Across Henderson — Every Neighborhood, Every Zip Code",
+			"has_table": true,
+			"has_blocks": true,
+			"has_image": true
+		},
+		{
+			"type": "content",
+			"heading": "Vehicles We Buy in Henderson — Any Make, Any Condition",
+			"has_table": true,
+			"has_blocks": false,
+			"has_image": true
+		},
+		{
+			"type": "steps",
+			"heading": "How to Sell Your Junk Car in Henderson — Three Steps",
+			"has_table": false,
+			"has_blocks": false,
+			"has_image": false
+		},
+		{
+			"type": "cta",
+			"heading": "Have a Junk Car Sitting in Your Henderson Driveway?",
+			"has_table": false,
+			"has_blocks": false,
+			"has_image": false
+		},
+		{
+			"type": "content",
+			"heading": "Common Situations Henderson Residents Call Us About",
+			"has_table": false,
+			"has_blocks": true,
+			"has_image": true
+		},
+		{
+			"type": "areas",
+			"heading": "We Also Serve These Areas Near Henderson",
+			"has_table": false,
+			"has_blocks": false,
+			"has_image": false
+		}
+	],
+	"current_faq_topics": [
+		"How fast can you get to Henderson?",
+		"Will my HOA fine me if a tow truck comes to my house?",
+		"I live in a Sun City community. Can you pick up from an age-restricted neighborhood?",
+		"My car has been sitting in my garage for years. Is it still worth anything?"
+	],
+	"current_internal_links": {
+		"declared_legacy_metadata": {
+			"services": [
+				"sedans",
+				"trucks-suvs",
+				"damaged",
+				"non-running"
+			],
+			"locations": [
+				"las-vegas",
+				"north-las-vegas",
+				"summerlin",
+				"boulder-city"
+			]
+		},
+		"actually_rendered": {
+			"areas_sections": [
+				"boulder-city",
+				"enterprise",
+				"las-vegas",
+				"north-las-vegas",
+				"paradise",
+				"spring-valley",
+				"summerlin"
+			],
+			"services_sections": [
+				"sedans",
+				"trucks-suvs"
+			],
+			"autolinked_cities": [
+				"Boulder City",
+				"Las Vegas",
+				"Paradise",
+				"Summerlin"
+			]
+		},
+		"declared_but_not_rendered": [
+			"damaged",
+			"non-running"
+		]
+	},
+	"current_business_claims": [
+		{
+			"text": "We Buy Junk Cars in Henderson — Get Cash Today.",
+			"types": [
+				"pricing_payment"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "Green Valley, Anthem, Lake Las Vegas, Inspirada, Seven Hills, and every neighborhood in between — Henderson residents get the same free towing, same-day pickup, and firm cash offers as anywhere in the valley.",
+			"types": [
+				"pricing_payment",
+				"service_guarantee",
+				"process_claim",
+				"local_fact"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "Henderson is Nevada's second-largest city — around 332,000 residents spread across the southeastern edge of the valley, across master-planned communities, established neighborhoods, and newer developments.",
+			"types": [
+				"local_fact"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "Many of those communities are governed by a homeowners association, which means a junk car sitting in your driveway is not just an eyesore — it can become an expensive compliance problem.",
+			"types": [
+				"unverifiable"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "Many Henderson neighborhoods — especially gated and master-planned communities like Green Valley Ranch, Anthem, Seven Hills, MacDonald Ranch, and Inspirada — have strict CC&R rules about inoperable, unregistered, or visibly damaged vehicles parked on driveways and streets.",
+			"types": [
+				"unverifiable"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "Under Nevada's common-interest community statutes, a violation that is not corrected can draw a fine for each period it remains outstanding, following a written notice and an opportunity to be heard.",
+			"types": [
+				"government_legal"
+			],
+			"money": [],
+			"risk": "high"
+		},
+		{
+			"text": "That pressure is exactly why Henderson is one of our busiest service areas.",
+			"types": [
+				"unverifiable"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "Homeowners call because they need a junk car gone — fast — without the hassle of listing it online, negotiating with strangers, or figuring out the title paperwork on their own.",
+			"types": [
+				"government_legal"
+			],
+			"money": [],
+			"risk": "high"
+		},
+		{
+			"text": "We handle the entire process: a firm cash offer over the phone, free towing to your address, and payment before we leave.",
+			"types": [
+				"pricing_payment",
+				"service_guarantee"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "Most Henderson pickups happen the same day the owner calls.",
+			"types": [
+				"process_claim",
+				"unverifiable"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "Henderson covers over 100 square miles and dozens of distinct communities.",
+			"types": [
+				"local_fact"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "Here are the situations we handle most often.",
+			"types": [
+				"unverifiable"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "Call {phone} and tell us your cross streets or zip code.",
+			"types": [
+				"local_fact"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "Green Valley and Other HOA-Governed Communities Green Valley (North, South, and Ranch), Inspirada, Cadence, and Seven Hills are among Henderson's most tightly governed neighborhoods.",
+			"types": [
+				"unverifiable"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "That urgency is exactly why residents in these communities call us.",
+			"types": [
+				"local_fact"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "We can typically pick up a vehicle the same day, well within most HOA compliance windows.",
+			"types": [
+				"process_claim",
+				"unverifiable"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "Sun City Anthem, Sun City MacDonald Ranch, and 55+ Communities Henderson's age-restricted communities are one of our most common pickup areas.",
+			"types": [
+				"unverifiable"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "Here is a quick reference: Anthem (non-Sun City) 89012 Gated sections — guest code or gate meet required MacDonald Ranch / MacDonald Highlands 89012, 89052 Private driveways, hillside lots — flatbed accessible Seven Hills 89052 Gated — we coordinate access on scheduling call Inspirada 89044 Newer development, strict CC&Rs — same-day removal available Cadence 89011 East of Boulder Highway — quick access from Lake Mead Parkway Lake Las Vegas 89011 More remote — call to confirm same-day availability Whitney Ranch 89014 Central Henderson — fast, easy pickups Gibson Springs 89014, 89015 Near Gibson Road industrial corridor — residential and commercial Foothills / Mission Hills 89002 South Henderson near Black Mountain — standard towing access Calico Ridge / Tuscany 89011 East Henderson hillside communities — flatbed accessible Paradise Hills / Boulder Creek 89002 Southeast Henderson — close to Boulder City border We buy every type of passenger and commercial vehicle regardless of condition.",
+			"types": [
+				"process_claim"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "We can give you a firm answer in under two minutes.",
+			"types": [
+				"service_guarantee",
+				"process_claim"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "Sedans and coupes Honda Accord, Toyota Camry, Nissan Altima, Chevy Malibu, Hyundai Sonata Running, non-running, high mileage, body damage, mechanical failure Trucks and pickups Ford F-150, Chevy Silverado, Ram 1500, Toyota Tacoma, Nissan Titan Blown engine, rusted frame, missing catalytic converter, wrecked SUVs and crossovers Toyota 4Runner, Jeep Grand Cherokee, Ford Explorer, Honda CR-V Totaled, flooded, overheating, transmission failure Vans and minivans Honda Odyssey, Toyota Sienna, Chrysler Pacifica, Chevy Express Non-running, high mileage, interior damage Commercial vehicles Work trucks, box trucks, fleet vehicles End-of-life, fleet surplus, mechanical failure Call Us or Submit a Quote Request Tell us the year, make, model, and condition of your vehicle.",
+			"types": [
+				"pricing_payment"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "The call takes about two minutes.",
+			"types": [
+				"process_claim"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "Get a Firm Cash Offer We quote a price based on your vehicle's current salvage value — the year, make, and model combined with its condition, the weight of recyclable materials, and the market demand for reusable parts.",
+			"types": [
+				"pricing_payment",
+				"service_guarantee"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "The number we quote is the number we pay.",
+			"types": [
+				"pricing_payment"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "We Tow It and Pay You on the Spot Our tow truck comes directly to your Henderson address — your driveway, your garage, your apartment parking lot, or curbside.",
+			"types": [
+				"pricing_payment"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "The driver handles a quick walk-around, completes the paperwork, and pays you in cash or check before the truck leaves.",
+			"types": [
+				"pricing_payment"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "Towing is always free.",
+			"types": [
+				"service_guarantee"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "Call now for a same-day cash offer — no obligation.",
+			"types": [
+				"pricing_payment",
+				"service_guarantee",
+				"process_claim"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "HOA Violations for Inoperable Vehicles Henderson has one of the highest concentrations of HOA-governed communities in Clark County.",
+			"types": [
+				"local_fact",
+				"unverifiable"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "If your community association has sent you a warning letter about an inoperable, unregistered, or visually damaged vehicle on your property, we can typically pick it up within hours of your call — well within most HOA compliance windows.",
+			"types": [
+				"process_claim",
+				"unverifiable"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "Inherited or Unused Vehicles in 55+ Communities Sun City Anthem, Sun City MacDonald Ranch, and other age-restricted communities in Henderson are home to thousands of residents who may have a second vehicle they no longer drive.",
+			"types": [
+				"local_fact"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "We will buy the remaining shell — even with a salvage title — and tow it away for free.",
+			"types": [
+				"service_guarantee",
+				"government_legal"
+			],
+			"money": [],
+			"risk": "high"
+		},
+		{
+			"text": "Vehicles With No Title If the title is lost, you can apply to the Nevada DMV for a duplicate using Form VP-012.",
+			"types": [
+				"government_legal"
+			],
+			"money": [],
+			"risk": "high"
+		},
+		{
+			"text": "The title fee is $20 for a vehicle that stays in Nevada, plus an $8.25 title processing fee charged on every title transaction.",
+			"types": [
+				"pricing_payment"
+			],
+			"money": [
+				"$20",
+				"$8"
+			],
+			"risk": "medium"
+		},
+		{
+			"text": "Whether a sale can proceed without the original title depends on the vehicle's circumstances, so it is worth asking before you assume either way.",
+			"types": [
+				"pricing_payment",
+				"government_legal"
+			],
+			"money": [],
+			"risk": "high"
+		},
+		{
+			"text": "All zip codes across the Las Vegas valley Aliante, Eldorado, Craig Road corridor The Trails, Red Rock area, Summerlin South Flamingo to Tropicana, Durango to Rainbow UNLV area, Convention Center corridor, east of the Strip Southern Highlands, Mountain's Edge, south of the Strip Near Lake Mead and historic downtown.",
+			"types": [
+				"local_fact"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "Is it still worth anything?",
+			"types": [
+				"pricing_payment"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "Same day in most cases.",
+			"types": [
+				"process_claim",
+				"unverifiable"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "Henderson is one of our busiest service areas, and we usually have a driver in or near the city during business hours.",
+			"types": [
+				"process_claim",
+				"unverifiable"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "More remote areas like Lake Las Vegas may require a brief scheduling conversation, but we still provide free towing.",
+			"types": [
+				"service_guarantee"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "Our drivers arrive, load the vehicle, and leave — typically in 20 to 30 minutes.",
+			"types": [
+				"process_claim",
+				"unverifiable"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "Even vehicles that have not been driven in years still have salvage value — recyclable steel, aluminum, copper, and potentially reusable parts like the transmission, alternator, starter, or catalytic converter.",
+			"types": [
+				"testimonial_review"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "Call us with the year, make, and model, and we will give you a firm offer",
+			"types": [
+				"service_guarantee"
+			],
+			"money": [],
+			"risk": "low"
+		}
+	],
+	"claim_counts": {
+		"pricing_payment": 12,
+		"service_guarantee": 9,
+		"process_claim": 11,
+		"local_fact": 8,
+		"unverifiable": 13,
+		"government_legal": 5,
+		"testimonial_review": 1
+	},
+	"current_information_gain": {
+		"verdict": "HAS_INFORMATION_GAIN",
+		"unique_phrase_count": 1619,
+		"shared_phrase_count": 23,
+		"boilerplate_phrase_count": 2,
+		"unique_share": 0.9848,
+		"boilerplate_share": 0.0012,
+		"sample_unique_phrases": [
+			"000 residents spread across the",
+			"012 the title fee is",
+			"100 square miles and dozens",
+			"150 chevy silverado ram 1500",
+			"1500 toyota tacoma nissan titan",
+			"20 for a vehicle that",
+			"20 to 30 minutes this",
+			"215 beltway see consistent traffic"
+		],
+		"sample_boilerplate_phrases": [
+			"we buy junk cars in",
+			"year make model and condition"
+		],
+		"unique_local_entities": [
+			"89002",
+			"89011",
+			"89012",
+			"89014",
+			"89015",
+			"89044",
+			"89052",
+			"East of Boulder Highway",
+			"Gibson Springs",
+			"Governed Communities Green Valley",
+			"Governed Communities Sun City",
+			"Green Valley",
+			"Green Valley Ranch",
+			"Henderson",
+			"I-215",
+			"Lake Mead Parkway",
+			"MacDonald Ranch",
+			"Mission Hills",
+			"Near Gibson Road",
+			"Paradise Hills",
+			"Ranch",
+			"Rose Parkway",
+			"Seven Hills",
+			"Sun City",
+			"Sun City MacDonald Ranch",
+			"Water Street",
+			"Whitney Ranch"
+		],
+		"unique_nonlocal_entities": [
+			"attributes_condition:inoperable",
+			"attributes_condition:overheating",
+			"attributes_condition:rusted",
+			"attributes_condition:stripped",
+			"attributes_condition:totaled",
+			"attributes_condition:unregistered",
+			"business_regulatory:clark county",
+			"business_regulatory:nevada dmv",
+			"process:flatbed",
+			"process:salvage",
+			"user_problem:compliance",
+			"user_problem:inherited",
+			"user_problem:insurance",
+			"user_problem:payout",
+			"user_problem:violation",
+			"user_problem:warning"
+		],
+		"has_unique_structure": true
+	},
+	"current_unique_elements": {
+		"sections_with_structure": [
+			"content[1]: Junk Car Pickup Across Henderson — Every Neighborhood, Every",
+			"content[2]: Vehicles We Buy in Henderson — Any Make, Any Condition",
+			"content[5]: Common Situations Henderson Residents Call Us About"
+		],
+		"unique_local_entities": [
+			"89002",
+			"89011",
+			"89012",
+			"89014",
+			"89015",
+			"89044",
+			"89052",
+			"East of Boulder Highway",
+			"Gibson Springs",
+			"Governed Communities Green Valley",
+			"Governed Communities Sun City",
+			"Green Valley",
+			"Green Valley Ranch",
+			"Henderson",
+			"I-215",
+			"Lake Mead Parkway",
+			"MacDonald Ranch",
+			"Mission Hills",
+			"Near Gibson Road",
+			"Paradise Hills",
+			"Ranch",
+			"Rose Parkway",
+			"Seven Hills",
+			"Sun City",
+			"Sun City MacDonald Ranch",
+			"Water Street",
+			"Whitney Ranch"
+		],
+		"unique_phrase_share": 0.9848
+	},
+	"current_generic_elements": {
+		"prose_only_sections": [
+			"content[0]: Selling a Junk Car in Henderson, NV",
+			"steps[3]: How to Sell Your Junk Car in Henderson — Three Steps",
+			"cta[4]: Have a Junk Car Sitting in Your Henderson Driveway?",
+			"areas[6]: We Also Serve These Areas Near Henderson"
+		],
+		"boilerplate_phrase_share": 0.0012,
+		"shared_local_entities": [
+			"Boulder City",
+			"Boulder Highway",
+			"Craig Road",
+			"Eastern Avenue",
+			"Las Vegas"
+		]
+	},
+	"likely_sibling_overlap": {
+		"max_masked_vocabulary_similarity": 0.1814,
+		"max_clone_signals": 0,
+		"closest_sibling": "las-vegas",
+		"superficial_differentiation_flags": [],
+		"assessment": "REAL_DIFFERENTIATION"
+	},
+	"known_quality_issues": [],
+	"rewrite_priority": "KEEP"
+}

@@ -1,0 +1,153 @@
+{
+	"slug": "henderson",
+	"generated": {
+		"by": "bootstrap-research.py",
+		"note": "Scaffolded from the existing corpus by bootstrap-research.py. NO EXTERNAL RESEARCH WAS PERFORMED. Every item is marked with the evidence level it actually has; nothing here may be treated as verified until a researcher answers the open questions and records a real source.",
+		"verification_pass": {
+			"on": "2026-09-05",
+			"by": "Phase 3C-2 external research",
+			"note": "Angle researched against NRS 116 and retired as unsupported. research_locked set."
+		}
+	},
+	"differentiation_verdict": "SUPPORTED",
+	"recommendation_if_unsupported": "not_applicable",
+	"recommendation_note": "Resolved. The jurisdiction angle is approved on Henderson Municipal Code § 15.12.030, retrieved verbatim. The retired henderson-primary angle stays retired.",
+	"angles": [
+		{
+			"id": "henderson-primary",
+			"page": "henderson",
+			"status": "unsupported",
+			"angle_type": "customer_problem",
+			"statement": "HYPOTHESIS: sellers here face a distinct problem involving compliance, inherited, insurance, payout, warning, which changes what they need to know or do before the vehicle can be removed. The situation, not the place name, is what this page would be about.",
+			"evidence": [
+				{
+					"claim_id": "henderson-00-buy-junk-cars-henderson",
+					"relevance": "asserted in existing copy; unverified"
+				},
+				{
+					"claim_id": "henderson-01-green-valley-anthem-lake",
+					"relevance": "asserted in existing copy; unverified"
+				},
+				{
+					"claim_id": "henderson-03-one-most-hoa-governed",
+					"relevance": "asserted in existing copy; unverified"
+				},
+				{
+					"claim_id": "henderson-05-violations-trigger-warning-letters",
+					"relevance": "asserted in existing copy; unverified"
+				},
+				{
+					"claim_id": "henderson-07-homeowners-call-because-need",
+					"relevance": "asserted in existing copy; unverified"
+				}
+			],
+			"why_unique": "Phase 3B measured these as topics no sibling page raises (15 distinct non-local entities). This is the only ground for differentiation the corpus supports; place names are excluded by definition.",
+			"must_not_overlap_with": [
+				"boulder-city",
+				"enterprise",
+				"las-vegas",
+				"north-las-vegas",
+				"paradise",
+				"spring-valley",
+				"summerlin"
+			],
+			"related_entities": [
+				"clark county",
+				"compliance",
+				"flatbed",
+				"inherited",
+				"inoperable",
+				"insurance",
+				"nevada dmv",
+				"overheating",
+				"payout",
+				"rusted",
+				"salvage",
+				"stripped",
+				"totaled",
+				"unregistered",
+				"warning"
+			],
+			"recommended_questions": [
+				"How fast can you get to Henderson?",
+				"Will my HOA fine me if a tow truck comes to my house?",
+				"I live in a Sun City community. Can you pick up from an age-restricted neighborhood?",
+				"My car has been sitting in my garage for years. Is it still worth anything?"
+			],
+			"recommended_sections": [
+				"A section explaining the situation itself, not the city",
+				"A section on what the seller must do differently because of it"
+			],
+			"blocked_by": [
+				"q-henderson-local-condition",
+				"q-henderson-00-buy-junk-cars-henderson",
+				"q-henderson-01-green-valley-anthem-lake",
+				"q-henderson-03-one-most-hoa-governed"
+			],
+			"notes": "Retired rather than narrowed. A narrowed version — 'HOA fines create removal urgency' — would still describe statewide law and so would still not differentiate this page. No replacement angle has been invented; the single open question that could unblock one is recorded in the dossier.",
+			"source_ids": [
+				"nrs-116-3102-elaws",
+				"nrs-116-31031-fines",
+				"red-cic-towing-fastref"
+			],
+			"retirement_reason": "Researched 2026-09-05 and not supported as framed. Two findings. (1) The mechanism is wrong: the page ties HOA pressure to towing a car from the owner's driveway, but NRS 116.3102 limits association removal to vehicles on association property or on a road, street, alley or thoroughfare within the community — not the owner's own lot. The fines cadence is also wrong (NRS 116.31031 allows an additional fine per 7-day period after a 14-day cure window, not daily fines). (2) The premise is unevidenced: no source was found showing Henderson is distinctively HOA-dense compared with its sibling areas.",
+			"distinctiveness_assessment": "FAILS DISTINCTIVENESS ON CURRENT EVIDENCE, and for a reason that would not have been visible without research: NRS 116 is STATEWIDE law. Every common-interest community in Nevada operates under the same fines, cure periods and towing limits, so Summerlin, Enterprise and Spring Valley are governed identically. A statutory regime shared by every sibling cannot differentiate one page from another. The only thing that could is a Henderson-specific fact — such as a materially higher concentration of governed communities — and that is precisely the claim (henderson-03) that no source supports. The angle was not merely unproven; the research showed its foundation is common to the whole corpus."
+		},
+		{
+			"id": "henderson-jurisdiction",
+			"page": "henderson",
+			"status": "approved",
+			"angle_type": "compliance_process",
+			"statement": "Henderson sets its own numeric limits on how many inoperable or unregistered vehicles a property may keep, tied to the property's zoning designation, with a screening requirement and a 72-hour allowance for a single vehicle under repair. A vehicle owner here is measured against a specific, countable local rule rather than a general expectation, which changes what they need to check before deciding whether to keep a vehicle or sell it.",
+			"evidence": [
+				{
+					"claim_id": "henderson-mc-vehicle-cap-by-zoning",
+					"relevance": "the numeric limits themselves"
+				},
+				{
+					"claim_id": "henderson-mc-72-hour-repair",
+					"relevance": "the repair allowance and its limit"
+				},
+				{
+					"claim_id": "henderson-mc-vehicle-screening",
+					"relevance": "the screening condition"
+				},
+				{
+					"claim_id": "henderson-city-enforces-own-code",
+					"relevance": "why the city's own rule applies"
+				}
+			],
+			"source_ids": [
+				"henderson-mc-15-12-030-vehicles",
+				"clarkcounty-inoperable-vehicle-limits"
+			],
+			"why_unique": "No sibling page addresses a countable local limit. The earlier HOA framing failed because NRS 116 is statewide and therefore shared by every sibling; this rests on a municipal code that applies to Henderson and not to the unincorporated areas, where the limit is set on a different basis entirely.",
+			"distinctiveness_assessment": "SUPPORTED. The differentiator is a specific municipal provision, verified verbatim: caps of six, four or two by zoning designation, an opaque six-foot screening requirement, and a 72-hour repair allowance. Unincorporated Clark County sets its limit by lot area and requires a block wall, so the two regimes genuinely differ. Unlike the retired HOA angle this cannot be reused by a sibling page, because the numbers belong to Henderson's code. It does not by itself distinguish Henderson from North Las Vegas or Boulder City, which have their own codes — but those pages would have to cite their own provisions, which is the correct outcome rather than a flaw.",
+			"must_not_overlap_with": [
+				"north-las-vegas",
+				"boulder-city"
+			],
+			"related_entities": [
+				"municipal code",
+				"code enforcement",
+				"nuisance",
+				"inoperable vehicle"
+			],
+			"recommended_questions": [
+				"How many inoperable vehicles can I keep on my property in Henderson?",
+				"Does it matter that the car still has plates?",
+				"I am part-way through fixing it — how long do I have?",
+				"Does putting it behind a fence solve the problem?"
+			],
+			"recommended_sections": [
+				"What the limit actually is, and that it depends on zoning designation",
+				"The 72-hour repair allowance and what it does not cover",
+				"How the screening condition interacts with the count",
+				"Deciding between keeping the vehicle compliantly and selling it"
+			],
+			"blocked_by": [],
+			"notes": "Approved 2026-09-14 on verbatim municipal-code evidence. Replaces the retired henderson-primary angle, which rested on statewide law."
+		}
+	],
+	"research_locked": true
+}

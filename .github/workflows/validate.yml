@@ -4,6 +4,17 @@ on:
   pull_request:
     branches:
       - main
+  # Also on push: every commit in this repository's history so far has gone
+  # straight to main, so a pull_request-only trigger meant these checks had
+  # never actually run against the deployed theme.
+  push:
+    branches:
+      - main
+  # Callable as a reusable workflow so the deploy workflow can gate on it.
+  # `needs:` only links jobs within one workflow file, and validation and
+  # deployment live in separate files — this is what lets deploy-lvjcb.yml
+  # depend on these checks without merging the two or duplicating them.
+  workflow_call:
   workflow_dispatch:
 
 jobs:
@@ -28,6 +39,8 @@ jobs:
           echo "PASS: No secret patterns detected."
 
       - name: Prevent WordPress core and protected-path modifications
+        # Diffs against origin/main, so it only means anything on a PR.
+        if: github.event_name == 'pull_request'
         run: |
           echo "Fetching main for comparison..."
           git fetch origin main --quiet
@@ -51,7 +64,9 @@ jobs:
           echo "Linting PHP files under the child theme, mu-plugins, and custom plugins..."
           STATUS=0
 
-          for dir in "wordpress/themes/kadence-child-framework" "wordpress/mu-plugins" "wordpress/plugins"; do
+          # kadence-child-lvjcb is the theme that actually ships. It was
+          # absent from this list, so the deployed code was never linted.
+          for dir in "wordpress/themes/kadence-child-framework" "wordpress/themes/kadence-child-lvjcb" "wordpress/mu-plugins" "wordpress/plugins"; do
             if [ -d "$dir" ]; then
               while IFS= read -r -d '' file; do
                 LINT_OUTPUT=$(php -l "$file" 2>&1)
@@ -100,3 +115,59 @@ jobs:
             exit 1
           fi
           echo "PASS: Repository structure is valid."
+
+      - name: Validate content against the canonical schema
+        run: |
+          # Enforces ADR-0003. Standard library only — no pip install step,
+          # by design (AI_RULES.md §4).
+          echo "Validating content files for every theme that has them..."
+          STATUS=0
+
+          for theme_dir in wordpress/themes/*/; do
+            THEME="$(basename "$theme_dir")"
+            if [ -d "${theme_dir}content" ]; then
+              echo "----------------------------------------"
+              echo "THEME: $THEME"
+              python3 content-engine/bin/validate-content.py "$THEME" --no-color || STATUS=1
+            fi
+          done
+
+          echo "----------------------------------------"
+          if [ "$STATUS" -ne 0 ]; then
+            echo "FAIL: One or more content files do not match the canonical schema."
+            echo "Contract: docs/architecture/content-schema.md"
+            exit 1
+          fi
+          echo "PASS: All content files match the canonical schema."
+
+      - name: Verify content provenance
+        run: |
+          # Closes the one bypass a schema check cannot see: a content file
+          # edited directly and committed. Every theme content file must trace
+          # to a promotion record or the pre-gate migration allowlist.
+          # See docs/architecture/publish-gate.md.
+          python3 content-engine/bin/verify-content-provenance.py --no-color
+
+      - name: Validate production briefs and drafts
+        run: |
+          # Blocking failures here stop a bad artifact reaching promotion.
+          STATUS=0
+          if [ -d content-engine/brief/production ]; then
+            python3 content-engine/bin/validate-content-brief.py --no-color || STATUS=1
+          fi
+          if [ -d content-engine/drafts ]; then
+            python3 content-engine/bin/validate-draft.py --no-color || STATUS=1
+          fi
+          python3 content-engine/bin/validate-research.py --no-color || STATUS=1
+          if [ "$STATUS" -ne 0 ]; then
+            echo "FAIL: research, brief or draft validation failed."
+            exit 1
+          fi
+          echo "PASS: research, briefs and drafts validate."
+
+      - name: Publish-gate self-test
+        run: |
+          # Proves the gate still refuses what it must. It restores every file
+          # it touches, so it is safe to run in CI.
+          python3 content-engine/bin/selftest-publish-gate.py
+

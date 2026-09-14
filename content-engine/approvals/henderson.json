@@ -1,0 +1,8 @@
+{
+	"slug": "henderson",
+	"decision": "approved",
+	"approved_by": "Ahtsham Afzal",
+	"approved_on": "2026-09-14",
+	"draft_sha256": "759f1e14d22228a99eb4011f6692267e7f33f723d08d5e38014860049813ef4d",
+	"note": "Phase 3C-6. Explicit approval of the Henderson production pilot for promotion. Angle henderson-jurisdiction, approved on Henderson Municipal Code 15.12.030 retrieved verbatim. Four publishable claims, all SUPPORTED. Draft measured 0/5 clone signals against every sibling. Approval binds to this exact draft hash: if the draft is re-authored the hash changes and this approval stops applying, per ADR-0008."
+}

@@ -1,10 +1,30 @@
 <?php
 /**
- * Page provisioning script — fixes page hierarchy and internal links.
- * Visit this URL while logged in as admin:
+ * Browser-run page provisioning — creates pages and imports images.
+ *
+ * Visit this URL while logged in as an administrator:
  * https://junkcarbuyerslasvegas.com/wp-content/themes/kadence-child-lvjcb/provision.php
  *
- * DELETE THIS FILE after running it.
+ * RETAINED DELIBERATELY — do not delete without replacing what it does.
+ *
+ * `wp lvjcb provision` (inc/cli.php) is the canonical provisioning path
+ * and is what scripts/deploy.sh runs over SSH. But this site deploys
+ * through .github/workflows/deploy-lvjcb.yml, which only syncs theme
+ * files over FTPS: it runs no WP-CLI and imports no media. On that path
+ * this file is the only thing that creates the WordPress pages and
+ * imports assets/images/pexels into the media library, without which
+ * lvjcb_get_attachment_id_by_slug() resolves nothing and the pages
+ * render imageless.
+ *
+ * An earlier version of this note said to delete the file after running
+ * it. Following that would leave the FTPS deployment with no way to
+ * provision at all.
+ *
+ * Known drift, deliberately not fixed here: the page lists below are
+ * hardcoded rather than read from business-config.php, so they can fall
+ * out of step with the config that inc/cli.php uses. Retiring this file
+ * means giving the FTPS workflow a provisioning step of its own — see
+ * docs/architecture/content-schema.md.
  */
 
 require_once dirname( __FILE__ ) . '/../../../wp-load.php';

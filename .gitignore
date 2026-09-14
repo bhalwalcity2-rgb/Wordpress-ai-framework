@@ -81,3 +81,9 @@ wordpress/debug.log
 *.sql
 *.tar.gz
 *.zip
+
+# --------------------------------------------------------------------------
+# Python bytecode — content-engine/ is standard-library Python (ADR-0002)
+# --------------------------------------------------------------------------
+__pycache__/
+*.pyc

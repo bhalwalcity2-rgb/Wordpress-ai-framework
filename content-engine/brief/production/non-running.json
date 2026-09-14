@@ -1,0 +1,548 @@
+{
+	"slug": "non-running",
+	"brief_version": "1.0.0",
+	"generated": {
+		"by": "create-content-brief.py",
+		"note": "Assembled from research artifacts. Structure is derived from this page's own purpose and evidence — there is deliberately no master section template."
+	},
+	"page_type": "service",
+	"page_purpose": "UNDETERMINED — no approved angle establishes why this page should exist.",
+	"primary_topic": "junk car buying — non running",
+	"primary_intent": "transactional",
+	"secondary_intents": [
+		"commercial_investigation",
+		"navigational_local",
+		"informational"
+	],
+	"conversion_goal": "Phone call or instant-offer submission",
+	"gate": {
+		"status": "BLOCKED",
+		"checks": [
+			{
+				"check": "differentiation_supported",
+				"passed": false,
+				"detail": "differentiation_verdict is 'NO_SUPPORTED_DIFFERENTIATION'"
+			},
+			{
+				"check": "approved_angle_exists",
+				"passed": false,
+				"detail": "angle statuses present: none"
+			},
+			{
+				"check": "publishable_claims_exist",
+				"passed": false,
+				"detail": "0 of 17 claims are publishable"
+			},
+			{
+				"check": "high_risk_claims_authoritative",
+				"passed": true,
+				"detail": "offending: none"
+			},
+			{
+				"check": "information_gain_establishable",
+				"passed": false,
+				"detail": "retro-brief verdict='WORDING_ONLY_GAIN', unique non-local entities=0"
+			}
+		],
+		"blocked_reason": "NO_SUPPORTED_DIFFERENTIATION",
+		"recommended_action": "broaden_regional_scope"
+	},
+	"query_model": {
+		"query_network_id": "queries/non-running.json",
+		"primary_queries": [
+			"how much non running car worth las vegas",
+			"need know what's wrong car before calling",
+			"tow car flat tires won't roll",
+			"buy car sitting years won't start",
+			"worth selling car blown engine"
+		],
+		"supporting_queries": [],
+		"question_map": [
+			{
+				"question": "How much is a non-running car worth in Las Vegas?",
+				"why_this_page_answers_it": "TO BE RESEARCHED",
+				"coverage": "must_answer"
+			},
+			{
+				"question": "Do I need to know what's wrong with my car before calling?",
+				"why_this_page_answers_it": "TO BE RESEARCHED",
+				"coverage": "must_answer"
+			},
+			{
+				"question": "Can you tow a car that has flat tires and won't roll?",
+				"why_this_page_answers_it": "TO BE RESEARCHED",
+				"coverage": "must_answer"
+			},
+			{
+				"question": "Will you buy a car that has been sitting for years and won't start?",
+				"why_this_page_answers_it": "TO BE RESEARCHED",
+				"coverage": "must_answer"
+			},
+			{
+				"question": "Is it worth selling a car with a blown engine?",
+				"why_this_page_answers_it": "TO BE RESEARCHED",
+				"coverage": "must_answer"
+			}
+		],
+		"objection_map": [
+			{
+				"objection": "Is the quoted price the price I actually get?",
+				"required_response": "Needs a sourced statement of the firm-offer policy."
+			},
+			{
+				"objection": "Can I sell without the title?",
+				"required_response": "Needs an authoritative Nevada DMV source before answering."
+			}
+		],
+		"concept_groups": [
+			{
+				"concept": "car how las much non",
+				"intent": "transactional",
+				"why_needed": "How much is a non-running car worth in Las Vegas?",
+				"coverage": "useful_if_relevant",
+				"representative_queries": [
+					"how much non running car worth las vegas"
+				],
+				"shared_with_siblings": true
+			},
+			{
+				"concept": "before calling car know need",
+				"intent": "transactional",
+				"why_needed": "Do I need to know what's wrong with my car before calling?",
+				"coverage": "must_answer",
+				"representative_queries": [
+					"need know what's wrong car before calling"
+				],
+				"shared_with_siblings": false
+			},
+			{
+				"concept": "car flat roll tires tow",
+				"intent": "transactional",
+				"why_needed": "Can you tow a car that has flat tires and won't roll?",
+				"coverage": "must_answer",
+				"representative_queries": [
+					"tow car flat tires won't roll"
+				],
+				"shared_with_siblings": false
+			},
+			{
+				"concept": "buy car sitting start won't",
+				"intent": "transactional",
+				"why_needed": "Will you buy a car that has been sitting for years and won't start?",
+				"coverage": "useful_if_relevant",
+				"representative_queries": [
+					"buy car sitting years won't start"
+				],
+				"shared_with_siblings": true
+			},
+			{
+				"concept": "blown car engine selling worth",
+				"intent": "transactional",
+				"why_needed": "Is it worth selling a car with a blown engine?",
+				"coverage": "useful_if_relevant",
+				"representative_queries": [
+					"worth selling car blown engine"
+				],
+				"shared_with_siblings": true
+			}
+		]
+	},
+	"entity_model": {
+		"primary_entity": "junk car buying — non running",
+		"supporting_entities": [
+			"Call",
+			"Non",
+			"Yes"
+		],
+		"local_entities": [
+			"Las Vegas"
+		],
+		"user_entities": [],
+		"process_entities": [
+			"flatbed",
+			"offer",
+			"scrap",
+			"tow",
+			"towing"
+		],
+		"attributes": [
+			"blown",
+			"broken",
+			"running"
+		],
+		"entity_relationships": [
+			{
+				"chain": [
+					"local",
+					"co-occurs_with",
+					"process"
+				],
+				"evidence_level": "research_observation",
+				"claim_id": "",
+				"explain_because": "Co-occurrence in existing copy. Evidence that the page connects these ideas — not evidence that the connection holds."
+			},
+			{
+				"chain": [
+					"attributes_condition",
+					"co-occurs_with",
+					"process"
+				],
+				"evidence_level": "research_observation",
+				"claim_id": "",
+				"explain_because": "Co-occurrence in existing copy. Evidence that the page connects these ideas — not evidence that the connection holds."
+			},
+			{
+				"chain": [
+					"attributes_condition",
+					"co-occurs_with",
+					"local"
+				],
+				"evidence_level": "research_observation",
+				"claim_id": "",
+				"explain_because": "Co-occurrence in existing copy. Evidence that the page connects these ideas — not evidence that the connection holds."
+			},
+			{
+				"chain": [
+					"vehicle condition",
+					"determines",
+					"towing requirement"
+				],
+				"evidence_level": "hypothesis",
+				"claim_id": "",
+				"explain_because": "Plausible domain relationship, unverified for this page."
+			},
+			{
+				"chain": [
+					"vehicle ownership",
+					"determines",
+					"title and documentation path"
+				],
+				"evidence_level": "hypothesis",
+				"claim_id": "",
+				"explain_because": "Plausible domain relationship, unverified for this page."
+			},
+			{
+				"chain": [
+					"community rules",
+					"creates",
+					"vehicle removal pressure"
+				],
+				"evidence_level": "hypothesis",
+				"claim_id": "",
+				"explain_because": "Plausible domain relationship, unverified for this page."
+			},
+			{
+				"chain": [
+					"location",
+					"determines",
+					"pickup and logistics context"
+				],
+				"evidence_level": "hypothesis",
+				"claim_id": "",
+				"explain_because": "Plausible domain relationship, unverified for this page."
+			}
+		]
+	},
+	"local_model": {
+		"location": "junk car buying — non running",
+		"local_context": [
+			"Las Vegas"
+		],
+		"local_conditions": [],
+		"geographic_context": [],
+		"customer_scenarios": [],
+		"decision_factors": []
+	},
+	"differentiation": {
+		"approved_angle_id": "",
+		"angle_statement": "",
+		"angle_evidence": [],
+		"why_this_page_exists": "NOT ESTABLISHED — this page has no approved angle.",
+		"must_not_overlap_with": [
+			"damaged",
+			"sedans",
+			"trucks-suvs"
+		],
+		"forbidden_generic_patterns": [
+			"Swapping a city, neighbourhood, ZIP or landmark name for a sibling's and calling it different",
+			"Reusing a sibling's section order — identical structure was 50 of 68 sibling pairs",
+			"Restating a sibling's FAQ substance in new wording",
+			"Explaining the same generic process every sibling already explains",
+			"Inserting keyword variants that a person would not say out loud",
+			"Padding to reach a word count"
+		]
+	},
+	"information_gain": {
+		"required_new_information": [
+			{
+				"information": "NO ESTABLISHED INFORMATION GAIN",
+				"why_it_is_new": "Nothing measured or researched distinguishes this page from its siblings. This brief is blocked; the gap must be closed by research, never by invention.",
+				"evidence_level": "unknown_needs_verification"
+			}
+		],
+		"unique_explanations": [],
+		"unique_scenarios": [],
+		"unique_questions": [
+			"How much is a non-running car worth in Las Vegas?",
+			"Do I need to know what's wrong with my car before calling?",
+			"Can you tow a car that has flat tires and won't roll?",
+			"Will you buy a car that has been sitting for years and won't start?",
+			"Is it worth selling a car with a blown engine?"
+		],
+		"unique_decision_factors": [],
+		"sibling_coverage_gaps": []
+	},
+	"content_architecture": {
+		"structure_rationale": "NOT PLANNED — the page is blocked, so no structure is proposed. Proposing one would invite a page to be written that has no reason to exist.",
+		"recommended_sections": [
+			{
+				"section_type": "content",
+				"working_title": "BLOCKED",
+				"purpose": "No section plan — this page did not pass the existence gate."
+			}
+		]
+	},
+	"faq_plan": {
+		"questions_to_answer": [
+			"How much is a non-running car worth in Las Vegas?",
+			"Do I need to know what's wrong with my car before calling?",
+			"Can you tow a car that has flat tires and won't roll?",
+			"Will you buy a car that has been sitting for years and won't start?",
+			"Is it worth selling a car with a blown engine?"
+		],
+		"questions_already_answered_by_siblings": [
+			"trucks-suvs — FAQ substance already overlaps; ask different questions",
+			"already answered on damaged: How much is a totaled car worth in Las Vegas?",
+			"already answered on damaged: Do you buy cars with salvage titles?",
+			"already answered on damaged: Can you pick up a damaged car from a tow yard?",
+			"already answered on damaged: Do you buy flood-damaged cars?",
+			"already answered on sedans: How much is my junk sedan worth?",
+			"already answered on sedans: Do you buy sedans that don't run?",
+			"already answered on sedans: Will you buy my sedan if it has high mileage?",
+			"already answered on sedans: Can I sell a sedan without a title in Las Vegas?",
+			"already answered on trucks-suvs: How much do you pay for junk trucks in Las Vegas?",
+			"already answered on trucks-suvs: Do you buy 4x4 trucks and SUVs?",
+			"already answered on trucks-suvs: Can you tow a heavy-duty truck like an F-250?",
+			"already answered on trucks-suvs: Will you buy a truck with a blown engine?"
+		],
+		"questions_not_to_repeat": []
+	},
+	"claims": {
+		"allowed_claim_ids": [],
+		"blocked_claim_ids": [
+			"non-running-00-cash-non-running-mechanical",
+			"non-running-01-vehicle-wont-start-exactly",
+			"non-running-02-while-most-buyers-want",
+			"non-running-03-call-tell-what-know",
+			"non-running-04-purchase-vehicles-every-type",
+			"non-running-05-mechanic-told-cost-more",
+			"non-running-06-dont-need-diagnosis-description",
+			"non-running-07-towing-always-free-matter",
+			"non-running-08-pay-cash-before-car",
+			"non-running-09-beyond-metal-many-individual",
+			"non-running-10-value-non-running-vehicle",
+			"non-running-11-how-much-non-running",
+			"non-running-12-buy-car-sitting-years",
+			"non-running-13-worth-selling-car-blown",
+			"non-running-14-non-running-vehicles-typically",
+			"non-running-15-tell-what-know-wont",
+			"non-running-16-longer-car-sits-less"
+		],
+		"high_risk_claims": [],
+		"required_source_ids": []
+	},
+	"internal_linking": {
+		"relevant_neighbours": [
+			{
+				"slug": "las-vegas",
+				"linking_reason": "Named as an adjacent area in the page's own editorial judgement"
+			},
+			{
+				"slug": "henderson",
+				"linking_reason": "Named as an adjacent area in the page's own editorial judgement"
+			},
+			{
+				"slug": "north-las-vegas",
+				"linking_reason": "Named as an adjacent area in the page's own editorial judgement"
+			},
+			{
+				"slug": "summerlin",
+				"linking_reason": "Named as an adjacent area in the page's own editorial judgement"
+			},
+			{
+				"slug": "spring-valley",
+				"linking_reason": "Named as an adjacent area in the page's own editorial judgement"
+			}
+		],
+		"relevant_services": [
+			{
+				"slug": "sedans",
+				"linking_reason": "Service judged relevant to this page's audience"
+			},
+			{
+				"slug": "trucks-suvs",
+				"linking_reason": "Service judged relevant to this page's audience"
+			},
+			{
+				"slug": "damaged",
+				"linking_reason": "Service judged relevant to this page's audience"
+			}
+		],
+		"anchor_guidance": "Anchor text follows the sentence it sits in. Vary it. Do not link every page to every other page — a link needs a reason a reader would recognise (SEO_STANDARDS.md §12).",
+		"do_not_link": []
+	},
+	"sibling_constraints": {
+		"compared_against": [
+			"damaged",
+			"sedans",
+			"trucks-suvs"
+		],
+		"structures_to_avoid": [
+			"trucks-suvs — same section plan; do not reuse its order or section mix",
+			"damaged — same section plan; do not reuse its order or section mix",
+			"sedans — same section plan; do not reuse its order or section mix"
+		],
+		"questions_already_answered": [
+			"trucks-suvs — FAQ substance already overlaps; ask different questions",
+			"already answered on damaged: How much is a totaled car worth in Las Vegas?",
+			"already answered on damaged: Do you buy cars with salvage titles?",
+			"already answered on damaged: Can you pick up a damaged car from a tow yard?",
+			"already answered on damaged: Do you buy flood-damaged cars?",
+			"already answered on sedans: How much is my junk sedan worth?",
+			"already answered on sedans: Do you buy sedans that don't run?",
+			"already answered on sedans: Will you buy my sedan if it has high mileage?",
+			"already answered on sedans: Can I sell a sedan without a title in Las Vegas?",
+			"already answered on trucks-suvs: How much do you pay for junk trucks in Las Vegas?",
+			"already answered on trucks-suvs: Do you buy 4x4 trucks and SUVs?",
+			"already answered on trucks-suvs: Can you tow a heavy-duty truck like an F-250?",
+			"already answered on trucks-suvs: Will you buy a truck with a blown engine?"
+		],
+		"generic_explanations_to_avoid": [],
+		"shared_entities": [
+			"flatbed",
+			"inspection",
+			"offer",
+			"pickup",
+			"quote",
+			"salvage",
+			"schedule",
+			"scrap",
+			"title",
+			"tow",
+			"towing",
+			"transfer"
+		],
+		"shared_claims": [
+			"Cash for Accident & Storm-Damaged Vehicles.",
+			"Cash for Junk Sedans & Coupes.",
+			"Cash for Junk Trucks & SUVs.",
+			"Engines, transmissions, transfer cases, axles, and body panels from popular trucks often h",
+			"First, they weigh more — scrap metal prices are calculated by weight, so a 5,000-pound tru",
+			"Insurance may have totaled it, the body shop quote is more than the car is worth, or the d",
+			"Sedans and coupes are the most common vehicles we purchase across the Las Vegas valley.",
+			"The metal, parts, and components are worth something regardless of the vehicle's driveabil",
+			"There are two reasons trucks and SUVs typically receive higher cash offers than sedans.",
+			"Trucks and SUVs are some of the most common vehicles we buy — full-size or mid-size, two-w",
+			"We buy sedans and coupes of any age, mileage, or condition across the Las Vegas valley — f",
+			"We give you a firm cash offer on the phone — no appointment needed and no in-person inspec",
+			"We'll give you a firm cash offer based on your description.",
+			"We'll tow it from wherever it sits and pay you cash.",
+			"Whether your sedan has a blown head gasket, a transmission that slips, body damage from a "
+		],
+		"topic_opportunities": [],
+		"calibrated_signals": {
+			"_note": "Phase 3B corpus percentiles, carried as editorial signals rather than blind rules. They describe this corpus and should be re-measured after any rewrite.",
+			"clone_signal_count": {
+				"observed": {
+					"count": 68,
+					"min": 0,
+					"max": 5,
+					"mean": 1.5588,
+					"p10": 0.0,
+					"p25": 1.0,
+					"p50": 1.0,
+					"p75": 2.0,
+					"p90": 3.0,
+					"p95": 4.0
+				},
+				"candidate_warn": 2,
+				"candidate_block": 3,
+				"note": "The recommended primary gate."
+			},
+			"structure_similarity": {
+				"observed": {
+					"p10": 0.0,
+					"p25": 0.75,
+					"p50": 0.8571,
+					"p75": 1.0,
+					"p90": 1.0,
+					"p95": 1.0
+				},
+				"candidate_warn": 0.7,
+				"candidate_block": 0.85,
+				"note": "Strongest single signal in this corpus — p50 is 0.857, so more than half of all sibling pairs are built to the same plan."
+			},
+			"entity_similarity_nonlocal": {
+				"observed": {
+					"p10": 0.1915,
+					"p25": 0.2766,
+					"p50": 0.4164,
+					"p75": 0.5263,
+					"p90": 0.6,
+					"p95": 0.6608
+				},
+				"candidate_warn": 0.5,
+				"candidate_block": 0.65,
+				"note": "Two pages covering the identical non-local topic frame differ only in place names, whatever their wording."
+			},
+			"faq_topic_similarity": {
+				"observed": {
+					"p10": 0.1282,
+					"p25": 0.1714,
+					"p50": 0.2272,
+					"p75": 0.2857,
+					"p90": 0.3333,
+					"p95": 0.3417
+				},
+				"candidate_warn": 0.28,
+				"candidate_block": 0.4,
+				"note": "Compared by topic, not phrasing — rewording an answer while keeping its substance is explicitly superficial."
+			}
+		}
+	},
+	"writing_constraints": {
+		"tone": "Plain, direct, and useful to someone with a problem to solve. No sales register.",
+		"audience": "A vehicle owner deciding whether and how to sell a non-running or damaged car.",
+		"content_depth": "Moderate — enough to answer the questions properly and stop.",
+		"target_range_words": [
+			600,
+			1000
+		],
+		"target_range_justification": "Derived from 5 distinct decision questions and the page's intent. Not a target to fill — stopping early is better than padding.",
+		"forbidden_patterns": [
+			"Invented statistics, reviews, testimonials or customer stories",
+			"Invented first-hand experience, years in business, staff, or local ownership",
+			"Fabricated citations, or source text quoted into prose to look authoritative",
+			"Any factual statement not traceable to an allowed claim id",
+			"Presenting a hypothesis or unverified claim as established fact",
+			"Rewriting, spinning or paraphrasing a sibling page",
+			"Swapping a city, neighbourhood, ZIP or landmark name for a sibling's and calling it different",
+			"Reusing a sibling's section order — identical structure was 50 of 68 sibling pairs",
+			"Restating a sibling's FAQ substance in new wording",
+			"Explaining the same generic process every sibling already explains",
+			"Inserting keyword variants that a person would not say out loud",
+			"Padding to reach a word count"
+		]
+	},
+	"source_artifacts": {
+		"angles": "content-engine/angles/non-running.json",
+		"claims": "content-engine/claims/non-running.json",
+		"place": "content-engine/place/non-running.json",
+		"intent": "content-engine/intent/non-running.json",
+		"entities": "content-engine/entities/non-running.json",
+		"queries": "content-engine/queries/non-running.json",
+		"retro_brief": "content-engine/brief/non-running.json",
+		"differentiation_report": "content-engine/reports/differentiation/non-running.json",
+		"corpus_summary": "content-engine/reports/corpus-summary.json"
+	}
+}

@@ -1,0 +1,137 @@
+{
+	"slug": "north-las-vegas",
+	"target_type": "location",
+	"display_name": "junk car buying in North Las Vegas",
+	"generated": {
+		"by": "bootstrap-research.py",
+		"note": "Scaffolded from the existing corpus by bootstrap-research.py. NO EXTERNAL RESEARCH WAS PERFORMED. Every item is marked with the evidence level it actually has; nothing here may be treated as verified until a researcher answers the open questions and records a real source."
+	},
+	"research_status": {
+		"overall": "unresolved",
+		"researched_count": 2,
+		"verified_count": 1,
+		"unresolved_count": 11,
+		"unsupported_count": 0,
+		"editorial_opportunity_count": 0,
+		"blocking_gaps": [
+			"q-north-las-vegas-local-condition",
+			"q-north-las-vegas-00-free-towing-day-pickup",
+			"q-north-las-vegas-02-give-cash-offer-spot",
+			"q-north-las-vegas-04-tow-truck-arrives-agreed",
+			"q-north-las-vegas-07-how-much-junk-car",
+			"q-north-las-vegas-08-offers-range-200-5"
+		]
+	},
+	"sections": {
+		"geographic_context": [
+			{
+				"id": "north-las-vegas-is-service-area",
+				"statement": "junk car buying in North Las Vegas is a configured service area for this business.",
+				"why_it_matters": "Establishes that the business serves the area at all.",
+				"provenance": {
+					"evidence_level": "business_provided",
+					"status": "verified",
+					"source_type": "official_business",
+					"source": "wordpress/themes/<theme>/inc/business-config.php"
+				}
+			}
+		],
+		"service_relevance": [
+			{
+				"id": "north-las-vegas-existing-coverage",
+				"statement": "The existing page covers 489 words across 4 sections.",
+				"why_it_matters": "Baseline for judging whether a rewrite adds anything.",
+				"provenance": {
+					"evidence_level": "research_observation",
+					"status": "researched",
+					"source_type": "research_observation",
+					"source": "content-engine/brief/north-las-vegas.json"
+				}
+			}
+		],
+		"community_context": [
+			{
+				"id": "north-las-vegas-named-places",
+				"statement": "Places named in existing copy: Ann Road, Carey Avenue, Cheyenne Avenue, Craig Road, North Las Vegas.",
+				"why_it_matters": "Place names alone do not differentiate a page; recorded for reference only.",
+				"provenance": {
+					"evidence_level": "research_observation",
+					"status": "researched",
+					"source_type": "research_observation",
+					"source": "existing page copy"
+				}
+			}
+		]
+	},
+	"open_questions": [
+		{
+			"id": "q-north-las-vegas-local-condition",
+			"question": "What local condition in this area materially changes how or why someone sells a junk car, versus elsewhere in the valley?",
+			"why": "Without an answer this page has no supported angle and should not be written. A different landmark is not an answer.",
+			"suggested_source_type": "official_government",
+			"blocks_angle": "north-las-vegas-primary"
+		},
+		{
+			"id": "q-north-las-vegas-00-free-towing-day-pickup",
+			"question": "What authoritative source supports: \"Free towing, same-day pickup, and cash on the spot for vehicles in any condition.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-north-las-vegas-02-give-cash-offer-spot",
+			"question": "What authoritative source supports: \"We give you a cash offer on the spot — no waiting for callbacks, no haggling.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-north-las-vegas-04-tow-truck-arrives-agreed",
+			"question": "What authoritative source supports: \"Our tow truck arrives at the agreed time, we verify the vehicle, pay you in cash, and load it up.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-north-las-vegas-07-how-much-junk-car",
+			"question": "What authoritative source supports: \"How much is my junk car worth in North Las Vegas?\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-north-las-vegas-08-offers-range-200-5",
+			"question": "What authoritative source supports: \"Offers range from $200 to $5,000+ based on the vehicle's year, make, model, weight, and condition.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-north-las-vegas-09-call-free-obligation-quote",
+			"question": "What authoritative source supports: \"Call us for a free, no-obligation quote specific to your vehicle.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-north-las-vegas-10-yes-someone-needs-present",
+			"question": "What authoritative source supports: \"Yes, someone needs to be present to sign the paperwork and receive payment.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		}
+	],
+	"corpus_context": {
+		"phase_3b_assessment": "SUPERFICIAL_DIFFERENTIATION",
+		"information_gain_verdict": "LOCAL_NAME_SUBSTITUTION_ONLY",
+		"rewrite_priority": "REWRITE",
+		"closest_sibling": "paradise",
+		"known_quality_issues": [
+			"BELOW_500_WORDS — SEO_STANDARDS.md §6 minimum for a location page",
+			"STRUCTURE_MATCHES_SIBLINGS",
+			"FAQ_SUBSTANCE_SHARED_WITH_SIBLINGS",
+			"SAME_TOPIC_FRAME_AS_SIBLINGS",
+			"NO_PAGE_SPECIFIC_CLOSING_CTA"
+		]
+	}
+}

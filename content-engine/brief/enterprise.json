@@ -1,0 +1,342 @@
+{
+	"_generated_by": "content-engine/bin/analyze-corpus.py",
+	"_purpose": "Analytical record of what this page does TODAY. Not a writing instruction — it must never be used to reproduce the weaknesses it documents.",
+	"_method": "Lexical extraction, standard library only. No semantic model.",
+	"slug": "enterprise",
+	"page_type": "location",
+	"renders": true,
+	"word_count": 395,
+	"current_primary_topic": "junk car buying in Enterprise",
+	"current_primary_intent": "local",
+	"secondary_intents": [
+		"transactional",
+		"commercial",
+		"informational"
+	],
+	"current_keyword_focus": {
+		"seo_title": "We Buy Junk Cars in Enterprise, NV | {business}",
+		"hero_heading": "We Buy Junk Cars in Enterprise",
+		"top_terms": [
+			"enterprise",
+			"vehicle",
+			"south",
+			"area",
+			"buy",
+			"junk",
+			"las",
+			"vegas",
+			"car",
+			"vehicles",
+			"any",
+			"free"
+		]
+	},
+	"current_query_entities": [
+		"Do you serve the Silverado Ranch area of Enterprise?",
+		"How much will you pay for my junk car in Enterprise?",
+		"Can you pick up a car that has been sitting for years in Enterprise?",
+		"Is there any paperwork required to sell a junk car in Enterprise?"
+	],
+	"current_entities": {
+		"main_topic": "junk car buying in Enterprise",
+		"local": [
+			"Bermuda Road",
+			"Blue Diamond Road",
+			"Enterprise",
+			"I-15",
+			"Las Vegas",
+			"Silverado Ranch",
+			"South Las Vegas Boulevard",
+			"Warm Springs Road"
+		],
+		"process": [
+			"offer",
+			"paid",
+			"paperwork",
+			"pickup",
+			"quote",
+			"schedule",
+			"title",
+			"tow",
+			"towing",
+			"transfer"
+		],
+		"attributes_condition": [
+			"junk",
+			"running"
+		],
+		"user_problem": [
+			"fine"
+		],
+		"business_regulatory": [],
+		"vehicle_makes": [],
+		"other_proper_nouns": [
+			"Call",
+			"Yes"
+		]
+	},
+	"current_local_entities": [
+		"Bermuda Road",
+		"Blue Diamond Road",
+		"Enterprise",
+		"I-15",
+		"Las Vegas",
+		"Silverado Ranch",
+		"South Las Vegas Boulevard",
+		"Warm Springs Road"
+	],
+	"entity_relationships": {
+		"attributes_condition--local": 5,
+		"local--process": 4,
+		"attributes_condition--process": 1
+	},
+	"current_sections": [
+		{
+			"type": "content",
+			"heading": "Junk Car Removal in Enterprise",
+			"has_table": false,
+			"has_blocks": false,
+			"has_image": false
+		},
+		{
+			"type": "content",
+			"heading": "How to Sell a Junk Car in Enterprise",
+			"has_table": false,
+			"has_blocks": false,
+			"has_image": false
+		},
+		{
+			"type": "content",
+			"heading": "Enterprise Areas We Cover",
+			"has_table": false,
+			"has_blocks": false,
+			"has_image": false
+		}
+	],
+	"current_faq_topics": [
+		"Do you serve the Silverado Ranch area of Enterprise?",
+		"How much will you pay for my junk car in Enterprise?",
+		"Can you pick up a car that has been sitting for years in Enterprise?",
+		"Is there any paperwork required to sell a junk car in Enterprise?"
+	],
+	"current_internal_links": {
+		"declared_legacy_metadata": {
+			"services": [
+				"sedans",
+				"trucks-suvs",
+				"damaged",
+				"non-running"
+			],
+			"locations": [
+				"las-vegas",
+				"henderson",
+				"spring-valley",
+				"paradise"
+			]
+		},
+		"actually_rendered": {
+			"areas_sections": [],
+			"services_sections": [],
+			"autolinked_cities": [
+				"Henderson",
+				"Las Vegas"
+			]
+		},
+		"declared_but_not_rendered": [
+			"damaged",
+			"henderson",
+			"las-vegas",
+			"non-running",
+			"paradise",
+			"sedans",
+			"spring-valley",
+			"trucks-suvs"
+		]
+	},
+	"current_business_claims": [
+		{
+			"text": "Free towing from your driveway, same-day service, and cash paid on the spot.",
+			"types": [
+				"pricing_payment",
+				"service_guarantee",
+				"process_claim"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "Enterprise is one of the fastest-growing communities south of the Las Vegas Strip, stretching from the I-15 corridor down toward the southern edge of the valley.",
+			"types": [
+				"unverifiable"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "As the area has grown, so has our service — we buy junk cars from Enterprise residents every week.",
+			"types": [
+				"local_fact",
+				"unverifiable"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "Whether your vehicle is parked at a home near South Las Vegas Boulevard, in a subdivision off Bermuda Road, or anywhere else within Enterprise, we'll come to you with free towing and a cash offer.",
+			"types": [
+				"pricing_payment",
+				"service_guarantee"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "We'll quote you a firm price right then — no waiting, no games.",
+			"types": [
+				"pricing_payment",
+				"service_guarantee"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "Our tow truck arrives at your Enterprise address, the driver verifies the vehicle and hands you cash.",
+			"types": [
+				"pricing_payment"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "How much will you pay for my junk car in Enterprise?",
+			"types": [
+				"pricing_payment"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "Our trucks are in the area regularly, so response times are typically fast.",
+			"types": [
+				"unverifiable"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "Offers depend on the vehicle and typically range from $200 to $5,000.",
+			"types": [
+				"pricing_payment",
+				"unverifiable"
+			],
+			"money": [
+				"$200 to $5,000"
+			],
+			"risk": "medium"
+		},
+		{
+			"text": "Call for a free quote.",
+			"types": [
+				"pricing_payment",
+				"service_guarantee"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "If you don't have the title, call us — we can often still purchase the vehicle using alternative documentation allowed under Nevada law",
+			"types": [
+				"government_legal"
+			],
+			"money": [],
+			"risk": "high"
+		}
+	],
+	"claim_counts": {
+		"pricing_payment": 7,
+		"service_guarantee": 4,
+		"process_claim": 1,
+		"unverifiable": 4,
+		"local_fact": 1,
+		"government_legal": 1
+	},
+	"current_information_gain": {
+		"verdict": "LOCAL_NAME_SUBSTITUTION_ONLY",
+		"unique_phrase_count": 355,
+		"shared_phrase_count": 34,
+		"boilerplate_phrase_count": 2,
+		"unique_share": 0.9079,
+		"boilerplate_share": 0.0051,
+		"sample_unique_phrases": [
+			"15 corridor down toward the",
+			"200 to 5 000 heavier",
+			"5 000 heavier vehicles and",
+			"a cash offer call phone",
+			"a firm price right then",
+			"a free quote yes we",
+			"a home near south las",
+			"a junk car in enterprise"
+		],
+		"sample_boilerplate_phrases": [
+			"can you pick up a",
+			"we buy junk cars in"
+		],
+		"unique_local_entities": [
+			"Bermuda Road",
+			"Blue Diamond Road",
+			"Enterprise",
+			"Silverado Ranch",
+			"South Las Vegas Boulevard",
+			"Warm Springs Road"
+		],
+		"unique_nonlocal_entities": [],
+		"has_unique_structure": false
+	},
+	"current_unique_elements": {
+		"sections_with_structure": [],
+		"unique_local_entities": [
+			"Bermuda Road",
+			"Blue Diamond Road",
+			"Enterprise",
+			"Silverado Ranch",
+			"South Las Vegas Boulevard",
+			"Warm Springs Road"
+		],
+		"unique_phrase_share": 0.9079
+	},
+	"current_generic_elements": {
+		"prose_only_sections": [
+			"content[0]: Junk Car Removal in Enterprise",
+			"content[1]: How to Sell a Junk Car in Enterprise",
+			"content[2]: Enterprise Areas We Cover"
+		],
+		"boilerplate_phrase_share": 0.0051,
+		"shared_local_entities": [
+			"I-15",
+			"Las Vegas"
+		]
+	},
+	"likely_sibling_overlap": {
+		"max_masked_vocabulary_similarity": 0.2618,
+		"max_clone_signals": 4,
+		"closest_sibling": "las-vegas",
+		"superficial_differentiation_flags": [
+			"IDENTICAL_STRUCTURE",
+			"LEXICAL_ECHO",
+			"NEAR_IDENTICAL_ONCE_PLACES_MASKED",
+			"SHARED_ENTITY_FRAME",
+			"SHARED_FAQ_TOPICS",
+			"SHARED_HEADING_PLAN",
+			"SHARED_VOCABULARY"
+		],
+		"assessment": "SUPERFICIAL_DIFFERENTIATION"
+	},
+	"known_quality_issues": [
+		"BELOW_500_WORDS — SEO_STANDARDS.md §6 minimum for a location page",
+		"STRUCTURE_MATCHES_SIBLINGS",
+		"FAQ_SUBSTANCE_SHARED_WITH_SIBLINGS",
+		"SAME_TOPIC_FRAME_AS_SIBLINGS",
+		"NO_PAGE_SPECIFIC_CLOSING_CTA"
+	],
+	"rewrite_priority": "REWRITE"
+}

@@ -1,0 +1,332 @@
+{
+	"_generated_by": "content-engine/bin/analyze-corpus.py",
+	"_purpose": "Analytical record of what this page does TODAY. Not a writing instruction — it must never be used to reproduce the weaknesses it documents.",
+	"_method": "Lexical extraction, standard library only. No semantic model.",
+	"slug": "trucks-suvs",
+	"page_type": "service",
+	"renders": true,
+	"word_count": 542,
+	"current_primary_topic": "junk car buying — trucks suvs",
+	"current_primary_intent": "commercial",
+	"secondary_intents": [
+		"transactional",
+		"local",
+		"informational"
+	],
+	"current_keyword_focus": {
+		"seo_title": "Cash for Junk Trucks & SUVs in Las Vegas | {business}",
+		"hero_heading": "Cash for Junk Trucks & SUVs",
+		"top_terms": [
+			"trucks",
+			"suvs",
+			"truck",
+			"size",
+			"value",
+			"buy",
+			"vehicle",
+			"even",
+			"ford",
+			"full",
+			"toyota",
+			"vehicles"
+		]
+	},
+	"current_query_entities": [
+		"How much do you pay for junk trucks in Las Vegas?",
+		"Do you buy 4x4 trucks and SUVs?",
+		"Can you tow a heavy-duty truck like an F-250?",
+		"Will you buy a truck with a blown engine?"
+	],
+	"current_entities": {
+		"main_topic": "junk car buying — trucks suvs",
+		"local": [
+			"Las Vegas"
+		],
+		"process": [
+			"flatbed",
+			"offer",
+			"scrap",
+			"tow",
+			"towing",
+			"transfer"
+		],
+		"attributes_condition": [
+			"blown",
+			"junk",
+			"running"
+		],
+		"user_problem": [],
+		"business_regulatory": [],
+		"vehicle_makes": [
+			"chevrolet",
+			"chevy",
+			"dodge",
+			"ford",
+			"honda",
+			"jeep",
+			"nissan",
+			"ram",
+			"toyota"
+		],
+		"other_proper_nouns": [
+			"Chevrolet Silverado",
+			"For SUVs",
+			"Ford",
+			"Nissan Frontier",
+			"Toyota",
+			"Toyota Tacoma",
+			"Trucks and SUVs",
+			"Yes"
+		]
+	},
+	"current_local_entities": [
+		"Las Vegas"
+	],
+	"entity_relationships": {
+		"attributes_condition--process": 2,
+		"local--process": 1,
+		"attributes_condition--local": 1
+	},
+	"current_sections": [
+		{
+			"type": "content",
+			"heading": "We Buy Trucks and SUVs Across Las Vegas",
+			"has_table": false,
+			"has_blocks": false,
+			"has_image": false
+		},
+		{
+			"type": "content",
+			"heading": "Why Trucks and SUVs Get Higher Offers",
+			"has_table": false,
+			"has_blocks": false,
+			"has_image": false
+		},
+		{
+			"type": "content",
+			"heading": "How to Sell Your Junk Truck or SUV",
+			"has_table": false,
+			"has_blocks": false,
+			"has_image": false
+		},
+		{
+			"type": "content",
+			"heading": "Common Trucks and SUVs We Purchase",
+			"has_table": false,
+			"has_blocks": false,
+			"has_image": false
+		}
+	],
+	"current_faq_topics": [
+		"How much do you pay for junk trucks in Las Vegas?",
+		"Do you buy 4x4 trucks and SUVs?",
+		"Can you tow a heavy-duty truck like an F-250?",
+		"Will you buy a truck with a blown engine?"
+	],
+	"current_internal_links": {
+		"declared_legacy_metadata": {
+			"services": [
+				"sedans",
+				"damaged",
+				"non-running"
+			],
+			"locations": [
+				"las-vegas",
+				"henderson",
+				"north-las-vegas",
+				"summerlin",
+				"spring-valley"
+			]
+		},
+		"actually_rendered": {
+			"areas_sections": [],
+			"services_sections": [],
+			"autolinked_cities": [
+				"Las Vegas"
+			]
+		},
+		"declared_but_not_rendered": [
+			"damaged",
+			"henderson",
+			"las-vegas",
+			"non-running",
+			"north-las-vegas",
+			"sedans",
+			"spring-valley",
+			"summerlin"
+		]
+	},
+	"current_business_claims": [
+		{
+			"text": "Cash for Junk Trucks & SUVs.",
+			"types": [
+				"pricing_payment"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "Trucks and SUVs are some of the most common vehicles we buy — full-size or mid-size, two-wheel or four-wheel drive, running or not.",
+			"types": [
+				"unverifiable"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "There are two reasons trucks and SUVs typically receive higher cash offers than sedans.",
+			"types": [
+				"pricing_payment",
+				"unverifiable"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "First, they weigh more — scrap metal prices are calculated by weight, so a 5,000-pound truck is worth more than a 3,000-pound sedan on scrap value alone.",
+			"types": [
+				"pricing_payment"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "Engines, transmissions, transfer cases, axles, and body panels from popular trucks often have significant resale value even when the vehicle as a whole isn't worth repairing.",
+			"types": [
+				"pricing_payment"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "We'll give you a firm offer immediately.",
+			"types": [
+				"service_guarantee"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "We always bring the right truck for the job, and towing is always free — even for heavy-duty trucks and full-size SUVs.",
+			"types": [
+				"service_guarantee"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "The trucks we buy most frequently include Ford F-150, Ford F-250, Chevrolet Silverado 1500, Chevrolet Silverado 2500, RAM 1500, Toyota Tacoma, Toyota Tundra, Nissan Titan, and Nissan Frontier.",
+			"types": [
+				"unverifiable"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "For SUVs, the most common are Jeep Grand Cherokee, Jeep Wrangler, Ford Explorer, Ford Expedition, Chevrolet Tahoe, Chevrolet Suburban, Toyota 4Runner, Honda Pilot, and Dodge Durango.",
+			"types": [
+				"unverifiable"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "How much do you pay for junk trucks in Las Vegas?",
+			"types": [
+				"pricing_payment"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "Junk trucks typically receive offers between $500 and $5,000+ depending on the year, make, model, weight, and condition.",
+			"types": [
+				"pricing_payment",
+				"unverifiable"
+			],
+			"money": [
+				"$500",
+				"$5,000+"
+			],
+			"risk": "medium"
+		},
+		{
+			"text": "Full-size trucks almost always receive higher offers due to weight and parts value.",
+			"types": [
+				"service_guarantee"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "A blown engine doesn't eliminate the value of the rest of the vehicle — the transmission, frame, axles, cab, and bed still have significant worth",
+			"types": [
+				"pricing_payment"
+			],
+			"money": [],
+			"risk": "medium"
+		}
+	],
+	"claim_counts": {
+		"pricing_payment": 7,
+		"unverifiable": 5,
+		"service_guarantee": 3
+	},
+	"current_information_gain": {
+		"verdict": "WORDING_ONLY_GAIN",
+		"unique_phrase_count": 498,
+		"shared_phrase_count": 35,
+		"boilerplate_phrase_count": 1,
+		"unique_share": 0.9326,
+		"boilerplate_share": 0.0019,
+		"sample_unique_phrases": [
+			"000 pound sedan on scrap",
+			"000 pound truck is worth",
+			"150 ford f 250 chevrolet",
+			"1500 chevrolet silverado 2500 ram",
+			"1500 toyota tacoma toyota tundra",
+			"1500s as well as mid",
+			"150s chevy silverados and ram",
+			"250 chevrolet silverado 1500 chevrolet"
+		],
+		"sample_boilerplate_phrases": [
+			"year make model and condition"
+		],
+		"unique_local_entities": [],
+		"unique_nonlocal_entities": [],
+		"has_unique_structure": false
+	},
+	"current_unique_elements": {
+		"sections_with_structure": [],
+		"unique_local_entities": [],
+		"unique_phrase_share": 0.9326
+	},
+	"current_generic_elements": {
+		"prose_only_sections": [
+			"content[0]: We Buy Trucks and SUVs Across Las Vegas",
+			"content[1]: Why Trucks and SUVs Get Higher Offers",
+			"content[2]: How to Sell Your Junk Truck or SUV",
+			"content[3]: Common Trucks and SUVs We Purchase"
+		],
+		"boilerplate_phrase_share": 0.0019,
+		"shared_local_entities": [
+			"Las Vegas"
+		]
+	},
+	"likely_sibling_overlap": {
+		"max_masked_vocabulary_similarity": 0.2105,
+		"max_clone_signals": 2,
+		"closest_sibling": "non-running",
+		"superficial_differentiation_flags": [
+			"IDENTICAL_STRUCTURE",
+			"SHARED_FAQ_ANSWER_SUBSTANCE"
+		],
+		"assessment": "PARTIAL_DIFFERENTIATION"
+	},
+	"known_quality_issues": [
+		"STRUCTURE_MATCHES_SIBLINGS",
+		"FAQ_SUBSTANCE_SHARED_WITH_SIBLINGS",
+		"NO_PAGE_SPECIFIC_CLOSING_CTA"
+	],
+	"rewrite_priority": "REWRITE"
+}

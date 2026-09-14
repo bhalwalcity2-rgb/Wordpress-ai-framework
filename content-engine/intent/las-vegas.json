@@ -1,0 +1,83 @@
+{
+	"slug": "las-vegas",
+	"generated": {
+		"by": "bootstrap-research.py",
+		"note": "Scaffolded from the existing corpus by bootstrap-research.py. NO EXTERNAL RESEARCH WAS PERFORMED. Every item is marked with the evidence level it actually has; nothing here may be treated as verified until a researcher answers the open questions and records a real source."
+	},
+	"primary_intent": "navigational_local",
+	"secondary_intents": [
+		"transactional",
+		"commercial_investigation"
+	],
+	"user_stage": "solution_aware",
+	"conversion_goal": "Phone call or instant-offer submission",
+	"decision_questions": [
+		{
+			"question": "How much will you pay for my junk car in Las Vegas?",
+			"required_answer": "TO BE RESEARCHED",
+			"status": "unresolved"
+		},
+		{
+			"question": "Do you buy cars without a title in Las Vegas?",
+			"required_answer": "TO BE RESEARCHED",
+			"status": "unresolved"
+		},
+		{
+			"question": "How fast can you pick up my junk car in Las Vegas?",
+			"required_answer": "TO BE RESEARCHED",
+			"status": "unresolved"
+		},
+		{
+			"question": "Is there any cost for towing in Las Vegas?",
+			"required_answer": "TO BE RESEARCHED",
+			"status": "unresolved"
+		}
+	],
+	"objections": [
+		{
+			"objection": "Is the quoted price the price I actually get?",
+			"response_requirement": "Needs a sourced statement of the firm-offer policy."
+		},
+		{
+			"objection": "Can I sell without the title?",
+			"response_requirement": "Needs an authoritative Nevada DMV source before answering."
+		}
+	],
+	"queries": [
+		{
+			"query": "how much pay junk car las vegas",
+			"intent": "navigational_local",
+			"question": "How much will you pay for my junk car in Las Vegas?",
+			"satisfied_by": "",
+			"provenance": "observed_in_existing_copy"
+		},
+		{
+			"query": "buy cars without title las vegas",
+			"intent": "navigational_local",
+			"question": "Do you buy cars without a title in Las Vegas?",
+			"satisfied_by": "",
+			"provenance": "observed_in_existing_copy"
+		},
+		{
+			"query": "how fast pick up junk car las vegas",
+			"intent": "navigational_local",
+			"question": "How fast can you pick up my junk car in Las Vegas?",
+			"satisfied_by": "",
+			"provenance": "observed_in_existing_copy"
+		},
+		{
+			"query": "there any cost towing las vegas",
+			"intent": "navigational_local",
+			"question": "Is there any cost for towing in Las Vegas?",
+			"satisfied_by": "",
+			"provenance": "observed_in_existing_copy"
+		}
+	],
+	"cannibalisation_risk": [
+		{
+			"with_page": "homepage",
+			"severity": "high",
+			"reason": "Primary city — the homepage already owns this intent."
+		}
+	]
+}

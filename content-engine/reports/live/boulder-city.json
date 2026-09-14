@@ -1,0 +1,69 @@
+{
+	"slug": "boulder-city",
+	"url": "https://junkcarbuyerslasvegas.com/service-areas/boulder-city/",
+	"http_status": 200,
+	"final_url": "https://junkcarbuyerslasvegas.com/service-areas/boulder-city/",
+	"page_type": "location",
+	"artifact": "wordpress/themes/kadence-child-lvjcb/content/locations/boulder-city.json",
+	"promotion_record": null,
+	"status": "FAIL",
+	"expected": {
+		"title": "We Buy Junk Cars in Boulder City, NV | First Choice Junk Car",
+		"description": "Sell your junk car in Boulder City, NV. Free towing even from Boulder City — same-day cash, any condition vehicle. Call (866) 748-3697.",
+		"h1": "We Buy Junk Cars in Boulder City",
+		"section_headings": [
+			"Junk Car Buyers Serving Boulder City",
+			"How to Sell Your Junk Car in Boulder City",
+			"Boulder City Service Coverage"
+		],
+		"faq_questions": [
+			"Is towing really free from Boulder City?",
+			"How quickly can you pick up a car in Boulder City?",
+			"Do you buy junk cars in the Boulder City historic district?",
+			"What types of vehicles do you buy in Boulder City?"
+		],
+		"internal_link_slugs": [],
+		"sample_sentences": [
+			"Boulder City is about 30 miles southeast of Las Vegas, and while some junk car services won't make the drive, ",
+			"Boulder City's smaller-town feel means word travels fast, and many of our Boulder City customers come through ",
+			"The process is identical to what we offer in Las Vegas proper. Call (866) 748-3697, describe your vehicle, and",
+			"Because Boulder City is a bit further out, we ask for a little more scheduling flexibility — but most pickups ",
+			"We serve all of Boulder City, from the historic downtown area near the Boulder Dam Hotel to the residential ne"
+		],
+		"expected_word_floor": 250
+	},
+	"observed": {
+		"title": "We Buy Junk Cars in Boulder City, NV | Las Vegas Junk Car Buyers",
+		"description": "Sell your junk car in Boulder City, NV. Free towing even from Boulder City — same-day cash, any condition vehicle. Call (702) 555-0134.",
+		"canonical": "https://junkcarbuyerslasvegas.com/service-areas/boulder-city/",
+		"h1": "We Buy Junk Cars in Boulder City",
+		"h2_count": 6,
+		"body_words": 310,
+		"jsonld_blocks": 1,
+		"final_url": "https://junkcarbuyerslasvegas.com/service-areas/boulder-city/",
+		"schema_types": [
+			"Answer",
+			"Article",
+			"AutomotiveBusiness",
+			"BreadcrumbList",
+			"City",
+			"ImageObject",
+			"ListItem",
+			"OpeningHoursSpecification",
+			"Person",
+			"PostalAddress",
+			"Question",
+			"Service",
+			"State",
+			"WebSite"
+		]
+	},
+	"blocking_issues": [
+		"title mismatch — expected 'We Buy Junk Cars in Boulder City, NV | First Choice Junk Car', got 'We Buy Junk Cars in Boulder City, NV | Las Vegas Junk Car Buyers'",
+		"5 promoted paragraph(s) do not appear in the rendered body"
+	],
+	"warnings": [
+		"meta description truncated on the live page (expected behaviour)"
+	],
+	"verified_at": "2026-09-06"
+}

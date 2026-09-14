@@ -1,0 +1,229 @@
+{
+	"slug": "henderson",
+	"generated": {
+		"by": "bootstrap-research.py",
+		"note": "Scaffolded from the existing corpus by bootstrap-research.py. NO EXTERNAL RESEARCH WAS PERFORMED. Every item is marked with the evidence level it actually has; nothing here may be treated as verified until a researcher answers the open questions and records a real source."
+	},
+	"primary_entity": "junk car buying in Henderson",
+	"related_entities": [
+		"Anthem",
+		"Cadence",
+		"Call",
+		"Clark County",
+		"Damaged Vehicles After Insurance",
+		"Gated",
+		"Here",
+		"Inspirada",
+		"Lake Las Vegas",
+		"More",
+		"Nevada",
+		"Pittman",
+		"Sun City Anthem",
+		"Unused Vehicles",
+		"Violations"
+	],
+	"attributes": [
+		"blown",
+		"damaged",
+		"flooded",
+		"inoperable",
+		"junk",
+		"overheating",
+		"running",
+		"rusted",
+		"stripped",
+		"totaled",
+		"unregistered",
+		"wrecked"
+	],
+	"problems": [
+		"compliance",
+		"eyesore",
+		"fine",
+		"hoa",
+		"inherited",
+		"insurance",
+		"payout",
+		"warning"
+	],
+	"processes": [
+		"flatbed",
+		"offer",
+		"paid",
+		"paperwork",
+		"payment",
+		"pickup",
+		"quote",
+		"removal",
+		"salvage",
+		"schedule",
+		"scheduling",
+		"title",
+		"tow",
+		"towing",
+		"transfer"
+	],
+	"user_types": [],
+	"local_entities": [
+		"89002",
+		"89011",
+		"89012",
+		"89014",
+		"89015",
+		"89044",
+		"89052",
+		"Boulder City",
+		"Boulder Highway",
+		"Craig Road",
+		"East of Boulder Highway",
+		"Eastern Avenue",
+		"Gibson Springs",
+		"Governed Communities Green Valley",
+		"Governed Communities Sun City",
+		"Green Valley",
+		"Green Valley Ranch",
+		"Henderson",
+		"I-215",
+		"Lake Mead Parkway",
+		"Las Vegas",
+		"Las Vegas Valley",
+		"MacDonald Ranch",
+		"Mission Hills",
+		"Near Gibson Road",
+		"Paradise Hills",
+		"Ranch",
+		"Rose Parkway",
+		"Seven Hills",
+		"Sun City",
+		"Sun City MacDonald Ranch",
+		"Water Street",
+		"Whitney Ranch"
+	],
+	"business_entities": [
+		"clark county",
+		"dmv",
+		"nevada dmv"
+	],
+	"relationships": [
+		{
+			"from": "local",
+			"relation": "co-occurs_with",
+			"to": "process",
+			"evidence_level": "research_observation",
+			"observed_cooccurrence": 11,
+			"notes": "Co-occurrence in existing copy. Evidence that the page connects these ideas — not evidence that the connection holds."
+		},
+		{
+			"from": "attributes_condition",
+			"relation": "co-occurs_with",
+			"to": "user_problem",
+			"evidence_level": "research_observation",
+			"observed_cooccurrence": 6,
+			"notes": "Co-occurrence in existing copy. Evidence that the page connects these ideas — not evidence that the connection holds."
+		},
+		{
+			"from": "attributes_condition",
+			"relation": "co-occurs_with",
+			"to": "process",
+			"evidence_level": "research_observation",
+			"observed_cooccurrence": 6,
+			"notes": "Co-occurrence in existing copy. Evidence that the page connects these ideas — not evidence that the connection holds."
+		},
+		{
+			"from": "attributes_condition",
+			"relation": "co-occurs_with",
+			"to": "local",
+			"evidence_level": "research_observation",
+			"observed_cooccurrence": 4,
+			"notes": "Co-occurrence in existing copy. Evidence that the page connects these ideas — not evidence that the connection holds."
+		},
+		{
+			"from": "process",
+			"relation": "co-occurs_with",
+			"to": "user_problem",
+			"evidence_level": "research_observation",
+			"observed_cooccurrence": 4,
+			"notes": "Co-occurrence in existing copy. Evidence that the page connects these ideas — not evidence that the connection holds."
+		},
+		{
+			"from": "local",
+			"relation": "co-occurs_with",
+			"to": "user_problem",
+			"evidence_level": "research_observation",
+			"observed_cooccurrence": 4,
+			"notes": "Co-occurrence in existing copy. Evidence that the page connects these ideas — not evidence that the connection holds."
+		},
+		{
+			"from": "attributes_condition",
+			"relation": "co-occurs_with",
+			"to": "business_regulatory",
+			"evidence_level": "research_observation",
+			"observed_cooccurrence": 2,
+			"notes": "Co-occurrence in existing copy. Evidence that the page connects these ideas — not evidence that the connection holds."
+		},
+		{
+			"from": "business_regulatory",
+			"relation": "co-occurs_with",
+			"to": "user_problem",
+			"evidence_level": "research_observation",
+			"observed_cooccurrence": 2,
+			"notes": "Co-occurrence in existing copy. Evidence that the page connects these ideas — not evidence that the connection holds."
+		},
+		{
+			"from": "business_regulatory",
+			"relation": "co-occurs_with",
+			"to": "local",
+			"evidence_level": "research_observation",
+			"observed_cooccurrence": 1,
+			"notes": "Co-occurrence in existing copy. Evidence that the page connects these ideas — not evidence that the connection holds."
+		},
+		{
+			"from": "business_regulatory",
+			"relation": "co-occurs_with",
+			"to": "process",
+			"evidence_level": "research_observation",
+			"observed_cooccurrence": 1,
+			"notes": "Co-occurrence in existing copy. Evidence that the page connects these ideas — not evidence that the connection holds."
+		},
+		{
+			"from": "vehicle condition",
+			"relation": "determines",
+			"to": "towing requirement",
+			"evidence_level": "hypothesis",
+			"notes": "Plausible domain relationship, unverified for this page."
+		},
+		{
+			"from": "vehicle ownership",
+			"relation": "determines",
+			"to": "title and documentation path",
+			"evidence_level": "hypothesis",
+			"notes": "Plausible domain relationship, unverified for this page."
+		},
+		{
+			"from": "community rules",
+			"relation": "creates",
+			"to": "vehicle removal pressure",
+			"evidence_level": "hypothesis",
+			"notes": "Plausible domain relationship, unverified for this page."
+		},
+		{
+			"from": "location",
+			"relation": "determines",
+			"to": "pickup and logistics context",
+			"evidence_level": "hypothesis",
+			"notes": "Plausible domain relationship, unverified for this page."
+		}
+	],
+	"coverage_gaps": [
+		"inoperable",
+		"overheating",
+		"rusted",
+		"stripped",
+		"totaled",
+		"unregistered",
+		"clark county",
+		"nevada dmv",
+		"flatbed",
+		"salvage"
+	]
+}

@@ -1,0 +1,72 @@
+{
+	"slug": "non-running",
+	"url": "https://junkcarbuyerslasvegas.com/cash-for-junk-cars/non-running/",
+	"http_status": 200,
+	"final_url": "https://junkcarbuyerslasvegas.com/cash-for-junk-cars/non-running/",
+	"page_type": "service",
+	"artifact": "wordpress/themes/kadence-child-lvjcb/content/services/non-running.json",
+	"promotion_record": null,
+	"status": "FAIL",
+	"expected": {
+		"title": "Cash for Non-Running Cars in Las Vegas | First Choice Junk Car",
+		"description": "We buy non-running cars in Las Vegas. Blown engine, dead transmission, won't start — we pay cash and tow free. Call (866) 748-3697 today.",
+		"h1": "Cash for Non-Running & Mechanical Failure Vehicles",
+		"section_headings": [
+			"We Specialize in Non-Running Vehicles",
+			"Common Mechanical Issues We Buy",
+			"How to Sell a Non-Running Car in Las Vegas",
+			"Why Non-Running Cars Still Have Value"
+		],
+		"faq_questions": [
+			"How much is a non-running car worth in Las Vegas?",
+			"Do I need to know what's wrong with my car before calling?",
+			"Can you tow a car that has flat tires and won't roll?",
+			"Will you buy a car that has been sitting for years and won't start?",
+			"Is it worth selling a car with a blown engine?"
+		],
+		"internal_link_slugs": [],
+		"sample_sentences": [
+			"Non-running vehicles are the core of our business. While most buyers want cars that drive off the lot, we spec",
+			"If your car has been sitting in the driveway because the engine blew, the transmission failed, or it simply wo",
+			"We purchase vehicles with every type of mechanical failure, including blown or seized engines, failed or slipp",
+			"You do not need to know exactly what's wrong with the car. If your mechanic told you it would cost more to fix",
+			"Call (866) 748-3697 and tell us the year, make, model, and what you know about the problem. We don't need a di",
+			"Because the car doesn't run, we bring a flatbed tow truck to load it. Towing is always free, no matter where t"
+		],
+		"expected_word_floor": 250
+	},
+	"observed": {
+		"title": "Cash for Non-Running Cars in Las Vegas | Las Vegas Junk Car Buyers",
+		"description": "We buy non-running cars in Las Vegas. Blown engine, dead transmission, won't start — we pay cash and tow free. Call (702) 555-0134 today.",
+		"canonical": "https://junkcarbuyerslasvegas.com/cash-for-junk-cars/non-running/",
+		"h1": "Cash for Non-Running & Mechanical Failure — in Las Vegas",
+		"h2_count": 10,
+		"body_words": 1228,
+		"jsonld_blocks": 1,
+		"final_url": "https://junkcarbuyerslasvegas.com/cash-for-junk-cars/non-running/",
+		"schema_types": [
+			"Answer",
+			"Article",
+			"AutomotiveBusiness",
+			"City",
+			"ImageObject",
+			"OpeningHoursSpecification",
+			"Person",
+			"PostalAddress",
+			"Question",
+			"Service",
+			"WebSite"
+		]
+	},
+	"blocking_issues": [
+		"title mismatch — expected 'Cash for Non-Running Cars in Las Vegas | First Choice Junk Car', got 'Cash for Non-Running Cars in Las Vegas | Las Vegas Junk Car Buyers'",
+		"section heading(s) absent from the page: We Specialize in Non-Running Vehicles; Common Mechanical Issues We Buy; How to Sell a Non-Running Car in Las Vegas",
+		"6 promoted paragraph(s) do not appear in the rendered body",
+		"5 FAQ question(s) missing from the page"
+	],
+	"warnings": [
+		"meta description truncated on the live page (expected behaviour)",
+		"H1 'Cash for Non-Running & Mechanical Failure — in Las Vegas' differs from hero_heading 'Cash for Non-Running & Mechanical Failure Vehicles'"
+	],
+	"verified_at": "2026-09-06"
+}

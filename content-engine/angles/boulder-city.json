@@ -1,0 +1,11 @@
+{
+	"slug": "boulder-city",
+	"generated": {
+		"by": "bootstrap-research.py",
+		"note": "Scaffolded from the existing corpus by bootstrap-research.py. NO EXTERNAL RESEARCH WAS PERFORMED. Every item is marked with the evidence level it actually has; nothing here may be treated as verified until a researcher answers the open questions and records a real source."
+	},
+	"differentiation_verdict": "NO_SUPPORTED_DIFFERENTIATION",
+	"recommendation_if_unsupported": "create_broader_regional_page",
+	"recommendation_note": "Phase 3B found no topic on this page that its siblings do not also cover: verdict LOCAL_NAME_SUBSTITUTION_ONLY. Nothing in the repository supports a distinct angle, and one must not be invented. Either research a genuine local condition, or fold this page into a broader regional page. Fewer useful pages beat more thin ones.",
+	"angles": []
+}

@@ -1,0 +1,55 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "location.schema.json",
+	"title": "Location page content (canonical v2)",
+	"description": "Contract for wordpress/themes/<theme>/content/locations/<slug>.json. Consumed by inc/content-loader.php, inc/seo.php, inc/cli.php, and template-parts/written-page.php. Canonical per ADR-0003; the superseded v1 shape stored prose in sections[].body and is rejected.",
+
+	"type": "object",
+	"required": [
+		"slug",
+		"city",
+		"state",
+		"seo_title",
+		"seo_description",
+		"hero_heading",
+		"hero_description",
+		"sections"
+	],
+	"additionalProperties": false,
+
+	"properties": {
+		"slug": {
+			"description": "Must match the filename and a service_areas item slug in business-config.php.",
+			"type": "string",
+			"pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+		},
+		"city": { "$ref": "common.schema.json#/definitions/nonEmptyString" },
+		"state": {
+			"type": "string",
+			"pattern": "^[A-Z]{2}$"
+		},
+		"seo_title": {
+			"description": "Read directly by lvjcb_compute_seo(). SEO_STANDARDS.md §3 caps this at 60 characters after {business} resolves.",
+			"$ref": "common.schema.json#/definitions/nonEmptyString"
+		},
+		"seo_description": {
+			"description": "Read directly by lvjcb_compute_seo(), then truncated at 155 characters by lvjcb_truncate_for_seo().",
+			"$ref": "common.schema.json#/definitions/nonEmptyString"
+		},
+		"hero_heading": { "$ref": "common.schema.json#/definitions/nonEmptyString" },
+		"hero_description": { "$ref": "common.schema.json#/definitions/prose" },
+		"sections": {
+			"description": "At least one section is required. template-location.php falls back to the generic templated layout when this is empty, which is a silent failure rather than a visible one.",
+			"type": "array",
+			"minItems": 1,
+			"items": { "$ref": "common.schema.json#/definitions/section" }
+		},
+		"faq_heading": { "type": "string" },
+		"faq": {
+			"type": "array",
+			"items": { "$ref": "common.schema.json#/definitions/faqItem" }
+		},
+		"final_cta": { "$ref": "common.schema.json#/definitions/finalCta" },
+		"internal_links": { "$ref": "common.schema.json#/definitions/internalLinks" }
+	}
+}

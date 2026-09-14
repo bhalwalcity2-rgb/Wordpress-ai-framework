@@ -1,0 +1,174 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "place.schema.json",
+	"title": "Research dossier for a location or service",
+	"description": "content-engine/place/{slug}.json. Not an encyclopedia about the city. Every item must answer one question: what local condition could materially affect a person's decision or process when selling a junk car? An item that cannot answer it is dropped, not padded.",
+	"type": "object",
+	"required": [
+		"slug",
+		"target_type",
+		"generated",
+		"research_status",
+		"sections"
+	],
+	"additionalProperties": false,
+	"properties": {
+		"slug": {
+			"$ref": "research-common.schema.json#/definitions/nonEmptyString"
+		},
+		"target_type": {
+			"enum": [
+				"location",
+				"service",
+				"home"
+			]
+		},
+		"display_name": {
+			"type": "string"
+		},
+		"generated": {
+			"type": "object",
+			"required": [
+				"by",
+				"note"
+			],
+			"additionalProperties": false,
+			"properties": {
+				"by": {
+					"type": "string"
+				},
+				"on": {
+					"$ref": "research-common.schema.json#/definitions/isoDate"
+				},
+				"note": {
+					"type": "string"
+				},
+				"verification_pass": {
+					"description": "Set when a research pass has curated this dossier: when, by whom, and what it covered.",
+					"type": "object",
+					"additionalProperties": true
+				}
+			}
+		},
+		"research_status": {
+			"type": "object",
+			"required": [
+				"overall"
+			],
+			"additionalProperties": false,
+			"properties": {
+				"overall": {
+					"$ref": "research-common.schema.json#/definitions/researchStatus"
+				},
+				"researched_count": {
+					"type": "integer"
+				},
+				"verified_count": {
+					"type": "integer"
+				},
+				"unresolved_count": {
+					"type": "integer"
+				},
+				"unsupported_count": {
+					"type": "integer"
+				},
+				"editorial_opportunity_count": {
+					"type": "integer"
+				},
+				"blocking_gaps": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				}
+			}
+		},
+		"sections": {
+			"description": "Research grouped by dimension. Every key is optional — an absent dimension is honest, an invented one is not.",
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+				"geographic_context": {
+					"$ref": "#/definitions/itemList"
+				},
+				"service_relevance": {
+					"$ref": "#/definitions/itemList"
+				},
+				"housing_vehicle_context": {
+					"$ref": "#/definitions/itemList"
+				},
+				"customer_scenarios": {
+					"$ref": "#/definitions/itemList"
+				},
+				"local_constraints": {
+					"$ref": "#/definitions/itemList"
+				},
+				"government_dmv_context": {
+					"$ref": "#/definitions/itemList"
+				},
+				"community_context": {
+					"$ref": "#/definitions/itemList"
+				},
+				"road_access_towing": {
+					"$ref": "#/definitions/itemList"
+				},
+				"local_terminology": {
+					"$ref": "#/definitions/itemList"
+				},
+				"decision_factors": {
+					"$ref": "#/definitions/itemList"
+				},
+				"business_relevant_situations": {
+					"$ref": "#/definitions/itemList"
+				}
+			}
+		},
+		"open_questions": {
+			"description": "The work order for external research. What must be answered before an angle here can be approved.",
+			"type": "array",
+			"items": {
+				"type": "object",
+				"required": [
+					"id",
+					"question",
+					"why"
+				],
+				"additionalProperties": false,
+				"properties": {
+					"id": {
+						"$ref": "research-common.schema.json#/definitions/nonEmptyString"
+					},
+					"question": {
+						"$ref": "research-common.schema.json#/definitions/nonEmptyString"
+					},
+					"why": {
+						"$ref": "research-common.schema.json#/definitions/nonEmptyString"
+					},
+					"suggested_source_type": {
+						"$ref": "research-common.schema.json#/definitions/sourceType"
+					},
+					"blocks_angle": {
+						"type": "string"
+					}
+				}
+			}
+		},
+		"corpus_context": {
+			"description": "What Phase 3B already established about the existing page, so research does not re-derive it.",
+			"type": "object",
+			"additionalProperties": true
+		},
+		"research_locked": {
+			"type": "boolean",
+			"description": "True once curated. bootstrap-research.py refuses to overwrite even with --force."
+		}
+	},
+	"definitions": {
+		"itemList": {
+			"type": "array",
+			"items": {
+				"$ref": "research-common.schema.json#/definitions/researchItem"
+			}
+		}
+	}
+}

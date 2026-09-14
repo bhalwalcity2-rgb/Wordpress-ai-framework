@@ -1,0 +1,59 @@
+{
+	"slug": "north-las-vegas",
+	"generated": {
+		"by": "bootstrap-research.py",
+		"note": "Scaffolded from the existing corpus by bootstrap-research.py. NO EXTERNAL RESEARCH WAS PERFORMED. Every item is marked with the evidence level it actually has; nothing here may be treated as verified until a researcher answers the open questions and records a real source."
+	},
+	"concepts": [
+		{
+			"concept": "air base buy cars force",
+			"intent": "navigational_local",
+			"user_need": "Do you buy junk cars near Nellis Air Force Base?",
+			"representative_queries": [
+				"buy junk cars near nellis air force base"
+			],
+			"covered_by_existing_page": true,
+			"shared_with_siblings": false,
+			"notes": "Derived from an existing FAQ. Not search volume data."
+		},
+		{
+			"concept": "car how junk las much",
+			"intent": "navigational_local",
+			"user_need": "How much is my junk car worth in North Las Vegas?",
+			"representative_queries": [
+				"how much junk car worth north las vegas"
+			],
+			"covered_by_existing_page": true,
+			"shared_with_siblings": true,
+			"notes": "Derived from an existing FAQ. Not search volume data."
+		},
+		{
+			"concept": "apartment car complex las north",
+			"intent": "navigational_local",
+			"user_need": "Can you pick up a car from an apartment complex in North Las Vegas?",
+			"representative_queries": [
+				"pick up car apartment complex north las vegas"
+			],
+			"covered_by_existing_page": true,
+			"shared_with_siblings": true,
+			"notes": "Derived from an existing FAQ. Not search volume data."
+		},
+		{
+			"concept": "las need north pickup present",
+			"intent": "navigational_local",
+			"user_need": "Do I need to be present for the pickup in North Las Vegas?",
+			"representative_queries": [
+				"need present pickup north las vegas"
+			],
+			"covered_by_existing_page": true,
+			"shared_with_siblings": true,
+			"notes": "Derived from an existing FAQ. Not search volume data."
+		}
+	],
+	"coverage_summary": {
+		"total_concepts": 4,
+		"shared_with_siblings": 3,
+		"distinctive_concepts": 1,
+		"uncovered_by_existing_page": 0
+	}
+}

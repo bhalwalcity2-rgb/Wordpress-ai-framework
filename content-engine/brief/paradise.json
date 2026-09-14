@@ -1,0 +1,357 @@
+{
+	"_generated_by": "content-engine/bin/analyze-corpus.py",
+	"_purpose": "Analytical record of what this page does TODAY. Not a writing instruction — it must never be used to reproduce the weaknesses it documents.",
+	"_method": "Lexical extraction, standard library only. No semantic model.",
+	"slug": "paradise",
+	"page_type": "location",
+	"renders": true,
+	"word_count": 403,
+	"current_primary_topic": "junk car buying in Paradise",
+	"current_primary_intent": "local",
+	"secondary_intents": [
+		"transactional",
+		"commercial"
+	],
+	"current_keyword_focus": {
+		"seo_title": "We Buy Junk Cars in Paradise, NV | {business}",
+		"hero_heading": "We Buy Junk Cars in Paradise",
+		"top_terms": [
+			"paradise",
+			"junk",
+			"car",
+			"cars",
+			"day",
+			"area",
+			"vehicles",
+			"unlv",
+			"pickup",
+			"free",
+			"towing",
+			"corridor"
+		]
+	},
+	"current_query_entities": [
+		"Do you pick up junk cars near UNLV in Paradise?",
+		"How much do you pay for junk cars in Paradise?",
+		"Can you pick up a car from a commercial property in Paradise?",
+		"Is same-day pickup available in Paradise?"
+	],
+	"current_entities": {
+		"main_topic": "junk car buying in Paradise",
+		"local": [
+			"Boulder Highway",
+			"Eastern Avenue",
+			"I-15",
+			"Las Vegas",
+			"Maryland Parkway",
+			"Paradise",
+			"Paradise Road",
+			"South Maryland Parkway",
+			"Sunrise Manor",
+			"Swenson Street"
+		],
+		"process": [
+			"offer",
+			"paperwork",
+			"pickup",
+			"quote",
+			"removal",
+			"schedule",
+			"tow",
+			"towing"
+		],
+		"attributes_condition": [
+			"damaged",
+			"junk",
+			"running"
+		],
+		"user_problem": [],
+		"business_regulatory": [],
+		"vehicle_makes": [],
+		"other_proper_nouns": [
+			"Call",
+			"Yes"
+		]
+	},
+	"current_local_entities": [
+		"Boulder Highway",
+		"Eastern Avenue",
+		"I-15",
+		"Las Vegas",
+		"Maryland Parkway",
+		"Paradise",
+		"Paradise Road",
+		"South Maryland Parkway",
+		"Sunrise Manor",
+		"Swenson Street"
+	],
+	"entity_relationships": {
+		"local--process": 6,
+		"attributes_condition--local": 5,
+		"attributes_condition--process": 3
+	},
+	"current_sections": [
+		{
+			"type": "content",
+			"heading": "Junk Car Buyers in Paradise, NV",
+			"has_table": false,
+			"has_blocks": false,
+			"has_image": false
+		},
+		{
+			"type": "content",
+			"heading": "How Selling Works in Paradise",
+			"has_table": false,
+			"has_blocks": false,
+			"has_image": false
+		},
+		{
+			"type": "content",
+			"heading": "Paradise Neighborhoods We Serve",
+			"has_table": false,
+			"has_blocks": false,
+			"has_image": false
+		}
+	],
+	"current_faq_topics": [
+		"Do you pick up junk cars near UNLV in Paradise?",
+		"How much do you pay for junk cars in Paradise?",
+		"Can you pick up a car from a commercial property in Paradise?",
+		"Is same-day pickup available in Paradise?"
+	],
+	"current_internal_links": {
+		"declared_legacy_metadata": {
+			"services": [
+				"sedans",
+				"trucks-suvs",
+				"damaged",
+				"non-running"
+			],
+			"locations": [
+				"las-vegas",
+				"henderson",
+				"spring-valley",
+				"enterprise"
+			]
+		},
+		"actually_rendered": {
+			"areas_sections": [],
+			"services_sections": [],
+			"autolinked_cities": [
+				"Las Vegas"
+			]
+		},
+		"declared_but_not_rendered": [
+			"damaged",
+			"enterprise",
+			"henderson",
+			"las-vegas",
+			"non-running",
+			"sedans",
+			"spring-valley",
+			"trucks-suvs"
+		]
+	},
+	"current_business_claims": [
+		{
+			"text": "Serving the Paradise area with free towing and same-day offers on junk and non-running vehicles.",
+			"types": [
+				"service_guarantee",
+				"process_claim"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "Paradise is one of the most densely populated areas in the Las Vegas valley, stretching from the Strip corridor through the UNLV area and into the residential neighborhoods east of I-15.",
+			"types": [
+				"unverifiable"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "We serve all of Paradise with free towing and same-day pickup.",
+			"types": [
+				"service_guarantee",
+				"process_claim"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "Whether your car is parked at a residence near Maryland Parkway or behind a commercial property on Eastern Avenue, we'll come to you and pay cash on the spot.",
+			"types": [
+				"pricing_payment"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "We'll give you a cash offer immediately.",
+			"types": [
+				"pricing_payment"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "Our tow truck arrives, we verify the vehicle, pay you in cash, and remove the car.",
+			"types": [
+				"pricing_payment"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "The entire process is usually completed the same day, and there are never any fees for towing, paperwork, or pickup.",
+			"types": [
+				"service_guarantee",
+				"process_claim"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "How much do you pay for junk cars in Paradise?",
+			"types": [
+				"pricing_payment"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "Is same-day pickup available in Paradise?",
+			"types": [
+				"process_claim"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "Students and residents alike use our service to sell cars they no longer need.",
+			"types": [
+				"local_fact"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "Offers range from $200 to $5,000+ depending on the vehicle's year, make, model, and condition.",
+			"types": [
+				"pricing_payment"
+			],
+			"money": [
+				"$200 to $5,000+"
+			],
+			"risk": "medium"
+		},
+		{
+			"text": "Call for a free quote specific to your car.",
+			"types": [
+				"pricing_payment",
+				"service_guarantee"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "Yes, most Paradise pickups are completed the same day.",
+			"types": [
+				"process_claim",
+				"unverifiable"
+			],
+			"money": [],
+			"risk": "low"
+		}
+	],
+	"claim_counts": {
+		"service_guarantee": 4,
+		"process_claim": 5,
+		"unverifiable": 2,
+		"pricing_payment": 6,
+		"local_fact": 1
+	},
+	"current_information_gain": {
+		"verdict": "LOCAL_NAME_SUBSTITUTION_ONLY",
+		"unique_phrase_count": 337,
+		"shared_phrase_count": 56,
+		"boilerplate_phrase_count": 3,
+		"unique_share": 0.851,
+		"boilerplate_share": 0.0076,
+		"sample_unique_phrases": [
+			"000 depending on the vehicle's",
+			"15 and boulder highway no",
+			"15 we buy cars in",
+			"15 with that density comes",
+			"a callback if you accept",
+			"a car from a commercial",
+			"a cash offer immediately no",
+			"a commercial property in paradise"
+		],
+		"sample_boilerplate_phrases": [
+			"can you pick up a",
+			"we buy junk cars in",
+			"year make model and condition"
+		],
+		"unique_local_entities": [
+			"Maryland Parkway",
+			"Paradise",
+			"Paradise Road",
+			"South Maryland Parkway",
+			"Sunrise Manor",
+			"Swenson Street"
+		],
+		"unique_nonlocal_entities": [],
+		"has_unique_structure": false
+	},
+	"current_unique_elements": {
+		"sections_with_structure": [],
+		"unique_local_entities": [
+			"Maryland Parkway",
+			"Paradise",
+			"Paradise Road",
+			"South Maryland Parkway",
+			"Sunrise Manor",
+			"Swenson Street"
+		],
+		"unique_phrase_share": 0.851
+	},
+	"current_generic_elements": {
+		"prose_only_sections": [
+			"content[0]: Junk Car Buyers in Paradise, NV",
+			"content[1]: How Selling Works in Paradise",
+			"content[2]: Paradise Neighborhoods We Serve"
+		],
+		"boilerplate_phrase_share": 0.0076,
+		"shared_local_entities": [
+			"Boulder Highway",
+			"Eastern Avenue",
+			"I-15",
+			"Las Vegas"
+		]
+	},
+	"likely_sibling_overlap": {
+		"max_masked_vocabulary_similarity": 0.2863,
+		"max_clone_signals": 5,
+		"closest_sibling": "las-vegas",
+		"superficial_differentiation_flags": [
+			"IDENTICAL_STRUCTURE",
+			"LEXICAL_ECHO",
+			"NEAR_IDENTICAL_ONCE_PLACES_MASKED",
+			"SHARED_ENTITY_FRAME",
+			"SHARED_FAQ_ANSWER_SUBSTANCE",
+			"SHARED_FAQ_TOPICS",
+			"SHARED_VOCABULARY"
+		],
+		"assessment": "SUPERFICIAL_DIFFERENTIATION"
+	},
+	"known_quality_issues": [
+		"BELOW_500_WORDS — SEO_STANDARDS.md §6 minimum for a location page",
+		"STRUCTURE_MATCHES_SIBLINGS",
+		"FAQ_SUBSTANCE_SHARED_WITH_SIBLINGS",
+		"SAME_TOPIC_FRAME_AS_SIBLINGS",
+		"NO_PAGE_SPECIFIC_CLOSING_CTA"
+	],
+	"rewrite_priority": "REWRITE"
+}

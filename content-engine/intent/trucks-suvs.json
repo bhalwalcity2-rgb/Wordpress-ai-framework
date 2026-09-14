@@ -1,0 +1,78 @@
+{
+	"slug": "trucks-suvs",
+	"generated": {
+		"by": "bootstrap-research.py",
+		"note": "Scaffolded from the existing corpus by bootstrap-research.py. NO EXTERNAL RESEARCH WAS PERFORMED. Every item is marked with the evidence level it actually has; nothing here may be treated as verified until a researcher answers the open questions and records a real source."
+	},
+	"primary_intent": "commercial_investigation",
+	"secondary_intents": [
+		"transactional",
+		"navigational_local",
+		"informational"
+	],
+	"user_stage": "solution_aware",
+	"conversion_goal": "Phone call or instant-offer submission",
+	"decision_questions": [
+		{
+			"question": "How much do you pay for junk trucks in Las Vegas?",
+			"required_answer": "TO BE RESEARCHED",
+			"status": "unresolved"
+		},
+		{
+			"question": "Do you buy 4x4 trucks and SUVs?",
+			"required_answer": "TO BE RESEARCHED",
+			"status": "unresolved"
+		},
+		{
+			"question": "Can you tow a heavy-duty truck like an F-250?",
+			"required_answer": "TO BE RESEARCHED",
+			"status": "unresolved"
+		},
+		{
+			"question": "Will you buy a truck with a blown engine?",
+			"required_answer": "TO BE RESEARCHED",
+			"status": "unresolved"
+		}
+	],
+	"objections": [
+		{
+			"objection": "Is the quoted price the price I actually get?",
+			"response_requirement": "Needs a sourced statement of the firm-offer policy."
+		},
+		{
+			"objection": "Can I sell without the title?",
+			"response_requirement": "Needs an authoritative Nevada DMV source before answering."
+		}
+	],
+	"queries": [
+		{
+			"query": "how much pay junk trucks las vegas",
+			"intent": "commercial_investigation",
+			"question": "How much do you pay for junk trucks in Las Vegas?",
+			"satisfied_by": "",
+			"provenance": "observed_in_existing_copy"
+		},
+		{
+			"query": "buy 4x4 trucks suvs",
+			"intent": "commercial_investigation",
+			"question": "Do you buy 4x4 trucks and SUVs?",
+			"satisfied_by": "",
+			"provenance": "observed_in_existing_copy"
+		},
+		{
+			"query": "tow heavy duty truck like f 250",
+			"intent": "commercial_investigation",
+			"question": "Can you tow a heavy-duty truck like an F-250?",
+			"satisfied_by": "",
+			"provenance": "observed_in_existing_copy"
+		},
+		{
+			"query": "buy truck blown engine",
+			"intent": "commercial_investigation",
+			"question": "Will you buy a truck with a blown engine?",
+			"satisfied_by": "",
+			"provenance": "observed_in_existing_copy"
+		}
+	],
+	"cannibalisation_risk": []
+}

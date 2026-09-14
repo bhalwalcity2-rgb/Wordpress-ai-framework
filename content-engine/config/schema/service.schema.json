@@ -1,0 +1,59 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "service.schema.json",
+	"title": "Service page content (canonical v2)",
+	"description": "Contract for wordpress/themes/<theme>/content/services/<slug>.json. Canonical per ADR-0003. Rendered by template-parts/written-page.php, the same renderer location pages use — a service file with sections publishes them; one without falls back to the config-driven layout. See docs/architecture/content-schema.md.",
+	"type": "object",
+	"required": [
+		"slug",
+		"seo_title",
+		"seo_description",
+		"hero_heading",
+		"hero_description",
+		"sections"
+	],
+	"additionalProperties": false,
+	"properties": {
+		"slug": {
+			"description": "Must match the filename and a services.cards item slug in business-config.php.",
+			"type": "string",
+			"pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+		},
+		"seo_title": {
+			"description": "Read directly by lvjcb_compute_seo(). SEO_STANDARDS.md §3 caps this at 60 characters after {business} resolves.",
+			"$ref": "common.schema.json#/definitions/nonEmptyString"
+		},
+		"seo_description": {
+			"description": "Read directly by lvjcb_compute_seo(), then truncated at 155 characters by lvjcb_truncate_for_seo().",
+			"$ref": "common.schema.json#/definitions/nonEmptyString"
+		},
+		"hero_heading": {
+			"$ref": "common.schema.json#/definitions/nonEmptyString"
+		},
+		"hero_description": {
+			"$ref": "common.schema.json#/definitions/prose"
+		},
+		"sections": {
+			"type": "array",
+			"minItems": 1,
+			"items": {
+				"$ref": "common.schema.json#/definitions/section"
+			}
+		},
+		"faq_heading": {
+			"type": "string"
+		},
+		"faq": {
+			"type": "array",
+			"items": {
+				"$ref": "common.schema.json#/definitions/faqItem"
+			}
+		},
+		"final_cta": {
+			"$ref": "common.schema.json#/definitions/finalCta"
+		},
+		"internal_links": {
+			"$ref": "common.schema.json#/definitions/internalLinks"
+		}
+	}
+}

@@ -1,0 +1,179 @@
+{
+	"slug": "las-vegas",
+	"target_type": "location",
+	"display_name": "junk car buying in Las Vegas",
+	"generated": {
+		"by": "bootstrap-research.py",
+		"note": "Scaffolded from the existing corpus by bootstrap-research.py. NO EXTERNAL RESEARCH WAS PERFORMED. Every item is marked with the evidence level it actually has; nothing here may be treated as verified until a researcher answers the open questions and records a real source."
+	},
+	"research_status": {
+		"overall": "unresolved",
+		"researched_count": 2,
+		"verified_count": 1,
+		"unresolved_count": 21,
+		"unsupported_count": 0,
+		"editorial_opportunity_count": 0,
+		"blocking_gaps": [
+			"q-las-vegas-local-condition",
+			"q-las-vegas-01-free-towing-hidden-fees",
+			"q-las-vegas-02-car-truck-suv-van",
+			"q-las-vegas-03-second-give-firm-cash",
+			"q-las-vegas-04-number-quote-number-get",
+			"q-las-vegas-06-tow-truck-comes-location"
+		]
+	},
+	"sections": {
+		"geographic_context": [
+			{
+				"id": "las-vegas-is-service-area",
+				"statement": "junk car buying in Las Vegas is a configured service area for this business.",
+				"why_it_matters": "Establishes that the business serves the area at all.",
+				"provenance": {
+					"evidence_level": "business_provided",
+					"status": "verified",
+					"source_type": "official_business",
+					"source": "wordpress/themes/<theme>/inc/business-config.php"
+				}
+			}
+		],
+		"service_relevance": [
+			{
+				"id": "las-vegas-existing-coverage",
+				"statement": "The existing page covers 569 words across 4 sections.",
+				"why_it_matters": "Baseline for judging whether a rewrite adds anything.",
+				"provenance": {
+					"evidence_level": "research_observation",
+					"status": "researched",
+					"source_type": "research_observation",
+					"source": "content-engine/brief/las-vegas.json"
+				}
+			}
+		],
+		"community_context": [
+			{
+				"id": "las-vegas-named-places",
+				"statement": "Places named in existing copy: Centennial Hills, Las Vegas, Peccole Ranch, Summerlin.",
+				"why_it_matters": "Place names alone do not differentiate a page; recorded for reference only.",
+				"provenance": {
+					"evidence_level": "research_observation",
+					"status": "researched",
+					"source_type": "research_observation",
+					"source": "existing page copy"
+				}
+			}
+		]
+	},
+	"open_questions": [
+		{
+			"id": "q-las-vegas-local-condition",
+			"question": "What local condition in this area materially changes how or why someone sells a junk car, versus elsewhere in the valley?",
+			"why": "Without an answer this page has no supported angle and should not be written. A different landmark is not an answer.",
+			"suggested_source_type": "official_government",
+			"blocks_angle": "las-vegas-primary"
+		},
+		{
+			"id": "q-las-vegas-01-free-towing-hidden-fees",
+			"question": "What authoritative source supports: \"Free towing, no hidden fees, and cash in hand before our truck leaves your driveway.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-las-vegas-02-car-truck-suv-van",
+			"question": "What authoritative source supports: \"If you have a car, truck, SUV, or van you want gone, we will make you a cash offer and pick it up for free.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-las-vegas-03-second-give-firm-cash",
+			"question": "What authoritative source supports: \"Second, we give you a firm cash offer — no haggling, no lowball games.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-las-vegas-04-number-quote-number-get",
+			"question": "What authoritative source supports: \"The number we quote is the number you get.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-las-vegas-06-tow-truck-comes-location",
+			"question": "What authoritative source supports: \"Our tow truck comes to your location anywhere in Las Vegas, we hand you cash, and we take the car.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-las-vegas-07-most-sellers-cash-hand",
+			"question": "What authoritative source supports: \"Most sellers have cash in hand within hours of their first call.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-las-vegas-08-handle-all-paperwork-including",
+			"question": "What authoritative source supports: \"We handle all the paperwork, including the DMV title transfer.\"?",
+			"why": "Live copy asserts this with no source. Risk: high.",
+			"suggested_source_type": "official_government",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-las-vegas-11-how-much-pay-junk",
+			"question": "What authoritative source supports: \"How much will you pay for my junk car in Las Vegas?\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-las-vegas-12-buy-cars-without-title",
+			"question": "What authoritative source supports: \"Do you buy cars without a title in Las Vegas?\"?",
+			"why": "Live copy asserts this with no source. Risk: high.",
+			"suggested_source_type": "official_government",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-las-vegas-13-offers-typically-range-200",
+			"question": "What authoritative source supports: \"Offers typically range from $200 to $5,000 or more, depending on the year, make, model, weight, and condition of the vehicle.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-las-vegas-14-call-free-obligation-quote",
+			"question": "What authoritative source supports: \"Call us for a free, no-obligation quote specific to your car.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-las-vegas-16-nevada-law-allows-alternative",
+			"question": "What authoritative source supports: \"Nevada law allows for alternative documentation in certain situations.\"?",
+			"why": "Live copy asserts this with no source. Risk: high.",
+			"suggested_source_type": "official_government",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-las-vegas-20-full-amount-cash-offer",
+			"question": "What authoritative source supports: \"The full amount of your cash offer is what you receive — nothing is deducted for towing\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		}
+	],
+	"corpus_context": {
+		"phase_3b_assessment": "ORPHAN",
+		"information_gain_verdict": "LOCAL_NAME_SUBSTITUTION_ONLY",
+		"rewrite_priority": "CONSIDER REMOVAL",
+		"closest_sibling": "paradise",
+		"known_quality_issues": [
+			"DOES_NOT_RENDER — no page exists for this file",
+			"STRUCTURE_MATCHES_SIBLINGS",
+			"FAQ_SUBSTANCE_SHARED_WITH_SIBLINGS",
+			"SAME_TOPIC_FRAME_AS_SIBLINGS",
+			"NO_PAGE_SPECIFIC_CLOSING_CTA"
+		]
+	}
+}

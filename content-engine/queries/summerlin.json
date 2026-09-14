@@ -1,0 +1,59 @@
+{
+	"slug": "summerlin",
+	"generated": {
+		"by": "bootstrap-research.py",
+		"note": "Scaffolded from the existing corpus by bootstrap-research.py. NO EXTERNAL RESEARCH WAS PERFORMED. Every item is marked with the evidence level it actually has; nothing here may be treated as verified until a researcher answers the open questions and records a real source."
+	},
+	"concepts": [
+		{
+			"concept": "car community hoa junk pick",
+			"intent": "navigational_local",
+			"user_need": "Can you pick up a junk car from my Summerlin HOA community?",
+			"representative_queries": [
+				"pick up junk car summerlin hoa community"
+			],
+			"covered_by_existing_page": true,
+			"shared_with_siblings": true,
+			"notes": "Derived from an existing FAQ. Not search volume data."
+		},
+		{
+			"concept": "cars how junk much pay",
+			"intent": "navigational_local",
+			"user_need": "How much do you pay for junk cars in Summerlin?",
+			"representative_queries": [
+				"how much pay junk cars summerlin"
+			],
+			"covered_by_existing_page": true,
+			"shared_with_siblings": true,
+			"notes": "Derived from an existing FAQ. Not search volume data."
+		},
+		{
+			"concept": "buy cars failed smog summerlin",
+			"intent": "navigational_local",
+			"user_need": "Do you buy cars that failed smog in Summerlin?",
+			"representative_queries": [
+				"buy cars failed smog summerlin"
+			],
+			"covered_by_existing_page": true,
+			"shared_with_siblings": false,
+			"notes": "Derived from an existing FAQ. Not search volume data."
+		},
+		{
+			"concept": "car fast how junk remove",
+			"intent": "navigational_local",
+			"user_need": "How fast can you remove a junk car from Summerlin?",
+			"representative_queries": [
+				"how fast remove junk car summerlin"
+			],
+			"covered_by_existing_page": true,
+			"shared_with_siblings": true,
+			"notes": "Derived from an existing FAQ. Not search volume data."
+		}
+	],
+	"coverage_summary": {
+		"total_concepts": 4,
+		"shared_with_siblings": 3,
+		"distinctive_concepts": 1,
+		"uncovered_by_existing_page": 0
+	}
+}

@@ -1,0 +1,338 @@
+{
+	"_generated_by": "content-engine/bin/analyze-corpus.py",
+	"_purpose": "Analytical record of what this page does TODAY. Not a writing instruction — it must never be used to reproduce the weaknesses it documents.",
+	"_method": "Lexical extraction, standard library only. No semantic model.",
+	"slug": "boulder-city",
+	"page_type": "location",
+	"renders": true,
+	"word_count": 398,
+	"current_primary_topic": "junk car buying in Boulder City",
+	"current_primary_intent": "local",
+	"secondary_intents": [
+		"transactional",
+		"informational"
+	],
+	"current_keyword_focus": {
+		"seo_title": "We Buy Junk Cars in Boulder City, NV | {business}",
+		"hero_heading": "We Buy Junk Cars in Boulder City",
+		"top_terms": [
+			"boulder",
+			"city",
+			"offer",
+			"towing",
+			"cash",
+			"buy",
+			"junk",
+			"free",
+			"vehicle",
+			"cars",
+			"further",
+			"day"
+		]
+	},
+	"current_query_entities": [
+		"Is towing really free from Boulder City?",
+		"How quickly can you pick up a car in Boulder City?",
+		"Do you buy junk cars in the Boulder City historic district?",
+		"What types of vehicles do you buy in Boulder City?"
+	],
+	"current_entities": {
+		"main_topic": "junk car buying in Boulder City",
+		"local": [
+			"Adams Boulevard",
+			"Because Boulder City",
+			"Boulder City",
+			"Boulder City Boulder City",
+			"Buchanan Boulevard",
+			"Las Vegas",
+			"Most Boulder City",
+			"US-93",
+			"Utah Street"
+		],
+		"process": [
+			"offer",
+			"pickup",
+			"schedule",
+			"scheduling",
+			"tow",
+			"towing"
+		],
+		"attributes_condition": [
+			"junk",
+			"running",
+			"wrecked"
+		],
+		"user_problem": [],
+		"business_regulatory": [],
+		"vehicle_makes": [],
+		"other_proper_nouns": [
+			"Yes"
+		]
+	},
+	"current_local_entities": [
+		"Adams Boulevard",
+		"Because Boulder City",
+		"Boulder City",
+		"Boulder City Boulder City",
+		"Buchanan Boulevard",
+		"Las Vegas",
+		"Most Boulder City",
+		"US-93",
+		"Utah Street"
+	],
+	"entity_relationships": {
+		"local--process": 12,
+		"attributes_condition--local": 4,
+		"attributes_condition--process": 1
+	},
+	"current_sections": [
+		{
+			"type": "content",
+			"heading": "Junk Car Buyers Serving Boulder City",
+			"has_table": false,
+			"has_blocks": false,
+			"has_image": false
+		},
+		{
+			"type": "content",
+			"heading": "How to Sell Your Junk Car in Boulder City",
+			"has_table": false,
+			"has_blocks": false,
+			"has_image": false
+		},
+		{
+			"type": "content",
+			"heading": "Boulder City Service Coverage",
+			"has_table": false,
+			"has_blocks": false,
+			"has_image": false
+		}
+	],
+	"current_faq_topics": [
+		"Is towing really free from Boulder City?",
+		"How quickly can you pick up a car in Boulder City?",
+		"Do you buy junk cars in the Boulder City historic district?",
+		"What types of vehicles do you buy in Boulder City?"
+	],
+	"current_internal_links": {
+		"declared_legacy_metadata": {
+			"services": [
+				"sedans",
+				"trucks-suvs",
+				"damaged",
+				"non-running"
+			],
+			"locations": [
+				"henderson",
+				"las-vegas",
+				"paradise",
+				"enterprise"
+			]
+		},
+		"actually_rendered": {
+			"areas_sections": [],
+			"services_sections": [],
+			"autolinked_cities": [
+				"Las Vegas"
+			]
+		},
+		"declared_but_not_rendered": [
+			"damaged",
+			"enterprise",
+			"henderson",
+			"las-vegas",
+			"non-running",
+			"paradise",
+			"sedans",
+			"trucks-suvs"
+		]
+	},
+	"current_business_claims": [
+		{
+			"text": "Boulder City is a bit further from our base, but we still offer the same free towing, same-day service, and fair cash offers.",
+			"types": [
+				"pricing_payment",
+				"service_guarantee",
+				"process_claim"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "No extra charge for the distance — the offer you get is the cash you keep.",
+			"types": [
+				"pricing_payment"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "If you have a junk or unwanted vehicle in Boulder City, we will come to you with free towing and pay you cash on the spot — the same service we offer everywhere else in the valley.",
+			"types": [
+				"pricing_payment",
+				"service_guarantee"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "Boulder City's smaller-town feel means word travels fast, and many of our Boulder City customers come through referrals from neighbors who have already sold a vehicle to us.",
+			"types": [
+				"unverifiable"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "Call {phone}, describe your vehicle, and receive a firm cash offer.",
+			"types": [
+				"pricing_payment",
+				"service_guarantee"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "Because Boulder City is a bit further out, we ask for a little more scheduling flexibility — but most pickups still happen the same day or the next morning.",
+			"types": [
+				"process_claim",
+				"unverifiable"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "When our truck arrives, we verify the vehicle, hand you cash, and tow it away at no cost.",
+			"types": [
+				"pricing_payment"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "Is towing really free from Boulder City?",
+			"types": [
+				"service_guarantee"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "Yes, towing is always free regardless of distance.",
+			"types": [
+				"service_guarantee"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "We never deduct towing costs from your offer, even for Boulder City pickups which are further from our base.",
+			"types": [
+				"service_guarantee"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "Most Boulder City pickups happen the same day or next morning.",
+			"types": [
+				"process_claim",
+				"unverifiable"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "The drive from Las Vegas is about 30 minutes, so we coordinate our schedule to make the trip efficient.",
+			"types": [
+				"process_claim"
+			],
+			"money": [],
+			"risk": "low"
+		}
+	],
+	"claim_counts": {
+		"pricing_payment": 5,
+		"service_guarantee": 6,
+		"process_claim": 4,
+		"unverifiable": 3
+	},
+	"current_information_gain": {
+		"verdict": "LOCAL_NAME_SUBSTITUTION_ONLY",
+		"unique_phrase_count": 374,
+		"shared_phrase_count": 15,
+		"boilerplate_phrase_count": 2,
+		"unique_share": 0.9565,
+		"boilerplate_share": 0.0051,
+		"sample_unique_phrases": [
+			"30 miles southeast of las",
+			"30 minutes so we coordinate",
+			"93 corridor leading toward hoover",
+			"a bit further from our",
+			"a bit further out we",
+			"a car in boulder city",
+			"a firm cash offer if",
+			"a junk or unwanted vehicle"
+		],
+		"sample_boilerplate_phrases": [
+			"can you pick up a",
+			"we buy junk cars in"
+		],
+		"unique_local_entities": [
+			"Adams Boulevard",
+			"Because Boulder City",
+			"Boulder City Boulder City",
+			"Buchanan Boulevard",
+			"Most Boulder City",
+			"US-93",
+			"Utah Street"
+		],
+		"unique_nonlocal_entities": [],
+		"has_unique_structure": false
+	},
+	"current_unique_elements": {
+		"sections_with_structure": [],
+		"unique_local_entities": [
+			"Adams Boulevard",
+			"Because Boulder City",
+			"Boulder City Boulder City",
+			"Buchanan Boulevard",
+			"Most Boulder City",
+			"US-93",
+			"Utah Street"
+		],
+		"unique_phrase_share": 0.9565
+	},
+	"current_generic_elements": {
+		"prose_only_sections": [
+			"content[0]: Junk Car Buyers Serving Boulder City",
+			"content[1]: How to Sell Your Junk Car in Boulder City",
+			"content[2]: Boulder City Service Coverage"
+		],
+		"boilerplate_phrase_share": 0.0051,
+		"shared_local_entities": [
+			"Boulder City",
+			"Las Vegas"
+		]
+	},
+	"likely_sibling_overlap": {
+		"max_masked_vocabulary_similarity": 0.2426,
+		"max_clone_signals": 2,
+		"closest_sibling": "paradise",
+		"superficial_differentiation_flags": [
+			"IDENTICAL_STRUCTURE",
+			"SHARED_ENTITY_FRAME",
+			"SHARED_FAQ_TOPICS",
+			"SHARED_HEADING_PLAN"
+		],
+		"assessment": "PARTIAL_DIFFERENTIATION"
+	},
+	"known_quality_issues": [
+		"BELOW_500_WORDS — SEO_STANDARDS.md §6 minimum for a location page",
+		"STRUCTURE_MATCHES_SIBLINGS",
+		"FAQ_SUBSTANCE_SHARED_WITH_SIBLINGS",
+		"SAME_TOPIC_FRAME_AS_SIBLINGS",
+		"NO_PAGE_SPECIFIC_CLOSING_CTA"
+	],
+	"rewrite_priority": "REWRITE"
+}

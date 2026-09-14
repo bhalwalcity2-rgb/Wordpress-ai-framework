@@ -1,0 +1,59 @@
+{
+	"slug": "trucks-suvs",
+	"generated": {
+		"by": "bootstrap-research.py",
+		"note": "Scaffolded from the existing corpus by bootstrap-research.py. NO EXTERNAL RESEARCH WAS PERFORMED. Every item is marked with the evidence level it actually has; nothing here may be treated as verified until a researcher answers the open questions and records a real source."
+	},
+	"concepts": [
+		{
+			"concept": "how junk las much pay",
+			"intent": "commercial_investigation",
+			"user_need": "How much do you pay for junk trucks in Las Vegas?",
+			"representative_queries": [
+				"how much pay junk trucks las vegas"
+			],
+			"covered_by_existing_page": true,
+			"shared_with_siblings": true,
+			"notes": "Derived from an existing FAQ. Not search volume data."
+		},
+		{
+			"concept": "4x4 buy suvs trucks",
+			"intent": "commercial_investigation",
+			"user_need": "Do you buy 4x4 trucks and SUVs?",
+			"representative_queries": [
+				"buy 4x4 trucks suvs"
+			],
+			"covered_by_existing_page": true,
+			"shared_with_siblings": false,
+			"notes": "Derived from an existing FAQ. Not search volume data."
+		},
+		{
+			"concept": "250 duty f heavy like",
+			"intent": "commercial_investigation",
+			"user_need": "Can you tow a heavy-duty truck like an F-250?",
+			"representative_queries": [
+				"tow heavy duty truck like f 250"
+			],
+			"covered_by_existing_page": true,
+			"shared_with_siblings": false,
+			"notes": "Derived from an existing FAQ. Not search volume data."
+		},
+		{
+			"concept": "blown buy engine truck",
+			"intent": "commercial_investigation",
+			"user_need": "Will you buy a truck with a blown engine?",
+			"representative_queries": [
+				"buy truck blown engine"
+			],
+			"covered_by_existing_page": true,
+			"shared_with_siblings": true,
+			"notes": "Derived from an existing FAQ. Not search volume data."
+		}
+	],
+	"coverage_summary": {
+		"total_concepts": 4,
+		"shared_with_siblings": 2,
+		"distinctive_concepts": 2,
+		"uncovered_by_existing_page": 0
+	}
+}

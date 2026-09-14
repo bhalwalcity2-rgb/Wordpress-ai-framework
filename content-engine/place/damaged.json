@@ -1,0 +1,134 @@
+{
+	"slug": "damaged",
+	"target_type": "service",
+	"display_name": "junk car buying — damaged",
+	"generated": {
+		"by": "bootstrap-research.py",
+		"note": "Scaffolded from the existing corpus by bootstrap-research.py. NO EXTERNAL RESEARCH WAS PERFORMED. Every item is marked with the evidence level it actually has; nothing here may be treated as verified until a researcher answers the open questions and records a real source."
+	},
+	"research_status": {
+		"overall": "unresolved",
+		"researched_count": 3,
+		"verified_count": 0,
+		"unresolved_count": 9,
+		"unsupported_count": 0,
+		"editorial_opportunity_count": 0,
+		"blocking_gaps": [
+			"q-damaged-00-cash-accident-storm-damaged",
+			"q-damaged-01-insurance-totaled-body-shop",
+			"q-damaged-02-well-tow-wherever-sits",
+			"q-damaged-03-metal-parts-components-worth",
+			"q-damaged-04-well-give-firm-cash",
+			"q-damaged-05-car-caught-las-vegas"
+		]
+	},
+	"sections": {
+		"service_relevance": [
+			{
+				"id": "damaged-existing-coverage",
+				"statement": "The existing page covers 523 words across 4 sections.",
+				"why_it_matters": "Baseline for judging whether a rewrite adds anything.",
+				"provenance": {
+					"evidence_level": "research_observation",
+					"status": "researched",
+					"source_type": "research_observation",
+					"source": "content-engine/brief/damaged.json"
+				}
+			}
+		],
+		"business_relevant_situations": [
+			{
+				"id": "damaged-distinct-topics",
+				"statement": "The page raises topics no sibling raises: damaged, totaled, quote, salvage, fine, insurance.",
+				"why_it_matters": "These are the only candidate grounds for a differentiated angle.",
+				"provenance": {
+					"evidence_level": "research_observation",
+					"status": "researched",
+					"source_type": "research_observation",
+					"source": "content-engine/reports/differentiation/damaged.json"
+				}
+			}
+		],
+		"community_context": [
+			{
+				"id": "damaged-named-places",
+				"statement": "Places named in existing copy: Las Vegas.",
+				"why_it_matters": "Place names alone do not differentiate a page; recorded for reference only.",
+				"provenance": {
+					"evidence_level": "research_observation",
+					"status": "researched",
+					"source_type": "research_observation",
+					"source": "existing page copy"
+				}
+			}
+		]
+	},
+	"open_questions": [
+		{
+			"id": "q-damaged-00-cash-accident-storm-damaged",
+			"question": "What authoritative source supports: \"Cash for Accident & Storm-Damaged Vehicles.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-damaged-01-insurance-totaled-body-shop",
+			"question": "What authoritative source supports: \"Insurance may have totaled it, the body shop quote is more than the car is worth, or the damage is so severe that no dealership wi\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-damaged-02-well-tow-wherever-sits",
+			"question": "What authoritative source supports: \"We'll tow it from wherever it sits and pay you cash.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-damaged-03-metal-parts-components-worth",
+			"question": "What authoritative source supports: \"The metal, parts, and components are worth something regardless of the vehicle's driveability.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-damaged-04-well-give-firm-cash",
+			"question": "What authoritative source supports: \"We'll give you a firm cash offer based on your description.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-damaged-05-car-caught-las-vegas",
+			"question": "What authoritative source supports: \"If your car was caught in a Las Vegas flash flood, selling it to us for cash is often the fastest and most practical option.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-damaged-06-how-much-totaled-car",
+			"question": "What authoritative source supports: \"How much is a totaled car worth in Las Vegas?\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-damaged-07-totaled-vehicles-typically-sell",
+			"question": "What authoritative source supports: \"Totaled vehicles typically sell for $300 to $3,000+.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		}
+	],
+	"corpus_context": {
+		"phase_3b_assessment": "REAL_DIFFERENTIATION",
+		"information_gain_verdict": "HAS_INFORMATION_GAIN",
+		"rewrite_priority": "REFINE",
+		"closest_sibling": "non-running",
+		"known_quality_issues": [
+			"STRUCTURE_MATCHES_SIBLINGS",
+			"NO_PAGE_SPECIFIC_CLOSING_CTA"
+		]
+	}
+}

@@ -1,0 +1,151 @@
+{
+	"slug": "enterprise",
+	"target_type": "location",
+	"display_name": "junk car buying in Enterprise",
+	"generated": {
+		"by": "bootstrap-research.py",
+		"note": "Scaffolded from the existing corpus by bootstrap-research.py. NO EXTERNAL RESEARCH WAS PERFORMED. Every item is marked with the evidence level it actually has; nothing here may be treated as verified until a researcher answers the open questions and records a real source."
+	},
+	"research_status": {
+		"overall": "unresolved",
+		"researched_count": 2,
+		"verified_count": 1,
+		"unresolved_count": 11,
+		"unsupported_count": 0,
+		"editorial_opportunity_count": 0,
+		"blocking_gaps": [
+			"q-enterprise-local-condition",
+			"q-enterprise-00-free-towing-driveway-day",
+			"q-enterprise-02-area-grown-service-buy",
+			"q-enterprise-03-whether-vehicle-parked-home",
+			"q-enterprise-04-well-quote-firm-price",
+			"q-enterprise-05-tow-truck-arrives-enterprise"
+		]
+	},
+	"sections": {
+		"geographic_context": [
+			{
+				"id": "enterprise-is-service-area",
+				"statement": "junk car buying in Enterprise is a configured service area for this business.",
+				"why_it_matters": "Establishes that the business serves the area at all.",
+				"provenance": {
+					"evidence_level": "business_provided",
+					"status": "verified",
+					"source_type": "official_business",
+					"source": "wordpress/themes/<theme>/inc/business-config.php"
+				}
+			}
+		],
+		"service_relevance": [
+			{
+				"id": "enterprise-existing-coverage",
+				"statement": "The existing page covers 395 words across 3 sections.",
+				"why_it_matters": "Baseline for judging whether a rewrite adds anything.",
+				"provenance": {
+					"evidence_level": "research_observation",
+					"status": "researched",
+					"source_type": "research_observation",
+					"source": "content-engine/brief/enterprise.json"
+				}
+			}
+		],
+		"community_context": [
+			{
+				"id": "enterprise-named-places",
+				"statement": "Places named in existing copy: Bermuda Road, Blue Diamond Road, Enterprise, I-15, Las Vegas, Silverado Ranch, South Las Vegas Boulevard, Warm Springs Road.",
+				"why_it_matters": "Place names alone do not differentiate a page; recorded for reference only.",
+				"provenance": {
+					"evidence_level": "research_observation",
+					"status": "researched",
+					"source_type": "research_observation",
+					"source": "existing page copy"
+				}
+			}
+		]
+	},
+	"open_questions": [
+		{
+			"id": "q-enterprise-local-condition",
+			"question": "What local condition in this area materially changes how or why someone sells a junk car, versus elsewhere in the valley?",
+			"why": "Without an answer this page has no supported angle and should not be written. A different landmark is not an answer.",
+			"suggested_source_type": "official_government",
+			"blocks_angle": "enterprise-primary"
+		},
+		{
+			"id": "q-enterprise-00-free-towing-driveway-day",
+			"question": "What authoritative source supports: \"Free towing from your driveway, same-day service, and cash paid on the spot.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-enterprise-02-area-grown-service-buy",
+			"question": "What authoritative source supports: \"As the area has grown, so has our service — we buy junk cars from Enterprise residents every week.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-enterprise-03-whether-vehicle-parked-home",
+			"question": "What authoritative source supports: \"Whether your vehicle is parked at a home near South Las Vegas Boulevard, in a subdivision off Bermuda Road, or anywhere else withi\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-enterprise-04-well-quote-firm-price",
+			"question": "What authoritative source supports: \"We'll quote you a firm price right then — no waiting, no games.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-enterprise-05-tow-truck-arrives-enterprise",
+			"question": "What authoritative source supports: \"Our tow truck arrives at your Enterprise address, the driver verifies the vehicle and hands you cash.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-enterprise-06-how-much-pay-junk",
+			"question": "What authoritative source supports: \"How much will you pay for my junk car in Enterprise?\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-enterprise-08-offers-depend-vehicle-typically",
+			"question": "What authoritative source supports: \"Offers depend on the vehicle and typically range from $200 to $5,000.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-enterprise-09-call-free-quote",
+			"question": "What authoritative source supports: \"Call for a free quote.\"?",
+			"why": "Live copy asserts this with no source. Risk: medium.",
+			"suggested_source_type": "official_business",
+			"blocks_angle": ""
+		},
+		{
+			"id": "q-enterprise-10-dont-title-call-often",
+			"question": "What authoritative source supports: \"If you don't have the title, call us — we can often still purchase the vehicle using alternative documentation allowed under Nevad\"?",
+			"why": "Live copy asserts this with no source. Risk: high.",
+			"suggested_source_type": "official_government",
+			"blocks_angle": ""
+		}
+	],
+	"corpus_context": {
+		"phase_3b_assessment": "SUPERFICIAL_DIFFERENTIATION",
+		"information_gain_verdict": "LOCAL_NAME_SUBSTITUTION_ONLY",
+		"rewrite_priority": "REWRITE",
+		"closest_sibling": "las-vegas",
+		"known_quality_issues": [
+			"BELOW_500_WORDS — SEO_STANDARDS.md §6 minimum for a location page",
+			"STRUCTURE_MATCHES_SIBLINGS",
+			"FAQ_SUBSTANCE_SHARED_WITH_SIBLINGS",
+			"SAME_TOPIC_FRAME_AS_SIBLINGS",
+			"NO_PAGE_SPECIFIC_CLOSING_CTA"
+		]
+	}
+}

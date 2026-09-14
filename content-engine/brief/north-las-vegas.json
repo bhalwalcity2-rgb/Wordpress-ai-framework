@@ -1,0 +1,337 @@
+{
+	"_generated_by": "content-engine/bin/analyze-corpus.py",
+	"_purpose": "Analytical record of what this page does TODAY. Not a writing instruction — it must never be used to reproduce the weaknesses it documents.",
+	"_method": "Lexical extraction, standard library only. No semantic model.",
+	"slug": "north-las-vegas",
+	"page_type": "location",
+	"renders": true,
+	"word_count": 489,
+	"current_primary_topic": "junk car buying in North Las Vegas",
+	"current_primary_intent": "local",
+	"secondary_intents": [
+		"transactional",
+		"commercial",
+		"informational"
+	],
+	"current_keyword_focus": {
+		"seo_title": "We Buy Junk Cars in North Las Vegas, NV | {business}",
+		"hero_heading": "We Buy Junk Cars in North Las Vegas",
+		"top_terms": [
+			"north",
+			"las",
+			"vegas",
+			"buy",
+			"vehicles",
+			"junk",
+			"pickup",
+			"up",
+			"free",
+			"condition",
+			"car",
+			"vehicle"
+		]
+	},
+	"current_query_entities": [
+		"Do you buy junk cars near Nellis Air Force Base?",
+		"How much is my junk car worth in North Las Vegas?",
+		"Can you pick up a car from an apartment complex in North Las Vegas?",
+		"Do I need to be present for the pickup in North Las Vegas?"
+	],
+	"current_entities": {
+		"main_topic": "junk car buying in North Las Vegas",
+		"local": [
+			"Ann Road",
+			"Carey Avenue",
+			"Cheyenne Avenue",
+			"Craig Road",
+			"North Las Vegas"
+		],
+		"process": [
+			"offer",
+			"paperwork",
+			"payment",
+			"pickup",
+			"quote",
+			"removal",
+			"schedule",
+			"tow",
+			"towing"
+		],
+		"attributes_condition": [
+			"blown",
+			"junk"
+		],
+		"user_problem": [],
+		"business_regulatory": [],
+		"vehicle_makes": [
+			"chevy",
+			"dodge",
+			"ford"
+		],
+		"other_proper_nouns": [
+			"Aliante",
+			"Call",
+			"Nellis Air Force Base",
+			"Yes"
+		]
+	},
+	"current_local_entities": [
+		"Ann Road",
+		"Carey Avenue",
+		"Cheyenne Avenue",
+		"Craig Road",
+		"North Las Vegas"
+	],
+	"entity_relationships": {
+		"local--process": 5,
+		"attributes_condition--local": 4,
+		"attributes_condition--process": 1
+	},
+	"current_sections": [
+		{
+			"type": "content",
+			"heading": "Junk Car Removal Across North Las Vegas",
+			"has_table": false,
+			"has_blocks": false,
+			"has_image": false
+		},
+		{
+			"type": "content",
+			"heading": "How It Works in North Las Vegas",
+			"has_table": false,
+			"has_blocks": false,
+			"has_image": false
+		},
+		{
+			"type": "content",
+			"heading": "North Las Vegas Areas We Serve",
+			"has_table": false,
+			"has_blocks": false,
+			"has_image": false
+		},
+		{
+			"type": "content",
+			"heading": "Common Vehicles We Buy in North Las Vegas",
+			"has_table": false,
+			"has_blocks": false,
+			"has_image": false
+		}
+	],
+	"current_faq_topics": [
+		"Do you buy junk cars near Nellis Air Force Base?",
+		"How much is my junk car worth in North Las Vegas?",
+		"Can you pick up a car from an apartment complex in North Las Vegas?",
+		"Do I need to be present for the pickup in North Las Vegas?"
+	],
+	"current_internal_links": {
+		"declared_legacy_metadata": {
+			"services": [
+				"sedans",
+				"trucks-suvs",
+				"damaged",
+				"non-running"
+			],
+			"locations": [
+				"las-vegas",
+				"summerlin",
+				"spring-valley",
+				"paradise"
+			]
+		},
+		"actually_rendered": {
+			"areas_sections": [],
+			"services_sections": [],
+			"autolinked_cities": [
+				"Las Vegas"
+			]
+		},
+		"declared_but_not_rendered": [
+			"damaged",
+			"las-vegas",
+			"non-running",
+			"paradise",
+			"sedans",
+			"spring-valley",
+			"summerlin",
+			"trucks-suvs"
+		]
+	},
+	"current_business_claims": [
+		{
+			"text": "Free towing, same-day pickup, and cash on the spot for vehicles in any condition.",
+			"types": [
+				"pricing_payment",
+				"service_guarantee",
+				"process_claim"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "Every pickup in North Las Vegas includes free towing.",
+			"types": [
+				"service_guarantee"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "We give you a cash offer on the spot — no waiting for callbacks, no haggling.",
+			"types": [
+				"pricing_payment"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "Accept the offer and we schedule a free pickup at your North Las Vegas address.",
+			"types": [
+				"service_guarantee"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "Our tow truck arrives at the agreed time, we verify the vehicle, pay you in cash, and load it up.",
+			"types": [
+				"pricing_payment"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "Most North Las Vegas sellers have the entire process completed within a few hours of their first call.",
+			"types": [
+				"process_claim",
+				"unverifiable"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "Blown engines, bad transmissions, body damage, rust, missing parts — we buy vehicles that most dealerships and private buyers won't touch.",
+			"types": [
+				"unverifiable"
+			],
+			"money": [],
+			"risk": "low"
+		},
+		{
+			"text": "How much is my junk car worth in North Las Vegas?",
+			"types": [
+				"pricing_payment"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "Offers range from $200 to $5,000+ based on the vehicle's year, make, model, weight, and condition.",
+			"types": [
+				"pricing_payment"
+			],
+			"money": [
+				"$200 to $5,000+"
+			],
+			"risk": "medium"
+		},
+		{
+			"text": "Call us for a free, no-obligation quote specific to your vehicle.",
+			"types": [
+				"pricing_payment",
+				"service_guarantee"
+			],
+			"money": [],
+			"risk": "medium"
+		},
+		{
+			"text": "Yes, someone needs to be present to sign the paperwork and receive payment.",
+			"types": [
+				"pricing_payment"
+			],
+			"money": [],
+			"risk": "medium"
+		}
+	],
+	"claim_counts": {
+		"pricing_payment": 7,
+		"service_guarantee": 4,
+		"process_claim": 2,
+		"unverifiable": 2
+	},
+	"current_information_gain": {
+		"verdict": "LOCAL_NAME_SUBSTITUTION_ONLY",
+		"unique_phrase_count": 410,
+		"shared_phrase_count": 70,
+		"boilerplate_phrase_count": 3,
+		"unique_share": 0.8489,
+		"boilerplate_share": 0.0062,
+		"sample_unique_phrases": [
+			"000 based on the vehicle's",
+			"150s chevy silverados dodge rams",
+			"200 to 5 000 based",
+			"5 000 based on the",
+			"a better offer and no",
+			"a car from an apartment",
+			"a cash offer on the",
+			"a driveway near craig road"
+		],
+		"sample_boilerplate_phrases": [
+			"can you pick up a",
+			"we buy junk cars in",
+			"year make model and condition"
+		],
+		"unique_local_entities": [
+			"Ann Road",
+			"Carey Avenue",
+			"Cheyenne Avenue",
+			"North Las Vegas"
+		],
+		"unique_nonlocal_entities": [],
+		"has_unique_structure": false
+	},
+	"current_unique_elements": {
+		"sections_with_structure": [],
+		"unique_local_entities": [
+			"Ann Road",
+			"Carey Avenue",
+			"Cheyenne Avenue",
+			"North Las Vegas"
+		],
+		"unique_phrase_share": 0.8489
+	},
+	"current_generic_elements": {
+		"prose_only_sections": [
+			"content[0]: Junk Car Removal Across North Las Vegas",
+			"content[1]: How It Works in North Las Vegas",
+			"content[2]: North Las Vegas Areas We Serve",
+			"content[3]: Common Vehicles We Buy in North Las Vegas"
+		],
+		"boilerplate_phrase_share": 0.0062,
+		"shared_local_entities": [
+			"Craig Road"
+		]
+	},
+	"likely_sibling_overlap": {
+		"max_masked_vocabulary_similarity": 0.3175,
+		"max_clone_signals": 4,
+		"closest_sibling": "paradise",
+		"superficial_differentiation_flags": [
+			"IDENTICAL_STRUCTURE",
+			"LEXICAL_ECHO",
+			"NEAR_IDENTICAL_ONCE_PLACES_MASKED",
+			"SHARED_ENTITY_FRAME",
+			"SHARED_FAQ_ANSWER_SUBSTANCE",
+			"SHARED_FAQ_TOPICS",
+			"SHARED_VOCABULARY"
+		],
+		"assessment": "SUPERFICIAL_DIFFERENTIATION"
+	},
+	"known_quality_issues": [
+		"BELOW_500_WORDS — SEO_STANDARDS.md §6 minimum for a location page",
+		"STRUCTURE_MATCHES_SIBLINGS",
+		"FAQ_SUBSTANCE_SHARED_WITH_SIBLINGS",
+		"SAME_TOPIC_FRAME_AS_SIBLINGS",
+		"NO_PAGE_SPECIFIC_CLOSING_CTA"
+	],
+	"rewrite_priority": "REWRITE"
+}

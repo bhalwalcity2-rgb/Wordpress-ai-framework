@@ -1,0 +1,52 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "entities.schema.json",
+	"title": "Entity and attribute map for one page",
+	"description": "content-engine/entities/{slug}.json. A topic graph, not a keyword list: the value is in the typed relationships, which are what let a page explain a situation rather than mention terms. Every relationship carries its own evidence level — an unsupported one is a hypothesis, recorded as such.",
+
+	"type": "object",
+	"required": [ "slug", "primary_entity", "relationships" ],
+	"additionalProperties": false,
+
+	"properties": {
+		"slug": { "$ref": "research-common.schema.json#/definitions/nonEmptyString" },
+		"generated": { "type": "object", "additionalProperties": true },
+
+		"primary_entity": { "$ref": "research-common.schema.json#/definitions/nonEmptyString" },
+		"related_entities": { "type": "array", "items": { "type": "string" } },
+		"attributes": { "type": "array", "items": { "type": "string" } },
+		"problems": { "type": "array", "items": { "type": "string" } },
+		"processes": { "type": "array", "items": { "type": "string" } },
+		"user_types": { "type": "array", "items": { "type": "string" } },
+		"local_entities": { "type": "array", "items": { "type": "string" } },
+		"business_entities": { "type": "array", "items": { "type": "string" } },
+
+		"relationships": {
+			"description": "Typed edges such as 'vehicle condition -> towing requirement'. Only recorded when supported by evidence or explicitly marked as a hypothesis.",
+			"type": "array",
+			"items": {
+				"type": "object",
+				"required": [ "from", "relation", "to", "evidence_level" ],
+				"additionalProperties": false,
+				"properties": {
+					"from": { "$ref": "research-common.schema.json#/definitions/nonEmptyString" },
+					"relation": { "$ref": "research-common.schema.json#/definitions/nonEmptyString" },
+					"to": { "$ref": "research-common.schema.json#/definitions/nonEmptyString" },
+					"evidence_level": { "$ref": "research-common.schema.json#/definitions/evidenceLevel" },
+					"claim_id": { "type": "string" },
+					"observed_cooccurrence": {
+						"description": "Times the two entity types appear in one sentence in existing copy. Co-occurrence is evidence that a page connects two ideas; it is not evidence that the connection is true.",
+						"type": "integer"
+					},
+					"notes": { "type": "string" }
+				}
+			}
+		},
+
+		"coverage_gaps": {
+			"description": "Entities the research says matter for this page that the existing copy never raises.",
+			"type": "array",
+			"items": { "type": "string" }
+		}
+	}
+}

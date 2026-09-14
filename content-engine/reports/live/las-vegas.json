@@ -1,0 +1,14 @@
+{
+	"slug": "las-vegas",
+	"status": "SKIP",
+	"page_type": "location",
+	"artifact": "wordpress/themes/kadence-child-lvjcb/content/locations/las-vegas.json",
+	"url": "https://junkcarbuyerslasvegas.com/",
+	"blocking_issues": [],
+	"warnings": [
+		"'las-vegas' is the primary city: the homepage owns this intent and no location page exists. This artifact is a known orphan (ADR-0005) and there is nothing to verify it against. Supply homepage content as content/pages/home.json to verify the homepage."
+	],
+	"expected": {},
+	"observed": {},
+	"verified_at": "2026-09-06"
+}
