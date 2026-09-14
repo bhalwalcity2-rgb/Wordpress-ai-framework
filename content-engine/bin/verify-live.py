@@ -147,6 +147,19 @@ def fetch(url):
         return response.status, response.geturl(), raw.decode(charset, errors="replace")
 
 
+def normalise_for_match(text):
+    """Comparison form for prose presence.
+
+    lvjcb_prose() wraps phone numbers and city mentions in inline links, so
+    a paragraph arrives as several text nodes and joining them injects
+    spaces that were never in the copy ("call (866) 748-3697 , describe").
+    An exact substring match then reports missing prose that is plainly on
+    the page. Collapsing to alphanumeric words compares what a reader sees
+    rather than how the markup happens to be split.
+    """
+    return re.sub(r"\s+", " ", re.sub(r"[^a-z0-9]+", " ", text.lower())).strip()
+
+
 def resolve_tokens(text, config):
     return (text.replace("{business}", config.get("business_name", ""))
                 .replace("{phone}", config.get("phone_display", "")))
@@ -213,14 +226,17 @@ def compare(expected, page, config, url, final_url):
                         "rendering the templated fallback rather than its own content"
                         % (observed["body_words"], expected["expected_word_floor"]))
 
+    heads_norm = {normalise_for_match(h) for h in page.headings["h2"] + page.headings["h3"]}
     missing_sections = [h for h in expected["section_headings"]
-                        if h and h not in page.headings["h2"] and h not in page.headings["h3"]]
+                        if h and normalise_for_match(h) not in heads_norm]
     if missing_sections:
         blocking.append("section heading(s) absent from the page: %s"
                         % "; ".join(missing_sections[:3]))
 
     body_lower = page.body_text.lower()
-    missing_prose = [s for s in expected["sample_sentences"] if s and s.lower() not in body_lower]
+    body_norm = normalise_for_match(page.body_text)
+    missing_prose = [s for s in expected["sample_sentences"]
+                     if s and normalise_for_match(s) not in body_norm]
     if missing_prose:
         blocking.append("%d promoted paragraph(s) do not appear in the rendered body"
                         % len(missing_prose))
@@ -232,7 +248,8 @@ def compare(expected, page, config, url, final_url):
     if empty:
         warnings.append("heading(s) with little or no following text: %s" % "; ".join(empty[:3]))
 
-    missing_faq = [q for q in expected["faq_questions"] if q and q.lower() not in body_lower]
+    missing_faq = [q for q in expected["faq_questions"]
+                   if q and normalise_for_match(q) not in body_norm]
     if missing_faq:
         blocking.append("%d FAQ question(s) missing from the page" % len(missing_faq))
 

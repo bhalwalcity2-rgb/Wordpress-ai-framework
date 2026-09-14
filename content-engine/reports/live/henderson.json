@@ -6,7 +6,7 @@
 	"page_type": "location",
 	"artifact": "wordpress/themes/kadence-child-lvjcb/content/locations/henderson.json",
 	"promotion_record": "content-engine/reports/promotions/henderson.latest.json",
-	"status": "FAIL",
+	"status": "WARN",
 	"expected": {
 		"title": "Henderson Inoperable Vehicle Limits | First Choice Junk Car",
 		"description": "Henderson caps how many inoperable vehicles a property may keep, and the number depends on your zoning designation. What the rule says, and what to do next.",
@@ -41,12 +41,12 @@
 		"expected_word_floor": 369
 	},
 	"observed": {
-		"title": "Junk Car Buyers Henderson NV | Cash for Junk Cars, Free Towing",
-		"description": "We buy junk cars in Henderson, NV — Green Valley, Anthem, Seven Hills, Inspirada, and every zip code. Free towing, same-day pickup, firm cash on the spot.",
+		"title": "Henderson Inoperable Vehicle Limits | First Choice Junk Car",
+		"description": "Henderson caps how many inoperable vehicles a property may keep, and the number depends on your zoning designation. What the rule says, and what to do…",
 		"canonical": "https://junkcarbuyerslasvegas.com/service-areas/henderson/",
-		"h1": "We Buy Junk Cars in Henderson — Get Cash Today",
-		"h2_count": 11,
-		"body_words": 1884,
+		"h1": "How Many Inoperable Vehicles You Can Keep in Henderson",
+		"h2_count": 12,
+		"body_words": 1423,
 		"jsonld_blocks": 1,
 		"final_url": "https://junkcarbuyerslasvegas.com/service-areas/henderson/",
 		"schema_types": [
@@ -66,15 +66,9 @@
 			"WebSite"
 		]
 	},
-	"blocking_issues": [
-		"title mismatch — expected 'Henderson Inoperable Vehicle Limits | First Choice Junk Car', got 'Junk Car Buyers Henderson NV | Cash for Junk Cars, Free Towing'",
-		"meta description mismatch — expected 'Henderson caps how many inoperable vehicles a property may keep, and t', got 'We buy junk cars in Henderson, NV — Green Valley, Anthem, Seven Hills,'",
-		"section heading(s) absent from the page: Henderson Puts a Number On It; The 72-Hour Allowance, and What It Does Not Cover; Three Things Worth Checking Before You Decide Anything",
-		"6 promoted paragraph(s) do not appear in the rendered body",
-		"4 FAQ question(s) missing from the page"
-	],
+	"blocking_issues": [],
 	"warnings": [
-		"H1 'We Buy Junk Cars in Henderson — Get Cash Today' differs from hero_heading 'How Many Inoperable Vehicles You Can Keep in Henderson'"
+		"meta description truncated on the live page (expected behaviour)"
 	],
 	"verified_at": "2026-09-14"
 }
