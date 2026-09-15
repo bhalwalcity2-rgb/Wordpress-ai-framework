@@ -21,11 +21,22 @@ $service_areas = lvjcb_get_config( 'service_areas' );
 
 		<div class="lvjcb-footer__brand">
 			<span class="lvjcb-footer__logo">
-				<span class="lvjcb-footer__logo-mark">LV</span>
+				<span class="lvjcb-footer__logo-mark" aria-hidden="true"><?php echo esc_html( lvjcb_get_brand_initials() ); ?></span>
 				<?php echo esc_html( $business_name ); ?>
 			</span>
 			<?php if ( $tagline ) : ?>
 				<p><?php echo esc_html( $tagline ); ?></p>
+			<?php endif; ?>
+
+			<?php
+			/*
+			 * Address was read into a variable here and never printed, so the
+			 * footer carried the name and phone but not the address - the one
+			 * place every page could have shown a consistent NAP.
+			 */
+			?>
+			<?php if ( $address ) : ?>
+				<address class="lvjcb-footer__address"><?php echo esc_html( $address ); ?></address>
 			<?php endif; ?>
 		</div>
 

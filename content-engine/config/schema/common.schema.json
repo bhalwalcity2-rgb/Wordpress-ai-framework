@@ -218,12 +218,43 @@
 			}
 		},
 
+		"highlightsSection": {
+			"description": "type 'highlights' -> template-parts/sections/why-choose-us.php. Tier 2 per ADR-0010: the card grid the homepage uses, but every card is written by the page. ADR-0004 rejected a config-sourced 'why choose us' opt-in because it would put identical copy on a dozen pages; this type cannot do that, because there is no config to pull from. Every card is written for the page it sits on, and every factual card needs a claim behind it like any other prose. A service-area page restating the business's own promises here is expected (ADR-0010); what is not allowed is those cards arriving pre-written from config.",
+			"type": "object",
+			"required": [ "type", "heading", "cards" ],
+			"additionalProperties": false,
+			"properties": {
+				"type": { "const": "highlights" },
+				"eyebrow": { "type": "string" },
+				"heading": { "$ref": "#/definitions/nonEmptyString" },
+				"intro": { "type": "string" },
+				"cards": {
+					"type": "array",
+					"minItems": 2,
+					"maxItems": 4,
+					"items": {
+						"type": "object",
+						"required": [ "heading", "description" ],
+						"additionalProperties": false,
+						"properties": {
+							"icon": {
+								"description": "Optional icon name resolved by lvjcb_icon(). Omitted renders a card with no icon rather than a broken one.",
+								"type": "string"
+							},
+							"heading": { "$ref": "#/definitions/nonEmptyString" },
+							"description": { "$ref": "#/definitions/nonEmptyString" }
+						}
+					}
+				}
+			}
+		},
+
 		"section": {
-			"description": "Dispatched on 'type' by template-parts/written-page.php. An unrecognised type must fail here: the renderer's default branch would otherwise draw it as a content section without complaint. Tier 1 components (trust strip, vehicles, testimonials, contact, closing CTA) are deliberately absent — they render globally and are not expressible here (ADR-0004).",
+			"description": "Dispatched on 'type' by template-parts/sections-loop.php. An unrecognised type must fail here: the renderer's default branch would otherwise draw it as a content section without complaint. Tier 1 components (trust strip, vehicles, testimonials, contact, closing CTA) are deliberately absent — they render globally and are not expressible here (ADR-0004).",
 			"type": "object",
 			"required": [ "type" ],
 			"properties": {
-				"type": { "enum": [ "content", "steps", "cta", "areas", "services" ] }
+				"type": { "enum": [ "content", "steps", "cta", "areas", "services", "highlights" ] }
 			},
 			"selectOn": "type",
 			"select": {
@@ -231,7 +262,8 @@
 				"steps": { "$ref": "#/definitions/stepsSection" },
 				"cta": { "$ref": "#/definitions/ctaSection" },
 				"areas": { "$ref": "#/definitions/areasSection" },
-				"services": { "$ref": "#/definitions/servicesSection" }
+				"services": { "$ref": "#/definitions/servicesSection" },
+				"highlights": { "$ref": "#/definitions/highlightsSection" }
 			}
 		},
 

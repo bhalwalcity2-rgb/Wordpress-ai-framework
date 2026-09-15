@@ -23,7 +23,22 @@
 	.lvjcb-rich-content__layout--split {
 		grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
 		gap: var(--lvjcb-space-xl);
-		align-items: start;
+		/*
+		 * Centred, not start-aligned. A 4:3 figure in this column is around
+		 * 440px tall; two paragraphs beside it are around 210px. Aligning to
+		 * the top put the entire 230px difference under the text as one dead
+		 * block. Centring splits it, so the row reads as deliberate spacing.
+		 */
+		align-items: center;
+	}
+
+	/*
+	 * And cap the figure so it cannot tower over short prose in the first
+	 * place. The crop absorbs the difference rather than the layout.
+	 */
+	.lvjcb-rich-content__layout--split .lvjcb-content-figure__image {
+		max-height: 380px;
+		object-fit: cover;
 	}
 
 	/*

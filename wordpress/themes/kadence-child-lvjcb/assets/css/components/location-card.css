@@ -4,6 +4,8 @@
 	border: 1px solid var(--lvjcb-color-border);
 	border-radius: var(--lvjcb-radius);
 	padding: var(--lvjcb-space-sm) var(--lvjcb-space-md);
+	/* Whole card is a link, so it carries the tap-target floor itself. */
+	min-height: var(--lvjcb-tap-min, 44px);
 	display: flex;
 	align-items: center;
 	gap: 12px;
@@ -23,8 +25,8 @@
 .lvjcb-location-card__heading {
 	margin: 0;
 	font-family: var(--lvjcb-font-heading);
-	font-size: 15px;
-	font-weight: var(--lvjcb-font-weight-medium);
+	font-size: var(--lvjcb-text-h5, 16px);
+	font-weight: var(--lvjcb-font-weight-bold);
 }
 
 .lvjcb-location-card__link {
@@ -83,4 +85,24 @@
 	.lvjcb-location-card__arrow {
 		transition: none;
 	}
+}
+
+/*
+ * Same stretched-link treatment as the service card: the city name measured
+ * 82x21 inside a card that already carries a 44px floor and a hover state.
+ */
+.lvjcb-location-card__link::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+}
+
+.lvjcb-location-card__link:focus-visible {
+	outline: none;
+}
+
+.lvjcb-location-card:has(.lvjcb-location-card__link:focus-visible) {
+	outline: 2px solid var(--lvjcb-color-focus, #BF8A00);
+	outline-offset: 2px;
 }

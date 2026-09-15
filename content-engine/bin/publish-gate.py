@@ -73,6 +73,42 @@ def run_validator(script, *argv):
     return out.returncode, (out.stdout or "") + (out.stderr or "")
 
 
+def component_regressions(old, new):
+    """What a promotion would remove from a page that is already live.
+
+    Promotion writes the draft's content over the destination wholesale, so
+    anything the live page had and the draft does not simply disappears. That
+    is not hypothetical: promoting the Henderson pilot dropped four section
+    photographs and the 'we also serve' block, because the draft was authored
+    from evidence and nobody had carried the presentation across. The page got
+    better copy and a worse page, and no check noticed.
+
+    Section types and images only. Prose is meant to be replaced — that is what
+    a rewrite is — so comparing it would block every legitimate update.
+    """
+    def inventory(content):
+        sections = content.get("sections", [])
+        return (
+            [s.get("type", "content") for s in sections],
+            sum(1 for s in sections if (s.get("image") or {}).get("slug")),
+            bool(content.get("faq")),
+        )
+
+    old_types, old_images, old_faq = inventory(old)
+    new_types, new_images, new_faq = inventory(new)
+
+    lost = []
+    for kind in set(old_types):
+        before, after = old_types.count(kind), new_types.count(kind)
+        if after < before:
+            lost.append("%d fewer %r section(s): %d -> %d" % (before - after, kind, before, after))
+    if new_images < old_images:
+        lost.append("%d fewer section image(s): %d -> %d" % (old_images - new_images, old_images, new_images))
+    if old_faq and not new_faq:
+        lost.append("the FAQ block is gone")
+    return lost
+
+
 class Gate:
     def __init__(self):
         self.failures = []
@@ -282,6 +318,8 @@ def main():
                         help="permit overwriting an existing production file")
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--check", action="store_true", help="prerequisites only, never promote")
+    parser.add_argument("--allow-regression", action="store_true",
+                        help="promote even though the new content drops components the live page has")
     parser.add_argument("--no-color", action="store_true")
     args = parser.parse_args()
 
@@ -324,17 +362,41 @@ def main():
                           "draft_sha256": draft_hash, "note": "<why>"}, indent=2))
         return 1
 
+    destination = ctx["destination"]
+    exists = destination.is_file()
+
+    # Computed early so --check can report it while the draft is still being
+    # worked on, rather than springing it at the moment of promotion.
+    lost = component_regressions(load(destination, {}), ctx["draft"]["content"]) if exists else []
+    if lost:
+        print("%s%s%s  promoting this draft would remove from the live page:"
+              % (YEL if args.allow_regression else RED,
+                 "ALLOWED REGRESSION" if args.allow_regression else "REGRESSION", OFF))
+        for item in lost:
+            print("    - %s" % item)
+
     if args.check:
         print("-" * 64)
+        if lost and not args.allow_regression:
+            print("%sBLOCKED%s  refusing to silently downgrade %s" % (RED, OFF, ctx["destination_rel"]))
+            return 1
         print("%sREADY%s  prerequisites and approval satisfied (--check: nothing promoted)" % (GRN, OFF))
         return 0
 
-    destination = ctx["destination"]
-    exists = destination.is_file()
+    # Ordering matters: "you did not ask to replace this file" is a more
+    # fundamental objection than "your replacement drops things", and giving
+    # the regression message first would send someone looking for missing
+    # sections when the real answer is that they forgot --update.
     if exists and not args.update:
         print("-" * 64)
         print("%sBLOCKED%s  %s already exists. Pass --update to replace it deliberately."
               % (RED, OFF, ctx["destination_rel"]))
+        return 1
+
+    if lost and not args.allow_regression:
+        print("  Add them to the draft, or pass --allow-regression if the loss is intended.")
+        print("-" * 64)
+        print("%sBLOCKED%s  refusing to silently downgrade %s" % (RED, OFF, ctx["destination_rel"]))
         return 1
 
     mode = "update" if exists else "new"
@@ -363,6 +425,7 @@ def main():
         "claim_ids": ctx["claim_ids"],
         "source_artifacts": ctx["draft"].get("generation", {}).get("source_artifacts", {}),
         "approval": {k: approval.get(k) for k in ("approved_by", "approved_on", "note")},
+        "components_removed": lost,
         "qa_result": "all prerequisites re-verified at promotion time",
         "qa_checks": gate.checks,
         "destination": ctx["destination_rel"],

@@ -1,3 +1,18 @@
+/*
+ * A CTA banner is a band, not a section. Inheriting the 96px section padding
+ * made it 271px tall to hold 79px of content at 1280 - two thirds empty gold.
+ * It gets its own, tighter rhythm.
+ */
+.lvjcb-cta-banner {
+	padding-block: var(--lvjcb-space-lg, 40px);
+}
+
+@media (min-width: 769px) {
+	.lvjcb-cta-banner {
+		padding-block: var(--lvjcb-space-xl, 64px);
+	}
+}
+
 .lvjcb-cta-banner__inner {
 	display: flex;
 	flex-direction: column;

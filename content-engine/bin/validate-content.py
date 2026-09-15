@@ -124,6 +124,30 @@ def read_business_config(theme_dir):
         if services_block
         else []
     )
+
+    # Icon names resolve to <use href="#icon-name"> against the sprite in
+    # inc/icons.php. lvjcb_icon() builds that reference from whatever string it
+    # is given, so an unknown name emits valid markup pointing at nothing and
+    # the card renders with an invisible gap where its icon should be.
+    icons = theme_dir / "inc" / "icons.php"
+    try:
+        config["icon_names"] = re.findall(r'id="icon-([a-z0-9-]+)"',
+                                          icons.read_text(encoding="utf-8"))
+    except OSError:
+        config["icon_names"] = []
+
+    # Image slugs come from the manifest rather than the theme: that file is
+    # what CI feeds to the Pexels fetcher, so a slug absent from it is never
+    # downloaded, never attached, and renders as nothing at all.
+    manifest = REPO_ROOT / "scripts" / "image-manifest.json"
+    try:
+        config["image_slugs"] = [
+            entry.get("slug")
+            for entry in json.loads(manifest.read_text(encoding="utf-8")).get("images", [])
+        ]
+    except (OSError, ValueError):
+        config["image_slugs"] = []
+
     return config
 
 
@@ -200,6 +224,28 @@ def check_slug_references(data, config):
                         "%r is not a %s slug in business-config.php — the renderer "
                         "would skip it and the card would silently vanish" % (slug, label[kind]),
                     ))
+
+        for field in ("cards", "steps"):
+            for position, entry in enumerate(section.get(field, [])):
+                icon = entry.get("icon")
+                if icon and config.get("icon_names") and icon not in config["icon_names"]:
+                    findings.append((
+                        "sections[%d].%s[%d].icon" % (index, field, position),
+                        "%r is not in the icon sprite — it would render as an invisible "
+                        "gap where the icon should be" % icon,
+                    ))
+
+        # An image slug missing from the manifest fails exactly the way a bad
+        # card slug does — silently. rich-content.php resolves it to 0 and
+        # draws the section with no picture, so the page looks merely plain
+        # rather than broken, and nobody goes looking.
+        image_slug = (section.get("image") or {}).get("slug")
+        if image_slug and config.get("image_slugs") and image_slug not in config["image_slugs"]:
+            findings.append((
+                "sections[%d].image.slug" % index,
+                "%r is not in scripts/image-manifest.json — CI would never fetch it "
+                "and the section would render with no image" % image_slug,
+            ))
 
         # Table cells may link to a service: {"text": "...", "service": "slug"}.
         for row_index, row in enumerate((section.get("table") or {}).get("rows", [])):

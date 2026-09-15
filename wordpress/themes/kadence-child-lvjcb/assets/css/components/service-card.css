@@ -53,7 +53,7 @@
 .lvjcb-service-card__heading {
 	margin: 0;
 	font-family: var(--lvjcb-font-heading);
-	font-size: 17px;
+	font-size: var(--lvjcb-text-h3);
 	font-weight: var(--lvjcb-font-weight-bold);
 }
 
@@ -130,4 +130,27 @@
 	.lvjcb-service-card__arrow {
 		transition: none;
 	}
+}
+
+/*
+ * Stretched link. Measured on the rendered page, the title anchor was a
+ * 202x26 target inside a card several hundred pixels tall - the card looks
+ * clickable, so people aim at the card. The overlay makes the whole card the
+ * hit area while the anchor stays the single accessible name for the link.
+ */
+.lvjcb-service-card__link::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+}
+
+.lvjcb-service-card__link:focus-visible {
+	outline: none;
+}
+
+/* Focus ring belongs on the card, since the card is what is being activated. */
+.lvjcb-service-card:has(.lvjcb-service-card__link:focus-visible) {
+	outline: 2px solid var(--lvjcb-color-focus, #BF8A00);
+	outline-offset: 2px;
 }

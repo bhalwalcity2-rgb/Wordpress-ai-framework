@@ -103,6 +103,23 @@ foreach ( $sections as $section ) :
 			) );
 			break;
 
+		case 'highlights':
+			/*
+			 * The homepage's "why choose us" card grid, drawn with the
+			 * page's own cards. Nothing resolves from config here, which
+			 * is the point: ADR-0004 refused a config-sourced version
+			 * because it would have put the same four cards on every
+			 * page, and ADR-0010 allows this one because it cannot.
+			 */
+			get_template_part( 'template-parts/sections/why-choose-us', null, array(
+				'id'      => $section_id,
+				'eyebrow' => $section['eyebrow'] ?? '',
+				'heading' => $section['heading'] ?? '',
+				'intro'   => $section['intro'] ?? '',
+				'cards'   => $section['cards'] ?? array(),
+			) );
+			break;
+
 		case 'areas':
 			/*
 			 * Content files name nearby cities by slug only; the city,

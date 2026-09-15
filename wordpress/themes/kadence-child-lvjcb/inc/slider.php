@@ -70,6 +70,15 @@ function lvjcb_slider_start( $args = array() ) {
 	if ( $autoplay ) {
 		$autoplay_attr = ' data-lvjcb-slider-autoplay="' . esc_attr( $interval ) . '"';
 	}
+
+	/*
+	 * Remembered for lvjcb_slider_end(), which draws the controls and needs
+	 * to know whether to include a pause toggle. WCAG 2.2.2 requires a
+	 * visible mechanism to stop motion that starts on its own; pausing on
+	 * hover and focus, which this slider already did, does not satisfy it
+	 * for a visitor who is neither hovering nor tabbing.
+	 */
+	lvjcb_slider_autoplay_state( $autoplay );
 	?>
 	<div class="<?php echo esc_attr( $class ); ?>" data-lvjcb-slider<?php echo $autoplay_attr; ?>>
 		<div class="lvjcb-slider__viewport">
@@ -95,6 +104,19 @@ function lvjcb_slider_end() {
 			</ul>
 		</div>
 		<div class="lvjcb-slider__controls">
+			<?php if ( lvjcb_slider_autoplay_state() ) : ?>
+				<?php /* Text rather than an icon: the sprite has no pause or play glyph, and an unfamiliar symbol here would be worse than the word. */ ?>
+				<button
+					type="button"
+					class="lvjcb-slider__pause"
+					data-lvjcb-slider-pause
+					aria-pressed="false"
+					data-label-pause="<?php esc_attr_e( 'Pause', 'lvjcb' ); ?>"
+					data-label-play="<?php esc_attr_e( 'Play', 'lvjcb' ); ?>"
+				>
+					<span class="lvjcb-slider__pause-label"><?php esc_html_e( 'Pause', 'lvjcb' ); ?></span>
+				</button>
+			<?php endif; ?>
 			<button type="button" class="lvjcb-slider__prev" data-lvjcb-slider-prev aria-label="<?php esc_attr_e( 'Previous', 'lvjcb' ); ?>">
 				<?php echo lvjcb_icon( 'chevron-left', array( 'size' => 20 ) ); ?>
 			</button>
@@ -104,4 +126,27 @@ function lvjcb_slider_end() {
 		</div>
 	</div>
 	<?php
+}
+
+/**
+ * Carry the autoplay flag from lvjcb_slider_start() to lvjcb_slider_end().
+ *
+ * The two functions bracket caller-supplied markup rather than taking it as
+ * an argument, so the closing half has no other way to know how the opening
+ * half was configured.
+ *
+ * @since 0.4.1
+ *
+ * @param bool|null $set Value to store, or null to read the stored one.
+ * @return bool Whether the slider currently being rendered autoplays.
+ */
+function lvjcb_slider_autoplay_state( $set = null ) {
+
+	static $autoplay = false;
+
+	if ( null !== $set ) {
+		$autoplay = (bool) $set;
+	}
+
+	return $autoplay;
 }

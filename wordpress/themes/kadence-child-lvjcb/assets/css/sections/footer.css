@@ -147,3 +147,15 @@
 		justify-content: space-between;
 	}
 }
+
+/*
+ * The footer address. <address> is italic by default in every browser,
+ * which reads as emphasis the rest of the column does not have.
+ */
+.lvjcb-footer__address {
+	margin: var(--lvjcb-space-xs, 12px) 0 0;
+	font-style: normal;
+	font-size: var(--lvjcb-text-small, 14px);
+	line-height: var(--lvjcb-leading-body, 1.65);
+	color: var(--lvjcb-color-text-on-dark-muted, #9CA3AF);
+}
