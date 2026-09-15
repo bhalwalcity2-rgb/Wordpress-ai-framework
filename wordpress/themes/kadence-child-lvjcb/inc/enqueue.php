@@ -31,8 +31,9 @@ if ( ! defined( 'LVJCB_COMPONENT_ASSETS' ) ) {
 		'LVJCB_COMPONENT_ASSETS',
 		array(
 			'header'           => array( 'css' => true, 'js' => true ),
-			'hero'             => array( 'css' => true, 'js' => true ),
+			'hero'             => array( 'css' => true, 'js' => false ),
 			'trust-strip'      => array( 'css' => true, 'js' => false ),
+			'sticky-cta'       => array( 'css' => true, 'js' => false ),
 			'service-card'     => array( 'css' => true, 'js' => false ),
 			'location-card'    => array( 'css' => true, 'js' => false ),
 			'vehicle-card'     => array( 'css' => true, 'js' => false ),
@@ -41,7 +42,11 @@ if ( ! defined( 'LVJCB_COMPONENT_ASSETS' ) ) {
 			'step-card'        => array( 'css' => true, 'js' => false ),
 			'content-figure'   => array( 'css' => true, 'js' => false ),
 			'faq-item'         => array( 'css' => true, 'js' => true ),
-			'quote-form'       => array( 'css' => true, 'js' => true ),
+			// 'quote-form' is built but not mounted: the hero slot that held it
+			// was unreachable (its reveal trigger existed in no template), so
+			// shipping its CSS and JS site-wide bought nothing. Re-register it
+			// here the moment a template actually renders the form.
+			// 'quote-form'    => array( 'css' => true, 'js' => true ),
 			'slider'           => array( 'css' => true, 'js' => true ),
 		)
 	);
@@ -175,7 +180,40 @@ add_action( 'wp_head', 'lvjcb_favicon', 2 );
 add_action( 'wp_footer', 'lvjcb_peddle_embed_script', 99 );
 
 /**
- * Output a preload hint for the Hero image on the homepage only.
+ * Resolve the attachment ID of the Hero image for the current page.
+ *
+ * Mirrors the lookup in written-page.php: a page prefers an image named for
+ * its own slug and falls back to the shared homepage photo.
+ *
+ * @since 0.4.1
+ *
+ * @return int Attachment ID, or 0 when there is none.
+ */
+function lvjcb_get_hero_attachment_id() {
+
+	$slug = is_front_page() ? '' : (string) get_post_field( 'post_name', get_queried_object_id() );
+
+	if ( $slug ) {
+		$id = lvjcb_get_attachment_id_by_slug( 'hero-' . $slug . '-01' );
+		if ( $id ) {
+			return $id;
+		}
+	}
+
+	return lvjcb_get_attachment_id_by_slug( lvjcb_get_config( 'hero' )['image_slug'] ?? '' );
+}
+
+/**
+ * Output a preload hint for the Hero image.
+ *
+ * Previously this resolved its URL through an 'lvjcb_hero_image_url' filter
+ * that nothing ever added, so it read an empty string and returned early on
+ * every request — the hint has never actually been emitted. It now resolves
+ * the attachment itself and keeps the filter as an override.
+ *
+ * The hint carries the same srcset and sizes the <img> will carry. Without
+ * them the browser preloads one candidate, then the responsive image picks a
+ * different one and downloads it again, which costs more than no preload.
  *
  * @since 0.1.0
  *
@@ -183,19 +221,29 @@ add_action( 'wp_footer', 'lvjcb_peddle_embed_script', 99 );
  */
 function lvjcb_preload_hero_image() {
 
-	if ( ! is_front_page() ) {
+	if ( is_404() || is_search() ) {
 		return;
 	}
 
-	$hero_image_url = apply_filters( 'lvjcb_hero_image_url', '' );
+	$image_id = lvjcb_get_hero_attachment_id();
+
+	$hero_image_url = apply_filters(
+		'lvjcb_hero_image_url',
+		$image_id ? wp_get_attachment_image_url( $image_id, 'large' ) : ''
+	);
 
 	if ( ! $hero_image_url ) {
 		return;
 	}
 
+	$srcset = $image_id ? wp_get_attachment_image_srcset( $image_id, 'large' ) : '';
+	$sizes  = '(max-width: 900px) 100vw, 560px';
+
 	printf(
-		'<link rel="preload" as="image" href="%s" fetchpriority="high">' . "\n",
-		esc_url( $hero_image_url )
+		'<link rel="preload" as="image" href="%s"%s%s fetchpriority="high">' . "\n",
+		esc_url( $hero_image_url ),
+		$srcset ? sprintf( ' imagesrcset="%s"', esc_attr( $srcset ) ) : '',
+		$srcset ? sprintf( ' imagesizes="%s"', esc_attr( $sizes ) ) : ''
 	);
 }
 

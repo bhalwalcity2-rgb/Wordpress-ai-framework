@@ -71,6 +71,24 @@
       "query": "tow truck flatbed loading broken car",
       "orientation": "landscape",
       "resolution": "large"
+    },
+    {
+      "slug": "hero-north-las-vegas-01",
+      "query": "tow truck picking up old car suburban street",
+      "orientation": "landscape",
+      "resolution": "large2x"
+    },
+    {
+      "slug": "north-las-vegas-driveway-01",
+      "query": "old car parked driveway suburban home daytime",
+      "orientation": "landscape",
+      "resolution": "large"
+    },
+    {
+      "slug": "north-las-vegas-payment-01",
+      "query": "handing cash payment outdoors by car",
+      "orientation": "landscape",
+      "resolution": "large"
     }
   ]
 }

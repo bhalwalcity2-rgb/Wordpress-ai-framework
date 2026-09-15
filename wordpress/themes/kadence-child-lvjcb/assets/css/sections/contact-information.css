@@ -11,42 +11,6 @@
 	gap: var(--lvjcb-space-md);
 }
 
-.lvjcb-contact-information__card {
-	display: flex;
-	align-items: flex-start;
-	gap: var(--lvjcb-space-sm);
-	padding: var(--lvjcb-space-md);
-	background: var(--lvjcb-color-surface);
-	border: 1px solid var(--lvjcb-color-border);
-	border-radius: var(--lvjcb-radius);
-}
-
-.lvjcb-contact-information__card-icon {
-	width: 44px;
-	height: 44px;
-	padding: 12px;
-	box-sizing: border-box;
-	background: rgba(255,184,0,0.1);
-	border-radius: var(--lvjcb-radius);
-	color: var(--lvjcb-color-accent);
-	flex-shrink: 0;
-}
-
-.lvjcb-contact-information__card-label {
-	font-size: 12px;
-	font-weight: var(--lvjcb-font-weight-bold);
-	text-transform: uppercase;
-	letter-spacing: 0.08em;
-	color: var(--lvjcb-color-text-muted);
-}
-
-.lvjcb-contact-information__card-value {
-	font-size: 16px;
-	font-weight: var(--lvjcb-font-weight-medium);
-	color: var(--lvjcb-color-text);
-	margin-top: 4px;
-}
-
 .lvjcb-contact-information__business-name {
 	font-family: var(--lvjcb-font-heading);
 	font-weight: var(--lvjcb-font-weight-bold);
@@ -92,36 +56,21 @@
 	border: 0;
 }
 
-@media (max-width: 480px) {
-	.lvjcb-contact-information__card-value {
-		font-size: 14px;
-		overflow-wrap: break-word;
-		word-break: break-word;
-	}
-
-	.lvjcb-contact-information__card {
-		padding: var(--lvjcb-space-sm);
-	}
-
-	.lvjcb-contact-information__card-icon {
-		width: 36px;
-		height: 36px;
-		padding: 8px;
-	}
-}
-
-@media (max-width: 359px) {
-	.lvjcb-contact-information__card-value {
-		font-size: 13px;
-	}
-
-	.lvjcb-contact-information__card-label {
-		font-size: 11px;
-	}
-}
-
 @media (min-width: 769px) {
 	.lvjcb-contact-information__grid {
 		grid-template-columns: repeat(3, 1fr);
 	}
+
+}
+
+/*
+ * Phone and email here are actions, not prose, so they carry the tap-target
+ * floor. They are already display-block-ish via the address column, but
+ * width:fit-content means the box hugs the text vertically too.
+ */
+.lvjcb-contact-information__phone,
+.lvjcb-contact-information__email {
+	display: inline-flex;
+	align-items: center;
+	min-height: var(--lvjcb-tap-min, 44px);
 }

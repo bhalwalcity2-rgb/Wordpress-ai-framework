@@ -29,6 +29,7 @@ $faq            = lvjcb_get_config( 'faq' );
 	<?php get_template_part( 'template-parts/components/hero', null, array(
 		'heading'     => $hero['heading'],
 		'description' => $hero['description'],
+		'eyebrow'     => $hero['eyebrow'] ?? '',
 		'image_id'    => lvjcb_get_attachment_id_by_slug( $hero['image_slug'] ?? '' ),
 	) ); ?>
 

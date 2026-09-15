@@ -117,3 +117,36 @@
 		transition: none;
 	}
 }
+
+/*
+ * Autoplay pause toggle (WCAG 2.2.2). Sits with the arrows rather than
+ * floating over the slides, so it never covers a review it is meant to let
+ * you finish reading.
+ */
+.lvjcb-slider__pause {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-height: var(--lvjcb-tap-min, 44px);
+	min-width: var(--lvjcb-tap-min, 44px);
+	padding: 0 14px;
+	margin-inline-end: auto;
+	border: 1px solid var(--lvjcb-color-border, #D2D6DB);
+	border-radius: var(--lvjcb-radius, 8px);
+	background: transparent;
+	font-family: var(--lvjcb-font-body, system-ui, sans-serif);
+	font-size: var(--lvjcb-text-small, 14px);
+	font-weight: var(--lvjcb-font-weight-bold, 700);
+	color: var(--lvjcb-color-text, #111111);
+	cursor: pointer;
+	transition: border-color var(--lvjcb-transition-fast, 150ms ease);
+}
+
+.lvjcb-slider__pause:hover {
+	border-color: var(--lvjcb-color-accent, #FFB800);
+}
+
+.lvjcb-slider__pause:focus-visible {
+	outline: 2px solid var(--lvjcb-color-focus, #BF8A00);
+	outline-offset: 2px;
+}

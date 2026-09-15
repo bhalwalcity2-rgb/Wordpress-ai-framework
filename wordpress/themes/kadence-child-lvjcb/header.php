@@ -13,6 +13,7 @@ $phone_display = lvjcb_get_phone_number( 'display' );
 $phone_href    = 'tel:' . lvjcb_get_phone_number( 'e164' );
 $hours         = lvjcb_get_config( 'hours' );
 $quote_url     = lvjcb_get_config( 'instant_quote_url' );
+$address       = lvjcb_get_config( 'address' );
 $nav_items = array_map(
 	function ( $item ) {
 		return array(
@@ -32,23 +33,25 @@ $nav_items = array_map(
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
-<header class="lvjcb-header" id="lvjcb-header" style="background:#111111;border-bottom:3px solid #FFB800">
-	<div class="lvjcb-header__top" style="background:rgba(0,0,0,0.3);color:#9CA3AF">
+<header class="lvjcb-header" id="lvjcb-header">
+	<div class="lvjcb-header__top">
 		<div class="lvjcb-header__top-inner">
 			<div class="lvjcb-header__top-info">
 				<?php if ( $hours ) : ?>
 					<span><?php echo esc_html( $hours ); ?></span>
 				<?php endif; ?>
 			</div>
-			<span><?php echo esc_html( lvjcb_get_config( 'hero' )['eyebrow'] ?? '' ); ?></span>
+			<?php if ( $address ) : ?>
+				<span><?php echo esc_html( $address ); ?></span>
+			<?php endif; ?>
 		</div>
 	</div>
 	<div class="lvjcb-header__row">
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="lvjcb-header__logo" style="color:#F5F7F9;text-decoration:none">
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="lvjcb-header__logo">
 			<?php if ( has_custom_logo() ) : ?>
 				<?php the_custom_logo(); ?>
 			<?php else : ?>
-				<span class="lvjcb-header__logo-mark">FC</span>
+				<span class="lvjcb-header__logo-mark" aria-hidden="true"><?php echo esc_html( lvjcb_get_brand_initials() ); ?></span>
 				<span class="lvjcb-header__logo-text">
 					<span class="lvjcb-header__logo-name"><?php echo esc_html( lvjcb_get_config( 'business_name' ) ); ?></span>
 					<span class="lvjcb-header__logo-sub"><?php esc_html_e( 'Cash for cars · Free towing', 'lvjcb' ); ?></span>
@@ -71,8 +74,8 @@ $nav_items = array_map(
 				<?php echo lvjcb_icon( 'phone', array( 'size' => 20 ) ); ?>
 			</a>
 			<?php if ( $quote_url ) : ?>
-				<a href="<?php echo esc_url( $quote_url ); ?>" class="lvjcb-btn lvjcb-btn--gold lvjcb-header__instant-offer" target="_blank" rel="noopener">
-					<?php esc_html_e( 'Instant Offer', 'lvjcb' ); ?>
+				<a href="<?php echo esc_url( $quote_url ); ?>" class="lvjcb-btn lvjcb-btn--primary lvjcb-header__instant-offer" target="_blank" rel="noopener">
+					<?php esc_html_e( 'Get My Offer', 'lvjcb' ); ?>
 				</a>
 			<?php endif; ?>
 			<button type="button" class="lvjcb-header__hamburger" id="lvjcb-menu-open" aria-expanded="false" aria-controls="lvjcb-mobile-nav" aria-label="<?php esc_attr_e( 'Open menu', 'lvjcb' ); ?>">
@@ -96,11 +99,12 @@ $nav_items = array_map(
 	</ul>
 	<div class="lvjcb-mobile-nav__cta">
 		<a href="<?php echo esc_url( $phone_href ); ?>" class="lvjcb-btn lvjcb-btn--primary lvjcb-btn--block">
+			<?php echo lvjcb_icon( 'phone', array( 'size' => 18 ) ); ?>
 			<?php echo esc_html( $phone_display ); ?>
 		</a>
 		<?php if ( $quote_url ) : ?>
 			<a href="<?php echo esc_url( $quote_url ); ?>" class="lvjcb-btn lvjcb-btn--secondary lvjcb-btn--on-dark lvjcb-btn--block" target="_blank" rel="noopener">
-				<?php esc_html_e( 'Instant Offer', 'lvjcb' ); ?>
+				<?php esc_html_e( 'Get My Offer Online', 'lvjcb' ); ?>
 			</a>
 		<?php endif; ?>
 	</div>

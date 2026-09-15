@@ -2,21 +2,35 @@
 /**
  * Hero component.
  *
- * Full-bleed background image with gradient overlay, uppercase heading
- * with gold accent, inline trust features, and gold CTA button.
+ * Two columns on desktop: the offer on the left, a photograph of the thing
+ * being sold on the right. The previous version laid the text over a
+ * full-bleed background photo behind a gradient, which meant the image was
+ * always competing with the headline and the CTA for the same pixels — the
+ * gradient existed only to win that fight. Giving the picture its own column
+ * lets it be legible instead of decorative, and the buttons sit on flat
+ * colour where their contrast is predictable rather than dependent on
+ * whatever the photo happens to be doing behind them.
+ *
+ * Without an image the left column simply spans the row, so a page with no
+ * hero photo yet gets a deliberate single-column hero rather than an empty
+ * half.
  *
  * @param array $args {
  *     @type string $heading     Hero heading text. Em-dash splits white/gold.
  *     @type string $description Supporting description.
- *     @type int    $image_id    Attachment ID for the hero background image.
+ *     @type string $eyebrow     Optional line above the heading.
+ *     @type int    $image_id    Attachment ID for the hero image.
+ *     @type string $image_alt   Alt text. Empty marks the photo decorative.
  * }
  */
 $heading     = $args['heading'] ?? '';
 $description = $args['description'] ?? '';
+$eyebrow     = $args['eyebrow'] ?? '';
 $image_id    = isset( $args['image_id'] ) ? (int) $args['image_id'] : 0;
 
 $phone_display = lvjcb_get_phone_number( 'display' );
 $phone_href    = 'tel:' . lvjcb_get_phone_number( 'e164' );
+$quote_url     = lvjcb_get_config( 'instant_quote_url' );
 $trust_items   = lvjcb_get_trust_items();
 
 /*
@@ -35,68 +49,78 @@ if ( count( $heading_parts ) === 2 ) {
 
 $hero_features = array_slice( $trust_items, 0, 3 );
 ?>
-<section class="lvjcb-hero<?php echo $image_id ? ' lvjcb-hero--has-image' : ''; ?>" style="background:#111111">
-
-	<?php if ( $image_id ) : ?>
-		<div class="lvjcb-hero__bg">
-			<?php
-			echo wp_get_attachment_image(
-				$image_id,
-				'full',
-				false,
-				array(
-					'class'         => 'lvjcb-hero__bg-image',
-					'fetchpriority' => 'high',
-					'decoding'      => 'async',
-					'sizes'         => '100vw',
-					'alt'           => '',
-				)
-			);
-			?>
-		</div>
-	<?php endif; ?>
-
-	<div class="lvjcb-hero__overlay"></div>
+<section class="lvjcb-hero<?php echo $image_id ? ' lvjcb-hero--has-image' : ''; ?>">
 
 	<div class="lvjcb-hero__container">
+
 		<div class="lvjcb-hero__content">
 
-			<h1 class="lvjcb-hero__heading" style="color:#F5F7F9"><?php echo $heading_html; ?></h1>
-
-			<?php if ( $description ) : ?>
-				<p class="lvjcb-hero__description" style="color:#9CA3AF"><?php echo esc_html( $description ); ?></p>
+			<?php if ( $eyebrow ) : ?>
+				<p class="lvjcb-hero__eyebrow">
+					<?php echo lvjcb_icon( 'map-pin', array( 'size' => 16 ) ); ?>
+					<?php echo esc_html( $eyebrow ); ?>
+				</p>
 			<?php endif; ?>
 
-			<?php if ( ! empty( $hero_features ) ) : ?>
-				<div class="lvjcb-hero__features">
-					<?php foreach ( $hero_features as $feature ) : ?>
-						<div class="lvjcb-hero__feature">
-							<?php echo lvjcb_icon( 'check-circle', array( 'size' => 20 ) ); ?>
-							<span><?php echo esc_html( $feature['label'] ); ?></span>
-						</div>
-					<?php endforeach; ?>
-				</div>
+			<h1 class="lvjcb-hero__heading"><?php echo $heading_html; ?></h1>
+
+			<?php if ( $description ) : ?>
+				<p class="lvjcb-hero__description"><?php echo esc_html( $description ); ?></p>
 			<?php endif; ?>
 
 			<div class="lvjcb-hero__ctas">
-				<a href="<?php echo esc_url( lvjcb_get_config( 'instant_quote_url' ) ); ?>" class="lvjcb-btn lvjcb-btn--gold lvjcb-hero__cta" target="_blank" rel="noopener">
-					<?php esc_html_e( 'Get Instant Quote', 'lvjcb' ); ?>
-					<?php echo lvjcb_icon( 'arrow', array( 'size' => 18 ) ); ?>
-				</a>
+				<?php if ( $quote_url ) : ?>
+					<a href="<?php echo esc_url( $quote_url ); ?>" class="lvjcb-btn lvjcb-btn--primary lvjcb-hero__cta" target="_blank" rel="noopener">
+						<?php esc_html_e( 'Get My Offer Online', 'lvjcb' ); ?>
+						<?php echo lvjcb_icon( 'arrow', array( 'size' => 18 ) ); ?>
+					</a>
+				<?php endif; ?>
 				<a href="<?php echo esc_url( $phone_href ); ?>" class="lvjcb-btn lvjcb-btn--outline-light lvjcb-hero__cta">
 					<?php echo lvjcb_icon( 'phone', array( 'size' => 18 ) ); ?>
-					<?php echo esc_html( $phone_display ); ?>
+					<?php
+					/* translators: %s: phone number. */
+					printf( esc_html__( 'Call %s', 'lvjcb' ), esc_html( $phone_display ) );
+					?>
 				</a>
 			</div>
 
-			<div class="lvjcb-hero__quote-form-slot" id="lvjcb-quote-form-hero" tabindex="-1" hidden>
-				<?php get_template_part( 'template-parts/components/quote-form', null, array(
-					'context'     => 'hero',
-					'form_id'     => 'hero',
-					'submit_text' => __( 'Get My Cash Offer', 'lvjcb' ),
-				) ); ?>
-			</div>
+			<?php if ( ! empty( $hero_features ) ) : ?>
+				<ul class="lvjcb-hero__features" role="list">
+					<?php foreach ( $hero_features as $feature ) : ?>
+						<li class="lvjcb-hero__feature">
+							<?php echo lvjcb_icon( 'check-circle', array( 'size' => 18 ) ); ?>
+							<span><?php echo esc_html( $feature['label'] ); ?></span>
+						</li>
+					<?php endforeach; ?>
+				</ul>
+			<?php endif; ?>
 
 		</div>
+
+		<?php if ( $image_id ) : ?>
+			<div class="lvjcb-hero__media">
+				<?php
+				/*
+				 * fetchpriority high and no lazy attribute: this is the LCP
+				 * element on every page that has one. 'large' rather than
+				 * 'full' because the column is never wider than ~560px, and
+				 * sizes tells the browser that before it picks a candidate.
+				 */
+				echo wp_get_attachment_image(
+					$image_id,
+					'large',
+					false,
+					array(
+						'class'         => 'lvjcb-hero__image',
+						'fetchpriority' => 'high',
+						'decoding'      => 'async',
+						'sizes'         => '(max-width: 900px) 100vw, 560px',
+						'alt'           => $args['image_alt'] ?? '',
+					)
+				);
+				?>
+			</div>
+		<?php endif; ?>
+
 	</div>
 </section>

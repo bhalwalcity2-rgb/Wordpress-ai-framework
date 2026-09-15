@@ -460,3 +460,49 @@ function lvjcb_allowed_inline_html() {
 		'em'     => array(),
 	);
 }
+
+/**
+ * The brand's initials, for the square logo mark.
+ *
+ * Header and footer each hardcoded their own — 'FC' and 'LV' — so the two
+ * marks disagreed on the same page, and the footer's was left over from an
+ * earlier business name. Deriving both from business_name keeps them in
+ * step and means renaming the business does not require finding every
+ * template that drew a logo.
+ *
+ * Words like 'and' or 'of' are skipped so 'Cash & Co of Nevada' gives 'CC'
+ * rather than 'C&'. Capped at two characters, because the mark is a fixed
+ * 44px square.
+ *
+ * @since 0.4.1
+ *
+ * @return string One or two uppercase letters, or '' when there is no name.
+ */
+function lvjcb_get_brand_initials() {
+
+	$name = (string) lvjcb_get_config( 'business_name' );
+
+	if ( '' === trim( $name ) ) {
+		return '';
+	}
+
+	$skip     = array( 'and', 'of', 'the', 'for', 'a', 'an' );
+	$initials = '';
+
+	foreach ( preg_split( '/[\s\-]+/', $name, -1, PREG_SPLIT_NO_EMPTY ) as $word ) {
+
+		$word = preg_replace( '/[^\p{L}]/u', '', $word );
+
+		if ( '' === $word || in_array( strtolower( $word ), $skip, true ) ) {
+			continue;
+		}
+
+		$initials .= mb_strtoupper( mb_substr( $word, 0, 1 ) );
+
+		if ( 2 === mb_strlen( $initials ) ) {
+			break;
+		}
+	}
+
+	return $initials;
+}

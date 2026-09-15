@@ -84,19 +84,50 @@
 		function pause()  { paused = true;  stopAutoplay(); }
 		function resume() { paused = false; startAutoplay(); }
 
-		slider.addEventListener( 'mouseenter', pause );
-		slider.addEventListener( 'mouseleave', resume );
-		slider.addEventListener( 'focusin',    pause );
-		slider.addEventListener( 'focusout',   resume );
-		slider.addEventListener( 'touchstart', pause, { passive: true } );
+		// Hover and focus pausing is a convenience. The toggle below is the
+		// accessibility requirement: once a visitor stops the motion it stays
+		// stopped, so moving the pointer away does not restart it.
+		var stopped     = false;
+		var pauseBtn    = slider.querySelector( '[data-lvjcb-slider-pause]' );
+		var pauseLabel  = pauseBtn && pauseBtn.querySelector( '.lvjcb-slider__pause-label' );
+
+		function softPause()  { if ( ! stopped ) { pause(); } }
+		function softResume() { if ( ! stopped ) { resume(); } }
+
+		if ( pauseBtn ) {
+			pauseBtn.addEventListener( 'click', function () {
+				stopped = ! stopped;
+				pauseBtn.setAttribute( 'aria-pressed', stopped ? 'true' : 'false' );
+				if ( pauseLabel ) {
+					pauseLabel.textContent = stopped ? pauseBtn.getAttribute( 'data-label-play' ) || 'Play'
+					                                 : pauseBtn.getAttribute( 'data-label-pause' ) || 'Pause';
+				}
+				if ( stopped ) { pause(); } else { resume(); }
+			} );
+		}
+
+		slider.addEventListener( 'mouseenter', softPause );
+		slider.addEventListener( 'mouseleave', softResume );
+		slider.addEventListener( 'focusin',    softPause );
+		slider.addEventListener( 'focusout',   softResume );
+		slider.addEventListener( 'touchstart', softPause, { passive: true } );
 
 		reducedMotion.addEventListener( 'change', function () {
 			if ( reducedMotion.matches ) {
 				stopAutoplay();
-			} else if ( ! paused ) {
+			} else if ( ! paused && ! stopped ) {
 				startAutoplay();
 			}
 		} );
+
+		// A slider scrolled off screen should not keep the compositor busy.
+		if ( 'IntersectionObserver' in window ) {
+			new IntersectionObserver( function ( entries ) {
+				entries.forEach( function ( entry ) {
+					if ( entry.isIntersecting ) { softResume(); } else { pause(); }
+				} );
+			}, { threshold: 0 } ).observe( slider );
+		}
 
 		startAutoplay();
 	} );

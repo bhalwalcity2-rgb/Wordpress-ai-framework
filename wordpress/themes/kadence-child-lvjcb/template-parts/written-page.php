@@ -48,6 +48,7 @@ if ( ! $hero_image_id ) {
 	<?php get_template_part( 'template-parts/components/hero', null, array(
 		'heading'     => $content['hero_heading'] ?? '',
 		'description' => $content['hero_description'] ?? '',
+		'eyebrow'     => $hero['eyebrow'] ?? '',
 		'image_id'    => $hero_image_id,
 	) ); ?>
 
@@ -98,6 +99,40 @@ if ( ! $hero_image_id ) {
 		'review_count'     => $testimonials['review_count'] ?? 0,
 		'testimonials'     => $testimonials['items'] ?? array(),
 	) );
+	?>
+
+	<?php
+	/*
+	 * Nearby service areas — a fallback, not a fixed slot.
+	 *
+	 * The generic location layout carried this block and written pages lost
+	 * it, which cost every written page its sideways internal linking. It is
+	 * navigation rather than content, so it belongs to the template; but a
+	 * content file that places its own 'areas' section has said where it
+	 * wants those links, and the template must not then repeat them. Pages
+	 * keep control of their own structure (ADR-0004 Tier 3); this only
+	 * covers the case where the page expressed no preference.
+	 */
+	$declares_areas = false;
+	foreach ( $sections as $section ) {
+		if ( 'areas' === ( $section['type'] ?? '' ) ) {
+			$declares_areas = true;
+			break;
+		}
+	}
+
+	if ( ! $declares_areas ) {
+		$nearby = lvjcb_get_service_area_cards( $page_slug );
+
+		if ( $nearby ) {
+			get_template_part( 'template-parts/sections/service-areas', null, array(
+				'id'        => $page_slug . '-areas',
+				'eyebrow'   => lvjcb_get_config( 'service_areas' )['eyebrow'] ?? '',
+				'heading'   => __( 'We also collect from these areas', 'lvjcb' ),
+				'locations' => $nearby,
+			) );
+		}
+	}
 	?>
 
 	<?php if ( ! empty( $content['faq'] ) ) : ?>

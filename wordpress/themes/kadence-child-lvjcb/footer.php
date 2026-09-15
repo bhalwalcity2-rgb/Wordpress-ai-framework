@@ -13,6 +13,8 @@
  * @package LVJCB
  */
 ?>
+<?php get_template_part( 'template-parts/components/sticky-cta' ); ?>
+
 <?php wp_footer(); ?>
 </body>
 </html>

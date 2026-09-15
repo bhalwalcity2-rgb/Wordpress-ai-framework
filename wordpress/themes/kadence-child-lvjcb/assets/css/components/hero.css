@@ -1,83 +1,85 @@
+/*
+ * Hero — two columns on desktop, stacked on mobile.
+ *
+ * The previous hero was a full-bleed photo with a six-stop gradient laid
+ * over it so the headline stayed readable. That gradient was doing damage
+ * control: the image and the text wanted the same space. Here the photo has
+ * its own column, so no overlay is needed and the CTA sits on flat colour
+ * where its contrast is fixed rather than dependent on the photograph.
+ */
+
 .lvjcb-hero {
 	position: relative;
-	min-height: 520px;
-	display: flex;
-	align-items: center;
 	background: var(--lvjcb-color-dark, #111111);
+	color: var(--lvjcb-color-text-on-dark, #F5F7F9);
 	overflow: hidden;
 }
 
-/* Background image — fills entire hero */
-.lvjcb-hero__bg {
+/* A single soft gold bloom, behind everything, to stop the flat navy reading as a blank slab. */
+.lvjcb-hero::before {
+	content: '';
 	position: absolute;
-	inset: 0;
+	top: -280px;
+	right: -220px;
+	width: 680px;
+	height: 680px;
+	background: radial-gradient(circle, rgba(255, 184, 0, 0.10) 0%, transparent 70%);
+	pointer-events: none;
 	z-index: 0;
 }
 
-.lvjcb-hero__bg-image {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	object-position: center right;
-	display: block;
-}
-
-/* Gradient overlay — solid left for text, transparent right to reveal image */
-.lvjcb-hero__overlay {
-	position: absolute;
-	inset: 0;
-	z-index: 1;
-	background: linear-gradient(
-		90deg,
-		var(--lvjcb-color-dark, #111111) 0%,
-		var(--lvjcb-color-dark, #111111) 20%,
-		rgba(17, 17, 17, 0.92) 40%,
-		rgba(17, 17, 17, 0.5) 60%,
-		rgba(17, 17, 17, 0.15) 80%,
-		transparent 100%
-	);
-}
-
-/* When no image, fill solid */
-.lvjcb-hero:not(.lvjcb-hero--has-image) .lvjcb-hero__overlay {
-	background: linear-gradient(135deg, var(--lvjcb-color-dark, #111111) 0%, rgba(17, 17, 17, 1) 100%);
-}
-
-/* Subtle glow when no image */
-.lvjcb-hero:not(.lvjcb-hero--has-image)::before {
-	content: '';
-	position: absolute;
-	top: -100px;
-	right: -200px;
-	width: 600px;
-	height: 600px;
-	background: radial-gradient(circle, rgba(255, 184, 0, 0.08) 0%, transparent 70%);
-	pointer-events: none;
-}
-
-/* Container */
 .lvjcb-hero__container {
 	position: relative;
-	z-index: 2;
+	z-index: 1;
 	max-width: var(--lvjcb-container-max, 1180px);
 	margin-inline: auto;
-	padding: var(--lvjcb-space-section, 96px) var(--lvjcb-space-md, 24px);
-	width: 100%;
+	padding: var(--lvjcb-space-xl, 64px) var(--lvjcb-space-md, 24px);
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: var(--lvjcb-space-lg, 40px);
+	align-items: center;
+}
+
+@media (min-width: 901px) {
+	.lvjcb-hero--has-image .lvjcb-hero__container {
+		grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+		gap: var(--lvjcb-space-xl, 64px);
+		padding-block: var(--lvjcb-space-section, 96px);
+	}
 }
 
 .lvjcb-hero__content {
-	max-width: 750px;
+	min-width: 0;
 }
 
-/* Heading — premium sentence case, gold accent */
+/* Eyebrow — the "where", stated before the headline rather than in a top bar. */
+.lvjcb-hero__eyebrow {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	margin: 0 0 var(--lvjcb-space-sm, 16px);
+	padding: 6px 14px 6px 10px;
+	border: 1px solid rgba(255, 255, 255, 0.16);
+	border-radius: 999px;
+	background: rgba(255, 255, 255, 0.05);
+	font-size: var(--lvjcb-text-small, 14px);
+	font-weight: var(--lvjcb-font-weight-medium, 600);
+	color: var(--lvjcb-color-text-on-dark, #F5F7F9);
+}
+
+.lvjcb-hero__eyebrow .icon {
+	color: var(--lvjcb-color-accent, #FFB800);
+	flex-shrink: 0;
+}
+
 .lvjcb-hero__heading {
 	margin: 0;
 	font-family: var(--lvjcb-font-heading, system-ui, sans-serif);
-	font-size: clamp(36px, 5vw, 60px);
+	font-size: var(--lvjcb-text-h1, clamp(34px, 5vw, 56px));
 	font-weight: var(--lvjcb-font-weight-heavy, 800);
-	line-height: 1.05;
+	line-height: var(--lvjcb-leading-tight, 1.1);
+	letter-spacing: var(--lvjcb-letter-spacing-tight, -0.02em);
 	color: var(--lvjcb-color-text-on-dark, #F5F7F9);
-	letter-spacing: -0.025em;
 	text-wrap: balance;
 }
 
@@ -87,41 +89,16 @@
 	display: block;
 }
 
-/* Description */
 .lvjcb-hero__description {
 	margin: var(--lvjcb-space-sm, 16px) 0 0;
 	font-family: var(--lvjcb-font-body, system-ui, sans-serif);
-	font-size: 18px;
-	line-height: 1.6;
+	font-size: var(--lvjcb-text-lead, 18px);
+	line-height: var(--lvjcb-leading-body, 1.65);
 	color: var(--lvjcb-color-text-on-dark-muted, #9CA3AF);
-	max-width: 48ch;
+	max-width: 52ch;
 }
 
-/* Trust features — inline row with checkmarks */
-.lvjcb-hero__features {
-	margin-top: var(--lvjcb-space-lg, 40px);
-	display: flex;
-	flex-wrap: wrap;
-	gap: var(--lvjcb-space-sm, 16px) var(--lvjcb-space-lg, 40px);
-}
-
-.lvjcb-hero__feature {
-	display: inline-flex;
-	align-items: center;
-	gap: 8px;
-	font-size: 13px;
-	font-weight: var(--lvjcb-font-weight-bold, 700);
-	color: var(--lvjcb-color-text-on-dark, #F5F7F9);
-	letter-spacing: var(--lvjcb-letter-spacing-wide, 0.1em);
-	text-transform: uppercase;
-}
-
-.lvjcb-hero__feature .icon {
-	color: var(--lvjcb-color-accent, #FFB800);
-	flex-shrink: 0;
-}
-
-/* CTA buttons */
+/* CTAs sit above the trust row: the action comes before the reassurance. */
 .lvjcb-hero__ctas {
 	margin-top: var(--lvjcb-space-lg, 40px);
 	display: flex;
@@ -143,91 +120,100 @@
 	transform: translate(2px, -2px);
 }
 
-/* Quote form slot */
-.lvjcb-hero__quote-form-slot {
-	margin-top: var(--lvjcb-space-lg, 40px);
+/* Trust signals — sentence case, not shouted uppercase. */
+.lvjcb-hero__features {
+	margin: var(--lvjcb-space-lg, 40px) 0 0;
+	padding: var(--lvjcb-space-md, 24px) 0 0;
+	border-top: 1px solid rgba(255, 255, 255, 0.12);
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--lvjcb-space-xs, 12px) var(--lvjcb-space-md, 24px);
 }
 
-@media (max-width: 768px) {
-	.lvjcb-hero {
-		min-height: 420px;
+.lvjcb-hero__feature {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	font-size: var(--lvjcb-text-small, 14px);
+	font-weight: var(--lvjcb-font-weight-medium, 600);
+	color: var(--lvjcb-color-text-on-dark, #F5F7F9);
+}
+
+.lvjcb-hero__feature .icon {
+	color: var(--lvjcb-color-accent, #FFB800);
+	flex-shrink: 0;
+}
+
+/* Media column */
+.lvjcb-hero__media {
+	min-width: 0;
+	border-radius: var(--lvjcb-radius-lg, 16px);
+	overflow: hidden;
+	box-shadow: var(--lvjcb-shadow-lg, 0 8px 32px rgba(0,0,0,0.12));
+	line-height: 0;
+}
+
+.lvjcb-hero__image {
+	display: block;
+	width: 100%;
+	height: 100%;
+	/* Fixed ratio: stock photography arrives at whatever shape it was shot at. */
+	aspect-ratio: 4 / 3;
+	object-fit: cover;
+}
+
+@media (min-width: 901px) {
+	.lvjcb-hero__image {
+		aspect-ratio: 5 / 4;
+	}
+}
+
+/*
+ * Below the split breakpoint the photo comes first visually but stays after
+ * the copy in source order, so a screen reader and a search crawler both
+ * still meet the headline before the picture.
+ */
+@media (max-width: 900px) {
+	.lvjcb-hero__container {
+		padding-block: var(--lvjcb-space-lg, 40px);
 	}
 
-	.lvjcb-hero__description {
-		font-size: 16px;
+	.lvjcb-hero__media {
+		order: -1;
 	}
 
-	.lvjcb-hero__overlay {
-		background: linear-gradient(
-			180deg,
-			var(--lvjcb-color-dark, #111111) 0%,
-			rgba(17, 17, 17, 0.85) 100%
-		);
+	.lvjcb-hero__image {
+		aspect-ratio: 16 / 9;
 	}
 }
 
 @media (max-width: 480px) {
-	.lvjcb-hero {
-		min-height: 380px;
-	}
-
-	.lvjcb-hero__heading {
-		font-size: clamp(26px, 7vw, 36px);
-	}
-
 	.lvjcb-hero__description {
-		font-size: 15px;
-	}
-
-	.lvjcb-hero__feature {
-		font-size: 11px;
-		gap: 6px;
+		font-size: var(--lvjcb-text-base, 16px);
 	}
 
 	.lvjcb-hero__ctas {
 		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.lvjcb-hero__features {
+		gap: 10px 16px;
+	}
+
+	.lvjcb-hero__feature {
+		font-size: 13px;
 	}
 }
 
 @media (max-width: 359px) {
-	.lvjcb-hero {
-		min-height: 340px;
-	}
-
-	.lvjcb-hero__heading {
-		font-size: clamp(22px, 7.5vw, 26px);
-	}
-
-	.lvjcb-hero__description {
-		font-size: 14px;
-	}
-
 	.lvjcb-hero__container {
 		padding-inline: 16px;
 	}
 
-	.lvjcb-hero__feature {
-		font-size: 10px;
-	}
-
-	.lvjcb-hero__features {
-		gap: 8px 16px;
-	}
-}
-
-@media (min-width: 769px) {
-	.lvjcb-hero {
-		min-height: 580px;
-	}
-
-	.lvjcb-hero__features {
-		flex-wrap: nowrap;
-	}
-}
-
-@media (min-width: 1025px) {
-	.lvjcb-hero {
-		min-height: 640px;
+	.lvjcb-hero__eyebrow {
+		font-size: 13px;
 	}
 }
 

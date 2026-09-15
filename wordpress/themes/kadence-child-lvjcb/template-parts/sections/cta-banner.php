@@ -64,7 +64,7 @@ $intro   = $args['intro'] ?? '';
 			<?php $quote_url = lvjcb_get_config( 'instant_quote_url' ); ?>
 			<?php if ( $quote_url ) : ?>
 				<a class="lvjcb-btn lvjcb-btn--outline-dark lvjcb-cta-banner__cta" href="<?php echo esc_url( $quote_url ); ?>" target="_blank" rel="noopener">
-					<?php esc_html_e( 'Instant Offer', 'lvjcb' ); ?>
+					<?php esc_html_e( 'Get My Offer Online', 'lvjcb' ); ?>
 				</a>
 			<?php endif; ?>
 		</div>

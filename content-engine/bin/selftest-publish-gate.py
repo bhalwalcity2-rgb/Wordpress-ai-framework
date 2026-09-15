@@ -212,24 +212,37 @@ def main():
                code == 1 and "must be re-approved" in out)
 
         approve(draft_path)
-        code, out = gate("--check")
+        # This fixture is a deliberately minimal draft standing in for a real
+        # one, so promoting it over the live summerlin page drops sections the
+        # real page has. That is a genuine regression and the gate is right to
+        # refuse it; these cases carry --allow-regression to get past the
+        # guard, and the guard itself is tested on its own below.
+        code, out = gate("--check", "--allow-regression")
         record("passes prerequisites once genuinely approved", code == 0 and "READY" in out, out.strip().splitlines()[-1])
 
         destination = REPO_ROOT / "wordpress" / "themes" / THEME / "content" / "locations" / ("%s.json" % SLUG)
         before = pm.sha256_file(destination) if destination.is_file() else None
 
+        code, out = gate("--check")
+        record("refuses to promote a draft that drops live components",
+               code == 1 and "refusing to silently downgrade" in out)
+
+        code, out = gate("--check", "--allow-regression")
+        record("--allow-regression overrides the downgrade guard",
+               code == 0 and "ALLOWED REGRESSION" in out and "READY" in out)
+
         # The destination already exists, so a dry run must carry --update for
         # the same reason a real promotion does: the overwrite guard runs first.
-        code, out = gate("--dry-run", "--update")
+        code, out = gate("--dry-run", "--update", "--allow-regression")
         after_dry = pm.sha256_file(destination) if destination.is_file() else None
         record("dry run promotes nothing",
                code == 0 and "DRY RUN" in out and after_dry == before)
 
-        code, out = gate()
+        code, out = gate("--allow-regression")
         record("refuses to overwrite without --update",
                code == 1 and "already exists" in out if before else True)
 
-        code, out = gate("--update")
+        code, out = gate("--update", "--allow-regression")
         record("promotes with --update", code == 0 and "PROMOTED" in out)
 
         promoted = json.loads(destination.read_text(encoding="utf-8"))
@@ -253,14 +266,14 @@ def main():
         bad = json.loads(json.dumps(good))
         bad["content"]["hero_description"] = "Call First Choice Junk Car on (866) 748-3697."
         save(draft_path, bad); approve(draft_path)
-        code, out = gate("--update")
+        code, out = gate("--update", "--allow-regression")
         record("rejects untokenised business identity",
                code == 1 and ("tokenised" in out or "literal phone" in out))
 
         bad = json.loads(json.dumps(good))
         bad["generation"]["claim_ids_used"] = ["never-allowed-claim"]
         save(draft_path, bad); approve(draft_path)
-        code, out = gate("--update")
+        code, out = gate("--update", "--allow-regression")
         record("rejects a claim the brief did not allow", code == 1)
 
         bad = json.loads(json.dumps(good))
@@ -269,13 +282,13 @@ def main():
             {"type": "content", "heading": "B", "paragraphs": ["x y z", "p q r"]},
             {"type": "content", "heading": "C", "paragraphs": ["x y z"]}]
         save(draft_path, bad); approve(draft_path)
-        code, out = gate("--update")
+        code, out = gate("--update", "--allow-regression")
         record("rejects structure cloned from a sibling", code == 1)
 
         bad = json.loads(json.dumps(good))
         del bad["content"]["seo_title"]
         save(draft_path, bad); approve(draft_path)
-        code, out = gate("--update")
+        code, out = gate("--update", "--allow-regression")
         record("rejects malformed content missing required metadata", code == 1)
 
         angles = load(ENGINE / "angles" / ("%s.json" % SLUG))
@@ -284,7 +297,7 @@ def main():
                 a["status"] = "proposed"
         save(ENGINE / "angles" / ("%s.json" % SLUG), angles)
         save(draft_path, good); approve(draft_path)
-        code, out = gate("--update")
+        code, out = gate("--update", "--allow-regression")
         record("rejects an angle demoted from approved", code == 1 and "approved" in out)
 
     finally:

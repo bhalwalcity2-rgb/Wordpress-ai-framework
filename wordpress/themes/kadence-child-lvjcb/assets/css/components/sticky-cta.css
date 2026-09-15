@@ -1,0 +1,114 @@
+/*
+ * Sticky mobile call bar.
+ *
+ * Phone-only. At 769px and up the header keeps both actions on screen
+ * already, and a second fixed bar would just eat viewport for no gain.
+ */
+
+.lvjcb-sticky-cta {
+	display: none;
+}
+
+@media (max-width: 768px) {
+
+	.lvjcb-sticky-cta {
+		position: fixed;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 45;
+		display: flex;
+		gap: var(--lvjcb-space-2xs, 8px);
+		padding: var(--lvjcb-space-2xs, 8px);
+		/* Clears the iOS home indicator instead of sitting under it. */
+		padding-bottom: calc(var(--lvjcb-space-2xs, 8px) + env(safe-area-inset-bottom, 0px));
+		background: var(--lvjcb-color-dark, #111111);
+		border-top: 1px solid rgba(255, 255, 255, 0.12);
+	}
+
+	.lvjcb-sticky-cta__call,
+	.lvjcb-sticky-cta__quote {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		gap: 10px;
+		min-height: var(--lvjcb-tap-min, 44px);
+		padding: 8px 16px;
+		border-radius: var(--lvjcb-radius, 8px);
+		font-family: var(--lvjcb-font-body, system-ui, sans-serif);
+		font-weight: var(--lvjcb-font-weight-heavy, 800);
+		text-decoration: none;
+		border: 2px solid transparent;
+	}
+
+	/* The call takes the weight: it is the action that converts. */
+	.lvjcb-sticky-cta__call {
+		flex: 1 1 auto;
+		background: var(--lvjcb-color-accent, #FFB800);
+		color: var(--lvjcb-color-dark, #111111);
+		border-color: var(--lvjcb-color-accent, #FFB800);
+	}
+
+	.lvjcb-sticky-cta__call .icon {
+		flex-shrink: 0;
+	}
+
+	.lvjcb-sticky-cta__label {
+		display: flex;
+		flex-direction: column;
+		line-height: 1.15;
+		text-align: left;
+	}
+
+	.lvjcb-sticky-cta__action {
+		font-size: 11px;
+		font-weight: var(--lvjcb-font-weight-bold, 700);
+		text-transform: uppercase;
+		letter-spacing: 0.06em;
+		opacity: 0.75;
+	}
+
+	.lvjcb-sticky-cta__number {
+		font-size: 15px;
+		font-weight: var(--lvjcb-font-weight-heavy, 800);
+		white-space: nowrap;
+	}
+
+	.lvjcb-sticky-cta__quote {
+		flex: 0 0 auto;
+		background: transparent;
+		border-color: rgba(255, 255, 255, 0.35);
+		color: var(--lvjcb-color-text-on-dark, #F5F7F9);
+		font-size: 14px;
+	}
+
+	.lvjcb-sticky-cta__call:focus-visible,
+	.lvjcb-sticky-cta__quote:focus-visible {
+		outline: 2px solid var(--lvjcb-color-accent, #FFB800);
+		outline-offset: 2px;
+	}
+
+	/*
+	 * Reserve the bar's height at the end of the document so the footer's
+	 * last row is reachable instead of permanently covered.
+	 */
+	body {
+		padding-bottom: calc(60px + env(safe-area-inset-bottom, 0px));
+	}
+
+	/* The drawer is a full-screen layer; the bar must not float over it. */
+	.lvjcb-mobile-nav.is-open ~ .lvjcb-sticky-cta {
+		display: none;
+	}
+}
+
+@media (max-width: 359px) {
+	.lvjcb-sticky-cta__quote {
+		padding-inline: 12px;
+		font-size: 13px;
+	}
+
+	.lvjcb-sticky-cta__number {
+		font-size: 14px;
+	}
+}

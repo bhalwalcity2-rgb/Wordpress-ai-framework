@@ -61,6 +61,7 @@
 .lvjcb-header__logo {
 	display: flex;
 	align-items: center;
+	min-height: var(--lvjcb-tap-min, 44px);
 	gap: 12px;
 	font-family: var(--lvjcb-font-heading, system-ui, sans-serif);
 	color: var(--lvjcb-color-text-on-dark, #F5F7F9);
@@ -170,6 +171,12 @@
 
 .lvjcb-header__phone-icon-only {
 	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: var(--lvjcb-tap-min, 44px);
+	height: var(--lvjcb-tap-min, 44px);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: var(--lvjcb-radius, 8px);
 	color: var(--lvjcb-color-accent, #FFB800);
 }
 
@@ -184,8 +191,8 @@
 
 .lvjcb-header__hamburger {
 	display: inline-flex;
-	width: 40px;
-	height: 40px;
+	width: var(--lvjcb-tap-min, 44px);
+	height: var(--lvjcb-tap-min, 44px);
 	align-items: center;
 	justify-content: center;
 	border: 1px solid rgba(255,255,255,0.2);
@@ -228,8 +235,8 @@
 }
 
 .lvjcb-mobile-nav__close {
-	width: 40px;
-	height: 40px;
+	width: var(--lvjcb-tap-min, 44px);
+	height: var(--lvjcb-tap-min, 44px);
 	border: 1px solid rgba(255,255,255,0.2);
 	border-radius: var(--lvjcb-radius, 8px);
 	background: none;
@@ -389,8 +396,8 @@
 	}
 
 	.lvjcb-header__hamburger {
-		width: 36px;
-		height: 36px;
+		width: var(--lvjcb-tap-min, 44px);
+		height: var(--lvjcb-tap-min, 44px);
 	}
 }
 
@@ -398,4 +405,24 @@
 	.lvjcb-header__row {
 		transition: none;
 	}
+}
+
+
+/*
+ * Tap-target floors found by measuring the rendered page rather than reading
+ * the stylesheet: each of these elements shrink-wrapped its text, so there was
+ * no height declaration for a static scan to catch.
+ */
+.lvjcb-header__phone {
+	min-height: var(--lvjcb-tap-min, 44px);
+	align-items: center;
+	padding-inline: 8px;
+	border-radius: var(--lvjcb-radius, 8px);
+}
+
+.lvjcb-header__nav a {
+	display: inline-flex;
+	align-items: center;
+	min-height: var(--lvjcb-tap-min, 44px);
+	padding-inline: 4px;
 }

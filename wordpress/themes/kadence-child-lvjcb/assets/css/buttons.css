@@ -36,19 +36,6 @@
 	box-shadow: 0 4px 16px rgba(255,184,0,0.3);
 }
 
-.lvjcb-btn--gold {
-	background: var(--lvjcb-color-accent, #FFB800);
-	color: var(--lvjcb-color-dark, #111111);
-	border-color: var(--lvjcb-color-accent, #FFB800);
-	font-weight: var(--lvjcb-font-weight-heavy, 800);
-}
-
-.lvjcb-btn--gold:hover {
-	background: var(--lvjcb-color-accent-deep, #BF8A00);
-	border-color: var(--lvjcb-color-accent-deep, #BF8A00);
-	transform: translateY(-1px);
-}
-
 .lvjcb-btn--secondary {
 	background: transparent;
 	border-color: var(--lvjcb-color-border, #D2D6DB);
@@ -116,7 +103,7 @@
 
 @media (max-width: 480px) {
 	.lvjcb-btn {
-		height: 46px;
+		height: 48px;
 		padding: 0 20px;
 		font-size: 14px;
 		white-space: normal;
@@ -124,10 +111,17 @@
 	}
 }
 
+/*
+ * The narrowest phones get smaller type and tighter padding, but not a
+ * smaller target: height bottoms out at the 44px floor rather than the 42px
+ * it used to drop to. min-height alongside height so a button whose label
+ * wraps to two lines grows instead of clipping.
+ */
 @media (max-width: 359px) {
 	.lvjcb-btn {
-		height: 42px;
-		padding: 0 16px;
+		height: auto;
+		min-height: var(--lvjcb-tap-min, 44px);
+		padding: 10px 16px;
 		font-size: 13px;
 		max-width: 100%;
 	}
