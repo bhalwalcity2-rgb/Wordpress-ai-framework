@@ -151,8 +151,18 @@
 	}
 }
 
-/* Centered header modifier */
+/*
+ * Centered header modifier.
+ *
+ * The eyebrow is inline-flex, so it shrink-wraps to its own text and sits at
+ * the container's left edge. justify-content then centres the dash and the
+ * label inside that shrink-wrapped box, which changes nothing visible - the
+ * eyebrow stayed ~490px left of the heading it belongs to, on every centred
+ * section including the homepage's. Switching to flex lets it fill the
+ * container so the centring applies where it was meant to.
+ */
 .lvjcb-section--centered .lvjcb-section__eyebrow {
+	display: flex;
 	justify-content: center;
 }
 

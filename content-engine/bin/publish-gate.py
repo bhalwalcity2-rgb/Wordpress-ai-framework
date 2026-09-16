@@ -98,10 +98,24 @@ def component_regressions(old, new):
     new_types, new_images, new_faq = inventory(new)
 
     lost = []
-    for kind in set(old_types):
+
+    # Total section count, not per-type counts for prose. Splitting four
+    # content sections into three while adding steps and a card grid is an
+    # ordinary rewrite, and flagging it trains people to pass the override
+    # flag by reflex - which is how a real regression gets waved through.
+    if len(new_types) < len(old_types):
+        lost.append("%d fewer section(s) overall: %d -> %d"
+                    % (len(old_types) - len(new_types), len(old_types), len(new_types)))
+
+    # Tier 3 blocks are counted by type, because each one is a set of internal
+    # links. Losing the areas block silently cost the first Henderson
+    # promotion its entire sideways linking.
+    for kind in ("areas", "services"):
         before, after = old_types.count(kind), new_types.count(kind)
         if after < before:
-            lost.append("%d fewer %r section(s): %d -> %d" % (before - after, kind, before, after))
+            lost.append("the %r block is gone (%d -> %d) - that is internal linking"
+                        % (kind, before, after))
+
     if new_images < old_images:
         lost.append("%d fewer section image(s): %d -> %d" % (old_images - new_images, old_images, new_images))
     if old_faq and not new_faq:

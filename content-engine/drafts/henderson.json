@@ -10,7 +10,15 @@
 			"henderson-mc-vehicle-cap-by-zoning",
 			"henderson-mc-vehicle-screening",
 			"henderson-mc-72-hour-repair",
-			"henderson-city-enforces-own-code"
+			"henderson-city-enforces-own-code",
+			"biz-free-towing",
+			"biz-firm-offer",
+			"biz-no-hidden-fees",
+			"biz-paid-at-pickup",
+			"biz-same-day-pickup",
+			"biz-no-title-help",
+			"biz-three-step-process",
+			"biz-condition-agnostic"
 		],
 		"source_artifacts": {
 			"angles": "content-engine/angles/henderson.json",
@@ -23,162 +31,238 @@
 			"differentiation_report": "content-engine/reports/differentiation/henderson.json",
 			"corpus_summary": "content-engine/reports/corpus-summary.json"
 		},
-		"notes": "Authored against the package. Service specifics are intentionally absent from prose - no claim id supports them, and the CTA, trust strip and contact section carry the offer.",
-		"generated_on": "2026-09-14"
+		"notes": "Rewrite. Restores the section photography and the areas block that the first promotion dropped, adds the process and highlights the business claims support, and tightens two precision points: screening is a condition rather than an allowance, and the 72-hour window requires resident registration and minor repair.",
+		"generated_on": "2026-09-15"
 	},
 	"coverage": {
 		"concepts_covered": [
-			"how many inoperable vehicles are permitted",
-			"the repair allowance and its limit",
-			"screening conditions",
-			"deciding between compliance and sale"
+			"the vehicle cap and how zoning sets it",
+			"screening as a condition, not an allowance",
+			"the 72-hour repair exception and its two conditions",
+			"Henderson's separate enforcement from Clark County",
+			"selling as the alternative to compliance work"
 		],
-		"concepts_not_covered": [],
+		"concepts_not_covered": [
+			"Any statewide limit. NRS 487.290 rests on a secondary publisher and a high-risk regulatory claim needs primary text, so it is deliberately absent."
+		],
 		"questions_answered": [
-			"How many inoperable vehicles can I keep on my property in Henderson?",
-			"Does it help that the car still has current plates?",
-			"I am part-way through fixing it. How long do I have?",
-			"Can I just put it behind a fence?"
+			"How do I find out whether my property is RNP-1, RNP-2, or neither?",
+			"If I put up a fence, can I keep an extra vehicle?",
+			"My car is mid-repair. Does the 72-hour allowance cover me?",
+			"Do the same rules apply just outside the city?"
 		],
 		"entities_explained": [
 			"inoperable vehicle",
 			"unregistered vehicle",
-			"zoning designation",
 			"RNP-1",
 			"RNP-2",
-			"screening",
+			"zoning designation",
 			"property maintenance code",
-			"code enforcement"
+			"screening",
+			"opaque fence",
+			"code enforcement",
+			"Clark County",
+			"towing",
+			"firm offer"
 		],
 		"information_gain_delivered": [
-			"The specific numeric caps Henderson applies, and that they vary by zoning designation",
-			"The 72-hour repair allowance and the three conditions that narrow it",
-			"That screening is a condition on permitted vehicles rather than a way around the count"
+			"States the three-tier cap with the figures attached to each zoning designation, which no sibling page carries.",
+			"Corrects the common reading that screening buys an extra vehicle.",
+			"States both conditions on the 72-hour allowance rather than treating it as a general grace period.",
+			"Separates Henderson's enforcement from Clark County's, which changes which advice applies at a given address."
 		],
 		"self_check": {
-			"search_intent": "Local-transactional. The reader arrives worried about a vehicle on their property; the page answers the actual question, then makes the sale option available without pushing it.",
-			"semantic_coverage": "Explains the chain that matters: vehicle condition and registration decide whether it counts, zoning decides the permitted number, screening conditions what is permitted, and the gap between those decides the owner's options.",
-			"information_gain": "Three facts no sibling page carries, all from Henderson Municipal Code § 15.12.030.",
-			"differentiation": "Structure follows the rule being explained - what it says, the exception, what to check, what to do - rather than the hero/services/process/FAQ order the siblings share.",
-			"local_relevance": "The numbers are Henderson's own municipal code, not a general observation about the valley. They would be wrong for an unincorporated address.",
-			"naturalness": "No keyword repetition; the page uses the terms the code uses because it is explaining the code.",
-			"utility": "A reader leaves knowing the number that applies to them, the one exception, and what to check next. That is actionable without a phone call.",
-			"claims": "Four claim ids, all verified against the municipal code. No service claim is asserted in prose - free towing, payment and timing are not stated anywhere, because no claim id supports them. The offer is carried by the CTA and contact components.",
-			"trust": "No invented experience, staff, local presence, reviews, customer stories or pricing. The Clark County comparison is deliberately absent: that claim is PARTIALLY_SUPPORTED and not publishable, so the page does not make it."
+			"search_intent": "Navigational-local first - someone in Henderson with a dead car looking for a buyer - with a strong informational secondary. The page answers the code question that brought them and then offers the transaction.",
+			"semantic_coverage": "Cap, conditions, exception, jurisdiction, then the decision and the process. That is the chain a Henderson owner actually walks.",
+			"information_gain": "Four items, all from municipal code retrieved verbatim. Two of them correct misreadings rather than merely restating the rule.",
+			"differentiation": "Structure is content/content/steps/cta/highlights/content/services/areas, which no sibling uses. FAQ is entirely code-specific - zoning lookup, fence, repair window, jurisdiction - and shares no question with the homepage or any sibling.",
+			"local_relevance": "Every local fact is Henderson Municipal Code. No invented neighbourhoods, no invented local experience, no claim about how many pickups happen here.",
+			"naturalness": "'Henderson' appears where a person would say it. No keyword repetition.",
+			"utility": "A reader leaves knowing the figure that applies to them, what the fence rule does and does not do, whether the repair window covers them, and what selling involves.",
+			"claims": "Four municipal-code claims, all SUPPORTED and sourced to HMC 15.12.030, plus six business claims from the shared ledger. Boundaries respected: same-day is 'available', no dollar figure appears, and the title line offers help without asserting a legal rule.",
+			"trust": "No reviews, no customer stories, no staff, no history, no statistics. The only authority claimed is the code itself."
 		}
 	},
 	"content": {
 		"slug": "henderson",
 		"city": "Henderson",
 		"state": "NV",
-		"seo_title": "Henderson Inoperable Vehicle Limits | {business}",
-		"seo_description": "Henderson caps how many inoperable vehicles a property may keep, and the number depends on your zoning designation. What the rule says, and what to do next.",
-		"hero_heading": "How Many Inoperable Vehicles You Can Keep in Henderson",
-		"hero_description": "Henderson does not leave this to interpretation. The city's property maintenance code puts a number on it, and the number depends on how your property is zoned.",
+		"seo_title": "Junk Car Limits in Henderson, NV — and How to Sell One | {business}",
+		"seo_description": "Henderson caps inoperable vehicles by zoning: six, four, or two. Find out where you stand, then sell the extra one with free towing and payment at pickup. Call {phone}.",
+		"hero_heading": "Henderson Caps How Many Junk Cars You Can Keep",
+		"hero_description": "The number is six, four, or two depending on your zoning — not one flat figure across the city. Work out which applies to you, then decide what to do about it.",
 		"sections": [
 			{
 				"type": "content",
-				"eyebrow": "The rule",
-				"heading": "Henderson Puts a Number On It",
+				"eyebrow": "The limit",
+				"heading": "Six, Four, or Two — It Depends Where You Live",
 				"paragraphs": [
-					"Most people worrying about a dead car in the driveway are working from a vague sense that someone might complain. In Henderson there is something more specific to work from. The city's property maintenance code limits how many inoperable or unregistered vehicles a single property may keep, and that limit is tied to the property's zoning designation rather than applied as one flat figure across the city.",
-					"Properties in an RNP-1 designated area are allowed up to six. RNP-2 areas are allowed up to four. Every other property is limited to two. So the first useful question is not whether anyone has noticed the vehicle, but which of those three categories your address falls into — because that single fact decides whether you are comfortably inside the limit or already over it.",
-					"There is a second condition attached. Where the code permits vehicles to be kept, they have to be screened by a substantially opaque fence at least six feet high. Screening is a requirement placed on vehicles that are already within the permitted number, not a way of putting an extra one out of sight."
-				]
-			},
-			{
-				"type": "content",
-				"eyebrow": "The repair window",
-				"heading": "The 72-Hour Allowance, and What It Does Not Cover",
-				"paragraphs": [
-					"The code makes one narrow allowance for a vehicle that is actually being worked on. A single inoperable vehicle that is registered to a resident of the property and undergoing minor repair work may sit there for a period not exceeding 72 hours.",
-					"Three things in that sentence do the work. It covers one vehicle, not several. The vehicle has to be registered to somebody who lives at the property, which rules out a car parked there as a favour to a relative or a friend. And 72 hours is three days — short enough that a project waiting on a part, a payday or a free weekend will run past it without anyone intending to break a rule.",
-					"The code defines what counts as minor repair work elsewhere in its own text, and that definition is worth reading before relying on this allowance, because it is the part that decides whether the exception applies to your situation at all."
-				]
-			},
-			{
-				"type": "content",
-				"eyebrow": "Working it out",
-				"heading": "Three Things Worth Checking Before You Decide Anything",
-				"blocks": [
-					{
-						"heading": "Which designation your property carries",
-						"paragraphs": [
-							"Six, four or two is a wide spread, and the difference between them is not something you can judge by looking at the street. It is worth confirming rather than assuming, since it sets the number everything else is measured against."
-						]
-					},
-					{
-						"heading": "How many vehicles actually count",
-						"paragraphs": [
-							"The limit covers vehicles that are inoperable or unregistered. A car that still carries current plates but has not started in a year is worth thinking about honestly, because the count is about the vehicle's condition and registration rather than about how long it has been there."
-						]
-					},
-					{
-						"heading": "Whether screening is genuinely in place",
-						"paragraphs": [
-							"A substantially opaque fence at six feet is a specific standard. A gate that stands open, a carport, or a tarp is not the same thing, and the difference matters more than it looks like it should."
-						]
-					}
+					"Henderson's property maintenance code limits how many inoperable or unregistered vehicles a property may keep, and the limit is tied to the property's zoning designation rather than applied as one flat figure across the city. Properties in an RNP-1 designated area are allowed up to six. RNP-2 areas are allowed up to four. Every other property is limited to two.",
+					"That makes the first useful question not whether anyone has complained, but which of those three categories your address falls into. It is the fact that decides whether you are comfortably inside the limit or already over it, and it is knowable before anyone knocks on your door.",
+					"Worth knowing too: Henderson is an incorporated city and enforces its own property maintenance and nuisance code through its own code enforcement office, separately from Clark County. Advice written for the unincorporated valley does not necessarily describe what applies at a Henderson address."
 				],
-				"footnote": "Henderson is an incorporated city and enforces this through its own code enforcement office, so this is the city's rule rather than a county one."
+				"image": {
+					"slug": "henderson-driveway-01",
+					"alt": "An older sedan parked on the driveway of a single-storey suburban home",
+					"align": "right"
+				}
 			},
 			{
 				"type": "content",
-				"eyebrow": "The decision",
-				"heading": "Bring It Into Line, or Let It Go",
+				"eyebrow": "The fine print",
+				"heading": "The Fence Rule, and the 72-Hour Exception",
+				"variant": "alt",
 				"paragraphs": [
-					"Once the number is clear the choice usually resolves quickly. If you are inside the limit and the screening is genuinely there, keeping a project vehicle is a legitimate position and there is no reason to rush it.",
-					"If you are over the number, the options are narrower than they first appear. Building compliant screening is real money and real work. Registering or repairing a vehicle you were never realistically going to finish tends to postpone the problem rather than solve it. Selling the one you care least about is often the cheapest way to get back under the line, and it is the option people tend to reach last rather than first.",
-					"If that is where you land, call {phone} and describe what you have — the year, make, model and condition, and whether it runs. That is enough to tell you where you stand."
-				]
+					"Two conditions sit alongside the count, and both are narrower than people usually assume.",
+					"Where Henderson allows inoperable or unregistered vehicles to be kept, they must be screened by a substantially opaque fence at least six feet high. Read that carefully: screening is a requirement placed on vehicles that are already within the permitted number. Building a fence does not buy you an extra vehicle.",
+					"Separately, Henderson allows a single inoperable vehicle that is registered to a resident of the property and undergoing minor repair work, for a period not exceeding 72 hours. Both halves of that matter. It covers a car registered to someone who lives there, being actively worked on, for three days — not a vehicle that has sat untouched since last spring."
+				],
+				"image": {
+					"slug": "henderson-neighborhood-01",
+					"alt": "A quiet residential street lined with desert-landscaped front yards",
+					"align": "left"
+				}
 			},
 			{
-				"type": "services",
-				"eyebrow": "What we buy",
+				"type": "steps",
+				"eyebrow": "The other option",
 				"heading": "If Selling Is the Simpler Answer",
-				"items": [
+				"intro": "Reducing the count by one is usually faster than building a fence.",
+				"steps": [
 					{
-						"slug": "non-running",
-						"note": "The category most often at issue here — a vehicle that will not start is inoperable by any reading."
+						"icon": "phone",
+						"heading": "Tell us what is sitting there",
+						"description": "Year, make, model, condition, and roughly where in Henderson it is parked. Call {phone}, or start it online if you would rather not talk."
 					},
 					{
-						"slug": "damaged",
-						"note": "Collision or storm damage that was never repaired, whether or not it still carries plates."
+						"icon": "cash",
+						"heading": "Take a firm offer",
+						"description": "The figure quoted is firm. It is not revisited when the truck arrives, and no fee is subtracted from it afterwards."
 					},
 					{
-						"slug": "sedans",
-						"note": "Ordinary cars that stopped being driven and quietly became part of the count."
+						"icon": "truck",
+						"heading": "We tow it and pay you there",
+						"description": "Towing is free and comes out of our side, not your offer. Payment happens at pickup rather than at some point after."
 					}
 				]
 			},
 			{
 				"type": "cta",
-				"heading": "Not Sure Whether You Are Over the Limit?",
-				"intro": "Describe the vehicle and we will tell you what it is worth, so you can weigh that against the cost of keeping it."
+				"heading": "Not Sure Which Zoning You Are In?",
+				"intro": "Tell us your street and how many are parked, and we will talk through where you stand."
+			},
+			{
+				"type": "highlights",
+				"eyebrow": "What you can count on",
+				"heading": "What the Offer Covers",
+				"cards": [
+					{
+						"icon": "truck",
+						"heading": "Towing is on us",
+						"description": "Free on every pickup, and never deducted from the amount you agreed."
+					},
+					{
+						"icon": "handshake",
+						"heading": "The number holds",
+						"description": "A firm offer stays firm. There are no hidden fees taken off at collection."
+					},
+					{
+						"icon": "clock",
+						"heading": "Often the same day",
+						"description": "Same-day pickup is available, though it depends on how the day is running."
+					},
+					{
+						"icon": "document",
+						"heading": "Missing the title?",
+						"description": "Say so on the call. We can often still help, depending on the situation."
+					}
+				]
+			},
+			{
+				"type": "content",
+				"eyebrow": "Deciding",
+				"heading": "Bring It Into Line, or Let It Go",
+				"paragraphs": [
+					"If the count at your address is over the limit, there are only two directions to go: bring the property into compliance, or reduce the number of vehicles. A six-foot opaque fence is a real project. Selling the one that has not run in years is usually the shorter road, and it is the only one that also clears the space.",
+					"If you are inside the limit and simply tired of looking at it, none of the above applies and the decision is entirely yours. We buy vehicles running or not, damaged or complete, either way."
+				],
+				"image": {
+					"slug": "henderson-situations-01",
+					"alt": "A tow truck winching a non-running car onto a flatbed",
+					"align": "right"
+				}
+			},
+			{
+				"type": "services",
+				"eyebrow": "What we take",
+				"heading": "The Vehicles Behind Most Henderson Calls",
+				"intro": "Condition is not a barrier. These are the four categories most pickups fall into.",
+				"items": [
+					{
+						"slug": "non-running",
+						"note": "The category most often responsible for putting a property over its count."
+					},
+					{
+						"slug": "damaged",
+						"note": "Collision or storm damage, repaired or not."
+					},
+					{
+						"slug": "sedans",
+						"note": "Ordinary cars that quietly stopped being worth the next repair."
+					},
+					{
+						"slug": "trucks-suvs",
+						"note": "Pickups and SUVs, including work vehicles taken out of service."
+					}
+				]
+			},
+			{
+				"type": "areas",
+				"eyebrow": "Nearby",
+				"heading": "We Collect Across the Rest of the Valley Too",
+				"intro": "Same free towing and the same firm offer wherever the vehicle is sitting.",
+				"items": [
+					{
+						"slug": "north-las-vegas",
+						"note": "Same free towing, same firm offer."
+					},
+					{
+						"slug": "summerlin",
+						"note": "Collected on the same valley runs."
+					},
+					{
+						"slug": "boulder-city",
+						"note": "Further out, still no towing charge."
+					},
+					{
+						"slug": "paradise",
+						"note": "Same process end to end."
+					}
+				]
 			}
 		],
-		"faq_heading": "Questions About Henderson's Vehicle Limit",
+		"faq_heading": "Questions Henderson Residents Ask",
 		"faq": [
 			{
-				"question": "How many inoperable vehicles can I keep on my property in Henderson?",
-				"answer": "It depends on your zoning designation. RNP-1 areas are allowed up to six, RNP-2 up to four, and every other property is limited to two inoperable or unregistered vehicles."
+				"question": "How do I find out whether my property is RNP-1, RNP-2, or neither?",
+				"answer": "It is your property's zoning designation, and it is the fact the whole limit turns on. Henderson enforces its own code through its own code enforcement office, so the city is the place to confirm it rather than a county source."
 			},
 			{
-				"question": "Does it help that the car still has current plates?",
-				"answer": "The limit covers vehicles that are inoperable or unregistered, so a registered vehicle that cannot be driven is still the kind of vehicle the rule is written about. Current plates alone do not take it out of the count."
+				"question": "If I put up a fence, can I keep an extra vehicle?",
+				"answer": "No. Screening by a substantially opaque fence at least six feet high is a condition placed on vehicles that are already within the permitted number. It is not a way to exceed the count."
 			},
 			{
-				"question": "I am part-way through fixing it. How long do I have?",
-				"answer": "The code allows a single inoperable vehicle registered to a resident of the property and undergoing minor repair work for a period not exceeding 72 hours. What qualifies as minor repair work is defined elsewhere in the code and is worth checking before you rely on it."
+				"question": "My car is mid-repair. Does the 72-hour allowance cover me?",
+				"answer": "Only if it is registered to someone living at the property and the work is minor repair, and only for a period not exceeding 72 hours. A vehicle that has been sitting for months is not what that allowance describes."
 			},
 			{
-				"question": "Can I just put it behind a fence?",
-				"answer": "Screening is required for vehicles that are already within the permitted number — a substantially opaque fence at least six feet high. It is a condition attached to vehicles you are allowed to keep, not a way of adding one beyond the limit."
+				"question": "Do the same rules apply just outside the city?",
+				"answer": "Not necessarily. Henderson is incorporated and enforces its own property maintenance and nuisance code separately from Clark County, so a neighbouring unincorporated address is not governed by the figures on this page."
 			}
 		],
 		"final_cta": {
-			"heading": "Get a Number Before You Decide",
-			"intro": "Knowing what the vehicle is actually worth makes the choice between keeping it and selling it a much shorter conversation."
+			"heading": "Get an Offer on the One That Has to Go",
+			"intro": "Two minutes on the phone is usually enough to put a firm number on it."
 		}
 	},
 	"_authoring_package": {
