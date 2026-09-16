@@ -346,11 +346,11 @@
 		"government_legal": 3
 	},
 	"current_information_gain": {
-		"verdict": "LOCAL_NAME_SUBSTITUTION_ONLY",
-		"unique_phrase_count": 479,
-		"shared_phrase_count": 80,
+		"verdict": "HAS_INFORMATION_GAIN",
+		"unique_phrase_count": 485,
+		"shared_phrase_count": 74,
 		"boilerplate_phrase_count": 2,
-		"unique_share": 0.8538,
+		"unique_share": 0.8645,
 		"boilerplate_share": 0.0036,
 		"sample_unique_phrases": [
 			"000 or more depending on",
@@ -370,7 +370,9 @@
 			"Centennial Hills",
 			"Peccole Ranch"
 		],
-		"unique_nonlocal_entities": [],
+		"unique_nonlocal_entities": [
+			"attributes_condition:flooded"
+		],
 		"has_unique_structure": false
 	},
 	"current_unique_elements": {
@@ -379,7 +381,7 @@
 			"Centennial Hills",
 			"Peccole Ranch"
 		],
-		"unique_phrase_share": 0.8538
+		"unique_phrase_share": 0.8645
 	},
 	"current_generic_elements": {
 		"prose_only_sections": [

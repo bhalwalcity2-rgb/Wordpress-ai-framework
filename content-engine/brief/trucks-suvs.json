@@ -274,10 +274,10 @@
 	},
 	"current_information_gain": {
 		"verdict": "WORDING_ONLY_GAIN",
-		"unique_phrase_count": 498,
-		"shared_phrase_count": 35,
+		"unique_phrase_count": 499,
+		"shared_phrase_count": 34,
 		"boilerplate_phrase_count": 1,
-		"unique_share": 0.9326,
+		"unique_share": 0.9345,
 		"boilerplate_share": 0.0019,
 		"sample_unique_phrases": [
 			"000 pound sedan on scrap",
@@ -299,7 +299,7 @@
 	"current_unique_elements": {
 		"sections_with_structure": [],
 		"unique_local_entities": [],
-		"unique_phrase_share": 0.9326
+		"unique_phrase_share": 0.9345
 	},
 	"current_generic_elements": {
 		"prose_only_sections": [

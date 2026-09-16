@@ -258,11 +258,11 @@
 		"unverifiable": 3
 	},
 	"current_information_gain": {
-		"verdict": "LOCAL_NAME_SUBSTITUTION_ONLY",
-		"unique_phrase_count": 374,
-		"shared_phrase_count": 15,
+		"verdict": "HAS_INFORMATION_GAIN",
+		"unique_phrase_count": 376,
+		"shared_phrase_count": 13,
 		"boilerplate_phrase_count": 2,
-		"unique_share": 0.9565,
+		"unique_share": 0.9616,
 		"boilerplate_share": 0.0051,
 		"sample_unique_phrases": [
 			"30 miles southeast of las",
@@ -281,13 +281,16 @@
 		"unique_local_entities": [
 			"Adams Boulevard",
 			"Because Boulder City",
+			"Boulder City",
 			"Boulder City Boulder City",
 			"Buchanan Boulevard",
 			"Most Boulder City",
 			"US-93",
 			"Utah Street"
 		],
-		"unique_nonlocal_entities": [],
+		"unique_nonlocal_entities": [
+			"process:scheduling"
+		],
 		"has_unique_structure": false
 	},
 	"current_unique_elements": {
@@ -295,13 +298,14 @@
 		"unique_local_entities": [
 			"Adams Boulevard",
 			"Because Boulder City",
+			"Boulder City",
 			"Boulder City Boulder City",
 			"Buchanan Boulevard",
 			"Most Boulder City",
 			"US-93",
 			"Utah Street"
 		],
-		"unique_phrase_share": 0.9565
+		"unique_phrase_share": 0.9616
 	},
 	"current_generic_elements": {
 		"prose_only_sections": [
@@ -311,7 +315,6 @@
 		],
 		"boilerplate_phrase_share": 0.0051,
 		"shared_local_entities": [
-			"Boulder City",
 			"Las Vegas"
 		]
 	},

@@ -260,10 +260,10 @@
 	},
 	"current_information_gain": {
 		"verdict": "LOCAL_NAME_SUBSTITUTION_ONLY",
-		"unique_phrase_count": 410,
-		"shared_phrase_count": 70,
+		"unique_phrase_count": 412,
+		"shared_phrase_count": 68,
 		"boilerplate_phrase_count": 3,
-		"unique_share": 0.8489,
+		"unique_share": 0.853,
 		"boilerplate_share": 0.0062,
 		"sample_unique_phrases": [
 			"000 based on the vehicle's",
@@ -284,6 +284,7 @@
 			"Ann Road",
 			"Carey Avenue",
 			"Cheyenne Avenue",
+			"Craig Road",
 			"North Las Vegas"
 		],
 		"unique_nonlocal_entities": [],
@@ -295,9 +296,10 @@
 			"Ann Road",
 			"Carey Avenue",
 			"Cheyenne Avenue",
+			"Craig Road",
 			"North Las Vegas"
 		],
-		"unique_phrase_share": 0.8489
+		"unique_phrase_share": 0.853
 	},
 	"current_generic_elements": {
 		"prose_only_sections": [
@@ -307,9 +309,7 @@
 			"content[3]: Common Vehicles We Buy in North Las Vegas"
 		],
 		"boilerplate_phrase_share": 0.0062,
-		"shared_local_entities": [
-			"Craig Road"
-		]
+		"shared_local_entities": []
 	},
 	"likely_sibling_overlap": {
 		"max_masked_vocabulary_similarity": 0.3175,

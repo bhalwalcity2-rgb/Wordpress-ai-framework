@@ -9,11 +9,11 @@
 	"distributions": {
 		"raw_shingle_jaccard": {
 			"count": 68,
-			"min": 0.001,
+			"min": 0.0,
 			"max": 0.0245,
-			"mean": 0.0083,
-			"p10": 0.0019,
-			"p25": 0.0033,
+			"mean": 0.0079,
+			"p10": 0.0,
+			"p25": 0.0029,
 			"p50": 0.0074,
 			"p75": 0.0104,
 			"p90": 0.0173,
@@ -21,11 +21,11 @@
 		},
 		"masked_shingle_jaccard": {
 			"count": 68,
-			"min": 0.0015,
+			"min": 0.0,
 			"max": 0.0398,
-			"mean": 0.0114,
-			"p10": 0.0024,
-			"p25": 0.0036,
+			"mean": 0.0108,
+			"p10": 0.0,
+			"p25": 0.0027,
 			"p50": 0.0109,
 			"p75": 0.0177,
 			"p90": 0.021,
@@ -35,9 +35,9 @@
 			"count": 68,
 			"min": -0.001,
 			"max": 0.0153,
-			"mean": 0.0031,
+			"mean": 0.0029,
 			"p10": -0.0009,
-			"p25": 0.0005,
+			"p25": 0.0,
 			"p50": 0.0022,
 			"p75": 0.0039,
 			"p90": 0.0085,
@@ -45,11 +45,11 @@
 		},
 		"trigram_jaccard": {
 			"count": 68,
-			"min": 0.0118,
+			"min": 0.0018,
 			"max": 0.0803,
-			"mean": 0.0344,
-			"p10": 0.0149,
-			"p25": 0.0228,
+			"mean": 0.0317,
+			"p10": 0.0042,
+			"p25": 0.0173,
 			"p50": 0.0348,
 			"p75": 0.0445,
 			"p90": 0.0575,
@@ -57,10 +57,10 @@
 		},
 		"raw_vocabulary_jaccard": {
 			"count": 68,
-			"min": 0.1335,
+			"min": 0.1231,
 			"max": 0.3114,
-			"mean": 0.2242,
-			"p10": 0.1628,
+			"mean": 0.2207,
+			"p10": 0.1432,
 			"p25": 0.1813,
 			"p50": 0.2301,
 			"p75": 0.2621,
@@ -69,11 +69,11 @@
 		},
 		"masked_vocabulary_jaccard": {
 			"count": 68,
-			"min": 0.1365,
+			"min": 0.1257,
 			"max": 0.3242,
-			"mean": 0.2284,
-			"p10": 0.1559,
-			"p25": 0.1814,
+			"mean": 0.226,
+			"p10": 0.1465,
+			"p25": 0.1794,
 			"p50": 0.2356,
 			"p75": 0.2721,
 			"p90": 0.2863,
@@ -81,23 +81,23 @@
 		},
 		"vocabulary_substitution_lift": {
 			"count": 68,
-			"min": -0.0076,
+			"min": -0.0034,
 			"max": 0.0151,
-			"mean": 0.0043,
-			"p10": -0.0024,
-			"p25": -0.0018,
-			"p50": 0.0036,
+			"mean": 0.0053,
+			"p10": -0.0022,
+			"p25": 0.0019,
+			"p50": 0.0049,
 			"p75": 0.0093,
 			"p90": 0.0124,
 			"p95": 0.0136
 		},
 		"faq_topic_similarity": {
 			"count": 68,
-			"min": 0.1053,
+			"min": 0.0667,
 			"max": 0.4167,
-			"mean": 0.2325,
-			"p10": 0.1282,
-			"p25": 0.1714,
+			"mean": 0.221,
+			"p10": 0.0732,
+			"p25": 0.1667,
 			"p50": 0.2272,
 			"p75": 0.2857,
 			"p90": 0.3333,
@@ -105,12 +105,12 @@
 		},
 		"faq_answer_topic_similarity": {
 			"count": 68,
-			"min": 0.0574,
+			"min": 0.016,
 			"max": 0.2727,
-			"mean": 0.147,
-			"p10": 0.0973,
-			"p25": 0.1111,
-			"p50": 0.1376,
+			"mean": 0.129,
+			"p10": 0.032,
+			"p25": 0.0957,
+			"p50": 0.1332,
 			"p75": 0.1667,
 			"p90": 0.2212,
 			"p95": 0.2416
@@ -131,7 +131,7 @@
 			"count": 68,
 			"min": 0.0,
 			"max": 0.0639,
-			"mean": 0.0156,
+			"mean": 0.0157,
 			"p10": 0.0,
 			"p25": 0.0,
 			"p50": 0.0114,
@@ -143,21 +143,21 @@
 			"count": 68,
 			"min": 0.1,
 			"max": 0.7333,
-			"mean": 0.4051,
-			"p10": 0.1837,
-			"p25": 0.2653,
-			"p50": 0.4164,
+			"mean": 0.4256,
+			"p10": 0.25,
+			"p25": 0.35,
+			"p50": 0.4248,
 			"p75": 0.5263,
 			"p90": 0.6,
 			"p95": 0.6608
 		},
 		"heading_similarity": {
 			"count": 68,
-			"min": 0.0089,
+			"min": 0.0,
 			"max": 0.24,
-			"mean": 0.0904,
-			"p10": 0.0345,
-			"p25": 0.0465,
+			"mean": 0.0826,
+			"p10": 0.0,
+			"p25": 0.0345,
 			"p50": 0.0845,
 			"p75": 0.1136,
 			"p90": 0.1628,
@@ -165,13 +165,13 @@
 		},
 		"token_cosine": {
 			"count": 68,
-			"min": 0.2438,
+			"min": 0.2187,
 			"max": 0.6837,
-			"mean": 0.3884,
-			"p10": 0.3242,
-			"p25": 0.3483,
-			"p50": 0.3771,
-			"p75": 0.4332,
+			"mean": 0.3547,
+			"p10": 0.2378,
+			"p25": 0.2632,
+			"p50": 0.3497,
+			"p75": 0.3901,
 			"p90": 0.4554,
 			"p95": 0.5008
 		}
@@ -221,21 +221,21 @@
 		]
 	},
 	"information_gain_verdicts": {
-		"LOCAL_NAME_SUBSTITUTION_ONLY": 7,
-		"HAS_INFORMATION_GAIN": 3,
+		"HAS_INFORMATION_GAIN": 7,
+		"LOCAL_NAME_SUBSTITUTION_ONLY": 3,
 		"WORDING_ONLY_GAIN": 2
 	},
 	"word_counts": {
 		"count": 12,
 		"min": 395,
-		"max": 1668,
-		"mean": 586.0,
+		"max": 812,
+		"mean": 514.6667,
 		"p10": 398.5,
 		"p25": 406.0,
 		"p50": 514.5,
 		"p75": 548.75,
 		"p90": 605.0,
-		"p95": 1085.55
+		"p95": 700.35
 	},
 	"priority_matrix": [
 		{
@@ -246,7 +246,7 @@
 			"current_quality": 1,
 			"duplication_risk": 5,
 			"local_relevance": 5,
-			"information_gain": 1,
+			"information_gain": 4,
 			"cannibalization_risk": 1,
 			"technical_health": 5,
 			"word_count": 395,
@@ -260,7 +260,7 @@
 			"current_quality": 2,
 			"duplication_risk": 5,
 			"local_relevance": 4,
-			"information_gain": 1,
+			"information_gain": 4,
 			"cannibalization_risk": 4,
 			"technical_health": 0,
 			"word_count": 569,
@@ -316,7 +316,7 @@
 			"current_quality": 2,
 			"duplication_risk": 4.6,
 			"local_relevance": 4,
-			"information_gain": 1,
+			"information_gain": 4,
 			"cannibalization_risk": 1,
 			"technical_health": 5,
 			"word_count": 521,
@@ -330,7 +330,7 @@
 			"current_quality": 1,
 			"duplication_risk": 3.5,
 			"local_relevance": 5,
-			"information_gain": 1,
+			"information_gain": 4,
 			"cannibalization_risk": 1,
 			"technical_health": 5,
 			"word_count": 398,
@@ -397,13 +397,13 @@
 			"page_type": "location",
 			"business_value": 3,
 			"organic_opportunity": 4,
-			"current_quality": 5,
-			"duplication_risk": 0.4,
-			"local_relevance": 5,
+			"current_quality": 3,
+			"duplication_risk": 0.3,
+			"local_relevance": 1,
 			"information_gain": 4,
 			"cannibalization_risk": 1,
 			"technical_health": 5,
-			"word_count": 1668,
+			"word_count": 812,
 			"verdict": "KEEP"
 		}
 	],
@@ -414,38 +414,18 @@
 		"REFINE": 2
 	},
 	"claim_totals": {
-		"pricing_payment": 91,
-		"service_guarantee": 54,
-		"process_claim": 34,
-		"unverifiable": 57,
-		"local_fact": 12,
-		"government_legal": 11,
+		"pricing_payment": 83,
+		"service_guarantee": 50,
+		"process_claim": 25,
+		"unverifiable": 49,
+		"local_fact": 7,
+		"government_legal": 6,
 		"testimonial_review": 9
 	},
 	"high_risk_claims": [
 		{
 			"slug": "enterprise",
 			"text": "If you don't have the title, call us — we can often still purchase the vehicle using alternative documentation allowed under Nevada law"
-		},
-		{
-			"slug": "henderson",
-			"text": "Under Nevada's common-interest community statutes, a violation that is not corrected can draw a fine for each period it remains outstanding, following a written notice and an opportunity to be heard."
-		},
-		{
-			"slug": "henderson",
-			"text": "Homeowners call because they need a junk car gone — fast — without the hassle of listing it online, negotiating with strangers, or figuring out the title paperwork on their own."
-		},
-		{
-			"slug": "henderson",
-			"text": "We will buy the remaining shell — even with a salvage title — and tow it away for free."
-		},
-		{
-			"slug": "henderson",
-			"text": "Vehicles With No Title If the title is lost, you can apply to the Nevada DMV for a duplicate using Form VP-012."
-		},
-		{
-			"slug": "henderson",
-			"text": "Whether a sale can proceed without the original title depends on the vehicle's circumstances, so it is worth asking before you assume either way."
 		},
 		{
 			"slug": "las-vegas",
@@ -486,9 +466,9 @@
 		},
 		"entity_similarity_nonlocal": {
 			"observed": {
-				"p10": 0.1837,
-				"p25": 0.2653,
-				"p50": 0.4164,
+				"p10": 0.25,
+				"p25": 0.35,
+				"p50": 0.4248,
 				"p75": 0.5263,
 				"p90": 0.6,
 				"p95": 0.6608
@@ -499,8 +479,8 @@
 		},
 		"faq_topic_similarity": {
 			"observed": {
-				"p10": 0.1282,
-				"p25": 0.1714,
+				"p10": 0.0732,
+				"p25": 0.1667,
 				"p50": 0.2272,
 				"p75": 0.2857,
 				"p90": 0.3333,
@@ -512,8 +492,8 @@
 		},
 		"masked_vocabulary_jaccard": {
 			"observed": {
-				"p10": 0.1559,
-				"p25": 0.1814,
+				"p10": 0.1465,
+				"p25": 0.1794,
 				"p50": 0.2356,
 				"p75": 0.2721,
 				"p90": 0.2863,
@@ -525,9 +505,9 @@
 		},
 		"vocabulary_substitution_lift": {
 			"observed": {
-				"p10": -0.0024,
-				"p25": -0.0018,
-				"p50": 0.0036,
+				"p10": -0.0022,
+				"p25": 0.0019,
+				"p50": 0.0049,
 				"p75": 0.0093,
 				"p90": 0.0124,
 				"p95": 0.0136
@@ -596,32 +576,21 @@
 				]
 			},
 			"henderson": {
-				"declared_neighbours": [
-					"boulder-city",
-					"las-vegas",
-					"north-las-vegas",
-					"summerlin"
-				],
-				"declared_count": 4,
+				"declared_neighbours": [],
+				"declared_count": 0,
 				"rendered_area_links": [
 					"boulder-city",
-					"enterprise",
-					"las-vegas",
 					"north-las-vegas",
 					"paradise",
-					"spring-valley",
 					"summerlin"
 				],
 				"rendered_service_links": [
+					"damaged",
+					"non-running",
 					"sedans",
 					"trucks-suvs"
 				],
-				"autolinked_cities": [
-					"Boulder City",
-					"Las Vegas",
-					"Paradise",
-					"Summerlin"
-				],
+				"autolinked_cities": [],
 				"notes": []
 			},
 			"las-vegas": {
@@ -793,16 +762,17 @@
 			}
 		},
 		"inbound_declared_mentions": {
-			"las-vegas": 11,
+			"las-vegas": 10,
 			"spring-valley": 9,
 			"henderson": 8,
-			"summerlin": 8,
-			"north-las-vegas": 7,
+			"summerlin": 7,
+			"north-las-vegas": 6,
 			"paradise": 5,
-			"enterprise": 4,
-			"boulder-city": 1
+			"enterprise": 4
 		},
-		"never_named_as_a_neighbour": [],
+		"never_named_as_a_neighbour": [
+			"boulder-city"
+		],
 		"observations": [
 			"Declared neighbour sets are asymmetric and mostly 4 of 7 — a real editorial judgement, and the reason internal_links was retained.",
 			"Only pages with an 'areas' section render those neighbour links; the rest rely on lvjcb_autolink_locations() catching a city named in prose.",

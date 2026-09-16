@@ -310,10 +310,10 @@
 	},
 	"current_information_gain": {
 		"verdict": "HAS_INFORMATION_GAIN",
-		"unique_phrase_count": 456,
-		"shared_phrase_count": 44,
+		"unique_phrase_count": 457,
+		"shared_phrase_count": 43,
 		"boilerplate_phrase_count": 1,
-		"unique_share": 0.9102,
+		"unique_share": 0.9122,
 		"boilerplate_share": 0.002,
 		"sample_unique_phrases": [
 			"000 200 000 even 300",
@@ -339,7 +339,7 @@
 	"current_unique_elements": {
 		"sections_with_structure": [],
 		"unique_local_entities": [],
-		"unique_phrase_share": 0.9102
+		"unique_phrase_share": 0.9122
 	},
 	"current_generic_elements": {
 		"prose_only_sections": [

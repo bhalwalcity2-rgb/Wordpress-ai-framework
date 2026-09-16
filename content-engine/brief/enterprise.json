@@ -261,7 +261,7 @@
 		"government_legal": 1
 	},
 	"current_information_gain": {
-		"verdict": "LOCAL_NAME_SUBSTITUTION_ONLY",
+		"verdict": "HAS_INFORMATION_GAIN",
 		"unique_phrase_count": 355,
 		"shared_phrase_count": 34,
 		"boilerplate_phrase_count": 2,
@@ -289,7 +289,10 @@
 			"South Las Vegas Boulevard",
 			"Warm Springs Road"
 		],
-		"unique_nonlocal_entities": [],
+		"unique_nonlocal_entities": [
+			"process:paid",
+			"user_problem:fine"
+		],
 		"has_unique_structure": false
 	},
 	"current_unique_elements": {

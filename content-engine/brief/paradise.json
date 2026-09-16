@@ -295,6 +295,8 @@
 			"year make model and condition"
 		],
 		"unique_local_entities": [
+			"Boulder Highway",
+			"Eastern Avenue",
 			"Maryland Parkway",
 			"Paradise",
 			"Paradise Road",
@@ -308,6 +310,8 @@
 	"current_unique_elements": {
 		"sections_with_structure": [],
 		"unique_local_entities": [
+			"Boulder Highway",
+			"Eastern Avenue",
 			"Maryland Parkway",
 			"Paradise",
 			"Paradise Road",
@@ -325,8 +329,6 @@
 		],
 		"boilerplate_phrase_share": 0.0076,
 		"shared_local_entities": [
-			"Boulder Highway",
-			"Eastern Avenue",
 			"I-15",
 			"Las Vegas"
 		]

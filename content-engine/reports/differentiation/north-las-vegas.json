@@ -33,9 +33,7 @@
 		"SAME_TOPIC_FRAME_AS_SIBLINGS",
 		"NO_PAGE_SPECIFIC_CLOSING_CTA"
 	],
-	"local_entities_shared_with_siblings": [
-		"Craig Road"
-	],
+	"local_entities_shared_with_siblings": [],
 	"pairs": [
 		{
 			"with": "paradise",
@@ -192,24 +190,24 @@
 		},
 		{
 			"with": "henderson",
-			"raw_shingle_jaccard": 0.0019,
-			"masked_shingle_jaccard": 0.0024,
-			"substitution_lift": 0.0005,
-			"raw_vocabulary_jaccard": 0.1669,
-			"masked_vocabulary_jaccard": 0.1677,
-			"vocabulary_substitution_lift": 0.0008,
-			"trigram_jaccard": 0.0119,
-			"faq_topic_similarity": 0.1163,
-			"faq_answer_topic_similarity": 0.1083,
-			"token_cosine": 0.3739,
-			"containment_in_sibling": 0.0083,
-			"heading_similarity": 0.0345,
+			"raw_shingle_jaccard": 0.0,
+			"masked_shingle_jaccard": 0.0,
+			"substitution_lift": 0.0,
+			"raw_vocabulary_jaccard": 0.1429,
+			"masked_vocabulary_jaccard": 0.1461,
+			"vocabulary_substitution_lift": 0.0032,
+			"trigram_jaccard": 0.0042,
+			"faq_topic_similarity": 0.0667,
+			"faq_answer_topic_similarity": 0.0391,
+			"token_cosine": 0.2187,
+			"containment_in_sibling": 0.0,
+			"heading_similarity": 0.0,
 			"structure_similarity": 0.0,
-			"faq_question_similarity": 0.0225,
+			"faq_question_similarity": 0.0,
 			"faq_answer_similarity": 0.0,
-			"entity_similarity_nonlocal": 0.26,
-			"entity_similarity_local": 0.0278,
-			"entity_similarity_process": 0.6,
+			"entity_similarity_nonlocal": 0.3,
+			"entity_similarity_local": 0.0,
+			"entity_similarity_process": 0.5556,
 			"superficial_flags": []
 		}
 	],
