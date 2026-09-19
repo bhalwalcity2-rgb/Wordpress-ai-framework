@@ -81,6 +81,9 @@ if ( ! defined( 'LVJCB_SECTION_ASSETS' ) ) {
 
 add_action( 'wp_enqueue_scripts', 'lvjcb_enqueue_assets', 20 );
 
+// The child theme owns typography, including on the Elementor homepage.
+add_filter( 'elementor/frontend/print_google_fonts', '__return_false' );
+
 /**
  * Enqueue frontend assets.
  *

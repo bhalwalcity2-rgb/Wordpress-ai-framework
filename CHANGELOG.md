@@ -6,6 +6,24 @@ The format follows the structure defined in `ai/DEPLOYMENT_STANDARDS.md` §5.
 
 ---
 
+## [0.10.0] — 2026-09-19
+
+### Changed
+- Homepage body for the Las Vegas Junk Car Buyers theme is now managed in
+  WordPress with Elementor Flexbox Containers. Routine homepage content,
+  image, CTA, FAQ, and layout updates no longer require editing or deploying
+  `front-page.php`.
+- The child theme now acts as the homepage shell and continues to provide the
+  existing header, footer, site tokens, and performance controls.
+
+### Added
+- `ai/decisions/elementor-usage-home.md` documents the owner-approved
+  Elementor exception and its performance constraints.
+- Elementor Google Font loading is disabled so the homepage uses the child
+  theme's existing typography.
+
+---
+
 ## [0.9.0] — 2026-09-06
 
 ### Added
